@@ -56,9 +56,9 @@ class WirelessEthernetPortsProfilesAssignArgs:
 @pulumi.input_type
 class _WirelessEthernetPortsProfilesAssignState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignItemArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignParametersArgs']] = None):
+                 item: pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignItemArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignParametersArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessEthernetPortsProfilesAssign resources.
 
@@ -73,32 +73,32 @@ class _WirelessEthernetPortsProfilesAssignState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['WirelessEthernetPortsProfilesAssignParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['WirelessEthernetPortsProfilesAssignParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -108,8 +108,8 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -184,8 +184,8 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -212,9 +212,9 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignItemArgs', 'WirelessEthernetPortsProfilesAssignItemArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None) -> 'WirelessEthernetPortsProfilesAssign':
+            item: pulumi.Input[Optional[Union['WirelessEthernetPortsProfilesAssignItemArgs', 'WirelessEthernetPortsProfilesAssignItemArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None) -> 'WirelessEthernetPortsProfilesAssign':
         """
         Get an existing WirelessEthernetPortsProfilesAssign resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

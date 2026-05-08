@@ -153,35 +153,35 @@ export interface AlertsProfilesState {
     /**
      * The conditions that determine if the alert triggers
      */
-    alertCondition?: pulumi.Input<inputs.organizations.AlertsProfilesAlertCondition>;
+    alertCondition?: pulumi.Input<inputs.organizations.AlertsProfilesAlertCondition | undefined>;
     /**
      * alertConfigId path parameter. Alert config ID
      */
-    alertConfigId?: pulumi.Input<string>;
+    alertConfigId?: pulumi.Input<string | undefined>;
     /**
      * User supplied description of the alert
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Is the alert config enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Networks with these tags will be monitored for the alert
      */
-    networkTags?: pulumi.Input<pulumi.Input<string>[]>;
+    networkTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * List of recipients that will recieve the alert.
      */
-    recipients?: pulumi.Input<inputs.organizations.AlertsProfilesRecipients>;
+    recipients?: pulumi.Input<inputs.organizations.AlertsProfilesRecipients | undefined>;
     /**
      * The alert type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -191,23 +191,23 @@ export interface AlertsProfilesArgs {
     /**
      * The conditions that determine if the alert triggers
      */
-    alertCondition?: pulumi.Input<inputs.organizations.AlertsProfilesAlertCondition>;
+    alertCondition?: pulumi.Input<inputs.organizations.AlertsProfilesAlertCondition | undefined>;
     /**
      * alertConfigId path parameter. Alert config ID
      */
-    alertConfigId?: pulumi.Input<string>;
+    alertConfigId?: pulumi.Input<string | undefined>;
     /**
      * User supplied description of the alert
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Is the alert config enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Networks with these tags will be monitored for the alert
      */
-    networkTags?: pulumi.Input<pulumi.Input<string>[]>;
+    networkTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -215,9 +215,9 @@ export interface AlertsProfilesArgs {
     /**
      * List of recipients that will recieve the alert.
      */
-    recipients?: pulumi.Input<inputs.organizations.AlertsProfilesRecipients>;
+    recipients?: pulumi.Input<inputs.organizations.AlertsProfilesRecipients | undefined>;
     /**
      * The alert type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }

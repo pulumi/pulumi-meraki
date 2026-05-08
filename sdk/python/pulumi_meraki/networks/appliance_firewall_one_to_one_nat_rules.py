@@ -22,7 +22,7 @@ __all__ = ['ApplianceFirewallOneToOneNatRulesArgs', 'ApplianceFirewallOneToOneNa
 class ApplianceFirewallOneToOneNatRulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallOneToOneNatRules resource.
 
@@ -47,22 +47,22 @@ class ApplianceFirewallOneToOneNatRulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]:
         """
         An array of 1:1 nat rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _ApplianceFirewallOneToOneNatRulesState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallOneToOneNatRules resources.
 
@@ -76,26 +76,26 @@ class _ApplianceFirewallOneToOneNatRulesState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]:
         """
         An array of 1:1 nat rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -200,8 +200,8 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -225,8 +225,8 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallOneToOneNatRules':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallOneToOneNatRules':
         """
         Get an existing ApplianceFirewallOneToOneNatRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

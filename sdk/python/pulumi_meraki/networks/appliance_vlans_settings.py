@@ -20,7 +20,7 @@ __all__ = ['ApplianceVlansSettingsArgs', 'ApplianceVlansSettings']
 class ApplianceVlansSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 vlans_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceVlansSettings resource.
 
@@ -45,22 +45,22 @@ class ApplianceVlansSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="vlansEnabled")
-    def vlans_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vlans_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
         """
         return pulumi.get(self, "vlans_enabled")
 
     @vlans_enabled.setter
-    def vlans_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vlans_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vlans_enabled", value)
 
 
 @pulumi.input_type
 class _ApplianceVlansSettingsState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlans_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceVlansSettings resources.
 
@@ -74,26 +74,26 @@ class _ApplianceVlansSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlansEnabled")
-    def vlans_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vlans_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
         """
         return pulumi.get(self, "vlans_enabled")
 
     @vlans_enabled.setter
-    def vlans_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vlans_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vlans_enabled", value)
 
 
@@ -103,8 +103,8 @@ class ApplianceVlansSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlans_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -172,8 +172,8 @@ class ApplianceVlansSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlans_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -197,8 +197,8 @@ class ApplianceVlansSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ApplianceVlansSettings':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlans_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ApplianceVlansSettings':
         """
         Get an existing ApplianceVlansSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

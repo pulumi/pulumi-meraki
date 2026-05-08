@@ -102,12 +102,12 @@ export class Claim extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Claim resources.
  */
 export interface ClaimState {
-    item?: pulumi.Input<inputs.organizations.ClaimItem>;
+    item?: pulumi.Input<inputs.organizations.ClaimItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.ClaimParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.ClaimParameters | undefined>;
 }
 
 /**

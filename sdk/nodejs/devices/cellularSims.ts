@@ -101,15 +101,15 @@ export interface CellularSimsState {
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * SIM Failover settings.
      */
-    simFailover?: pulumi.Input<inputs.devices.CellularSimsSimFailover>;
+    simFailover?: pulumi.Input<inputs.devices.CellularSimsSimFailover | undefined>;
     /**
      * List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
      */
-    sims?: pulumi.Input<pulumi.Input<inputs.devices.CellularSimsSim>[]>;
+    sims?: pulumi.Input<pulumi.Input<inputs.devices.CellularSimsSim>[] | undefined>;
 }
 
 /**
@@ -123,9 +123,9 @@ export interface CellularSimsArgs {
     /**
      * SIM Failover settings.
      */
-    simFailover?: pulumi.Input<inputs.devices.CellularSimsSimFailover>;
+    simFailover?: pulumi.Input<inputs.devices.CellularSimsSimFailover | undefined>;
     /**
      * List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
      */
-    sims?: pulumi.Input<pulumi.Input<inputs.devices.CellularSimsSim>[]>;
+    sims?: pulumi.Input<pulumi.Input<inputs.devices.CellularSimsSim>[] | undefined>;
 }

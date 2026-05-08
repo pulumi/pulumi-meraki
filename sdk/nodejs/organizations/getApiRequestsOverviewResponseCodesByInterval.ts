@@ -188,15 +188,15 @@ export interface GetApiRequestsOverviewResponseCodesByIntervalOutputArgs {
     /**
      * adminIds query parameter. Filter by admin ID of user that made the API request
      */
-    adminIds?: pulumi.Input<pulumi.Input<string>[]>;
+    adminIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * operationIds query parameter. Filter by operation ID of the endpoint
      */
-    operationIds?: pulumi.Input<pulumi.Input<string>[]>;
+    operationIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -204,25 +204,25 @@ export interface GetApiRequestsOverviewResponseCodesByIntervalOutputArgs {
     /**
      * sourceIps query parameter. Filter by source IP that made the API request
      */
-    sourceIps?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. If interval is provided, the timespan will be autocalculated.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
     /**
      * userAgent query parameter. Filter by user agent string for API request. This will filter by a complete or partial match.
      */
-    userAgent?: pulumi.Input<string>;
+    userAgent?: pulumi.Input<string | undefined>;
     /**
      * version query parameter. Filter by API version of the endpoint. Allowable values are: [0, 1]
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }

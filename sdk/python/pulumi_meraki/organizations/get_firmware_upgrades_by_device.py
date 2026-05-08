@@ -235,15 +235,15 @@ def get_firmware_upgrades_by_device(ending_before: Optional[_builtins.str] = Non
         serials=pulumi.get(__ret__, 'serials'),
         starting_after=pulumi.get(__ret__, 'starting_after'),
         upgradestatuses=pulumi.get(__ret__, 'upgradestatuses'))
-def get_firmware_upgrades_by_device_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                           firmware_upgrade_batch_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                           macs: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                           network_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                           organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                           per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                           serials: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                           starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                           upgradestatuses: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_firmware_upgrades_by_device_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                           firmware_upgrade_batch_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                           macs: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                           network_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                           organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                           per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                           serials: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                           starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                           upgradestatuses: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesByDeviceResult]:
     """
     ## Example Usage

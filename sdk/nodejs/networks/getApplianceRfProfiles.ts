@@ -89,9 +89,9 @@ export interface GetApplianceRfProfilesOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
 }

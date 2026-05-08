@@ -73,9 +73,9 @@ export interface GetSensorMqttBrokersOutputArgs {
     /**
      * mqttBrokerId path parameter. Mqtt broker ID
      */
-    mqttBrokerId?: pulumi.Input<string>;
+    mqttBrokerId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

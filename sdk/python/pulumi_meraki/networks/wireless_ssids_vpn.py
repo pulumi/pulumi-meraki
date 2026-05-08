@@ -23,9 +23,9 @@ class WirelessSsidsVpnArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 concentrator: Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']] = None,
-                 failover: Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']] = None,
-                 split_tunnel: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']] = None):
+                 concentrator: pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']] = None,
+                 failover: pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']] = None,
+                 split_tunnel: pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']] = None):
         """
         The set of arguments for constructing a WirelessSsidsVpn resource.
 
@@ -70,49 +70,49 @@ class WirelessSsidsVpnArgs:
 
     @_builtins.property
     @pulumi.getter
-    def concentrator(self) -> Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']]:
+    def concentrator(self) -> pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']]:
         """
         The VPN concentrator settings for this SSID.
         """
         return pulumi.get(self, "concentrator")
 
     @concentrator.setter
-    def concentrator(self, value: Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']]):
+    def concentrator(self, value: pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']]):
         pulumi.set(self, "concentrator", value)
 
     @_builtins.property
     @pulumi.getter
-    def failover(self) -> Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']]:
+    def failover(self) -> pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']]:
         """
         Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
         """
         return pulumi.get(self, "failover")
 
     @failover.setter
-    def failover(self, value: Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']]):
+    def failover(self, value: pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']]):
         pulumi.set(self, "failover", value)
 
     @_builtins.property
     @pulumi.getter(name="splitTunnel")
-    def split_tunnel(self) -> Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']]:
+    def split_tunnel(self) -> pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']]:
         """
         The VPN split tunnel settings for this SSID.
         """
         return pulumi.get(self, "split_tunnel")
 
     @split_tunnel.setter
-    def split_tunnel(self, value: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']]):
+    def split_tunnel(self, value: pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']]):
         pulumi.set(self, "split_tunnel", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsVpnState:
     def __init__(__self__, *,
-                 concentrator: Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']] = None,
-                 failover: Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 split_tunnel: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']] = None):
+                 concentrator: pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']] = None,
+                 failover: pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 split_tunnel: pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsVpn resources.
 
@@ -135,62 +135,62 @@ class _WirelessSsidsVpnState:
 
     @_builtins.property
     @pulumi.getter
-    def concentrator(self) -> Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']]:
+    def concentrator(self) -> pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']]:
         """
         The VPN concentrator settings for this SSID.
         """
         return pulumi.get(self, "concentrator")
 
     @concentrator.setter
-    def concentrator(self, value: Optional[pulumi.Input['WirelessSsidsVpnConcentratorArgs']]):
+    def concentrator(self, value: pulumi.Input[Optional['WirelessSsidsVpnConcentratorArgs']]):
         pulumi.set(self, "concentrator", value)
 
     @_builtins.property
     @pulumi.getter
-    def failover(self) -> Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']]:
+    def failover(self) -> pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']]:
         """
         Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
         """
         return pulumi.get(self, "failover")
 
     @failover.setter
-    def failover(self, value: Optional[pulumi.Input['WirelessSsidsVpnFailoverArgs']]):
+    def failover(self, value: pulumi.Input[Optional['WirelessSsidsVpnFailoverArgs']]):
         pulumi.set(self, "failover", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter(name="splitTunnel")
-    def split_tunnel(self) -> Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']]:
+    def split_tunnel(self) -> pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']]:
         """
         The VPN split tunnel settings for this SSID.
         """
         return pulumi.get(self, "split_tunnel")
 
     @split_tunnel.setter
-    def split_tunnel(self, value: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']]):
+    def split_tunnel(self, value: pulumi.Input[Optional['WirelessSsidsVpnSplitTunnelArgs']]):
         pulumi.set(self, "split_tunnel", value)
 
 
@@ -200,11 +200,11 @@ class WirelessSsidsVpn(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 concentrator: Optional[pulumi.Input[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
-                 failover: Optional[pulumi.Input[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 split_tunnel: Optional[pulumi.Input[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None,
+                 concentrator: pulumi.Input[Optional[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
+                 failover: pulumi.Input[Optional[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 split_tunnel: pulumi.Input[Optional[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -313,11 +313,11 @@ class WirelessSsidsVpn(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 concentrator: Optional[pulumi.Input[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
-                 failover: Optional[pulumi.Input[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 split_tunnel: Optional[pulumi.Input[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None,
+                 concentrator: pulumi.Input[Optional[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
+                 failover: pulumi.Input[Optional[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 split_tunnel: pulumi.Input[Optional[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -346,11 +346,11 @@ class WirelessSsidsVpn(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            concentrator: Optional[pulumi.Input[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
-            failover: Optional[pulumi.Input[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            split_tunnel: Optional[pulumi.Input[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None) -> 'WirelessSsidsVpn':
+            concentrator: pulumi.Input[Optional[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']]] = None,
+            failover: pulumi.Input[Optional[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            split_tunnel: pulumi.Input[Optional[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict']]] = None) -> 'WirelessSsidsVpn':
         """
         Get an existing WirelessSsidsVpn resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

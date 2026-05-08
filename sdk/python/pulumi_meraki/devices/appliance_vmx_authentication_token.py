@@ -45,8 +45,8 @@ class ApplianceVmxAuthenticationTokenArgs:
 @pulumi.input_type
 class _ApplianceVmxAuthenticationTokenState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['ApplianceVmxAuthenticationTokenItemArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 item: pulumi.Input[Optional['ApplianceVmxAuthenticationTokenItemArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceVmxAuthenticationToken resources.
 
@@ -59,23 +59,23 @@ class _ApplianceVmxAuthenticationTokenState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['ApplianceVmxAuthenticationTokenItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['ApplianceVmxAuthenticationTokenItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['ApplianceVmxAuthenticationTokenItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['ApplianceVmxAuthenticationTokenItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -85,7 +85,7 @@ class ApplianceVmxAuthenticationToken(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -142,7 +142,7 @@ class ApplianceVmxAuthenticationToken(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -166,8 +166,8 @@ class ApplianceVmxAuthenticationToken(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['ApplianceVmxAuthenticationTokenItemArgs', 'ApplianceVmxAuthenticationTokenItemArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceVmxAuthenticationToken':
+            item: pulumi.Input[Optional[Union['ApplianceVmxAuthenticationTokenItemArgs', 'ApplianceVmxAuthenticationTokenItemArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceVmxAuthenticationToken':
         """
         Get an existing ApplianceVmxAuthenticationToken resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

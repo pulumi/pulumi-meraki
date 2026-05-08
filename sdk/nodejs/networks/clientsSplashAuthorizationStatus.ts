@@ -115,15 +115,15 @@ export interface ClientsSplashAuthorizationStatusState {
     /**
      * clientId path parameter. Client ID
      */
-    clientId?: pulumi.Input<string>;
+    clientId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
      */
-    ssids?: pulumi.Input<inputs.networks.ClientsSplashAuthorizationStatusSsids>;
+    ssids?: pulumi.Input<inputs.networks.ClientsSplashAuthorizationStatusSsids | undefined>;
 }
 
 /**
@@ -141,5 +141,5 @@ export interface ClientsSplashAuthorizationStatusArgs {
     /**
      * The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
      */
-    ssids?: pulumi.Input<inputs.networks.ClientsSplashAuthorizationStatusSsids>;
+    ssids?: pulumi.Input<inputs.networks.ClientsSplashAuthorizationStatusSsids | undefined>;
 }

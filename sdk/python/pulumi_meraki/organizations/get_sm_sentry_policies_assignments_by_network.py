@@ -167,11 +167,11 @@ def get_sm_sentry_policies_assignments_by_network(ending_before: Optional[_built
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-def get_sm_sentry_policies_assignments_by_network_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                         network_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                         organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                         per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                         starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_sm_sentry_policies_assignments_by_network_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                         network_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                         organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                         per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                         starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmSentryPoliciesAssignmentsByNetworkResult]:
     """
     ## Example Usage

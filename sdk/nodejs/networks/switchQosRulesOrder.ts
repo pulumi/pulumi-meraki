@@ -144,39 +144,39 @@ export interface SwitchQosRulesOrderState {
     /**
      * DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    dstPort?: pulumi.Input<number>;
+    dstPort?: pulumi.Input<number | undefined>;
     /**
      * The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    dstPortRange?: pulumi.Input<string>;
+    dstPortRange?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY"
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * qosRuleId path parameter. Qos rule ID
      */
-    qosRuleId?: pulumi.Input<string>;
+    qosRuleId?: pulumi.Input<string | undefined>;
     /**
      * The source port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    srcPort?: pulumi.Input<number>;
+    srcPort?: pulumi.Input<number | undefined>;
     /**
      * The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    srcPortRange?: pulumi.Input<string>;
+    srcPortRange?: pulumi.Input<string | undefined>;
     /**
      * The VLAN of the incoming packet. A null value will match any VLAN.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -186,15 +186,15 @@ export interface SwitchQosRulesOrderArgs {
     /**
      * DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    dstPort?: pulumi.Input<number>;
+    dstPort?: pulumi.Input<number | undefined>;
     /**
      * The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    dstPortRange?: pulumi.Input<string>;
+    dstPortRange?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -202,21 +202,21 @@ export interface SwitchQosRulesOrderArgs {
     /**
      * The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY"
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * qosRuleId path parameter. Qos rule ID
      */
-    qosRuleId?: pulumi.Input<string>;
+    qosRuleId?: pulumi.Input<string | undefined>;
     /**
      * The source port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    srcPort?: pulumi.Input<number>;
+    srcPort?: pulumi.Input<number | undefined>;
     /**
      * The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    srcPortRange?: pulumi.Input<string>;
+    srcPortRange?: pulumi.Input<string | undefined>;
     /**
      * The VLAN of the incoming packet. A null value will match any VLAN.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }

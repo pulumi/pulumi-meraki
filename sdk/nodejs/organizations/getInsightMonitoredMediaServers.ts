@@ -73,9 +73,9 @@ export interface GetInsightMonitoredMediaServersOutputArgs {
     /**
      * monitoredMediaServerId path parameter. Monitored media server ID
      */
-    monitoredMediaServerId?: pulumi.Input<string>;
+    monitoredMediaServerId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

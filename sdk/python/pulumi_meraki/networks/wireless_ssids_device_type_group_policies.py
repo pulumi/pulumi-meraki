@@ -23,8 +23,8 @@ class WirelessSsidsDeviceTypeGroupPoliciesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 device_type_policies: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a WirelessSsidsDeviceTypeGroupPolicies resource.
 
@@ -66,36 +66,36 @@ class WirelessSsidsDeviceTypeGroupPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter(name="deviceTypePolicies")
-    def device_type_policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]:
+    def device_type_policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]:
         """
         List of device type policies.
         """
         return pulumi.get(self, "device_type_policies")
 
     @device_type_policies.setter
-    def device_type_policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]):
+    def device_type_policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]):
         pulumi.set(self, "device_type_policies", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, the SSID device type group policies are enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsDeviceTypeGroupPoliciesState:
     def __init__(__self__, *,
-                 device_type_policies: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsDeviceTypeGroupPolicies resources.
 
@@ -115,50 +115,50 @@ class _WirelessSsidsDeviceTypeGroupPoliciesState:
 
     @_builtins.property
     @pulumi.getter(name="deviceTypePolicies")
-    def device_type_policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]:
+    def device_type_policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]:
         """
         List of device type policies.
         """
         return pulumi.get(self, "device_type_policies")
 
     @device_type_policies.setter
-    def device_type_policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]):
+    def device_type_policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs']]]]):
         pulumi.set(self, "device_type_policies", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, the SSID device type group policies are enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
 
@@ -168,10 +168,10 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_type_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -251,10 +251,10 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_type_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -282,10 +282,10 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device_type_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessSsidsDeviceTypeGroupPolicies':
+            device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSsidsDeviceTypeGroupPolicies':
         """
         Get an existing WirelessSsidsDeviceTypeGroupPolicies resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -188,15 +188,15 @@ export interface GetSensorReadingsHistoryOutputArgs {
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * metrics query parameter. Types of sensor readings to retrieve. If no metrics are supplied, all available types of readings will be retrieved. Allowed values are apparentPower, battery, button, co2, current, door, downstreamPower, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, remoteLockoutSwitch, temperature, tvoc, voltage, and water.
      */
-    metrics?: pulumi.Input<pulumi.Input<string>[]>;
+    metrics?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkIds query parameter. Optional parameter to filter readings by network.
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -204,25 +204,25 @@ export interface GetSensorReadingsHistoryOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * serials query parameter. Optional parameter to filter readings by sensor.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 365 days and 6 hours from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
 }

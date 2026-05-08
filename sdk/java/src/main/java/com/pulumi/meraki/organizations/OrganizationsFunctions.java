@@ -435,8 +435,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -474,8 +474,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -513,8 +513,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -552,8 +552,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -591,8 +591,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -679,8 +679,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -718,8 +718,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -757,8 +757,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -796,8 +796,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -835,8 +835,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -874,8 +874,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -913,8 +913,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -952,8 +952,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -991,8 +991,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1030,8 +1030,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1069,8 +1069,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1108,8 +1108,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1147,8 +1147,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1186,8 +1186,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1225,8 +1225,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1264,8 +1264,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1290,7 +1290,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1317,8 +1317,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1343,7 +1343,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1370,8 +1370,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1396,7 +1396,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1423,8 +1423,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1449,7 +1449,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1476,8 +1476,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1502,7 +1502,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1529,8 +1529,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1546,7 +1546,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
@@ -1571,8 +1571,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1588,7 +1588,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
@@ -1613,8 +1613,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1630,7 +1630,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
@@ -1655,8 +1655,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1672,7 +1672,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
@@ -1697,8 +1697,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1714,7 +1714,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
@@ -1739,8 +1739,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1760,7 +1760,7 @@ public final class OrganizationsFunctions {
      *             .sourceIps("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1787,8 +1787,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1808,7 +1808,7 @@ public final class OrganizationsFunctions {
      *             .sourceIps("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1835,8 +1835,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1856,7 +1856,7 @@ public final class OrganizationsFunctions {
      *             .sourceIps("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1883,8 +1883,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1904,7 +1904,7 @@ public final class OrganizationsFunctions {
      *             .sourceIps("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1931,8 +1931,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1952,7 +1952,7 @@ public final class OrganizationsFunctions {
      *             .sourceIps("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .userAgent("string")
      *             .version(1)
      *             .build());
@@ -1979,8 +1979,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2018,8 +2018,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2057,8 +2057,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2096,8 +2096,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2135,8 +2135,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2174,8 +2174,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2217,8 +2217,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2260,8 +2260,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2303,8 +2303,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2346,8 +2346,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2389,8 +2389,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2428,8 +2428,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2467,8 +2467,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2506,8 +2506,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2545,8 +2545,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2584,8 +2584,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2601,7 +2601,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
@@ -2626,8 +2626,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2643,7 +2643,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
@@ -2668,8 +2668,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2685,7 +2685,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
@@ -2710,8 +2710,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2727,7 +2727,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
@@ -2752,8 +2752,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2769,7 +2769,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
@@ -2794,8 +2794,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2833,8 +2833,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2872,8 +2872,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2911,8 +2911,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2950,8 +2950,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2989,8 +2989,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3028,8 +3028,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3067,8 +3067,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3106,8 +3106,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3145,8 +3145,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3233,8 +3233,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3272,8 +3272,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3311,8 +3311,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3350,8 +3350,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3389,8 +3389,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3428,8 +3428,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3468,8 +3468,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3508,8 +3508,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3548,8 +3548,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3588,8 +3588,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3628,8 +3628,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3668,8 +3668,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3708,8 +3708,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3748,8 +3748,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3788,8 +3788,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3877,8 +3877,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3921,8 +3921,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3965,8 +3965,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4009,8 +4009,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4053,8 +4053,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4097,8 +4097,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4137,8 +4137,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4177,8 +4177,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4217,8 +4217,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4257,8 +4257,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4346,8 +4346,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4391,8 +4391,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4436,8 +4436,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4481,8 +4481,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4526,8 +4526,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4571,8 +4571,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4588,7 +4588,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
@@ -4613,8 +4613,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4630,7 +4630,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
@@ -4655,8 +4655,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4672,7 +4672,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
@@ -4697,8 +4697,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4714,7 +4714,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
@@ -4739,8 +4739,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4756,7 +4756,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
@@ -4781,8 +4781,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4798,7 +4798,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
@@ -4823,8 +4823,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4840,7 +4840,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
@@ -4865,8 +4865,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4882,7 +4882,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
@@ -4907,8 +4907,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4924,7 +4924,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
@@ -4949,8 +4949,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4966,7 +4966,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
@@ -4991,8 +4991,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5034,8 +5034,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5077,8 +5077,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5120,8 +5120,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5163,8 +5163,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5255,8 +5255,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5295,8 +5295,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5335,8 +5335,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5375,8 +5375,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5415,8 +5415,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5504,8 +5504,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5560,8 +5560,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5616,8 +5616,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5672,8 +5672,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5728,8 +5728,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5784,8 +5784,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5831,8 +5831,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5878,8 +5878,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5925,8 +5925,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5972,8 +5972,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6019,8 +6019,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6043,7 +6043,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
@@ -6068,8 +6068,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6092,7 +6092,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
@@ -6117,8 +6117,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6141,7 +6141,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
@@ -6166,8 +6166,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6190,7 +6190,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
@@ -6215,8 +6215,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6239,7 +6239,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
@@ -6264,8 +6264,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6287,7 +6287,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
@@ -6312,8 +6312,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6335,7 +6335,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
@@ -6360,8 +6360,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6383,7 +6383,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
@@ -6408,8 +6408,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6431,7 +6431,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
@@ -6456,8 +6456,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6479,7 +6479,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
@@ -6504,8 +6504,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6551,8 +6551,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6598,8 +6598,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6645,8 +6645,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6692,8 +6692,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6739,8 +6739,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6787,8 +6787,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6835,8 +6835,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6883,8 +6883,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6931,8 +6931,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6979,8 +6979,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7028,8 +7028,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7077,8 +7077,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7126,8 +7126,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7175,8 +7175,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7224,8 +7224,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7265,8 +7265,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7306,8 +7306,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7347,8 +7347,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7388,8 +7388,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7429,8 +7429,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7476,8 +7476,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7523,8 +7523,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7570,8 +7570,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7617,8 +7617,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7664,8 +7664,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7682,7 +7682,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .uplink("string")
      *             .build());
      * 
@@ -7708,8 +7708,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7726,7 +7726,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .uplink("string")
      *             .build());
      * 
@@ -7752,8 +7752,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7770,7 +7770,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .uplink("string")
      *             .build());
      * 
@@ -7796,8 +7796,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7814,7 +7814,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .uplink("string")
      *             .build());
      * 
@@ -7840,8 +7840,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7858,7 +7858,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .uplink("string")
      *             .build());
      * 
@@ -7884,8 +7884,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7923,8 +7923,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7962,8 +7962,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8001,8 +8001,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8040,8 +8040,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8079,8 +8079,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8118,8 +8118,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8157,8 +8157,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8196,8 +8196,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8235,8 +8235,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8274,8 +8274,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8313,8 +8313,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8352,8 +8352,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8396,8 +8396,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8440,8 +8440,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8484,8 +8484,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8528,8 +8528,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8572,8 +8572,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8619,8 +8619,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8666,8 +8666,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8713,8 +8713,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8760,8 +8760,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8807,8 +8807,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8846,8 +8846,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8885,8 +8885,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8924,8 +8924,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8963,8 +8963,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9100,8 +9100,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9140,8 +9140,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9180,8 +9180,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9220,8 +9220,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9260,8 +9260,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9300,8 +9300,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9344,8 +9344,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9388,8 +9388,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9432,8 +9432,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9476,8 +9476,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9520,8 +9520,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9560,8 +9560,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9600,8 +9600,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9640,8 +9640,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9680,8 +9680,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9720,8 +9720,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9759,8 +9759,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9798,8 +9798,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9837,8 +9837,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9876,8 +9876,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9915,8 +9915,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9959,8 +9959,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10003,8 +10003,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10047,8 +10047,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10091,8 +10091,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10135,8 +10135,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10174,8 +10174,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10213,8 +10213,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10252,8 +10252,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10291,8 +10291,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10330,8 +10330,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10370,8 +10370,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10410,8 +10410,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10450,8 +10450,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10490,8 +10490,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10530,8 +10530,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10572,8 +10572,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10614,8 +10614,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10656,8 +10656,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10698,8 +10698,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10740,8 +10740,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10782,8 +10782,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10824,8 +10824,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10866,8 +10866,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10908,8 +10908,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10950,8 +10950,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10992,8 +10992,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11034,8 +11034,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11076,8 +11076,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11118,8 +11118,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11157,8 +11157,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11196,8 +11196,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11235,8 +11235,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11274,8 +11274,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11411,8 +11411,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11434,7 +11434,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
@@ -11459,8 +11459,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11482,7 +11482,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
@@ -11507,8 +11507,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11530,7 +11530,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
@@ -11555,8 +11555,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11578,7 +11578,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
@@ -11603,8 +11603,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11626,7 +11626,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
@@ -11651,8 +11651,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11696,8 +11696,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11741,8 +11741,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11786,8 +11786,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11831,8 +11831,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11876,8 +11876,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11918,8 +11918,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11960,8 +11960,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12002,8 +12002,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12044,8 +12044,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12086,8 +12086,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12128,8 +12128,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12170,8 +12170,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12209,8 +12209,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12248,8 +12248,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12287,8 +12287,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12326,8 +12326,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12365,8 +12365,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12408,8 +12408,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12451,8 +12451,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12494,8 +12494,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12537,8 +12537,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12629,8 +12629,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12668,8 +12668,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12707,8 +12707,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12746,8 +12746,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12785,8 +12785,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12824,8 +12824,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12841,7 +12841,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
@@ -12866,8 +12866,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12883,7 +12883,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
@@ -12908,8 +12908,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12925,7 +12925,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
@@ -12950,8 +12950,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12967,7 +12967,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
@@ -12992,8 +12992,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13009,7 +13009,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
@@ -13034,8 +13034,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13051,7 +13051,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
@@ -13076,8 +13076,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13093,7 +13093,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
@@ -13118,8 +13118,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13135,7 +13135,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
@@ -13160,8 +13160,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13177,7 +13177,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
@@ -13202,8 +13202,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13219,7 +13219,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
@@ -13244,8 +13244,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13261,7 +13261,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
@@ -13286,8 +13286,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13303,7 +13303,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
@@ -13328,8 +13328,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13345,7 +13345,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
@@ -13370,8 +13370,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13387,7 +13387,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
@@ -13412,8 +13412,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13429,7 +13429,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
@@ -13454,8 +13454,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13471,7 +13471,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
@@ -13496,8 +13496,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13513,7 +13513,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
@@ -13538,8 +13538,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13555,7 +13555,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
@@ -13580,8 +13580,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13597,7 +13597,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
@@ -13622,8 +13622,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13639,7 +13639,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
@@ -13664,8 +13664,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13681,7 +13681,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
@@ -13706,8 +13706,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13723,7 +13723,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
@@ -13748,8 +13748,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13765,7 +13765,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
@@ -13790,8 +13790,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13807,7 +13807,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
@@ -13832,8 +13832,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13849,7 +13849,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
@@ -13874,8 +13874,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13916,8 +13916,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13958,8 +13958,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14000,8 +14000,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14042,8 +14042,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14084,8 +14084,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14101,7 +14101,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
@@ -14126,8 +14126,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14143,7 +14143,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
@@ -14168,8 +14168,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14185,7 +14185,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
@@ -14210,8 +14210,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14227,7 +14227,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
@@ -14252,8 +14252,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14269,7 +14269,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
@@ -14294,8 +14294,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14311,7 +14311,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
@@ -14336,8 +14336,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14353,7 +14353,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
@@ -14378,8 +14378,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14395,7 +14395,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
@@ -14420,8 +14420,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14437,7 +14437,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
@@ -14462,8 +14462,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14479,7 +14479,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
@@ -14504,8 +14504,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14554,8 +14554,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14604,8 +14604,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14654,8 +14654,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14704,8 +14704,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14754,8 +14754,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14799,8 +14799,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14844,8 +14844,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14889,8 +14889,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14934,8 +14934,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14979,8 +14979,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15019,8 +15019,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15059,8 +15059,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15099,8 +15099,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15139,8 +15139,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15179,8 +15179,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15199,7 +15199,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .url("string")
      *             .build());
      * 
@@ -15225,8 +15225,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15245,7 +15245,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .url("string")
      *             .build());
      * 
@@ -15271,8 +15271,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15291,7 +15291,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .url("string")
      *             .build());
      * 
@@ -15317,8 +15317,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15337,7 +15337,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .url("string")
      *             .build());
      * 
@@ -15363,8 +15363,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15383,7 +15383,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .url("string")
      *             .build());
      * 
@@ -15409,8 +15409,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15432,7 +15432,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
@@ -15457,8 +15457,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15480,7 +15480,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
@@ -15505,8 +15505,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15528,7 +15528,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
@@ -15553,8 +15553,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15576,7 +15576,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
@@ -15601,8 +15601,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15624,7 +15624,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
@@ -15649,8 +15649,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15672,7 +15672,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
@@ -15697,8 +15697,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15720,7 +15720,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
@@ -15745,8 +15745,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15768,7 +15768,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
@@ -15793,8 +15793,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15816,7 +15816,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
@@ -15841,8 +15841,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15864,7 +15864,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
@@ -15889,8 +15889,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15912,7 +15912,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
@@ -15937,8 +15937,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15960,7 +15960,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
@@ -15985,8 +15985,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16008,7 +16008,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
@@ -16033,8 +16033,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16056,7 +16056,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
@@ -16081,8 +16081,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16104,7 +16104,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
@@ -16129,8 +16129,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16152,7 +16152,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
@@ -16177,8 +16177,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16200,7 +16200,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
@@ -16225,8 +16225,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16248,7 +16248,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
@@ -16273,8 +16273,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16296,7 +16296,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
@@ -16321,8 +16321,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16344,7 +16344,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
@@ -16369,8 +16369,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16412,8 +16412,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16455,8 +16455,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16498,8 +16498,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16541,8 +16541,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16584,8 +16584,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16608,7 +16608,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
@@ -16633,8 +16633,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16657,7 +16657,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
@@ -16682,8 +16682,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16706,7 +16706,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
@@ -16731,8 +16731,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16755,7 +16755,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
@@ -16780,8 +16780,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16804,7 +16804,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
@@ -16829,8 +16829,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16853,7 +16853,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
@@ -16878,8 +16878,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16902,7 +16902,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
@@ -16927,8 +16927,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16951,7 +16951,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
@@ -16976,8 +16976,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17000,7 +17000,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
@@ -17025,8 +17025,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17049,7 +17049,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
@@ -17074,8 +17074,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17098,7 +17098,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
@@ -17123,8 +17123,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17147,7 +17147,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
@@ -17172,8 +17172,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17196,7 +17196,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
@@ -17221,8 +17221,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17245,7 +17245,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
@@ -17270,8 +17270,8 @@ public final class OrganizationsFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.organizations.OrganizationsFunctions;
      * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17294,7 +17294,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());

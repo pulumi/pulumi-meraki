@@ -180,7 +180,7 @@ def get_webhooks_logs(ending_before: Optional[_builtins.str] = None,
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         url="string")
     pulumi.export("merakiOrganizationsWebhooksLogsExample", example.items)
     ```
@@ -218,14 +218,14 @@ def get_webhooks_logs(ending_before: Optional[_builtins.str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         url=pulumi.get(__ret__, 'url'))
-def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                             per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                             starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                             timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
-                             url: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_webhooks_logs_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                             per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                             starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                             timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
+                             url: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksLogsResult]:
     """
     ## Example Usage
@@ -240,7 +240,7 @@ def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[_buil
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         url="string")
     pulumi.export("merakiOrganizationsWebhooksLogsExample", example.items)
     ```

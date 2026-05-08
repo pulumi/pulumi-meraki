@@ -137,27 +137,27 @@ export interface VlanProfilesState {
     /**
      * IName of the VLAN profile
      */
-    iname?: pulumi.Input<string>;
+    iname?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned
      */
-    isDefault?: pulumi.Input<boolean>;
+    isDefault?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the profile, string length must be from 1 to 255 characters
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An array of named VLANs
      */
-    vlanGroups?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanGroup>[]>;
+    vlanGroups?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanGroup>[] | undefined>;
     /**
      * An array of named VLANs
      */
-    vlanNames?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanName>[]>;
+    vlanNames?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanName>[] | undefined>;
 }
 
 /**
@@ -171,7 +171,7 @@ export interface VlanProfilesArgs {
     /**
      * Name of the profile, string length must be from 1 to 255 characters
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -179,9 +179,9 @@ export interface VlanProfilesArgs {
     /**
      * An array of named VLANs
      */
-    vlanGroups?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanGroup>[]>;
+    vlanGroups?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanGroup>[] | undefined>;
     /**
      * An array of named VLANs
      */
-    vlanNames?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanName>[]>;
+    vlanNames?: pulumi.Input<pulumi.Input<inputs.networks.VlanProfilesVlanName>[] | undefined>;
 }

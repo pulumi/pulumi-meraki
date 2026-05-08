@@ -107,12 +107,12 @@ export class LicensingCotermLicensesMove extends pulumi.CustomResource {
  * Input properties used for looking up and filtering LicensingCotermLicensesMove resources.
  */
 export interface LicensingCotermLicensesMoveState {
-    item?: pulumi.Input<inputs.organizations.LicensingCotermLicensesMoveItem>;
+    item?: pulumi.Input<inputs.organizations.LicensingCotermLicensesMoveItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.LicensingCotermLicensesMoveParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.LicensingCotermLicensesMoveParameters | undefined>;
 }
 
 /**

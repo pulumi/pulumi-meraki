@@ -23,22 +23,22 @@ class WirelessSsidsSplashSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 allow_simultaneous_logins: Optional[pulumi.Input[_builtins.bool]] = None,
-                 billing: Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']] = None,
-                 block_all_traffic_before_sign_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 controller_disconnection_behavior: Optional[pulumi.Input[_builtins.str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 sentry_enrollment: Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] = None,
-                 splash_image: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']] = None,
-                 splash_logo: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']] = None,
-                 splash_prepaid_front: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] = None,
-                 splash_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 splash_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 theme_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_redirect_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_splash_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 welcome_message: Optional[pulumi.Input[_builtins.str]] = None):
+                 allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+                 billing: pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']] = None,
+                 block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+                 guest_sponsorship: pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 sentry_enrollment: pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] = None,
+                 splash_image: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']] = None,
+                 splash_logo: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']] = None,
+                 splash_prepaid_front: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] = None,
+                 splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 welcome_message: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSsidsSplashSettings resource.
 
@@ -122,221 +122,221 @@ class WirelessSsidsSplashSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowSimultaneousLogins")
-    def allow_simultaneous_logins(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_simultaneous_logins(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to allow simultaneous logins from different devices.
         """
         return pulumi.get(self, "allow_simultaneous_logins")
 
     @allow_simultaneous_logins.setter
-    def allow_simultaneous_logins(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_simultaneous_logins(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_simultaneous_logins", value)
 
     @_builtins.property
     @pulumi.getter
-    def billing(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']]:
+    def billing(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']]:
         """
         Details associated with billing splash
         """
         return pulumi.get(self, "billing")
 
     @billing.setter
-    def billing(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']]):
+    def billing(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']]):
         pulumi.set(self, "billing", value)
 
     @_builtins.property
     @pulumi.getter(name="blockAllTrafficBeforeSignOn")
-    def block_all_traffic_before_sign_on(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_all_traffic_before_sign_on(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
         """
         return pulumi.get(self, "block_all_traffic_before_sign_on")
 
     @block_all_traffic_before_sign_on.setter
-    def block_all_traffic_before_sign_on(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_all_traffic_before_sign_on(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_all_traffic_before_sign_on", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerDisconnectionBehavior")
-    def controller_disconnection_behavior(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def controller_disconnection_behavior(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         How login attempts should be handled when the controller is unreachable.
         """
         return pulumi.get(self, "controller_disconnection_behavior")
 
     @controller_disconnection_behavior.setter
-    def controller_disconnection_behavior(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def controller_disconnection_behavior(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "controller_disconnection_behavior", value)
 
     @_builtins.property
     @pulumi.getter(name="guestSponsorship")
-    def guest_sponsorship(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]:
+    def guest_sponsorship(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]:
         """
         Details associated with guest sponsored splash
         """
         return pulumi.get(self, "guest_sponsorship")
 
     @guest_sponsorship.setter
-    def guest_sponsorship(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]):
+    def guest_sponsorship(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]):
         pulumi.set(self, "guest_sponsorship", value)
 
     @_builtins.property
     @pulumi.getter(name="redirectUrl")
-    def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def redirect_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The custom redirect URL where the users will go after the splash page.
         """
         return pulumi.get(self, "redirect_url")
 
     @redirect_url.setter
-    def redirect_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def redirect_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="sentryEnrollment")
-    def sentry_enrollment(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]:
+    def sentry_enrollment(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]:
         """
         Systems Manager sentry enrollment splash settings.
         """
         return pulumi.get(self, "sentry_enrollment")
 
     @sentry_enrollment.setter
-    def sentry_enrollment(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]):
+    def sentry_enrollment(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]):
         pulumi.set(self, "sentry_enrollment", value)
 
     @_builtins.property
     @pulumi.getter(name="splashImage")
-    def splash_image(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']]:
+    def splash_image(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']]:
         """
         The image used in the splash page.
         """
         return pulumi.get(self, "splash_image")
 
     @splash_image.setter
-    def splash_image(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']]):
+    def splash_image(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']]):
         pulumi.set(self, "splash_image", value)
 
     @_builtins.property
     @pulumi.getter(name="splashLogo")
-    def splash_logo(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']]:
+    def splash_logo(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']]:
         """
         The logo used in the splash page.
         """
         return pulumi.get(self, "splash_logo")
 
     @splash_logo.setter
-    def splash_logo(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']]):
+    def splash_logo(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']]):
         pulumi.set(self, "splash_logo", value)
 
     @_builtins.property
     @pulumi.getter(name="splashPrepaidFront")
-    def splash_prepaid_front(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]:
+    def splash_prepaid_front(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]:
         """
         The prepaid front image used in the splash page.
         """
         return pulumi.get(self, "splash_prepaid_front")
 
     @splash_prepaid_front.setter
-    def splash_prepaid_front(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]):
+    def splash_prepaid_front(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]):
         pulumi.set(self, "splash_prepaid_front", value)
 
     @_builtins.property
     @pulumi.getter(name="splashTimeout")
-    def splash_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def splash_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Splash timeout in minutes.
         """
         return pulumi.get(self, "splash_timeout")
 
     @splash_timeout.setter
-    def splash_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def splash_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "splash_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="splashUrl")
-    def splash_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def splash_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The custom splash URL of the click-through splash page.
         """
         return pulumi.get(self, "splash_url")
 
     @splash_url.setter
-    def splash_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def splash_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "splash_url", value)
 
     @_builtins.property
     @pulumi.getter(name="themeId")
-    def theme_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def theme_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the selected splash theme.
         """
         return pulumi.get(self, "theme_id")
 
     @theme_id.setter
-    def theme_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def theme_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "theme_id", value)
 
     @_builtins.property
     @pulumi.getter(name="useRedirectUrl")
-    def use_redirect_url(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_redirect_url(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page.
         """
         return pulumi.get(self, "use_redirect_url")
 
     @use_redirect_url.setter
-    def use_redirect_url(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_redirect_url(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="useSplashUrl")
-    def use_splash_url(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_splash_url(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether the users will be redirected to the custom splash url
         """
         return pulumi.get(self, "use_splash_url")
 
     @use_splash_url.setter
-    def use_splash_url(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_splash_url(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_splash_url", value)
 
     @_builtins.property
     @pulumi.getter(name="welcomeMessage")
-    def welcome_message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def welcome_message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The welcome message for the users on the splash page.
         """
         return pulumi.get(self, "welcome_message")
 
     @welcome_message.setter
-    def welcome_message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def welcome_message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "welcome_message", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsSplashSettingsState:
     def __init__(__self__, *,
-                 allow_simultaneous_logins: Optional[pulumi.Input[_builtins.bool]] = None,
-                 billing: Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']] = None,
-                 block_all_traffic_before_sign_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 controller_disconnection_behavior: Optional[pulumi.Input[_builtins.str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 self_registration: Optional[pulumi.Input['WirelessSsidsSplashSettingsSelfRegistrationArgs']] = None,
-                 sentry_enrollment: Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] = None,
-                 splash_image: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']] = None,
-                 splash_logo: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']] = None,
-                 splash_page: Optional[pulumi.Input[_builtins.str]] = None,
-                 splash_prepaid_front: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] = None,
-                 splash_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 splash_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssid_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 theme_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_redirect_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_splash_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 welcome_message: Optional[pulumi.Input[_builtins.str]] = None):
+                 allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+                 billing: pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']] = None,
+                 block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+                 guest_sponsorship: pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 self_registration: pulumi.Input[Optional['WirelessSsidsSplashSettingsSelfRegistrationArgs']] = None,
+                 sentry_enrollment: pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] = None,
+                 splash_image: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']] = None,
+                 splash_logo: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']] = None,
+                 splash_page: pulumi.Input[Optional[_builtins.str]] = None,
+                 splash_prepaid_front: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] = None,
+                 splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssid_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 welcome_message: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsSplashSettings resources.
 
@@ -407,254 +407,254 @@ class _WirelessSsidsSplashSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="allowSimultaneousLogins")
-    def allow_simultaneous_logins(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def allow_simultaneous_logins(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to allow simultaneous logins from different devices.
         """
         return pulumi.get(self, "allow_simultaneous_logins")
 
     @allow_simultaneous_logins.setter
-    def allow_simultaneous_logins(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def allow_simultaneous_logins(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "allow_simultaneous_logins", value)
 
     @_builtins.property
     @pulumi.getter
-    def billing(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']]:
+    def billing(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']]:
         """
         Details associated with billing splash
         """
         return pulumi.get(self, "billing")
 
     @billing.setter
-    def billing(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsBillingArgs']]):
+    def billing(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingArgs']]):
         pulumi.set(self, "billing", value)
 
     @_builtins.property
     @pulumi.getter(name="blockAllTrafficBeforeSignOn")
-    def block_all_traffic_before_sign_on(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def block_all_traffic_before_sign_on(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
         """
         return pulumi.get(self, "block_all_traffic_before_sign_on")
 
     @block_all_traffic_before_sign_on.setter
-    def block_all_traffic_before_sign_on(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def block_all_traffic_before_sign_on(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "block_all_traffic_before_sign_on", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerDisconnectionBehavior")
-    def controller_disconnection_behavior(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def controller_disconnection_behavior(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         How login attempts should be handled when the controller is unreachable.
         """
         return pulumi.get(self, "controller_disconnection_behavior")
 
     @controller_disconnection_behavior.setter
-    def controller_disconnection_behavior(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def controller_disconnection_behavior(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "controller_disconnection_behavior", value)
 
     @_builtins.property
     @pulumi.getter(name="guestSponsorship")
-    def guest_sponsorship(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]:
+    def guest_sponsorship(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]:
         """
         Details associated with guest sponsored splash
         """
         return pulumi.get(self, "guest_sponsorship")
 
     @guest_sponsorship.setter
-    def guest_sponsorship(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]):
+    def guest_sponsorship(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]):
         pulumi.set(self, "guest_sponsorship", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter(name="redirectUrl")
-    def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def redirect_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The custom redirect URL where the users will go after the splash page.
         """
         return pulumi.get(self, "redirect_url")
 
     @redirect_url.setter
-    def redirect_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def redirect_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="selfRegistration")
-    def self_registration(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSelfRegistrationArgs']]:
+    def self_registration(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSelfRegistrationArgs']]:
         """
         Self-registration for splash with Meraki authentication.
         """
         return pulumi.get(self, "self_registration")
 
     @self_registration.setter
-    def self_registration(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSelfRegistrationArgs']]):
+    def self_registration(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSelfRegistrationArgs']]):
         pulumi.set(self, "self_registration", value)
 
     @_builtins.property
     @pulumi.getter(name="sentryEnrollment")
-    def sentry_enrollment(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]:
+    def sentry_enrollment(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]:
         """
         Systems Manager sentry enrollment splash settings.
         """
         return pulumi.get(self, "sentry_enrollment")
 
     @sentry_enrollment.setter
-    def sentry_enrollment(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]):
+    def sentry_enrollment(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]):
         pulumi.set(self, "sentry_enrollment", value)
 
     @_builtins.property
     @pulumi.getter(name="splashImage")
-    def splash_image(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']]:
+    def splash_image(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']]:
         """
         The image used in the splash page.
         """
         return pulumi.get(self, "splash_image")
 
     @splash_image.setter
-    def splash_image(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashImageArgs']]):
+    def splash_image(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageArgs']]):
         pulumi.set(self, "splash_image", value)
 
     @_builtins.property
     @pulumi.getter(name="splashLogo")
-    def splash_logo(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']]:
+    def splash_logo(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']]:
         """
         The logo used in the splash page.
         """
         return pulumi.get(self, "splash_logo")
 
     @splash_logo.setter
-    def splash_logo(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoArgs']]):
+    def splash_logo(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoArgs']]):
         pulumi.set(self, "splash_logo", value)
 
     @_builtins.property
     @pulumi.getter(name="splashPage")
-    def splash_page(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def splash_page(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of splash page for this SSID
         """
         return pulumi.get(self, "splash_page")
 
     @splash_page.setter
-    def splash_page(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def splash_page(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "splash_page", value)
 
     @_builtins.property
     @pulumi.getter(name="splashPrepaidFront")
-    def splash_prepaid_front(self) -> Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]:
+    def splash_prepaid_front(self) -> pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]:
         """
         The prepaid front image used in the splash page.
         """
         return pulumi.get(self, "splash_prepaid_front")
 
     @splash_prepaid_front.setter
-    def splash_prepaid_front(self, value: Optional[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]):
+    def splash_prepaid_front(self, value: pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]):
         pulumi.set(self, "splash_prepaid_front", value)
 
     @_builtins.property
     @pulumi.getter(name="splashTimeout")
-    def splash_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def splash_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Splash timeout in minutes.
         """
         return pulumi.get(self, "splash_timeout")
 
     @splash_timeout.setter
-    def splash_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def splash_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "splash_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="splashUrl")
-    def splash_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def splash_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The custom splash URL of the click-through splash page.
         """
         return pulumi.get(self, "splash_url")
 
     @splash_url.setter
-    def splash_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def splash_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "splash_url", value)
 
     @_builtins.property
     @pulumi.getter(name="ssidNumber")
-    def ssid_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ssid_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SSID number
         """
         return pulumi.get(self, "ssid_number")
 
     @ssid_number.setter
-    def ssid_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ssid_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ssid_number", value)
 
     @_builtins.property
     @pulumi.getter(name="themeId")
-    def theme_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def theme_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the selected splash theme.
         """
         return pulumi.get(self, "theme_id")
 
     @theme_id.setter
-    def theme_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def theme_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "theme_id", value)
 
     @_builtins.property
     @pulumi.getter(name="useRedirectUrl")
-    def use_redirect_url(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_redirect_url(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page.
         """
         return pulumi.get(self, "use_redirect_url")
 
     @use_redirect_url.setter
-    def use_redirect_url(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_redirect_url(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="useSplashUrl")
-    def use_splash_url(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def use_splash_url(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether the users will be redirected to the custom splash url
         """
         return pulumi.get(self, "use_splash_url")
 
     @use_splash_url.setter
-    def use_splash_url(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def use_splash_url(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "use_splash_url", value)
 
     @_builtins.property
     @pulumi.getter(name="welcomeMessage")
-    def welcome_message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def welcome_message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The welcome message for the users on the splash page.
         """
         return pulumi.get(self, "welcome_message")
 
     @welcome_message.setter
-    def welcome_message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def welcome_message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "welcome_message", value)
 
 
@@ -664,24 +664,24 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_simultaneous_logins: Optional[pulumi.Input[_builtins.bool]] = None,
-                 billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
-                 block_all_traffic_before_sign_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 controller_disconnection_behavior: Optional[pulumi.Input[_builtins.str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
-                 splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
-                 splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
-                 splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
-                 splash_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 splash_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 theme_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_redirect_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_splash_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 welcome_message: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+                 billing: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
+                 block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+                 guest_sponsorship: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 sentry_enrollment: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+                 splash_image: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+                 splash_logo: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
+                 splash_prepaid_front: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
+                 splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 welcome_message: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -871,24 +871,24 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_simultaneous_logins: Optional[pulumi.Input[_builtins.bool]] = None,
-                 billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
-                 block_all_traffic_before_sign_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 controller_disconnection_behavior: Optional[pulumi.Input[_builtins.str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
-                 splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
-                 splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
-                 splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
-                 splash_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 splash_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 theme_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_redirect_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 use_splash_url: Optional[pulumi.Input[_builtins.bool]] = None,
-                 welcome_message: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+                 billing: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
+                 block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+                 guest_sponsorship: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 sentry_enrollment: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+                 splash_image: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+                 splash_logo: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
+                 splash_prepaid_front: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
+                 splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+                 welcome_message: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -933,27 +933,27 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allow_simultaneous_logins: Optional[pulumi.Input[_builtins.bool]] = None,
-            billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
-            block_all_traffic_before_sign_on: Optional[pulumi.Input[_builtins.bool]] = None,
-            controller_disconnection_behavior: Optional[pulumi.Input[_builtins.str]] = None,
-            guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-            self_registration: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSelfRegistrationArgs', 'WirelessSsidsSplashSettingsSelfRegistrationArgsDict']]] = None,
-            sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
-            splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
-            splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
-            splash_page: Optional[pulumi.Input[_builtins.str]] = None,
-            splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
-            splash_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            splash_url: Optional[pulumi.Input[_builtins.str]] = None,
-            ssid_number: Optional[pulumi.Input[_builtins.int]] = None,
-            theme_id: Optional[pulumi.Input[_builtins.str]] = None,
-            use_redirect_url: Optional[pulumi.Input[_builtins.bool]] = None,
-            use_splash_url: Optional[pulumi.Input[_builtins.bool]] = None,
-            welcome_message: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessSsidsSplashSettings':
+            allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+            billing: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
+            block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+            controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+            guest_sponsorship: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+            self_registration: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSelfRegistrationArgs', 'WirelessSsidsSplashSettingsSelfRegistrationArgsDict']]] = None,
+            sentry_enrollment: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+            splash_image: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+            splash_logo: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
+            splash_page: pulumi.Input[Optional[_builtins.str]] = None,
+            splash_prepaid_front: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
+            splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+            ssid_number: pulumi.Input[Optional[_builtins.int]] = None,
+            theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+            use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+            welcome_message: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSsidsSplashSettings':
         """
         Get an existing WirelessSsidsSplashSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

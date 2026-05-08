@@ -113,16 +113,16 @@ export interface SwitchMtuState {
     /**
      * MTU size for the entire network. Default value is 9578.
      */
-    defaultMtuSize?: pulumi.Input<number>;
+    defaultMtuSize?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Override MTU size for individual switches or switch templates.
      *   An empty array will clear overrides.
      */
-    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[]>;
+    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[] | undefined>;
 }
 
 /**
@@ -132,7 +132,7 @@ export interface SwitchMtuArgs {
     /**
      * MTU size for the entire network. Default value is 9578.
      */
-    defaultMtuSize?: pulumi.Input<number>;
+    defaultMtuSize?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -141,5 +141,5 @@ export interface SwitchMtuArgs {
      * Override MTU size for individual switches or switch templates.
      *   An empty array will clear overrides.
      */
-    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[]>;
+    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[] | undefined>;
 }

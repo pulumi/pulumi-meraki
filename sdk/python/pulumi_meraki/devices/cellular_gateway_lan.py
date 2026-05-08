@@ -22,8 +22,8 @@ __all__ = ['CellularGatewayLanArgs', 'CellularGatewayLan']
 class CellularGatewayLanArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]] = None):
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayLan resource.
 
@@ -51,38 +51,38 @@ class CellularGatewayLanArgs:
 
     @_builtins.property
     @pulumi.getter(name="fixedIpAssignments")
-    def fixed_ip_assignments(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]:
+    def fixed_ip_assignments(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]:
         """
         list of all fixed IP assignments for a single MG
         """
         return pulumi.get(self, "fixed_ip_assignments")
 
     @fixed_ip_assignments.setter
-    def fixed_ip_assignments(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]):
+    def fixed_ip_assignments(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]):
         pulumi.set(self, "fixed_ip_assignments", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]:
         """
         list of all reserved IP ranges for a single MG
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
 
 @pulumi.input_type
 class _CellularGatewayLanState:
     def __init__(__self__, *,
-                 device_lan_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayLan resources.
 
@@ -108,74 +108,74 @@ class _CellularGatewayLanState:
 
     @_builtins.property
     @pulumi.getter(name="deviceLanIp")
-    def device_lan_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_lan_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Lan IP of the MG
         """
         return pulumi.get(self, "device_lan_ip")
 
     @device_lan_ip.setter
-    def device_lan_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_lan_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_lan_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceName")
-    def device_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the MG.
         """
         return pulumi.get(self, "device_name")
 
     @device_name.setter
-    def device_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_name", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSubnet")
-    def device_subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet configuration of the MG.
         """
         return pulumi.get(self, "device_subnet")
 
     @device_subnet.setter
-    def device_subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_subnet", value)
 
     @_builtins.property
     @pulumi.getter(name="fixedIpAssignments")
-    def fixed_ip_assignments(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]:
+    def fixed_ip_assignments(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]:
         """
         list of all fixed IP assignments for a single MG
         """
         return pulumi.get(self, "fixed_ip_assignments")
 
     @fixed_ip_assignments.setter
-    def fixed_ip_assignments(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]):
+    def fixed_ip_assignments(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]]]):
         pulumi.set(self, "fixed_ip_assignments", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]:
         """
         list of all reserved IP ranges for a single MG
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -185,9 +185,9 @@ class CellularGatewayLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -274,9 +274,9 @@ class CellularGatewayLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -304,12 +304,12 @@ class CellularGatewayLan(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device_lan_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            device_name: Optional[pulumi.Input[_builtins.str]] = None,
-            device_subnet: Optional[pulumi.Input[_builtins.str]] = None,
-            fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-            reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CellularGatewayLan':
+            device_lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            device_name: pulumi.Input[Optional[_builtins.str]] = None,
+            device_subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CellularGatewayLan':
         """
         Get an existing CellularGatewayLan resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

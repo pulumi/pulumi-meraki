@@ -22,8 +22,8 @@ __all__ = ['SwitchStpArgs', 'SwitchStp']
 class SwitchStpArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]] = None):
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchStp resource.
 
@@ -51,36 +51,36 @@ class SwitchStpArgs:
 
     @_builtins.property
     @pulumi.getter(name="rstpEnabled")
-    def rstp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rstp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The spanning tree protocol status in network
         """
         return pulumi.get(self, "rstp_enabled")
 
     @rstp_enabled.setter
-    def rstp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rstp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rstp_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stpBridgePriorities")
-    def stp_bridge_priorities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]:
+    def stp_bridge_priorities(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]:
         """
         STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
         """
         return pulumi.get(self, "stp_bridge_priorities")
 
     @stp_bridge_priorities.setter
-    def stp_bridge_priorities(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]):
+    def stp_bridge_priorities(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]):
         pulumi.set(self, "stp_bridge_priorities", value)
 
 
 @pulumi.input_type
 class _SwitchStpState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]] = None,
-                 stp_bridge_priority_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]] = None,
+                 stp_bridge_priority_responses: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchStp resources.
 
@@ -100,50 +100,50 @@ class _SwitchStpState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="rstpEnabled")
-    def rstp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rstp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The spanning tree protocol status in network
         """
         return pulumi.get(self, "rstp_enabled")
 
     @rstp_enabled.setter
-    def rstp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rstp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rstp_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stpBridgePriorities")
-    def stp_bridge_priorities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]:
+    def stp_bridge_priorities(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]:
         """
         STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
         """
         return pulumi.get(self, "stp_bridge_priorities")
 
     @stp_bridge_priorities.setter
-    def stp_bridge_priorities(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]):
+    def stp_bridge_priorities(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]]):
         pulumi.set(self, "stp_bridge_priorities", value)
 
     @_builtins.property
     @pulumi.getter(name="stpBridgePriorityResponses")
-    def stp_bridge_priority_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]]:
+    def stp_bridge_priority_responses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]]:
         """
         STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
         """
         return pulumi.get(self, "stp_bridge_priority_responses")
 
     @stp_bridge_priority_responses.setter
-    def stp_bridge_priority_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]]):
+    def stp_bridge_priority_responses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]]):
         pulumi.set(self, "stp_bridge_priority_responses", value)
 
 
@@ -153,9 +153,9 @@ class SwitchStp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -240,9 +240,9 @@ class SwitchStp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -268,10 +268,10 @@ class SwitchStp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
-            stp_bridge_priority_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityResponseArgs', 'SwitchStpStpBridgePriorityResponseArgsDict']]]]] = None) -> 'SwitchStp':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
+            stp_bridge_priority_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityResponseArgs', 'SwitchStpStpBridgePriorityResponseArgsDict']]]]] = None) -> 'SwitchStp':
         """
         Get an existing SwitchStp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

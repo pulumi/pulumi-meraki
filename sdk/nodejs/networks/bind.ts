@@ -98,12 +98,12 @@ export class Bind extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Bind resources.
  */
 export interface BindState {
-    item?: pulumi.Input<inputs.networks.BindItem>;
+    item?: pulumi.Input<inputs.networks.BindItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.BindParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.BindParameters | undefined>;
 }
 
 /**

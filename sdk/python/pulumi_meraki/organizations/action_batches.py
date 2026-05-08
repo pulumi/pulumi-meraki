@@ -22,11 +22,11 @@ __all__ = ['ActionBatchesArgs', 'ActionBatches']
 class ActionBatchesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 action_batch_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]] = None,
-                 callback: Optional[pulumi.Input['ActionBatchesCallbackArgs']] = None,
-                 confirmed: Optional[pulumi.Input[_builtins.bool]] = None,
-                 synchronous: Optional[pulumi.Input[_builtins.bool]] = None):
+                 action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 actions: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]] = None,
+                 callback: pulumi.Input[Optional['ActionBatchesCallbackArgs']] = None,
+                 confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+                 synchronous: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ActionBatches resource.
 
@@ -63,75 +63,75 @@ class ActionBatchesArgs:
 
     @_builtins.property
     @pulumi.getter(name="actionBatchId")
-    def action_batch_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def action_batch_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         actionBatchId path parameter. Action batch ID
         """
         return pulumi.get(self, "action_batch_id")
 
     @action_batch_id.setter
-    def action_batch_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def action_batch_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "action_batch_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]:
+    def actions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]:
         """
         A set of changes made as part of this action (\\n\\nmore details\\n\\n)
         """
         return pulumi.get(self, "actions")
 
     @actions.setter
-    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]):
+    def actions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]):
         pulumi.set(self, "actions", value)
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['ActionBatchesCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['ActionBatchesCallbackArgs']]:
         """
         Information for callback used to send back results
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['ActionBatchesCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['ActionBatchesCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def confirmed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def confirmed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether the action should be previewed before executing or not
         """
         return pulumi.get(self, "confirmed")
 
     @confirmed.setter
-    def confirmed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def confirmed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "confirmed", value)
 
     @_builtins.property
     @pulumi.getter
-    def synchronous(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def synchronous(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether actions should run synchronously or asynchronously
         """
         return pulumi.get(self, "synchronous")
 
     @synchronous.setter
-    def synchronous(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def synchronous(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "synchronous", value)
 
 
 @pulumi.input_type
 class _ActionBatchesState:
     def __init__(__self__, *,
-                 action_batch_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]] = None,
-                 callback: Optional[pulumi.Input['ActionBatchesCallbackArgs']] = None,
-                 confirmed: Optional[pulumi.Input[_builtins.bool]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input['ActionBatchesStatusArgs']] = None,
-                 synchronous: Optional[pulumi.Input[_builtins.bool]] = None):
+                 action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 actions: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]] = None,
+                 callback: pulumi.Input[Optional['ActionBatchesCallbackArgs']] = None,
+                 confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional['ActionBatchesStatusArgs']] = None,
+                 synchronous: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ActionBatches resources.
 
@@ -160,86 +160,86 @@ class _ActionBatchesState:
 
     @_builtins.property
     @pulumi.getter(name="actionBatchId")
-    def action_batch_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def action_batch_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         actionBatchId path parameter. Action batch ID
         """
         return pulumi.get(self, "action_batch_id")
 
     @action_batch_id.setter
-    def action_batch_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def action_batch_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "action_batch_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]:
+    def actions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]:
         """
         A set of changes made as part of this action (\\n\\nmore details\\n\\n)
         """
         return pulumi.get(self, "actions")
 
     @actions.setter
-    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]):
+    def actions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesActionArgs']]]]):
         pulumi.set(self, "actions", value)
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['ActionBatchesCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['ActionBatchesCallbackArgs']]:
         """
         Information for callback used to send back results
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['ActionBatchesCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['ActionBatchesCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def confirmed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def confirmed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether the action should be previewed before executing or not
         """
         return pulumi.get(self, "confirmed")
 
     @confirmed.setter
-    def confirmed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def confirmed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "confirmed", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the organization this action batch belongs to
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input['ActionBatchesStatusArgs']]:
+    def status(self) -> pulumi.Input[Optional['ActionBatchesStatusArgs']]:
         """
         Status of action batch
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input['ActionBatchesStatusArgs']]):
+    def status(self, value: pulumi.Input[Optional['ActionBatchesStatusArgs']]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def synchronous(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def synchronous(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether actions should run synchronously or asynchronously
         """
         return pulumi.get(self, "synchronous")
 
     @synchronous.setter
-    def synchronous(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def synchronous(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "synchronous", value)
 
 
@@ -249,12 +249,12 @@ class ActionBatches(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action_batch_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
-                 callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
-                 confirmed: Optional[pulumi.Input[_builtins.bool]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 synchronous: Optional[pulumi.Input[_builtins.bool]] = None,
+                 action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 actions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+                 callback: pulumi.Input[Optional[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
+                 confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 synchronous: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -356,12 +356,12 @@ class ActionBatches(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action_batch_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
-                 callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
-                 confirmed: Optional[pulumi.Input[_builtins.bool]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 synchronous: Optional[pulumi.Input[_builtins.bool]] = None,
+                 action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 actions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+                 callback: pulumi.Input[Optional[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
+                 confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 synchronous: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -390,13 +390,13 @@ class ActionBatches(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action_batch_id: Optional[pulumi.Input[_builtins.str]] = None,
-            actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
-            callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
-            confirmed: Optional[pulumi.Input[_builtins.bool]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            status: Optional[pulumi.Input[Union['ActionBatchesStatusArgs', 'ActionBatchesStatusArgsDict']]] = None,
-            synchronous: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ActionBatches':
+            action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+            actions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+            callback: pulumi.Input[Optional[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
+            confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[Union['ActionBatchesStatusArgs', 'ActionBatchesStatusArgsDict']]] = None,
+            synchronous: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ActionBatches':
         """
         Get an existing ActionBatches resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

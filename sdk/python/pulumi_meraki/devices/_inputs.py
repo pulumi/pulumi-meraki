@@ -212,15 +212,15 @@ __all__ = [
 ]
 
 class ApplianceRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
-    channel: NotRequired[pulumi.Input[_builtins.int]]
+    channel: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Manual channel for 5 GHz
     """
-    channel_width: NotRequired[pulumi.Input[_builtins.int]]
+    channel_width: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Manual channel width for 5 GHz
     """
-    target_power: NotRequired[pulumi.Input[_builtins.int]]
+    target_power: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Manual target power for 5 GHz
     """
@@ -228,9 +228,9 @@ class ApplianceRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceRadioSettingsFiveGhzSettingsArgs:
     def __init__(__self__, *,
-                 channel: Optional[pulumi.Input[_builtins.int]] = None,
-                 channel_width: Optional[pulumi.Input[_builtins.int]] = None,
-                 target_power: Optional[pulumi.Input[_builtins.int]] = None):
+                 channel: pulumi.Input[Optional[_builtins.int]] = None,
+                 channel_width: pulumi.Input[Optional[_builtins.int]] = None,
+                 target_power: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] channel: Manual channel for 5 GHz
         :param pulumi.Input[_builtins.int] channel_width: Manual channel width for 5 GHz
@@ -245,47 +245,47 @@ class ApplianceRadioSettingsFiveGhzSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def channel(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def channel(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Manual channel for 5 GHz
         """
         return pulumi.get(self, "channel")
 
     @channel.setter
-    def channel(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def channel(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "channel", value)
 
     @_builtins.property
     @pulumi.getter(name="channelWidth")
-    def channel_width(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def channel_width(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Manual channel width for 5 GHz
         """
         return pulumi.get(self, "channel_width")
 
     @channel_width.setter
-    def channel_width(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def channel_width(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "channel_width", value)
 
     @_builtins.property
     @pulumi.getter(name="targetPower")
-    def target_power(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def target_power(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Manual target power for 5 GHz
         """
         return pulumi.get(self, "target_power")
 
     @target_power.setter
-    def target_power(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def target_power(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "target_power", value)
 
 
 class ApplianceRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
-    channel: NotRequired[pulumi.Input[_builtins.int]]
+    channel: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Manual channel for 2.4 GHz
     """
-    target_power: NotRequired[pulumi.Input[_builtins.int]]
+    target_power: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Manual target power for 2.4 GHz
     """
@@ -293,8 +293,8 @@ class ApplianceRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceRadioSettingsTwoFourGhzSettingsArgs:
     def __init__(__self__, *,
-                 channel: Optional[pulumi.Input[_builtins.int]] = None,
-                 target_power: Optional[pulumi.Input[_builtins.int]] = None):
+                 channel: pulumi.Input[Optional[_builtins.int]] = None,
+                 target_power: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] channel: Manual channel for 2.4 GHz
         :param pulumi.Input[_builtins.int] target_power: Manual target power for 2.4 GHz
@@ -306,35 +306,35 @@ class ApplianceRadioSettingsTwoFourGhzSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def channel(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def channel(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Manual channel for 2.4 GHz
         """
         return pulumi.get(self, "channel")
 
     @channel.setter
-    def channel(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def channel(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "channel", value)
 
     @_builtins.property
     @pulumi.getter(name="targetPower")
-    def target_power(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def target_power(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Manual target power for 2.4 GHz
         """
         return pulumi.get(self, "target_power")
 
     @target_power.setter
-    def target_power(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def target_power(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "target_power", value)
 
 
 class ApplianceUplinksSettingsInterfacesArgsDict(TypedDict):
-    wan1: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1ArgsDict']]
+    wan1: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1Args']]]
     """
     WAN 1 settings.
     """
-    wan2: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2ArgsDict']]
+    wan2: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2Args']]]
     """
     WAN 2 settings.
     """
@@ -342,8 +342,8 @@ class ApplianceUplinksSettingsInterfacesArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesArgs:
     def __init__(__self__, *,
-                 wan1: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1Args']] = None,
-                 wan2: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2Args']] = None):
+                 wan1: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1Args']] = None,
+                 wan2: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2Args']] = None):
         """
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan1Args'] wan1: WAN 1 settings.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan2Args'] wan2: WAN 2 settings.
@@ -355,43 +355,43 @@ class ApplianceUplinksSettingsInterfacesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def wan1(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1Args']]:
+    def wan1(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1Args']]:
         """
         WAN 1 settings.
         """
         return pulumi.get(self, "wan1")
 
     @wan1.setter
-    def wan1(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1Args']]):
+    def wan1(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1Args']]):
         pulumi.set(self, "wan1", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan2(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2Args']]:
+    def wan2(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2Args']]:
         """
         WAN 2 settings.
         """
         return pulumi.get(self, "wan2")
 
     @wan2.setter
-    def wan2(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2Args']]):
+    def wan2(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2Args']]):
         pulumi.set(self, "wan2", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1ArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Enable or disable the interface.
     """
-    pppoe: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict']]
+    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]]
     """
     Configuration options for PPPoE.
     """
-    svis: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisArgsDict']]
+    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]]
     """
     SVI settings by protocol.
     """
-    vlan_tagging: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict']]
+    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]]
     """
     VLAN tagging settings.
     """
@@ -399,10 +399,10 @@ class ApplianceUplinksSettingsInterfacesWan1ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1Args:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pppoe: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']] = None,
-                 svis: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisArgs']] = None,
-                 vlan_tagging: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pppoe: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']] = None,
+                 svis: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgs']] = None,
+                 vlan_tagging: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Enable or disable the interface.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgs'] pppoe: Configuration options for PPPoE.
@@ -420,59 +420,59 @@ class ApplianceUplinksSettingsInterfacesWan1Args:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable the interface.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def pppoe(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]:
+    def pppoe(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]:
         """
         Configuration options for PPPoE.
         """
         return pulumi.get(self, "pppoe")
 
     @pppoe.setter
-    def pppoe(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]):
+    def pppoe(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]):
         pulumi.set(self, "pppoe", value)
 
     @_builtins.property
     @pulumi.getter
-    def svis(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]:
+    def svis(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]:
         """
         SVI settings by protocol.
         """
         return pulumi.get(self, "svis")
 
     @svis.setter
-    def svis(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]):
+    def svis(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]):
         pulumi.set(self, "svis", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagging")
-    def vlan_tagging(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]:
+    def vlan_tagging(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]:
         """
         VLAN tagging settings.
         """
         return pulumi.get(self, "vlan_tagging")
 
     @vlan_tagging.setter
-    def vlan_tagging(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]):
+    def vlan_tagging(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]):
         pulumi.set(self, "vlan_tagging", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict']]
+    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]]
     """
     Settings for PPPoE Authentication.
     """
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether PPPoE is enabled.
     """
@@ -480,8 +480,8 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1PppoeArgs:
     def __init__(__self__, *,
-                 authentication: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 authentication: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs'] authentication: Settings for PPPoE Authentication.
         :param pulumi.Input[_builtins.bool] enabled: Whether PPPoE is enabled.
@@ -493,39 +493,39 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeArgs:
 
     @_builtins.property
     @pulumi.getter
-    def authentication(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]:
+    def authentication(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]:
         """
         Settings for PPPoE Authentication.
         """
         return pulumi.get(self, "authentication")
 
     @authentication.setter
-    def authentication(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]):
+    def authentication(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]):
         pulumi.set(self, "authentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether PPPoE is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether PPPoE authentication is enabled.
     """
-    password: NotRequired[pulumi.Input[_builtins.str]]
+    password: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Password for PPPoE authentication. This parameter is not returned.
     """
-    username: NotRequired[pulumi.Input[_builtins.str]]
+    username: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Username for PPPoE authentication.
     """
@@ -533,9 +533,9 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Whether PPPoE authentication is enabled.
         :param pulumi.Input[_builtins.str] password: Password for PPPoE authentication. This parameter is not returned.
@@ -550,47 +550,47 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether PPPoE authentication is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password for PPPoE authentication. This parameter is not returned.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username for PPPoE authentication.
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict']]
+    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]]
     """
     IPv4 settings for static/dynamic mode.
     """
-    ipv6: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict']]
+    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]]
     """
     IPv6 settings for static/dynamic mode.
     """
@@ -598,8 +598,8 @@ class ApplianceUplinksSettingsInterfacesWan1SvisArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisArgs:
     def __init__(__self__, *,
-                 ipv4: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']] = None):
+                 ipv4: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']] = None):
         """
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args'] ipv4: IPv4 settings for static/dynamic mode.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args'] ipv6: IPv6 settings for static/dynamic mode.
@@ -611,43 +611,43 @@ class ApplianceUplinksSettingsInterfacesWan1SvisArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]:
+    def ipv4(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]:
         """
         IPv4 settings for static/dynamic mode.
         """
         return pulumi.get(self, "ipv4")
 
     @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]):
+    def ipv4(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]):
         pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]:
         """
         IPv6 settings for static/dynamic mode.
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IP address and subnet mask when in static mode.
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The assignment mode for this SVI. Applies only when PPPoE is disabled.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Gateway IP address when in static mode.
     """
-    nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]]
     """
     The nameserver settings for this SVI.
     """
@@ -655,10 +655,10 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] address: IP address and subnet mask when in static mode.
         :param pulumi.Input[_builtins.str] assignment_mode: The assignment mode for this SVI. Applies only when PPPoE is disabled.
@@ -676,55 +676,55 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address and subnet mask when in static mode.
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The assignment mode for this SVI. Applies only when PPPoE is disabled.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Gateway IP address when in static mode.
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]:
         """
         The nameserver settings for this SVI.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -732,7 +732,7 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -741,31 +741,31 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Static address that will override the one(s) received by SLAAC.
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The assignment mode for this SVI. Applies only when PPPoE is disabled.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Static gateway that will override the one received by autoconf.
     """
-    nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]]
     """
     The nameserver settings for this SVI.
     """
@@ -773,10 +773,10 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] address: Static address that will override the one(s) received by SLAAC.
         :param pulumi.Input[_builtins.str] assignment_mode: The assignment mode for this SVI. Applies only when PPPoE is disabled.
@@ -794,55 +794,55 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static address that will override the one(s) received by SLAAC.
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The assignment mode for this SVI. Applies only when PPPoE is disabled.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static gateway that will override the one received by autoconf.
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]:
         """
         The nameserver settings for this SVI.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -850,7 +850,7 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -859,23 +859,23 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether VLAN tagging is enabled.
     """
-    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    vlan_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The ID of the VLAN to use for VLAN tagging.
     """
@@ -883,8 +883,8 @@ class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Whether VLAN tagging is enabled.
         :param pulumi.Input[_builtins.int] vlan_id: The ID of the VLAN to use for VLAN tagging.
@@ -896,43 +896,43 @@ class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether VLAN tagging is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The ID of the VLAN to use for VLAN tagging.
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2ArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Enable or disable the interface.
     """
-    pppoe: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict']]
+    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]]
     """
     Configuration options for PPPoE.
     """
-    svis: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisArgsDict']]
+    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]]
     """
     SVI settings by protocol.
     """
-    vlan_tagging: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict']]
+    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]]
     """
     VLAN tagging settings.
     """
@@ -940,10 +940,10 @@ class ApplianceUplinksSettingsInterfacesWan2ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2Args:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pppoe: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']] = None,
-                 svis: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisArgs']] = None,
-                 vlan_tagging: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pppoe: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']] = None,
+                 svis: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgs']] = None,
+                 vlan_tagging: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Enable or disable the interface.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgs'] pppoe: Configuration options for PPPoE.
@@ -961,59 +961,59 @@ class ApplianceUplinksSettingsInterfacesWan2Args:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable the interface.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def pppoe(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]:
+    def pppoe(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]:
         """
         Configuration options for PPPoE.
         """
         return pulumi.get(self, "pppoe")
 
     @pppoe.setter
-    def pppoe(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]):
+    def pppoe(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]):
         pulumi.set(self, "pppoe", value)
 
     @_builtins.property
     @pulumi.getter
-    def svis(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]:
+    def svis(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]:
         """
         SVI settings by protocol.
         """
         return pulumi.get(self, "svis")
 
     @svis.setter
-    def svis(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]):
+    def svis(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]):
         pulumi.set(self, "svis", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagging")
-    def vlan_tagging(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]:
+    def vlan_tagging(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]:
         """
         VLAN tagging settings.
         """
         return pulumi.get(self, "vlan_tagging")
 
     @vlan_tagging.setter
-    def vlan_tagging(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]):
+    def vlan_tagging(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]):
         pulumi.set(self, "vlan_tagging", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict']]
+    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]]
     """
     Settings for PPPoE Authentication.
     """
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether PPPoE is enabled.
     """
@@ -1021,8 +1021,8 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2PppoeArgs:
     def __init__(__self__, *,
-                 authentication: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 authentication: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs'] authentication: Settings for PPPoE Authentication.
         :param pulumi.Input[_builtins.bool] enabled: Whether PPPoE is enabled.
@@ -1034,39 +1034,39 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeArgs:
 
     @_builtins.property
     @pulumi.getter
-    def authentication(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]:
+    def authentication(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]:
         """
         Settings for PPPoE Authentication.
         """
         return pulumi.get(self, "authentication")
 
     @authentication.setter
-    def authentication(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]):
+    def authentication(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]):
         pulumi.set(self, "authentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether PPPoE is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether PPPoE authentication is enabled.
     """
-    password: NotRequired[pulumi.Input[_builtins.str]]
+    password: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Password for PPPoE authentication. This parameter is not returned.
     """
-    username: NotRequired[pulumi.Input[_builtins.str]]
+    username: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Username for PPPoE authentication.
     """
@@ -1074,9 +1074,9 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Whether PPPoE authentication is enabled.
         :param pulumi.Input[_builtins.str] password: Password for PPPoE authentication. This parameter is not returned.
@@ -1091,47 +1091,47 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether PPPoE authentication is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password for PPPoE authentication. This parameter is not returned.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username for PPPoE authentication.
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict']]
+    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]]
     """
     IPv4 settings for static/dynamic mode.
     """
-    ipv6: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict']]
+    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]]
     """
     IPv6 settings for static/dynamic mode.
     """
@@ -1139,8 +1139,8 @@ class ApplianceUplinksSettingsInterfacesWan2SvisArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisArgs:
     def __init__(__self__, *,
-                 ipv4: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']] = None):
+                 ipv4: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']] = None):
         """
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args'] ipv4: IPv4 settings for static/dynamic mode.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args'] ipv6: IPv6 settings for static/dynamic mode.
@@ -1152,43 +1152,43 @@ class ApplianceUplinksSettingsInterfacesWan2SvisArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]:
+    def ipv4(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]:
         """
         IPv4 settings for static/dynamic mode.
         """
         return pulumi.get(self, "ipv4")
 
     @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]):
+    def ipv4(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]):
         pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]:
         """
         IPv6 settings for static/dynamic mode.
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IP address and subnet mask when in static mode.
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The assignment mode for this SVI. Applies only when PPPoE is disabled.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Gateway IP address when in static mode.
     """
-    nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]]
     """
     The nameserver settings for this SVI.
     """
@@ -1196,10 +1196,10 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] address: IP address and subnet mask when in static mode.
         :param pulumi.Input[_builtins.str] assignment_mode: The assignment mode for this SVI. Applies only when PPPoE is disabled.
@@ -1217,55 +1217,55 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address and subnet mask when in static mode.
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The assignment mode for this SVI. Applies only when PPPoE is disabled.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Gateway IP address when in static mode.
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]:
         """
         The nameserver settings for this SVI.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -1273,7 +1273,7 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -1282,31 +1282,31 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Static address that will override the one(s) received by SLAAC.
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The assignment mode for this SVI. Applies only when PPPoE is disabled.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Static gateway that will override the one received by autoconf.
     """
-    nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]]
     """
     The nameserver settings for this SVI.
     """
@@ -1314,10 +1314,10 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] address: Static address that will override the one(s) received by SLAAC.
         :param pulumi.Input[_builtins.str] assignment_mode: The assignment mode for this SVI. Applies only when PPPoE is disabled.
@@ -1335,55 +1335,55 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static address that will override the one(s) received by SLAAC.
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The assignment mode for this SVI. Applies only when PPPoE is disabled.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static gateway that will override the one received by autoconf.
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]:
         """
         The nameserver settings for this SVI.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -1391,7 +1391,7 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict(TypedDic
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -1400,23 +1400,23 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether VLAN tagging is enabled.
     """
-    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    vlan_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The ID of the VLAN to use for VLAN tagging.
     """
@@ -1424,8 +1424,8 @@ class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Whether VLAN tagging is enabled.
         :param pulumi.Input[_builtins.int] vlan_id: The ID of the VLAN to use for VLAN tagging.
@@ -1437,35 +1437,35 @@ class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether VLAN tagging is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The ID of the VLAN to use for VLAN tagging.
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 class ApplianceVmxAuthenticationTokenItemArgsDict(TypedDict):
-    expires_at: NotRequired[pulumi.Input[_builtins.str]]
+    expires_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The expiration time for the token, in ISO 8601 format
     """
-    token: NotRequired[pulumi.Input[_builtins.str]]
+    token: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The newly generated authentication token for the vMX instance
     """
@@ -1473,8 +1473,8 @@ class ApplianceVmxAuthenticationTokenItemArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceVmxAuthenticationTokenItemArgs:
     def __init__(__self__, *,
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 token: Optional[pulumi.Input[_builtins.str]] = None):
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 token: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] expires_at: The expiration time for the token, in ISO 8601 format
         :param pulumi.Input[_builtins.str] token: The newly generated authentication token for the vMX instance
@@ -1486,39 +1486,39 @@ class ApplianceVmxAuthenticationTokenItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="expiresAt")
-    def expires_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expires_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The expiration time for the token, in ISO 8601 format
         """
         return pulumi.get(self, "expires_at")
 
     @expires_at.setter
-    def expires_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expires_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expires_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def token(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def token(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The newly generated authentication token for the vMX instance
         """
         return pulumi.get(self, "token")
 
     @token.setter
-    def token(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def token(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "token", value)
 
 
 class BlinkLedsItemArgsDict(TypedDict):
-    duration: NotRequired[pulumi.Input[_builtins.int]]
+    duration: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration in seconds. Will be between 5 and 120. Default is 20 seconds
     """
-    duty: NotRequired[pulumi.Input[_builtins.int]]
+    duty: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duty cycle as the percent active. Will be between 10 and 90. Default is 50
     """
-    period: NotRequired[pulumi.Input[_builtins.int]]
+    period: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The period in milliseconds. Will be between 100 and 1000. Default is 160 milliseconds
     """
@@ -1526,9 +1526,9 @@ class BlinkLedsItemArgsDict(TypedDict):
 @pulumi.input_type
 class BlinkLedsItemArgs:
     def __init__(__self__, *,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 duty: Optional[pulumi.Input[_builtins.int]] = None,
-                 period: Optional[pulumi.Input[_builtins.int]] = None):
+                 duration: pulumi.Input[Optional[_builtins.int]] = None,
+                 duty: pulumi.Input[Optional[_builtins.int]] = None,
+                 period: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] duration: The duration in seconds. Will be between 5 and 120. Default is 20 seconds
         :param pulumi.Input[_builtins.int] duty: The duty cycle as the percent active. Will be between 10 and 90. Default is 50
@@ -1543,51 +1543,51 @@ class BlinkLedsItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration in seconds. Will be between 5 and 120. Default is 20 seconds
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter
-    def duty(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duty(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duty cycle as the percent active. Will be between 10 and 90. Default is 50
         """
         return pulumi.get(self, "duty")
 
     @duty.setter
-    def duty(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duty(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duty", value)
 
     @_builtins.property
     @pulumi.getter
-    def period(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def period(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The period in milliseconds. Will be between 100 and 1000. Default is 160 milliseconds
         """
         return pulumi.get(self, "period")
 
     @period.setter
-    def period(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def period(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "period", value)
 
 
 class BlinkLedsParametersArgsDict(TypedDict):
-    duration: NotRequired[pulumi.Input[_builtins.int]]
+    duration: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration in seconds. Must be between 5 and 120. Default is 20 seconds
     """
-    duty: NotRequired[pulumi.Input[_builtins.int]]
+    duty: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duty cycle as the percent active. Must be between 10 and 90. Default is 50.
     """
-    period: NotRequired[pulumi.Input[_builtins.int]]
+    period: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds
     """
@@ -1595,9 +1595,9 @@ class BlinkLedsParametersArgsDict(TypedDict):
 @pulumi.input_type
 class BlinkLedsParametersArgs:
     def __init__(__self__, *,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 duty: Optional[pulumi.Input[_builtins.int]] = None,
-                 period: Optional[pulumi.Input[_builtins.int]] = None):
+                 duration: pulumi.Input[Optional[_builtins.int]] = None,
+                 duty: pulumi.Input[Optional[_builtins.int]] = None,
+                 period: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] duration: The duration in seconds. Must be between 5 and 120. Default is 20 seconds
         :param pulumi.Input[_builtins.int] duty: The duty cycle as the percent active. Must be between 10 and 90. Default is 50.
@@ -1612,47 +1612,47 @@ class BlinkLedsParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration in seconds. Must be between 5 and 120. Default is 20 seconds
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter
-    def duty(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duty(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duty cycle as the percent active. Must be between 10 and 90. Default is 50.
         """
         return pulumi.get(self, "duty")
 
     @duty.setter
-    def duty(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duty(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duty", value)
 
     @_builtins.property
     @pulumi.getter
-    def period(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def period(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds
         """
         return pulumi.get(self, "period")
 
     @period.setter
-    def period(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def period(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "period", value)
 
 
 class CameraCustomAnalyticsParameterArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of the parameter
     """
-    value: NotRequired[pulumi.Input[_builtins.float]]
+    value: NotRequired[pulumi.Input[Optional[_builtins.float]]]
     """
     Value of the parameter
     """
@@ -1660,8 +1660,8 @@ class CameraCustomAnalyticsParameterArgsDict(TypedDict):
 @pulumi.input_type
 class CameraCustomAnalyticsParameterArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.float]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 value: pulumi.Input[Optional[_builtins.float]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name of the parameter
         :param pulumi.Input[_builtins.float] value: Value of the parameter
@@ -1673,35 +1673,35 @@ class CameraCustomAnalyticsParameterArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the parameter
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Value of the parameter
         """
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "value", value)
 
 
 class CameraGenerateSnapshotParametersArgsDict(TypedDict):
-    fullframe: NotRequired[pulumi.Input[_builtins.bool]]
+    fullframe: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
     """
-    timestamp: NotRequired[pulumi.Input[_builtins.str]]
+    timestamp: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
     """
@@ -1709,8 +1709,8 @@ class CameraGenerateSnapshotParametersArgsDict(TypedDict):
 @pulumi.input_type
 class CameraGenerateSnapshotParametersArgs:
     def __init__(__self__, *,
-                 fullframe: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timestamp: Optional[pulumi.Input[_builtins.str]] = None):
+                 fullframe: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timestamp: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] fullframe: [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
         :param pulumi.Input[_builtins.str] timestamp: [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
@@ -1722,31 +1722,31 @@ class CameraGenerateSnapshotParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def fullframe(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fullframe(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
         """
         return pulumi.get(self, "fullframe")
 
     @fullframe.setter
-    def fullframe(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fullframe(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fullframe", value)
 
     @_builtins.property
     @pulumi.getter
-    def timestamp(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timestamp(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
         """
         return pulumi.get(self, "timestamp")
 
     @timestamp.setter
-    def timestamp(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timestamp(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timestamp", value)
 
 
 class CameraSenseAudioDetectionArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Boolean indicating if audio detection is enabled(true) or disabled(false) on the camera
     """
@@ -1754,7 +1754,7 @@ class CameraSenseAudioDetectionArgsDict(TypedDict):
 @pulumi.input_type
 class CameraSenseAudioDetectionArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Boolean indicating if audio detection is enabled(true) or disabled(false) on the camera
         """
@@ -1763,27 +1763,27 @@ class CameraSenseAudioDetectionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if audio detection is enabled(true) or disabled(false) on the camera
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 class CameraWirelessProfilesIdsArgsDict(TypedDict):
-    backup: NotRequired[pulumi.Input[_builtins.str]]
+    backup: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the backup wireless profile
     """
-    primary: NotRequired[pulumi.Input[_builtins.str]]
+    primary: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the primary wireless profile
     """
-    secondary: NotRequired[pulumi.Input[_builtins.str]]
+    secondary: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the secondary wireless profile
     """
@@ -1791,9 +1791,9 @@ class CameraWirelessProfilesIdsArgsDict(TypedDict):
 @pulumi.input_type
 class CameraWirelessProfilesIdsArgs:
     def __init__(__self__, *,
-                 backup: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary: Optional[pulumi.Input[_builtins.str]] = None):
+                 backup: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] backup: The id of the backup wireless profile
         :param pulumi.Input[_builtins.str] primary: The id of the primary wireless profile
@@ -1808,51 +1808,51 @@ class CameraWirelessProfilesIdsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def backup(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def backup(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the backup wireless profile
         """
         return pulumi.get(self, "backup")
 
     @backup.setter
-    def backup(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def backup(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "backup", value)
 
     @_builtins.property
     @pulumi.getter
-    def primary(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the primary wireless profile
         """
         return pulumi.get(self, "primary")
 
     @primary.setter
-    def primary(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary", value)
 
     @_builtins.property
     @pulumi.getter
-    def secondary(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the secondary wireless profile
         """
         return pulumi.get(self, "secondary")
 
     @secondary.setter
-    def secondary(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary", value)
 
 
 class CellularGatewayLanFixedIpAssignmentArgsDict(TypedDict):
-    ip: NotRequired[pulumi.Input[_builtins.str]]
+    ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address you want to assign to a specific server or device
     """
-    mac: NotRequired[pulumi.Input[_builtins.str]]
+    mac: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The MAC address of the server or device that hosts the internal resource that you wish to receive the specified IP address
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A descriptive name of the assignment
     """
@@ -1860,9 +1860,9 @@ class CellularGatewayLanFixedIpAssignmentArgsDict(TypedDict):
 @pulumi.input_type
 class CellularGatewayLanFixedIpAssignmentArgs:
     def __init__(__self__, *,
-                 ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] ip: The IP address you want to assign to a specific server or device
         :param pulumi.Input[_builtins.str] mac: The MAC address of the server or device that hosts the internal resource that you wish to receive the specified IP address
@@ -1877,51 +1877,51 @@ class CellularGatewayLanFixedIpAssignmentArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address you want to assign to a specific server or device
         """
         return pulumi.get(self, "ip")
 
     @ip.setter
-    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The MAC address of the server or device that hosts the internal resource that you wish to receive the specified IP address
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A descriptive name of the assignment
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class CellularGatewayLanReservedIpRangeArgsDict(TypedDict):
-    comment: NotRequired[pulumi.Input[_builtins.str]]
+    comment: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Comment explaining the reserved IP range
     """
-    end: NotRequired[pulumi.Input[_builtins.str]]
+    end: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Ending IP included in the reserved range of IPs
     """
-    start: NotRequired[pulumi.Input[_builtins.str]]
+    start: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Starting IP included in the reserved range of IPs
     """
@@ -1929,9 +1929,9 @@ class CellularGatewayLanReservedIpRangeArgsDict(TypedDict):
 @pulumi.input_type
 class CellularGatewayLanReservedIpRangeArgs:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 end: Optional[pulumi.Input[_builtins.str]] = None,
-                 start: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 end: pulumi.Input[Optional[_builtins.str]] = None,
+                 start: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] comment: Comment explaining the reserved IP range
         :param pulumi.Input[_builtins.str] end: Ending IP included in the reserved range of IPs
@@ -1946,83 +1946,83 @@ class CellularGatewayLanReservedIpRangeArgs:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comment explaining the reserved IP range
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter
-    def end(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ending IP included in the reserved range of IPs
         """
         return pulumi.get(self, "end")
 
     @end.setter
-    def end(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end", value)
 
     @_builtins.property
     @pulumi.getter
-    def start(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Starting IP included in the reserved range of IPs
         """
         return pulumi.get(self, "start")
 
     @start.setter
-    def start(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start", value)
 
 
 class CellularGatewayPortForwardingRulesRuleArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     *any* or *restricted*. Specify the right to make inbound connections on the specified ports or port ranges. If *restricted*, a list of allowed IPs is mandatory.
     """
-    allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    allowed_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges.
     """
-    lan_ip: NotRequired[pulumi.Input[_builtins.str]]
+    lan_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
     """
-    local_port: NotRequired[pulumi.Input[_builtins.str]]
+    local_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A port or port ranges that will receive the forwarded traffic from the WAN
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A descriptive name for the rule
     """
-    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     TCP or UDP
     """
-    public_port: NotRequired[pulumi.Input[_builtins.str]]
+    public_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A port or port ranges that will be forwarded to the host on the LAN
     """
-    uplink: NotRequired[pulumi.Input[_builtins.str]]
+    uplink: NotRequired[pulumi.Input[Optional[_builtins.str]]]
 
 @pulumi.input_type
 class CellularGatewayPortForwardingRulesRuleArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lan_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 public_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 uplink: Optional[pulumi.Input[_builtins.str]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 public_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 uplink: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] access: *any* or *restricted*. Specify the right to make inbound connections on the specified ports or port ranges. If *restricted*, a list of allowed IPs is mandatory.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allowed_ips: An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges.
@@ -2051,108 +2051,108 @@ class CellularGatewayPortForwardingRulesRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         *any* or *restricted*. Specify the right to make inbound connections on the specified ports or port ranges. If *restricted*, a list of allowed IPs is mandatory.
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedIps")
-    def allowed_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allowed_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges.
         """
         return pulumi.get(self, "allowed_ips")
 
     @allowed_ips.setter
-    def allowed_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allowed_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allowed_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="lanIp")
-    def lan_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lan_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
         """
         return pulumi.get(self, "lan_ip")
 
     @lan_ip.setter
-    def lan_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lan_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lan_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="localPort")
-    def local_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A port or port ranges that will receive the forwarded traffic from the WAN
         """
         return pulumi.get(self, "local_port")
 
     @local_port.setter
-    def local_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A descriptive name for the rule
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TCP or UDP
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="publicPort")
-    def public_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def public_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A port or port ranges that will be forwarded to the host on the LAN
         """
         return pulumi.get(self, "public_port")
 
     @public_port.setter
-    def public_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def public_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "public_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def uplink(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uplink(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "uplink")
 
     @uplink.setter
-    def uplink(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uplink(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uplink", value)
 
 
 class CellularSimsSimArgsDict(TypedDict):
-    apns: NotRequired[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgsDict']]]]
+    apns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]]
     """
     APN configurations. If empty, the default APN will be used.
     """
-    is_primary: NotRequired[pulumi.Input[_builtins.bool]]
+    is_primary: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     If true, this SIM is used for boot. Must be true on single-sim devices.
     """
-    slot: NotRequired[pulumi.Input[_builtins.str]]
+    slot: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     SIM slot being configured. Must be 'sim1' on single-sim devices.
     """
@@ -2160,9 +2160,9 @@ class CellularSimsSimArgsDict(TypedDict):
 @pulumi.input_type
 class CellularSimsSimArgs:
     def __init__(__self__, *,
-                 apns: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]] = None,
-                 is_primary: Optional[pulumi.Input[_builtins.bool]] = None,
-                 slot: Optional[pulumi.Input[_builtins.str]] = None):
+                 apns: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]] = None,
+                 is_primary: pulumi.Input[Optional[_builtins.bool]] = None,
+                 slot: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgs']]] apns: APN configurations. If empty, the default APN will be used.
         :param pulumi.Input[_builtins.bool] is_primary: If true, this SIM is used for boot. Must be true on single-sim devices.
@@ -2177,51 +2177,51 @@ class CellularSimsSimArgs:
 
     @_builtins.property
     @pulumi.getter
-    def apns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]:
+    def apns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]:
         """
         APN configurations. If empty, the default APN will be used.
         """
         return pulumi.get(self, "apns")
 
     @apns.setter
-    def apns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]):
+    def apns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]):
         pulumi.set(self, "apns", value)
 
     @_builtins.property
     @pulumi.getter(name="isPrimary")
-    def is_primary(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_primary(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, this SIM is used for boot. Must be true on single-sim devices.
         """
         return pulumi.get(self, "is_primary")
 
     @is_primary.setter
-    def is_primary(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_primary(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_primary", value)
 
     @_builtins.property
     @pulumi.getter
-    def slot(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slot(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SIM slot being configured. Must be 'sim1' on single-sim devices.
         """
         return pulumi.get(self, "slot")
 
     @slot.setter
-    def slot(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slot(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slot", value)
 
 
 class CellularSimsSimApnArgsDict(TypedDict):
-    allowed_ip_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    allowed_ip_types: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     IP versions to support (permitted values include 'ipv4', 'ipv6').
     """
-    authentication: NotRequired[pulumi.Input['CellularSimsSimApnAuthenticationArgsDict']]
+    authentication: NotRequired[pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgs']]]
     """
     APN authentication configurations.
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     APN name.
     """
@@ -2229,9 +2229,9 @@ class CellularSimsSimApnArgsDict(TypedDict):
 @pulumi.input_type
 class CellularSimsSimApnArgs:
     def __init__(__self__, *,
-                 allowed_ip_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 authentication: Optional[pulumi.Input['CellularSimsSimApnAuthenticationArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_ip_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 authentication: pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allowed_ip_types: IP versions to support (permitted values include 'ipv4', 'ipv6').
         :param pulumi.Input['CellularSimsSimApnAuthenticationArgs'] authentication: APN authentication configurations.
@@ -2246,51 +2246,51 @@ class CellularSimsSimApnArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowedIpTypes")
-    def allowed_ip_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allowed_ip_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         IP versions to support (permitted values include 'ipv4', 'ipv6').
         """
         return pulumi.get(self, "allowed_ip_types")
 
     @allowed_ip_types.setter
-    def allowed_ip_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allowed_ip_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allowed_ip_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def authentication(self) -> Optional[pulumi.Input['CellularSimsSimApnAuthenticationArgs']]:
+    def authentication(self) -> pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgs']]:
         """
         APN authentication configurations.
         """
         return pulumi.get(self, "authentication")
 
     @authentication.setter
-    def authentication(self, value: Optional[pulumi.Input['CellularSimsSimApnAuthenticationArgs']]):
+    def authentication(self, value: pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgs']]):
         pulumi.set(self, "authentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         APN name.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class CellularSimsSimApnAuthenticationArgsDict(TypedDict):
-    password: NotRequired[pulumi.Input[_builtins.str]]
+    password: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     APN password, if type is set (if APN password is not supplied, the password is left unchanged).
     """
-    type: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     APN auth type.
     """
-    username: NotRequired[pulumi.Input[_builtins.str]]
+    username: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     APN username, if type is set.
     """
@@ -2298,9 +2298,9 @@ class CellularSimsSimApnAuthenticationArgsDict(TypedDict):
 @pulumi.input_type
 class CellularSimsSimApnAuthenticationArgs:
     def __init__(__self__, *,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] password: APN password, if type is set (if APN password is not supplied, the password is left unchanged).
         :param pulumi.Input[_builtins.str] type: APN auth type.
@@ -2315,47 +2315,47 @@ class CellularSimsSimApnAuthenticationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         APN password, if type is set (if APN password is not supplied, the password is left unchanged).
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         APN auth type.
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         APN username, if type is set.
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
 class CellularSimsSimFailoverArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Failover to secondary SIM (optional)
     """
-    timeout: NotRequired[pulumi.Input[_builtins.int]]
+    timeout: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Failover timeout in seconds (optional)
     """
@@ -2363,8 +2363,8 @@ class CellularSimsSimFailoverArgsDict(TypedDict):
 @pulumi.input_type
 class CellularSimsSimFailoverArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Failover to secondary SIM (optional)
         :param pulumi.Input[_builtins.int] timeout: Failover timeout in seconds (optional)
@@ -2376,43 +2376,43 @@ class CellularSimsSimFailoverArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Failover to secondary SIM (optional)
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Failover timeout in seconds (optional)
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
 
 class LiveToolsArpTableCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsArpTableCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -2420,10 +2420,10 @@ class LiveToolsArpTableCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsArpTableCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsArpTableCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsArpTableCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -2441,55 +2441,55 @@ class LiveToolsArpTableCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsArpTableCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsArpTableCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsArpTableCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -2497,7 +2497,7 @@ class LiveToolsArpTableCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsArpTableCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -2506,19 +2506,19 @@ class LiveToolsArpTableCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsArpTableCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -2526,7 +2526,7 @@ class LiveToolsArpTableCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsArpTableCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -2535,31 +2535,31 @@ class LiveToolsArpTableCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsArpTableEntryArgsDict(TypedDict):
-    ip: NotRequired[pulumi.Input[_builtins.str]]
+    ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address of the ARP table entry
     """
-    last_updated_at: NotRequired[pulumi.Input[_builtins.str]]
+    last_updated_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Time of the last update of the ARP table entry
     """
-    mac: NotRequired[pulumi.Input[_builtins.str]]
+    mac: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The MAC address of the ARP table entry
     """
-    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    vlan_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The VLAN ID of the ARP table entry
     """
@@ -2567,10 +2567,10 @@ class LiveToolsArpTableEntryArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsArpTableEntryArgs:
     def __init__(__self__, *,
-                 ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_updated_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_updated_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] ip: The IP address of the ARP table entry
         :param pulumi.Input[_builtins.str] last_updated_at: Time of the last update of the ARP table entry
@@ -2588,55 +2588,55 @@ class LiveToolsArpTableEntryArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the ARP table entry
         """
         return pulumi.get(self, "ip")
 
     @ip.setter
-    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip", value)
 
     @_builtins.property
     @pulumi.getter(name="lastUpdatedAt")
-    def last_updated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_updated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Time of the last update of the ARP table entry
         """
         return pulumi.get(self, "last_updated_at")
 
     @last_updated_at.setter
-    def last_updated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_updated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_updated_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The MAC address of the ARP table entry
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN ID of the ARP table entry
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 class LiveToolsArpTableRequestArgsDict(TypedDict):
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
@@ -2644,7 +2644,7 @@ class LiveToolsArpTableRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsArpTableRequestArgs:
     def __init__(__self__, *,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] serial: Device serial number
         """
@@ -2653,31 +2653,31 @@ class LiveToolsArpTableRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
 class LiveToolsCableCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsCableCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -2685,10 +2685,10 @@ class LiveToolsCableCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsCableCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsCableCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -2706,55 +2706,55 @@ class LiveToolsCableCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsCableCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsCableCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsCableCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -2762,7 +2762,7 @@ class LiveToolsCableCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -2771,19 +2771,19 @@ class LiveToolsCableCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsCableCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -2791,7 +2791,7 @@ class LiveToolsCableCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -2800,23 +2800,23 @@ class LiveToolsCableCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsCableRequestArgsDict(TypedDict):
-    ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of ports for which to perform the cable test.
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
@@ -2824,8 +2824,8 @@ class LiveToolsCableRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableRequestArgs:
     def __init__(__self__, *,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
         :param pulumi.Input[_builtins.str] serial: Device serial number
@@ -2837,47 +2837,47 @@ class LiveToolsCableRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of ports for which to perform the cable test.
         """
         return pulumi.get(self, "ports")
 
     @ports.setter
-    def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ports", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
 class LiveToolsCableResultArgsDict(TypedDict):
-    error: NotRequired[pulumi.Input[_builtins.str]]
+    error: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     If an error occurred during the cable test, the error message will be populated here.
     """
-    pairs: NotRequired[pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgsDict']]]]
+    pairs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]]
     """
     Results for each twisted pair within the cable.
     """
-    port: NotRequired[pulumi.Input[_builtins.str]]
+    port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The port for which the test was performed.
     """
-    speed_mbps: NotRequired[pulumi.Input[_builtins.int]]
+    speed_mbps: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Speed in Mbps.  A speed of 0 indicates the port is down or the port speed is automatic.
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The current status of the port. If the cable test is still being performed on the port, "in-progress" is used. If an error occurred during the cable test, "error" is used and the error property will be populated.
     """
@@ -2885,11 +2885,11 @@ class LiveToolsCableResultArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableResultArgs:
     def __init__(__self__, *,
-                 error: Optional[pulumi.Input[_builtins.str]] = None,
-                 pairs: Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 speed_mbps: Optional[pulumi.Input[_builtins.int]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None):
+                 error: pulumi.Input[Optional[_builtins.str]] = None,
+                 pairs: pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 speed_mbps: pulumi.Input[Optional[_builtins.int]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] error: If an error occurred during the cable test, the error message will be populated here.
         :param pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]] pairs: Results for each twisted pair within the cable.
@@ -2910,75 +2910,75 @@ class LiveToolsCableResultArgs:
 
     @_builtins.property
     @pulumi.getter
-    def error(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def error(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         If an error occurred during the cable test, the error message will be populated here.
         """
         return pulumi.get(self, "error")
 
     @error.setter
-    def error(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def error(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "error", value)
 
     @_builtins.property
     @pulumi.getter
-    def pairs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]:
+    def pairs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]:
         """
         Results for each twisted pair within the cable.
         """
         return pulumi.get(self, "pairs")
 
     @pairs.setter
-    def pairs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]):
+    def pairs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]):
         pulumi.set(self, "pairs", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The port for which the test was performed.
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="speedMbps")
-    def speed_mbps(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def speed_mbps(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Speed in Mbps.  A speed of 0 indicates the port is down or the port speed is automatic.
         """
         return pulumi.get(self, "speed_mbps")
 
     @speed_mbps.setter
-    def speed_mbps(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def speed_mbps(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "speed_mbps", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The current status of the port. If the cable test is still being performed on the port, "in-progress" is used. If an error occurred during the cable test, "error" is used and the error property will be populated.
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
 
 class LiveToolsCableResultPairArgsDict(TypedDict):
-    index: NotRequired[pulumi.Input[_builtins.int]]
+    index: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The index of the twisted pair tested.
     """
-    length_meters: NotRequired[pulumi.Input[_builtins.int]]
+    length_meters: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The detected length of the twisted pair.
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The test result of the twisted pair tested.
     """
@@ -2986,9 +2986,9 @@ class LiveToolsCableResultPairArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsCableResultPairArgs:
     def __init__(__self__, *,
-                 index: Optional[pulumi.Input[_builtins.int]] = None,
-                 length_meters: Optional[pulumi.Input[_builtins.int]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None):
+                 index: pulumi.Input[Optional[_builtins.int]] = None,
+                 length_meters: pulumi.Input[Optional[_builtins.int]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] index: The index of the twisted pair tested.
         :param pulumi.Input[_builtins.int] length_meters: The detected length of the twisted pair.
@@ -3003,59 +3003,59 @@ class LiveToolsCableResultPairArgs:
 
     @_builtins.property
     @pulumi.getter
-    def index(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def index(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The index of the twisted pair tested.
         """
         return pulumi.get(self, "index")
 
     @index.setter
-    def index(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def index(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "index", value)
 
     @_builtins.property
     @pulumi.getter(name="lengthMeters")
-    def length_meters(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def length_meters(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The detected length of the twisted pair.
         """
         return pulumi.get(self, "length_meters")
 
     @length_meters.setter
-    def length_meters(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def length_meters(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "length_meters", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The test result of the twisted pair tested.
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
 
 class LiveToolsPingDeviceItemArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input['LiveToolsPingDeviceItemCallbackArgsDict']]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgs']]]
     """
     Information for callback used to send back results
     """
-    ping_id: NotRequired[pulumi.Input[_builtins.str]]
+    ping_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Id to check the status of your ping request.
     """
-    request: NotRequired[pulumi.Input['LiveToolsPingDeviceItemRequestArgsDict']]
+    request: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgs']]]
     """
     Ping request parameters
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Status of the ping request.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     GET this url to check the status of your ping request.
     """
@@ -3063,11 +3063,11 @@ class LiveToolsPingDeviceItemArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceItemArgs:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsPingDeviceItemCallbackArgs']] = None,
-                 ping_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input['LiveToolsPingDeviceItemRequestArgs']] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgs']] = None,
+                 ping_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgs']] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsPingDeviceItemCallbackArgs'] callback: Information for callback used to send back results
         :param pulumi.Input[_builtins.str] ping_id: Id to check the status of your ping request.
@@ -3088,75 +3088,75 @@ class LiveToolsPingDeviceItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsPingDeviceItemCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgs']]:
         """
         Information for callback used to send back results
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsPingDeviceItemCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter(name="pingId")
-    def ping_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ping_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id to check the status of your ping request.
         """
         return pulumi.get(self, "ping_id")
 
     @ping_id.setter
-    def ping_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ping_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ping_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input['LiveToolsPingDeviceItemRequestArgs']]:
+    def request(self) -> pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgs']]:
         """
         Ping request parameters
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input['LiveToolsPingDeviceItemRequestArgs']]):
+    def request(self, value: pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgs']]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the ping request.
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         GET this url to check the status of your ping request.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingDeviceItemCallbackArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The status of the callback
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
     """
@@ -3164,9 +3164,9 @@ class LiveToolsPingDeviceItemCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceItemCallbackArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
         :param pulumi.Input[_builtins.str] status: The status of the callback
@@ -3181,51 +3181,51 @@ class LiveToolsPingDeviceItemCallbackArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The status of the callback
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingDeviceItemRequestArgsDict(TypedDict):
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of pings to send
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
-    target: NotRequired[pulumi.Input[_builtins.str]]
+    target: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IP address or FQDN to ping
     """
@@ -3233,9 +3233,9 @@ class LiveToolsPingDeviceItemRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceItemRequestArgs:
     def __init__(__self__, *,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 target: Optional[pulumi.Input[_builtins.str]] = None):
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 target: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] count: Number of pings to send
         :param pulumi.Input[_builtins.str] serial: Device serial number
@@ -3250,47 +3250,47 @@ class LiveToolsPingDeviceItemRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of pings to send
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def target(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def target(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address or FQDN to ping
         """
         return pulumi.get(self, "target")
 
     @target.setter
-    def target(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def target(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "target", value)
 
 
 class LiveToolsPingDeviceParametersArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackArgsDict']]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgs']]]
     """
     Details for the callback. Please include either an httpServerId OR url and sharedSecret
     """
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Count parameter to pass to ping. [1..5], default 5
     """
@@ -3298,8 +3298,8 @@ class LiveToolsPingDeviceParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceParametersArgs:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackArgs']] = None,
-                 count: Optional[pulumi.Input[_builtins.int]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgs']] = None,
+                 count: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input['LiveToolsPingDeviceParametersCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.int] count: Count parameter to pass to ping. [1..5], default 5
@@ -3311,43 +3311,43 @@ class LiveToolsPingDeviceParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Count parameter to pass to ping. [1..5], default 5
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
 
 class LiveToolsPingDeviceParametersCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -3355,10 +3355,10 @@ class LiveToolsPingDeviceParametersCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -3376,55 +3376,55 @@ class LiveToolsPingDeviceParametersCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingDeviceParametersCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -3432,7 +3432,7 @@ class LiveToolsPingDeviceParametersCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -3441,19 +3441,19 @@ class LiveToolsPingDeviceParametersCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -3461,7 +3461,7 @@ class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -3470,35 +3470,35 @@ class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsPingItemArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input['LiveToolsPingItemCallbackArgsDict']]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingItemCallbackArgs']]]
     """
     Information for callback used to send back results
     """
-    ping_id: NotRequired[pulumi.Input[_builtins.str]]
+    ping_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Id to check the status of your ping request.
     """
-    request: NotRequired[pulumi.Input['LiveToolsPingItemRequestArgsDict']]
+    request: NotRequired[pulumi.Input[Optional['LiveToolsPingItemRequestArgs']]]
     """
     Ping request parameters
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Status of the ping request.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     GET this url to check the status of your ping request.
     """
@@ -3506,11 +3506,11 @@ class LiveToolsPingItemArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingItemArgs:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsPingItemCallbackArgs']] = None,
-                 ping_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input['LiveToolsPingItemRequestArgs']] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsPingItemCallbackArgs']] = None,
+                 ping_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional['LiveToolsPingItemRequestArgs']] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsPingItemCallbackArgs'] callback: Information for callback used to send back results
         :param pulumi.Input[_builtins.str] ping_id: Id to check the status of your ping request.
@@ -3531,75 +3531,75 @@ class LiveToolsPingItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsPingItemCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsPingItemCallbackArgs']]:
         """
         Information for callback used to send back results
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsPingItemCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsPingItemCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter(name="pingId")
-    def ping_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ping_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id to check the status of your ping request.
         """
         return pulumi.get(self, "ping_id")
 
     @ping_id.setter
-    def ping_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ping_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ping_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input['LiveToolsPingItemRequestArgs']]:
+    def request(self) -> pulumi.Input[Optional['LiveToolsPingItemRequestArgs']]:
         """
         Ping request parameters
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input['LiveToolsPingItemRequestArgs']]):
+    def request(self, value: pulumi.Input[Optional['LiveToolsPingItemRequestArgs']]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the ping request.
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         GET this url to check the status of your ping request.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingItemCallbackArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The status of the callback
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
     """
@@ -3607,9 +3607,9 @@ class LiveToolsPingItemCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingItemCallbackArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
         :param pulumi.Input[_builtins.str] status: The status of the callback
@@ -3624,51 +3624,51 @@ class LiveToolsPingItemCallbackArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The status of the callback
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingItemRequestArgsDict(TypedDict):
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of pings to send
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
-    target: NotRequired[pulumi.Input[_builtins.str]]
+    target: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IP address or FQDN to ping
     """
@@ -3676,9 +3676,9 @@ class LiveToolsPingItemRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingItemRequestArgs:
     def __init__(__self__, *,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 target: Optional[pulumi.Input[_builtins.str]] = None):
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 target: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] count: Number of pings to send
         :param pulumi.Input[_builtins.str] serial: Device serial number
@@ -3693,51 +3693,51 @@ class LiveToolsPingItemRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of pings to send
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def target(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def target(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address or FQDN to ping
         """
         return pulumi.get(self, "target")
 
     @target.setter
-    def target(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def target(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "target", value)
 
 
 class LiveToolsPingParametersArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackArgsDict']]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackArgs']]]
     """
     Details for the callback. Please include either an httpServerId OR url and sharedSecret
     """
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Count parameter to pass to ping. [1..5], default 5
     """
-    target: NotRequired[pulumi.Input[_builtins.str]]
+    target: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     FQDN, IPv4 or IPv6 address
     """
@@ -3745,9 +3745,9 @@ class LiveToolsPingParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingParametersArgs:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsPingParametersCallbackArgs']] = None,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 target: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsPingParametersCallbackArgs']] = None,
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 target: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsPingParametersCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.int] count: Count parameter to pass to ping. [1..5], default 5
@@ -3762,55 +3762,55 @@ class LiveToolsPingParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsPingParametersCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsPingParametersCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsPingParametersCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsPingParametersCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Count parameter to pass to ping. [1..5], default 5
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def target(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def target(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         FQDN, IPv4 or IPv6 address
         """
         return pulumi.get(self, "target")
 
     @target.setter
-    def target(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def target(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "target", value)
 
 
 class LiveToolsPingParametersCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -3818,10 +3818,10 @@ class LiveToolsPingParametersCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingParametersCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -3839,55 +3839,55 @@ class LiveToolsPingParametersCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsPingParametersCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -3895,7 +3895,7 @@ class LiveToolsPingParametersCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingParametersCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -3904,19 +3904,19 @@ class LiveToolsPingParametersCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsPingParametersCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -3924,7 +3924,7 @@ class LiveToolsPingParametersCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsPingParametersCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -3933,31 +3933,31 @@ class LiveToolsPingParametersCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsThroughputTestCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -3965,10 +3965,10 @@ class LiveToolsThroughputTestCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -3986,55 +3986,55 @@ class LiveToolsThroughputTestCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsThroughputTestCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -4042,7 +4042,7 @@ class LiveToolsThroughputTestCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -4051,19 +4051,19 @@ class LiveToolsThroughputTestCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsThroughputTestCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -4071,7 +4071,7 @@ class LiveToolsThroughputTestCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -4080,19 +4080,19 @@ class LiveToolsThroughputTestCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsThroughputTestRequestArgsDict(TypedDict):
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
@@ -4100,7 +4100,7 @@ class LiveToolsThroughputTestRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestRequestArgs:
     def __init__(__self__, *,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] serial: Device serial number
         """
@@ -4109,19 +4109,19 @@ class LiveToolsThroughputTestRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
 class LiveToolsThroughputTestResultArgsDict(TypedDict):
-    speeds: NotRequired[pulumi.Input['LiveToolsThroughputTestResultSpeedsArgsDict']]
+    speeds: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgs']]]
     """
     Shows the speeds (Mbps)
     """
@@ -4129,7 +4129,7 @@ class LiveToolsThroughputTestResultArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestResultArgs:
     def __init__(__self__, *,
-                 speeds: Optional[pulumi.Input['LiveToolsThroughputTestResultSpeedsArgs']] = None):
+                 speeds: pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgs']] = None):
         """
         :param pulumi.Input['LiveToolsThroughputTestResultSpeedsArgs'] speeds: Shows the speeds (Mbps)
         """
@@ -4138,19 +4138,19 @@ class LiveToolsThroughputTestResultArgs:
 
     @_builtins.property
     @pulumi.getter
-    def speeds(self) -> Optional[pulumi.Input['LiveToolsThroughputTestResultSpeedsArgs']]:
+    def speeds(self) -> pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgs']]:
         """
         Shows the speeds (Mbps)
         """
         return pulumi.get(self, "speeds")
 
     @speeds.setter
-    def speeds(self, value: Optional[pulumi.Input['LiveToolsThroughputTestResultSpeedsArgs']]):
+    def speeds(self, value: pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgs']]):
         pulumi.set(self, "speeds", value)
 
 
 class LiveToolsThroughputTestResultSpeedsArgsDict(TypedDict):
-    downstream: NotRequired[pulumi.Input[_builtins.int]]
+    downstream: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Shows the download speed from shard (Mbps)
     """
@@ -4158,7 +4158,7 @@ class LiveToolsThroughputTestResultSpeedsArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsThroughputTestResultSpeedsArgs:
     def __init__(__self__, *,
-                 downstream: Optional[pulumi.Input[_builtins.int]] = None):
+                 downstream: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] downstream: Shows the download speed from shard (Mbps)
         """
@@ -4167,31 +4167,31 @@ class LiveToolsThroughputTestResultSpeedsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def downstream(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Shows the download speed from shard (Mbps)
         """
         return pulumi.get(self, "downstream")
 
     @downstream.setter
-    def downstream(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def downstream(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "downstream", value)
 
 
 class LiveToolsWakeOnLanCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
     """
@@ -4199,10 +4199,10 @@ class LiveToolsWakeOnLanCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgs']] = None,
-                 payload_template: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgs']] = None,
+                 payload_template: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgs'] payload_template: The payload template of the webhook used for the callback
@@ -4220,55 +4220,55 @@ class LiveToolsWakeOnLanCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class LiveToolsWakeOnLanCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -4276,7 +4276,7 @@ class LiveToolsWakeOnLanCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -4285,19 +4285,19 @@ class LiveToolsWakeOnLanCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -4305,7 +4305,7 @@ class LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -4314,27 +4314,27 @@ class LiveToolsWakeOnLanCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class LiveToolsWakeOnLanRequestArgsDict(TypedDict):
-    mac: NotRequired[pulumi.Input[_builtins.str]]
+    mac: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The target's MAC address
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device serial number
     """
-    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    vlan_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The target's VLAN (1 to 4094)
     """
@@ -4342,9 +4342,9 @@ class LiveToolsWakeOnLanRequestArgsDict(TypedDict):
 @pulumi.input_type
 class LiveToolsWakeOnLanRequestArgs:
     def __init__(__self__, *,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] mac: The target's MAC address
         :param pulumi.Input[_builtins.str] serial: Device serial number
@@ -4359,51 +4359,51 @@ class LiveToolsWakeOnLanRequestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The target's MAC address
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device serial number
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The target's VLAN (1 to 4094)
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 class ManagementInterfaceDdnsHostnamesArgsDict(TypedDict):
-    active_ddns_hostname: NotRequired[pulumi.Input[_builtins.str]]
+    active_ddns_hostname: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Active dynamic DNS hostname.
     """
-    ddns_hostname_wan1: NotRequired[pulumi.Input[_builtins.str]]
+    ddns_hostname_wan1: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     WAN 1 dynamic DNS hostname.
     """
-    ddns_hostname_wan2: NotRequired[pulumi.Input[_builtins.str]]
+    ddns_hostname_wan2: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     WAN 2 dynamic DNS hostname.
     """
@@ -4411,9 +4411,9 @@ class ManagementInterfaceDdnsHostnamesArgsDict(TypedDict):
 @pulumi.input_type
 class ManagementInterfaceDdnsHostnamesArgs:
     def __init__(__self__, *,
-                 active_ddns_hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_hostname_wan1: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_hostname_wan2: Optional[pulumi.Input[_builtins.str]] = None):
+                 active_ddns_hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_hostname_wan1: pulumi.Input[Optional[_builtins.str]] = None,
+                 ddns_hostname_wan2: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] active_ddns_hostname: Active dynamic DNS hostname.
         :param pulumi.Input[_builtins.str] ddns_hostname_wan1: WAN 1 dynamic DNS hostname.
@@ -4428,67 +4428,67 @@ class ManagementInterfaceDdnsHostnamesArgs:
 
     @_builtins.property
     @pulumi.getter(name="activeDdnsHostname")
-    def active_ddns_hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def active_ddns_hostname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Active dynamic DNS hostname.
         """
         return pulumi.get(self, "active_ddns_hostname")
 
     @active_ddns_hostname.setter
-    def active_ddns_hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def active_ddns_hostname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "active_ddns_hostname", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsHostnameWan1")
-    def ddns_hostname_wan1(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_hostname_wan1(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         WAN 1 dynamic DNS hostname.
         """
         return pulumi.get(self, "ddns_hostname_wan1")
 
     @ddns_hostname_wan1.setter
-    def ddns_hostname_wan1(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_hostname_wan1(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ddns_hostname_wan1", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsHostnameWan2")
-    def ddns_hostname_wan2(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_hostname_wan2(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         WAN 2 dynamic DNS hostname.
         """
         return pulumi.get(self, "ddns_hostname_wan2")
 
     @ddns_hostname_wan2.setter
-    def ddns_hostname_wan2(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_hostname_wan2(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ddns_hostname_wan2", value)
 
 
 class ManagementInterfaceWan1ArgsDict(TypedDict):
-    static_dns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    static_dns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to two DNS IPs.
     """
-    static_gateway_ip: NotRequired[pulumi.Input[_builtins.str]]
+    static_gateway_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP of the gateway on the WAN.
     """
-    static_ip: NotRequired[pulumi.Input[_builtins.str]]
+    static_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP the device should use on the WAN.
     """
-    static_subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
+    static_subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The subnet mask for the WAN.
     """
-    using_static_ip: NotRequired[pulumi.Input[_builtins.bool]]
+    using_static_ip: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Configure the interface to have static IP settings or use DHCP.
     """
-    vlan: NotRequired[pulumi.Input[_builtins.int]]
+    vlan: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
     """
-    wan_enabled: NotRequired[pulumi.Input[_builtins.str]]
+    wan_enabled: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
     """
@@ -4496,13 +4496,13 @@ class ManagementInterfaceWan1ArgsDict(TypedDict):
 @pulumi.input_type
 class ManagementInterfaceWan1Args:
     def __init__(__self__, *,
-                 static_dns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 static_gateway_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 using_static_ip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 wan_enabled: Optional[pulumi.Input[_builtins.str]] = None):
+                 static_dns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 static_gateway_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 using_static_ip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 wan_enabled: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_dns: Up to two DNS IPs.
         :param pulumi.Input[_builtins.str] static_gateway_ip: The IP of the gateway on the WAN.
@@ -4529,115 +4529,115 @@ class ManagementInterfaceWan1Args:
 
     @_builtins.property
     @pulumi.getter(name="staticDns")
-    def static_dns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def static_dns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to two DNS IPs.
         """
         return pulumi.get(self, "static_dns")
 
     @static_dns.setter
-    def static_dns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def static_dns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "static_dns", value)
 
     @_builtins.property
     @pulumi.getter(name="staticGatewayIp")
-    def static_gateway_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_gateway_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP of the gateway on the WAN.
         """
         return pulumi.get(self, "static_gateway_ip")
 
     @static_gateway_ip.setter
-    def static_gateway_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_gateway_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_gateway_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="staticIp")
-    def static_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP the device should use on the WAN.
         """
         return pulumi.get(self, "static_ip")
 
     @static_ip.setter
-    def static_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="staticSubnetMask")
-    def static_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet mask for the WAN.
         """
         return pulumi.get(self, "static_subnet_mask")
 
     @static_subnet_mask.setter
-    def static_subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="usingStaticIp")
-    def using_static_ip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def using_static_ip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure the interface to have static IP settings or use DHCP.
         """
         return pulumi.get(self, "using_static_ip")
 
     @using_static_ip.setter
-    def using_static_ip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def using_static_ip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "using_static_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
     @_builtins.property
     @pulumi.getter(name="wanEnabled")
-    def wan_enabled(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wan_enabled(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
         """
         return pulumi.get(self, "wan_enabled")
 
     @wan_enabled.setter
-    def wan_enabled(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wan_enabled(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wan_enabled", value)
 
 
 class ManagementInterfaceWan2ArgsDict(TypedDict):
-    static_dns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    static_dns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to two DNS IPs.
     """
-    static_gateway_ip: NotRequired[pulumi.Input[_builtins.str]]
+    static_gateway_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP of the gateway on the WAN.
     """
-    static_ip: NotRequired[pulumi.Input[_builtins.str]]
+    static_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP the device should use on the WAN.
     """
-    static_subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
+    static_subnet_mask: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The subnet mask for the WAN.
     """
-    using_static_ip: NotRequired[pulumi.Input[_builtins.bool]]
+    using_static_ip: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Configure the interface to have static IP settings or use DHCP.
     """
-    vlan: NotRequired[pulumi.Input[_builtins.int]]
+    vlan: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
     """
-    wan_enabled: NotRequired[pulumi.Input[_builtins.str]]
+    wan_enabled: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
     """
@@ -4645,13 +4645,13 @@ class ManagementInterfaceWan2ArgsDict(TypedDict):
 @pulumi.input_type
 class ManagementInterfaceWan2Args:
     def __init__(__self__, *,
-                 static_dns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 static_gateway_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 using_static_ip: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 wan_enabled: Optional[pulumi.Input[_builtins.str]] = None):
+                 static_dns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 static_gateway_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 using_static_ip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 wan_enabled: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_dns: Up to two DNS IPs.
         :param pulumi.Input[_builtins.str] static_gateway_ip: The IP of the gateway on the WAN.
@@ -4678,91 +4678,91 @@ class ManagementInterfaceWan2Args:
 
     @_builtins.property
     @pulumi.getter(name="staticDns")
-    def static_dns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def static_dns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to two DNS IPs.
         """
         return pulumi.get(self, "static_dns")
 
     @static_dns.setter
-    def static_dns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def static_dns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "static_dns", value)
 
     @_builtins.property
     @pulumi.getter(name="staticGatewayIp")
-    def static_gateway_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_gateway_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP of the gateway on the WAN.
         """
         return pulumi.get(self, "static_gateway_ip")
 
     @static_gateway_ip.setter
-    def static_gateway_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_gateway_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_gateway_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="staticIp")
-    def static_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP the device should use on the WAN.
         """
         return pulumi.get(self, "static_ip")
 
     @static_ip.setter
-    def static_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="staticSubnetMask")
-    def static_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet mask for the WAN.
         """
         return pulumi.get(self, "static_subnet_mask")
 
     @static_subnet_mask.setter
-    def static_subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="usingStaticIp")
-    def using_static_ip(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def using_static_ip(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure the interface to have static IP settings or use DHCP.
         """
         return pulumi.get(self, "using_static_ip")
 
     @using_static_ip.setter
-    def using_static_ip(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def using_static_ip(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "using_static_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
     @_builtins.property
     @pulumi.getter(name="wanEnabled")
-    def wan_enabled(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wan_enabled(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
         """
         return pulumi.get(self, "wan_enabled")
 
     @wan_enabled.setter
-    def wan_enabled(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wan_enabled(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wan_enabled", value)
 
 
 class SensorRelationshipsLivestreamArgsDict(TypedDict):
-    related_devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgsDict']]]]
+    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]]
     """
     An array of the related devices for the role
     """
@@ -4770,7 +4770,7 @@ class SensorRelationshipsLivestreamArgsDict(TypedDict):
 @pulumi.input_type
 class SensorRelationshipsLivestreamArgs:
     def __init__(__self__, *,
-                 related_devices: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]] = None):
+                 related_devices: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]] related_devices: An array of the related devices for the role
         """
@@ -4779,23 +4779,23 @@ class SensorRelationshipsLivestreamArgs:
 
     @_builtins.property
     @pulumi.getter(name="relatedDevices")
-    def related_devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]:
+    def related_devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]:
         """
         An array of the related devices for the role
         """
         return pulumi.get(self, "related_devices")
 
     @related_devices.setter
-    def related_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]):
+    def related_devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]):
         pulumi.set(self, "related_devices", value)
 
 
 class SensorRelationshipsLivestreamRelatedDeviceArgsDict(TypedDict):
-    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    product_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The product type of the related device
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The serial of the related device
     """
@@ -4803,8 +4803,8 @@ class SensorRelationshipsLivestreamRelatedDeviceArgsDict(TypedDict):
 @pulumi.input_type
 class SensorRelationshipsLivestreamRelatedDeviceArgs:
     def __init__(__self__, *,
-                 product_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 product_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] product_type: The product type of the related device
         :param pulumi.Input[_builtins.str] serial: The serial of the related device
@@ -4816,31 +4816,31 @@ class SensorRelationshipsLivestreamRelatedDeviceArgs:
 
     @_builtins.property
     @pulumi.getter(name="productType")
-    def product_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def product_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The product type of the related device
         """
         return pulumi.get(self, "product_type")
 
     @product_type.setter
-    def product_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def product_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "product_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The serial of the related device
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
 class SensorRelationshipsLivestreamRequestArgsDict(TypedDict):
-    related_devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict']]]]
+    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]]
     """
     An array of the related devices for the role
     """
@@ -4848,7 +4848,7 @@ class SensorRelationshipsLivestreamRequestArgsDict(TypedDict):
 @pulumi.input_type
 class SensorRelationshipsLivestreamRequestArgs:
     def __init__(__self__, *,
-                 related_devices: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]] = None):
+                 related_devices: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]] related_devices: An array of the related devices for the role
         """
@@ -4857,23 +4857,23 @@ class SensorRelationshipsLivestreamRequestArgs:
 
     @_builtins.property
     @pulumi.getter(name="relatedDevices")
-    def related_devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]:
+    def related_devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]:
         """
         An array of the related devices for the role
         """
         return pulumi.get(self, "related_devices")
 
     @related_devices.setter
-    def related_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]):
+    def related_devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]):
         pulumi.set(self, "related_devices", value)
 
 
 class SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict(TypedDict):
-    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    product_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The product type of the related device
     """
-    serial: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The serial of the related device
     """
@@ -4881,8 +4881,8 @@ class SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict(TypedDict):
 @pulumi.input_type
 class SensorRelationshipsLivestreamRequestRelatedDeviceArgs:
     def __init__(__self__, *,
-                 product_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 product_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] product_type: The product type of the related device
         :param pulumi.Input[_builtins.str] serial: The serial of the related device
@@ -4894,31 +4894,31 @@ class SensorRelationshipsLivestreamRequestRelatedDeviceArgs:
 
     @_builtins.property
     @pulumi.getter(name="productType")
-    def product_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def product_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The product type of the related device
         """
         return pulumi.get(self, "product_type")
 
     @product_type.setter
-    def product_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def product_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "product_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The serial of the related device
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
 class SwitchPortsCycleItemArgsDict(TypedDict):
-    ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of switch ports
     """
@@ -4926,7 +4926,7 @@ class SwitchPortsCycleItemArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchPortsCycleItemArgs:
     def __init__(__self__, *,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: List of switch ports
         """
@@ -4935,19 +4935,19 @@ class SwitchPortsCycleItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of switch ports
         """
         return pulumi.get(self, "ports")
 
     @ports.setter
-    def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ports", value)
 
 
 class SwitchPortsCycleParametersArgsDict(TypedDict):
-    ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of switch ports
     """
@@ -4955,7 +4955,7 @@ class SwitchPortsCycleParametersArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchPortsCycleParametersArgs:
     def __init__(__self__, *,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: List of switch ports
         """
@@ -4964,19 +4964,19 @@ class SwitchPortsCycleParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of switch ports
         """
         return pulumi.get(self, "ports")
 
     @ports.setter
-    def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ports", value)
 
 
 class SwitchPortsMirrorArgsDict(TypedDict):
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
     """
@@ -4984,7 +4984,7 @@ class SwitchPortsMirrorArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchPortsMirrorArgs:
     def __init__(__self__, *,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] mode: The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
         """
@@ -4993,19 +4993,19 @@ class SwitchPortsMirrorArgs:
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class SwitchPortsModuleArgsDict(TypedDict):
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The model of the expansion module.
     """
@@ -5013,7 +5013,7 @@ class SwitchPortsModuleArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchPortsModuleArgs:
     def __init__(__self__, *,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] model: The model of the expansion module.
         """
@@ -5022,27 +5022,27 @@ class SwitchPortsModuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The model of the expansion module.
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class SwitchPortsProfileArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     When enabled, override this port's configuration with a port profile.
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When enabled, the ID of the port profile used to override the port's configuration.
     """
-    iname: NotRequired[pulumi.Input[_builtins.str]]
+    iname: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When enabled, the IName of the profile.
     """
@@ -5050,9 +5050,9 @@ class SwitchPortsProfileArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchPortsProfileArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 iname: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 iname: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: When enabled, override this port's configuration with a port profile.
         :param pulumi.Input[_builtins.str] id: When enabled, the ID of the port profile used to override the port's configuration.
@@ -5067,51 +5067,51 @@ class SwitchPortsProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         When enabled, override this port's configuration with a port profile.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When enabled, the ID of the port profile used to override the port's configuration.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def iname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def iname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When enabled, the IName of the profile.
         """
         return pulumi.get(self, "iname")
 
     @iname.setter
-    def iname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def iname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "iname", value)
 
 
 class SwitchRoutingInterfacesDhcpDhcpOptionArgsDict(TypedDict):
-    code: NotRequired[pulumi.Input[_builtins.str]]
+    code: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The code for DHCP option which should be from 2 to 254
     """
-    type: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
     """
-    value: NotRequired[pulumi.Input[_builtins.str]]
+    value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The value of the DHCP option
     """
@@ -5119,9 +5119,9 @@ class SwitchRoutingInterfacesDhcpDhcpOptionArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpDhcpOptionArgs:
     def __init__(__self__, *,
-                 code: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.str]] = None):
+                 code: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 value: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] code: The code for DHCP option which should be from 2 to 254
         :param pulumi.Input[_builtins.str] type: The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
@@ -5136,51 +5136,51 @@ class SwitchRoutingInterfacesDhcpDhcpOptionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def code(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def code(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The code for DHCP option which should be from 2 to 254
         """
         return pulumi.get(self, "code")
 
     @code.setter
-    def code(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def code(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "code", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The value of the DHCP option
         """
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "value", value)
 
 
 class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict(TypedDict):
-    ip: NotRequired[pulumi.Input[_builtins.str]]
+    ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address of the client which has fixed IP address assigned to it
     """
-    mac: NotRequired[pulumi.Input[_builtins.str]]
+    mac: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The MAC address of the client which has fixed IP address
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the client which has fixed IP address
     """
@@ -5188,9 +5188,9 @@ class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs:
     def __init__(__self__, *,
-                 ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] ip: The IP address of the client which has fixed IP address assigned to it
         :param pulumi.Input[_builtins.str] mac: The MAC address of the client which has fixed IP address
@@ -5205,51 +5205,51 @@ class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the client which has fixed IP address assigned to it
         """
         return pulumi.get(self, "ip")
 
     @ip.setter
-    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The MAC address of the client which has fixed IP address
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the client which has fixed IP address
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict(TypedDict):
-    comment: NotRequired[pulumi.Input[_builtins.str]]
+    comment: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The comment for the reserved IP range
     """
-    end: NotRequired[pulumi.Input[_builtins.str]]
+    end: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ending IP address of the reserved IP range
     """
-    start: NotRequired[pulumi.Input[_builtins.str]]
+    start: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The starting IP address of the reserved IP range
     """
@@ -5257,9 +5257,9 @@ class SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpReservedIpRangeArgs:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 end: Optional[pulumi.Input[_builtins.str]] = None,
-                 start: Optional[pulumi.Input[_builtins.str]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 end: pulumi.Input[Optional[_builtins.str]] = None,
+                 start: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] comment: The comment for the reserved IP range
         :param pulumi.Input[_builtins.str] end: The ending IP address of the reserved IP range
@@ -5274,55 +5274,55 @@ class SwitchRoutingInterfacesDhcpReservedIpRangeArgs:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The comment for the reserved IP range
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter
-    def end(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ending IP address of the reserved IP range
         """
         return pulumi.get(self, "end")
 
     @end.setter
-    def end(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end", value)
 
     @_builtins.property
     @pulumi.getter
-    def start(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The starting IP address of the reserved IP range
         """
         return pulumi.get(self, "start")
 
     @start.setter
-    def start(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start", value)
 
 
 class SwitchRoutingInterfacesIpv6ArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IPv6 address
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Assignment mode
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IPv6 gateway
     """
-    prefix: NotRequired[pulumi.Input[_builtins.str]]
+    prefix: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     IPv6 subnet
     """
@@ -5330,10 +5330,10 @@ class SwitchRoutingInterfacesIpv6ArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesIpv6Args:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] address: IPv6 address
         :param pulumi.Input[_builtins.str] assignment_mode: Assignment mode
@@ -5351,63 +5351,63 @@ class SwitchRoutingInterfacesIpv6Args:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 address
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assignment mode
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 gateway
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 subnet
         """
         return pulumi.get(self, "prefix")
 
     @prefix.setter
-    def prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "prefix", value)
 
 
 class SwitchRoutingInterfacesOspfSettingsArgsDict(TypedDict):
-    area: NotRequired[pulumi.Input[_builtins.str]]
+    area: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Area id
     """
-    cost: NotRequired[pulumi.Input[_builtins.int]]
+    cost: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     OSPF Cost
     """
-    is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    is_passive_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Disable sending Hello packets on this interface's IPv4 area
     """
@@ -5415,9 +5415,9 @@ class SwitchRoutingInterfacesOspfSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesOspfSettingsArgs:
     def __init__(__self__, *,
-                 area: Optional[pulumi.Input[_builtins.str]] = None,
-                 cost: Optional[pulumi.Input[_builtins.int]] = None,
-                 is_passive_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 area: pulumi.Input[Optional[_builtins.str]] = None,
+                 cost: pulumi.Input[Optional[_builtins.int]] = None,
+                 is_passive_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] area: Area id
         :param pulumi.Input[_builtins.int] cost: OSPF Cost
@@ -5432,51 +5432,51 @@ class SwitchRoutingInterfacesOspfSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def area(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def area(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Area id
         """
         return pulumi.get(self, "area")
 
     @area.setter
-    def area(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def area(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "area", value)
 
     @_builtins.property
     @pulumi.getter
-    def cost(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def cost(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OSPF Cost
         """
         return pulumi.get(self, "cost")
 
     @cost.setter
-    def cost(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def cost(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "cost", value)
 
     @_builtins.property
     @pulumi.getter(name="isPassiveEnabled")
-    def is_passive_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_passive_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable sending Hello packets on this interface's IPv4 area
         """
         return pulumi.get(self, "is_passive_enabled")
 
     @is_passive_enabled.setter
-    def is_passive_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_passive_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_passive_enabled", value)
 
 
 class SwitchRoutingInterfacesOspfV3ArgsDict(TypedDict):
-    area: NotRequired[pulumi.Input[_builtins.str]]
+    area: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Area id
     """
-    cost: NotRequired[pulumi.Input[_builtins.int]]
+    cost: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     OSPF Cost
     """
-    is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    is_passive_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Disable sending Hello packets on this interface's IPv6 area
     """
@@ -5484,9 +5484,9 @@ class SwitchRoutingInterfacesOspfV3ArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchRoutingInterfacesOspfV3Args:
     def __init__(__self__, *,
-                 area: Optional[pulumi.Input[_builtins.str]] = None,
-                 cost: Optional[pulumi.Input[_builtins.int]] = None,
-                 is_passive_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 area: pulumi.Input[Optional[_builtins.str]] = None,
+                 cost: pulumi.Input[Optional[_builtins.int]] = None,
+                 is_passive_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] area: Area id
         :param pulumi.Input[_builtins.int] cost: OSPF Cost
@@ -5501,43 +5501,43 @@ class SwitchRoutingInterfacesOspfV3Args:
 
     @_builtins.property
     @pulumi.getter
-    def area(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def area(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Area id
         """
         return pulumi.get(self, "area")
 
     @area.setter
-    def area(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def area(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "area", value)
 
     @_builtins.property
     @pulumi.getter
-    def cost(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def cost(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OSPF Cost
         """
         return pulumi.get(self, "cost")
 
     @cost.setter
-    def cost(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def cost(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "cost", value)
 
     @_builtins.property
     @pulumi.getter(name="isPassiveEnabled")
-    def is_passive_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_passive_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable sending Hello packets on this interface's IPv6 area
         """
         return pulumi.get(self, "is_passive_enabled")
 
     @is_passive_enabled.setter
-    def is_passive_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_passive_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_passive_enabled", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ItemArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict']]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]]
     """
     configured alternate management interface addresses
     """
@@ -5545,7 +5545,7 @@ class WirelessAlternateManagementInterfaceIpv6ItemArgsDict(TypedDict):
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]] addresses: configured alternate management interface addresses
         """
@@ -5554,39 +5554,39 @@ class WirelessAlternateManagementInterfaceIpv6ItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]:
         """
         configured alternate management interface addresses
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]):
         pulumi.set(self, "addresses", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address configured for the alternate management interface
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of address assignment. Either static or dynamic.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The gateway address configured for the alternate managment interface
     """
-    nameservers: NotRequired[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]]
     """
     The DNS servers settings for this address.
     """
-    prefix: NotRequired[pulumi.Input[_builtins.str]]
+    prefix: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IPv6 prefix of the interface. Required if IPv6 object is included.
     """
-    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP protocol used for the address
     """
@@ -5594,12 +5594,12 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict(TypedDict):
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemAddressArgs:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] address: The IP address configured for the alternate management interface
         :param pulumi.Input[_builtins.str] assignment_mode: The type of address assignment. Either static or dynamic.
@@ -5623,79 +5623,79 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressArgs:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address configured for the alternate management interface
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of address assignment. Either static or dynamic.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The gateway address configured for the alternate managment interface
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]:
         """
         The DNS servers settings for this address.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
     @_builtins.property
     @pulumi.getter
-    def prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IPv6 prefix of the interface. Required if IPv6 object is included.
         """
         return pulumi.get(self, "prefix")
 
     @prefix.setter
-    def prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "prefix", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP protocol used for the address
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -5703,7 +5703,7 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict(Typ
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -5712,19 +5712,19 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ParametersArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict']]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]]
     """
     configured alternate management interface addresses
     """
@@ -5732,7 +5732,7 @@ class WirelessAlternateManagementInterfaceIpv6ParametersArgsDict(TypedDict):
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]] addresses: configured alternate management interface addresses
         """
@@ -5741,39 +5741,39 @@ class WirelessAlternateManagementInterfaceIpv6ParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]:
         """
         configured alternate management interface addresses
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]):
         pulumi.set(self, "addresses", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict(TypedDict):
-    address: NotRequired[pulumi.Input[_builtins.str]]
+    address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP address configured for the alternate management interface
     """
-    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    assignment_mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of address assignment. Either static or dynamic.
     """
-    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    gateway: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The gateway address configured for the alternate managment interface
     """
-    nameservers: NotRequired[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict']]
+    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]]
     """
     The DNS servers settings for this address.
     """
-    prefix: NotRequired[pulumi.Input[_builtins.str]]
+    prefix: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IPv6 prefix length of the IPv6 interface. Required if IPv6 object is included.
     """
-    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The IP protocol used for the address
     """
@@ -5781,12 +5781,12 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict(TypedDic
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 nameservers: Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 nameservers: pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] address: The IP address configured for the alternate management interface
         :param pulumi.Input[_builtins.str] assignment_mode: The type of address assignment. Either static or dynamic.
@@ -5810,79 +5810,79 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address configured for the alternate management interface
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="assignmentMode")
-    def assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of address assignment. Either static or dynamic.
         """
         return pulumi.get(self, "assignment_mode")
 
     @assignment_mode.setter
-    def assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The gateway address configured for the alternate managment interface
         """
         return pulumi.get(self, "gateway")
 
     @gateway.setter
-    def gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway", value)
 
     @_builtins.property
     @pulumi.getter
-    def nameservers(self) -> Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]:
+    def nameservers(self) -> pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]:
         """
         The DNS servers settings for this address.
         """
         return pulumi.get(self, "nameservers")
 
     @nameservers.setter
-    def nameservers(self, value: Optional[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]):
+    def nameservers(self, value: pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]):
         pulumi.set(self, "nameservers", value)
 
     @_builtins.property
     @pulumi.getter
-    def prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IPv6 prefix length of the IPv6 interface. Required if IPv6 object is included.
         """
         return pulumi.get(self, "prefix")
 
     @prefix.setter
-    def prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "prefix", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP protocol used for the address
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
 
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
     """
@@ -5890,7 +5890,7 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDi
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
@@ -5899,27 +5899,27 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs:
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "addresses", value)
 
 
 class WirelessRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
-    channel: NotRequired[pulumi.Input[_builtins.int]]
+    channel: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
     """
-    channel_width: NotRequired[pulumi.Input[_builtins.str]]
+    channel_width: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
     """
-    target_power: NotRequired[pulumi.Input[_builtins.int]]
+    target_power: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
     """
@@ -5927,9 +5927,9 @@ class WirelessRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class WirelessRadioSettingsFiveGhzSettingsArgs:
     def __init__(__self__, *,
-                 channel: Optional[pulumi.Input[_builtins.int]] = None,
-                 channel_width: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_power: Optional[pulumi.Input[_builtins.int]] = None):
+                 channel: pulumi.Input[Optional[_builtins.int]] = None,
+                 channel_width: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_power: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] channel: Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
         :param pulumi.Input[_builtins.str] channel_width: Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
@@ -5944,47 +5944,47 @@ class WirelessRadioSettingsFiveGhzSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def channel(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def channel(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
         """
         return pulumi.get(self, "channel")
 
     @channel.setter
-    def channel(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def channel(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "channel", value)
 
     @_builtins.property
     @pulumi.getter(name="channelWidth")
-    def channel_width(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def channel_width(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         """
         return pulumi.get(self, "channel_width")
 
     @channel_width.setter
-    def channel_width(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def channel_width(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "channel_width", value)
 
     @_builtins.property
     @pulumi.getter(name="targetPower")
-    def target_power(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def target_power(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
         """
         return pulumi.get(self, "target_power")
 
     @target_power.setter
-    def target_power(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def target_power(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "target_power", value)
 
 
 class WirelessRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
-    channel: NotRequired[pulumi.Input[_builtins.int]]
+    channel: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Sets a manual channel for 2.4 GHz. Can be '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13' or '14' or null for using auto channel.
     """
-    target_power: NotRequired[pulumi.Input[_builtins.int]]
+    target_power: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Set a manual target power for 2.4 GHz. Can be between '5' or '30' or null for using auto power range.
     """
@@ -5992,8 +5992,8 @@ class WirelessRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class WirelessRadioSettingsTwoFourGhzSettingsArgs:
     def __init__(__self__, *,
-                 channel: Optional[pulumi.Input[_builtins.int]] = None,
-                 target_power: Optional[pulumi.Input[_builtins.int]] = None):
+                 channel: pulumi.Input[Optional[_builtins.int]] = None,
+                 target_power: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] channel: Sets a manual channel for 2.4 GHz. Can be '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13' or '14' or null for using auto channel.
         :param pulumi.Input[_builtins.int] target_power: Set a manual target power for 2.4 GHz. Can be between '5' or '30' or null for using auto power range.
@@ -6005,35 +6005,35 @@ class WirelessRadioSettingsTwoFourGhzSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def channel(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def channel(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Sets a manual channel for 2.4 GHz. Can be '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13' or '14' or null for using auto channel.
         """
         return pulumi.get(self, "channel")
 
     @channel.setter
-    def channel(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def channel(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "channel", value)
 
     @_builtins.property
     @pulumi.getter(name="targetPower")
-    def target_power(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def target_power(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set a manual target power for 2.4 GHz. Can be between '5' or '30' or null for using auto power range.
         """
         return pulumi.get(self, "target_power")
 
     @target_power.setter
-    def target_power(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def target_power(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "target_power", value)
 
 
 class BaseDetailArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Additional property name
     """
-    value: NotRequired[pulumi.Input[_builtins.str]]
+    value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Additional property value
     """
@@ -6041,8 +6041,8 @@ class BaseDetailArgsDict(TypedDict):
 @pulumi.input_type
 class BaseDetailArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 value: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Additional property name
         :param pulumi.Input[_builtins.str] value: Additional property value
@@ -6054,26 +6054,26 @@ class BaseDetailArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Additional property name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Additional property value
         """
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "value", value)
 
 

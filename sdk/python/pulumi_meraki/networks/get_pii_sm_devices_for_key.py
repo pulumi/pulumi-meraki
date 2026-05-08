@@ -198,13 +198,13 @@ def get_pii_sm_devices_for_key(bluetooth_mac: Optional[_builtins.str] = None,
         network_id=pulumi.get(__ret__, 'network_id'),
         serial=pulumi.get(__ret__, 'serial'),
         username=pulumi.get(__ret__, 'username'))
-def get_pii_sm_devices_for_key_output(bluetooth_mac: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      email: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      imei: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      mac: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                      serial: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                      username: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_pii_sm_devices_for_key_output(bluetooth_mac: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      email: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      imei: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      mac: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                      serial: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                      username: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPiiSmDevicesForKeyResult]:
     """
     ## Example Usage

@@ -162,51 +162,51 @@ export interface SnmpState {
     /**
      * The hostname of the SNMP server.
      */
-    hostname?: pulumi.Input<string>;
+    hostname?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * The list of IPv4 addresses that are allowed to access the SNMP server.
      */
-    peerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    peerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The port of the SNMP server.
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * The community string for SNMP version 2c, if enabled.
      */
-    v2CommunityString?: pulumi.Input<string>;
+    v2CommunityString?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether SNMP version 2c is enabled for the organization.
      */
-    v2cEnabled?: pulumi.Input<boolean>;
+    v2cEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
      */
-    v3AuthMode?: pulumi.Input<string>;
+    v3AuthMode?: pulumi.Input<string | undefined>;
     /**
      * The SNMP version 3 authentication password. Must be at least 8 characters if specified.
      */
-    v3AuthPass?: pulumi.Input<string>;
+    v3AuthPass?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether SNMP version 3 is enabled for the organization.
      */
-    v3Enabled?: pulumi.Input<boolean>;
+    v3Enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
      */
-    v3PrivMode?: pulumi.Input<string>;
+    v3PrivMode?: pulumi.Input<string | undefined>;
     /**
      * The SNMP version 3 privacy password. Must be at least 8 characters if specified.
      */
-    v3PrivPass?: pulumi.Input<string>;
+    v3PrivPass?: pulumi.Input<string | undefined>;
     /**
      * The user for SNMP version 3, if enabled.
      */
-    v3User?: pulumi.Input<string>;
+    v3User?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -220,29 +220,29 @@ export interface SnmpArgs {
     /**
      * The list of IPv4 addresses that are allowed to access the SNMP server.
      */
-    peerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    peerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Boolean indicating whether SNMP version 2c is enabled for the organization.
      */
-    v2cEnabled?: pulumi.Input<boolean>;
+    v2cEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
      */
-    v3AuthMode?: pulumi.Input<string>;
+    v3AuthMode?: pulumi.Input<string | undefined>;
     /**
      * The SNMP version 3 authentication password. Must be at least 8 characters if specified.
      */
-    v3AuthPass?: pulumi.Input<string>;
+    v3AuthPass?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether SNMP version 3 is enabled for the organization.
      */
-    v3Enabled?: pulumi.Input<boolean>;
+    v3Enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
      */
-    v3PrivMode?: pulumi.Input<string>;
+    v3PrivMode?: pulumi.Input<string | undefined>;
     /**
      * The SNMP version 3 privacy password. Must be at least 8 characters if specified.
      */
-    v3PrivPass?: pulumi.Input<string>;
+    v3PrivPass?: pulumi.Input<string | undefined>;
 }

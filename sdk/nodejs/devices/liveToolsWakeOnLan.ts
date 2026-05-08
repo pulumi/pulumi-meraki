@@ -151,39 +151,39 @@ export interface LiveToolsWakeOnLanState {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanCallback | undefined>;
     /**
      * An error message for a failed execution
      */
-    error?: pulumi.Input<string>;
+    error?: pulumi.Input<string | undefined>;
     /**
      * The target's MAC address
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * The parameters of the Wake-on-LAN request
      */
-    request?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanRequest>;
+    request?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanRequest | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Status of the Wake-on-LAN request
      */
-    status?: pulumi.Input<string>;
+    status?: pulumi.Input<string | undefined>;
     /**
      * GET this url to check the status of your ping request
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
     /**
      * The target's VLAN (1 to 4094)
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * ID of the Wake-on-LAN job
      */
-    wakeOnLanId?: pulumi.Input<string>;
+    wakeOnLanId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -193,11 +193,11 @@ export interface LiveToolsWakeOnLanArgs {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsWakeOnLanCallback | undefined>;
     /**
      * The target's MAC address
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
@@ -205,9 +205,9 @@ export interface LiveToolsWakeOnLanArgs {
     /**
      * The target's VLAN (1 to 4094)
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * ID of the Wake-on-LAN job
      */
-    wakeOnLanId?: pulumi.Input<string>;
+    wakeOnLanId?: pulumi.Input<string | undefined>;
 }

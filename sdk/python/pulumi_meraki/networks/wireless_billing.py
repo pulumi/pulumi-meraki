@@ -22,8 +22,8 @@ __all__ = ['WirelessBillingArgs', 'WirelessBilling']
 class WirelessBillingArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 currency: Optional[pulumi.Input[_builtins.str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]] = None):
+                 currency: pulumi.Input[Optional[_builtins.str]] = None,
+                 plans: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessBilling resource.
 
@@ -51,35 +51,35 @@ class WirelessBillingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def currency(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def currency(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The currency code of this node group's billing plans
         """
         return pulumi.get(self, "currency")
 
     @currency.setter
-    def currency(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def currency(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "currency", value)
 
     @_builtins.property
     @pulumi.getter
-    def plans(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]:
+    def plans(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]:
         """
         Array of billing plans in the node group. (Can configure a maximum of 5)
         """
         return pulumi.get(self, "plans")
 
     @plans.setter
-    def plans(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]):
+    def plans(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]):
         pulumi.set(self, "plans", value)
 
 
 @pulumi.input_type
 class _WirelessBillingState:
     def __init__(__self__, *,
-                 currency: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]] = None):
+                 currency: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 plans: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessBilling resources.
 
@@ -96,38 +96,38 @@ class _WirelessBillingState:
 
     @_builtins.property
     @pulumi.getter
-    def currency(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def currency(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The currency code of this node group's billing plans
         """
         return pulumi.get(self, "currency")
 
     @currency.setter
-    def currency(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def currency(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "currency", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def plans(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]:
+    def plans(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]:
         """
         Array of billing plans in the node group. (Can configure a maximum of 5)
         """
         return pulumi.get(self, "plans")
 
     @plans.setter
-    def plans(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]):
+    def plans(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessBillingPlanArgs']]]]):
         pulumi.set(self, "plans", value)
 
 
@@ -137,9 +137,9 @@ class WirelessBilling(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 currency: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
+                 currency: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 plans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -157,7 +157,7 @@ class WirelessBilling(pulumi.CustomResource):
                     "limit_up": 1000000,
                 },
                 "id": "1",
-                "price": 5,
+                "price": float(5),
                 "time_limit": "1 hour",
             }])
         pulumi.export("merakiNetworksWirelessBillingExample", example)
@@ -198,7 +198,7 @@ class WirelessBilling(pulumi.CustomResource):
                     "limit_up": 1000000,
                 },
                 "id": "1",
-                "price": 5,
+                "price": float(5),
                 "time_limit": "1 hour",
             }])
         pulumi.export("merakiNetworksWirelessBillingExample", example)
@@ -226,9 +226,9 @@ class WirelessBilling(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 currency: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
+                 currency: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 plans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -253,9 +253,9 @@ class WirelessBilling(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            currency: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None) -> 'WirelessBilling':
+            currency: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            plans: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None) -> 'WirelessBilling':
         """
         Get an existing WirelessBilling resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

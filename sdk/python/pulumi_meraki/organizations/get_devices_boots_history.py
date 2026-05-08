@@ -209,7 +209,7 @@ def get_devices_boots_history(ending_before: Optional[_builtins.str] = None,
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesBootsHistoryExample", example.items)
     ```
 
@@ -252,16 +252,16 @@ def get_devices_boots_history(ending_before: Optional[_builtins.str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     most_recent_per_device: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
-                                     organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                     per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                     serials: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                     sort_order: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
+def get_devices_boots_history_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     most_recent_per_device: pulumi.Input[Optional[Optional[_builtins.bool]]] = None,
+                                     organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                     per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                     serials: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                     sort_order: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesBootsHistoryResult]:
     """
     ## Example Usage
@@ -279,7 +279,7 @@ def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Option
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesBootsHistoryExample", example.items)
     ```
 

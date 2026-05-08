@@ -138,35 +138,35 @@ export interface CameraQualityAndRetentionState {
     /**
      * Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
      */
-    audioRecordingEnabled?: pulumi.Input<boolean>;
+    audioRecordingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
      */
-    motionBasedRetentionEnabled?: pulumi.Input<boolean>;
+    motionBasedRetentionEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
      */
-    motionDetectorVersion?: pulumi.Input<number>;
+    motionDetectorVersion?: pulumi.Input<number | undefined>;
     /**
      * The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
      */
-    quality?: pulumi.Input<string>;
+    quality?: pulumi.Input<string | undefined>;
     /**
      * Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
      */
-    resolution?: pulumi.Input<string>;
+    resolution?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
      */
-    restrictedBandwidthModeEnabled?: pulumi.Input<boolean>;
+    restrictedBandwidthModeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -176,31 +176,31 @@ export interface CameraQualityAndRetentionArgs {
     /**
      * Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
      */
-    audioRecordingEnabled?: pulumi.Input<boolean>;
+    audioRecordingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
      */
-    motionBasedRetentionEnabled?: pulumi.Input<boolean>;
+    motionBasedRetentionEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
      */
-    motionDetectorVersion?: pulumi.Input<number>;
+    motionDetectorVersion?: pulumi.Input<number | undefined>;
     /**
      * The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
      */
-    quality?: pulumi.Input<string>;
+    quality?: pulumi.Input<string | undefined>;
     /**
      * Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
      */
-    resolution?: pulumi.Input<string>;
+    resolution?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
      */
-    restrictedBandwidthModeEnabled?: pulumi.Input<boolean>;
+    restrictedBandwidthModeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */

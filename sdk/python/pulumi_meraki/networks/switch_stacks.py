@@ -20,9 +20,9 @@ __all__ = ['SwitchStacksArgs', 'SwitchStacks']
 class SwitchStacksArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchStacks resource.
 
@@ -53,48 +53,48 @@ class SwitchStacksArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Switch stack
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Serials of the switches in the switch stack
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
     @_builtins.property
     @pulumi.getter(name="switchStackId")
-    def switch_stack_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def switch_stack_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         switchStackId path parameter. Switch stack ID
         """
         return pulumi.get(self, "switch_stack_id")
 
     @switch_stack_id.setter
-    def switch_stack_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def switch_stack_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "switch_stack_id", value)
 
 
 @pulumi.input_type
 class _SwitchStacksState:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchStacks resources.
 
@@ -114,50 +114,50 @@ class _SwitchStacksState:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Switch stack
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Serials of the switches in the switch stack
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
     @_builtins.property
     @pulumi.getter(name="switchStackId")
-    def switch_stack_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def switch_stack_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         switchStackId path parameter. Switch stack ID
         """
         return pulumi.get(self, "switch_stack_id")
 
     @switch_stack_id.setter
-    def switch_stack_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def switch_stack_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "switch_stack_id", value)
 
 
@@ -167,10 +167,10 @@ class SwitchStacks(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -248,10 +248,10 @@ class SwitchStacks(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -277,10 +277,10 @@ class SwitchStacks(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchStacks':
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchStacks':
         """
         Get an existing SwitchStacks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

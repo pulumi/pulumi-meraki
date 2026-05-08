@@ -22,10 +22,10 @@ __all__ = ['ApplianceSingleLanArgs', 'ApplianceSingleLan']
 class ApplianceSingleLanArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceSingleLanIpv6Args']] = None,
-                 mandatory_dhcp: Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceSingleLanIpv6Args']] = None,
+                 mandatory_dhcp: pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceSingleLan resource.
 
@@ -59,61 +59,61 @@ class ApplianceSingleLanArgs:
 
     @_builtins.property
     @pulumi.getter(name="applianceIp")
-    def appliance_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def appliance_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The local IP of the appliance on the single LAN
         """
         return pulumi.get(self, "appliance_ip")
 
     @appliance_ip.setter
-    def appliance_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def appliance_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "appliance_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceSingleLanIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceSingleLanIpv6Args']]:
         """
         IPv6 configuration on the single LAN
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceSingleLanIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceSingleLanIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="mandatoryDhcp")
-    def mandatory_dhcp(self) -> Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']]:
+    def mandatory_dhcp(self) -> pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']]:
         """
         Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         """
         return pulumi.get(self, "mandatory_dhcp")
 
     @mandatory_dhcp.setter
-    def mandatory_dhcp(self, value: Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']]):
+    def mandatory_dhcp(self, value: pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']]):
         pulumi.set(self, "mandatory_dhcp", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet of the single LAN
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
 
 @pulumi.input_type
 class _ApplianceSingleLanState:
     def __init__(__self__, *,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceSingleLanIpv6Args']] = None,
-                 mandatory_dhcp: Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceSingleLanIpv6Args']] = None,
+                 mandatory_dhcp: pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSingleLan resources.
 
@@ -136,62 +136,62 @@ class _ApplianceSingleLanState:
 
     @_builtins.property
     @pulumi.getter(name="applianceIp")
-    def appliance_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def appliance_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The local IP of the appliance on the single LAN
         """
         return pulumi.get(self, "appliance_ip")
 
     @appliance_ip.setter
-    def appliance_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def appliance_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "appliance_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceSingleLanIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceSingleLanIpv6Args']]:
         """
         IPv6 configuration on the single LAN
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceSingleLanIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceSingleLanIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="mandatoryDhcp")
-    def mandatory_dhcp(self) -> Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']]:
+    def mandatory_dhcp(self) -> pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']]:
         """
         Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         """
         return pulumi.get(self, "mandatory_dhcp")
 
     @mandatory_dhcp.setter
-    def mandatory_dhcp(self, value: Optional[pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs']]):
+    def mandatory_dhcp(self, value: pulumi.Input[Optional['ApplianceSingleLanMandatoryDhcpArgs']]):
         pulumi.set(self, "mandatory_dhcp", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet of the single LAN
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
 
@@ -201,11 +201,11 @@ class ApplianceSingleLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -308,11 +308,11 @@ class ApplianceSingleLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -339,11 +339,11 @@ class ApplianceSingleLan(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
-            mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            subnet: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceSingleLan':
+            appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSingleLan':
         """
         Get an existing ApplianceSingleLan resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,7 +22,7 @@ __all__ = ['ApplianceFirewallPortForwardingRulesArgs', 'ApplianceFirewallPortFor
 class ApplianceFirewallPortForwardingRulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallPortForwardingRules resource.
 
@@ -47,22 +47,22 @@ class ApplianceFirewallPortForwardingRulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]:
         """
         An array of port forwarding params
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _ApplianceFirewallPortForwardingRulesState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallPortForwardingRules resources.
 
@@ -76,26 +76,26 @@ class _ApplianceFirewallPortForwardingRulesState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]:
         """
         An array of port forwarding params
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -190,8 +190,8 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -215,8 +215,8 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallPortForwardingRules':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallPortForwardingRules':
         """
         Get an existing ApplianceFirewallPortForwardingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

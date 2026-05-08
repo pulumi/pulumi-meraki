@@ -137,35 +137,35 @@ export interface WirelessBluetoothSettingsState {
     /**
      * Whether APs will advertise beacons.
      */
-    advertisingEnabled?: pulumi.Input<boolean>;
+    advertisingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Whether ESL is enabled on this network.
      */
-    eslEnabled?: pulumi.Input<boolean>;
+    eslEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    major?: pulumi.Input<number>;
+    major?: pulumi.Input<number | undefined>;
     /**
      * The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
      */
-    majorMinorAssignmentMode?: pulumi.Input<string>;
+    majorMinorAssignmentMode?: pulumi.Input<string | undefined>;
     /**
      * The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    minor?: pulumi.Input<number>;
+    minor?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Whether APs will scan for Bluetooth enabled clients.
      */
-    scanningEnabled?: pulumi.Input<boolean>;
+    scanningEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The UUID to be used in the beacon identifier.
      */
-    uuid?: pulumi.Input<string>;
+    uuid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -175,19 +175,19 @@ export interface WirelessBluetoothSettingsArgs {
     /**
      * Whether APs will advertise beacons.
      */
-    advertisingEnabled?: pulumi.Input<boolean>;
+    advertisingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    major?: pulumi.Input<number>;
+    major?: pulumi.Input<number | undefined>;
     /**
      * The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
      */
-    majorMinorAssignmentMode?: pulumi.Input<string>;
+    majorMinorAssignmentMode?: pulumi.Input<string | undefined>;
     /**
      * The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    minor?: pulumi.Input<number>;
+    minor?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -195,9 +195,9 @@ export interface WirelessBluetoothSettingsArgs {
     /**
      * Whether APs will scan for Bluetooth enabled clients.
      */
-    scanningEnabled?: pulumi.Input<boolean>;
+    scanningEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The UUID to be used in the beacon identifier.
      */
-    uuid?: pulumi.Input<string>;
+    uuid?: pulumi.Input<string | undefined>;
 }

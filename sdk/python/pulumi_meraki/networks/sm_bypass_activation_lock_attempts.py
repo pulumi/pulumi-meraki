@@ -22,8 +22,8 @@ __all__ = ['SmBypassActivationLockAttemptsArgs', 'SmBypassActivationLockAttempts
 class SmBypassActivationLockAttemptsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 attempt_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a SmBypassActivationLockAttempts resource.
 
@@ -51,37 +51,37 @@ class SmBypassActivationLockAttemptsArgs:
 
     @_builtins.property
     @pulumi.getter(name="attemptId")
-    def attempt_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attempt_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         attemptId path parameter. Attempt ID
         """
         return pulumi.get(self, "attempt_id")
 
     @attempt_id.setter
-    def attempt_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attempt_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attempt_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The ids of the devices to attempt activation lock bypass.
         """
         return pulumi.get(self, "ids")
 
     @ids.setter
-    def ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ids", value)
 
 
 @pulumi.input_type
 class _SmBypassActivationLockAttemptsState:
     def __init__(__self__, *,
-                 attempt_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data: Optional[pulumi.Input['SmBypassActivationLockAttemptsDataArgs']] = None,
-                 ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None):
+                 attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data: pulumi.Input[Optional['SmBypassActivationLockAttemptsDataArgs']] = None,
+                 ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SmBypassActivationLockAttempts resources.
 
@@ -102,56 +102,56 @@ class _SmBypassActivationLockAttemptsState:
 
     @_builtins.property
     @pulumi.getter(name="attemptId")
-    def attempt_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attempt_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         attemptId path parameter. Attempt ID
         """
         return pulumi.get(self, "attempt_id")
 
     @attempt_id.setter
-    def attempt_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attempt_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attempt_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def data(self) -> Optional[pulumi.Input['SmBypassActivationLockAttemptsDataArgs']]:
+    def data(self) -> pulumi.Input[Optional['SmBypassActivationLockAttemptsDataArgs']]:
         return pulumi.get(self, "data")
 
     @data.setter
-    def data(self, value: Optional[pulumi.Input['SmBypassActivationLockAttemptsDataArgs']]):
+    def data(self, value: pulumi.Input[Optional['SmBypassActivationLockAttemptsDataArgs']]):
         pulumi.set(self, "data", value)
 
     @_builtins.property
     @pulumi.getter
-    def ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The ids of the devices to attempt activation lock bypass.
         """
         return pulumi.get(self, "ids")
 
     @ids.setter
-    def ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ids", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
 
@@ -161,9 +161,9 @@ class SmBypassActivationLockAttempts(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attempt_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -238,9 +238,9 @@ class SmBypassActivationLockAttempts(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attempt_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -267,11 +267,11 @@ class SmBypassActivationLockAttempts(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            attempt_id: Optional[pulumi.Input[_builtins.str]] = None,
-            data: Optional[pulumi.Input[Union['SmBypassActivationLockAttemptsDataArgs', 'SmBypassActivationLockAttemptsDataArgsDict']]] = None,
-            ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            status: Optional[pulumi.Input[_builtins.str]] = None) -> 'SmBypassActivationLockAttempts':
+            attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data: pulumi.Input[Optional[Union['SmBypassActivationLockAttemptsDataArgs', 'SmBypassActivationLockAttemptsDataArgsDict']]] = None,
+            ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None) -> 'SmBypassActivationLockAttempts':
         """
         Get an existing SmBypassActivationLockAttempts resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

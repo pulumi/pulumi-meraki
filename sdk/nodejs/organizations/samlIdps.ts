@@ -115,23 +115,23 @@ export interface SamlIdpsState {
     /**
      * URL that is consuming SAML Identity Provider (IdP)
      */
-    consumerUrl?: pulumi.Input<string>;
+    consumerUrl?: pulumi.Input<string | undefined>;
     /**
      * ID associated with the SAML Identity Provider (IdP)
      */
-    idpId?: pulumi.Input<string>;
+    idpId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Dashboard will redirect users to this URL when they sign out.
      */
-    sloLogoutUrl?: pulumi.Input<string>;
+    sloLogoutUrl?: pulumi.Input<string | undefined>;
     /**
      * Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
      */
-    x509certSha1Fingerprint?: pulumi.Input<string>;
+    x509certSha1Fingerprint?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -141,7 +141,7 @@ export interface SamlIdpsArgs {
     /**
      * ID associated with the SAML Identity Provider (IdP)
      */
-    idpId?: pulumi.Input<string>;
+    idpId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -149,9 +149,9 @@ export interface SamlIdpsArgs {
     /**
      * Dashboard will redirect users to this URL when they sign out.
      */
-    sloLogoutUrl?: pulumi.Input<string>;
+    sloLogoutUrl?: pulumi.Input<string | undefined>;
     /**
      * Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
      */
-    x509certSha1Fingerprint?: pulumi.Input<string>;
+    x509certSha1Fingerprint?: pulumi.Input<string | undefined>;
 }

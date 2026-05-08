@@ -119,23 +119,23 @@ export interface ClientsPolicyState {
     /**
      * clientId path parameter. Client ID
      */
-    clientId?: pulumi.Input<string>;
+    clientId?: pulumi.Input<string | undefined>;
     /**
      * The name of the client's policy
      */
-    devicePolicy?: pulumi.Input<string>;
+    devicePolicy?: pulumi.Input<string | undefined>;
     /**
      * The group policy identifier of the client
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The MAC address of the client
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -149,11 +149,11 @@ export interface ClientsPolicyArgs {
     /**
      * The name of the client's policy
      */
-    devicePolicy?: pulumi.Input<string>;
+    devicePolicy?: pulumi.Input<string | undefined>;
     /**
      * The group policy identifier of the client
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */

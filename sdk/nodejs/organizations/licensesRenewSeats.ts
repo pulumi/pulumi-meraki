@@ -98,12 +98,12 @@ export class LicensesRenewSeats extends pulumi.CustomResource {
  * Input properties used for looking up and filtering LicensesRenewSeats resources.
  */
 export interface LicensesRenewSeatsState {
-    item?: pulumi.Input<inputs.organizations.LicensesRenewSeatsItem>;
+    item?: pulumi.Input<inputs.organizations.LicensesRenewSeatsItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.LicensesRenewSeatsParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.LicensesRenewSeatsParameters | undefined>;
 }
 
 /**

@@ -200,23 +200,23 @@ export interface GetWirelessDataRateHistoryOutputArgs {
     /**
      * apTag query parameter. Filter results by AP tag.
      */
-    apTag?: pulumi.Input<string>;
+    apTag?: pulumi.Input<string | undefined>;
     /**
      * autoResolution query parameter. Automatically select a data resolution based on the given timespan; this overrides the value specified by the 'resolution' parameter. The default setting is false.
      */
-    autoResolution?: pulumi.Input<boolean>;
+    autoResolution?: pulumi.Input<boolean | undefined>;
     /**
      * band query parameter. Filter results by band (either '2.4', '5' or '6').
      */
-    band?: pulumi.Input<string>;
+    band?: pulumi.Input<string | undefined>;
     /**
      * clientId query parameter. Filter results by network client.
      */
-    clientId?: pulumi.Input<string>;
+    clientId?: pulumi.Input<string | undefined>;
     /**
      * deviceSerial query parameter. Filter results by device.
      */
-    deviceSerial?: pulumi.Input<string>;
+    deviceSerial?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -224,21 +224,21 @@ export interface GetWirelessDataRateHistoryOutputArgs {
     /**
      * resolution query parameter. The time resolution in seconds for returned data. The valid resolutions are: 300, 600, 1200, 3600, 14400, 86400. The default is 86400.
      */
-    resolution?: pulumi.Input<number>;
+    resolution?: pulumi.Input<number | undefined>;
     /**
      * ssid query parameter. Filter results by SSID number.
      */
-    ssid?: pulumi.Input<number>;
+    ssid?: pulumi.Input<number | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
 }

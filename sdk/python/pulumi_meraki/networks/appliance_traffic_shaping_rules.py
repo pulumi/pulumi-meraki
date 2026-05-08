@@ -22,8 +22,8 @@ __all__ = ['ApplianceTrafficShapingRulesArgs', 'ApplianceTrafficShapingRules']
 class ApplianceTrafficShapingRulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingRules resource.
 
@@ -53,19 +53,19 @@ class ApplianceTrafficShapingRulesArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultRulesEnabled")
-    def default_rules_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_rules_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         """
         return pulumi.get(self, "default_rules_enabled")
 
     @default_rules_enabled.setter
-    def default_rules_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_rules_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_rules_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]:
         """
         An array of traffic shaping rules. Rules are applied in the order that
         they are specified in. An empty list (or null) means no rules. Note that
@@ -74,16 +74,16 @@ class ApplianceTrafficShapingRulesArgs:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _ApplianceTrafficShapingRulesState:
     def __init__(__self__, *,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingRules resources.
 
@@ -102,31 +102,31 @@ class _ApplianceTrafficShapingRulesState:
 
     @_builtins.property
     @pulumi.getter(name="defaultRulesEnabled")
-    def default_rules_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_rules_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         """
         return pulumi.get(self, "default_rules_enabled")
 
     @default_rules_enabled.setter
-    def default_rules_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_rules_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_rules_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]:
         """
         An array of traffic shaping rules. Rules are applied in the order that
         they are specified in. An empty list (or null) means no rules. Note that
@@ -135,7 +135,7 @@ class _ApplianceTrafficShapingRulesState:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -145,9 +145,9 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -248,9 +248,9 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -275,9 +275,9 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None) -> 'ApplianceTrafficShapingRules':
+            default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None) -> 'ApplianceTrafficShapingRules':
         """
         Get an existing ApplianceTrafficShapingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

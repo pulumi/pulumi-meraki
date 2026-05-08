@@ -115,19 +115,19 @@ export interface ApplianceSettingsState {
     /**
      * Client tracking method of a network
      */
-    clientTrackingMethod?: pulumi.Input<string>;
+    clientTrackingMethod?: pulumi.Input<string | undefined>;
     /**
      * Deployment mode of a network
      */
-    deploymentMode?: pulumi.Input<string>;
+    deploymentMode?: pulumi.Input<string | undefined>;
     /**
      * Dynamic DNS settings for a network
      */
-    dynamicDns?: pulumi.Input<inputs.networks.ApplianceSettingsDynamicDns>;
+    dynamicDns?: pulumi.Input<inputs.networks.ApplianceSettingsDynamicDns | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -137,15 +137,15 @@ export interface ApplianceSettingsArgs {
     /**
      * Client tracking method of a network
      */
-    clientTrackingMethod?: pulumi.Input<string>;
+    clientTrackingMethod?: pulumi.Input<string | undefined>;
     /**
      * Deployment mode of a network
      */
-    deploymentMode?: pulumi.Input<string>;
+    deploymentMode?: pulumi.Input<string | undefined>;
     /**
      * Dynamic DNS settings for a network
      */
-    dynamicDns?: pulumi.Input<inputs.networks.ApplianceSettingsDynamicDns>;
+    dynamicDns?: pulumi.Input<inputs.networks.ApplianceSettingsDynamicDns | undefined>;
     /**
      * networkId path parameter. Network ID
      */

@@ -73,9 +73,9 @@ export interface GetSamlIdpsOutputArgs {
     /**
      * idpId path parameter. Idp ID
      */
-    idpId?: pulumi.Input<string>;
+    idpId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

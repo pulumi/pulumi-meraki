@@ -161,12 +161,12 @@ export interface InventoryOnboardingCloudMonitoringPrepareState {
     /**
      * Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
      */
-    items?: pulumi.Input<pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringPrepareItem>[]>;
+    items?: pulumi.Input<pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringPrepareItem>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringPrepareParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringPrepareParameters | undefined>;
 }
 
 /**

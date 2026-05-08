@@ -112,12 +112,12 @@ export class SmDevicesLock extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesLock resources.
  */
 export interface SmDevicesLockState {
-    item?: pulumi.Input<inputs.networks.SmDevicesLockItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesLockItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesLockParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesLockParameters | undefined>;
 }
 
 /**

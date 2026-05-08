@@ -102,11 +102,11 @@ export interface CellularGatewayConnectivityMonitoringDestinationsState {
     /**
      * The list of connectivity monitoring destinations
      */
-    destinations?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination>[]>;
+    destinations?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -116,7 +116,7 @@ export interface CellularGatewayConnectivityMonitoringDestinationsArgs {
     /**
      * The list of connectivity monitoring destinations
      */
-    destinations?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination>[]>;
+    destinations?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

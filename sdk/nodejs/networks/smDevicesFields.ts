@@ -109,12 +109,12 @@ export interface SmDevicesFieldsState {
     /**
      * Array of ResponseSmUpdateNetworkSmDevicesFields
      */
-    items?: pulumi.Input<pulumi.Input<inputs.networks.SmDevicesFieldsItem>[]>;
+    items?: pulumi.Input<pulumi.Input<inputs.networks.SmDevicesFieldsItem>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesFieldsParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesFieldsParameters | undefined>;
 }
 
 /**

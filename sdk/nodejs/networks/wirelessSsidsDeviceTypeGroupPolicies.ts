@@ -118,19 +118,19 @@ export interface WirelessSsidsDeviceTypeGroupPoliciesState {
     /**
      * List of device type policies.
      */
-    deviceTypePolicies?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy>[]>;
+    deviceTypePolicies?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy>[] | undefined>;
     /**
      * If true, the SSID device type group policies are enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -140,11 +140,11 @@ export interface WirelessSsidsDeviceTypeGroupPoliciesArgs {
     /**
      * List of device type policies.
      */
-    deviceTypePolicies?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy>[]>;
+    deviceTypePolicies?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy>[] | undefined>;
     /**
      * If true, the SSID device type group policies are enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */

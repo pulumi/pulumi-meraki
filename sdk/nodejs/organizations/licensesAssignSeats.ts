@@ -99,12 +99,12 @@ export class LicensesAssignSeats extends pulumi.CustomResource {
  * Input properties used for looking up and filtering LicensesAssignSeats resources.
  */
 export interface LicensesAssignSeatsState {
-    item?: pulumi.Input<inputs.organizations.LicensesAssignSeatsItem>;
+    item?: pulumi.Input<inputs.organizations.LicensesAssignSeatsItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.LicensesAssignSeatsParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.LicensesAssignSeatsParameters | undefined>;
 }
 
 /**

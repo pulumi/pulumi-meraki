@@ -163,34 +163,34 @@ export interface BrandingPoliciesState {
     /**
      * Settings for describing which kinds of admins this policy applies to.
      */
-    adminSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesAdminSettings>;
+    adminSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesAdminSettings | undefined>;
     /**
      * brandingPolicyId path parameter. Branding policy ID
      */
-    brandingPolicyId?: pulumi.Input<string>;
+    brandingPolicyId?: pulumi.Input<string | undefined>;
     /**
      * Properties describing the custom logo attached to the branding policy.
      */
-    customLogo?: pulumi.Input<inputs.organizations.BrandingPoliciesCustomLogo>;
+    customLogo?: pulumi.Input<inputs.organizations.BrandingPoliciesCustomLogo | undefined>;
     /**
      * Boolean indicating whether this policy is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
      *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
      *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
      *   Dashboard; see the documentation for each property to see the allowed values.
      */
-    helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings>;
+    helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings | undefined>;
     /**
      * Name of the Dashboard branding policy.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -200,30 +200,30 @@ export interface BrandingPoliciesArgs {
     /**
      * Settings for describing which kinds of admins this policy applies to.
      */
-    adminSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesAdminSettings>;
+    adminSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesAdminSettings | undefined>;
     /**
      * brandingPolicyId path parameter. Branding policy ID
      */
-    brandingPolicyId?: pulumi.Input<string>;
+    brandingPolicyId?: pulumi.Input<string | undefined>;
     /**
      * Properties describing the custom logo attached to the branding policy.
      */
-    customLogo?: pulumi.Input<inputs.organizations.BrandingPoliciesCustomLogo>;
+    customLogo?: pulumi.Input<inputs.organizations.BrandingPoliciesCustomLogo | undefined>;
     /**
      * Boolean indicating whether this policy is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
      *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
      *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
      *   Dashboard; see the documentation for each property to see the allowed values.
      */
-    helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings>;
+    helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings | undefined>;
     /**
      * Name of the Dashboard branding policy.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

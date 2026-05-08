@@ -106,11 +106,11 @@ export interface ApplianceFirewallPortForwardingRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An array of port forwarding params
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallPortForwardingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallPortForwardingRulesRule>[] | undefined>;
 }
 
 /**
@@ -124,5 +124,5 @@ export interface ApplianceFirewallPortForwardingRulesArgs {
     /**
      * An array of port forwarding params
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallPortForwardingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallPortForwardingRulesRule>[] | undefined>;
 }

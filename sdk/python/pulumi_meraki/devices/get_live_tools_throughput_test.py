@@ -113,8 +113,8 @@ def get_live_tools_throughput_test(serial: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         throughput_test_id=pulumi.get(__ret__, 'throughput_test_id'))
-def get_live_tools_throughput_test_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
-                                          throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_live_tools_throughput_test_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
+                                          throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsThroughputTestResult]:
     """
     ## Example Usage

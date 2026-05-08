@@ -144,35 +144,35 @@ export interface WirelessSettingsState {
     /**
      * Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
      */
-    ipv6BridgeEnabled?: pulumi.Input<boolean>;
+    ipv6BridgeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
      */
-    ledLightsOn?: pulumi.Input<boolean>;
+    ledLightsOn?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling location analytics for your network
      */
-    locationAnalyticsEnabled?: pulumi.Input<boolean>;
+    locationAnalyticsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling meshing in a network
      */
-    meshingEnabled?: pulumi.Input<boolean>;
+    meshingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Named VLAN settings for wireless networks.
      */
-    namedVlans?: pulumi.Input<inputs.networks.WirelessSettingsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.WirelessSettingsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Regulatory domain information for this network.
      */
-    regulatoryDomain?: pulumi.Input<inputs.networks.WirelessSettingsRegulatoryDomain>;
+    regulatoryDomain?: pulumi.Input<inputs.networks.WirelessSettingsRegulatoryDomain | undefined>;
     /**
      * The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
      */
-    upgradestrategy?: pulumi.Input<string>;
+    upgradestrategy?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -182,23 +182,23 @@ export interface WirelessSettingsArgs {
     /**
      * Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
      */
-    ipv6BridgeEnabled?: pulumi.Input<boolean>;
+    ipv6BridgeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
      */
-    ledLightsOn?: pulumi.Input<boolean>;
+    ledLightsOn?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling location analytics for your network
      */
-    locationAnalyticsEnabled?: pulumi.Input<boolean>;
+    locationAnalyticsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Toggle for enabling or disabling meshing in a network
      */
-    meshingEnabled?: pulumi.Input<boolean>;
+    meshingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Named VLAN settings for wireless networks.
      */
-    namedVlans?: pulumi.Input<inputs.networks.WirelessSettingsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.WirelessSettingsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -206,5 +206,5 @@ export interface WirelessSettingsArgs {
     /**
      * The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
      */
-    upgradestrategy?: pulumi.Input<string>;
+    upgradestrategy?: pulumi.Input<string | undefined>;
 }

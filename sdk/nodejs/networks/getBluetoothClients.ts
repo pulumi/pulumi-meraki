@@ -117,11 +117,11 @@ export interface GetBluetoothClientsOutputArgs {
     /**
      * connectivityHistoryTimespan query parameter. The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
      */
-    connectivityHistoryTimespan?: pulumi.Input<number>;
+    connectivityHistoryTimespan?: pulumi.Input<number | undefined>;
     /**
      * includeConnectivityHistory query parameter. Include the connectivity history for this client
      */
-    includeConnectivityHistory?: pulumi.Input<boolean>;
+    includeConnectivityHistory?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */

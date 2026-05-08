@@ -149,19 +149,19 @@ export interface GetPiiPiiKeysOutputArgs {
     /**
      * bluetoothMac query parameter. The MAC of a Bluetooth client
      */
-    bluetoothMac?: pulumi.Input<string>;
+    bluetoothMac?: pulumi.Input<string | undefined>;
     /**
      * email query parameter. The email of a network user account or a Systems Manager device
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * imei query parameter. The IMEI of a Systems Manager device
      */
-    imei?: pulumi.Input<string>;
+    imei?: pulumi.Input<string | undefined>;
     /**
      * mac query parameter. The MAC of a network client device or a Systems Manager device
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -169,9 +169,9 @@ export interface GetPiiPiiKeysOutputArgs {
     /**
      * serial query parameter. The serial of a Systems Manager device
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * username query parameter. The username of a Systems Manager user
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
 }

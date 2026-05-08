@@ -113,8 +113,8 @@ def get_wireless_ssids_device_type_group_policies(network_id: Optional[_builtins
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         number=pulumi.get(__ret__, 'number'))
-def get_wireless_ssids_device_type_group_policies_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                         number: Optional[pulumi.Input[_builtins.str]] = None,
+def get_wireless_ssids_device_type_group_policies_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                         number: pulumi.Input[Optional[_builtins.str]] = None,
                                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsDeviceTypeGroupPoliciesResult]:
     """
     ## Example Usage

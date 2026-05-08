@@ -102,11 +102,11 @@ export interface ApplianceConnectivityMonitoringDestinationsState {
     /**
      * The list of connectivity monitoring destinations
      */
-    destinations?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceConnectivityMonitoringDestinationsDestination>[]>;
+    destinations?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceConnectivityMonitoringDestinationsDestination>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -116,7 +116,7 @@ export interface ApplianceConnectivityMonitoringDestinationsArgs {
     /**
      * The list of connectivity monitoring destinations
      */
-    destinations?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceConnectivityMonitoringDestinationsDestination>[]>;
+    destinations?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceConnectivityMonitoringDestinationsDestination>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

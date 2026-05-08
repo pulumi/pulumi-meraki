@@ -22,11 +22,11 @@ __all__ = ['ApplianceWarmSpareArgs', 'ApplianceWarmSpare']
 class ApplianceWarmSpareArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uplink_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip1: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceWarmSpare resource.
 
@@ -63,77 +63,77 @@ class ApplianceWarmSpareArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable warm spare
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="spareSerial")
-    def spare_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spare_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the warm spare appliance
         """
         return pulumi.get(self, "spare_serial")
 
     @spare_serial.setter
-    def spare_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spare_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spare_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="uplinkMode")
-    def uplink_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uplink_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Uplink mode, either virtual or public
         """
         return pulumi.get(self, "uplink_mode")
 
     @uplink_mode.setter
-    def uplink_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uplink_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uplink_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="virtualIp1")
-    def virtual_ip1(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def virtual_ip1(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The WAN 1 shared IP
         """
         return pulumi.get(self, "virtual_ip1")
 
     @virtual_ip1.setter
-    def virtual_ip1(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def virtual_ip1(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "virtual_ip1", value)
 
     @_builtins.property
     @pulumi.getter(name="virtualIp2")
-    def virtual_ip2(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def virtual_ip2(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The WAN 2 shared IP
         """
         return pulumi.get(self, "virtual_ip2")
 
     @virtual_ip2.setter
-    def virtual_ip2(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def virtual_ip2(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "virtual_ip2", value)
 
 
 @pulumi.input_type
 class _ApplianceWarmSpareState:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uplink_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip1: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None,
-                 wan1: Optional[pulumi.Input['ApplianceWarmSpareWan1Args']] = None,
-                 wan2: Optional[pulumi.Input['ApplianceWarmSpareWan2Args']] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None,
+                 wan1: pulumi.Input[Optional['ApplianceWarmSpareWan1Args']] = None,
+                 wan2: pulumi.Input[Optional['ApplianceWarmSpareWan2Args']] = None):
         """
         Input properties used for looking up and filtering ApplianceWarmSpare resources.
 
@@ -165,101 +165,101 @@ class _ApplianceWarmSpareState:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable warm spare
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySerial")
-    def primary_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "primary_serial")
 
     @primary_serial.setter
-    def primary_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="spareSerial")
-    def spare_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spare_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the warm spare appliance
         """
         return pulumi.get(self, "spare_serial")
 
     @spare_serial.setter
-    def spare_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spare_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spare_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="uplinkMode")
-    def uplink_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uplink_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Uplink mode, either virtual or public
         """
         return pulumi.get(self, "uplink_mode")
 
     @uplink_mode.setter
-    def uplink_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uplink_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uplink_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="virtualIp1")
-    def virtual_ip1(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def virtual_ip1(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The WAN 1 shared IP
         """
         return pulumi.get(self, "virtual_ip1")
 
     @virtual_ip1.setter
-    def virtual_ip1(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def virtual_ip1(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "virtual_ip1", value)
 
     @_builtins.property
     @pulumi.getter(name="virtualIp2")
-    def virtual_ip2(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def virtual_ip2(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The WAN 2 shared IP
         """
         return pulumi.get(self, "virtual_ip2")
 
     @virtual_ip2.setter
-    def virtual_ip2(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def virtual_ip2(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "virtual_ip2", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan1(self) -> Optional[pulumi.Input['ApplianceWarmSpareWan1Args']]:
+    def wan1(self) -> pulumi.Input[Optional['ApplianceWarmSpareWan1Args']]:
         return pulumi.get(self, "wan1")
 
     @wan1.setter
-    def wan1(self, value: Optional[pulumi.Input['ApplianceWarmSpareWan1Args']]):
+    def wan1(self, value: pulumi.Input[Optional['ApplianceWarmSpareWan1Args']]):
         pulumi.set(self, "wan1", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan2(self) -> Optional[pulumi.Input['ApplianceWarmSpareWan2Args']]:
+    def wan2(self) -> pulumi.Input[Optional['ApplianceWarmSpareWan2Args']]:
         return pulumi.get(self, "wan2")
 
     @wan2.setter
-    def wan2(self, value: Optional[pulumi.Input['ApplianceWarmSpareWan2Args']]):
+    def wan2(self, value: pulumi.Input[Optional['ApplianceWarmSpareWan2Args']]):
         pulumi.set(self, "wan2", value)
 
 
@@ -269,12 +269,12 @@ class ApplianceWarmSpare(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uplink_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip1: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -354,12 +354,12 @@ class ApplianceWarmSpare(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uplink_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip1: Optional[pulumi.Input[_builtins.str]] = None,
-                 virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+                 virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -390,15 +390,15 @@ class ApplianceWarmSpare(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            primary_serial: Optional[pulumi.Input[_builtins.str]] = None,
-            spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
-            uplink_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            virtual_ip1: Optional[pulumi.Input[_builtins.str]] = None,
-            virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None,
-            wan1: Optional[pulumi.Input[Union['ApplianceWarmSpareWan1Args', 'ApplianceWarmSpareWan1ArgsDict']]] = None,
-            wan2: Optional[pulumi.Input[Union['ApplianceWarmSpareWan2Args', 'ApplianceWarmSpareWan2ArgsDict']]] = None) -> 'ApplianceWarmSpare':
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+            virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None,
+            wan1: pulumi.Input[Optional[Union['ApplianceWarmSpareWan1Args', 'ApplianceWarmSpareWan1ArgsDict']]] = None,
+            wan2: pulumi.Input[Optional[Union['ApplianceWarmSpareWan2Args', 'ApplianceWarmSpareWan2ArgsDict']]] = None) -> 'ApplianceWarmSpare':
         """
         Get an existing ApplianceWarmSpare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

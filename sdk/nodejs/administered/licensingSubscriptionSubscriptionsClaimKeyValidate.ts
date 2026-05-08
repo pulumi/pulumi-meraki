@@ -85,8 +85,8 @@ export class LicensingSubscriptionSubscriptionsClaimKeyValidate extends pulumi.C
  * Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsClaimKeyValidate resources.
  */
 export interface LicensingSubscriptionSubscriptionsClaimKeyValidateState {
-    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateItem>;
-    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateParameters>;
+    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateItem | undefined>;
+    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateParameters | undefined>;
 }
 
 /**

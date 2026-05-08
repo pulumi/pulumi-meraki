@@ -56,8 +56,8 @@ class SwitchDevicesCloneArgs:
 @pulumi.input_type
 class _SwitchDevicesCloneState:
     def __init__(__self__, *,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['SwitchDevicesCloneParametersArgs']] = None):
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['SwitchDevicesCloneParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SwitchDevicesClone resources.
 
@@ -70,23 +70,23 @@ class _SwitchDevicesCloneState:
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['SwitchDevicesCloneParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['SwitchDevicesCloneParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['SwitchDevicesCloneParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['SwitchDevicesCloneParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -96,8 +96,8 @@ class SwitchDevicesClone(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -172,8 +172,8 @@ class SwitchDevicesClone(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -199,8 +199,8 @@ class SwitchDevicesClone(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None) -> 'SwitchDevicesClone':
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchDevicesCloneParametersArgs', 'SwitchDevicesCloneParametersArgsDict']]] = None) -> 'SwitchDevicesClone':
         """
         Get an existing SwitchDevicesClone resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

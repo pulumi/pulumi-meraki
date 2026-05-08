@@ -186,67 +186,67 @@ export interface LicensesState {
     /**
      * The date the license started burning
      */
-    activationDate?: pulumi.Input<string>;
+    activationDate?: pulumi.Input<string | undefined>;
     /**
      * The date the license was claimed into the organization
      */
-    claimDate?: pulumi.Input<string>;
+    claimDate?: pulumi.Input<string | undefined>;
     /**
      * Serial number of the device the license is assigned to
      */
-    deviceSerial?: pulumi.Input<string>;
+    deviceSerial?: pulumi.Input<string | undefined>;
     /**
      * The duration of the individual license
      */
-    durationInDays?: pulumi.Input<number>;
+    durationInDays?: pulumi.Input<number | undefined>;
     /**
      * The date the license will expire
      */
-    expirationDate?: pulumi.Input<string>;
+    expirationDate?: pulumi.Input<string | undefined>;
     /**
      * The id of the head license this license is queued behind. If there is no head license, it returns nil.
      */
-    headLicenseId?: pulumi.Input<string>;
+    headLicenseId?: pulumi.Input<string | undefined>;
     /**
      * licenseId path parameter. License ID
      */
-    licenseId?: pulumi.Input<string>;
+    licenseId?: pulumi.Input<string | undefined>;
     /**
      * License key
      */
-    licenseKey?: pulumi.Input<string>;
+    licenseKey?: pulumi.Input<string | undefined>;
     /**
      * License type
      */
-    licenseType?: pulumi.Input<string>;
+    licenseType?: pulumi.Input<string | undefined>;
     /**
      * ID of the network the license is assigned to
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Order number
      */
-    orderNumber?: pulumi.Input<string>;
+    orderNumber?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
      */
-    permanentlyQueuedLicenses?: pulumi.Input<pulumi.Input<inputs.organizations.LicensesPermanentlyQueuedLicense>[]>;
+    permanentlyQueuedLicenses?: pulumi.Input<pulumi.Input<inputs.organizations.LicensesPermanentlyQueuedLicense>[] | undefined>;
     /**
      * The number of seats of the license. Only applicable to SM licenses.
      */
-    seatCount?: pulumi.Input<number>;
+    seatCount?: pulumi.Input<number | undefined>;
     /**
      * The state of the license. All queued licenses have a status of *recentlyQueued*.
      */
-    state?: pulumi.Input<string>;
+    state?: pulumi.Input<string | undefined>;
     /**
      * The duration of the license plus all permanently queued licenses associated with it
      */
-    totalDurationInDays?: pulumi.Input<number>;
+    totalDurationInDays?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -256,7 +256,7 @@ export interface LicensesArgs {
     /**
      * Serial number of the device the license is assigned to
      */
-    deviceSerial?: pulumi.Input<string>;
+    deviceSerial?: pulumi.Input<string | undefined>;
     /**
      * licenseId path parameter. License ID
      */

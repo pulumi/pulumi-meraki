@@ -20,9 +20,9 @@ __all__ = ['SamlIdpsArgs', 'SamlIdps']
 class SamlIdpsArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 idp_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_logout_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None):
+                 idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SamlIdps resource.
 
@@ -53,49 +53,49 @@ class SamlIdpsArgs:
 
     @_builtins.property
     @pulumi.getter(name="idpId")
-    def idp_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def idp_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID associated with the SAML Identity Provider (IdP)
         """
         return pulumi.get(self, "idp_id")
 
     @idp_id.setter
-    def idp_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def idp_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "idp_id", value)
 
     @_builtins.property
     @pulumi.getter(name="sloLogoutUrl")
-    def slo_logout_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_logout_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dashboard will redirect users to this URL when they sign out.
         """
         return pulumi.get(self, "slo_logout_url")
 
     @slo_logout_url.setter
-    def slo_logout_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_logout_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_logout_url", value)
 
     @_builtins.property
     @pulumi.getter(name="x509certSha1Fingerprint")
-    def x509cert_sha1_fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def x509cert_sha1_fingerprint(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
         """
         return pulumi.get(self, "x509cert_sha1_fingerprint")
 
     @x509cert_sha1_fingerprint.setter
-    def x509cert_sha1_fingerprint(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def x509cert_sha1_fingerprint(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "x509cert_sha1_fingerprint", value)
 
 
 @pulumi.input_type
 class _SamlIdpsState:
     def __init__(__self__, *,
-                 consumer_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 idp_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_logout_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None):
+                 consumer_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SamlIdps resources.
 
@@ -118,62 +118,62 @@ class _SamlIdpsState:
 
     @_builtins.property
     @pulumi.getter(name="consumerUrl")
-    def consumer_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def consumer_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URL that is consuming SAML Identity Provider (IdP)
         """
         return pulumi.get(self, "consumer_url")
 
     @consumer_url.setter
-    def consumer_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def consumer_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "consumer_url", value)
 
     @_builtins.property
     @pulumi.getter(name="idpId")
-    def idp_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def idp_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID associated with the SAML Identity Provider (IdP)
         """
         return pulumi.get(self, "idp_id")
 
     @idp_id.setter
-    def idp_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def idp_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "idp_id", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="sloLogoutUrl")
-    def slo_logout_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slo_logout_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Dashboard will redirect users to this URL when they sign out.
         """
         return pulumi.get(self, "slo_logout_url")
 
     @slo_logout_url.setter
-    def slo_logout_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slo_logout_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slo_logout_url", value)
 
     @_builtins.property
     @pulumi.getter(name="x509certSha1Fingerprint")
-    def x509cert_sha1_fingerprint(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def x509cert_sha1_fingerprint(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
         """
         return pulumi.get(self, "x509cert_sha1_fingerprint")
 
     @x509cert_sha1_fingerprint.setter
-    def x509cert_sha1_fingerprint(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def x509cert_sha1_fingerprint(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "x509cert_sha1_fingerprint", value)
 
 
@@ -183,10 +183,10 @@ class SamlIdps(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 idp_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_logout_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
+                 idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -258,10 +258,10 @@ class SamlIdps(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 idp_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 slo_logout_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None,
+                 idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -288,11 +288,11 @@ class SamlIdps(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            consumer_url: Optional[pulumi.Input[_builtins.str]] = None,
-            idp_id: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            slo_logout_url: Optional[pulumi.Input[_builtins.str]] = None,
-            x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None) -> 'SamlIdps':
+            consumer_url: pulumi.Input[Optional[_builtins.str]] = None,
+            idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+            x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None) -> 'SamlIdps':
         """
         Get an existing SamlIdps resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

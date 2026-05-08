@@ -157,43 +157,43 @@ export interface MerakiAuthUsersState {
     /**
      * Authorization type for user.
      */
-    accountType?: pulumi.Input<string>;
+    accountType?: pulumi.Input<string | undefined>;
     /**
      * User authorization info
      */
-    authorizations?: pulumi.Input<pulumi.Input<inputs.networks.MerakiAuthUsersAuthorization>[]>;
+    authorizations?: pulumi.Input<pulumi.Input<inputs.networks.MerakiAuthUsersAuthorization>[] | undefined>;
     /**
      * Creation time of the user
      */
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Email address of the user
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Whether or not Meraki should email the password to user. Default is false.
      */
-    emailPasswordToUser?: pulumi.Input<boolean>;
+    emailPasswordToUser?: pulumi.Input<boolean | undefined>;
     /**
      * Whether or not the user is a Dashboard administrator
      */
-    isAdmin?: pulumi.Input<boolean>;
+    isAdmin?: pulumi.Input<boolean | undefined>;
     /**
      * merakiAuthUserId path parameter. Meraki auth user ID
      */
-    merakiAuthUserId?: pulumi.Input<string>;
+    merakiAuthUserId?: pulumi.Input<string | undefined>;
     /**
      * Name of the user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The password for this user account. Only required If the user is not a Dashboard administrator.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -203,31 +203,31 @@ export interface MerakiAuthUsersArgs {
     /**
      * Authorization type for user.
      */
-    accountType?: pulumi.Input<string>;
+    accountType?: pulumi.Input<string | undefined>;
     /**
      * User authorization info
      */
-    authorizations?: pulumi.Input<pulumi.Input<inputs.networks.MerakiAuthUsersAuthorization>[]>;
+    authorizations?: pulumi.Input<pulumi.Input<inputs.networks.MerakiAuthUsersAuthorization>[] | undefined>;
     /**
      * Email address of the user
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Whether or not Meraki should email the password to user. Default is false.
      */
-    emailPasswordToUser?: pulumi.Input<boolean>;
+    emailPasswordToUser?: pulumi.Input<boolean | undefined>;
     /**
      * Whether or not the user is a Dashboard administrator
      */
-    isAdmin?: pulumi.Input<boolean>;
+    isAdmin?: pulumi.Input<boolean | undefined>;
     /**
      * merakiAuthUserId path parameter. Meraki auth user ID
      */
-    merakiAuthUserId?: pulumi.Input<string>;
+    merakiAuthUserId?: pulumi.Input<string | undefined>;
     /**
      * Name of the user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -235,5 +235,5 @@ export interface MerakiAuthUsersArgs {
     /**
      * The password for this user account. Only required If the user is not a Dashboard administrator.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
 }

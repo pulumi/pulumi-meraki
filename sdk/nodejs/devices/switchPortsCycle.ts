@@ -102,12 +102,12 @@ export class SwitchPortsCycle extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SwitchPortsCycle resources.
  */
 export interface SwitchPortsCycleState {
-    item?: pulumi.Input<inputs.devices.SwitchPortsCycleItem>;
-    parameters?: pulumi.Input<inputs.devices.SwitchPortsCycleParameters>;
+    item?: pulumi.Input<inputs.devices.SwitchPortsCycleItem | undefined>;
+    parameters?: pulumi.Input<inputs.devices.SwitchPortsCycleParameters | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

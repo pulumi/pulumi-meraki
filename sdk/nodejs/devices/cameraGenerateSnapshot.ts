@@ -95,11 +95,11 @@ export class CameraGenerateSnapshot extends pulumi.CustomResource {
  * Input properties used for looking up and filtering CameraGenerateSnapshot resources.
  */
 export interface CameraGenerateSnapshotState {
-    parameters?: pulumi.Input<inputs.devices.CameraGenerateSnapshotParameters>;
+    parameters?: pulumi.Input<inputs.devices.CameraGenerateSnapshotParameters | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

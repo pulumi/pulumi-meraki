@@ -23,9 +23,9 @@ class WirelessSsidsTrafficShapingRulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]] = None,
-                 traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]] = None,
+                 traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a WirelessSsidsTrafficShapingRules resource.
 
@@ -72,19 +72,19 @@ class WirelessSsidsTrafficShapingRulesArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultRulesEnabled")
-    def default_rules_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_rules_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         """
         return pulumi.get(self, "default_rules_enabled")
 
     @default_rules_enabled.setter
-    def default_rules_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_rules_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_rules_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]:
         """
         An array of traffic shaping rules. Rules are applied in the order that
         they are specified in. An empty list (or null) means no rules. Note that
@@ -93,30 +93,30 @@ class WirelessSsidsTrafficShapingRulesArgs:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter(name="trafficShapingEnabled")
-    def traffic_shaping_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def traffic_shaping_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether traffic shaping rules are applied to clients on your SSID.
         """
         return pulumi.get(self, "traffic_shaping_enabled")
 
     @traffic_shaping_enabled.setter
-    def traffic_shaping_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def traffic_shaping_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "traffic_shaping_enabled", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsTrafficShapingRulesState:
     def __init__(__self__, *,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]] = None,
-                 traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]] = None,
+                 traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsTrafficShapingRules resources.
 
@@ -141,43 +141,43 @@ class _WirelessSsidsTrafficShapingRulesState:
 
     @_builtins.property
     @pulumi.getter(name="defaultRulesEnabled")
-    def default_rules_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_rules_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         """
         return pulumi.get(self, "default_rules_enabled")
 
     @default_rules_enabled.setter
-    def default_rules_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_rules_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_rules_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]:
         """
         An array of traffic shaping rules. Rules are applied in the order that
         they are specified in. An empty list (or null) means no rules. Note that
@@ -186,19 +186,19 @@ class _WirelessSsidsTrafficShapingRulesState:
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter(name="trafficShapingEnabled")
-    def traffic_shaping_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def traffic_shaping_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether traffic shaping rules are applied to clients on your SSID.
         """
         return pulumi.get(self, "traffic_shaping_enabled")
 
     @traffic_shaping_enabled.setter
-    def traffic_shaping_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def traffic_shaping_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "traffic_shaping_enabled", value)
 
 
@@ -208,11 +208,11 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
-                 traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -319,11 +319,11 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
-                 traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -352,11 +352,11 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_rules_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
-            traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None) -> 'WirelessSsidsTrafficShapingRules':
+            default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+            traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'WirelessSsidsTrafficShapingRules':
         """
         Get an existing WirelessSsidsTrafficShapingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

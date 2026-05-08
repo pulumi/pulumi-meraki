@@ -22,11 +22,11 @@ __all__ = ['AdaptivePolicyPoliciesArgs', 'AdaptivePolicyPolicies']
 class AdaptivePolicyPoliciesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]] = None,
-                 destination_group: Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']] = None,
-                 last_entry_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizations_adaptive_policy_policies_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_group: Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']] = None):
+                 acls: pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]] = None,
+                 destination_group: pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']] = None,
+                 last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_group: pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']] = None):
         """
         The set of arguments for constructing a AdaptivePolicyPolicies resource.
 
@@ -63,77 +63,77 @@ class AdaptivePolicyPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def acls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]:
+    def acls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]:
         """
         An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
         """
         return pulumi.get(self, "acls")
 
     @acls.setter
-    def acls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]):
+    def acls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]):
         pulumi.set(self, "acls", value)
 
     @_builtins.property
     @pulumi.getter(name="destinationGroup")
-    def destination_group(self) -> Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']]:
+    def destination_group(self) -> pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']]:
         """
         The destination adaptive policy group (requires one unique attribute)
         """
         return pulumi.get(self, "destination_group")
 
     @destination_group.setter
-    def destination_group(self, value: Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']]):
+    def destination_group(self, value: pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']]):
         pulumi.set(self, "destination_group", value)
 
     @_builtins.property
     @pulumi.getter(name="lastEntryRule")
-    def last_entry_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_entry_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The rule to apply if there is no matching ACL (default: "default")
         """
         return pulumi.get(self, "last_entry_rule")
 
     @last_entry_rule.setter
-    def last_entry_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_entry_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_entry_rule", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationsAdaptivePolicyPoliciesId")
-    def organizations_adaptive_policy_policies_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organizations_adaptive_policy_policies_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         id path parameter.
         """
         return pulumi.get(self, "organizations_adaptive_policy_policies_id")
 
     @organizations_adaptive_policy_policies_id.setter
-    def organizations_adaptive_policy_policies_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organizations_adaptive_policy_policies_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organizations_adaptive_policy_policies_id", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceGroup")
-    def source_group(self) -> Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']]:
+    def source_group(self) -> pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']]:
         """
         The source adaptive policy group (requires one unique attribute)
         """
         return pulumi.get(self, "source_group")
 
     @source_group.setter
-    def source_group(self, value: Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']]):
+    def source_group(self, value: pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']]):
         pulumi.set(self, "source_group", value)
 
 
 @pulumi.input_type
 class _AdaptivePolicyPoliciesState:
     def __init__(__self__, *,
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]] = None,
-                 adaptive_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 created_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_group: Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']] = None,
-                 last_entry_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizations_adaptive_policy_policies_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_group: Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']] = None,
-                 updated_at: Optional[pulumi.Input[_builtins.str]] = None):
+                 acls: pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]] = None,
+                 adaptive_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 created_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 destination_group: pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']] = None,
+                 last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_group: pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']] = None,
+                 updated_at: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicyPolicies resources.
 
@@ -165,101 +165,101 @@ class _AdaptivePolicyPoliciesState:
 
     @_builtins.property
     @pulumi.getter
-    def acls(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]:
+    def acls(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]:
         """
         An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
         """
         return pulumi.get(self, "acls")
 
     @acls.setter
-    def acls(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]):
+    def acls(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]]]):
         pulumi.set(self, "acls", value)
 
     @_builtins.property
     @pulumi.getter(name="adaptivePolicyId")
-    def adaptive_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def adaptive_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "adaptive_policy_id")
 
     @adaptive_policy_id.setter
-    def adaptive_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def adaptive_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "adaptive_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="createdAt")
-    def created_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "created_at")
 
     @created_at.setter
-    def created_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_at", value)
 
     @_builtins.property
     @pulumi.getter(name="destinationGroup")
-    def destination_group(self) -> Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']]:
+    def destination_group(self) -> pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']]:
         """
         The destination adaptive policy group (requires one unique attribute)
         """
         return pulumi.get(self, "destination_group")
 
     @destination_group.setter
-    def destination_group(self, value: Optional[pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs']]):
+    def destination_group(self, value: pulumi.Input[Optional['AdaptivePolicyPoliciesDestinationGroupArgs']]):
         pulumi.set(self, "destination_group", value)
 
     @_builtins.property
     @pulumi.getter(name="lastEntryRule")
-    def last_entry_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_entry_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The rule to apply if there is no matching ACL (default: "default")
         """
         return pulumi.get(self, "last_entry_rule")
 
     @last_entry_rule.setter
-    def last_entry_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_entry_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_entry_rule", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationsAdaptivePolicyPoliciesId")
-    def organizations_adaptive_policy_policies_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organizations_adaptive_policy_policies_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         id path parameter.
         """
         return pulumi.get(self, "organizations_adaptive_policy_policies_id")
 
     @organizations_adaptive_policy_policies_id.setter
-    def organizations_adaptive_policy_policies_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organizations_adaptive_policy_policies_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organizations_adaptive_policy_policies_id", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceGroup")
-    def source_group(self) -> Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']]:
+    def source_group(self) -> pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']]:
         """
         The source adaptive policy group (requires one unique attribute)
         """
         return pulumi.get(self, "source_group")
 
     @source_group.setter
-    def source_group(self, value: Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']]):
+    def source_group(self, value: pulumi.Input[Optional['AdaptivePolicyPoliciesSourceGroupArgs']]):
         pulumi.set(self, "source_group", value)
 
     @_builtins.property
     @pulumi.getter(name="updatedAt")
-    def updated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def updated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "updated_at")
 
     @updated_at.setter
-    def updated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def updated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "updated_at", value)
 
 
@@ -269,12 +269,12 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
-                 destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
-                 last_entry_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizations_adaptive_policy_policies_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
+                 acls: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
+                 destination_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
+                 last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -374,12 +374,12 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
-                 destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
-                 last_entry_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organizations_adaptive_policy_policies_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
+                 acls: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
+                 destination_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
+                 last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -410,15 +410,15 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
-            adaptive_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            created_at: Optional[pulumi.Input[_builtins.str]] = None,
-            destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
-            last_entry_rule: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            organizations_adaptive_policy_policies_id: Optional[pulumi.Input[_builtins.str]] = None,
-            source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
-            updated_at: Optional[pulumi.Input[_builtins.str]] = None) -> 'AdaptivePolicyPolicies':
+            acls: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
+            adaptive_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
+            last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+            source_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> 'AdaptivePolicyPolicies':
         """
         Get an existing AdaptivePolicyPolicies resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

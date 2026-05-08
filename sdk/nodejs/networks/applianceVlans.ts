@@ -243,91 +243,91 @@ export interface ApplianceVlansState {
     /**
      * The local IP of the appliance on the VLAN
      */
-    applianceIp?: pulumi.Input<string>;
+    applianceIp?: pulumi.Input<string | undefined>;
     /**
      * CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
      */
-    cidr?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
     /**
      * DHCP boot option for boot filename
      */
-    dhcpBootFilename?: pulumi.Input<string>;
+    dhcpBootFilename?: pulumi.Input<string | undefined>;
     /**
      * DHCP boot option to direct boot clients to the server to load the boot file from
      */
-    dhcpBootNextServer?: pulumi.Input<string>;
+    dhcpBootNextServer?: pulumi.Input<string | undefined>;
     /**
      * Use DHCP boot options specified in other properties
      */
-    dhcpBootOptionsEnabled?: pulumi.Input<boolean>;
+    dhcpBootOptionsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
      */
-    dhcpHandling?: pulumi.Input<string>;
+    dhcpHandling?: pulumi.Input<string | undefined>;
     /**
      * The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
      */
-    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansDhcpOption>[]>;
+    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansDhcpOption>[] | undefined>;
     /**
      * The IPs of the DHCP servers that DHCP requests should be relayed to
      */
-    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
      */
-    dnsNameservers?: pulumi.Input<string>;
+    dnsNameservers?: pulumi.Input<string | undefined>;
     /**
      * The id of the desired group policy to apply to the VLAN
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The interface ID of the VLAN
      */
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * IPv6 configuration on the VLAN
      */
-    ipv6?: pulumi.Input<inputs.networks.ApplianceVlansIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.ApplianceVlansIpv6 | undefined>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceVlansMandatoryDhcp>;
+    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceVlansMandatoryDhcp | undefined>;
     /**
      * Mask used for the subnet of all bound to the template networks. Applicable only for template network.
      */
-    mask?: pulumi.Input<number>;
+    mask?: pulumi.Input<number | undefined>;
     /**
      * The name of the VLAN
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The DHCP reserved IP ranges on the VLAN
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansReservedIpRange>[] | undefined>;
     /**
      * The subnet of the VLAN
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * Type of subnetting of the VLAN. Applicable only for template network.
      */
-    templateVlanType?: pulumi.Input<string>;
+    templateVlanType?: pulumi.Input<string | undefined>;
     /**
      * The VLAN ID of the VLAN
      */
-    vlanId?: pulumi.Input<string>;
+    vlanId?: pulumi.Input<string | undefined>;
     /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */
-    vpnNatSubnet?: pulumi.Input<string>;
+    vpnNatSubnet?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -337,63 +337,63 @@ export interface ApplianceVlansArgs {
     /**
      * The local IP of the appliance on the VLAN
      */
-    applianceIp?: pulumi.Input<string>;
+    applianceIp?: pulumi.Input<string | undefined>;
     /**
      * CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
      */
-    cidr?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
     /**
      * DHCP boot option for boot filename
      */
-    dhcpBootFilename?: pulumi.Input<string>;
+    dhcpBootFilename?: pulumi.Input<string | undefined>;
     /**
      * DHCP boot option to direct boot clients to the server to load the boot file from
      */
-    dhcpBootNextServer?: pulumi.Input<string>;
+    dhcpBootNextServer?: pulumi.Input<string | undefined>;
     /**
      * Use DHCP boot options specified in other properties
      */
-    dhcpBootOptionsEnabled?: pulumi.Input<boolean>;
+    dhcpBootOptionsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
      */
-    dhcpHandling?: pulumi.Input<string>;
+    dhcpHandling?: pulumi.Input<string | undefined>;
     /**
      * The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
      */
-    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansDhcpOption>[]>;
+    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansDhcpOption>[] | undefined>;
     /**
      * The IPs of the DHCP servers that DHCP requests should be relayed to
      */
-    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
      */
-    dnsNameservers?: pulumi.Input<string>;
+    dnsNameservers?: pulumi.Input<string | undefined>;
     /**
      * The id of the desired group policy to apply to the VLAN
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * IPv6 configuration on the VLAN
      */
-    ipv6?: pulumi.Input<inputs.networks.ApplianceVlansIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.ApplianceVlansIpv6 | undefined>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceVlansMandatoryDhcp>;
+    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceVlansMandatoryDhcp | undefined>;
     /**
      * Mask used for the subnet of all bound to the template networks. Applicable only for template network.
      */
-    mask?: pulumi.Input<number>;
+    mask?: pulumi.Input<number | undefined>;
     /**
      * The name of the VLAN
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -401,15 +401,15 @@ export interface ApplianceVlansArgs {
     /**
      * The DHCP reserved IP ranges on the VLAN
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVlansReservedIpRange>[] | undefined>;
     /**
      * The subnet of the VLAN
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * Type of subnetting of the VLAN. Applicable only for template network.
      */
-    templateVlanType?: pulumi.Input<string>;
+    templateVlanType?: pulumi.Input<string | undefined>;
     /**
      * The VLAN ID of the VLAN
      */
@@ -417,5 +417,5 @@ export interface ApplianceVlansArgs {
     /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */
-    vpnNatSubnet?: pulumi.Input<string>;
+    vpnNatSubnet?: pulumi.Input<string | undefined>;
 }

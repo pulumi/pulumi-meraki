@@ -179,19 +179,19 @@ export interface FirmwareUpgradesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The network devices to be updated
      */
-    products?: pulumi.Input<inputs.networks.FirmwareUpgradesProducts>;
+    products?: pulumi.Input<inputs.networks.FirmwareUpgradesProducts | undefined>;
     /**
      * The timezone for the network
      */
-    timezone?: pulumi.Input<string>;
+    timezone?: pulumi.Input<string | undefined>;
     /**
      * Upgrade window for devices in network
      */
-    upgradeWindow?: pulumi.Input<inputs.networks.FirmwareUpgradesUpgradeWindow>;
+    upgradeWindow?: pulumi.Input<inputs.networks.FirmwareUpgradesUpgradeWindow | undefined>;
 }
 
 /**
@@ -205,13 +205,13 @@ export interface FirmwareUpgradesArgs {
     /**
      * The network devices to be updated
      */
-    products?: pulumi.Input<inputs.networks.FirmwareUpgradesProducts>;
+    products?: pulumi.Input<inputs.networks.FirmwareUpgradesProducts | undefined>;
     /**
      * The timezone for the network
      */
-    timezone?: pulumi.Input<string>;
+    timezone?: pulumi.Input<string | undefined>;
     /**
      * Upgrade window for devices in network
      */
-    upgradeWindow?: pulumi.Input<inputs.networks.FirmwareUpgradesUpgradeWindow>;
+    upgradeWindow?: pulumi.Input<inputs.networks.FirmwareUpgradesUpgradeWindow | undefined>;
 }

@@ -22,9 +22,9 @@ __all__ = ['WirelessRadioSettingsArgs', 'WirelessRadioSettings']
 class WirelessRadioSettingsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 five_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a WirelessRadioSettings resource.
 
@@ -55,48 +55,48 @@ class WirelessRadioSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']]:
         """
         Manual radio settings for 5 GHz.
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']]:
         """
         Manual radio settings for 2.4 GHz.
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
 @pulumi.input_type
 class _WirelessRadioSettingsState:
     def __init__(__self__, *,
-                 five_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessRadioSettings resources.
 
@@ -116,50 +116,50 @@ class _WirelessRadioSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']]:
         """
         Manual radio settings for 5 GHz.
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['WirelessRadioSettingsFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']]:
         """
         Manual radio settings for 2.4 GHz.
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['WirelessRadioSettingsTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
@@ -169,10 +169,10 @@ class WirelessRadioSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -260,10 +260,10 @@ class WirelessRadioSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -289,10 +289,10 @@ class WirelessRadioSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            five_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-            rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            two_four_ghz_settings: Optional[pulumi.Input[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None) -> 'WirelessRadioSettings':
+            five_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict']]] = None) -> 'WirelessRadioSettings':
         """
         Get an existing WirelessRadioSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -23,9 +23,9 @@ class VlanProfilesArgs:
     def __init__(__self__, *,
                  iname: pulumi.Input[_builtins.str],
                  network_id: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_groups: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]] = None,
-                 vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
         """
         The set of arguments for constructing a VlanProfiles resource.
 
@@ -70,50 +70,50 @@ class VlanProfilesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the profile, string length must be from 1 to 255 characters
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanGroups")
-    def vlan_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]:
+    def vlan_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]:
         """
         An array of named VLANs
         """
         return pulumi.get(self, "vlan_groups")
 
     @vlan_groups.setter
-    def vlan_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]):
+    def vlan_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]):
         pulumi.set(self, "vlan_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanNames")
-    def vlan_names(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]:
+    def vlan_names(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]:
         """
         An array of named VLANs
         """
         return pulumi.get(self, "vlan_names")
 
     @vlan_names.setter
-    def vlan_names(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]):
+    def vlan_names(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]):
         pulumi.set(self, "vlan_names", value)
 
 
 @pulumi.input_type
 class _VlanProfilesState:
     def __init__(__self__, *,
-                 iname: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_groups: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]] = None,
-                 vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
+                 iname: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
         """
         Input properties used for looking up and filtering VlanProfiles resources.
 
@@ -139,74 +139,74 @@ class _VlanProfilesState:
 
     @_builtins.property
     @pulumi.getter
-    def iname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def iname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IName of the VLAN profile
         """
         return pulumi.get(self, "iname")
 
     @iname.setter
-    def iname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def iname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "iname", value)
 
     @_builtins.property
     @pulumi.getter(name="isDefault")
-    def is_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned
         """
         return pulumi.get(self, "is_default")
 
     @is_default.setter
-    def is_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the profile, string length must be from 1 to 255 characters
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanGroups")
-    def vlan_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]:
+    def vlan_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]:
         """
         An array of named VLANs
         """
         return pulumi.get(self, "vlan_groups")
 
     @vlan_groups.setter
-    def vlan_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]):
+    def vlan_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanGroupArgs']]]]):
         pulumi.set(self, "vlan_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanNames")
-    def vlan_names(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]:
+    def vlan_names(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]:
         """
         An array of named VLANs
         """
         return pulumi.get(self, "vlan_names")
 
     @vlan_names.setter
-    def vlan_names(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]):
+    def vlan_names(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]]):
         pulumi.set(self, "vlan_names", value)
 
 
@@ -216,11 +216,11 @@ class VlanProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 iname: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-                 vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
+                 iname: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -315,11 +315,11 @@ class VlanProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 iname: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-                 vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
+                 iname: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -349,12 +349,12 @@ class VlanProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            iname: Optional[pulumi.Input[_builtins.str]] = None,
-            is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-            vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None) -> 'VlanProfiles':
+            iname: pulumi.Input[Optional[_builtins.str]] = None,
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
+            vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None) -> 'VlanProfiles':
         """
         Get an existing VlanProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

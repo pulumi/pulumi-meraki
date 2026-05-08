@@ -128,11 +128,11 @@ export interface GetSmUsersOutputArgs {
     /**
      * emails query parameter. Filter users by email(s).
      */
-    emails?: pulumi.Input<pulumi.Input<string>[]>;
+    emails?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * ids query parameter. Filter users by id(s).
      */
-    ids?: pulumi.Input<pulumi.Input<string>[]>;
+    ids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -140,9 +140,9 @@ export interface GetSmUsersOutputArgs {
     /**
      * scope query parameter. Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags.
      */
-    scopes?: pulumi.Input<pulumi.Input<string>[]>;
+    scopes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * usernames query parameter. Filter users by username(s).
      */
-    usernames?: pulumi.Input<pulumi.Input<string>[]>;
+    usernames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

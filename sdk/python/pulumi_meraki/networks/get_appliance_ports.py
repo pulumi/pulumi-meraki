@@ -117,8 +117,8 @@ def get_appliance_ports(network_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         port_id=pulumi.get(__ret__, 'port_id'))
-def get_appliance_ports_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                               port_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_appliance_ports_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                               port_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppliancePortsResult]:
     """
     ## Example Usage

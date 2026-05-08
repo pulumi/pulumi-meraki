@@ -107,16 +107,16 @@ export class SwitchStacksRemove extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SwitchStacksRemove resources.
  */
 export interface SwitchStacksRemoveState {
-    item?: pulumi.Input<inputs.networks.SwitchStacksRemoveItem>;
+    item?: pulumi.Input<inputs.networks.SwitchStacksRemoveItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SwitchStacksRemoveParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SwitchStacksRemoveParameters | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }
 
 /**

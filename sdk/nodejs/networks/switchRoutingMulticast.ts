@@ -128,16 +128,16 @@ export interface SwitchRoutingMulticastState {
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
      *   multicast traffic settings are enabled by default.
      */
-    defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings>;
+    defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
      *   An empty array will clear the multicast settings.
      */
-    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[]>;
+    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[] | undefined>;
 }
 
 /**
@@ -148,7 +148,7 @@ export interface SwitchRoutingMulticastArgs {
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
      *   multicast traffic settings are enabled by default.
      */
-    defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings>;
+    defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -157,5 +157,5 @@ export interface SwitchRoutingMulticastArgs {
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
      *   An empty array will clear the multicast settings.
      */
-    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[]>;
+    overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[] | undefined>;
 }

@@ -113,8 +113,8 @@ def get_live_tools_arp_table(arp_table_id: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_live_tools_arp_table_output(arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                    serial: Optional[pulumi.Input[_builtins.str]] = None,
+def get_live_tools_arp_table_output(arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                    serial: pulumi.Input[Optional[_builtins.str]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsArpTableResult]:
     """
     ## Example Usage

@@ -117,8 +117,8 @@ def get_appliance_prefixes_delegated_statics(network_id: Optional[_builtins.str]
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         static_delegated_prefix_id=pulumi.get(__ret__, 'static_delegated_prefix_id'))
-def get_appliance_prefixes_delegated_statics_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    static_delegated_prefix_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_appliance_prefixes_delegated_statics_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    static_delegated_prefix_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppliancePrefixesDelegatedStaticsResult]:
     """
     ## Example Usage

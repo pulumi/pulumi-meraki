@@ -134,27 +134,27 @@ export interface FirmwareUpgradesStagedGroupsState {
     /**
      * The devices and Switch Stacks assigned to the Group
      */
-    assignedDevices?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices>;
+    assignedDevices?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices | undefined>;
     /**
      * Description of the Staged Upgrade Group
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Id of staged upgrade group
      */
-    groupId?: pulumi.Input<string>;
+    groupId?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
      */
-    isDefault?: pulumi.Input<boolean>;
+    isDefault?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the Staged Upgrade Group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -164,23 +164,23 @@ export interface FirmwareUpgradesStagedGroupsArgs {
     /**
      * The devices and Switch Stacks assigned to the Group
      */
-    assignedDevices?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices>;
+    assignedDevices?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices | undefined>;
     /**
      * Description of the Staged Upgrade Group
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Id of staged upgrade group
      */
-    groupId?: pulumi.Input<string>;
+    groupId?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
      */
-    isDefault?: pulumi.Input<boolean>;
+    isDefault?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the Staged Upgrade Group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */

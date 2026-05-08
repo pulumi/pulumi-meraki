@@ -152,47 +152,47 @@ export interface CameraQualityRetentionProfilesState {
     /**
      * Whether or not to record audio. Can be either true or false. Defaults to false.
      */
-    audioRecordingEnabled?: pulumi.Input<boolean>;
+    audioRecordingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
      */
-    cloudArchiveEnabled?: pulumi.Input<boolean>;
+    cloudArchiveEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
      */
-    maxRetentionDays?: pulumi.Input<number>;
+    maxRetentionDays?: pulumi.Input<number | undefined>;
     /**
      * Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
      */
-    motionBasedRetentionEnabled?: pulumi.Input<boolean>;
+    motionBasedRetentionEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
      */
-    motionDetectorVersion?: pulumi.Input<number>;
+    motionDetectorVersion?: pulumi.Input<number | undefined>;
     /**
      * The name of the new profile. Must be unique. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * qualityRetentionProfileId path parameter. Quality retention profile ID
      */
-    qualityRetentionProfileId?: pulumi.Input<string>;
+    qualityRetentionProfileId?: pulumi.Input<string | undefined>;
     /**
      * Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
      */
-    restrictedBandwidthModeEnabled?: pulumi.Input<boolean>;
+    restrictedBandwidthModeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Schedule for which this camera will record video, or 'null' to always record.
      */
-    scheduleId?: pulumi.Input<string>;
+    scheduleId?: pulumi.Input<string | undefined>;
     /**
      * Video quality and resolution settings for all the camera models.
      */
-    videoSettings?: pulumi.Input<inputs.networks.CameraQualityRetentionProfilesVideoSettings>;
+    videoSettings?: pulumi.Input<inputs.networks.CameraQualityRetentionProfilesVideoSettings | undefined>;
 }
 
 /**
@@ -202,27 +202,27 @@ export interface CameraQualityRetentionProfilesArgs {
     /**
      * Whether or not to record audio. Can be either true or false. Defaults to false.
      */
-    audioRecordingEnabled?: pulumi.Input<boolean>;
+    audioRecordingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
      */
-    cloudArchiveEnabled?: pulumi.Input<boolean>;
+    cloudArchiveEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
      */
-    maxRetentionDays?: pulumi.Input<number>;
+    maxRetentionDays?: pulumi.Input<number | undefined>;
     /**
      * Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
      */
-    motionBasedRetentionEnabled?: pulumi.Input<boolean>;
+    motionBasedRetentionEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
      */
-    motionDetectorVersion?: pulumi.Input<number>;
+    motionDetectorVersion?: pulumi.Input<number | undefined>;
     /**
      * The name of the new profile. Must be unique. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -230,17 +230,17 @@ export interface CameraQualityRetentionProfilesArgs {
     /**
      * qualityRetentionProfileId path parameter. Quality retention profile ID
      */
-    qualityRetentionProfileId?: pulumi.Input<string>;
+    qualityRetentionProfileId?: pulumi.Input<string | undefined>;
     /**
      * Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
      */
-    restrictedBandwidthModeEnabled?: pulumi.Input<boolean>;
+    restrictedBandwidthModeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Schedule for which this camera will record video, or 'null' to always record.
      */
-    scheduleId?: pulumi.Input<string>;
+    scheduleId?: pulumi.Input<string | undefined>;
     /**
      * Video quality and resolution settings for all the camera models.
      */
-    videoSettings?: pulumi.Input<inputs.networks.CameraQualityRetentionProfilesVideoSettings>;
+    videoSettings?: pulumi.Input<inputs.networks.CameraQualityRetentionProfilesVideoSettings | undefined>;
 }

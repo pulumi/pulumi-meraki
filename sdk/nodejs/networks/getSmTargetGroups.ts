@@ -83,13 +83,13 @@ export interface GetSmTargetGroupsOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * targetGroupId path parameter. Target group ID
      */
-    targetGroupId?: pulumi.Input<string>;
+    targetGroupId?: pulumi.Input<string | undefined>;
     /**
      * withDetails query parameter. Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
      */
-    withDetails?: pulumi.Input<boolean>;
+    withDetails?: pulumi.Input<boolean | undefined>;
 }

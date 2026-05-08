@@ -22,19 +22,19 @@ __all__ = ['LoginSecurityArgs', 'LoginSecurity']
 class LoginSecurityArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 account_lockout_attempts: Optional[pulumi.Input[_builtins.int]] = None,
-                 api_authentication: Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']] = None,
-                 enforce_account_lockout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_different_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_idle_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_login_ip_ranges: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_password_expiration: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_strong_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_two_factor_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 idle_timeout_minutes: Optional[pulumi.Input[_builtins.int]] = None,
-                 login_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 num_different_passwords: Optional[pulumi.Input[_builtins.int]] = None,
-                 password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None):
+                 account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+                 api_authentication: pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']] = None,
+                 enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+                 login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+                 password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a LoginSecurity resource.
 
@@ -95,178 +95,178 @@ class LoginSecurityArgs:
 
     @_builtins.property
     @pulumi.getter(name="accountLockoutAttempts")
-    def account_lockout_attempts(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def account_lockout_attempts(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of consecutive failed login attempts after which users' accounts will be locked.
         """
         return pulumi.get(self, "account_lockout_attempts")
 
     @account_lockout_attempts.setter
-    def account_lockout_attempts(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def account_lockout_attempts(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "account_lockout_attempts", value)
 
     @_builtins.property
     @pulumi.getter(name="apiAuthentication")
-    def api_authentication(self) -> Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']]:
+    def api_authentication(self) -> pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']]:
         """
         Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
         """
         return pulumi.get(self, "api_authentication")
 
     @api_authentication.setter
-    def api_authentication(self, value: Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']]):
+    def api_authentication(self, value: pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']]):
         pulumi.set(self, "api_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceAccountLockout")
-    def enforce_account_lockout(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_account_lockout(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts.
         """
         return pulumi.get(self, "enforce_account_lockout")
 
     @enforce_account_lockout.setter
-    def enforce_account_lockout(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_account_lockout(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_account_lockout", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceDifferentPasswords")
-    def enforce_different_passwords(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_different_passwords(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords.
         """
         return pulumi.get(self, "enforce_different_passwords")
 
     @enforce_different_passwords.setter
-    def enforce_different_passwords(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_different_passwords(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_different_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceIdleTimeout")
-    def enforce_idle_timeout(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_idle_timeout(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users will be logged out after being idle for the specified number of minutes.
         """
         return pulumi.get(self, "enforce_idle_timeout")
 
     @enforce_idle_timeout.setter
-    def enforce_idle_timeout(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_idle_timeout(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceLoginIpRanges")
-    def enforce_login_ip_ranges(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_login_ip_ranges(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses.
         """
         return pulumi.get(self, "enforce_login_ip_ranges")
 
     @enforce_login_ip_ranges.setter
-    def enforce_login_ip_ranges(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_login_ip_ranges(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_login_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="enforcePasswordExpiration")
-    def enforce_password_expiration(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_password_expiration(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users are forced to change their password every X number of days.
         """
         return pulumi.get(self, "enforce_password_expiration")
 
     @enforce_password_expiration.setter
-    def enforce_password_expiration(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_password_expiration(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_password_expiration", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceStrongPasswords")
-    def enforce_strong_passwords(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_strong_passwords(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users will be forced to choose strong passwords for their accounts. Strong passwords are at least 8 characters that contain 3 of the following: number, uppercase letter, lowercase letter, and symbol
         """
         return pulumi.get(self, "enforce_strong_passwords")
 
     @enforce_strong_passwords.setter
-    def enforce_strong_passwords(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_strong_passwords(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_strong_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceTwoFactorAuth")
-    def enforce_two_factor_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_two_factor_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard. This code will be sent to their mobile phone via SMS, or can be generated by the authenticator application.
         """
         return pulumi.get(self, "enforce_two_factor_auth")
 
     @enforce_two_factor_auth.setter
-    def enforce_two_factor_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_two_factor_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_two_factor_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeoutMinutes")
-    def idle_timeout_minutes(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timeout_minutes(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of minutes users can remain idle before being logged out of their accounts.
         """
         return pulumi.get(self, "idle_timeout_minutes")
 
     @idle_timeout_minutes.setter
-    def idle_timeout_minutes(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timeout_minutes(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timeout_minutes", value)
 
     @_builtins.property
     @pulumi.getter(name="loginIpRanges")
-    def login_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def login_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
         """
         return pulumi.get(self, "login_ip_ranges")
 
     @login_ip_ranges.setter
-    def login_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def login_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "login_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="numDifferentPasswords")
-    def num_different_passwords(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def num_different_passwords(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of recent passwords that new password must be distinct from.
         """
         return pulumi.get(self, "num_different_passwords")
 
     @num_different_passwords.setter
-    def num_different_passwords(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def num_different_passwords(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "num_different_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordExpirationDays")
-    def password_expiration_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def password_expiration_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of days after which users will be forced to change their password.
         """
         return pulumi.get(self, "password_expiration_days")
 
     @password_expiration_days.setter
-    def password_expiration_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def password_expiration_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "password_expiration_days", value)
 
 
 @pulumi.input_type
 class _LoginSecurityState:
     def __init__(__self__, *,
-                 account_lockout_attempts: Optional[pulumi.Input[_builtins.int]] = None,
-                 api_authentication: Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']] = None,
-                 enforce_account_lockout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_different_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_idle_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_login_ip_ranges: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_password_expiration: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_strong_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_two_factor_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 idle_timeout_minutes: Optional[pulumi.Input[_builtins.int]] = None,
-                 login_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 num_different_passwords: Optional[pulumi.Input[_builtins.int]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None):
+                 account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+                 api_authentication: pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']] = None,
+                 enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+                 login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering LoginSecurity resources.
 
@@ -316,170 +316,170 @@ class _LoginSecurityState:
 
     @_builtins.property
     @pulumi.getter(name="accountLockoutAttempts")
-    def account_lockout_attempts(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def account_lockout_attempts(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of consecutive failed login attempts after which users' accounts will be locked.
         """
         return pulumi.get(self, "account_lockout_attempts")
 
     @account_lockout_attempts.setter
-    def account_lockout_attempts(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def account_lockout_attempts(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "account_lockout_attempts", value)
 
     @_builtins.property
     @pulumi.getter(name="apiAuthentication")
-    def api_authentication(self) -> Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']]:
+    def api_authentication(self) -> pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']]:
         """
         Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
         """
         return pulumi.get(self, "api_authentication")
 
     @api_authentication.setter
-    def api_authentication(self, value: Optional[pulumi.Input['LoginSecurityApiAuthenticationArgs']]):
+    def api_authentication(self, value: pulumi.Input[Optional['LoginSecurityApiAuthenticationArgs']]):
         pulumi.set(self, "api_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceAccountLockout")
-    def enforce_account_lockout(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_account_lockout(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts.
         """
         return pulumi.get(self, "enforce_account_lockout")
 
     @enforce_account_lockout.setter
-    def enforce_account_lockout(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_account_lockout(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_account_lockout", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceDifferentPasswords")
-    def enforce_different_passwords(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_different_passwords(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords.
         """
         return pulumi.get(self, "enforce_different_passwords")
 
     @enforce_different_passwords.setter
-    def enforce_different_passwords(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_different_passwords(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_different_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceIdleTimeout")
-    def enforce_idle_timeout(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_idle_timeout(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users will be logged out after being idle for the specified number of minutes.
         """
         return pulumi.get(self, "enforce_idle_timeout")
 
     @enforce_idle_timeout.setter
-    def enforce_idle_timeout(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_idle_timeout(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceLoginIpRanges")
-    def enforce_login_ip_ranges(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_login_ip_ranges(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses.
         """
         return pulumi.get(self, "enforce_login_ip_ranges")
 
     @enforce_login_ip_ranges.setter
-    def enforce_login_ip_ranges(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_login_ip_ranges(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_login_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="enforcePasswordExpiration")
-    def enforce_password_expiration(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_password_expiration(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users are forced to change their password every X number of days.
         """
         return pulumi.get(self, "enforce_password_expiration")
 
     @enforce_password_expiration.setter
-    def enforce_password_expiration(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_password_expiration(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_password_expiration", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceStrongPasswords")
-    def enforce_strong_passwords(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_strong_passwords(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users will be forced to choose strong passwords for their accounts. Strong passwords are at least 8 characters that contain 3 of the following: number, uppercase letter, lowercase letter, and symbol
         """
         return pulumi.get(self, "enforce_strong_passwords")
 
     @enforce_strong_passwords.setter
-    def enforce_strong_passwords(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_strong_passwords(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_strong_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="enforceTwoFactorAuth")
-    def enforce_two_factor_auth(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enforce_two_factor_auth(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard. This code will be sent to their mobile phone via SMS, or can be generated by the authenticator application.
         """
         return pulumi.get(self, "enforce_two_factor_auth")
 
     @enforce_two_factor_auth.setter
-    def enforce_two_factor_auth(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enforce_two_factor_auth(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enforce_two_factor_auth", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeoutMinutes")
-    def idle_timeout_minutes(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timeout_minutes(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of minutes users can remain idle before being logged out of their accounts.
         """
         return pulumi.get(self, "idle_timeout_minutes")
 
     @idle_timeout_minutes.setter
-    def idle_timeout_minutes(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timeout_minutes(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timeout_minutes", value)
 
     @_builtins.property
     @pulumi.getter(name="loginIpRanges")
-    def login_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def login_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
         """
         return pulumi.get(self, "login_ip_ranges")
 
     @login_ip_ranges.setter
-    def login_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def login_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "login_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="numDifferentPasswords")
-    def num_different_passwords(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def num_different_passwords(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of recent passwords that new password must be distinct from.
         """
         return pulumi.get(self, "num_different_passwords")
 
     @num_different_passwords.setter
-    def num_different_passwords(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def num_different_passwords(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "num_different_passwords", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordExpirationDays")
-    def password_expiration_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def password_expiration_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of days after which users will be forced to change their password.
         """
         return pulumi.get(self, "password_expiration_days")
 
     @password_expiration_days.setter
-    def password_expiration_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def password_expiration_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "password_expiration_days", value)
 
 
@@ -489,20 +489,20 @@ class LoginSecurity(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_lockout_attempts: Optional[pulumi.Input[_builtins.int]] = None,
-                 api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
-                 enforce_account_lockout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_different_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_idle_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_login_ip_ranges: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_password_expiration: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_strong_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_two_factor_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 idle_timeout_minutes: Optional[pulumi.Input[_builtins.int]] = None,
-                 login_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 num_different_passwords: Optional[pulumi.Input[_builtins.int]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None,
+                 account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+                 api_authentication: pulumi.Input[Optional[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
+                 enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+                 login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -628,20 +628,20 @@ class LoginSecurity(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_lockout_attempts: Optional[pulumi.Input[_builtins.int]] = None,
-                 api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
-                 enforce_account_lockout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_different_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_idle_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_login_ip_ranges: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_password_expiration: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_strong_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enforce_two_factor_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-                 idle_timeout_minutes: Optional[pulumi.Input[_builtins.int]] = None,
-                 login_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 num_different_passwords: Optional[pulumi.Input[_builtins.int]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None,
+                 account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+                 api_authentication: pulumi.Input[Optional[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
+                 enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+                 idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+                 login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -677,20 +677,20 @@ class LoginSecurity(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            account_lockout_attempts: Optional[pulumi.Input[_builtins.int]] = None,
-            api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
-            enforce_account_lockout: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_different_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_idle_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_login_ip_ranges: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_password_expiration: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_strong_passwords: Optional[pulumi.Input[_builtins.bool]] = None,
-            enforce_two_factor_auth: Optional[pulumi.Input[_builtins.bool]] = None,
-            idle_timeout_minutes: Optional[pulumi.Input[_builtins.int]] = None,
-            login_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            num_different_passwords: Optional[pulumi.Input[_builtins.int]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None) -> 'LoginSecurity':
+            account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+            api_authentication: pulumi.Input[Optional[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
+            enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+            login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None) -> 'LoginSecurity':
         """
         Get an existing LoginSecurity resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

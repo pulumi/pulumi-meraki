@@ -133,9 +133,9 @@ def get_action_batches(action_batch_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         status=pulumi.get(__ret__, 'status'))
-def get_action_batches_output(action_batch_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              status: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_action_batches_output(action_batch_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              status: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetActionBatchesResult]:
     """
     ## Example Usage

@@ -140,29 +140,29 @@ export interface SwitchDhcpServerPolicyState {
     /**
      * Email alert settings for DHCP servers
      */
-    alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts>;
+    alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts | undefined>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
      *   to block.An empty array will clear the entries.
      */
-    allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Dynamic ARP Inspection settings
      */
-    arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection>;
+    arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection | undefined>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
      *   to allow.An empty array will clear the entries.
      */
-    blockedServers?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * 'allow' or 'block' new DHCP servers. Default value is 'allow'.
      */
-    defaultPolicy?: pulumi.Input<string>;
+    defaultPolicy?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -172,25 +172,25 @@ export interface SwitchDhcpServerPolicyArgs {
     /**
      * Email alert settings for DHCP servers
      */
-    alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts>;
+    alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts | undefined>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
      *   to block.An empty array will clear the entries.
      */
-    allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Dynamic ARP Inspection settings
      */
-    arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection>;
+    arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection | undefined>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
      *   to allow.An empty array will clear the entries.
      */
-    blockedServers?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * 'allow' or 'block' new DHCP servers. Default value is 'allow'.
      */
-    defaultPolicy?: pulumi.Input<string>;
+    defaultPolicy?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */

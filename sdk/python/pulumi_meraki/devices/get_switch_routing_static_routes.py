@@ -117,8 +117,8 @@ def get_switch_routing_static_routes(serial: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         serial=pulumi.get(__ret__, 'serial'),
         static_route_id=pulumi.get(__ret__, 'static_route_id'))
-def get_switch_routing_static_routes_output(serial: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                            static_route_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_routing_static_routes_output(serial: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                            static_route_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingStaticRoutesResult]:
     """
     ## Example Usage

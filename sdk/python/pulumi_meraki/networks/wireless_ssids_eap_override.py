@@ -23,10 +23,10 @@ class WirelessSsidsEapOverrideArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 eapol_key: Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']] = None,
-                 identity: Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']] = None,
-                 max_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
+                 eapol_key: pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']] = None,
+                 identity: pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']] = None,
+                 max_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a WirelessSsidsEapOverride resource.
 
@@ -74,62 +74,62 @@ class WirelessSsidsEapOverrideArgs:
 
     @_builtins.property
     @pulumi.getter(name="eapolKey")
-    def eapol_key(self) -> Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']]:
+    def eapol_key(self) -> pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']]:
         """
         EAPOL Key settings.
         """
         return pulumi.get(self, "eapol_key")
 
     @eapol_key.setter
-    def eapol_key(self, value: Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']]):
+    def eapol_key(self, value: pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']]):
         pulumi.set(self, "eapol_key", value)
 
     @_builtins.property
     @pulumi.getter
-    def identity(self) -> Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']]:
+    def identity(self) -> pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']]:
         """
         EAP settings for identity requests.
         """
         return pulumi.get(self, "identity")
 
     @identity.setter
-    def identity(self, value: Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']]):
+    def identity(self, value: pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']]):
         pulumi.set(self, "identity", value)
 
     @_builtins.property
     @pulumi.getter(name="maxRetries")
-    def max_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Maximum number of general EAP retries.
         """
         return pulumi.get(self, "max_retries")
 
     @max_retries.setter
-    def max_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_retries", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         General EAP timeout in seconds.
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsEapOverrideState:
     def __init__(__self__, *,
-                 eapol_key: Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']] = None,
-                 identity: Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']] = None,
-                 max_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
+                 eapol_key: pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']] = None,
+                 identity: pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']] = None,
+                 max_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsEapOverride resources.
 
@@ -155,74 +155,74 @@ class _WirelessSsidsEapOverrideState:
 
     @_builtins.property
     @pulumi.getter(name="eapolKey")
-    def eapol_key(self) -> Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']]:
+    def eapol_key(self) -> pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']]:
         """
         EAPOL Key settings.
         """
         return pulumi.get(self, "eapol_key")
 
     @eapol_key.setter
-    def eapol_key(self, value: Optional[pulumi.Input['WirelessSsidsEapOverrideEapolKeyArgs']]):
+    def eapol_key(self, value: pulumi.Input[Optional['WirelessSsidsEapOverrideEapolKeyArgs']]):
         pulumi.set(self, "eapol_key", value)
 
     @_builtins.property
     @pulumi.getter
-    def identity(self) -> Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']]:
+    def identity(self) -> pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']]:
         """
         EAP settings for identity requests.
         """
         return pulumi.get(self, "identity")
 
     @identity.setter
-    def identity(self, value: Optional[pulumi.Input['WirelessSsidsEapOverrideIdentityArgs']]):
+    def identity(self, value: pulumi.Input[Optional['WirelessSsidsEapOverrideIdentityArgs']]):
         pulumi.set(self, "identity", value)
 
     @_builtins.property
     @pulumi.getter(name="maxRetries")
-    def max_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Maximum number of general EAP retries.
         """
         return pulumi.get(self, "max_retries")
 
     @max_retries.setter
-    def max_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         General EAP timeout in seconds.
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
-    def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timeout", value)
 
 
@@ -232,12 +232,12 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
-                 identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
-                 max_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
+                 eapol_key: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+                 identity: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
+                 max_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -329,12 +329,12 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
-                 identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
-                 max_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
+                 eapol_key: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+                 identity: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
+                 max_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 timeout: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -364,12 +364,12 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
-            identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
-            max_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            timeout: Optional[pulumi.Input[_builtins.int]] = None) -> 'WirelessSsidsEapOverride':
+            eapol_key: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+            identity: pulumi.Input[Optional[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
+            max_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            timeout: pulumi.Input[Optional[_builtins.int]] = None) -> 'WirelessSsidsEapOverride':
         """
         Get an existing WirelessSsidsEapOverride resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

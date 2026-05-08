@@ -109,19 +109,19 @@ export interface SwitchWarmSpareState {
     /**
      * Enable or disable warm spare for a switch
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Serial number of the primary switch
      */
-    primarySerial?: pulumi.Input<string>;
+    primarySerial?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Serial number of the warm spare switch
      */
-    spareSerial?: pulumi.Input<string>;
+    spareSerial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -131,7 +131,7 @@ export interface SwitchWarmSpareArgs {
     /**
      * Enable or disable warm spare for a switch
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */
@@ -139,5 +139,5 @@ export interface SwitchWarmSpareArgs {
     /**
      * Serial number of the warm spare switch
      */
-    spareSerial?: pulumi.Input<string>;
+    spareSerial?: pulumi.Input<string | undefined>;
 }

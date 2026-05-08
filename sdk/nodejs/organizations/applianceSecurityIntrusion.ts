@@ -101,11 +101,11 @@ export interface ApplianceSecurityIntrusionState {
     /**
      * Sets a list of specific SNORT signatures to allow
      */
-    allowedRules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceSecurityIntrusionAllowedRule>[]>;
+    allowedRules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceSecurityIntrusionAllowedRule>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -115,7 +115,7 @@ export interface ApplianceSecurityIntrusionArgs {
     /**
      * Sets a list of specific SNORT signatures to allow
      */
-    allowedRules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceSecurityIntrusionAllowedRule>[]>;
+    allowedRules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceSecurityIntrusionAllowedRule>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

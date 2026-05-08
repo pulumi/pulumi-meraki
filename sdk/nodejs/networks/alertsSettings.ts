@@ -134,23 +134,23 @@ export interface AlertsSettingsState {
     /**
      * Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
      */
-    alerts?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlert>[]>;
+    alerts?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlert>[] | undefined>;
     /**
      * Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
      */
-    alertsResponses?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlertsResponse>[]>;
+    alertsResponses?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlertsResponse>[] | undefined>;
     /**
      * The network-wide destinations for all alerts on the network.
      */
-    defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations>;
+    defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations | undefined>;
     /**
      * muting
      */
-    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting>;
+    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -160,15 +160,15 @@ export interface AlertsSettingsArgs {
     /**
      * Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
      */
-    alerts?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlert>[]>;
+    alerts?: pulumi.Input<pulumi.Input<inputs.networks.AlertsSettingsAlert>[] | undefined>;
     /**
      * The network-wide destinations for all alerts on the network.
      */
-    defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations>;
+    defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations | undefined>;
     /**
      * muting
      */
-    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting>;
+    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting | undefined>;
     /**
      * networkId path parameter. Network ID
      */

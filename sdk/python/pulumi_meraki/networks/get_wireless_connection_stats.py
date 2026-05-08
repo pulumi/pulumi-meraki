@@ -177,7 +177,7 @@ def get_wireless_connection_stats(ap_tag: Optional[_builtins.str] = None,
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         vlan=1)
     pulumi.export("merakiNetworksWirelessConnectionStatsExample", example.item)
     ```
@@ -215,14 +215,14 @@ def get_wireless_connection_stats(ap_tag: Optional[_builtins.str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         vlan=pulumi.get(__ret__, 'vlan'))
-def get_wireless_connection_stats_output(ap_tag: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                         band: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                         network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                         ssid: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                         t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                         t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                         timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
-                                         vlan: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+def get_wireless_connection_stats_output(ap_tag: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                         band: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                         network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                         ssid: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                         t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                         t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                         timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
+                                         vlan: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessConnectionStatsResult]:
     """
     ## Example Usage
@@ -237,7 +237,7 @@ def get_wireless_connection_stats_output(ap_tag: Optional[pulumi.Input[Optional[
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         vlan=1)
     pulumi.export("merakiNetworksWirelessConnectionStatsExample", example.item)
     ```

@@ -56,9 +56,9 @@ class SwitchPortsCycleArgs:
 @pulumi.input_type
 class _SwitchPortsCycleState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['SwitchPortsCycleItemArgs']] = None,
-                 parameters: Optional[pulumi.Input['SwitchPortsCycleParametersArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 item: pulumi.Input[Optional['SwitchPortsCycleItemArgs']] = None,
+                 parameters: pulumi.Input[Optional['SwitchPortsCycleParametersArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchPortsCycle resources.
 
@@ -73,32 +73,32 @@ class _SwitchPortsCycleState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['SwitchPortsCycleItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['SwitchPortsCycleItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['SwitchPortsCycleItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['SwitchPortsCycleItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['SwitchPortsCycleParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['SwitchPortsCycleParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['SwitchPortsCycleParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['SwitchPortsCycleParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -108,8 +108,8 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -184,8 +184,8 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -212,9 +212,9 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['SwitchPortsCycleItemArgs', 'SwitchPortsCycleItemArgsDict']]] = None,
-            parameters: Optional[pulumi.Input[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchPortsCycle':
+            item: pulumi.Input[Optional[Union['SwitchPortsCycleItemArgs', 'SwitchPortsCycleItemArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchPortsCycle':
         """
         Get an existing SwitchPortsCycle resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

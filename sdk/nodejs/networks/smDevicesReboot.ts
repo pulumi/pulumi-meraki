@@ -115,12 +115,12 @@ export class SmDevicesReboot extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesReboot resources.
  */
 export interface SmDevicesRebootState {
-    item?: pulumi.Input<inputs.networks.SmDevicesRebootItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesRebootItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesRebootParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesRebootParameters | undefined>;
 }
 
 /**

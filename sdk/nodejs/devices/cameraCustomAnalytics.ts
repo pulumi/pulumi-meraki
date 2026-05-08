@@ -115,19 +115,19 @@ export interface CameraCustomAnalyticsState {
     /**
      * Custom analytics artifact ID
      */
-    artifactId?: pulumi.Input<string>;
+    artifactId?: pulumi.Input<string | undefined>;
     /**
      * Whether custom analytics is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Parameters for the custom analytics workload
      */
-    parameters?: pulumi.Input<pulumi.Input<inputs.devices.CameraCustomAnalyticsParameter>[]>;
+    parameters?: pulumi.Input<pulumi.Input<inputs.devices.CameraCustomAnalyticsParameter>[] | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -137,15 +137,15 @@ export interface CameraCustomAnalyticsArgs {
     /**
      * Custom analytics artifact ID
      */
-    artifactId?: pulumi.Input<string>;
+    artifactId?: pulumi.Input<string | undefined>;
     /**
      * Whether custom analytics is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Parameters for the custom analytics workload
      */
-    parameters?: pulumi.Input<pulumi.Input<inputs.devices.CameraCustomAnalyticsParameter>[]>;
+    parameters?: pulumi.Input<pulumi.Input<inputs.devices.CameraCustomAnalyticsParameter>[] | undefined>;
     /**
      * serial path parameter.
      */

@@ -101,11 +101,11 @@ export interface ApplianceTrafficShapingState {
     /**
      * Global per-client bandwidth limit
      */
-    globalBandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingGlobalBandwidthLimits>;
+    globalBandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingGlobalBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -115,7 +115,7 @@ export interface ApplianceTrafficShapingArgs {
     /**
      * Global per-client bandwidth limit
      */
-    globalBandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingGlobalBandwidthLimits>;
+    globalBandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingGlobalBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */

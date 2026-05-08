@@ -96,7 +96,7 @@ def get_appliance_firewall_one_to_one_nat_rules(network_id: Optional[_builtins.s
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_appliance_firewall_one_to_one_nat_rules_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_firewall_one_to_one_nat_rules_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceFirewallOneToOneNatRulesResult]:
     """
     ## Example Usage

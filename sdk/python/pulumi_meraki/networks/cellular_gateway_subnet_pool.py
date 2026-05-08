@@ -22,8 +22,8 @@ __all__ = ['CellularGatewaySubnetPoolArgs', 'CellularGatewaySubnetPool']
 class CellularGatewaySubnetPoolArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None):
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a CellularGatewaySubnetPool resource.
 
@@ -51,37 +51,37 @@ class CellularGatewaySubnetPoolArgs:
 
     @_builtins.property
     @pulumi.getter
-    def cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
         """
         return pulumi.get(self, "cidr")
 
     @cidr.setter
-    def cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cidr", value)
 
     @_builtins.property
     @pulumi.getter
-    def mask(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mask(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Mask used for the subnet of all MGs in  this network.
         """
         return pulumi.get(self, "mask")
 
     @mask.setter
-    def mask(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mask(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mask", value)
 
 
 @pulumi.input_type
 class _CellularGatewaySubnetPoolState:
     def __init__(__self__, *,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]] = None):
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]] = None):
         """
         Input properties used for looking up and filtering CellularGatewaySubnetPool resources.
 
@@ -102,56 +102,56 @@ class _CellularGatewaySubnetPoolState:
 
     @_builtins.property
     @pulumi.getter
-    def cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
         """
         return pulumi.get(self, "cidr")
 
     @cidr.setter
-    def cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cidr", value)
 
     @_builtins.property
     @pulumi.getter(name="deploymentMode")
-    def deployment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deployment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "deployment_mode")
 
     @deployment_mode.setter
-    def deployment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deployment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deployment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def mask(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mask(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Mask used for the subnet of all MGs in  this network.
         """
         return pulumi.get(self, "mask")
 
     @mask.setter
-    def mask(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mask(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mask", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]]:
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]]):
         pulumi.set(self, "subnets", value)
 
 
@@ -161,9 +161,9 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -234,9 +234,9 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -263,11 +263,11 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cidr: Optional[pulumi.Input[_builtins.str]] = None,
-            deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            mask: Optional[pulumi.Input[_builtins.int]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewaySubnetPoolSubnetArgs', 'CellularGatewaySubnetPoolSubnetArgsDict']]]]] = None) -> 'CellularGatewaySubnetPool':
+            cidr: pulumi.Input[Optional[_builtins.str]] = None,
+            deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            mask: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewaySubnetPoolSubnetArgs', 'CellularGatewaySubnetPoolSubnetArgsDict']]]]] = None) -> 'CellularGatewaySubnetPool':
         """
         Get an existing CellularGatewaySubnetPool resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

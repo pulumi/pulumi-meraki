@@ -83,11 +83,11 @@ export class Split extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Split resources.
  */
 export interface SplitState {
-    item?: pulumi.Input<inputs.networks.SplitItem>;
+    item?: pulumi.Input<inputs.networks.SplitItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**

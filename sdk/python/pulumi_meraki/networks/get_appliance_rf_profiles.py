@@ -112,8 +112,8 @@ def get_appliance_rf_profiles(network_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rf_profile_id=pulumi.get(__ret__, 'rf_profile_id'))
-def get_appliance_rf_profiles_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     rf_profile_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_appliance_rf_profiles_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     rf_profile_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceRfProfilesResult]:
     """
     ## Example Usage

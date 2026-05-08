@@ -22,10 +22,10 @@ __all__ = ['SwitchDhcpServerPolicyArpInspectionTrustedServersArgs', 'SwitchDhcpS
 class SwitchDhcpServerPolicyArpInspectionTrustedServersArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 ipv4: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 ipv4: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchDhcpServerPolicyArpInspectionTrustedServers resource.
 
@@ -59,61 +59,61 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]:
+    def ipv4(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]:
         """
         IPv4 attributes of the trusted server.
         """
         return pulumi.get(self, "ipv4")
 
     @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]):
+    def ipv4(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]):
         pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mac address of the trusted server.
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedServerId")
-    def trusted_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the trusted server.
         """
         return pulumi.get(self, "trusted_server_id")
 
     @trusted_server_id.setter
-    def trusted_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Vlan ID of the trusted server.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
 @pulumi.input_type
 class _SwitchDhcpServerPolicyArpInspectionTrustedServersState:
     def __init__(__self__, *,
-                 ipv4: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 ipv4: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchDhcpServerPolicyArpInspectionTrustedServers resources.
 
@@ -136,62 +136,62 @@ class _SwitchDhcpServerPolicyArpInspectionTrustedServersState:
 
     @_builtins.property
     @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]:
+    def ipv4(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]:
         """
         IPv4 attributes of the trusted server.
         """
         return pulumi.get(self, "ipv4")
 
     @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]):
+    def ipv4(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]):
         pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Mac address of the trusted server.
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedServerId")
-    def trusted_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the trusted server.
         """
         return pulumi.get(self, "trusted_server_id")
 
     @trusted_server_id.setter
-    def trusted_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Vlan ID of the trusted server.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
@@ -201,11 +201,11 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 ipv4: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -284,11 +284,11 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 ipv4: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -315,11 +315,11 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
-            mac: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            trusted_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan: Optional[pulumi.Input[_builtins.int]] = None) -> 'SwitchDhcpServerPolicyArpInspectionTrustedServers':
+            ipv4: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchDhcpServerPolicyArpInspectionTrustedServers':
         """
         Get an existing SwitchDhcpServerPolicyArpInspectionTrustedServers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

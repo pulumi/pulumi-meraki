@@ -23,7 +23,7 @@ class LicensesArgs:
     def __init__(__self__, *,
                  license_id: pulumi.Input[_builtins.str],
                  organization_id: pulumi.Input[_builtins.str],
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Licenses resource.
 
@@ -62,36 +62,36 @@ class LicensesArgs:
 
     @_builtins.property
     @pulumi.getter(name="deviceSerial")
-    def device_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the device the license is assigned to
         """
         return pulumi.get(self, "device_serial")
 
     @device_serial.setter
-    def device_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_serial", value)
 
 
 @pulumi.input_type
 class _LicensesState:
     def __init__(__self__, *,
-                 activation_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 claim_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 expiration_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 head_license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 permanently_queued_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 total_duration_in_days: Optional[pulumi.Input[_builtins.int]] = None):
+                 activation_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 claim_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 expiration_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 head_license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Licenses resources.
 
@@ -147,194 +147,194 @@ class _LicensesState:
 
     @_builtins.property
     @pulumi.getter(name="activationDate")
-    def activation_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def activation_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license started burning
         """
         return pulumi.get(self, "activation_date")
 
     @activation_date.setter
-    def activation_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def activation_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "activation_date", value)
 
     @_builtins.property
     @pulumi.getter(name="claimDate")
-    def claim_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claim_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license was claimed into the organization
         """
         return pulumi.get(self, "claim_date")
 
     @claim_date.setter
-    def claim_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claim_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claim_date", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSerial")
-    def device_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the device the license is assigned to
         """
         return pulumi.get(self, "device_serial")
 
     @device_serial.setter
-    def device_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter(name="expirationDate")
-    def expiration_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expiration_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license will expire
         """
         return pulumi.get(self, "expiration_date")
 
     @expiration_date.setter
-    def expiration_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expiration_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expiration_date", value)
 
     @_builtins.property
     @pulumi.getter(name="headLicenseId")
-    def head_license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def head_license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the head license this license is queued behind. If there is no head license, it returns nil.
         """
         return pulumi.get(self, "head_license_id")
 
     @head_license_id.setter
-    def head_license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def head_license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "head_license_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseId")
-    def license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         licenseId path parameter. License ID
         """
         return pulumi.get(self, "license_id")
 
     @license_id.setter
-    def license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the network the license is assigned to
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="permanentlyQueuedLicenses")
-    def permanently_queued_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]]:
+    def permanently_queued_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]]:
         """
         DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
         """
         return pulumi.get(self, "permanently_queued_licenses")
 
     @permanently_queued_licenses.setter
-    def permanently_queued_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]]):
+    def permanently_queued_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesPermanentlyQueuedLicenseArgs']]]]):
         pulumi.set(self, "permanently_queued_licenses", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats of the license. Only applicable to SM licenses.
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state of the license. All queued licenses have a status of *recentlyQueued*.
         """
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
     @_builtins.property
     @pulumi.getter(name="totalDurationInDays")
-    def total_duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def total_duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the license plus all permanently queued licenses associated with it
         """
         return pulumi.get(self, "total_duration_in_days")
 
     @total_duration_in_days.setter
-    def total_duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def total_duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "total_duration_in_days", value)
 
 
@@ -344,9 +344,9 @@ class Licenses(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -417,9 +417,9 @@ class Licenses(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -459,22 +459,22 @@ class Licenses(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            activation_date: Optional[pulumi.Input[_builtins.str]] = None,
-            claim_date: Optional[pulumi.Input[_builtins.str]] = None,
-            device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-            duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-            expiration_date: Optional[pulumi.Input[_builtins.str]] = None,
-            head_license_id: Optional[pulumi.Input[_builtins.str]] = None,
-            license_id: Optional[pulumi.Input[_builtins.str]] = None,
-            license_key: Optional[pulumi.Input[_builtins.str]] = None,
-            license_type: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            order_number: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            permanently_queued_licenses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict']]]]] = None,
-            seat_count: Optional[pulumi.Input[_builtins.int]] = None,
-            state: Optional[pulumi.Input[_builtins.str]] = None,
-            total_duration_in_days: Optional[pulumi.Input[_builtins.int]] = None) -> 'Licenses':
+            activation_date: pulumi.Input[Optional[_builtins.str]] = None,
+            claim_date: pulumi.Input[Optional[_builtins.str]] = None,
+            device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+            expiration_date: pulumi.Input[Optional[_builtins.str]] = None,
+            head_license_id: pulumi.Input[Optional[_builtins.str]] = None,
+            license_id: pulumi.Input[Optional[_builtins.str]] = None,
+            license_key: pulumi.Input[Optional[_builtins.str]] = None,
+            license_type: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            order_number: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict']]]]] = None,
+            seat_count: pulumi.Input[Optional[_builtins.int]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None,
+            total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None) -> 'Licenses':
         """
         Get an existing Licenses resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

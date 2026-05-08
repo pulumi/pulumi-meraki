@@ -130,31 +130,31 @@ export interface BaseState {
     /**
      * API related settings
      */
-    api?: pulumi.Input<inputs.organizations.BaseApi>;
+    api?: pulumi.Input<inputs.organizations.BaseApi | undefined>;
     /**
      * Data for this organization
      */
-    cloud?: pulumi.Input<inputs.organizations.BaseCloud>;
+    cloud?: pulumi.Input<inputs.organizations.BaseCloud | undefined>;
     /**
      * Licensing related settings
      */
-    licensing?: pulumi.Input<inputs.organizations.BaseLicensing>;
+    licensing?: pulumi.Input<inputs.organizations.BaseLicensing | undefined>;
     /**
      * Information about the organization's management system
      */
-    management?: pulumi.Input<inputs.organizations.BaseManagement>;
+    management?: pulumi.Input<inputs.organizations.BaseManagement | undefined>;
     /**
      * Organization name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Organization URL
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -164,17 +164,17 @@ export interface BaseArgs {
     /**
      * API related settings
      */
-    api?: pulumi.Input<inputs.organizations.BaseApi>;
+    api?: pulumi.Input<inputs.organizations.BaseApi | undefined>;
     /**
      * Information about the organization's management system
      */
-    management?: pulumi.Input<inputs.organizations.BaseManagement>;
+    management?: pulumi.Input<inputs.organizations.BaseManagement | undefined>;
     /**
      * Organization name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

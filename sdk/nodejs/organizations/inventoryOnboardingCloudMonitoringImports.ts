@@ -107,8 +107,8 @@ export interface InventoryOnboardingCloudMonitoringImportsState {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringImportsParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringImportsParameters | undefined>;
 }
 
 /**

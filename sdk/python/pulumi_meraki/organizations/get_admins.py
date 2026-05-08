@@ -99,7 +99,7 @@ def get_admins(organization_id: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_admins_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_admins_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAdminsResult]:
     """
     ## Example Usage

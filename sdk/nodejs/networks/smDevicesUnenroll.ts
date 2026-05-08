@@ -101,12 +101,12 @@ export interface SmDevicesUnenrollState {
     /**
      * deviceId path parameter. Device ID
      */
-    deviceId?: pulumi.Input<string>;
-    item?: pulumi.Input<inputs.networks.SmDevicesUnenrollItem>;
+    deviceId?: pulumi.Input<string | undefined>;
+    item?: pulumi.Input<inputs.networks.SmDevicesUnenrollItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**

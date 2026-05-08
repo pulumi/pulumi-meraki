@@ -113,19 +113,19 @@ export interface CellularGatewayDhcpState {
     /**
      * DHCP Lease time for all MG in the network.
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
      */
-    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * DNS name servers mode for all MG in the network.
      */
-    dnsNameservers?: pulumi.Input<string>;
+    dnsNameservers?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -135,15 +135,15 @@ export interface CellularGatewayDhcpArgs {
     /**
      * DHCP Lease time for all MG in the network.
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
      */
-    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * DNS name servers mode for all MG in the network.
      */
-    dnsNameservers?: pulumi.Input<string>;
+    dnsNameservers?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */

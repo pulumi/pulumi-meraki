@@ -148,15 +148,15 @@ export interface ApplianceFirewallL7FirewallRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRule>[] | undefined>;
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse>[] | undefined>;
 }
 
 /**
@@ -170,5 +170,5 @@ export interface ApplianceFirewallL7FirewallRulesArgs {
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRule>[] | undefined>;
 }

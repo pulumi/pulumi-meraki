@@ -113,8 +113,8 @@ def get_appliance_firewall_firewalled_services(network_id: Optional[_builtins.st
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         service=pulumi.get(__ret__, 'service'))
-def get_appliance_firewall_firewalled_services_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                      service: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_firewall_firewalled_services_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                      service: pulumi.Input[Optional[_builtins.str]] = None,
                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceFirewallFirewalledServicesResult]:
     """
     ## Example Usage

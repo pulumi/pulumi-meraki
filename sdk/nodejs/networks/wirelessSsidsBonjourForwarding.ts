@@ -128,23 +128,23 @@ export interface WirelessSsidsBonjourForwardingState {
     /**
      * If true, Bonjour forwarding is enabled on the SSID.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Bonjour forwarding exception
      */
-    exception?: pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingException>;
+    exception?: pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingException | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * Bonjour forwarding rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingRule>[] | undefined>;
 }
 
 /**
@@ -154,11 +154,11 @@ export interface WirelessSsidsBonjourForwardingArgs {
     /**
      * If true, Bonjour forwarding is enabled on the SSID.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Bonjour forwarding exception
      */
-    exception?: pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingException>;
+    exception?: pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingException | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -170,5 +170,5 @@ export interface WirelessSsidsBonjourForwardingArgs {
     /**
      * Bonjour forwarding rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsBonjourForwardingRule>[] | undefined>;
 }

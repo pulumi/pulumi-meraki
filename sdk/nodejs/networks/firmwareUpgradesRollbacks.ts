@@ -105,12 +105,12 @@ export class FirmwareUpgradesRollbacks extends pulumi.CustomResource {
  * Input properties used for looking up and filtering FirmwareUpgradesRollbacks resources.
  */
 export interface FirmwareUpgradesRollbacksState {
-    item?: pulumi.Input<inputs.networks.FirmwareUpgradesRollbacksItem>;
+    item?: pulumi.Input<inputs.networks.FirmwareUpgradesRollbacksItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.FirmwareUpgradesRollbacksParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.FirmwareUpgradesRollbacksParameters | undefined>;
 }
 
 /**

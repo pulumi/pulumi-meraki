@@ -138,23 +138,23 @@ export interface WirelessSsidsVpnState {
     /**
      * The VPN concentrator settings for this SSID.
      */
-    concentrator?: pulumi.Input<inputs.networks.WirelessSsidsVpnConcentrator>;
+    concentrator?: pulumi.Input<inputs.networks.WirelessSsidsVpnConcentrator | undefined>;
     /**
      * Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
      */
-    failover?: pulumi.Input<inputs.networks.WirelessSsidsVpnFailover>;
+    failover?: pulumi.Input<inputs.networks.WirelessSsidsVpnFailover | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * The VPN split tunnel settings for this SSID.
      */
-    splitTunnel?: pulumi.Input<inputs.networks.WirelessSsidsVpnSplitTunnel>;
+    splitTunnel?: pulumi.Input<inputs.networks.WirelessSsidsVpnSplitTunnel | undefined>;
 }
 
 /**
@@ -164,11 +164,11 @@ export interface WirelessSsidsVpnArgs {
     /**
      * The VPN concentrator settings for this SSID.
      */
-    concentrator?: pulumi.Input<inputs.networks.WirelessSsidsVpnConcentrator>;
+    concentrator?: pulumi.Input<inputs.networks.WirelessSsidsVpnConcentrator | undefined>;
     /**
      * Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
      */
-    failover?: pulumi.Input<inputs.networks.WirelessSsidsVpnFailover>;
+    failover?: pulumi.Input<inputs.networks.WirelessSsidsVpnFailover | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -180,5 +180,5 @@ export interface WirelessSsidsVpnArgs {
     /**
      * The VPN split tunnel settings for this SSID.
      */
-    splitTunnel?: pulumi.Input<inputs.networks.WirelessSsidsVpnSplitTunnel>;
+    splitTunnel?: pulumi.Input<inputs.networks.WirelessSsidsVpnSplitTunnel | undefined>;
 }

@@ -22,10 +22,10 @@ __all__ = ['CameraSenseArgs', 'CameraSense']
 class CameraSenseArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 audio_detection: Optional[pulumi.Input['CameraSenseAudioDetectionArgs']] = None,
-                 detection_model_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mqtt_broker_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 audio_detection: pulumi.Input[Optional['CameraSenseAudioDetectionArgs']] = None,
+                 detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraSense resource.
 
@@ -59,62 +59,62 @@ class CameraSenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="audioDetection")
-    def audio_detection(self) -> Optional[pulumi.Input['CameraSenseAudioDetectionArgs']]:
+    def audio_detection(self) -> pulumi.Input[Optional['CameraSenseAudioDetectionArgs']]:
         """
         The details of the audio detection config.
         """
         return pulumi.get(self, "audio_detection")
 
     @audio_detection.setter
-    def audio_detection(self, value: Optional[pulumi.Input['CameraSenseAudioDetectionArgs']]):
+    def audio_detection(self, value: pulumi.Input[Optional['CameraSenseAudioDetectionArgs']]):
         pulumi.set(self, "audio_detection", value)
 
     @_builtins.property
     @pulumi.getter(name="detectionModelId")
-    def detection_model_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def detection_model_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the object detection model
         """
         return pulumi.get(self, "detection_model_id")
 
     @detection_model_id.setter
-    def detection_model_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def detection_model_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "detection_model_id", value)
 
     @_builtins.property
     @pulumi.getter(name="mqttBrokerId")
-    def mqtt_broker_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mqtt_broker_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         """
         return pulumi.get(self, "mqtt_broker_id")
 
     @mqtt_broker_id.setter
-    def mqtt_broker_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mqtt_broker_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mqtt_broker_id", value)
 
     @_builtins.property
     @pulumi.getter(name="senseEnabled")
-    def sense_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def sense_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
         """
         return pulumi.get(self, "sense_enabled")
 
     @sense_enabled.setter
-    def sense_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def sense_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "sense_enabled", value)
 
 
 @pulumi.input_type
 class _CameraSenseState:
     def __init__(__self__, *,
-                 audio_detection: Optional[pulumi.Input['CameraSenseAudioDetectionArgs']] = None,
-                 detection_model_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mqtt_broker_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mqtt_topics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 audio_detection: pulumi.Input[Optional['CameraSenseAudioDetectionArgs']] = None,
+                 detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mqtt_topics: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraSense resources.
 
@@ -139,71 +139,71 @@ class _CameraSenseState:
 
     @_builtins.property
     @pulumi.getter(name="audioDetection")
-    def audio_detection(self) -> Optional[pulumi.Input['CameraSenseAudioDetectionArgs']]:
+    def audio_detection(self) -> pulumi.Input[Optional['CameraSenseAudioDetectionArgs']]:
         """
         The details of the audio detection config.
         """
         return pulumi.get(self, "audio_detection")
 
     @audio_detection.setter
-    def audio_detection(self, value: Optional[pulumi.Input['CameraSenseAudioDetectionArgs']]):
+    def audio_detection(self, value: pulumi.Input[Optional['CameraSenseAudioDetectionArgs']]):
         pulumi.set(self, "audio_detection", value)
 
     @_builtins.property
     @pulumi.getter(name="detectionModelId")
-    def detection_model_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def detection_model_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the object detection model
         """
         return pulumi.get(self, "detection_model_id")
 
     @detection_model_id.setter
-    def detection_model_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def detection_model_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "detection_model_id", value)
 
     @_builtins.property
     @pulumi.getter(name="mqttBrokerId")
-    def mqtt_broker_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mqtt_broker_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         """
         return pulumi.get(self, "mqtt_broker_id")
 
     @mqtt_broker_id.setter
-    def mqtt_broker_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mqtt_broker_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mqtt_broker_id", value)
 
     @_builtins.property
     @pulumi.getter(name="mqttTopics")
-    def mqtt_topics(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def mqtt_topics(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "mqtt_topics")
 
     @mqtt_topics.setter
-    def mqtt_topics(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def mqtt_topics(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "mqtt_topics", value)
 
     @_builtins.property
     @pulumi.getter(name="senseEnabled")
-    def sense_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def sense_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
         """
         return pulumi.get(self, "sense_enabled")
 
     @sense_enabled.setter
-    def sense_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def sense_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "sense_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -213,11 +213,11 @@ class CameraSense(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
-                 detection_model_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mqtt_broker_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+                 detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -296,11 +296,11 @@ class CameraSense(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
-                 detection_model_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mqtt_broker_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+                 detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -328,12 +328,12 @@ class CameraSense(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
-            detection_model_id: Optional[pulumi.Input[_builtins.str]] = None,
-            mqtt_broker_id: Optional[pulumi.Input[_builtins.str]] = None,
-            mqtt_topics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraSense':
+            audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+            detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mqtt_topics: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraSense':
         """
         Get an existing CameraSense resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

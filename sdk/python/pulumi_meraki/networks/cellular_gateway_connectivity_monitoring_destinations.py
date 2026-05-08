@@ -22,7 +22,7 @@ __all__ = ['CellularGatewayConnectivityMonitoringDestinationsArgs', 'CellularGat
 class CellularGatewayConnectivityMonitoringDestinationsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]] = None):
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayConnectivityMonitoringDestinations resource.
 
@@ -47,22 +47,22 @@ class CellularGatewayConnectivityMonitoringDestinationsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]:
+    def destinations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]:
         """
         The list of connectivity monitoring destinations
         """
         return pulumi.get(self, "destinations")
 
     @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]):
+    def destinations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]):
         pulumi.set(self, "destinations", value)
 
 
 @pulumi.input_type
 class _CellularGatewayConnectivityMonitoringDestinationsState:
     def __init__(__self__, *,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayConnectivityMonitoringDestinations resources.
 
@@ -76,26 +76,26 @@ class _CellularGatewayConnectivityMonitoringDestinationsState:
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]:
+    def destinations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]:
         """
         The list of connectivity monitoring destinations
         """
         return pulumi.get(self, "destinations")
 
     @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]):
+    def destinations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]]):
         pulumi.set(self, "destinations", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -105,8 +105,8 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'CellularGatewayConnectivityMonitoringDestinations':
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'CellularGatewayConnectivityMonitoringDestinations':
         """
         Get an existing CellularGatewayConnectivityMonitoringDestinations resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -110,19 +110,19 @@ export interface WirelessBluetoothSettingsState {
     /**
      * Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    major?: pulumi.Input<number>;
+    major?: pulumi.Input<number | undefined>;
     /**
      * Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    minor?: pulumi.Input<number>;
+    minor?: pulumi.Input<number | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    uuid?: pulumi.Input<string>;
+    uuid?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -132,11 +132,11 @@ export interface WirelessBluetoothSettingsArgs {
     /**
      * Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    major?: pulumi.Input<number>;
+    major?: pulumi.Input<number | undefined>;
     /**
      * Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    minor?: pulumi.Input<number>;
+    minor?: pulumi.Input<number | undefined>;
     /**
      * serial path parameter.
      */
@@ -144,5 +144,5 @@ export interface WirelessBluetoothSettingsArgs {
     /**
      * Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    uuid?: pulumi.Input<string>;
+    uuid?: pulumi.Input<string | undefined>;
 }

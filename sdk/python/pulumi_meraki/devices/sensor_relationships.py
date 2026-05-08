@@ -22,8 +22,8 @@ __all__ = ['SensorRelationshipsArgs', 'SensorRelationships']
 class SensorRelationshipsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 livestream: Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']] = None,
-                 livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]] = None):
+                 livestream: pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]] = None):
         """
         The set of arguments for constructing a SensorRelationships resource.
 
@@ -51,35 +51,35 @@ class SensorRelationshipsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def livestream(self) -> Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']]:
+    def livestream(self) -> pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']]:
         """
         A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         """
         return pulumi.get(self, "livestream")
 
     @livestream.setter
-    def livestream(self, value: Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']]):
+    def livestream(self, value: pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']]):
         pulumi.set(self, "livestream", value)
 
     @_builtins.property
     @pulumi.getter(name="livestreamRequests")
-    def livestream_requests(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]:
+    def livestream_requests(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]:
         """
         A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         """
         return pulumi.get(self, "livestream_requests")
 
     @livestream_requests.setter
-    def livestream_requests(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]):
+    def livestream_requests(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]):
         pulumi.set(self, "livestream_requests", value)
 
 
 @pulumi.input_type
 class _SensorRelationshipsState:
     def __init__(__self__, *,
-                 livestream: Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']] = None,
-                 livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 livestream: pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SensorRelationships resources.
 
@@ -96,38 +96,38 @@ class _SensorRelationshipsState:
 
     @_builtins.property
     @pulumi.getter
-    def livestream(self) -> Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']]:
+    def livestream(self) -> pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']]:
         """
         A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         """
         return pulumi.get(self, "livestream")
 
     @livestream.setter
-    def livestream(self, value: Optional[pulumi.Input['SensorRelationshipsLivestreamArgs']]):
+    def livestream(self, value: pulumi.Input[Optional['SensorRelationshipsLivestreamArgs']]):
         pulumi.set(self, "livestream", value)
 
     @_builtins.property
     @pulumi.getter(name="livestreamRequests")
-    def livestream_requests(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]:
+    def livestream_requests(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]:
         """
         A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         """
         return pulumi.get(self, "livestream_requests")
 
     @livestream_requests.setter
-    def livestream_requests(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]):
+    def livestream_requests(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]]):
         pulumi.set(self, "livestream_requests", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -137,9 +137,9 @@ class SensorRelationships(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 livestream: Optional[pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-                 livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -216,9 +216,9 @@ class SensorRelationships(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 livestream: Optional[pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-                 livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -243,9 +243,9 @@ class SensorRelationships(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            livestream: Optional[pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-            livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'SensorRelationships':
+            livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
+            livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SensorRelationships':
         """
         Get an existing SensorRelationships resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

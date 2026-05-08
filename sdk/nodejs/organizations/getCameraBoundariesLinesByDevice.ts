@@ -96,5 +96,5 @@ export interface GetCameraBoundariesLinesByDeviceOutputArgs {
     /**
      * serials query parameter. A list of serial numbers. The returned cameras will be filtered to only include these serials.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

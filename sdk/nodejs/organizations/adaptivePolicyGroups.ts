@@ -140,35 +140,35 @@ export class AdaptivePolicyGroups extends pulumi.CustomResource {
  * Input properties used for looking up and filtering AdaptivePolicyGroups resources.
  */
 export interface AdaptivePolicyGroupsState {
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Description of the group (default: "")
      */
-    description?: pulumi.Input<string>;
-    groupId?: pulumi.Input<string>;
-    isDefaultGroup?: pulumi.Input<boolean>;
+    description?: pulumi.Input<string | undefined>;
+    groupId?: pulumi.Input<string | undefined>;
+    isDefaultGroup?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * id path parameter.
      */
-    organizationsAdaptivePolicyGroupsId?: pulumi.Input<string>;
+    organizationsAdaptivePolicyGroupsId?: pulumi.Input<string | undefined>;
     /**
      * The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
      */
-    policyObjects?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyGroupsPolicyObject>[]>;
-    requiredIpMappings?: pulumi.Input<pulumi.Input<string>[]>;
+    policyObjects?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyGroupsPolicyObject>[] | undefined>;
+    requiredIpMappings?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * SGT value of the group
      */
-    sgt?: pulumi.Input<number>;
-    updatedAt?: pulumi.Input<string>;
+    sgt?: pulumi.Input<number | undefined>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -178,11 +178,11 @@ export interface AdaptivePolicyGroupsArgs {
     /**
      * Description of the group (default: "")
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Name of the group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -190,13 +190,13 @@ export interface AdaptivePolicyGroupsArgs {
     /**
      * id path parameter.
      */
-    organizationsAdaptivePolicyGroupsId?: pulumi.Input<string>;
+    organizationsAdaptivePolicyGroupsId?: pulumi.Input<string | undefined>;
     /**
      * The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
      */
-    policyObjects?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyGroupsPolicyObject>[]>;
+    policyObjects?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyGroupsPolicyObject>[] | undefined>;
     /**
      * SGT value of the group
      */
-    sgt?: pulumi.Input<number>;
+    sgt?: pulumi.Input<number | undefined>;
 }

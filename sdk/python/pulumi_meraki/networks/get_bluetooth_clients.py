@@ -147,10 +147,10 @@ def get_bluetooth_clients(bluetooth_client_id: Optional[_builtins.str] = None,
         include_connectivity_history=pulumi.get(__ret__, 'include_connectivity_history'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_bluetooth_clients_output(bluetooth_client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                 connectivity_history_timespan: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                 include_connectivity_history: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
-                                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_bluetooth_clients_output(bluetooth_client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                 connectivity_history_timespan: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                 include_connectivity_history: pulumi.Input[Optional[Optional[_builtins.bool]]] = None,
+                                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBluetoothClientsResult]:
     """
     ## Example Usage

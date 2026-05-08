@@ -73,9 +73,9 @@ export interface GetCameraWirelessProfilesOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * wirelessProfileId path parameter. Wireless profile ID
      */
-    wirelessProfileId?: pulumi.Input<string>;
+    wirelessProfileId?: pulumi.Input<string | undefined>;
 }

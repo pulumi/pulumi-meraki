@@ -116,8 +116,8 @@ def get_sm_profiles(network_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         payload_types=pulumi.get(__ret__, 'payload_types'))
-def get_sm_profiles_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                           payload_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_sm_profiles_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                           payload_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmProfilesResult]:
     """
     ## Example Usage

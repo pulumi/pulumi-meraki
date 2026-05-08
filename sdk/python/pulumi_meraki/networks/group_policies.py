@@ -22,14 +22,14 @@ __all__ = ['GroupPoliciesArgs', 'GroupPolicies']
 class GroupPoliciesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 bandwidth: Optional[pulumi.Input['GroupPoliciesBandwidthArgs']] = None,
-                 bonjour_forwarding: Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']] = None,
-                 content_filtering: Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']] = None,
-                 firewall_and_traffic_shaping: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 scheduling: Optional[pulumi.Input['GroupPoliciesSchedulingArgs']] = None,
-                 splash_auth_settings: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tagging: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']] = None):
+                 bandwidth: pulumi.Input[Optional['GroupPoliciesBandwidthArgs']] = None,
+                 bonjour_forwarding: pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']] = None,
+                 content_filtering: pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']] = None,
+                 firewall_and_traffic_shaping: pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 scheduling: pulumi.Input[Optional['GroupPoliciesSchedulingArgs']] = None,
+                 splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tagging: pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']] = None):
         """
         The set of arguments for constructing a GroupPolicies resource.
 
@@ -75,114 +75,114 @@ class GroupPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def bandwidth(self) -> Optional[pulumi.Input['GroupPoliciesBandwidthArgs']]:
+    def bandwidth(self) -> pulumi.Input[Optional['GroupPoliciesBandwidthArgs']]:
         """
         The bandwidth settings for clients bound to your group policy.
         """
         return pulumi.get(self, "bandwidth")
 
     @bandwidth.setter
-    def bandwidth(self, value: Optional[pulumi.Input['GroupPoliciesBandwidthArgs']]):
+    def bandwidth(self, value: pulumi.Input[Optional['GroupPoliciesBandwidthArgs']]):
         pulumi.set(self, "bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="bonjourForwarding")
-    def bonjour_forwarding(self) -> Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']]:
+    def bonjour_forwarding(self) -> pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']]:
         """
         The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
         """
         return pulumi.get(self, "bonjour_forwarding")
 
     @bonjour_forwarding.setter
-    def bonjour_forwarding(self, value: Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']]):
+    def bonjour_forwarding(self, value: pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']]):
         pulumi.set(self, "bonjour_forwarding", value)
 
     @_builtins.property
     @pulumi.getter(name="contentFiltering")
-    def content_filtering(self) -> Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']]:
+    def content_filtering(self) -> pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']]:
         """
         The content filtering settings for your group policy
         """
         return pulumi.get(self, "content_filtering")
 
     @content_filtering.setter
-    def content_filtering(self, value: Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']]):
+    def content_filtering(self, value: pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']]):
         pulumi.set(self, "content_filtering", value)
 
     @_builtins.property
     @pulumi.getter(name="firewallAndTrafficShaping")
-    def firewall_and_traffic_shaping(self) -> Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']]:
+    def firewall_and_traffic_shaping(self) -> pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']]:
         """
         The firewall and traffic shaping rules and settings for your policy.
         """
         return pulumi.get(self, "firewall_and_traffic_shaping")
 
     @firewall_and_traffic_shaping.setter
-    def firewall_and_traffic_shaping(self, value: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']]):
+    def firewall_and_traffic_shaping(self, value: pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']]):
         pulumi.set(self, "firewall_and_traffic_shaping", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name for your group policy. Required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def scheduling(self) -> Optional[pulumi.Input['GroupPoliciesSchedulingArgs']]:
+    def scheduling(self) -> pulumi.Input[Optional['GroupPoliciesSchedulingArgs']]:
         """
         The schedule for the group policy. Schedules are applied to days of the week.
         """
         return pulumi.get(self, "scheduling")
 
     @scheduling.setter
-    def scheduling(self, value: Optional[pulumi.Input['GroupPoliciesSchedulingArgs']]):
+    def scheduling(self, value: pulumi.Input[Optional['GroupPoliciesSchedulingArgs']]):
         pulumi.set(self, "scheduling", value)
 
     @_builtins.property
     @pulumi.getter(name="splashAuthSettings")
-    def splash_auth_settings(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def splash_auth_settings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
         """
         return pulumi.get(self, "splash_auth_settings")
 
     @splash_auth_settings.setter
-    def splash_auth_settings(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def splash_auth_settings(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "splash_auth_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagging")
-    def vlan_tagging(self) -> Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']]:
+    def vlan_tagging(self) -> pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']]:
         """
         The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
         """
         return pulumi.get(self, "vlan_tagging")
 
     @vlan_tagging.setter
-    def vlan_tagging(self, value: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']]):
+    def vlan_tagging(self, value: pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']]):
         pulumi.set(self, "vlan_tagging", value)
 
 
 @pulumi.input_type
 class _GroupPoliciesState:
     def __init__(__self__, *,
-                 bandwidth: Optional[pulumi.Input['GroupPoliciesBandwidthArgs']] = None,
-                 bonjour_forwarding: Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']] = None,
-                 content_filtering: Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']] = None,
-                 firewall_and_traffic_shaping: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scheduling: Optional[pulumi.Input['GroupPoliciesSchedulingArgs']] = None,
-                 splash_auth_settings: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tagging: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']] = None):
+                 bandwidth: pulumi.Input[Optional['GroupPoliciesBandwidthArgs']] = None,
+                 bonjour_forwarding: pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']] = None,
+                 content_filtering: pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']] = None,
+                 firewall_and_traffic_shaping: pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scheduling: pulumi.Input[Optional['GroupPoliciesSchedulingArgs']] = None,
+                 splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tagging: pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']] = None):
         """
         Input properties used for looking up and filtering GroupPolicies resources.
 
@@ -220,122 +220,122 @@ class _GroupPoliciesState:
 
     @_builtins.property
     @pulumi.getter
-    def bandwidth(self) -> Optional[pulumi.Input['GroupPoliciesBandwidthArgs']]:
+    def bandwidth(self) -> pulumi.Input[Optional['GroupPoliciesBandwidthArgs']]:
         """
         The bandwidth settings for clients bound to your group policy.
         """
         return pulumi.get(self, "bandwidth")
 
     @bandwidth.setter
-    def bandwidth(self, value: Optional[pulumi.Input['GroupPoliciesBandwidthArgs']]):
+    def bandwidth(self, value: pulumi.Input[Optional['GroupPoliciesBandwidthArgs']]):
         pulumi.set(self, "bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="bonjourForwarding")
-    def bonjour_forwarding(self) -> Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']]:
+    def bonjour_forwarding(self) -> pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']]:
         """
         The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
         """
         return pulumi.get(self, "bonjour_forwarding")
 
     @bonjour_forwarding.setter
-    def bonjour_forwarding(self, value: Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']]):
+    def bonjour_forwarding(self, value: pulumi.Input[Optional['GroupPoliciesBonjourForwardingArgs']]):
         pulumi.set(self, "bonjour_forwarding", value)
 
     @_builtins.property
     @pulumi.getter(name="contentFiltering")
-    def content_filtering(self) -> Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']]:
+    def content_filtering(self) -> pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']]:
         """
         The content filtering settings for your group policy
         """
         return pulumi.get(self, "content_filtering")
 
     @content_filtering.setter
-    def content_filtering(self, value: Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']]):
+    def content_filtering(self, value: pulumi.Input[Optional['GroupPoliciesContentFilteringArgs']]):
         pulumi.set(self, "content_filtering", value)
 
     @_builtins.property
     @pulumi.getter(name="firewallAndTrafficShaping")
-    def firewall_and_traffic_shaping(self) -> Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']]:
+    def firewall_and_traffic_shaping(self) -> pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']]:
         """
         The firewall and traffic shaping rules and settings for your policy.
         """
         return pulumi.get(self, "firewall_and_traffic_shaping")
 
     @firewall_and_traffic_shaping.setter
-    def firewall_and_traffic_shaping(self, value: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']]):
+    def firewall_and_traffic_shaping(self, value: pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingArgs']]):
         pulumi.set(self, "firewall_and_traffic_shaping", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the group policy
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name for your group policy. Required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def scheduling(self) -> Optional[pulumi.Input['GroupPoliciesSchedulingArgs']]:
+    def scheduling(self) -> pulumi.Input[Optional['GroupPoliciesSchedulingArgs']]:
         """
         The schedule for the group policy. Schedules are applied to days of the week.
         """
         return pulumi.get(self, "scheduling")
 
     @scheduling.setter
-    def scheduling(self, value: Optional[pulumi.Input['GroupPoliciesSchedulingArgs']]):
+    def scheduling(self, value: pulumi.Input[Optional['GroupPoliciesSchedulingArgs']]):
         pulumi.set(self, "scheduling", value)
 
     @_builtins.property
     @pulumi.getter(name="splashAuthSettings")
-    def splash_auth_settings(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def splash_auth_settings(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
         """
         return pulumi.get(self, "splash_auth_settings")
 
     @splash_auth_settings.setter
-    def splash_auth_settings(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def splash_auth_settings(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "splash_auth_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTagging")
-    def vlan_tagging(self) -> Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']]:
+    def vlan_tagging(self) -> pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']]:
         """
         The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
         """
         return pulumi.get(self, "vlan_tagging")
 
     @vlan_tagging.setter
-    def vlan_tagging(self, value: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']]):
+    def vlan_tagging(self, value: pulumi.Input[Optional['GroupPoliciesVlanTaggingArgs']]):
         pulumi.set(self, "vlan_tagging", value)
 
 
@@ -345,15 +345,15 @@ class GroupPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth: Optional[pulumi.Input[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
-                 bonjour_forwarding: Optional[pulumi.Input[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
-                 content_filtering: Optional[pulumi.Input[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
-                 firewall_and_traffic_shaping: Optional[pulumi.Input[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scheduling: Optional[pulumi.Input[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
-                 splash_auth_settings: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tagging: Optional[pulumi.Input[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None,
+                 bandwidth: pulumi.Input[Optional[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
+                 bonjour_forwarding: pulumi.Input[Optional[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
+                 content_filtering: pulumi.Input[Optional[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
+                 firewall_and_traffic_shaping: pulumi.Input[Optional[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scheduling: pulumi.Input[Optional[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
+                 splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tagging: pulumi.Input[Optional[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -644,15 +644,15 @@ class GroupPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth: Optional[pulumi.Input[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
-                 bonjour_forwarding: Optional[pulumi.Input[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
-                 content_filtering: Optional[pulumi.Input[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
-                 firewall_and_traffic_shaping: Optional[pulumi.Input[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scheduling: Optional[pulumi.Input[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
-                 splash_auth_settings: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tagging: Optional[pulumi.Input[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None,
+                 bandwidth: pulumi.Input[Optional[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
+                 bonjour_forwarding: pulumi.Input[Optional[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
+                 content_filtering: pulumi.Input[Optional[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
+                 firewall_and_traffic_shaping: pulumi.Input[Optional[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scheduling: pulumi.Input[Optional[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
+                 splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_tagging: pulumi.Input[Optional[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -684,16 +684,16 @@ class GroupPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bandwidth: Optional[pulumi.Input[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
-            bonjour_forwarding: Optional[pulumi.Input[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
-            content_filtering: Optional[pulumi.Input[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
-            firewall_and_traffic_shaping: Optional[pulumi.Input[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
-            group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            scheduling: Optional[pulumi.Input[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
-            splash_auth_settings: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_tagging: Optional[pulumi.Input[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None) -> 'GroupPolicies':
+            bandwidth: pulumi.Input[Optional[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']]] = None,
+            bonjour_forwarding: pulumi.Input[Optional[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict']]] = None,
+            content_filtering: pulumi.Input[Optional[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict']]] = None,
+            firewall_and_traffic_shaping: pulumi.Input[Optional[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict']]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            scheduling: pulumi.Input[Optional[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict']]] = None,
+            splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_tagging: pulumi.Input[Optional[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict']]] = None) -> 'GroupPolicies':
         """
         Get an existing GroupPolicies resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

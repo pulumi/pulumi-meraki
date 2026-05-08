@@ -108,12 +108,12 @@ export class FirmwareUpgradesStagedEventsRollbacks extends pulumi.CustomResource
  * Input properties used for looking up and filtering FirmwareUpgradesStagedEventsRollbacks resources.
  */
 export interface FirmwareUpgradesStagedEventsRollbacksState {
-    item?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsRollbacksItem>;
+    item?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsRollbacksItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsRollbacksParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsRollbacksParameters | undefined>;
 }
 
 /**

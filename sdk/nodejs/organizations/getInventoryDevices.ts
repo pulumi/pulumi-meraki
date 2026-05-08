@@ -203,61 +203,61 @@ export interface GetInventoryDevicesOutputArgs {
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * macs query parameter. Search for devices in inventory based on mac addresses.
      */
-    macs?: pulumi.Input<pulumi.Input<string>[]>;
+    macs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * models query parameter. Search for devices in inventory based on model.
      */
-    models?: pulumi.Input<pulumi.Input<string>[]>;
+    models?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkIds query parameter. Search for devices in inventory based on network ids. Use explicit 'null' value to get available devices only.
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * orderNumbers query parameter. Search for devices in inventory based on order numbers.
      */
-    orderNumbers?: pulumi.Input<pulumi.Input<string>[]>;
+    orderNumbers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * productTypes query parameter. Filter devices by product type. Accepted values are appliance, camera, cellularGateway, sensor, switch, systemsManager, and wireless.
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * search query parameter. Search for devices in inventory based on serial number, mac address, or model.
      */
-    search?: pulumi.Input<string>;
+    search?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * serials query parameter. Search for devices in inventory based on serials.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * tags query parameter. Filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * tagsFilterType query parameter. To use with 'tags' parameter, to filter devices which contain ANY or ALL given tags. Accepted values are 'withAnyTags' or 'withAllTags', default is 'withAnyTags'.
      */
-    tagsFilterType?: pulumi.Input<string>;
+    tagsFilterType?: pulumi.Input<string | undefined>;
     /**
      * usedState query parameter. Filter results by used or unused inventory. Accepted values are 'used' or 'unused'.
      */
-    usedState?: pulumi.Input<string>;
+    usedState?: pulumi.Input<string | undefined>;
 }

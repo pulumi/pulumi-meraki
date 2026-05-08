@@ -180,43 +180,43 @@ export interface WirelessSsidsHotspot20State {
     /**
      * An array of domain names
      */
-    domains?: pulumi.Input<pulumi.Input<string>[]>;
+    domains?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Whether or not Hotspot 2.0 for this SSID is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * An array of MCC/MNC pairs
      */
-    mccMncs?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20MccMnc>[]>;
+    mccMncs?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20MccMnc>[] | undefined>;
     /**
      * An array of NAI realms
      */
-    naiRealms?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20NaiRealm>[]>;
+    naiRealms?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20NaiRealm>[] | undefined>;
     /**
      * The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
      */
-    networkAccessType?: pulumi.Input<string>;
+    networkAccessType?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * Operator settings for this SSID
      */
-    operator?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Operator>;
+    operator?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Operator | undefined>;
     /**
      * An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
      */
-    roamConsortOis?: pulumi.Input<pulumi.Input<string>[]>;
+    roamConsortOis?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Venue settings for this SSID
      */
-    venue?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Venue>;
+    venue?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Venue | undefined>;
 }
 
 /**
@@ -226,23 +226,23 @@ export interface WirelessSsidsHotspot20Args {
     /**
      * An array of domain names
      */
-    domains?: pulumi.Input<pulumi.Input<string>[]>;
+    domains?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Whether or not Hotspot 2.0 for this SSID is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * An array of MCC/MNC pairs
      */
-    mccMncs?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20MccMnc>[]>;
+    mccMncs?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20MccMnc>[] | undefined>;
     /**
      * An array of NAI realms
      */
-    naiRealms?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20NaiRealm>[]>;
+    naiRealms?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsHotspot20NaiRealm>[] | undefined>;
     /**
      * The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
      */
-    networkAccessType?: pulumi.Input<string>;
+    networkAccessType?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -254,13 +254,13 @@ export interface WirelessSsidsHotspot20Args {
     /**
      * Operator settings for this SSID
      */
-    operator?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Operator>;
+    operator?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Operator | undefined>;
     /**
      * An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
      */
-    roamConsortOis?: pulumi.Input<pulumi.Input<string>[]>;
+    roamConsortOis?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Venue settings for this SSID
      */
-    venue?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Venue>;
+    venue?: pulumi.Input<inputs.networks.WirelessSsidsHotspot20Venue | undefined>;
 }

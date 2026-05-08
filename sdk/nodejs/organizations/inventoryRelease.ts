@@ -97,12 +97,12 @@ export class InventoryRelease extends pulumi.CustomResource {
  * Input properties used for looking up and filtering InventoryRelease resources.
  */
 export interface InventoryReleaseState {
-    item?: pulumi.Input<inputs.organizations.InventoryReleaseItem>;
+    item?: pulumi.Input<inputs.organizations.InventoryReleaseItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.InventoryReleaseParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.InventoryReleaseParameters | undefined>;
 }
 
 /**

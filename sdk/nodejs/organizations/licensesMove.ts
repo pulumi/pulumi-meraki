@@ -101,12 +101,12 @@ export class LicensesMove extends pulumi.CustomResource {
  * Input properties used for looking up and filtering LicensesMove resources.
  */
 export interface LicensesMoveState {
-    item?: pulumi.Input<inputs.organizations.LicensesMoveItem>;
+    item?: pulumi.Input<inputs.organizations.LicensesMoveItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.LicensesMoveParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.LicensesMoveParameters | undefined>;
 }
 
 /**

@@ -149,10 +149,10 @@ def get_config_templates_switch_profiles_ports(config_template_id: Optional[_bui
         organization_id=pulumi.get(__ret__, 'organization_id'),
         port_id=pulumi.get(__ret__, 'port_id'),
         profile_id=pulumi.get(__ret__, 'profile_id'))
-def get_config_templates_switch_profiles_ports_output(config_template_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                      organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                      port_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                      profile_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_config_templates_switch_profiles_ports_output(config_template_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                      organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                      port_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                      profile_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigTemplatesSwitchProfilesPortsResult]:
     """
     ## Example Usage

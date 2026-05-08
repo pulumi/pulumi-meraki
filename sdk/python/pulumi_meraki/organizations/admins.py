@@ -22,13 +22,13 @@ __all__ = ['AdminsArgs', 'Admins']
 class AdminsArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 admin_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]] = None):
+                 admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]] = None):
         """
         The set of arguments for constructing a Admins resource.
 
@@ -71,104 +71,104 @@ class AdminsArgs:
 
     @_builtins.property
     @pulumi.getter(name="adminId")
-    def admin_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admin_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         adminId path parameter. Admin ID
         """
         return pulumi.get(self, "admin_id")
 
     @admin_id.setter
-    def admin_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admin_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admin_id", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationMethod")
-    def authentication_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's authentication method
         """
         return pulumi.get(self, "authentication_method")
 
     @authentication_method.setter
-    def authentication_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_method", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's email address
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's username
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]]:
         """
         Admin network access information
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter(name="orgAccess")
-    def org_access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def org_access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's level of access to the organization
         """
         return pulumi.get(self, "org_access")
 
     @org_access.setter
-    def org_access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def org_access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "org_access", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]]:
         """
         Admin tag information
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]]):
         pulumi.set(self, "tags", value)
 
 
 @pulumi.input_type
 class _AdminsState:
     def __init__(__self__, *,
-                 account_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 admin_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 has_api_key: Optional[pulumi.Input[_builtins.bool]] = None,
-                 last_active: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]] = None,
-                 two_factor_auth_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 account_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 has_api_key: pulumi.Input[Optional[_builtins.bool]] = None,
+                 last_active: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]] = None,
+                 two_factor_auth_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Admins resources.
 
@@ -212,146 +212,146 @@ class _AdminsState:
 
     @_builtins.property
     @pulumi.getter(name="accountStatus")
-    def account_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def account_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the admin's account
         """
         return pulumi.get(self, "account_status")
 
     @account_status.setter
-    def account_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def account_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "account_status", value)
 
     @_builtins.property
     @pulumi.getter(name="adminId")
-    def admin_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admin_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         adminId path parameter. Admin ID
         """
         return pulumi.get(self, "admin_id")
 
     @admin_id.setter
-    def admin_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admin_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admin_id", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationMethod")
-    def authentication_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's authentication method
         """
         return pulumi.get(self, "authentication_method")
 
     @authentication_method.setter
-    def authentication_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_method", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's email address
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="hasApiKey")
-    def has_api_key(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def has_api_key(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whether the admin has an API key
         """
         return pulumi.get(self, "has_api_key")
 
     @has_api_key.setter
-    def has_api_key(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def has_api_key(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "has_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="lastActive")
-    def last_active(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_active(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Time when the admin was last active
         """
         return pulumi.get(self, "last_active")
 
     @last_active.setter
-    def last_active(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_active(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_active", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's username
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]]:
         """
         Admin network access information
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter(name="orgAccess")
-    def org_access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def org_access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's level of access to the organization
         """
         return pulumi.get(self, "org_access")
 
     @org_access.setter
-    def org_access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def org_access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "org_access", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]]:
         """
         Admin tag information
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AdminsTagArgs']]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AdminsTagArgs']]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFactorAuthEnabled")
-    def two_factor_auth_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def two_factor_auth_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates whether two-factor authentication is enabled
         """
         return pulumi.get(self, "two_factor_auth_enabled")
 
     @two_factor_auth_enabled.setter
-    def two_factor_auth_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def two_factor_auth_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "two_factor_auth_enabled", value)
 
 
@@ -361,14 +361,14 @@ class Admins(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+                 admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -464,14 +464,14 @@ class Admins(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+                 admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -505,18 +505,18 @@ class Admins(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            account_status: Optional[pulumi.Input[_builtins.str]] = None,
-            admin_id: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_method: Optional[pulumi.Input[_builtins.str]] = None,
-            email: Optional[pulumi.Input[_builtins.str]] = None,
-            has_api_key: Optional[pulumi.Input[_builtins.bool]] = None,
-            last_active: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
-            org_access: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
-            two_factor_auth_enabled: Optional[pulumi.Input[_builtins.bool]] = None) -> 'Admins':
+            account_status: pulumi.Input[Optional[_builtins.str]] = None,
+            admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            has_api_key: pulumi.Input[Optional[_builtins.bool]] = None,
+            last_active: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+            org_access: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+            two_factor_auth_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'Admins':
         """
         Get an existing Admins resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -133,9 +133,9 @@ def get_switch_stacks_routing_interfaces(interface_id: Optional[_builtins.str] =
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         switch_stack_id=pulumi.get(__ret__, 'switch_stack_id'))
-def get_switch_stacks_routing_interfaces_output(interface_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                switch_stack_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_stacks_routing_interfaces_output(interface_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                switch_stack_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksRoutingInterfacesResult]:
     """
     ## Example Usage

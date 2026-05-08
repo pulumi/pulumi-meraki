@@ -116,8 +116,8 @@ def get_sm_users_softwares(network_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         user_id=pulumi.get(__ret__, 'user_id'))
-def get_sm_users_softwares_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  user_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_sm_users_softwares_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  user_id: pulumi.Input[Optional[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmUsersSoftwaresResult]:
     """
     ## Example Usage

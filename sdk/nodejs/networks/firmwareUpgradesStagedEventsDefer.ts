@@ -86,11 +86,11 @@ export class FirmwareUpgradesStagedEventsDefer extends pulumi.CustomResource {
  * Input properties used for looking up and filtering FirmwareUpgradesStagedEventsDefer resources.
  */
 export interface FirmwareUpgradesStagedEventsDeferState {
-    item?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsDeferItem>;
+    item?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsDeferItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**

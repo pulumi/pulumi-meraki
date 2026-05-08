@@ -22,9 +22,9 @@ __all__ = ['ApplianceSecurityIntrusionArgs', 'ApplianceSecurityIntrusion']
 class ApplianceSecurityIntrusionArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 ids_rulesets: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 protected_networks: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
+                 ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 protected_networks: pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
         """
         The set of arguments for constructing a ApplianceSecurityIntrusion resource.
 
@@ -55,48 +55,48 @@ class ApplianceSecurityIntrusionArgs:
 
     @_builtins.property
     @pulumi.getter(name="idsRulesets")
-    def ids_rulesets(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ids_rulesets(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion detection ruleset
         """
         return pulumi.get(self, "ids_rulesets")
 
     @ids_rulesets.setter
-    def ids_rulesets(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ids_rulesets(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ids_rulesets", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion detection mode
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="protectedNetworks")
-    def protected_networks(self) -> Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']]:
+    def protected_networks(self) -> pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']]:
         """
         Networks included in and excluded from the detection engine
         """
         return pulumi.get(self, "protected_networks")
 
     @protected_networks.setter
-    def protected_networks(self, value: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']]):
+    def protected_networks(self, value: pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']]):
         pulumi.set(self, "protected_networks", value)
 
 
 @pulumi.input_type
 class _ApplianceSecurityIntrusionState:
     def __init__(__self__, *,
-                 ids_rulesets: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protected_networks: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
+                 ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protected_networks: pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceSecurityIntrusion resources.
 
@@ -116,50 +116,50 @@ class _ApplianceSecurityIntrusionState:
 
     @_builtins.property
     @pulumi.getter(name="idsRulesets")
-    def ids_rulesets(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ids_rulesets(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion detection ruleset
         """
         return pulumi.get(self, "ids_rulesets")
 
     @ids_rulesets.setter
-    def ids_rulesets(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ids_rulesets(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ids_rulesets", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion detection mode
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="protectedNetworks")
-    def protected_networks(self) -> Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']]:
+    def protected_networks(self) -> pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']]:
         """
         Networks included in and excluded from the detection engine
         """
         return pulumi.get(self, "protected_networks")
 
     @protected_networks.setter
-    def protected_networks(self, value: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']]):
+    def protected_networks(self, value: pulumi.Input[Optional['ApplianceSecurityIntrusionProtectedNetworksArgs']]):
         pulumi.set(self, "protected_networks", value)
 
 
@@ -169,10 +169,10 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids_rulesets: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protected_networks: Optional[pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
+                 ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -270,10 +270,10 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids_rulesets: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protected_networks: Optional[pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
+                 ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -299,10 +299,10 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ids_rulesets: Optional[pulumi.Input[_builtins.str]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            protected_networks: Optional[pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None) -> 'ApplianceSecurityIntrusion':
+            ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None) -> 'ApplianceSecurityIntrusion':
         """
         Get an existing ApplianceSecurityIntrusion resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

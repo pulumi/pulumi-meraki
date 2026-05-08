@@ -111,7 +111,7 @@ def get_switch_ports_statuses(serial: Optional[_builtins.str] = None,
 
     example = meraki.devices.get_switch_ports_statuses(serial="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiDevicesSwitchPortsStatusesExample", example.items)
     ```
 
@@ -133,9 +133,9 @@ def get_switch_ports_statuses(serial: Optional[_builtins.str] = None,
         serial=pulumi.get(__ret__, 'serial'),
         t0=pulumi.get(__ret__, 't0'),
         timespan=pulumi.get(__ret__, 'timespan'))
-def get_switch_ports_statuses_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
-                                     t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                     timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
+def get_switch_ports_statuses_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
+                                     t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                     timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchPortsStatusesResult]:
     """
     ## Example Usage
@@ -146,7 +146,7 @@ def get_switch_ports_statuses_output(serial: Optional[pulumi.Input[_builtins.str
 
     example = meraki.devices.get_switch_ports_statuses(serial="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiDevicesSwitchPortsStatusesExample", example.items)
     ```
 

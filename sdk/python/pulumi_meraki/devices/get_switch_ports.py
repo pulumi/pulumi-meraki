@@ -117,8 +117,8 @@ def get_switch_ports(port_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         port_id=pulumi.get(__ret__, 'port_id'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_switch_ports_output(port_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                            serial: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_ports_output(port_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                            serial: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchPortsResult]:
     """
     ## Example Usage

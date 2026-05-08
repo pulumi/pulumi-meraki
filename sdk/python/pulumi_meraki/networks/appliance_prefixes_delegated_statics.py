@@ -22,10 +22,10 @@ __all__ = ['AppliancePrefixesDelegatedStaticsArgs', 'AppliancePrefixesDelegatedS
 class AppliancePrefixesDelegatedStaticsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 origin: Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 origin: pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppliancePrefixesDelegatedStatics resource.
 
@@ -59,63 +59,63 @@ class AppliancePrefixesDelegatedStaticsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identifying description for the prefix.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def origin(self) -> Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']]:
+    def origin(self) -> pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']]:
         """
         WAN1/WAN2/Independent prefix.
         """
         return pulumi.get(self, "origin")
 
     @origin.setter
-    def origin(self, value: Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']]):
+    def origin(self, value: pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']]):
         pulumi.set(self, "origin", value)
 
     @_builtins.property
     @pulumi.getter
-    def prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 prefix/prefix length.
         """
         return pulumi.get(self, "prefix")
 
     @prefix.setter
-    def prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="staticDelegatedPrefixId")
-    def static_delegated_prefix_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_delegated_prefix_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static delegated prefix id.
         """
         return pulumi.get(self, "static_delegated_prefix_id")
 
     @static_delegated_prefix_id.setter
-    def static_delegated_prefix_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_delegated_prefix_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_delegated_prefix_id", value)
 
 
 @pulumi.input_type
 class _AppliancePrefixesDelegatedStaticsState:
     def __init__(__self__, *,
-                 created_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 origin: Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 updated_at: Optional[pulumi.Input[_builtins.str]] = None):
+                 created_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 origin: pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 updated_at: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AppliancePrefixesDelegatedStatics resources.
 
@@ -144,86 +144,86 @@ class _AppliancePrefixesDelegatedStaticsState:
 
     @_builtins.property
     @pulumi.getter(name="createdAt")
-    def created_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Prefix creation time.
         """
         return pulumi.get(self, "created_at")
 
     @created_at.setter
-    def created_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Identifying description for the prefix.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def origin(self) -> Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']]:
+    def origin(self) -> pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']]:
         """
         WAN1/WAN2/Independent prefix.
         """
         return pulumi.get(self, "origin")
 
     @origin.setter
-    def origin(self, value: Optional[pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs']]):
+    def origin(self, value: pulumi.Input[Optional['AppliancePrefixesDelegatedStaticsOriginArgs']]):
         pulumi.set(self, "origin", value)
 
     @_builtins.property
     @pulumi.getter
-    def prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv6 prefix/prefix length.
         """
         return pulumi.get(self, "prefix")
 
     @prefix.setter
-    def prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="staticDelegatedPrefixId")
-    def static_delegated_prefix_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_delegated_prefix_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static delegated prefix id.
         """
         return pulumi.get(self, "static_delegated_prefix_id")
 
     @static_delegated_prefix_id.setter
-    def static_delegated_prefix_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_delegated_prefix_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_delegated_prefix_id", value)
 
     @_builtins.property
     @pulumi.getter(name="updatedAt")
-    def updated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def updated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Prefix Updated time.
         """
         return pulumi.get(self, "updated_at")
 
     @updated_at.setter
-    def updated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def updated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "updated_at", value)
 
 
@@ -233,11 +233,11 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 origin: Optional[pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -318,11 +318,11 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 origin: Optional[pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
-                 prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+                 prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -351,13 +351,13 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            created_at: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            origin: Optional[pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
-            prefix: Optional[pulumi.Input[_builtins.str]] = None,
-            static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None,
-            updated_at: Optional[pulumi.Input[_builtins.str]] = None) -> 'AppliancePrefixesDelegatedStatics':
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+            prefix: pulumi.Input[Optional[_builtins.str]] = None,
+            static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> 'AppliancePrefixesDelegatedStatics':
         """
         Get an existing AppliancePrefixesDelegatedStatics resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

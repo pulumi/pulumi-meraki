@@ -155,43 +155,43 @@ export interface BaseState {
     /**
      * Enrollment string for the network
      */
-    enrollmentString?: pulumi.Input<string>;
+    enrollmentString?: pulumi.Input<string | undefined>;
     /**
      * If the network is bound to a config template
      */
-    isBoundToConfigTemplate?: pulumi.Input<boolean>;
+    isBoundToConfigTemplate?: pulumi.Input<boolean | undefined>;
     /**
      * Network name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Notes for the network
      */
-    notes?: pulumi.Input<string>;
+    notes?: pulumi.Input<string | undefined>;
     /**
      * Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * List of the product types that the network supports
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Network tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Timezone of the network
      */
-    timeZone?: pulumi.Input<string>;
+    timeZone?: pulumi.Input<string | undefined>;
     /**
      * URL to the network Dashboard UI
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -201,19 +201,19 @@ export interface BaseArgs {
     /**
      * Enrollment string for the network
      */
-    enrollmentString?: pulumi.Input<string>;
+    enrollmentString?: pulumi.Input<string | undefined>;
     /**
      * Network name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Notes for the network
      */
-    notes?: pulumi.Input<string>;
+    notes?: pulumi.Input<string | undefined>;
     /**
      * Organization ID
      */
@@ -221,13 +221,13 @@ export interface BaseArgs {
     /**
      * List of the product types that the network supports
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Network tags
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Timezone of the network
      */
-    timeZone?: pulumi.Input<string>;
+    timeZone?: pulumi.Input<string | undefined>;
 }

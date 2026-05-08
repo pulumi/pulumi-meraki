@@ -115,21 +115,21 @@ export interface SwitchRoutingMulticastRendezvousPointsState {
     /**
      * The IP address of the interface where the RP needs to be created.
      */
-    interfaceIp?: pulumi.Input<string>;
-    interfaceName?: pulumi.Input<string>;
+    interfaceIp?: pulumi.Input<string | undefined>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * 'Any', or the IP address of a multicast group
      */
-    multicastGroup?: pulumi.Input<string>;
+    multicastGroup?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * rendezvousPointId path parameter. Rendezvous point ID
      */
-    rendezvousPointId?: pulumi.Input<string>;
-    serial?: pulumi.Input<string>;
+    rendezvousPointId?: pulumi.Input<string | undefined>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -139,11 +139,11 @@ export interface SwitchRoutingMulticastRendezvousPointsArgs {
     /**
      * The IP address of the interface where the RP needs to be created.
      */
-    interfaceIp?: pulumi.Input<string>;
+    interfaceIp?: pulumi.Input<string | undefined>;
     /**
      * 'Any', or the IP address of a multicast group
      */
-    multicastGroup?: pulumi.Input<string>;
+    multicastGroup?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -151,5 +151,5 @@ export interface SwitchRoutingMulticastRendezvousPointsArgs {
     /**
      * rendezvousPointId path parameter. Rendezvous point ID
      */
-    rendezvousPointId?: pulumi.Input<string>;
+    rendezvousPointId?: pulumi.Input<string | undefined>;
 }

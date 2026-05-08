@@ -117,8 +117,8 @@ def get_switch_routing_multicast_rendezvous_points(network_id: Optional[_builtin
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rendezvous_point_id=pulumi.get(__ret__, 'rendezvous_point_id'))
-def get_switch_routing_multicast_rendezvous_points_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          rendezvous_point_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_routing_multicast_rendezvous_points_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          rendezvous_point_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingMulticastRendezvousPointsResult]:
     """
     ## Example Usage

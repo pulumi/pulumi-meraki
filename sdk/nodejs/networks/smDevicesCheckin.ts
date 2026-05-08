@@ -111,12 +111,12 @@ export class SmDevicesCheckin extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesCheckin resources.
  */
 export interface SmDevicesCheckinState {
-    item?: pulumi.Input<inputs.networks.SmDevicesCheckinItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesCheckinItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesCheckinParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesCheckinParameters | undefined>;
 }
 
 /**

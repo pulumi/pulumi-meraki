@@ -22,9 +22,9 @@ __all__ = ['ApplianceRadioSettingsArgs', 'ApplianceRadioSettings']
 class ApplianceRadioSettingsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 five_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceRadioSettings resource.
 
@@ -55,48 +55,48 @@ class ApplianceRadioSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']]:
         """
         Manual radio settings for 5 GHz
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RF Profile ID
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]:
         """
         Manual radio settings for 2.4 GHz
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
 @pulumi.input_type
 class _ApplianceRadioSettingsState:
     def __init__(__self__, *,
-                 five_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceRadioSettings resources.
 
@@ -116,50 +116,50 @@ class _ApplianceRadioSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']]:
         """
         Manual radio settings for 5 GHz
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRadioSettingsFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RF Profile ID
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device serial
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]:
         """
         Manual radio settings for 2.4 GHz
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRadioSettingsTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
@@ -169,10 +169,10 @@ class ApplianceRadioSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -266,10 +266,10 @@ class ApplianceRadioSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -295,10 +295,10 @@ class ApplianceRadioSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
-            rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None) -> 'ApplianceRadioSettings':
+            five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRadioSettingsTwoFourGhzSettingsArgs', 'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict']]] = None) -> 'ApplianceRadioSettings':
         """
         Get an existing ApplianceRadioSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,10 +22,10 @@ __all__ = ['ApplianceVpnBgpArgs', 'ApplianceVpnBgp']
 class ApplianceVpnBgpArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ibgp_hold_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]] = None):
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceVpnBgp resource.
 
@@ -59,61 +59,61 @@ class ApplianceVpnBgpArgs:
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="ibgpHoldTimer")
-    def ibgp_hold_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ibgp_hold_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
         """
         return pulumi.get(self, "ibgp_hold_timer")
 
     @ibgp_hold_timer.setter
-    def ibgp_hold_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ibgp_hold_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ibgp_hold_timer", value)
 
     @_builtins.property
     @pulumi.getter
-    def neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]:
+    def neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]:
         """
         List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
         """
         return pulumi.get(self, "neighbors")
 
     @neighbors.setter
-    def neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]):
+    def neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]):
         pulumi.set(self, "neighbors", value)
 
 
 @pulumi.input_type
 class _ApplianceVpnBgpState:
     def __init__(__self__, *,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ibgp_hold_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnBgp resources.
 
@@ -136,62 +136,62 @@ class _ApplianceVpnBgpState:
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="ibgpHoldTimer")
-    def ibgp_hold_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ibgp_hold_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
         """
         return pulumi.get(self, "ibgp_hold_timer")
 
     @ibgp_hold_timer.setter
-    def ibgp_hold_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ibgp_hold_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ibgp_hold_timer", value)
 
     @_builtins.property
     @pulumi.getter
-    def neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]:
+    def neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]:
         """
         List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
         """
         return pulumi.get(self, "neighbors")
 
     @neighbors.setter
-    def neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]):
+    def neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnBgpNeighborArgs']]]]):
         pulumi.set(self, "neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -201,11 +201,11 @@ class ApplianceVpnBgp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ibgp_hold_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -296,11 +296,11 @@ class ApplianceVpnBgp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ibgp_hold_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -327,11 +327,11 @@ class ApplianceVpnBgp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            as_number: Optional[pulumi.Input[_builtins.int]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            ibgp_hold_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceVpnBgp':
+            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceVpnBgp':
         """
         Get an existing ApplianceVpnBgp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

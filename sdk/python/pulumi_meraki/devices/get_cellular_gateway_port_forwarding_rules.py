@@ -96,7 +96,7 @@ def get_cellular_gateway_port_forwarding_rules(serial: Optional[_builtins.str] =
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_cellular_gateway_port_forwarding_rules_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
+def get_cellular_gateway_port_forwarding_rules_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCellularGatewayPortForwardingRulesResult]:
     """
     ## Example Usage

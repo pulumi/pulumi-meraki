@@ -148,27 +148,27 @@ export interface ApplianceRfProfilesState {
     /**
      * Settings related to 5Ghz band.
      */
-    fiveGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesFiveGhzSettings | undefined>;
     /**
      * The name of the profile.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * ID of network this RF Profile belongs in.
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Per-SSID radio settings by number.
      */
-    perSsidSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesPerSsidSettings>;
+    perSsidSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesPerSsidSettings | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * Settings related to 2.4Ghz band.
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesTwoFourGhzSettings | undefined>;
 }
 
 /**
@@ -178,11 +178,11 @@ export interface ApplianceRfProfilesArgs {
     /**
      * Settings related to 5Ghz band.
      */
-    fiveGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesFiveGhzSettings | undefined>;
     /**
      * The name of the profile.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * ID of network this RF Profile belongs in.
      */
@@ -190,13 +190,13 @@ export interface ApplianceRfProfilesArgs {
     /**
      * Per-SSID radio settings by number.
      */
-    perSsidSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesPerSsidSettings>;
+    perSsidSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesPerSsidSettings | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * Settings related to 2.4Ghz band.
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.networks.ApplianceRfProfilesTwoFourGhzSettings | undefined>;
 }

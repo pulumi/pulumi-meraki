@@ -101,13 +101,13 @@ export interface GetWirelessRfProfilesOutputArgs {
     /**
      * includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
      */
-    includeTemplateProfiles?: pulumi.Input<boolean>;
+    includeTemplateProfiles?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
 }

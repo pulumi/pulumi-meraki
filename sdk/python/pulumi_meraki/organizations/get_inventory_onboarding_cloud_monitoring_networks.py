@@ -184,12 +184,12 @@ def get_inventory_onboarding_cloud_monitoring_networks(device_type: Optional[_bu
         per_page=pulumi.get(__ret__, 'per_page'),
         search=pulumi.get(__ret__, 'search'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-def get_inventory_onboarding_cloud_monitoring_networks_output(device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                                                              ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                              organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                              per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                              search: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                              starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_inventory_onboarding_cloud_monitoring_networks_output(device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                                                              ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                              organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                              per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                              search: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                              starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringNetworksResult]:
     """
     ## Example Usage

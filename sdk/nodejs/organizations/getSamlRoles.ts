@@ -73,9 +73,9 @@ export interface GetSamlRolesOutputArgs {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * samlRoleId path parameter. Saml role ID
      */
-    samlRoleId?: pulumi.Input<string>;
+    samlRoleId?: pulumi.Input<string | undefined>;
 }

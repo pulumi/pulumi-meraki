@@ -126,43 +126,43 @@ export interface LiveToolsCableState {
     /**
      * Id of the cable test request. Used to check the status of the request.
      */
-    cableTestId?: pulumi.Input<string>;
+    cableTestId?: pulumi.Input<string | undefined>;
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback | undefined>;
     /**
      * id path parameter.
      */
-    devicesLiveToolsCableId?: pulumi.Input<string>;
+    devicesLiveToolsCableId?: pulumi.Input<string | undefined>;
     /**
      * An error message for a failed execution
      */
-    error?: pulumi.Input<string>;
+    error?: pulumi.Input<string | undefined>;
     /**
      * A list of ports for which to perform the cable test.
      */
-    ports?: pulumi.Input<pulumi.Input<string>[]>;
+    ports?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Cable test request parameters
      */
-    request?: pulumi.Input<inputs.devices.LiveToolsCableRequest>;
+    request?: pulumi.Input<inputs.devices.LiveToolsCableRequest | undefined>;
     /**
      * Results of the cable test request, one for each requested port.
      */
-    results?: pulumi.Input<pulumi.Input<inputs.devices.LiveToolsCableResult>[]>;
+    results?: pulumi.Input<pulumi.Input<inputs.devices.LiveToolsCableResult>[] | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Status of the cable test request.
      */
-    status?: pulumi.Input<string>;
+    status?: pulumi.Input<string | undefined>;
     /**
      * GET this url to check the status of your cable test request.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -172,15 +172,15 @@ export interface LiveToolsCableArgs {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback | undefined>;
     /**
      * id path parameter.
      */
-    devicesLiveToolsCableId?: pulumi.Input<string>;
+    devicesLiveToolsCableId?: pulumi.Input<string | undefined>;
     /**
      * A list of ports for which to perform the cable test.
      */
-    ports?: pulumi.Input<pulumi.Input<string>[]>;
+    ports?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * serial path parameter.
      */

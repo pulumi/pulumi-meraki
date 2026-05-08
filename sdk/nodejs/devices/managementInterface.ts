@@ -133,19 +133,19 @@ export interface ManagementInterfaceState {
     /**
      * Dynamic DNS hostnames.
      */
-    ddnsHostnames?: pulumi.Input<inputs.devices.ManagementInterfaceDdnsHostnames>;
+    ddnsHostnames?: pulumi.Input<inputs.devices.ManagementInterfaceDdnsHostnames | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * WAN 1 settings
      */
-    wan1?: pulumi.Input<inputs.devices.ManagementInterfaceWan1>;
+    wan1?: pulumi.Input<inputs.devices.ManagementInterfaceWan1 | undefined>;
     /**
      * WAN 2 settings (only for MX devices)
      */
-    wan2?: pulumi.Input<inputs.devices.ManagementInterfaceWan2>;
+    wan2?: pulumi.Input<inputs.devices.ManagementInterfaceWan2 | undefined>;
 }
 
 /**
@@ -159,9 +159,9 @@ export interface ManagementInterfaceArgs {
     /**
      * WAN 1 settings
      */
-    wan1?: pulumi.Input<inputs.devices.ManagementInterfaceWan1>;
+    wan1?: pulumi.Input<inputs.devices.ManagementInterfaceWan1 | undefined>;
     /**
      * WAN 2 settings (only for MX devices)
      */
-    wan2?: pulumi.Input<inputs.devices.ManagementInterfaceWan2>;
+    wan2?: pulumi.Input<inputs.devices.ManagementInterfaceWan2 | undefined>;
 }

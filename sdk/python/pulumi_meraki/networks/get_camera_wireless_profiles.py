@@ -117,8 +117,8 @@ def get_camera_wireless_profiles(network_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         wireless_profile_id=pulumi.get(__ret__, 'wireless_profile_id'))
-def get_camera_wireless_profiles_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                        wireless_profile_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_camera_wireless_profiles_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                        wireless_profile_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraWirelessProfilesResult]:
     """
     ## Example Usage

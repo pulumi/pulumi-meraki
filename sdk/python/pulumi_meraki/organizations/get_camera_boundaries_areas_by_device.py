@@ -116,8 +116,8 @@ def get_camera_boundaries_areas_by_device(organization_id: Optional[_builtins.st
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         serials=pulumi.get(__ret__, 'serials'))
-def get_camera_boundaries_areas_by_device_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                 serials: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_camera_boundaries_areas_by_device_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                 serials: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraBoundariesAreasByDeviceResult]:
     """
     ## Example Usage

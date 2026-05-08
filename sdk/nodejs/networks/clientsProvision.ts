@@ -167,12 +167,12 @@ export class ClientsProvision extends pulumi.CustomResource {
  * Input properties used for looking up and filtering ClientsProvision resources.
  */
 export interface ClientsProvisionState {
-    item?: pulumi.Input<inputs.networks.ClientsProvisionItem>;
+    item?: pulumi.Input<inputs.networks.ClientsProvisionItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.ClientsProvisionParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.ClientsProvisionParameters | undefined>;
 }
 
 /**

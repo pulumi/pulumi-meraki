@@ -248,19 +248,19 @@ export interface GetApiRequestsOutputArgs {
     /**
      * adminId query parameter. Filter the results by the ID of the admin who made the API requests
      */
-    adminId?: pulumi.Input<string>;
+    adminId?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * method query parameter. Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE')
      */
-    method?: pulumi.Input<string>;
+    method?: pulumi.Input<string | undefined>;
     /**
      * operationIds query parameter. Filter the results by one or more operation IDs for the API request
      */
-    operationIds?: pulumi.Input<pulumi.Input<string>[]>;
+    operationIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -268,41 +268,41 @@ export interface GetApiRequestsOutputArgs {
     /**
      * path query parameter. Filter the results by the path of the API requests
      */
-    path?: pulumi.Input<string>;
+    path?: pulumi.Input<string | undefined>;
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 50.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * responseCode query parameter. Filter the results by the response code of the API requests
      */
-    responseCode?: pulumi.Input<number>;
+    responseCode?: pulumi.Input<number | undefined>;
     /**
      * sourceIp query parameter. Filter the results by the IP address of the originating API request
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
     /**
      * userAgent query parameter. Filter the results by the user agent string of the API request
      */
-    userAgent?: pulumi.Input<string>;
+    userAgent?: pulumi.Input<string | undefined>;
     /**
      * version query parameter. Filter the results by the API version of the API request
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }

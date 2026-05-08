@@ -107,16 +107,16 @@ export class LicensingSubscriptionSubscriptionsBind extends pulumi.CustomResourc
  * Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsBind resources.
  */
 export interface LicensingSubscriptionSubscriptionsBindState {
-    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsBindItem>;
-    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsBindParameters>;
+    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsBindItem | undefined>;
+    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsBindParameters | undefined>;
     /**
      * subscriptionId path parameter. Subscription ID
      */
-    subscriptionId?: pulumi.Input<string>;
+    subscriptionId?: pulumi.Input<string | undefined>;
     /**
      * validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
      */
-    validate?: pulumi.Input<boolean>;
+    validate?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface LicensingSubscriptionSubscriptionsBindArgs {
     /**
      * validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
      */
-    validate?: pulumi.Input<boolean>;
+    validate?: pulumi.Input<boolean | undefined>;
 }

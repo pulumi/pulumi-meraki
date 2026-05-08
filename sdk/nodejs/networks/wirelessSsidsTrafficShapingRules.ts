@@ -138,25 +138,25 @@ export interface WirelessSsidsTrafficShapingRulesState {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    defaultRulesEnabled?: pulumi.Input<boolean>;
+    defaultRulesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * An array of traffic shaping rules. Rules are applied in the order that
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsTrafficShapingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsTrafficShapingRulesRule>[] | undefined>;
     /**
      * Whether traffic shaping rules are applied to clients on your SSID.
      */
-    trafficShapingEnabled?: pulumi.Input<boolean>;
+    trafficShapingEnabled?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -166,7 +166,7 @@ export interface WirelessSsidsTrafficShapingRulesArgs {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    defaultRulesEnabled?: pulumi.Input<boolean>;
+    defaultRulesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -180,9 +180,9 @@ export interface WirelessSsidsTrafficShapingRulesArgs {
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsTrafficShapingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsTrafficShapingRulesRule>[] | undefined>;
     /**
      * Whether traffic shaping rules are applied to clients on your SSID.
      */
-    trafficShapingEnabled?: pulumi.Input<boolean>;
+    trafficShapingEnabled?: pulumi.Input<boolean | undefined>;
 }

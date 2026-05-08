@@ -96,7 +96,7 @@ def get_appliance_vpn_third_party_vpnpeers(organization_id: Optional[_builtins.s
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_appliance_vpn_third_party_vpnpeers_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_vpn_third_party_vpnpeers_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceVpnThirdPartyVpnpeersResult]:
     """
     ## Example Usage

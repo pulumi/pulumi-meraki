@@ -120,23 +120,23 @@ export interface SwitchDhcpServerPolicyArpInspectionTrustedServersState {
     /**
      * IPv4 attributes of the trusted server.
      */
-    ipv4?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4>;
+    ipv4?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4 | undefined>;
     /**
      * Mac address of the trusted server.
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * ID of the trusted server.
      */
-    trustedServerId?: pulumi.Input<string>;
+    trustedServerId?: pulumi.Input<string | undefined>;
     /**
      * Vlan ID of the trusted server.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -146,11 +146,11 @@ export interface SwitchDhcpServerPolicyArpInspectionTrustedServersArgs {
     /**
      * IPv4 attributes of the trusted server.
      */
-    ipv4?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4>;
+    ipv4?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4 | undefined>;
     /**
      * Mac address of the trusted server.
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -158,9 +158,9 @@ export interface SwitchDhcpServerPolicyArpInspectionTrustedServersArgs {
     /**
      * ID of the trusted server.
      */
-    trustedServerId?: pulumi.Input<string>;
+    trustedServerId?: pulumi.Input<string | undefined>;
     /**
      * Vlan ID of the trusted server.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }

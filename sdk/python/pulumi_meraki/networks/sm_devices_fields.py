@@ -56,9 +56,9 @@ class SmDevicesFieldsArgs:
 @pulumi.input_type
 class _SmDevicesFieldsState:
     def __init__(__self__, *,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['SmDevicesFieldsParametersArgs']] = None):
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['SmDevicesFieldsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesFields resources.
 
@@ -74,35 +74,35 @@ class _SmDevicesFieldsState:
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]]:
         """
         Array of ResponseSmUpdateNetworkSmDevicesFields
         """
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SmDevicesFieldsItemArgs']]]]):
         pulumi.set(self, "items", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['SmDevicesFieldsParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['SmDevicesFieldsParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['SmDevicesFieldsParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['SmDevicesFieldsParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -112,8 +112,8 @@ class SmDevicesFields(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -190,8 +190,8 @@ class SmDevicesFields(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -218,9 +218,9 @@ class SmDevicesFields(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SmDevicesFieldsItemArgs', 'SmDevicesFieldsItemArgsDict']]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None) -> 'SmDevicesFields':
+            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SmDevicesFieldsItemArgs', 'SmDevicesFieldsItemArgsDict']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['SmDevicesFieldsParametersArgs', 'SmDevicesFieldsParametersArgsDict']]] = None) -> 'SmDevicesFields':
         """
         Get an existing SmDevicesFields resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

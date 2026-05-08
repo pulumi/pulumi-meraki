@@ -40,8 +40,8 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateArgs:
 @pulumi.input_type
 class _LicensingSubscriptionSubscriptionsClaimKeyValidateState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']] = None,
-                 parameters: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']] = None):
+                 item: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']] = None,
+                 parameters: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']] = None):
         """
         Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsClaimKeyValidate resources.
         """
@@ -52,20 +52,20 @@ class _LicensingSubscriptionSubscriptionsClaimKeyValidateState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -75,7 +75,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -135,7 +135,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -159,8 +159,8 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict']]] = None,
-            parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None) -> 'LicensingSubscriptionSubscriptionsClaimKeyValidate':
+            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict']]] = None) -> 'LicensingSubscriptionSubscriptionsClaimKeyValidate':
         """
         Get an existing LicensingSubscriptionSubscriptionsClaimKeyValidate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

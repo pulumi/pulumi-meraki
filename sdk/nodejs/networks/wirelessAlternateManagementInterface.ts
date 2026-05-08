@@ -131,23 +131,23 @@ export interface WirelessAlternateManagementInterfaceState {
     /**
      * Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
      */
-    accessPoints?: pulumi.Input<pulumi.Input<inputs.networks.WirelessAlternateManagementInterfaceAccessPoint>[]>;
+    accessPoints?: pulumi.Input<pulumi.Input<inputs.networks.WirelessAlternateManagementInterfaceAccessPoint>[] | undefined>;
     /**
      * Boolean value to enable or disable alternate management interface
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
      */
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Alternate management interface VLAN, must be between 1 and 4094
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -157,11 +157,11 @@ export interface WirelessAlternateManagementInterfaceArgs {
     /**
      * Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
      */
-    accessPoints?: pulumi.Input<pulumi.Input<inputs.networks.WirelessAlternateManagementInterfaceAccessPoint>[]>;
+    accessPoints?: pulumi.Input<pulumi.Input<inputs.networks.WirelessAlternateManagementInterfaceAccessPoint>[] | undefined>;
     /**
      * Boolean value to enable or disable alternate management interface
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -169,9 +169,9 @@ export interface WirelessAlternateManagementInterfaceArgs {
     /**
      * Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
      */
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Alternate management interface VLAN, must be between 1 and 4094
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }

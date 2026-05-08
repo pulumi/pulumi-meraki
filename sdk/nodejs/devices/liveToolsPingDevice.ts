@@ -113,12 +113,12 @@ export class LiveToolsPingDevice extends pulumi.CustomResource {
  * Input properties used for looking up and filtering LiveToolsPingDevice resources.
  */
 export interface LiveToolsPingDeviceState {
-    item?: pulumi.Input<inputs.devices.LiveToolsPingDeviceItem>;
-    parameters?: pulumi.Input<inputs.devices.LiveToolsPingDeviceParameters>;
+    item?: pulumi.Input<inputs.devices.LiveToolsPingDeviceItem | undefined>;
+    parameters?: pulumi.Input<inputs.devices.LiveToolsPingDeviceParameters | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

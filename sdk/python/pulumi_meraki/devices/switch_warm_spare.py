@@ -20,8 +20,8 @@ __all__ = ['SwitchWarmSpareArgs', 'SwitchWarmSpare']
 class SwitchWarmSpareArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchWarmSpare resource.
 
@@ -49,36 +49,36 @@ class SwitchWarmSpareArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable warm spare for a switch
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="spareSerial")
-    def spare_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spare_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the warm spare switch
         """
         return pulumi.get(self, "spare_serial")
 
     @spare_serial.setter
-    def spare_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spare_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spare_serial", value)
 
 
 @pulumi.input_type
 class _SwitchWarmSpareState:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 primary_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchWarmSpare resources.
 
@@ -98,50 +98,50 @@ class _SwitchWarmSpareState:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable warm spare for a switch
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySerial")
-    def primary_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the primary switch
         """
         return pulumi.get(self, "primary_serial")
 
     @primary_serial.setter
-    def primary_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="spareSerial")
-    def spare_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spare_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the warm spare switch
         """
         return pulumi.get(self, "spare_serial")
 
     @spare_serial.setter
-    def spare_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spare_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spare_serial", value)
 
 
@@ -151,9 +151,9 @@ class SwitchWarmSpare(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -224,9 +224,9 @@ class SwitchWarmSpare(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 spare_serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -252,10 +252,10 @@ class SwitchWarmSpare(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            primary_serial: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            spare_serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchWarmSpare':
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            spare_serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchWarmSpare':
         """
         Get an existing SwitchWarmSpare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

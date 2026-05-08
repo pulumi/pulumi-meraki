@@ -102,12 +102,12 @@ export class NetworksCombine extends pulumi.CustomResource {
  * Input properties used for looking up and filtering NetworksCombine resources.
  */
 export interface NetworksCombineState {
-    item?: pulumi.Input<inputs.organizations.NetworksCombineItem>;
+    item?: pulumi.Input<inputs.organizations.NetworksCombineItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.NetworksCombineParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.NetworksCombineParameters | undefined>;
 }
 
 /**

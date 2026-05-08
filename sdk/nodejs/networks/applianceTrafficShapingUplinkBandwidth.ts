@@ -111,11 +111,11 @@ export interface ApplianceTrafficShapingUplinkBandwidthState {
     /**
      * A hash uplink keys and their configured settings for the Appliance
      */
-    bandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits>;
+    bandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -125,7 +125,7 @@ export interface ApplianceTrafficShapingUplinkBandwidthArgs {
     /**
      * A hash uplink keys and their configured settings for the Appliance
      */
-    bandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits>;
+    bandwidthLimits?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */

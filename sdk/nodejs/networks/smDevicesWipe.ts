@@ -100,12 +100,12 @@ export class SmDevicesWipe extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesWipe resources.
  */
 export interface SmDevicesWipeState {
-    item?: pulumi.Input<inputs.networks.SmDevicesWipeItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesWipeItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesWipeParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesWipeParameters | undefined>;
 }
 
 /**

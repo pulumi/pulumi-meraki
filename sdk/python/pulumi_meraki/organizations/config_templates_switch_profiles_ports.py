@@ -25,29 +25,29 @@ class ConfigTemplatesSwitchProfilesPortsArgs:
                  organization_id: pulumi.Input[_builtins.str],
                  port_id: pulumi.Input[_builtins.str],
                  profile_id: pulumi.Input[_builtins.str],
-                 access_policy_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 access_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 dai_trusted: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flexible_stacking_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 isolation_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 link_negotiation: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sticky_mac_allow_list_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 sticky_mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 storm_control_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_guard: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 udld: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 udld: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a ConfigTemplatesSwitchProfilesPorts resource.
 
@@ -180,314 +180,314 @@ class ConfigTemplatesSwitchProfilesPortsArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessPolicyNumber")
-    def access_policy_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def access_policy_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
         """
         return pulumi.get(self, "access_policy_number")
 
     @access_policy_number.setter
-    def access_policy_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def access_policy_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "access_policy_number", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPolicyType")
-    def access_policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_policy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "access_policy_type")
 
     @access_policy_type.setter
-    def access_policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_policy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_policy_type", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedVlans")
-    def allowed_vlans(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allowed_vlans(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The VLANs allowed on the switch template port. Only applicable to trunk ports.
         """
         return pulumi.get(self, "allowed_vlans")
 
     @allowed_vlans.setter
-    def allowed_vlans(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allowed_vlans(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allowed_vlans", value)
 
     @_builtins.property
     @pulumi.getter(name="daiTrusted")
-    def dai_trusted(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dai_trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
         """
         return pulumi.get(self, "dai_trusted")
 
     @dai_trusted.setter
-    def dai_trusted(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dai_trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dai_trusted", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The status of the switch template port.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="flexibleStackingEnabled")
-    def flexible_stacking_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flexible_stacking_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
         """
         return pulumi.get(self, "flexible_stacking_enabled")
 
     @flexible_stacking_enabled.setter
-    def flexible_stacking_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flexible_stacking_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flexible_stacking_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="isolationEnabled")
-    def isolation_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def isolation_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The isolation status of the switch template port.
         """
         return pulumi.get(self, "isolation_enabled")
 
     @isolation_enabled.setter
-    def isolation_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def isolation_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "isolation_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="linkNegotiation")
-    def link_negotiation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_negotiation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The link speed for the switch template port.
         """
         return pulumi.get(self, "link_negotiation")
 
     @link_negotiation.setter
-    def link_negotiation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_negotiation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_negotiation", value)
 
     @_builtins.property
     @pulumi.getter(name="macAllowLists")
-    def mac_allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def mac_allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
         """
         return pulumi.get(self, "mac_allow_lists")
 
     @mac_allow_lists.setter
-    def mac_allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def mac_allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "mac_allow_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the switch template port.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="poeEnabled")
-    def poe_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def poe_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The PoE status of the switch template port.
         """
         return pulumi.get(self, "poe_enabled")
 
     @poe_enabled.setter
-    def poe_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def poe_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "poe_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="portScheduleId")
-    def port_schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the port schedule. A value of null will clear the port schedule.
         """
         return pulumi.get(self, "port_schedule_id")
 
     @port_schedule_id.setter
-    def port_schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_schedule_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def profile(self) -> Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']]:
+    def profile(self) -> pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']]:
         """
         Profile attributes
         """
         return pulumi.get(self, "profile")
 
     @profile.setter
-    def profile(self, value: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']]):
+    def profile(self, value: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']]):
         pulumi.set(self, "profile", value)
 
     @_builtins.property
     @pulumi.getter(name="rstpEnabled")
-    def rstp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rstp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The rapid spanning tree protocol status.
         """
         return pulumi.get(self, "rstp_enabled")
 
     @rstp_enabled.setter
-    def rstp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rstp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rstp_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stickyMacAllowListLimit")
-    def sticky_mac_allow_list_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sticky_mac_allow_list_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "sticky_mac_allow_list_limit")
 
     @sticky_mac_allow_list_limit.setter
-    def sticky_mac_allow_list_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sticky_mac_allow_list_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sticky_mac_allow_list_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="stickyMacAllowLists")
-    def sticky_mac_allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def sticky_mac_allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "sticky_mac_allow_lists")
 
     @sticky_mac_allow_lists.setter
-    def sticky_mac_allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def sticky_mac_allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "sticky_mac_allow_lists", value)
 
     @_builtins.property
     @pulumi.getter(name="stormControlEnabled")
-    def storm_control_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def storm_control_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The storm control status of the switch template port.
         """
         return pulumi.get(self, "storm_control_enabled")
 
     @storm_control_enabled.setter
-    def storm_control_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def storm_control_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "storm_control_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stpGuard")
-    def stp_guard(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def stp_guard(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
         """
         return pulumi.get(self, "stp_guard")
 
     @stp_guard.setter
-    def stp_guard(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def stp_guard(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "stp_guard", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of tags of the switch template port.
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the switch template port ('trunk' or 'access').
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def udld(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udld(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
         """
         return pulumi.get(self, "udld")
 
     @udld.setter
-    def udld(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udld(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udld", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
     @_builtins.property
     @pulumi.getter(name="voiceVlan")
-    def voice_vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def voice_vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The voice VLAN of the switch template port. Only applicable to access ports.
         """
         return pulumi.get(self, "voice_vlan")
 
     @voice_vlan.setter
-    def voice_vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def voice_vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "voice_vlan", value)
 
 
 @pulumi.input_type
 class _ConfigTemplatesSwitchProfilesPortsState:
     def __init__(__self__, *,
-                 access_policy_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 access_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 config_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 dai_trusted: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flexible_stacking_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 isolation_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 link_negotiation: Optional[pulumi.Input[_builtins.str]] = None,
-                 link_negotiation_capabilities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 mirror: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsMirrorArgs']] = None,
-                 module: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsModuleArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sticky_mac_allow_list_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 sticky_mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 storm_control_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_guard: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 udld: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+                 link_negotiation_capabilities: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mirror: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsMirrorArgs']] = None,
+                 module: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsModuleArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 udld: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ConfigTemplatesSwitchProfilesPorts resources.
 
@@ -585,362 +585,362 @@ class _ConfigTemplatesSwitchProfilesPortsState:
 
     @_builtins.property
     @pulumi.getter(name="accessPolicyNumber")
-    def access_policy_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def access_policy_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
         """
         return pulumi.get(self, "access_policy_number")
 
     @access_policy_number.setter
-    def access_policy_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def access_policy_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "access_policy_number", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPolicyType")
-    def access_policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_policy_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "access_policy_type")
 
     @access_policy_type.setter
-    def access_policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_policy_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_policy_type", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedVlans")
-    def allowed_vlans(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allowed_vlans(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The VLANs allowed on the switch template port. Only applicable to trunk ports.
         """
         return pulumi.get(self, "allowed_vlans")
 
     @allowed_vlans.setter
-    def allowed_vlans(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allowed_vlans(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allowed_vlans", value)
 
     @_builtins.property
     @pulumi.getter(name="configTemplateId")
-    def config_template_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def config_template_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         configTemplateId path parameter. Config template ID
         """
         return pulumi.get(self, "config_template_id")
 
     @config_template_id.setter
-    def config_template_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def config_template_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "config_template_id", value)
 
     @_builtins.property
     @pulumi.getter(name="daiTrusted")
-    def dai_trusted(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dai_trusted(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
         """
         return pulumi.get(self, "dai_trusted")
 
     @dai_trusted.setter
-    def dai_trusted(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dai_trusted(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dai_trusted", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The status of the switch template port.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="flexibleStackingEnabled")
-    def flexible_stacking_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flexible_stacking_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
         """
         return pulumi.get(self, "flexible_stacking_enabled")
 
     @flexible_stacking_enabled.setter
-    def flexible_stacking_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flexible_stacking_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flexible_stacking_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="isolationEnabled")
-    def isolation_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def isolation_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The isolation status of the switch template port.
         """
         return pulumi.get(self, "isolation_enabled")
 
     @isolation_enabled.setter
-    def isolation_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def isolation_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "isolation_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="linkNegotiation")
-    def link_negotiation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_negotiation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The link speed for the switch template port.
         """
         return pulumi.get(self, "link_negotiation")
 
     @link_negotiation.setter
-    def link_negotiation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_negotiation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_negotiation", value)
 
     @_builtins.property
     @pulumi.getter(name="linkNegotiationCapabilities")
-    def link_negotiation_capabilities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def link_negotiation_capabilities(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Available link speeds for the switch template port.
         """
         return pulumi.get(self, "link_negotiation_capabilities")
 
     @link_negotiation_capabilities.setter
-    def link_negotiation_capabilities(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def link_negotiation_capabilities(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "link_negotiation_capabilities", value)
 
     @_builtins.property
     @pulumi.getter(name="macAllowLists")
-    def mac_allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def mac_allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
         """
         return pulumi.get(self, "mac_allow_lists")
 
     @mac_allow_lists.setter
-    def mac_allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def mac_allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "mac_allow_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def mirror(self) -> Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsMirrorArgs']]:
+    def mirror(self) -> pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsMirrorArgs']]:
         """
         Port mirror
         """
         return pulumi.get(self, "mirror")
 
     @mirror.setter
-    def mirror(self, value: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsMirrorArgs']]):
+    def mirror(self, value: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsMirrorArgs']]):
         pulumi.set(self, "mirror", value)
 
     @_builtins.property
     @pulumi.getter
-    def module(self) -> Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsModuleArgs']]:
+    def module(self) -> pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsModuleArgs']]:
         """
         Expansion module
         """
         return pulumi.get(self, "module")
 
     @module.setter
-    def module(self, value: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsModuleArgs']]):
+    def module(self, value: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsModuleArgs']]):
         pulumi.set(self, "module", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the switch template port.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="poeEnabled")
-    def poe_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def poe_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The PoE status of the switch template port.
         """
         return pulumi.get(self, "poe_enabled")
 
     @poe_enabled.setter
-    def poe_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def poe_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "poe_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="portId")
-    def port_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The identifier of the switch template port.
         """
         return pulumi.get(self, "port_id")
 
     @port_id.setter
-    def port_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_id", value)
 
     @_builtins.property
     @pulumi.getter(name="portScheduleId")
-    def port_schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the port schedule. A value of null will clear the port schedule.
         """
         return pulumi.get(self, "port_schedule_id")
 
     @port_schedule_id.setter
-    def port_schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_schedule_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def profile(self) -> Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']]:
+    def profile(self) -> pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']]:
         """
         Profile attributes
         """
         return pulumi.get(self, "profile")
 
     @profile.setter
-    def profile(self, value: Optional[pulumi.Input['ConfigTemplatesSwitchProfilesPortsProfileArgs']]):
+    def profile(self, value: pulumi.Input[Optional['ConfigTemplatesSwitchProfilesPortsProfileArgs']]):
         pulumi.set(self, "profile", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         profileId path parameter. Profile ID
         """
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="rstpEnabled")
-    def rstp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rstp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The rapid spanning tree protocol status.
         """
         return pulumi.get(self, "rstp_enabled")
 
     @rstp_enabled.setter
-    def rstp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rstp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rstp_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stickyMacAllowListLimit")
-    def sticky_mac_allow_list_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sticky_mac_allow_list_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "sticky_mac_allow_list_limit")
 
     @sticky_mac_allow_list_limit.setter
-    def sticky_mac_allow_list_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sticky_mac_allow_list_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sticky_mac_allow_list_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="stickyMacAllowLists")
-    def sticky_mac_allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def sticky_mac_allow_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
         """
         return pulumi.get(self, "sticky_mac_allow_lists")
 
     @sticky_mac_allow_lists.setter
-    def sticky_mac_allow_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def sticky_mac_allow_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "sticky_mac_allow_lists", value)
 
     @_builtins.property
     @pulumi.getter(name="stormControlEnabled")
-    def storm_control_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def storm_control_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The storm control status of the switch template port.
         """
         return pulumi.get(self, "storm_control_enabled")
 
     @storm_control_enabled.setter
-    def storm_control_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def storm_control_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "storm_control_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="stpGuard")
-    def stp_guard(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def stp_guard(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
         """
         return pulumi.get(self, "stp_guard")
 
     @stp_guard.setter
-    def stp_guard(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def stp_guard(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "stp_guard", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of tags of the switch template port.
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the switch template port ('trunk' or 'access').
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def udld(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udld(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
         """
         return pulumi.get(self, "udld")
 
     @udld.setter
-    def udld(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udld(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udld", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
     @_builtins.property
     @pulumi.getter(name="voiceVlan")
-    def voice_vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def voice_vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The voice VLAN of the switch template port. Only applicable to access ports.
         """
         return pulumi.get(self, "voice_vlan")
 
     @voice_vlan.setter
-    def voice_vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def voice_vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "voice_vlan", value)
 
 
@@ -950,33 +950,33 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_policy_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 access_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 config_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 dai_trusted: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flexible_stacking_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 isolation_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 link_negotiation: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sticky_mac_allow_list_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 sticky_mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 storm_control_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_guard: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 udld: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 udld: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -1145,33 +1145,33 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_policy_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 access_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 config_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 dai_trusted: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flexible_stacking_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 isolation_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 link_negotiation: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sticky_mac_allow_list_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 sticky_mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 storm_control_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 stp_guard: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 udld: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
-                 voice_vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 udld: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
+                 voice_vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1229,36 +1229,36 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_policy_number: Optional[pulumi.Input[_builtins.int]] = None,
-            access_policy_type: Optional[pulumi.Input[_builtins.str]] = None,
-            allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-            config_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-            dai_trusted: Optional[pulumi.Input[_builtins.bool]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            flexible_stacking_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            isolation_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            link_negotiation: Optional[pulumi.Input[_builtins.str]] = None,
-            link_negotiation_capabilities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            mirror: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsMirrorArgs', 'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict']]] = None,
-            module: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsModuleArgs', 'ConfigTemplatesSwitchProfilesPortsModuleArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            port_id: Optional[pulumi.Input[_builtins.str]] = None,
-            port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-            profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
-            profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rstp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            sticky_mac_allow_list_limit: Optional[pulumi.Input[_builtins.int]] = None,
-            sticky_mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            storm_control_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            stp_guard: Optional[pulumi.Input[_builtins.str]] = None,
-            tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            udld: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan: Optional[pulumi.Input[_builtins.int]] = None,
-            voice_vlan: Optional[pulumi.Input[_builtins.int]] = None) -> 'ConfigTemplatesSwitchProfilesPorts':
+            access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+            access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+            config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+            link_negotiation_capabilities: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mirror: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsMirrorArgs', 'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict']]] = None,
+            module: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsModuleArgs', 'ConfigTemplatesSwitchProfilesPortsModuleArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            port_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            profile: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            udld: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None,
+            voice_vlan: pulumi.Input[Optional[_builtins.int]] = None) -> 'ConfigTemplatesSwitchProfilesPorts':
         """
         Get an existing ConfigTemplatesSwitchProfilesPorts resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

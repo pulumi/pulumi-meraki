@@ -23,9 +23,9 @@ class WirelessSsidsBonjourForwardingArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 exception: Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 exception: pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsBonjourForwarding resource.
 
@@ -70,49 +70,49 @@ class WirelessSsidsBonjourForwardingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, Bonjour forwarding is enabled on the SSID.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def exception(self) -> Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']]:
+    def exception(self) -> pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']]:
         """
         Bonjour forwarding exception
         """
         return pulumi.get(self, "exception")
 
     @exception.setter
-    def exception(self, value: Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']]):
+    def exception(self, value: pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']]):
         pulumi.set(self, "exception", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]:
         """
         Bonjour forwarding rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsBonjourForwardingState:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 exception: Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 exception: pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsBonjourForwarding resources.
 
@@ -135,62 +135,62 @@ class _WirelessSsidsBonjourForwardingState:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, Bonjour forwarding is enabled on the SSID.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def exception(self) -> Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']]:
+    def exception(self) -> pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']]:
         """
         Bonjour forwarding exception
         """
         return pulumi.get(self, "exception")
 
     @exception.setter
-    def exception(self, value: Optional[pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs']]):
+    def exception(self, value: pulumi.Input[Optional['WirelessSsidsBonjourForwardingExceptionArgs']]):
         pulumi.set(self, "exception", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]:
         """
         Bonjour forwarding rules
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
@@ -200,11 +200,11 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 exception: Optional[pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -293,11 +293,11 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 exception: Optional[pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -326,11 +326,11 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            exception: Optional[pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None) -> 'WirelessSsidsBonjourForwarding':
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None) -> 'WirelessSsidsBonjourForwarding':
         """
         Get an existing WirelessSsidsBonjourForwarding resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

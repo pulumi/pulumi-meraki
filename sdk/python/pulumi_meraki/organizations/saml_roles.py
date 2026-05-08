@@ -22,11 +22,11 @@ __all__ = ['SamlRolesArgs', 'SamlRoles']
 class SamlRolesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 saml_role_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
         """
         The set of arguments for constructing a SamlRoles resource.
 
@@ -63,75 +63,75 @@ class SamlRolesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]:
         """
         The list of networks that the SAML administrator has privileges on
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter(name="orgAccess")
-    def org_access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def org_access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The privilege of the SAML administrator on the organization
         """
         return pulumi.get(self, "org_access")
 
     @org_access.setter
-    def org_access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def org_access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "org_access", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The role of the SAML administrator
         """
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="samlRoleId")
-    def saml_role_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def saml_role_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         samlRoleId path parameter. Saml role ID
         """
         return pulumi.get(self, "saml_role_id")
 
     @saml_role_id.setter
-    def saml_role_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def saml_role_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "saml_role_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]]:
         """
         The list of tags that the SAML administrator has privleges on
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]]):
         pulumi.set(self, "tags", value)
 
 
 @pulumi.input_type
 class _SamlRolesState:
     def __init__(__self__, *,
-                 cameras: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesCameraArgs']]]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 saml_role_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
+                 cameras: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesCameraArgs']]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
         """
         Input properties used for looking up and filtering SamlRoles resources.
 
@@ -160,86 +160,86 @@ class _SamlRolesState:
 
     @_builtins.property
     @pulumi.getter
-    def cameras(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesCameraArgs']]]]:
+    def cameras(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesCameraArgs']]]]:
         """
         The list of camera access privileges for SAML administrator
         """
         return pulumi.get(self, "cameras")
 
     @cameras.setter
-    def cameras(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesCameraArgs']]]]):
+    def cameras(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesCameraArgs']]]]):
         pulumi.set(self, "cameras", value)
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]:
         """
         The list of networks that the SAML administrator has privileges on
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter(name="orgAccess")
-    def org_access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def org_access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The privilege of the SAML administrator on the organization
         """
         return pulumi.get(self, "org_access")
 
     @org_access.setter
-    def org_access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def org_access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "org_access", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The role of the SAML administrator
         """
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="samlRoleId")
-    def saml_role_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def saml_role_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         samlRoleId path parameter. Saml role ID
         """
         return pulumi.get(self, "saml_role_id")
 
     @saml_role_id.setter
-    def saml_role_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def saml_role_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "saml_role_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]]:
         """
         The list of tags that the SAML administrator has privleges on
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SamlRolesTagArgs']]]]):
         pulumi.set(self, "tags", value)
 
 
@@ -249,12 +249,12 @@ class SamlRoles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 saml_role_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -344,12 +344,12 @@ class SamlRoles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
-                 org_access: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 saml_role_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+                 org_access: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -378,13 +378,13 @@ class SamlRoles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cameras: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict']]]]] = None,
-            networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
-            org_access: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            role: Optional[pulumi.Input[_builtins.str]] = None,
-            saml_role_id: Optional[pulumi.Input[_builtins.str]] = None,
-            tags: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None) -> 'SamlRoles':
+            cameras: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict']]]]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+            org_access: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            role: pulumi.Input[Optional[_builtins.str]] = None,
+            saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None) -> 'SamlRoles':
         """
         Get an existing SamlRoles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

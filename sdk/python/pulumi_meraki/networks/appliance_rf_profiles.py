@@ -22,11 +22,11 @@ __all__ = ['ApplianceRfProfilesArgs', 'ApplianceRfProfiles']
 class ApplianceRfProfilesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 five_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 per_ssid_settings: Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 per_ssid_settings: pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceRfProfiles resource.
 
@@ -63,74 +63,74 @@ class ApplianceRfProfilesArgs:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']]:
         """
         Settings related to 5Ghz band.
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the profile.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="perSsidSettings")
-    def per_ssid_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']]:
+    def per_ssid_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']]:
         """
         Per-SSID radio settings by number.
         """
         return pulumi.get(self, "per_ssid_settings")
 
     @per_ssid_settings.setter
-    def per_ssid_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']]):
+    def per_ssid_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']]):
         pulumi.set(self, "per_ssid_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         rfProfileId path parameter. Rf profile ID
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']]:
         """
         Settings related to 2.4Ghz band.
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
 @pulumi.input_type
 class _ApplianceRfProfilesState:
     def __init__(__self__, *,
-                 five_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 per_ssid_settings: Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
+                 five_ghz_settings: pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 per_ssid_settings: pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceRfProfiles resources.
 
@@ -156,74 +156,74 @@ class _ApplianceRfProfilesState:
 
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
-    def five_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']]:
+    def five_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']]:
         """
         Settings related to 5Ghz band.
         """
         return pulumi.get(self, "five_ghz_settings")
 
     @five_ghz_settings.setter
-    def five_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs']]):
+    def five_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesFiveGhzSettingsArgs']]):
         pulumi.set(self, "five_ghz_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the profile.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of network this RF Profile belongs in.
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="perSsidSettings")
-    def per_ssid_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']]:
+    def per_ssid_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']]:
         """
         Per-SSID radio settings by number.
         """
         return pulumi.get(self, "per_ssid_settings")
 
     @per_ssid_settings.setter
-    def per_ssid_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesPerSsidSettingsArgs']]):
+    def per_ssid_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsArgs']]):
         pulumi.set(self, "per_ssid_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rf_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         rfProfileId path parameter. Rf profile ID
         """
         return pulumi.get(self, "rf_profile_id")
 
     @rf_profile_id.setter
-    def rf_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rf_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rf_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="twoFourGhzSettings")
-    def two_four_ghz_settings(self) -> Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']]:
+    def two_four_ghz_settings(self) -> pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']]:
         """
         Settings related to 2.4Ghz band.
         """
         return pulumi.get(self, "two_four_ghz_settings")
 
     @two_four_ghz_settings.setter
-    def two_four_ghz_settings(self, value: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']]):
+    def two_four_ghz_settings(self, value: pulumi.Input[Optional['ApplianceRfProfilesTwoFourGhzSettingsArgs']]):
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
@@ -233,12 +233,12 @@ class ApplianceRfProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 per_ssid_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 per_ssid_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -274,7 +274,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
             },
             two_four_ghz_settings={
                 "ax_enabled": True,
-                "min_bitrate": 12,
+                "min_bitrate": float(12),
             })
         pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
         ```
@@ -335,7 +335,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
             },
             two_four_ghz_settings={
                 "ax_enabled": True,
-                "min_bitrate": 12,
+                "min_bitrate": float(12),
             })
         pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
         ```
@@ -362,12 +362,12 @@ class ApplianceRfProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 per_ssid_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
-                 rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 per_ssid_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
+                 rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -395,12 +395,12 @@ class ApplianceRfProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            five_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            per_ssid_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
-            rf_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            two_four_ghz_settings: Optional[pulumi.Input[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None) -> 'ApplianceRfProfiles':
+            five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            per_ssid_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict']]] = None) -> 'ApplianceRfProfiles':
         """
         Get an existing ApplianceRfProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

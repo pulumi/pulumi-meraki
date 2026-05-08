@@ -22,11 +22,11 @@ __all__ = ['SwitchDhcpServerPolicyArgs', 'SwitchDhcpServerPolicy']
 class SwitchDhcpServerPolicyArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 alerts: Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']] = None,
-                 allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']] = None,
-                 blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_policy: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']] = None,
+                 allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 arp_inspection: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']] = None,
+                 blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_policy: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchDhcpServerPolicy resource.
 
@@ -65,19 +65,19 @@ class SwitchDhcpServerPolicyArgs:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']]:
+    def alerts(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']]:
         """
         Email alert settings for DHCP servers
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']]):
+    def alerts(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedServers")
-    def allowed_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allowed_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
           to block.An empty array will clear the entries.
@@ -85,24 +85,24 @@ class SwitchDhcpServerPolicyArgs:
         return pulumi.get(self, "allowed_servers")
 
     @allowed_servers.setter
-    def allowed_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allowed_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allowed_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="arpInspection")
-    def arp_inspection(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']]:
+    def arp_inspection(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']]:
         """
         Dynamic ARP Inspection settings
         """
         return pulumi.get(self, "arp_inspection")
 
     @arp_inspection.setter
-    def arp_inspection(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']]):
+    def arp_inspection(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']]):
         pulumi.set(self, "arp_inspection", value)
 
     @_builtins.property
     @pulumi.getter(name="blockedServers")
-    def blocked_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def blocked_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
           to allow.An empty array will clear the entries.
@@ -110,31 +110,31 @@ class SwitchDhcpServerPolicyArgs:
         return pulumi.get(self, "blocked_servers")
 
     @blocked_servers.setter
-    def blocked_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def blocked_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "blocked_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultPolicy")
-    def default_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'allow' or 'block' new DHCP servers. Default value is 'allow'.
         """
         return pulumi.get(self, "default_policy")
 
     @default_policy.setter
-    def default_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_policy", value)
 
 
 @pulumi.input_type
 class _SwitchDhcpServerPolicyState:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']] = None,
-                 allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']] = None,
-                 blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']] = None,
+                 allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 arp_inspection: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']] = None,
+                 blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchDhcpServerPolicy resources.
 
@@ -162,19 +162,19 @@ class _SwitchDhcpServerPolicyState:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']]:
+    def alerts(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']]:
         """
         Email alert settings for DHCP servers
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyAlertsArgs']]):
+    def alerts(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsArgs']]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedServers")
-    def allowed_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def allowed_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
           to block.An empty array will clear the entries.
@@ -182,24 +182,24 @@ class _SwitchDhcpServerPolicyState:
         return pulumi.get(self, "allowed_servers")
 
     @allowed_servers.setter
-    def allowed_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def allowed_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "allowed_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="arpInspection")
-    def arp_inspection(self) -> Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']]:
+    def arp_inspection(self) -> pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']]:
         """
         Dynamic ARP Inspection settings
         """
         return pulumi.get(self, "arp_inspection")
 
     @arp_inspection.setter
-    def arp_inspection(self, value: Optional[pulumi.Input['SwitchDhcpServerPolicyArpInspectionArgs']]):
+    def arp_inspection(self, value: pulumi.Input[Optional['SwitchDhcpServerPolicyArpInspectionArgs']]):
         pulumi.set(self, "arp_inspection", value)
 
     @_builtins.property
     @pulumi.getter(name="blockedServers")
-    def blocked_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def blocked_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
           to allow.An empty array will clear the entries.
@@ -207,31 +207,31 @@ class _SwitchDhcpServerPolicyState:
         return pulumi.get(self, "blocked_servers")
 
     @blocked_servers.setter
-    def blocked_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def blocked_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "blocked_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultPolicy")
-    def default_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'allow' or 'block' new DHCP servers. Default value is 'allow'.
         """
         return pulumi.get(self, "default_policy")
 
     @default_policy.setter
-    def default_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_policy", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -241,12 +241,12 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
-                 allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
-                 blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
+                 allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 arp_inspection: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
+                 blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -352,12 +352,12 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
-                 allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
-                 blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 default_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
+                 allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 arp_inspection: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
+                 blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -385,12 +385,12 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
-            allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
-            blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            default_policy: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchDhcpServerPolicy':
+            alerts: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
+            allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            arp_inspection: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
+            blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchDhcpServerPolicy':
         """
         Get an existing SwitchDhcpServerPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

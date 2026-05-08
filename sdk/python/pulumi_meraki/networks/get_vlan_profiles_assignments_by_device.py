@@ -201,13 +201,13 @@ def get_vlan_profiles_assignments_by_device(ending_before: Optional[_builtins.st
         serials=pulumi.get(__ret__, 'serials'),
         stack_ids=pulumi.get(__ret__, 'stack_ids'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-def get_vlan_profiles_assignments_by_device_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                   per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                   product_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                   serials: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                   stack_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                   starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_vlan_profiles_assignments_by_device_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                   per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                   product_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                   serials: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                   stack_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                   starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVlanProfilesAssignmentsByDeviceResult]:
     """
     ## Example Usage

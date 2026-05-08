@@ -173,11 +173,11 @@ export interface GetWirelessClientsConnectionStatsOutputArgs {
     /**
      * apTag query parameter. Filter results by AP Tag
      */
-    apTag?: pulumi.Input<string>;
+    apTag?: pulumi.Input<string | undefined>;
     /**
      * band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
      */
-    band?: pulumi.Input<string>;
+    band?: pulumi.Input<string | undefined>;
     /**
      * clientId path parameter. Client ID
      */
@@ -189,21 +189,21 @@ export interface GetWirelessClientsConnectionStatsOutputArgs {
     /**
      * ssid query parameter. Filter results by SSID
      */
-    ssid?: pulumi.Input<number>;
+    ssid?: pulumi.Input<number | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
     /**
      * vlan query parameter. Filter results by VLAN
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }

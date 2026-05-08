@@ -23,17 +23,17 @@ class ApplianceSsidsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.int],
-                 auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']] = None,
-                 dot11w: Optional[pulumi.Input['ApplianceSsidsDot11wArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]] = None,
-                 visible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']] = None,
+                 dot11w: pulumi.Input[Optional['ApplianceSsidsDot11wArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]] = None,
+                 visible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceSsids resource.
 
@@ -102,154 +102,154 @@ class ApplianceSsidsArgs:
 
     @_builtins.property
     @pulumi.getter(name="authMode")
-    def auth_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auth_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The association control method for the SSID.
         """
         return pulumi.get(self, "auth_mode")
 
     @auth_mode.setter
-    def auth_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auth_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auth_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultVlanId")
-    def default_vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN ID of the VLAN associated to this SSID.
         """
         return pulumi.get(self, "default_vlan_id")
 
     @default_vlan_id.setter
-    def default_vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpEnforcedDeauthentication")
-    def dhcp_enforced_deauthentication(self) -> Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]:
+    def dhcp_enforced_deauthentication(self) -> pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]:
         """
         DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
         """
         return pulumi.get(self, "dhcp_enforced_deauthentication")
 
     @dhcp_enforced_deauthentication.setter
-    def dhcp_enforced_deauthentication(self, value: Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]):
+    def dhcp_enforced_deauthentication(self, value: pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]):
         pulumi.set(self, "dhcp_enforced_deauthentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def dot11w(self) -> Optional[pulumi.Input['ApplianceSsidsDot11wArgs']]:
+    def dot11w(self) -> pulumi.Input[Optional['ApplianceSsidsDot11wArgs']]:
         """
         The current setting for Protected Management Frames (802.11w).
         """
         return pulumi.get(self, "dot11w")
 
     @dot11w.setter
-    def dot11w(self, value: Optional[pulumi.Input['ApplianceSsidsDot11wArgs']]):
+    def dot11w(self, value: pulumi.Input[Optional['ApplianceSsidsDot11wArgs']]):
         pulumi.set(self, "dot11w", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not the SSID is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptionMode")
-    def encryption_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def encryption_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The psk encryption mode for the SSID.
         """
         return pulumi.get(self, "encryption_mode")
 
     @encryption_mode.setter
-    def encryption_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def encryption_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "encryption_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SSID.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def psk(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The passkey for the SSID. This param is only valid if the authMode is 'psk'.
         """
         return pulumi.get(self, "psk")
 
     @psk.setter
-    def psk(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusServers")
-    def radius_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]:
+    def radius_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]:
         """
         The RADIUS 802.1x servers to be used for authentication.
         """
         return pulumi.get(self, "radius_servers")
 
     @radius_servers.setter
-    def radius_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]):
+    def radius_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]):
         pulumi.set(self, "radius_servers", value)
 
     @_builtins.property
     @pulumi.getter
-    def visible(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def visible(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether the MX should advertise or hide this SSID.
         """
         return pulumi.get(self, "visible")
 
     @visible.setter
-    def visible(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def visible(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "visible", value)
 
     @_builtins.property
     @pulumi.getter(name="wpaEncryptionMode")
-    def wpa_encryption_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wpa_encryption_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         WPA encryption mode for the SSID.
         """
         return pulumi.get(self, "wpa_encryption_mode")
 
     @wpa_encryption_mode.setter
-    def wpa_encryption_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wpa_encryption_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wpa_encryption_mode", value)
 
 
 @pulumi.input_type
 class _ApplianceSsidsState:
     def __init__(__self__, *,
-                 auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']] = None,
-                 dot11w: Optional[pulumi.Input['ApplianceSsidsDot11wArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.int]] = None,
-                 psk: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]] = None,
-                 radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]] = None,
-                 visible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']] = None,
+                 dot11w: pulumi.Input[Optional['ApplianceSsidsDot11wArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.int]] = None,
+                 psk: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]] = None,
+                 radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]] = None,
+                 visible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSsids resources.
 
@@ -299,170 +299,170 @@ class _ApplianceSsidsState:
 
     @_builtins.property
     @pulumi.getter(name="authMode")
-    def auth_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auth_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The association control method for the SSID.
         """
         return pulumi.get(self, "auth_mode")
 
     @auth_mode.setter
-    def auth_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auth_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auth_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultVlanId")
-    def default_vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN ID of the VLAN associated to this SSID.
         """
         return pulumi.get(self, "default_vlan_id")
 
     @default_vlan_id.setter
-    def default_vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpEnforcedDeauthentication")
-    def dhcp_enforced_deauthentication(self) -> Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]:
+    def dhcp_enforced_deauthentication(self) -> pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]:
         """
         DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
         """
         return pulumi.get(self, "dhcp_enforced_deauthentication")
 
     @dhcp_enforced_deauthentication.setter
-    def dhcp_enforced_deauthentication(self, value: Optional[pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]):
+    def dhcp_enforced_deauthentication(self, value: pulumi.Input[Optional['ApplianceSsidsDhcpEnforcedDeauthenticationArgs']]):
         pulumi.set(self, "dhcp_enforced_deauthentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def dot11w(self) -> Optional[pulumi.Input['ApplianceSsidsDot11wArgs']]:
+    def dot11w(self) -> pulumi.Input[Optional['ApplianceSsidsDot11wArgs']]:
         """
         The current setting for Protected Management Frames (802.11w).
         """
         return pulumi.get(self, "dot11w")
 
     @dot11w.setter
-    def dot11w(self, value: Optional[pulumi.Input['ApplianceSsidsDot11wArgs']]):
+    def dot11w(self, value: pulumi.Input[Optional['ApplianceSsidsDot11wArgs']]):
         pulumi.set(self, "dot11w", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not the SSID is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="encryptionMode")
-    def encryption_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def encryption_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The psk encryption mode for the SSID.
         """
         return pulumi.get(self, "encryption_mode")
 
     @encryption_mode.setter
-    def encryption_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def encryption_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "encryption_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the SSID.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of the SSID.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def psk(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The passkey for the SSID. This param is only valid if the authMode is 'psk'.
         """
         return pulumi.get(self, "psk")
 
     @psk.setter
-    def psk(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusServers")
-    def radius_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]:
+    def radius_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]:
         """
         The RADIUS 802.1x servers to be used for authentication.
         """
         return pulumi.get(self, "radius_servers")
 
     @radius_servers.setter
-    def radius_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]):
+    def radius_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServerArgs']]]]):
         pulumi.set(self, "radius_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusServersResponses")
-    def radius_servers_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]]:
+    def radius_servers_responses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]]:
         """
         The RADIUS 802.1x servers to be used for authentication.
         """
         return pulumi.get(self, "radius_servers_responses")
 
     @radius_servers_responses.setter
-    def radius_servers_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]]):
+    def radius_servers_responses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSsidsRadiusServersResponseArgs']]]]):
         pulumi.set(self, "radius_servers_responses", value)
 
     @_builtins.property
     @pulumi.getter
-    def visible(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def visible(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether the MX should advertise or hide this SSID.
         """
         return pulumi.get(self, "visible")
 
     @visible.setter
-    def visible(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def visible(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "visible", value)
 
     @_builtins.property
     @pulumi.getter(name="wpaEncryptionMode")
-    def wpa_encryption_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wpa_encryption_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         WPA encryption mode for the SSID.
         """
         return pulumi.get(self, "wpa_encryption_mode")
 
     @wpa_encryption_mode.setter
-    def wpa_encryption_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wpa_encryption_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wpa_encryption_mode", value)
 
 
@@ -472,19 +472,19 @@ class ApplianceSsids(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: Optional[pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-                 dot11w: Optional[pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.int]] = None,
-                 psk: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
-                 visible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
+                 auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.int]] = None,
+                 psk: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
+                 visible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -507,7 +507,7 @@ class ApplianceSsids(pulumi.CustomResource):
             encryption_mode="wpa",
             name="My SSID",
             network_id="string",
-            number="string",
+            number=int("string"),
             psk="psk",
             radius_servers=[{
                 "host": "0.0.0.0",
@@ -569,7 +569,7 @@ class ApplianceSsids(pulumi.CustomResource):
             encryption_mode="wpa",
             name="My SSID",
             network_id="string",
-            number="string",
+            number=int("string"),
             psk="psk",
             radius_servers=[{
                 "host": "0.0.0.0",
@@ -603,19 +603,19 @@ class ApplianceSsids(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: Optional[pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-                 dot11w: Optional[pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.int]] = None,
-                 psk: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
-                 visible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
+                 auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.int]] = None,
+                 psk: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
+                 visible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -653,20 +653,20 @@ class ApplianceSsids(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            default_vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-            dhcp_enforced_deauthentication: Optional[pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-            dot11w: Optional[pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            encryption_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.int]] = None,
-            psk: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
-            radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict']]]]] = None,
-            visible: Optional[pulumi.Input[_builtins.bool]] = None,
-            wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceSsids':
+            auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
+            dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.int]] = None,
+            psk: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
+            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict']]]]] = None,
+            visible: pulumi.Input[Optional[_builtins.bool]] = None,
+            wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSsids':
         """
         Get an existing ApplianceSsids resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

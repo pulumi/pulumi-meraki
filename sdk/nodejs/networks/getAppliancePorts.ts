@@ -73,9 +73,9 @@ export interface GetAppliancePortsOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * portId path parameter. Port ID
      */
-    portId?: pulumi.Input<string>;
+    portId?: pulumi.Input<string | undefined>;
 }

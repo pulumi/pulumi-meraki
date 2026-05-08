@@ -110,19 +110,19 @@ export interface CameraCustomAnalyticsArtifactsState {
     /**
      * Custom analytics artifact ID
      */
-    artifactId?: pulumi.Input<string>;
+    artifactId?: pulumi.Input<string | undefined>;
     /**
      * Custom analytics artifact name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Custom analytics artifact status
      */
-    status?: pulumi.Input<inputs.organizations.CameraCustomAnalyticsArtifactsStatus>;
+    status?: pulumi.Input<inputs.organizations.CameraCustomAnalyticsArtifactsStatus | undefined>;
 }
 
 /**
@@ -132,11 +132,11 @@ export interface CameraCustomAnalyticsArtifactsArgs {
     /**
      * Custom analytics artifact ID
      */
-    artifactId?: pulumi.Input<string>;
+    artifactId?: pulumi.Input<string | undefined>;
     /**
      * Custom analytics artifact name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Organization ID
      */

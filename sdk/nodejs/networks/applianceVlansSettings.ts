@@ -96,11 +96,11 @@ export interface ApplianceVlansSettingsState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
      */
-    vlansEnabled?: pulumi.Input<boolean>;
+    vlansEnabled?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -114,5 +114,5 @@ export interface ApplianceVlansSettingsArgs {
     /**
      * Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
      */
-    vlansEnabled?: pulumi.Input<boolean>;
+    vlansEnabled?: pulumi.Input<boolean | undefined>;
 }

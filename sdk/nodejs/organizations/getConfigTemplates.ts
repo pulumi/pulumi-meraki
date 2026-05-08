@@ -73,9 +73,9 @@ export interface GetConfigTemplatesOutputArgs {
     /**
      * configTemplateId path parameter. Config template ID
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

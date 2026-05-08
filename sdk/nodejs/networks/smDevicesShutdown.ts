@@ -111,12 +111,12 @@ export class SmDevicesShutdown extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesShutdown resources.
  */
 export interface SmDevicesShutdownState {
-    item?: pulumi.Input<inputs.networks.SmDevicesShutdownItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesShutdownItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesShutdownParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesShutdownParameters | undefined>;
 }
 
 /**

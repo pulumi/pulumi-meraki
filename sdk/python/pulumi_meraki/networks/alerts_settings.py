@@ -22,9 +22,9 @@ __all__ = ['AlertsSettingsArgs', 'AlertsSettings']
 class AlertsSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]] = None,
-                 default_destinations: Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']] = None,
-                 muting: Optional[pulumi.Input['AlertsSettingsMutingArgs']] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]] = None,
+                 default_destinations: pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']] = None,
+                 muting: pulumi.Input[Optional['AlertsSettingsMutingArgs']] = None):
         """
         The set of arguments for constructing a AlertsSettings resource.
 
@@ -55,49 +55,49 @@ class AlertsSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]:
         """
         Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDestinations")
-    def default_destinations(self) -> Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']]:
+    def default_destinations(self) -> pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']]:
         """
         The network-wide destinations for all alerts on the network.
         """
         return pulumi.get(self, "default_destinations")
 
     @default_destinations.setter
-    def default_destinations(self, value: Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']]):
+    def default_destinations(self, value: pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']]):
         pulumi.set(self, "default_destinations", value)
 
     @_builtins.property
     @pulumi.getter
-    def muting(self) -> Optional[pulumi.Input['AlertsSettingsMutingArgs']]:
+    def muting(self) -> pulumi.Input[Optional['AlertsSettingsMutingArgs']]:
         """
         muting
         """
         return pulumi.get(self, "muting")
 
     @muting.setter
-    def muting(self, value: Optional[pulumi.Input['AlertsSettingsMutingArgs']]):
+    def muting(self, value: pulumi.Input[Optional['AlertsSettingsMutingArgs']]):
         pulumi.set(self, "muting", value)
 
 
 @pulumi.input_type
 class _AlertsSettingsState:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]] = None,
-                 alerts_responses: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]] = None,
-                 default_destinations: Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']] = None,
-                 muting: Optional[pulumi.Input['AlertsSettingsMutingArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]] = None,
+                 alerts_responses: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]] = None,
+                 default_destinations: pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']] = None,
+                 muting: pulumi.Input[Optional['AlertsSettingsMutingArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AlertsSettings resources.
 
@@ -120,62 +120,62 @@ class _AlertsSettingsState:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]:
         """
         Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="alertsResponses")
-    def alerts_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]]:
+    def alerts_responses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]]:
         """
         Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         """
         return pulumi.get(self, "alerts_responses")
 
     @alerts_responses.setter
-    def alerts_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]]):
+    def alerts_responses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]]]):
         pulumi.set(self, "alerts_responses", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDestinations")
-    def default_destinations(self) -> Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']]:
+    def default_destinations(self) -> pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']]:
         """
         The network-wide destinations for all alerts on the network.
         """
         return pulumi.get(self, "default_destinations")
 
     @default_destinations.setter
-    def default_destinations(self, value: Optional[pulumi.Input['AlertsSettingsDefaultDestinationsArgs']]):
+    def default_destinations(self, value: pulumi.Input[Optional['AlertsSettingsDefaultDestinationsArgs']]):
         pulumi.set(self, "default_destinations", value)
 
     @_builtins.property
     @pulumi.getter
-    def muting(self) -> Optional[pulumi.Input['AlertsSettingsMutingArgs']]:
+    def muting(self) -> pulumi.Input[Optional['AlertsSettingsMutingArgs']]:
         """
         muting
         """
         return pulumi.get(self, "muting")
 
     @muting.setter
-    def muting(self, value: Optional[pulumi.Input['AlertsSettingsMutingArgs']]):
+    def muting(self, value: pulumi.Input[Optional['AlertsSettingsMutingArgs']]):
         pulumi.set(self, "muting", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -185,10 +185,10 @@ class AlertsSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
-                 default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
-                 muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+                 default_destinations: pulumi.Input[Optional[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+                 muting: pulumi.Input[Optional[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -294,10 +294,10 @@ class AlertsSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
-                 default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
-                 muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+                 default_destinations: pulumi.Input[Optional[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+                 muting: pulumi.Input[Optional[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -324,11 +324,11 @@ class AlertsSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
-            alerts_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertsResponseArgs', 'AlertsSettingsAlertsResponseArgsDict']]]]] = None,
-            default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
-            muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'AlertsSettings':
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+            alerts_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AlertsSettingsAlertsResponseArgs', 'AlertsSettingsAlertsResponseArgsDict']]]]] = None,
+            default_destinations: pulumi.Input[Optional[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+            muting: pulumi.Input[Optional[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'AlertsSettings':
         """
         Get an existing AlertsSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

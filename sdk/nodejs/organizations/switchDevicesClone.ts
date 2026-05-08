@@ -102,8 +102,8 @@ export interface SwitchDevicesCloneState {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.SwitchDevicesCloneParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.SwitchDevicesCloneParameters | undefined>;
 }
 
 /**

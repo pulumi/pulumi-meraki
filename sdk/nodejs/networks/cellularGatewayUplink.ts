@@ -101,11 +101,11 @@ export interface CellularGatewayUplinkState {
     /**
      * The bandwidth settings for the 'cellular' uplink
      */
-    bandwidthLimits?: pulumi.Input<inputs.networks.CellularGatewayUplinkBandwidthLimits>;
+    bandwidthLimits?: pulumi.Input<inputs.networks.CellularGatewayUplinkBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -115,7 +115,7 @@ export interface CellularGatewayUplinkArgs {
     /**
      * The bandwidth settings for the 'cellular' uplink
      */
-    bandwidthLimits?: pulumi.Input<inputs.networks.CellularGatewayUplinkBandwidthLimits>;
+    bandwidthLimits?: pulumi.Input<inputs.networks.CellularGatewayUplinkBandwidthLimits | undefined>;
     /**
      * networkId path parameter. Network ID
      */

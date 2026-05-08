@@ -97,12 +97,12 @@ export class WirelessEthernetPortsProfilesSetDefault extends pulumi.CustomResour
  * Input properties used for looking up and filtering WirelessEthernetPortsProfilesSetDefault resources.
  */
 export interface WirelessEthernetPortsProfilesSetDefaultState {
-    item?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesSetDefaultItem>;
+    item?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesSetDefaultItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesSetDefaultParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesSetDefaultParameters | undefined>;
 }
 
 /**

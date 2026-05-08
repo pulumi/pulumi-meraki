@@ -113,8 +113,8 @@ def get_wireless_ssids_bonjour_forwarding(network_id: Optional[_builtins.str] = 
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         number=pulumi.get(__ret__, 'number'))
-def get_wireless_ssids_bonjour_forwarding_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                 number: Optional[pulumi.Input[_builtins.str]] = None,
+def get_wireless_ssids_bonjour_forwarding_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                 number: pulumi.Input[Optional[_builtins.str]] = None,
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsBonjourForwardingResult]:
     """
     ## Example Usage

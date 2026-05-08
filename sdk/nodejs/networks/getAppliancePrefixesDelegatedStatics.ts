@@ -73,9 +73,9 @@ export interface GetAppliancePrefixesDelegatedStaticsOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * staticDelegatedPrefixId path parameter. Static delegated prefix ID
      */
-    staticDelegatedPrefixId?: pulumi.Input<string>;
+    staticDelegatedPrefixId?: pulumi.Input<string | undefined>;
 }

@@ -152,7 +152,7 @@ def get_devices_uplinks_loss_and_latency(ip: Optional[_builtins.str] = None,
         organization_id="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         uplink="string")
     pulumi.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items)
     ```
@@ -184,12 +184,12 @@ def get_devices_uplinks_loss_and_latency(ip: Optional[_builtins.str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         uplink=pulumi.get(__ret__, 'uplink'))
-def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
-                                                uplink: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_devices_uplinks_loss_and_latency_output(ip: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
+                                                uplink: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesUplinksLossAndLatencyResult]:
     """
     ## Example Usage
@@ -202,7 +202,7 @@ def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Option
         organization_id="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         uplink="string")
     pulumi.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items)
     ```

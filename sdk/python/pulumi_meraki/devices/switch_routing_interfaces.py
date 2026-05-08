@@ -22,16 +22,16 @@ __all__ = ['SwitchRoutingInterfacesArgs', 'SwitchRoutingInterfaces']
 class SwitchRoutingInterfacesArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']] = None,
-                 multicast_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf_settings: Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']] = None,
-                 ospf_v3: Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']] = None,
+                 multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf_settings: pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']] = None,
+                 ospf_v3: pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchRoutingInterfaces resource.
 
@@ -83,139 +83,139 @@ class SwitchRoutingInterfacesArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceIp")
-    def interface_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 address
         """
         return pulumi.get(self, "interface_ip")
 
     @interface_ip.setter
-    def interface_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']]:
         """
         IPv6 addressing
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastRouting")
-    def multicast_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multicast_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Multicast routing status
         """
         return pulumi.get(self, "multicast_routing")
 
     @multicast_routing.setter
-    def multicast_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multicast_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multicast_routing", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfSettings")
-    def ospf_settings(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']]:
+    def ospf_settings(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']]:
         """
         IPv4 OSPF Settings
         """
         return pulumi.get(self, "ospf_settings")
 
     @ospf_settings.setter
-    def ospf_settings(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']]):
+    def ospf_settings(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']]):
         pulumi.set(self, "ospf_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfV3")
-    def ospf_v3(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']]:
+    def ospf_v3(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']]:
         """
         IPv6 OSPF Settings
         """
         return pulumi.get(self, "ospf_v3")
 
     @ospf_v3.setter
-    def ospf_v3(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']]):
+    def ospf_v3(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']]):
         pulumi.set(self, "ospf_v3", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 subnet
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VLAN id
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 @pulumi.input_type
 class _SwitchRoutingInterfacesState:
     def __init__(__self__, *,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']] = None,
-                 multicast_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf_settings: Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']] = None,
-                 ospf_v3: Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']] = None,
+                 multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf_settings: pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']] = None,
+                 ospf_v3: pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingInterfaces resources.
 
@@ -256,134 +256,134 @@ class _SwitchRoutingInterfacesState:
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceIp")
-    def interface_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 address
         """
         return pulumi.get(self, "interface_ip")
 
     @interface_ip.setter
-    def interface_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']]:
         """
         IPv6 addressing
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastRouting")
-    def multicast_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multicast_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Multicast routing status
         """
         return pulumi.get(self, "multicast_routing")
 
     @multicast_routing.setter
-    def multicast_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multicast_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multicast_routing", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfSettings")
-    def ospf_settings(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']]:
+    def ospf_settings(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']]:
         """
         IPv4 OSPF Settings
         """
         return pulumi.get(self, "ospf_settings")
 
     @ospf_settings.setter
-    def ospf_settings(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesOspfSettingsArgs']]):
+    def ospf_settings(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesOspfSettingsArgs']]):
         pulumi.set(self, "ospf_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfV3")
-    def ospf_v3(self) -> Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']]:
+    def ospf_v3(self) -> pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']]:
         """
         IPv6 OSPF Settings
         """
         return pulumi.get(self, "ospf_v3")
 
     @ospf_v3.setter
-    def ospf_v3(self, value: Optional[pulumi.Input['SwitchRoutingInterfacesOspfV3Args']]):
+    def ospf_v3(self, value: pulumi.Input[Optional['SwitchRoutingInterfacesOspfV3Args']]):
         pulumi.set(self, "ospf_v3", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 subnet
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VLAN id
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
@@ -393,17 +393,17 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
-                 multicast_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf_settings: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
-                 ospf_v3: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
+                 multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf_settings: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
+                 ospf_v3: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -522,17 +522,17 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
-                 multicast_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ospf_settings: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
-                 ospf_v3: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
+                 multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ospf_settings: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
+                 ospf_v3: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -565,17 +565,17 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6: Optional[pulumi.Input[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
-            multicast_routing: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            ospf_settings: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
-            ospf_v3: Optional[pulumi.Input[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            subnet: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.int]] = None) -> 'SwitchRoutingInterfaces':
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict']]] = None,
+            multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            ospf_settings: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict']]] = None,
+            ospf_v3: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchRoutingInterfaces':
         """
         Get an existing SwitchRoutingInterfaces resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

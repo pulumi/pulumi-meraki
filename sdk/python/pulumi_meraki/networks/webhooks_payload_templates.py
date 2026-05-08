@@ -22,12 +22,12 @@ __all__ = ['WebhooksPayloadTemplatesArgs', 'WebhooksPayloadTemplates']
 class WebhooksPayloadTemplatesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 body: Optional[pulumi.Input[_builtins.str]] = None,
-                 body_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]] = None,
-                 headers_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 body: pulumi.Input[Optional[_builtins.str]] = None,
+                 body_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]] = None,
+                 headers_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WebhooksPayloadTemplates resource.
 
@@ -67,89 +67,89 @@ class WebhooksPayloadTemplatesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def body(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def body(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The body of the payload template, in liquid template
         """
         return pulumi.get(self, "body")
 
     @body.setter
-    def body(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def body(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "body", value)
 
     @_builtins.property
     @pulumi.getter(name="bodyFile")
-    def body_file(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def body_file(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
         """
         return pulumi.get(self, "body_file")
 
     @body_file.setter
-    def body_file(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def body_file(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "body_file", value)
 
     @_builtins.property
     @pulumi.getter
-    def headers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]:
+    def headers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]:
         """
         The payload template headers, will be rendered as a key-value pair in the webhook.
         """
         return pulumi.get(self, "headers")
 
     @headers.setter
-    def headers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]):
+    def headers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]):
         pulumi.set(self, "headers", value)
 
     @_builtins.property
     @pulumi.getter(name="headersFile")
-    def headers_file(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def headers_file(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A file containing the liquid template used with the webhook headers.
         """
         return pulumi.get(self, "headers_file")
 
     @headers_file.setter
-    def headers_file(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def headers_file(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "headers_file", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the payload template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplateId")
-    def payload_template_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def payload_template_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Webhook payload template Id
         """
         return pulumi.get(self, "payload_template_id")
 
     @payload_template_id.setter
-    def payload_template_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def payload_template_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "payload_template_id", value)
 
 
 @pulumi.input_type
 class _WebhooksPayloadTemplatesState:
     def __init__(__self__, *,
-                 body: Optional[pulumi.Input[_builtins.str]] = None,
-                 body_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]] = None,
-                 headers_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 sharing: Optional[pulumi.Input['WebhooksPayloadTemplatesSharingArgs']] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 body: pulumi.Input[Optional[_builtins.str]] = None,
+                 body_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]] = None,
+                 headers_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 sharing: pulumi.Input[Optional['WebhooksPayloadTemplatesSharingArgs']] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WebhooksPayloadTemplates resources.
 
@@ -184,110 +184,110 @@ class _WebhooksPayloadTemplatesState:
 
     @_builtins.property
     @pulumi.getter
-    def body(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def body(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The body of the payload template, in liquid template
         """
         return pulumi.get(self, "body")
 
     @body.setter
-    def body(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def body(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "body", value)
 
     @_builtins.property
     @pulumi.getter(name="bodyFile")
-    def body_file(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def body_file(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
         """
         return pulumi.get(self, "body_file")
 
     @body_file.setter
-    def body_file(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def body_file(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "body_file", value)
 
     @_builtins.property
     @pulumi.getter
-    def headers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]:
+    def headers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]:
         """
         The payload template headers, will be rendered as a key-value pair in the webhook.
         """
         return pulumi.get(self, "headers")
 
     @headers.setter
-    def headers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]):
+    def headers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]]]):
         pulumi.set(self, "headers", value)
 
     @_builtins.property
     @pulumi.getter(name="headersFile")
-    def headers_file(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def headers_file(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A file containing the liquid template used with the webhook headers.
         """
         return pulumi.get(self, "headers_file")
 
     @headers_file.setter
-    def headers_file(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def headers_file(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "headers_file", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the payload template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplateId")
-    def payload_template_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def payload_template_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Webhook payload template Id
         """
         return pulumi.get(self, "payload_template_id")
 
     @payload_template_id.setter
-    def payload_template_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def payload_template_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "payload_template_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def sharing(self) -> Optional[pulumi.Input['WebhooksPayloadTemplatesSharingArgs']]:
+    def sharing(self) -> pulumi.Input[Optional['WebhooksPayloadTemplatesSharingArgs']]:
         """
         Information on which entities have access to the template
         """
         return pulumi.get(self, "sharing")
 
     @sharing.setter
-    def sharing(self, value: Optional[pulumi.Input['WebhooksPayloadTemplatesSharingArgs']]):
+    def sharing(self, value: pulumi.Input[Optional['WebhooksPayloadTemplatesSharingArgs']]):
         pulumi.set(self, "sharing", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the payload template
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 
@@ -297,13 +297,13 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 body: Optional[pulumi.Input[_builtins.str]] = None,
-                 body_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
-                 headers_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 body: pulumi.Input[Optional[_builtins.str]] = None,
+                 body_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+                 headers_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -390,13 +390,13 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 body: Optional[pulumi.Input[_builtins.str]] = None,
-                 body_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
-                 headers_file: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 body: pulumi.Input[Optional[_builtins.str]] = None,
+                 body_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+                 headers_file: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -427,15 +427,15 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            body: Optional[pulumi.Input[_builtins.str]] = None,
-            body_file: Optional[pulumi.Input[_builtins.str]] = None,
-            headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
-            headers_file: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            payload_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-            sharing: Optional[pulumi.Input[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None) -> 'WebhooksPayloadTemplates':
+            body: pulumi.Input[Optional[_builtins.str]] = None,
+            body_file: pulumi.Input[Optional[_builtins.str]] = None,
+            headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+            headers_file: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            payload_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            sharing: pulumi.Input[Optional[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None) -> 'WebhooksPayloadTemplates':
         """
         Get an existing WebhooksPayloadTemplates resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,11 +22,11 @@ __all__ = ['FirmwareUpgradesStagedGroupsArgs', 'FirmwareUpgradesStagedGroups']
 class FirmwareUpgradesStagedGroupsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 assigned_devices: Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 assigned_devices: pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedGroups resource.
 
@@ -63,74 +63,74 @@ class FirmwareUpgradesStagedGroupsArgs:
 
     @_builtins.property
     @pulumi.getter(name="assignedDevices")
-    def assigned_devices(self) -> Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]:
+    def assigned_devices(self) -> pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]:
         """
         The devices and Switch Stacks assigned to the Group
         """
         return pulumi.get(self, "assigned_devices")
 
     @assigned_devices.setter
-    def assigned_devices(self, value: Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]):
+    def assigned_devices(self, value: pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]):
         pulumi.set(self, "assigned_devices", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the Staged Upgrade Group
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="groupId")
-    def group_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id of staged upgrade group
         """
         return pulumi.get(self, "group_id")
 
     @group_id.setter
-    def group_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_id", value)
 
     @_builtins.property
     @pulumi.getter(name="isDefault")
-    def is_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
         """
         return pulumi.get(self, "is_default")
 
     @is_default.setter
-    def is_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Staged Upgrade Group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _FirmwareUpgradesStagedGroupsState:
     def __init__(__self__, *,
-                 assigned_devices: Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 assigned_devices: pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedGroups resources.
 
@@ -156,74 +156,74 @@ class _FirmwareUpgradesStagedGroupsState:
 
     @_builtins.property
     @pulumi.getter(name="assignedDevices")
-    def assigned_devices(self) -> Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]:
+    def assigned_devices(self) -> pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]:
         """
         The devices and Switch Stacks assigned to the Group
         """
         return pulumi.get(self, "assigned_devices")
 
     @assigned_devices.setter
-    def assigned_devices(self, value: Optional[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]):
+    def assigned_devices(self, value: pulumi.Input[Optional['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]):
         pulumi.set(self, "assigned_devices", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the Staged Upgrade Group
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="groupId")
-    def group_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id of staged upgrade group
         """
         return pulumi.get(self, "group_id")
 
     @group_id.setter
-    def group_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_id", value)
 
     @_builtins.property
     @pulumi.getter(name="isDefault")
-    def is_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
         """
         return pulumi.get(self, "is_default")
 
     @is_default.setter
-    def is_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Staged Upgrade Group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -233,12 +233,12 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 assigned_devices: pulumi.Input[Optional[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -334,12 +334,12 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 assigned_devices: pulumi.Input[Optional[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -367,12 +367,12 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            group_id: Optional[pulumi.Input[_builtins.str]] = None,
-            is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'FirmwareUpgradesStagedGroups':
+            assigned_devices: pulumi.Input[Optional[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'FirmwareUpgradesStagedGroups':
         """
         Get an existing FirmwareUpgradesStagedGroups resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -113,19 +113,19 @@ export interface ApplianceFirewallFirewalledServicesState {
     /**
      * A string indicating the rule for which IPs are allowed to use the specified service
      */
-    access?: pulumi.Input<string>;
+    access?: pulumi.Input<string | undefined>;
     /**
      * An array of allowed IPs that can access the service
      */
-    allowedIps?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Appliance service name
      */
-    service?: pulumi.Input<string>;
+    service?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -135,11 +135,11 @@ export interface ApplianceFirewallFirewalledServicesArgs {
     /**
      * A string indicating the rule for which IPs are allowed to use the specified service
      */
-    access?: pulumi.Input<string>;
+    access?: pulumi.Input<string | undefined>;
     /**
      * An array of allowed IPs that can access the service
      */
-    allowedIps?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

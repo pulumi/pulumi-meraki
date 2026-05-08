@@ -102,12 +102,12 @@ export class InventoryClaim extends pulumi.CustomResource {
  * Input properties used for looking up and filtering InventoryClaim resources.
  */
 export interface InventoryClaimState {
-    item?: pulumi.Input<inputs.organizations.InventoryClaimItem>;
+    item?: pulumi.Input<inputs.organizations.InventoryClaimItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.InventoryClaimParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.InventoryClaimParameters | undefined>;
 }
 
 /**

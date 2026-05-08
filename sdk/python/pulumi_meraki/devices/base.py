@@ -22,15 +22,15 @@ __all__ = ['BaseArgs', 'Base']
 class BaseArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 lat: Optional[pulumi.Input[_builtins.float]] = None,
-                 lng: Optional[pulumi.Input[_builtins.float]] = None,
-                 move_map_marker: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 notes: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 lat: pulumi.Input[Optional[_builtins.float]] = None,
+                 lng: pulumi.Input[Optional[_builtins.float]] = None,
+                 move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 notes: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a Base resource.
 
@@ -79,134 +79,134 @@ class BaseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Physical address of the device
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="floorPlanId")
-    def floor_plan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def floor_plan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The floor plan to associate to this device. null disassociates the device from the floorplan.
         """
         return pulumi.get(self, "floor_plan_id")
 
     @floor_plan_id.setter
-    def floor_plan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def floor_plan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "floor_plan_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def lat(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lat(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Latitude of the device
         """
         return pulumi.get(self, "lat")
 
     @lat.setter
-    def lat(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lat(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "lat", value)
 
     @_builtins.property
     @pulumi.getter
-    def lng(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lng(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Longitude of the device
         """
         return pulumi.get(self, "lng")
 
     @lng.setter
-    def lng(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lng(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "lng", value)
 
     @_builtins.property
     @pulumi.getter(name="moveMapMarker")
-    def move_map_marker(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def move_map_marker(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
         """
         return pulumi.get(self, "move_map_marker")
 
     @move_map_marker.setter
-    def move_map_marker(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def move_map_marker(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "move_map_marker", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the device
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def notes(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def notes(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Notes for the device, limited to 255 characters
         """
         return pulumi.get(self, "notes")
 
     @notes.setter
-    def notes(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def notes(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "notes", value)
 
     @_builtins.property
     @pulumi.getter(name="switchProfileId")
-    def switch_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def switch_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
         """
         return pulumi.get(self, "switch_profile_id")
 
     @switch_profile_id.setter
-    def switch_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def switch_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "switch_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of tags assigned to the device
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
 
 @pulumi.input_type
 class _BaseState:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 details: Optional[pulumi.Input[Sequence[pulumi.Input['BaseDetailArgs']]]] = None,
-                 firmware: Optional[pulumi.Input[_builtins.str]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 imei: Optional[pulumi.Input[_builtins.str]] = None,
-                 lan_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 lat: Optional[pulumi.Input[_builtins.float]] = None,
-                 lng: Optional[pulumi.Input[_builtins.float]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 model: Optional[pulumi.Input[_builtins.str]] = None,
-                 move_map_marker: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 notes: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 details: pulumi.Input[Optional[Sequence[pulumi.Input['BaseDetailArgs']]]] = None,
+                 firmware: pulumi.Input[Optional[_builtins.str]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 imei: pulumi.Input[Optional[_builtins.str]] = None,
+                 lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 lat: pulumi.Input[Optional[_builtins.float]] = None,
+                 lng: pulumi.Input[Optional[_builtins.float]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 model: pulumi.Input[Optional[_builtins.str]] = None,
+                 move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 notes: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering Base resources.
 
@@ -268,218 +268,218 @@ class _BaseState:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Physical address of the device
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter
-    def details(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BaseDetailArgs']]]]:
+    def details(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['BaseDetailArgs']]]]:
         """
         Additional device information
         """
         return pulumi.get(self, "details")
 
     @details.setter
-    def details(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['BaseDetailArgs']]]]):
+    def details(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['BaseDetailArgs']]]]):
         pulumi.set(self, "details", value)
 
     @_builtins.property
     @pulumi.getter
-    def firmware(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def firmware(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Firmware version of the device
         """
         return pulumi.get(self, "firmware")
 
     @firmware.setter
-    def firmware(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def firmware(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "firmware", value)
 
     @_builtins.property
     @pulumi.getter(name="floorPlanId")
-    def floor_plan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def floor_plan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The floor plan to associate to this device. null disassociates the device from the floorplan.
         """
         return pulumi.get(self, "floor_plan_id")
 
     @floor_plan_id.setter
-    def floor_plan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def floor_plan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "floor_plan_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def imei(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def imei(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IMEI of the device, if applicable
         """
         return pulumi.get(self, "imei")
 
     @imei.setter
-    def imei(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def imei(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "imei", value)
 
     @_builtins.property
     @pulumi.getter(name="lanIp")
-    def lan_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lan_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         LAN IP address of the device
         """
         return pulumi.get(self, "lan_ip")
 
     @lan_ip.setter
-    def lan_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lan_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lan_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def lat(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lat(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Latitude of the device
         """
         return pulumi.get(self, "lat")
 
     @lat.setter
-    def lat(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lat(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "lat", value)
 
     @_builtins.property
     @pulumi.getter
-    def lng(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lng(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Longitude of the device
         """
         return pulumi.get(self, "lng")
 
     @lng.setter
-    def lng(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lng(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "lng", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         MAC address of the device
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Model of the device
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
     @_builtins.property
     @pulumi.getter(name="moveMapMarker")
-    def move_map_marker(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def move_map_marker(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
         """
         return pulumi.get(self, "move_map_marker")
 
     @move_map_marker.setter
-    def move_map_marker(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def move_map_marker(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "move_map_marker", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the device
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the network the device belongs to
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def notes(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def notes(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Notes for the device, limited to 255 characters
         """
         return pulumi.get(self, "notes")
 
     @notes.setter
-    def notes(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def notes(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "notes", value)
 
     @_builtins.property
     @pulumi.getter(name="productType")
-    def product_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def product_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Product type of the device
         """
         return pulumi.get(self, "product_type")
 
     @product_type.setter
-    def product_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def product_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "product_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the device
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="switchProfileId")
-    def switch_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def switch_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
         """
         return pulumi.get(self, "switch_profile_id")
 
     @switch_profile_id.setter
-    def switch_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def switch_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "switch_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of tags assigned to the device
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
 
@@ -489,16 +489,16 @@ class Base(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 lat: Optional[pulumi.Input[_builtins.float]] = None,
-                 lng: Optional[pulumi.Input[_builtins.float]] = None,
-                 move_map_marker: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 notes: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 lat: pulumi.Input[Optional[_builtins.float]] = None,
+                 lng: pulumi.Input[Optional[_builtins.float]] = None,
+                 move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 notes: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -580,16 +580,16 @@ class Base(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 lat: Optional[pulumi.Input[_builtins.float]] = None,
-                 lng: Optional[pulumi.Input[_builtins.float]] = None,
-                 move_map_marker: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 notes: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 lat: pulumi.Input[Optional[_builtins.float]] = None,
+                 lng: pulumi.Input[Optional[_builtins.float]] = None,
+                 move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 notes: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -629,24 +629,24 @@ class Base(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address: Optional[pulumi.Input[_builtins.str]] = None,
-            details: Optional[pulumi.Input[Sequence[pulumi.Input[Union['BaseDetailArgs', 'BaseDetailArgsDict']]]]] = None,
-            firmware: Optional[pulumi.Input[_builtins.str]] = None,
-            floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-            imei: Optional[pulumi.Input[_builtins.str]] = None,
-            lan_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            lat: Optional[pulumi.Input[_builtins.float]] = None,
-            lng: Optional[pulumi.Input[_builtins.float]] = None,
-            mac: Optional[pulumi.Input[_builtins.str]] = None,
-            model: Optional[pulumi.Input[_builtins.str]] = None,
-            move_map_marker: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            notes: Optional[pulumi.Input[_builtins.str]] = None,
-            product_type: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            switch_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'Base':
+            address: pulumi.Input[Optional[_builtins.str]] = None,
+            details: pulumi.Input[Optional[Sequence[pulumi.Input[Union['BaseDetailArgs', 'BaseDetailArgsDict']]]]] = None,
+            firmware: pulumi.Input[Optional[_builtins.str]] = None,
+            floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            imei: pulumi.Input[Optional[_builtins.str]] = None,
+            lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            lat: pulumi.Input[Optional[_builtins.float]] = None,
+            lng: pulumi.Input[Optional[_builtins.float]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            model: pulumi.Input[Optional[_builtins.str]] = None,
+            move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            notes: pulumi.Input[Optional[_builtins.str]] = None,
+            product_type: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'Base':
         """
         Get an existing Base resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

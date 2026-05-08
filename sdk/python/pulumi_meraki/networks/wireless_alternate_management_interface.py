@@ -22,10 +22,10 @@ __all__ = ['WirelessAlternateManagementInterfaceArgs', 'WirelessAlternateManagem
 class WirelessAlternateManagementInterfaceArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 access_points: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a WirelessAlternateManagementInterface resource.
 
@@ -59,61 +59,61 @@ class WirelessAlternateManagementInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessPoints")
-    def access_points(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]:
+    def access_points(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]:
         """
         Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         """
         return pulumi.get(self, "access_points")
 
     @access_points.setter
-    def access_points(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]):
+    def access_points(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]):
         pulumi.set(self, "access_points", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable alternate management interface
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def protocols(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
         """
         return pulumi.get(self, "protocols")
 
     @protocols.setter
-    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def protocols(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "protocols", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Alternate management interface VLAN, must be between 1 and 4094
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 @pulumi.input_type
 class _WirelessAlternateManagementInterfaceState:
     def __init__(__self__, *,
-                 access_points: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering WirelessAlternateManagementInterface resources.
 
@@ -136,62 +136,62 @@ class _WirelessAlternateManagementInterfaceState:
 
     @_builtins.property
     @pulumi.getter(name="accessPoints")
-    def access_points(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]:
+    def access_points(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]:
         """
         Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         """
         return pulumi.get(self, "access_points")
 
     @access_points.setter
-    def access_points(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]):
+    def access_points(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]]]):
         pulumi.set(self, "access_points", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable alternate management interface
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def protocols(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
         """
         return pulumi.get(self, "protocols")
 
     @protocols.setter
-    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def protocols(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "protocols", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Alternate management interface VLAN, must be between 1 and 4094
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
@@ -201,11 +201,11 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_points: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -306,11 +306,11 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_points: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -337,11 +337,11 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_points: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.int]] = None) -> 'WirelessAlternateManagementInterface':
+            access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> 'WirelessAlternateManagementInterface':
         """
         Get an existing WirelessAlternateManagementInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

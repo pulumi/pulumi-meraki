@@ -117,8 +117,8 @@ def get_floor_plans(floor_plan_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_floor_plans_output(floor_plan_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_floor_plans_output(floor_plan_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                           network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFloorPlansResult]:
     """
     ## Example Usage

@@ -117,8 +117,8 @@ def get_camera_custom_analytics_artifacts(artifact_id: Optional[_builtins.str] =
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_camera_custom_analytics_artifacts_output(artifact_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                 organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_camera_custom_analytics_artifacts_output(artifact_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                 organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraCustomAnalyticsArtifactsResult]:
     """
     ## Example Usage

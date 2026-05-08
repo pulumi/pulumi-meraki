@@ -73,9 +73,9 @@ export interface GetAdaptivePolicyAclsOutputArgs {
     /**
      * aclId path parameter. Acl ID
      */
-    aclId?: pulumi.Input<string>;
+    aclId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

@@ -20,13 +20,13 @@ __all__ = ['SnmpArgs', 'Snmp']
 class SnmpArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 peer_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 v2c_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_auth_pass: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_priv_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None):
+                 peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Snmp resource.
 
@@ -69,104 +69,104 @@ class SnmpArgs:
 
     @_builtins.property
     @pulumi.getter(name="peerIps")
-    def peer_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def peer_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of IPv4 addresses that are allowed to access the SNMP server.
         """
         return pulumi.get(self, "peer_ips")
 
     @peer_ips.setter
-    def peer_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def peer_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "peer_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="v2cEnabled")
-    def v2c_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def v2c_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether SNMP version 2c is enabled for the organization.
         """
         return pulumi.get(self, "v2c_enabled")
 
     @v2c_enabled.setter
-    def v2c_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def v2c_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "v2c_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="v3AuthMode")
-    def v3_auth_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_auth_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
         """
         return pulumi.get(self, "v3_auth_mode")
 
     @v3_auth_mode.setter
-    def v3_auth_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_auth_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_auth_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="v3AuthPass")
-    def v3_auth_pass(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_auth_pass(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 authentication password. Must be at least 8 characters if specified.
         """
         return pulumi.get(self, "v3_auth_pass")
 
     @v3_auth_pass.setter
-    def v3_auth_pass(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_auth_pass(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_auth_pass", value)
 
     @_builtins.property
     @pulumi.getter(name="v3Enabled")
-    def v3_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def v3_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether SNMP version 3 is enabled for the organization.
         """
         return pulumi.get(self, "v3_enabled")
 
     @v3_enabled.setter
-    def v3_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def v3_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "v3_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="v3PrivMode")
-    def v3_priv_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_priv_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
         """
         return pulumi.get(self, "v3_priv_mode")
 
     @v3_priv_mode.setter
-    def v3_priv_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_priv_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_priv_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="v3PrivPass")
-    def v3_priv_pass(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_priv_pass(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 privacy password. Must be at least 8 characters if specified.
         """
         return pulumi.get(self, "v3_priv_pass")
 
     @v3_priv_pass.setter
-    def v3_priv_pass(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_priv_pass(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_priv_pass", value)
 
 
 @pulumi.input_type
 class _SnmpState:
     def __init__(__self__, *,
-                 hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 peer_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
-                 v2_community_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 v2c_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_auth_pass: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_priv_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_user: Optional[pulumi.Input[_builtins.str]] = None):
+                 hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 port: pulumi.Input[Optional[_builtins.int]] = None,
+                 v2_community_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_user: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Snmp resources.
 
@@ -210,146 +210,146 @@ class _SnmpState:
 
     @_builtins.property
     @pulumi.getter
-    def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hostname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The hostname of the SNMP server.
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
-    def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hostname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hostname", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="peerIps")
-    def peer_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def peer_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of IPv4 addresses that are allowed to access the SNMP server.
         """
         return pulumi.get(self, "peer_ips")
 
     @peer_ips.setter
-    def peer_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def peer_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "peer_ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The port of the SNMP server.
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="v2CommunityString")
-    def v2_community_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v2_community_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The community string for SNMP version 2c, if enabled.
         """
         return pulumi.get(self, "v2_community_string")
 
     @v2_community_string.setter
-    def v2_community_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v2_community_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v2_community_string", value)
 
     @_builtins.property
     @pulumi.getter(name="v2cEnabled")
-    def v2c_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def v2c_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether SNMP version 2c is enabled for the organization.
         """
         return pulumi.get(self, "v2c_enabled")
 
     @v2c_enabled.setter
-    def v2c_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def v2c_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "v2c_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="v3AuthMode")
-    def v3_auth_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_auth_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
         """
         return pulumi.get(self, "v3_auth_mode")
 
     @v3_auth_mode.setter
-    def v3_auth_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_auth_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_auth_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="v3AuthPass")
-    def v3_auth_pass(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_auth_pass(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 authentication password. Must be at least 8 characters if specified.
         """
         return pulumi.get(self, "v3_auth_pass")
 
     @v3_auth_pass.setter
-    def v3_auth_pass(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_auth_pass(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_auth_pass", value)
 
     @_builtins.property
     @pulumi.getter(name="v3Enabled")
-    def v3_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def v3_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether SNMP version 3 is enabled for the organization.
         """
         return pulumi.get(self, "v3_enabled")
 
     @v3_enabled.setter
-    def v3_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def v3_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "v3_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="v3PrivMode")
-    def v3_priv_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_priv_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
         """
         return pulumi.get(self, "v3_priv_mode")
 
     @v3_priv_mode.setter
-    def v3_priv_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_priv_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_priv_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="v3PrivPass")
-    def v3_priv_pass(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_priv_pass(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SNMP version 3 privacy password. Must be at least 8 characters if specified.
         """
         return pulumi.get(self, "v3_priv_pass")
 
     @v3_priv_pass.setter
-    def v3_priv_pass(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_priv_pass(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_priv_pass", value)
 
     @_builtins.property
     @pulumi.getter(name="v3User")
-    def v3_user(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def v3_user(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The user for SNMP version 3, if enabled.
         """
         return pulumi.get(self, "v3_user")
 
     @v3_user.setter
-    def v3_user(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def v3_user(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "v3_user", value)
 
 
@@ -359,14 +359,14 @@ class Snmp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 peer_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 v2c_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_auth_pass: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_priv_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -452,14 +452,14 @@ class Snmp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 peer_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 v2c_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_auth_pass: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 v3_priv_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -493,18 +493,18 @@ class Snmp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            hostname: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            peer_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            port: Optional[pulumi.Input[_builtins.int]] = None,
-            v2_community_string: Optional[pulumi.Input[_builtins.str]] = None,
-            v2c_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            v3_auth_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            v3_auth_pass: Optional[pulumi.Input[_builtins.str]] = None,
-            v3_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            v3_priv_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None,
-            v3_user: Optional[pulumi.Input[_builtins.str]] = None) -> 'Snmp':
+            hostname: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            port: pulumi.Input[Optional[_builtins.int]] = None,
+            v2_community_string: pulumi.Input[Optional[_builtins.str]] = None,
+            v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_user: pulumi.Input[Optional[_builtins.str]] = None) -> 'Snmp':
         """
         Get an existing Snmp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

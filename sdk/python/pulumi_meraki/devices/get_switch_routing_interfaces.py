@@ -117,8 +117,8 @@ def get_switch_routing_interfaces(interface_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_switch_routing_interfaces_output(interface_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                         serial: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_routing_interfaces_output(interface_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                         serial: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingInterfacesResult]:
     """
     ## Example Usage

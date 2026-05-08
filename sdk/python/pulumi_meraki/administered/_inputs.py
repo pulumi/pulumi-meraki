@@ -50,19 +50,19 @@ __all__ = [
 ]
 
 class LicensingSubscriptionSubscriptionsBindItemArgsDict(TypedDict):
-    errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    errors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Array of errors if failed
     """
-    insufficient_entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict']]]]
+    insufficient_entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]]
     """
     A list of entitlements required to successfully bind the networks to the subscription
     """
-    networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict']]]]
+    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]]
     """
     Unbound networks
     """
-    subscription_id: NotRequired[pulumi.Input[_builtins.str]]
+    subscription_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription ID
     """
@@ -70,10 +70,10 @@ class LicensingSubscriptionSubscriptionsBindItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemArgs:
     def __init__(__self__, *,
-                 errors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 insufficient_entitlements: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 errors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 insufficient_entitlements: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] errors: Array of errors if failed
         :param pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]] insufficient_entitlements: A list of entitlements required to successfully bind the networks to the subscription
@@ -91,59 +91,59 @@ class LicensingSubscriptionSubscriptionsBindItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def errors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def errors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Array of errors if failed
         """
         return pulumi.get(self, "errors")
 
     @errors.setter
-    def errors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def errors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "errors", value)
 
     @_builtins.property
     @pulumi.getter(name="insufficientEntitlements")
-    def insufficient_entitlements(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]:
+    def insufficient_entitlements(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]:
         """
         A list of entitlements required to successfully bind the networks to the subscription
         """
         return pulumi.get(self, "insufficient_entitlements")
 
     @insufficient_entitlements.setter
-    def insufficient_entitlements(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]):
+    def insufficient_entitlements(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]):
         pulumi.set(self, "insufficient_entitlements", value)
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]:
         """
         Unbound networks
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionId")
-    def subscription_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription ID
         """
         return pulumi.get(self, "subscription_id")
 
     @subscription_id.setter
-    def subscription_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_id", value)
 
 
 class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict(TypedDict):
-    quantity: NotRequired[pulumi.Input[_builtins.int]]
+    quantity: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number required
     """
-    sku: NotRequired[pulumi.Input[_builtins.str]]
+    sku: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     SKU of the required product
     """
@@ -151,8 +151,8 @@ class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict(
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs:
     def __init__(__self__, *,
-                 quantity: Optional[pulumi.Input[_builtins.int]] = None,
-                 sku: Optional[pulumi.Input[_builtins.str]] = None):
+                 quantity: pulumi.Input[Optional[_builtins.int]] = None,
+                 sku: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] quantity: Number required
         :param pulumi.Input[_builtins.str] sku: SKU of the required product
@@ -164,35 +164,35 @@ class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs:
 
     @_builtins.property
     @pulumi.getter
-    def quantity(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def quantity(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number required
         """
         return pulumi.get(self, "quantity")
 
     @quantity.setter
-    def quantity(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def quantity(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "quantity", value)
 
     @_builtins.property
     @pulumi.getter
-    def sku(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sku(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SKU of the required product
         """
         return pulumi.get(self, "sku")
 
     @sku.setter
-    def sku(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sku(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sku", value)
 
 
 class LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network ID
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network name
     """
@@ -200,8 +200,8 @@ class LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemNetworkArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: Network ID
         :param pulumi.Input[_builtins.str] name: Network name
@@ -213,31 +213,31 @@ class LicensingSubscriptionSubscriptionsBindItemNetworkArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class LicensingSubscriptionSubscriptionsBindParametersArgsDict(TypedDict):
-    network_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    network_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of network ids to bind to the subscription
     """
@@ -245,7 +245,7 @@ class LicensingSubscriptionSubscriptionsBindParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindParametersArgs:
     def __init__(__self__, *,
-                 network_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 network_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_ids: List of network ids to bind to the subscription
         """
@@ -254,55 +254,55 @@ class LicensingSubscriptionSubscriptionsBindParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="networkIds")
-    def network_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of network ids to bind to the subscription
         """
         return pulumi.get(self, "network_ids")
 
     @network_ids.setter
-    def network_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_ids", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimItemArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict']]
+    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]]
     """
     Numeric breakdown of network and entitlement counts
     """
-    description: NotRequired[pulumi.Input[_builtins.str]]
+    description: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription description
     """
-    end_date: NotRequired[pulumi.Input[_builtins.str]]
+    end_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription expiration date
     """
-    entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict']]]]
+    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]]
     """
     Entitlement info
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription name
     """
-    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    product_types: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Products the subscription has entitlements for
     """
-    start_date: NotRequired[pulumi.Input[_builtins.str]]
+    start_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription start date
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription status
     """
-    subscription_id: NotRequired[pulumi.Input[_builtins.str]]
+    subscription_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription's ID
     """
-    web_order_id: NotRequired[pulumi.Input[_builtins.str]]
+    web_order_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Web order id
     """
@@ -310,16 +310,16 @@ class LicensingSubscriptionSubscriptionsClaimItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemArgs:
     def __init__(__self__, *,
-                 counts: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 entitlements: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_order_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 counts: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 entitlements: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_order_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgs'] counts: Numeric breakdown of network and entitlement counts
         :param pulumi.Input[_builtins.str] description: Subscription description
@@ -355,131 +355,131 @@ class LicensingSubscriptionSubscriptionsClaimItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def counts(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]:
+    def counts(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]:
         """
         Numeric breakdown of network and entitlement counts
         """
         return pulumi.get(self, "counts")
 
     @counts.setter
-    def counts(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]):
+    def counts(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]):
         pulumi.set(self, "counts", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endDate")
-    def end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription expiration date
         """
         return pulumi.get(self, "end_date")
 
     @end_date.setter
-    def end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_date", value)
 
     @_builtins.property
     @pulumi.getter
-    def entitlements(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]:
+    def entitlements(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]:
         """
         Entitlement info
         """
         return pulumi.get(self, "entitlements")
 
     @entitlements.setter
-    def entitlements(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]):
+    def entitlements(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]):
         pulumi.set(self, "entitlements", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="productTypes")
-    def product_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def product_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Products the subscription has entitlements for
         """
         return pulumi.get(self, "product_types")
 
     @product_types.setter
-    def product_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def product_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "product_types", value)
 
     @_builtins.property
     @pulumi.getter(name="startDate")
-    def start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription start date
         """
         return pulumi.get(self, "start_date")
 
     @start_date.setter
-    def start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_date", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription status
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionId")
-    def subscription_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription's ID
         """
         return pulumi.get(self, "subscription_id")
 
     @subscription_id.setter
-    def subscription_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_id", value)
 
     @_builtins.property
     @pulumi.getter(name="webOrderId")
-    def web_order_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_order_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Web order id
         """
         return pulumi.get(self, "web_order_id")
 
     @web_order_id.setter
-    def web_order_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_order_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_order_id", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict(TypedDict):
-    networks: NotRequired[pulumi.Input[_builtins.int]]
+    networks: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of networks bound to this subscription
     """
-    seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict']]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]]
     """
     Seat distribution
     """
@@ -487,8 +487,8 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemCountsArgs:
     def __init__(__self__, *,
-                 networks: Optional[pulumi.Input[_builtins.int]] = None,
-                 seats: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']] = None):
+                 networks: pulumi.Input[Optional[_builtins.int]] = None,
+                 seats: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']] = None):
         """
         :param pulumi.Input[_builtins.int] networks: Number of networks bound to this subscription
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs'] seats: Seat distribution
@@ -500,39 +500,39 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def networks(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of networks bound to this subscription
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def networks(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter
-    def seats(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]:
+    def seats(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]:
         """
         Seat distribution
         """
         return pulumi.get(self, "seats")
 
     @seats.setter
-    def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]):
+    def seats(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict(TypedDict):
-    assigned: NotRequired[pulumi.Input[_builtins.int]]
+    assigned: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats in use
     """
-    available: NotRequired[pulumi.Input[_builtins.int]]
+    available: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats available for use
     """
-    limit: NotRequired[pulumi.Input[_builtins.int]]
+    limit: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Total number of seats provided by this subscription
     """
@@ -540,9 +540,9 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs:
     def __init__(__self__, *,
-                 assigned: Optional[pulumi.Input[_builtins.int]] = None,
-                 available: Optional[pulumi.Input[_builtins.int]] = None,
-                 limit: Optional[pulumi.Input[_builtins.int]] = None):
+                 assigned: pulumi.Input[Optional[_builtins.int]] = None,
+                 available: pulumi.Input[Optional[_builtins.int]] = None,
+                 limit: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] assigned: Number of seats in use
         :param pulumi.Input[_builtins.int] available: Number of seats available for use
@@ -557,47 +557,47 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def assigned(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assigned(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats in use
         """
         return pulumi.get(self, "assigned")
 
     @assigned.setter
-    def assigned(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assigned(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assigned", value)
 
     @_builtins.property
     @pulumi.getter
-    def available(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def available(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats available for use
         """
         return pulumi.get(self, "available")
 
     @available.setter
-    def available(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def available(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "available", value)
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Total number of seats provided by this subscription
         """
         return pulumi.get(self, "limit")
 
     @limit.setter
-    def limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "limit", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict(TypedDict):
-    seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict']]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]]
     """
     Seat distribution
     """
-    sku: NotRequired[pulumi.Input[_builtins.str]]
+    sku: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     SKU of the required product
     """
@@ -605,8 +605,8 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs:
     def __init__(__self__, *,
-                 seats: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']] = None,
-                 sku: Optional[pulumi.Input[_builtins.str]] = None):
+                 seats: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']] = None,
+                 sku: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs'] seats: Seat distribution
         :param pulumi.Input[_builtins.str] sku: SKU of the required product
@@ -618,39 +618,39 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs:
 
     @_builtins.property
     @pulumi.getter
-    def seats(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]:
+    def seats(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]:
         """
         Seat distribution
         """
         return pulumi.get(self, "seats")
 
     @seats.setter
-    def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]):
+    def seats(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
     @_builtins.property
     @pulumi.getter
-    def sku(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sku(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SKU of the required product
         """
         return pulumi.get(self, "sku")
 
     @sku.setter
-    def sku(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sku(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sku", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict(TypedDict):
-    assigned: NotRequired[pulumi.Input[_builtins.int]]
+    assigned: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats in use
     """
-    available: NotRequired[pulumi.Input[_builtins.int]]
+    available: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats available for use
     """
-    limit: NotRequired[pulumi.Input[_builtins.int]]
+    limit: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Total number of seats provided by this subscription for this sku
     """
@@ -658,9 +658,9 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict(TypedD
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs:
     def __init__(__self__, *,
-                 assigned: Optional[pulumi.Input[_builtins.int]] = None,
-                 available: Optional[pulumi.Input[_builtins.int]] = None,
-                 limit: Optional[pulumi.Input[_builtins.int]] = None):
+                 assigned: pulumi.Input[Optional[_builtins.int]] = None,
+                 available: pulumi.Input[Optional[_builtins.int]] = None,
+                 limit: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] assigned: Number of seats in use
         :param pulumi.Input[_builtins.int] available: Number of seats available for use
@@ -675,79 +675,79 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def assigned(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assigned(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats in use
         """
         return pulumi.get(self, "assigned")
 
     @assigned.setter
-    def assigned(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assigned(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assigned", value)
 
     @_builtins.property
     @pulumi.getter
-    def available(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def available(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats available for use
         """
         return pulumi.get(self, "available")
 
     @available.setter
-    def available(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def available(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "available", value)
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Total number of seats provided by this subscription for this sku
         """
         return pulumi.get(self, "limit")
 
     @limit.setter
-    def limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "limit", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict']]
+    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]]
     """
     Numeric breakdown of network and entitlement counts
     """
-    description: NotRequired[pulumi.Input[_builtins.str]]
+    description: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription description
     """
-    end_date: NotRequired[pulumi.Input[_builtins.str]]
+    end_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription expiration date
     """
-    entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict']]]]
+    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]]
     """
     Entitlement info
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription name
     """
-    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    product_types: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Products the subscription has entitlements for
     """
-    start_date: NotRequired[pulumi.Input[_builtins.str]]
+    start_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription start date
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription status
     """
-    subscription_id: NotRequired[pulumi.Input[_builtins.str]]
+    subscription_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Subscription's ID
     """
-    web_order_id: NotRequired[pulumi.Input[_builtins.str]]
+    web_order_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Web order id
     """
@@ -755,16 +755,16 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs:
     def __init__(__self__, *,
-                 counts: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 end_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 entitlements: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 start_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_order_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 counts: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 end_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 entitlements: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 start_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_order_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs'] counts: Numeric breakdown of network and entitlement counts
         :param pulumi.Input[_builtins.str] description: Subscription description
@@ -800,131 +800,131 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def counts(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]:
+    def counts(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]:
         """
         Numeric breakdown of network and entitlement counts
         """
         return pulumi.get(self, "counts")
 
     @counts.setter
-    def counts(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]):
+    def counts(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]):
         pulumi.set(self, "counts", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endDate")
-    def end_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def end_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription expiration date
         """
         return pulumi.get(self, "end_date")
 
     @end_date.setter
-    def end_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def end_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "end_date", value)
 
     @_builtins.property
     @pulumi.getter
-    def entitlements(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]:
+    def entitlements(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]:
         """
         Entitlement info
         """
         return pulumi.get(self, "entitlements")
 
     @entitlements.setter
-    def entitlements(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]):
+    def entitlements(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]):
         pulumi.set(self, "entitlements", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="productTypes")
-    def product_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def product_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Products the subscription has entitlements for
         """
         return pulumi.get(self, "product_types")
 
     @product_types.setter
-    def product_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def product_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "product_types", value)
 
     @_builtins.property
     @pulumi.getter(name="startDate")
-    def start_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def start_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription start date
         """
         return pulumi.get(self, "start_date")
 
     @start_date.setter
-    def start_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def start_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "start_date", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription status
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionId")
-    def subscription_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subscription's ID
         """
         return pulumi.get(self, "subscription_id")
 
     @subscription_id.setter
-    def subscription_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_id", value)
 
     @_builtins.property
     @pulumi.getter(name="webOrderId")
-    def web_order_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_order_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Web order id
         """
         return pulumi.get(self, "web_order_id")
 
     @web_order_id.setter
-    def web_order_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_order_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_order_id", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict(TypedDict):
-    networks: NotRequired[pulumi.Input[_builtins.int]]
+    networks: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of networks bound to this subscription
     """
-    seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict']]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]]
     """
     Seat distribution
     """
@@ -932,8 +932,8 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict(Typed
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs:
     def __init__(__self__, *,
-                 networks: Optional[pulumi.Input[_builtins.int]] = None,
-                 seats: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']] = None):
+                 networks: pulumi.Input[Optional[_builtins.int]] = None,
+                 seats: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']] = None):
         """
         :param pulumi.Input[_builtins.int] networks: Number of networks bound to this subscription
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs'] seats: Seat distribution
@@ -945,39 +945,39 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def networks(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of networks bound to this subscription
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def networks(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter
-    def seats(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]:
+    def seats(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]:
         """
         Seat distribution
         """
         return pulumi.get(self, "seats")
 
     @seats.setter
-    def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]):
+    def seats(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict(TypedDict):
-    assigned: NotRequired[pulumi.Input[_builtins.int]]
+    assigned: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats in use
     """
-    available: NotRequired[pulumi.Input[_builtins.int]]
+    available: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats available for use
     """
-    limit: NotRequired[pulumi.Input[_builtins.int]]
+    limit: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Total number of seats provided by this subscription
     """
@@ -985,9 +985,9 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict(
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs:
     def __init__(__self__, *,
-                 assigned: Optional[pulumi.Input[_builtins.int]] = None,
-                 available: Optional[pulumi.Input[_builtins.int]] = None,
-                 limit: Optional[pulumi.Input[_builtins.int]] = None):
+                 assigned: pulumi.Input[Optional[_builtins.int]] = None,
+                 available: pulumi.Input[Optional[_builtins.int]] = None,
+                 limit: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] assigned: Number of seats in use
         :param pulumi.Input[_builtins.int] available: Number of seats available for use
@@ -1002,47 +1002,47 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def assigned(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assigned(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats in use
         """
         return pulumi.get(self, "assigned")
 
     @assigned.setter
-    def assigned(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assigned(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assigned", value)
 
     @_builtins.property
     @pulumi.getter
-    def available(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def available(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats available for use
         """
         return pulumi.get(self, "available")
 
     @available.setter
-    def available(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def available(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "available", value)
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Total number of seats provided by this subscription
         """
         return pulumi.get(self, "limit")
 
     @limit.setter
-    def limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "limit", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict(TypedDict):
-    seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict']]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]]
     """
     Seat distribution
     """
-    sku: NotRequired[pulumi.Input[_builtins.str]]
+    sku: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     SKU of the required product
     """
@@ -1050,8 +1050,8 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict(
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs:
     def __init__(__self__, *,
-                 seats: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']] = None,
-                 sku: Optional[pulumi.Input[_builtins.str]] = None):
+                 seats: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']] = None,
+                 sku: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs'] seats: Seat distribution
         :param pulumi.Input[_builtins.str] sku: SKU of the required product
@@ -1063,39 +1063,39 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs:
 
     @_builtins.property
     @pulumi.getter
-    def seats(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]:
+    def seats(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]:
         """
         Seat distribution
         """
         return pulumi.get(self, "seats")
 
     @seats.setter
-    def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]):
+    def seats(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
     @_builtins.property
     @pulumi.getter
-    def sku(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sku(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SKU of the required product
         """
         return pulumi.get(self, "sku")
 
     @sku.setter
-    def sku(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sku(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sku", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict(TypedDict):
-    assigned: NotRequired[pulumi.Input[_builtins.int]]
+    assigned: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats in use
     """
-    available: NotRequired[pulumi.Input[_builtins.int]]
+    available: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of seats available for use
     """
-    limit: NotRequired[pulumi.Input[_builtins.int]]
+    limit: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Total number of seats provided by this subscription for this sku
     """
@@ -1103,9 +1103,9 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs:
     def __init__(__self__, *,
-                 assigned: Optional[pulumi.Input[_builtins.int]] = None,
-                 available: Optional[pulumi.Input[_builtins.int]] = None,
-                 limit: Optional[pulumi.Input[_builtins.int]] = None):
+                 assigned: pulumi.Input[Optional[_builtins.int]] = None,
+                 available: pulumi.Input[Optional[_builtins.int]] = None,
+                 limit: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] assigned: Number of seats in use
         :param pulumi.Input[_builtins.int] available: Number of seats available for use
@@ -1120,43 +1120,43 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs
 
     @_builtins.property
     @pulumi.getter
-    def assigned(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assigned(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats in use
         """
         return pulumi.get(self, "assigned")
 
     @assigned.setter
-    def assigned(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assigned(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assigned", value)
 
     @_builtins.property
     @pulumi.getter
-    def available(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def available(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of seats available for use
         """
         return pulumi.get(self, "available")
 
     @available.setter
-    def available(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def available(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "available", value)
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Total number of seats provided by this subscription for this sku
         """
         return pulumi.get(self, "limit")
 
     @limit.setter
-    def limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "limit", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict(TypedDict):
-    claim_key: NotRequired[pulumi.Input[_builtins.str]]
+    claim_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The subscription's claim key
     """
@@ -1164,7 +1164,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict(Typed
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs:
     def __init__(__self__, *,
-                 claim_key: Optional[pulumi.Input[_builtins.str]] = None):
+                 claim_key: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] claim_key: The subscription's claim key
         """
@@ -1173,31 +1173,31 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="claimKey")
-    def claim_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claim_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription's claim key
         """
         return pulumi.get(self, "claim_key")
 
     @claim_key.setter
-    def claim_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claim_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claim_key", value)
 
 
 class LicensingSubscriptionSubscriptionsClaimParametersArgsDict(TypedDict):
-    claim_key: NotRequired[pulumi.Input[_builtins.str]]
+    claim_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The subscription's claim key
     """
-    description: NotRequired[pulumi.Input[_builtins.str]]
+    description: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Extra details or notes about the subscription
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Friendly name to identify the subscription
     """
-    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the organization claiming the subscription
     """
@@ -1205,10 +1205,10 @@ class LicensingSubscriptionSubscriptionsClaimParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimParametersArgs:
     def __init__(__self__, *,
-                 claim_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 claim_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] claim_key: The subscription's claim key
         :param pulumi.Input[_builtins.str] description: Extra details or notes about the subscription
@@ -1226,50 +1226,50 @@ class LicensingSubscriptionSubscriptionsClaimParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="claimKey")
-    def claim_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claim_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subscription's claim key
         """
         return pulumi.get(self, "claim_key")
 
     @claim_key.setter
-    def claim_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claim_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claim_key", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Extra details or notes about the subscription
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Friendly name to identify the subscription
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the organization claiming the subscription
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 

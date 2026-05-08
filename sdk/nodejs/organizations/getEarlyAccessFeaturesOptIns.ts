@@ -89,9 +89,9 @@ export interface GetEarlyAccessFeaturesOptInsOutputArgs {
     /**
      * optInId path parameter. Opt in ID
      */
-    optInId?: pulumi.Input<string>;
+    optInId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

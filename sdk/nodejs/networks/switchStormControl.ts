@@ -110,19 +110,19 @@ export interface SwitchStormControlState {
     /**
      * Broadcast threshold.
      */
-    broadcastThreshold?: pulumi.Input<number>;
+    broadcastThreshold?: pulumi.Input<number | undefined>;
     /**
      * Multicast threshold.
      */
-    multicastThreshold?: pulumi.Input<number>;
+    multicastThreshold?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Unknown Unicast threshold.
      */
-    unknownUnicastThreshold?: pulumi.Input<number>;
+    unknownUnicastThreshold?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -132,11 +132,11 @@ export interface SwitchStormControlArgs {
     /**
      * Broadcast threshold.
      */
-    broadcastThreshold?: pulumi.Input<number>;
+    broadcastThreshold?: pulumi.Input<number | undefined>;
     /**
      * Multicast threshold.
      */
-    multicastThreshold?: pulumi.Input<number>;
+    multicastThreshold?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -144,5 +144,5 @@ export interface SwitchStormControlArgs {
     /**
      * Unknown Unicast threshold.
      */
-    unknownUnicastThreshold?: pulumi.Input<number>;
+    unknownUnicastThreshold?: pulumi.Input<number | undefined>;
 }

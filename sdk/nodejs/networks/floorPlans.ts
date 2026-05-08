@@ -203,67 +203,67 @@ export interface FloorPlansState {
     /**
      * The longitude and latitude of the bottom left corner of your floor plan.
      */
-    bottomLeftCorner?: pulumi.Input<inputs.networks.FloorPlansBottomLeftCorner>;
+    bottomLeftCorner?: pulumi.Input<inputs.networks.FloorPlansBottomLeftCorner | undefined>;
     /**
      * The longitude and latitude of the bottom right corner of your floor plan.
      */
-    bottomRightCorner?: pulumi.Input<inputs.networks.FloorPlansBottomRightCorner>;
+    bottomRightCorner?: pulumi.Input<inputs.networks.FloorPlansBottomRightCorner | undefined>;
     /**
      * The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
      */
-    center?: pulumi.Input<inputs.networks.FloorPlansCenter>;
+    center?: pulumi.Input<inputs.networks.FloorPlansCenter | undefined>;
     /**
      * List of devices for the floorplan
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.networks.FloorPlansDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.networks.FloorPlansDevice>[] | undefined>;
     /**
      * Floor plan ID
      */
-    floorPlanId?: pulumi.Input<string>;
+    floorPlanId?: pulumi.Input<string | undefined>;
     /**
      * The height of your floor plan.
      */
-    height?: pulumi.Input<number>;
+    height?: pulumi.Input<number | undefined>;
     /**
      * The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
      */
-    imageContents?: pulumi.Input<string>;
+    imageContents?: pulumi.Input<string | undefined>;
     /**
      * The format type of the image.
      */
-    imageExtension?: pulumi.Input<string>;
+    imageExtension?: pulumi.Input<string | undefined>;
     /**
      * The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields ('center, 'topLeftCorner', etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image.
      */
-    imageMd5?: pulumi.Input<string>;
+    imageMd5?: pulumi.Input<string | undefined>;
     /**
      * The url link for the floor plan image.
      */
-    imageUrl?: pulumi.Input<string>;
+    imageUrl?: pulumi.Input<string | undefined>;
     /**
      * The time the image url link will expire.
      */
-    imageUrlExpiresAt?: pulumi.Input<string>;
+    imageUrlExpiresAt?: pulumi.Input<string | undefined>;
     /**
      * The name of your floor plan.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The longitude and latitude of the top left corner of your floor plan.
      */
-    topLeftCorner?: pulumi.Input<inputs.networks.FloorPlansTopLeftCorner>;
+    topLeftCorner?: pulumi.Input<inputs.networks.FloorPlansTopLeftCorner | undefined>;
     /**
      * The longitude and latitude of the top right corner of your floor plan.
      */
-    topRightCorner?: pulumi.Input<inputs.networks.FloorPlansTopRightCorner>;
+    topRightCorner?: pulumi.Input<inputs.networks.FloorPlansTopRightCorner | undefined>;
     /**
      * The width of your floor plan.
      */
-    width?: pulumi.Input<number>;
+    width?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -273,27 +273,27 @@ export interface FloorPlansArgs {
     /**
      * The longitude and latitude of the bottom left corner of your floor plan.
      */
-    bottomLeftCorner?: pulumi.Input<inputs.networks.FloorPlansBottomLeftCorner>;
+    bottomLeftCorner?: pulumi.Input<inputs.networks.FloorPlansBottomLeftCorner | undefined>;
     /**
      * The longitude and latitude of the bottom right corner of your floor plan.
      */
-    bottomRightCorner?: pulumi.Input<inputs.networks.FloorPlansBottomRightCorner>;
+    bottomRightCorner?: pulumi.Input<inputs.networks.FloorPlansBottomRightCorner | undefined>;
     /**
      * The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
      */
-    center?: pulumi.Input<inputs.networks.FloorPlansCenter>;
+    center?: pulumi.Input<inputs.networks.FloorPlansCenter | undefined>;
     /**
      * Floor plan ID
      */
-    floorPlanId?: pulumi.Input<string>;
+    floorPlanId?: pulumi.Input<string | undefined>;
     /**
      * The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
      */
-    imageContents?: pulumi.Input<string>;
+    imageContents?: pulumi.Input<string | undefined>;
     /**
      * The name of your floor plan.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -301,9 +301,9 @@ export interface FloorPlansArgs {
     /**
      * The longitude and latitude of the top left corner of your floor plan.
      */
-    topLeftCorner?: pulumi.Input<inputs.networks.FloorPlansTopLeftCorner>;
+    topLeftCorner?: pulumi.Input<inputs.networks.FloorPlansTopLeftCorner | undefined>;
     /**
      * The longitude and latitude of the top right corner of your floor plan.
      */
-    topRightCorner?: pulumi.Input<inputs.networks.FloorPlansTopRightCorner>;
+    topRightCorner?: pulumi.Input<inputs.networks.FloorPlansTopRightCorner | undefined>;
 }

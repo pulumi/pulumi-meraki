@@ -184,12 +184,12 @@ def get_camera_detections_history_by_boundary_by_interval(boundary_ids: Optional
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
         ranges=pulumi.get(__ret__, 'ranges'))
-def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: Optional[pulumi.Input[Sequence[_builtins.str]]] = None,
-                                                                 boundary_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                                 duration: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                 per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                                 ranges: Optional[pulumi.Input[Sequence[_builtins.str]]] = None,
+def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: pulumi.Input[Optional[Sequence[_builtins.str]]] = None,
+                                                                 boundary_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                                 duration: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                 per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                                 ranges: pulumi.Input[Optional[Sequence[_builtins.str]]] = None,
                                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraDetectionsHistoryByBoundaryByIntervalResult]:
     """
     ## Example Usage

@@ -73,9 +73,9 @@ export interface GetSwitchQosRulesOrderOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * qosRuleId path parameter. Qos rule ID
      */
-    qosRuleId?: pulumi.Input<string>;
+    qosRuleId?: pulumi.Input<string | undefined>;
 }

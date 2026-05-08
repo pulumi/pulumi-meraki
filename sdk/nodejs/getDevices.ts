@@ -233,73 +233,73 @@ export interface GetDevicesOutputArgs {
     /**
      * configurationUpdatedAfter query parameter. Filter results by whether or not the device's configuration has been updated after the given timestamp
      */
-    configurationUpdatedAfter?: pulumi.Input<string>;
+    configurationUpdatedAfter?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * mac query parameter. Optional parameter to filter devices by MAC address. All returned devices will have a MAC address that contains the search term or is an exact match.
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * macs query parameter. Optional parameter to filter devices by one or more MAC addresses. All returned devices will have a MAC address that is an exact match.
      */
-    macs?: pulumi.Input<pulumi.Input<string>[]>;
+    macs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * model query parameter. Optional parameter to filter devices by model. All returned devices will have a model that contains the search term or is an exact match.
      */
-    model?: pulumi.Input<string>;
+    model?: pulumi.Input<string | undefined>;
     /**
      * models query parameter. Optional parameter to filter devices by one or more models. All returned devices will have a model that is an exact match.
      */
-    models?: pulumi.Input<pulumi.Input<string>[]>;
+    models?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * name query parameter. Optional parameter to filter devices by name. All returned devices will have a name that contains the search term or is an exact match.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkIds query parameter. Optional parameter to filter devices by network.
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * productTypes query parameter. Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * sensorAlertProfileIds query parameter. Optional parameter to filter devices by the alert profiles that are bound to them. Only applies to sensor devices.
      */
-    sensorAlertProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sensorAlertProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * sensorMetrics query parameter. Optional parameter to filter devices by the metrics that they provide. Only applies to sensor devices.
      */
-    sensorMetrics?: pulumi.Input<pulumi.Input<string>[]>;
+    sensorMetrics?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * serial query parameter. Optional parameter to filter devices by serial number. All returned devices will have a serial number that contains the search term or is an exact match.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * serials query parameter. Optional parameter to filter devices by one or more serial numbers. All returned devices will have a serial number that is an exact match.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * tags query parameter. Optional parameter to filter devices by tags.
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * tagsFilterType query parameter. Optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
      */
-    tagsFilterType?: pulumi.Input<string>;
+    tagsFilterType?: pulumi.Input<string | undefined>;
 }

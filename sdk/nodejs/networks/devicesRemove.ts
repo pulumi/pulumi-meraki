@@ -97,8 +97,8 @@ export interface DevicesRemoveState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.DevicesRemoveParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.DevicesRemoveParameters | undefined>;
 }
 
 /**

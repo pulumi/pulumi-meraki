@@ -22,8 +22,8 @@ __all__ = ['ManagementInterfaceArgs', 'ManagementInterface']
 class ManagementInterfaceArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 wan1: Optional[pulumi.Input['ManagementInterfaceWan1Args']] = None,
-                 wan2: Optional[pulumi.Input['ManagementInterfaceWan2Args']] = None):
+                 wan1: pulumi.Input[Optional['ManagementInterfaceWan1Args']] = None,
+                 wan2: pulumi.Input[Optional['ManagementInterfaceWan2Args']] = None):
         """
         The set of arguments for constructing a ManagementInterface resource.
 
@@ -51,36 +51,36 @@ class ManagementInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def wan1(self) -> Optional[pulumi.Input['ManagementInterfaceWan1Args']]:
+    def wan1(self) -> pulumi.Input[Optional['ManagementInterfaceWan1Args']]:
         """
         WAN 1 settings
         """
         return pulumi.get(self, "wan1")
 
     @wan1.setter
-    def wan1(self, value: Optional[pulumi.Input['ManagementInterfaceWan1Args']]):
+    def wan1(self, value: pulumi.Input[Optional['ManagementInterfaceWan1Args']]):
         pulumi.set(self, "wan1", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan2(self) -> Optional[pulumi.Input['ManagementInterfaceWan2Args']]:
+    def wan2(self) -> pulumi.Input[Optional['ManagementInterfaceWan2Args']]:
         """
         WAN 2 settings (only for MX devices)
         """
         return pulumi.get(self, "wan2")
 
     @wan2.setter
-    def wan2(self, value: Optional[pulumi.Input['ManagementInterfaceWan2Args']]):
+    def wan2(self, value: pulumi.Input[Optional['ManagementInterfaceWan2Args']]):
         pulumi.set(self, "wan2", value)
 
 
 @pulumi.input_type
 class _ManagementInterfaceState:
     def __init__(__self__, *,
-                 ddns_hostnames: Optional[pulumi.Input['ManagementInterfaceDdnsHostnamesArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 wan1: Optional[pulumi.Input['ManagementInterfaceWan1Args']] = None,
-                 wan2: Optional[pulumi.Input['ManagementInterfaceWan2Args']] = None):
+                 ddns_hostnames: pulumi.Input[Optional['ManagementInterfaceDdnsHostnamesArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 wan1: pulumi.Input[Optional['ManagementInterfaceWan1Args']] = None,
+                 wan2: pulumi.Input[Optional['ManagementInterfaceWan2Args']] = None):
         """
         Input properties used for looking up and filtering ManagementInterface resources.
 
@@ -100,50 +100,50 @@ class _ManagementInterfaceState:
 
     @_builtins.property
     @pulumi.getter(name="ddnsHostnames")
-    def ddns_hostnames(self) -> Optional[pulumi.Input['ManagementInterfaceDdnsHostnamesArgs']]:
+    def ddns_hostnames(self) -> pulumi.Input[Optional['ManagementInterfaceDdnsHostnamesArgs']]:
         """
         Dynamic DNS hostnames.
         """
         return pulumi.get(self, "ddns_hostnames")
 
     @ddns_hostnames.setter
-    def ddns_hostnames(self, value: Optional[pulumi.Input['ManagementInterfaceDdnsHostnamesArgs']]):
+    def ddns_hostnames(self, value: pulumi.Input[Optional['ManagementInterfaceDdnsHostnamesArgs']]):
         pulumi.set(self, "ddns_hostnames", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan1(self) -> Optional[pulumi.Input['ManagementInterfaceWan1Args']]:
+    def wan1(self) -> pulumi.Input[Optional['ManagementInterfaceWan1Args']]:
         """
         WAN 1 settings
         """
         return pulumi.get(self, "wan1")
 
     @wan1.setter
-    def wan1(self, value: Optional[pulumi.Input['ManagementInterfaceWan1Args']]):
+    def wan1(self, value: pulumi.Input[Optional['ManagementInterfaceWan1Args']]):
         pulumi.set(self, "wan1", value)
 
     @_builtins.property
     @pulumi.getter
-    def wan2(self) -> Optional[pulumi.Input['ManagementInterfaceWan2Args']]:
+    def wan2(self) -> pulumi.Input[Optional['ManagementInterfaceWan2Args']]:
         """
         WAN 2 settings (only for MX devices)
         """
         return pulumi.get(self, "wan2")
 
     @wan2.setter
-    def wan2(self, value: Optional[pulumi.Input['ManagementInterfaceWan2Args']]):
+    def wan2(self, value: pulumi.Input[Optional['ManagementInterfaceWan2Args']]):
         pulumi.set(self, "wan2", value)
 
 
@@ -153,9 +153,9 @@ class ManagementInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
-                 wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 wan1: pulumi.Input[Optional[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+                 wan2: pulumi.Input[Optional[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -270,9 +270,9 @@ class ManagementInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
-                 wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 wan1: pulumi.Input[Optional[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+                 wan2: pulumi.Input[Optional[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -298,10 +298,10 @@ class ManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ddns_hostnames: Optional[pulumi.Input[Union['ManagementInterfaceDdnsHostnamesArgs', 'ManagementInterfaceDdnsHostnamesArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
-            wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None) -> 'ManagementInterface':
+            ddns_hostnames: pulumi.Input[Optional[Union['ManagementInterfaceDdnsHostnamesArgs', 'ManagementInterfaceDdnsHostnamesArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            wan1: pulumi.Input[Optional[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+            wan2: pulumi.Input[Optional[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None) -> 'ManagementInterface':
         """
         Get an existing ManagementInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

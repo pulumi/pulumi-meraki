@@ -73,9 +73,9 @@ export interface GetSwitchRoutingMulticastRendezvousPointsOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * rendezvousPointId path parameter. Rendezvous point ID
      */
-    rendezvousPointId?: pulumi.Input<string>;
+    rendezvousPointId?: pulumi.Input<string | undefined>;
 }

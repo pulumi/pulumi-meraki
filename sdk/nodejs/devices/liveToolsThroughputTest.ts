@@ -143,35 +143,35 @@ export interface LiveToolsThroughputTestState {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsThroughputTestCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsThroughputTestCallback | undefined>;
     /**
      * Description of the error.
      */
-    error?: pulumi.Input<string>;
+    error?: pulumi.Input<string | undefined>;
     /**
      * The parameters of the throughput test request
      */
-    request?: pulumi.Input<inputs.devices.LiveToolsThroughputTestRequest>;
+    request?: pulumi.Input<inputs.devices.LiveToolsThroughputTestRequest | undefined>;
     /**
      * Result of the throughput test request
      */
-    result?: pulumi.Input<inputs.devices.LiveToolsThroughputTestResult>;
+    result?: pulumi.Input<inputs.devices.LiveToolsThroughputTestResult | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Status of the throughput test request
      */
-    status?: pulumi.Input<string>;
+    status?: pulumi.Input<string | undefined>;
     /**
      * ID of throughput test job
      */
-    throughputTestId?: pulumi.Input<string>;
+    throughputTestId?: pulumi.Input<string | undefined>;
     /**
      * GET this url to check the status of your throughput test request
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -181,7 +181,7 @@ export interface LiveToolsThroughputTestArgs {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsThroughputTestCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsThroughputTestCallback | undefined>;
     /**
      * serial path parameter.
      */
@@ -189,5 +189,5 @@ export interface LiveToolsThroughputTestArgs {
     /**
      * ID of throughput test job
      */
-    throughputTestId?: pulumi.Input<string>;
+    throughputTestId?: pulumi.Input<string | undefined>;
 }

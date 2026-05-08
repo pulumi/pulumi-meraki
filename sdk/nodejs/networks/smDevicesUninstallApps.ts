@@ -110,12 +110,12 @@ export interface SmDevicesUninstallAppsState {
     /**
      * deviceId path parameter. Device ID
      */
-    deviceId?: pulumi.Input<string>;
+    deviceId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesUninstallAppsParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesUninstallAppsParameters | undefined>;
 }
 
 /**

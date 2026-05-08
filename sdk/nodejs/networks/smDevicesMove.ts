@@ -112,12 +112,12 @@ export class SmDevicesMove extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmDevicesMove resources.
  */
 export interface SmDevicesMoveState {
-    item?: pulumi.Input<inputs.networks.SmDevicesMoveItem>;
+    item?: pulumi.Input<inputs.networks.SmDevicesMoveItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesMoveParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesMoveParameters | undefined>;
 }
 
 /**

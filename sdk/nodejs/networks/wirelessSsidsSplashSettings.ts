@@ -268,87 +268,87 @@ export interface WirelessSsidsSplashSettingsState {
     /**
      * Whether or not to allow simultaneous logins from different devices.
      */
-    allowSimultaneousLogins?: pulumi.Input<boolean>;
+    allowSimultaneousLogins?: pulumi.Input<boolean | undefined>;
     /**
      * Details associated with billing splash
      */
-    billing?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsBilling>;
+    billing?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsBilling | undefined>;
     /**
      * How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
      */
-    blockAllTrafficBeforeSignOn?: pulumi.Input<boolean>;
+    blockAllTrafficBeforeSignOn?: pulumi.Input<boolean | undefined>;
     /**
      * How login attempts should be handled when the controller is unreachable.
      */
-    controllerDisconnectionBehavior?: pulumi.Input<string>;
+    controllerDisconnectionBehavior?: pulumi.Input<string | undefined>;
     /**
      * Details associated with guest sponsored splash
      */
-    guestSponsorship?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsGuestSponsorship>;
+    guestSponsorship?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsGuestSponsorship | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * The custom redirect URL where the users will go after the splash page.
      */
-    redirectUrl?: pulumi.Input<string>;
+    redirectUrl?: pulumi.Input<string | undefined>;
     /**
      * Self-registration for splash with Meraki authentication.
      */
-    selfRegistration?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSelfRegistration>;
+    selfRegistration?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSelfRegistration | undefined>;
     /**
      * Systems Manager sentry enrollment splash settings.
      */
-    sentryEnrollment?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSentryEnrollment>;
+    sentryEnrollment?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSentryEnrollment | undefined>;
     /**
      * The image used in the splash page.
      */
-    splashImage?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashImage>;
+    splashImage?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashImage | undefined>;
     /**
      * The logo used in the splash page.
      */
-    splashLogo?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashLogo>;
+    splashLogo?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashLogo | undefined>;
     /**
      * The type of splash page for this SSID
      */
-    splashPage?: pulumi.Input<string>;
+    splashPage?: pulumi.Input<string | undefined>;
     /**
      * The prepaid front image used in the splash page.
      */
-    splashPrepaidFront?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront>;
+    splashPrepaidFront?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront | undefined>;
     /**
      * Splash timeout in minutes.
      */
-    splashTimeout?: pulumi.Input<number>;
+    splashTimeout?: pulumi.Input<number | undefined>;
     /**
      * The custom splash URL of the click-through splash page.
      */
-    splashUrl?: pulumi.Input<string>;
+    splashUrl?: pulumi.Input<string | undefined>;
     /**
      * SSID number
      */
-    ssidNumber?: pulumi.Input<number>;
+    ssidNumber?: pulumi.Input<number | undefined>;
     /**
      * The id of the selected splash theme.
      */
-    themeId?: pulumi.Input<string>;
+    themeId?: pulumi.Input<string | undefined>;
     /**
      * The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page.
      */
-    useRedirectUrl?: pulumi.Input<boolean>;
+    useRedirectUrl?: pulumi.Input<boolean | undefined>;
     /**
      * Boolean indicating whether the users will be redirected to the custom splash url
      */
-    useSplashUrl?: pulumi.Input<boolean>;
+    useSplashUrl?: pulumi.Input<boolean | undefined>;
     /**
      * The welcome message for the users on the splash page.
      */
-    welcomeMessage?: pulumi.Input<string>;
+    welcomeMessage?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -358,23 +358,23 @@ export interface WirelessSsidsSplashSettingsArgs {
     /**
      * Whether or not to allow simultaneous logins from different devices.
      */
-    allowSimultaneousLogins?: pulumi.Input<boolean>;
+    allowSimultaneousLogins?: pulumi.Input<boolean | undefined>;
     /**
      * Details associated with billing splash
      */
-    billing?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsBilling>;
+    billing?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsBilling | undefined>;
     /**
      * How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
      */
-    blockAllTrafficBeforeSignOn?: pulumi.Input<boolean>;
+    blockAllTrafficBeforeSignOn?: pulumi.Input<boolean | undefined>;
     /**
      * How login attempts should be handled when the controller is unreachable.
      */
-    controllerDisconnectionBehavior?: pulumi.Input<string>;
+    controllerDisconnectionBehavior?: pulumi.Input<string | undefined>;
     /**
      * Details associated with guest sponsored splash
      */
-    guestSponsorship?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsGuestSponsorship>;
+    guestSponsorship?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsGuestSponsorship | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -386,45 +386,45 @@ export interface WirelessSsidsSplashSettingsArgs {
     /**
      * The custom redirect URL where the users will go after the splash page.
      */
-    redirectUrl?: pulumi.Input<string>;
+    redirectUrl?: pulumi.Input<string | undefined>;
     /**
      * Systems Manager sentry enrollment splash settings.
      */
-    sentryEnrollment?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSentryEnrollment>;
+    sentryEnrollment?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSentryEnrollment | undefined>;
     /**
      * The image used in the splash page.
      */
-    splashImage?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashImage>;
+    splashImage?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashImage | undefined>;
     /**
      * The logo used in the splash page.
      */
-    splashLogo?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashLogo>;
+    splashLogo?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashLogo | undefined>;
     /**
      * The prepaid front image used in the splash page.
      */
-    splashPrepaidFront?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront>;
+    splashPrepaidFront?: pulumi.Input<inputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront | undefined>;
     /**
      * Splash timeout in minutes.
      */
-    splashTimeout?: pulumi.Input<number>;
+    splashTimeout?: pulumi.Input<number | undefined>;
     /**
      * The custom splash URL of the click-through splash page.
      */
-    splashUrl?: pulumi.Input<string>;
+    splashUrl?: pulumi.Input<string | undefined>;
     /**
      * The id of the selected splash theme.
      */
-    themeId?: pulumi.Input<string>;
+    themeId?: pulumi.Input<string | undefined>;
     /**
      * The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page.
      */
-    useRedirectUrl?: pulumi.Input<boolean>;
+    useRedirectUrl?: pulumi.Input<boolean | undefined>;
     /**
      * Boolean indicating whether the users will be redirected to the custom splash url
      */
-    useSplashUrl?: pulumi.Input<boolean>;
+    useSplashUrl?: pulumi.Input<boolean | undefined>;
     /**
      * The welcome message for the users on the splash page.
      */
-    welcomeMessage?: pulumi.Input<string>;
+    welcomeMessage?: pulumi.Input<string | undefined>;
 }
