@@ -117,8 +117,8 @@ def get_insight_monitored_media_servers(monitored_media_server_id: Optional[_bui
         items=pulumi.get(__ret__, 'items'),
         monitored_media_server_id=pulumi.get(__ret__, 'monitored_media_server_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_insight_monitored_media_servers_output(monitored_media_server_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                               organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_insight_monitored_media_servers_output(monitored_media_server_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                               organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInsightMonitoredMediaServersResult]:
     """
     ## Example Usage

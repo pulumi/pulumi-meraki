@@ -254,43 +254,43 @@ export interface GroupPoliciesState {
     /**
      * The bandwidth settings for clients bound to your group policy.
      */
-    bandwidth?: pulumi.Input<inputs.networks.GroupPoliciesBandwidth>;
+    bandwidth?: pulumi.Input<inputs.networks.GroupPoliciesBandwidth | undefined>;
     /**
      * The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
      */
-    bonjourForwarding?: pulumi.Input<inputs.networks.GroupPoliciesBonjourForwarding>;
+    bonjourForwarding?: pulumi.Input<inputs.networks.GroupPoliciesBonjourForwarding | undefined>;
     /**
      * The content filtering settings for your group policy
      */
-    contentFiltering?: pulumi.Input<inputs.networks.GroupPoliciesContentFiltering>;
+    contentFiltering?: pulumi.Input<inputs.networks.GroupPoliciesContentFiltering | undefined>;
     /**
      * The firewall and traffic shaping rules and settings for your policy.
      */
-    firewallAndTrafficShaping?: pulumi.Input<inputs.networks.GroupPoliciesFirewallAndTrafficShaping>;
+    firewallAndTrafficShaping?: pulumi.Input<inputs.networks.GroupPoliciesFirewallAndTrafficShaping | undefined>;
     /**
      * The ID of the group policy
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The name for your group policy. Required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The schedule for the group policy. Schedules are applied to days of the week.
      */
-    scheduling?: pulumi.Input<inputs.networks.GroupPoliciesScheduling>;
+    scheduling?: pulumi.Input<inputs.networks.GroupPoliciesScheduling | undefined>;
     /**
      * Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
      */
-    splashAuthSettings?: pulumi.Input<string>;
+    splashAuthSettings?: pulumi.Input<string | undefined>;
     /**
      * The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
      */
-    vlanTagging?: pulumi.Input<inputs.networks.GroupPoliciesVlanTagging>;
+    vlanTagging?: pulumi.Input<inputs.networks.GroupPoliciesVlanTagging | undefined>;
 }
 
 /**
@@ -300,23 +300,23 @@ export interface GroupPoliciesArgs {
     /**
      * The bandwidth settings for clients bound to your group policy.
      */
-    bandwidth?: pulumi.Input<inputs.networks.GroupPoliciesBandwidth>;
+    bandwidth?: pulumi.Input<inputs.networks.GroupPoliciesBandwidth | undefined>;
     /**
      * The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
      */
-    bonjourForwarding?: pulumi.Input<inputs.networks.GroupPoliciesBonjourForwarding>;
+    bonjourForwarding?: pulumi.Input<inputs.networks.GroupPoliciesBonjourForwarding | undefined>;
     /**
      * The content filtering settings for your group policy
      */
-    contentFiltering?: pulumi.Input<inputs.networks.GroupPoliciesContentFiltering>;
+    contentFiltering?: pulumi.Input<inputs.networks.GroupPoliciesContentFiltering | undefined>;
     /**
      * The firewall and traffic shaping rules and settings for your policy.
      */
-    firewallAndTrafficShaping?: pulumi.Input<inputs.networks.GroupPoliciesFirewallAndTrafficShaping>;
+    firewallAndTrafficShaping?: pulumi.Input<inputs.networks.GroupPoliciesFirewallAndTrafficShaping | undefined>;
     /**
      * The name for your group policy. Required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -324,13 +324,13 @@ export interface GroupPoliciesArgs {
     /**
      * The schedule for the group policy. Schedules are applied to days of the week.
      */
-    scheduling?: pulumi.Input<inputs.networks.GroupPoliciesScheduling>;
+    scheduling?: pulumi.Input<inputs.networks.GroupPoliciesScheduling | undefined>;
     /**
      * Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
      */
-    splashAuthSettings?: pulumi.Input<string>;
+    splashAuthSettings?: pulumi.Input<string | undefined>;
     /**
      * The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
      */
-    vlanTagging?: pulumi.Input<inputs.networks.GroupPoliciesVlanTagging>;
+    vlanTagging?: pulumi.Input<inputs.networks.GroupPoliciesVlanTagging | undefined>;
 }

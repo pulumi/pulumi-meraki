@@ -93,5 +93,5 @@ export interface GetCameraVideoLinkOutputArgs {
     /**
      * timestamp query parameter. [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
      */
-    timestamp?: pulumi.Input<string>;
+    timestamp?: pulumi.Input<string | undefined>;
 }

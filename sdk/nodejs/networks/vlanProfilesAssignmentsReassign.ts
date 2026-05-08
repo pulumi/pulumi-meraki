@@ -101,12 +101,12 @@ export class VlanProfilesAssignmentsReassign extends pulumi.CustomResource {
  * Input properties used for looking up and filtering VlanProfilesAssignmentsReassign resources.
  */
 export interface VlanProfilesAssignmentsReassignState {
-    item?: pulumi.Input<inputs.networks.VlanProfilesAssignmentsReassignItem>;
+    item?: pulumi.Input<inputs.networks.VlanProfilesAssignmentsReassignItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.VlanProfilesAssignmentsReassignParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.VlanProfilesAssignmentsReassignParameters | undefined>;
 }
 
 /**

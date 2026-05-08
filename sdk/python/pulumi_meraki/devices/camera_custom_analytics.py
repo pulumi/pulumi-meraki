@@ -22,9 +22,9 @@ __all__ = ['CameraCustomAnalyticsArgs', 'CameraCustomAnalytics']
 class CameraCustomAnalyticsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 artifact_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]] = None):
+                 artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]] = None):
         """
         The set of arguments for constructing a CameraCustomAnalytics resource.
 
@@ -55,48 +55,48 @@ class CameraCustomAnalyticsArgs:
 
     @_builtins.property
     @pulumi.getter(name="artifactId")
-    def artifact_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def artifact_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Custom analytics artifact ID
         """
         return pulumi.get(self, "artifact_id")
 
     @artifact_id.setter
-    def artifact_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def artifact_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "artifact_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether custom analytics is enabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]:
+    def parameters(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]:
         """
         Parameters for the custom analytics workload
         """
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]):
+    def parameters(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]):
         pulumi.set(self, "parameters", value)
 
 
 @pulumi.input_type
 class _CameraCustomAnalyticsState:
     def __init__(__self__, *,
-                 artifact_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraCustomAnalytics resources.
 
@@ -116,50 +116,50 @@ class _CameraCustomAnalyticsState:
 
     @_builtins.property
     @pulumi.getter(name="artifactId")
-    def artifact_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def artifact_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Custom analytics artifact ID
         """
         return pulumi.get(self, "artifact_id")
 
     @artifact_id.setter
-    def artifact_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def artifact_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "artifact_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether custom analytics is enabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]:
+    def parameters(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]:
         """
         Parameters for the custom analytics workload
         """
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]):
+    def parameters(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CameraCustomAnalyticsParameterArgs']]]]):
         pulumi.set(self, "parameters", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -169,10 +169,10 @@ class CameraCustomAnalytics(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 artifact_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -252,10 +252,10 @@ class CameraCustomAnalytics(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 artifact_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -281,10 +281,10 @@ class CameraCustomAnalytics(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            artifact_id: Optional[pulumi.Input[_builtins.str]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraCustomAnalytics':
+            artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraCustomAnalytics':
         """
         Get an existing CameraCustomAnalytics resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

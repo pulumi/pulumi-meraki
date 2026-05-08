@@ -22,9 +22,9 @@ __all__ = ['SnmpArgs', 'Snmp']
 class SnmpArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 community_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]] = None):
         """
         The set of arguments for constructing a Snmp resource.
 
@@ -55,48 +55,48 @@ class SnmpArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter(name="communityString")
-    def community_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def community_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP community string if access is 'community'.
         """
         return pulumi.get(self, "community_string")
 
     @community_string.setter
-    def community_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def community_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "community_string", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]]:
         """
         SNMP settings if access is 'users'.
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]]):
         pulumi.set(self, "users", value)
 
 
 @pulumi.input_type
 class _SnmpState:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 community_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]] = None):
         """
         Input properties used for looking up and filtering Snmp resources.
 
@@ -116,50 +116,50 @@ class _SnmpState:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter(name="communityString")
-    def community_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def community_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SNMP community string if access is 'community'.
         """
         return pulumi.get(self, "community_string")
 
     @community_string.setter
-    def community_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def community_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "community_string", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]]:
         """
         SNMP settings if access is 'users'.
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SnmpUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SnmpUserArgs']]]]):
         pulumi.set(self, "users", value)
 
 
@@ -169,10 +169,10 @@ class Snmp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 community_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -252,10 +252,10 @@ class Snmp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 community_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -281,10 +281,10 @@ class Snmp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access: Optional[pulumi.Input[_builtins.str]] = None,
-            community_string: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None) -> 'Snmp':
+            access: pulumi.Input[Optional[_builtins.str]] = None,
+            community_string: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None) -> 'Snmp':
         """
         Get an existing Snmp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -77,19 +77,19 @@ export interface ProviderArgs {
     /**
      * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
      */
-    merakiBaseUrl?: pulumi.Input<string>;
+    merakiBaseUrl?: pulumi.Input<string | undefined>;
     /**
      * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      */
-    merakiDashboardApiKey?: pulumi.Input<string>;
+    merakiDashboardApiKey?: pulumi.Input<string | undefined>;
     /**
      * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
      */
-    merakiDebug?: pulumi.Input<string>;
+    merakiDebug?: pulumi.Input<string | undefined>;
     /**
      * Flag requests per second allowed for client. Default is (10)
      */
-    merakiRequestsPerSecond?: pulumi.Input<number>;
+    merakiRequestsPerSecond?: pulumi.Input<number | undefined>;
 }
 
 export namespace Provider {

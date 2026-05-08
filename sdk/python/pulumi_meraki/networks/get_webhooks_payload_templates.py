@@ -117,8 +117,8 @@ def get_webhooks_payload_templates(network_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         payload_template_id=pulumi.get(__ret__, 'payload_template_id'))
-def get_webhooks_payload_templates_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          payload_template_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_webhooks_payload_templates_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          payload_template_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksPayloadTemplatesResult]:
     """
     ## Example Usage

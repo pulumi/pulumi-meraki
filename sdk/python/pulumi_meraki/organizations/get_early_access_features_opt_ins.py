@@ -112,8 +112,8 @@ def get_early_access_features_opt_ins(opt_in_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         opt_in_id=pulumi.get(__ret__, 'opt_in_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_early_access_features_opt_ins_output(opt_in_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                             organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_early_access_features_opt_ins_output(opt_in_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                             organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEarlyAccessFeaturesOptInsResult]:
     """
     ## Example Usage

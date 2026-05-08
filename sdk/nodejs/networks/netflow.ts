@@ -124,27 +124,27 @@ export interface NetflowState {
     /**
      * The IPv4 address of the NetFlow collector.
      */
-    collectorIp?: pulumi.Input<string>;
+    collectorIp?: pulumi.Input<string | undefined>;
     /**
      * The port that the NetFlow collector will be listening on.
      */
-    collectorPort?: pulumi.Input<number>;
+    collectorPort?: pulumi.Input<number | undefined>;
     /**
      * The port that the Encrypted Traffic Analytics collector will be listening on.
      */
-    etaDstPort?: pulumi.Input<number>;
+    etaDstPort?: pulumi.Input<number | undefined>;
     /**
      * Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false).
      */
-    etaEnabled?: pulumi.Input<boolean>;
+    etaEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
      */
-    reportingEnabled?: pulumi.Input<boolean>;
+    reportingEnabled?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -154,19 +154,19 @@ export interface NetflowArgs {
     /**
      * The IPv4 address of the NetFlow collector.
      */
-    collectorIp?: pulumi.Input<string>;
+    collectorIp?: pulumi.Input<string | undefined>;
     /**
      * The port that the NetFlow collector will be listening on.
      */
-    collectorPort?: pulumi.Input<number>;
+    collectorPort?: pulumi.Input<number | undefined>;
     /**
      * The port that the Encrypted Traffic Analytics collector will be listening on.
      */
-    etaDstPort?: pulumi.Input<number>;
+    etaDstPort?: pulumi.Input<number | undefined>;
     /**
      * Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false).
      */
-    etaEnabled?: pulumi.Input<boolean>;
+    etaEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -174,5 +174,5 @@ export interface NetflowArgs {
     /**
      * Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
      */
-    reportingEnabled?: pulumi.Input<boolean>;
+    reportingEnabled?: pulumi.Input<boolean | undefined>;
 }

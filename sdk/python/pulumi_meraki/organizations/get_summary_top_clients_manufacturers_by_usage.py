@@ -125,7 +125,7 @@ def get_summary_top_clients_manufacturers_by_usage(organization_id: Optional[_bu
     example = meraki.organizations.get_summary_top_clients_manufacturers_by_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items)
     ```
 
@@ -150,10 +150,10 @@ def get_summary_top_clients_manufacturers_by_usage(organization_id: Optional[_bu
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-def get_summary_top_clients_manufacturers_by_usage_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                          t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
+def get_summary_top_clients_manufacturers_by_usage_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                          t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSummaryTopClientsManufacturersByUsageResult]:
     """
     ## Example Usage
@@ -165,7 +165,7 @@ def get_summary_top_clients_manufacturers_by_usage_output(organization_id: Optio
     example = meraki.organizations.get_summary_top_clients_manufacturers_by_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items)
     ```
 

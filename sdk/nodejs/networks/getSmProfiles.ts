@@ -96,5 +96,5 @@ export interface GetSmProfilesOutputArgs {
     /**
      * payloadTypes query parameter. Filter by payload types
      */
-    payloadTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    payloadTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

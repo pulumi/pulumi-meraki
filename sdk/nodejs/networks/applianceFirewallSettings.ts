@@ -102,11 +102,11 @@ export interface ApplianceFirewallSettingsState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Spoofing protection settings
      */
-    spoofingProtection?: pulumi.Input<inputs.networks.ApplianceFirewallSettingsSpoofingProtection>;
+    spoofingProtection?: pulumi.Input<inputs.networks.ApplianceFirewallSettingsSpoofingProtection | undefined>;
 }
 
 /**
@@ -120,5 +120,5 @@ export interface ApplianceFirewallSettingsArgs {
     /**
      * Spoofing protection settings
      */
-    spoofingProtection?: pulumi.Input<inputs.networks.ApplianceFirewallSettingsSpoofingProtection>;
+    spoofingProtection?: pulumi.Input<inputs.networks.ApplianceFirewallSettingsSpoofingProtection | undefined>;
 }

@@ -117,8 +117,8 @@ def get_saml_idps(idp_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_saml_idps_output(idp_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                         organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_saml_idps_output(idp_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                         organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlIdpsResult]:
     """
     ## Example Usage

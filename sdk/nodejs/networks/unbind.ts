@@ -97,12 +97,12 @@ export class Unbind extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Unbind resources.
  */
 export interface UnbindState {
-    item?: pulumi.Input<inputs.networks.UnbindItem>;
+    item?: pulumi.Input<inputs.networks.UnbindItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.UnbindParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.UnbindParameters | undefined>;
 }
 
 /**

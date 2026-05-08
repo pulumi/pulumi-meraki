@@ -22,12 +22,12 @@ __all__ = ['BrandingPoliciesArgs', 'BrandingPolicies']
 class BrandingPoliciesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 admin_settings: Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']] = None,
-                 branding_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 custom_logo: Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 help_settings: Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 admin_settings: pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']] = None,
+                 branding_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_logo: pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 help_settings: pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a BrandingPolicies resource.
 
@@ -70,55 +70,55 @@ class BrandingPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter(name="adminSettings")
-    def admin_settings(self) -> Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']]:
+    def admin_settings(self) -> pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']]:
         """
         Settings for describing which kinds of admins this policy applies to.
         """
         return pulumi.get(self, "admin_settings")
 
     @admin_settings.setter
-    def admin_settings(self, value: Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']]):
+    def admin_settings(self, value: pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']]):
         pulumi.set(self, "admin_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="brandingPolicyId")
-    def branding_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def branding_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         brandingPolicyId path parameter. Branding policy ID
         """
         return pulumi.get(self, "branding_policy_id")
 
     @branding_policy_id.setter
-    def branding_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def branding_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "branding_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="customLogo")
-    def custom_logo(self) -> Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']]:
+    def custom_logo(self) -> pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']]:
         """
         Properties describing the custom logo attached to the branding policy.
         """
         return pulumi.get(self, "custom_logo")
 
     @custom_logo.setter
-    def custom_logo(self, value: Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']]):
+    def custom_logo(self, value: pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']]):
         pulumi.set(self, "custom_logo", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether this policy is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="helpSettings")
-    def help_settings(self) -> Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]:
+    def help_settings(self) -> pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']]:
         """
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
           'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
@@ -128,32 +128,32 @@ class BrandingPoliciesArgs:
         return pulumi.get(self, "help_settings")
 
     @help_settings.setter
-    def help_settings(self, value: Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]):
+    def help_settings(self, value: pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']]):
         pulumi.set(self, "help_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Dashboard branding policy.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _BrandingPoliciesState:
     def __init__(__self__, *,
-                 admin_settings: Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']] = None,
-                 branding_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 custom_logo: Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 help_settings: Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 admin_settings: pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']] = None,
+                 branding_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_logo: pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 help_settings: pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BrandingPolicies resources.
 
@@ -185,55 +185,55 @@ class _BrandingPoliciesState:
 
     @_builtins.property
     @pulumi.getter(name="adminSettings")
-    def admin_settings(self) -> Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']]:
+    def admin_settings(self) -> pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']]:
         """
         Settings for describing which kinds of admins this policy applies to.
         """
         return pulumi.get(self, "admin_settings")
 
     @admin_settings.setter
-    def admin_settings(self, value: Optional[pulumi.Input['BrandingPoliciesAdminSettingsArgs']]):
+    def admin_settings(self, value: pulumi.Input[Optional['BrandingPoliciesAdminSettingsArgs']]):
         pulumi.set(self, "admin_settings", value)
 
     @_builtins.property
     @pulumi.getter(name="brandingPolicyId")
-    def branding_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def branding_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         brandingPolicyId path parameter. Branding policy ID
         """
         return pulumi.get(self, "branding_policy_id")
 
     @branding_policy_id.setter
-    def branding_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def branding_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "branding_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="customLogo")
-    def custom_logo(self) -> Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']]:
+    def custom_logo(self) -> pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']]:
         """
         Properties describing the custom logo attached to the branding policy.
         """
         return pulumi.get(self, "custom_logo")
 
     @custom_logo.setter
-    def custom_logo(self, value: Optional[pulumi.Input['BrandingPoliciesCustomLogoArgs']]):
+    def custom_logo(self, value: pulumi.Input[Optional['BrandingPoliciesCustomLogoArgs']]):
         pulumi.set(self, "custom_logo", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether this policy is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="helpSettings")
-    def help_settings(self) -> Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]:
+    def help_settings(self) -> pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']]:
         """
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
           'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
@@ -243,31 +243,31 @@ class _BrandingPoliciesState:
         return pulumi.get(self, "help_settings")
 
     @help_settings.setter
-    def help_settings(self, value: Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]):
+    def help_settings(self, value: pulumi.Input[Optional['BrandingPoliciesHelpSettingsArgs']]):
         pulumi.set(self, "help_settings", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the Dashboard branding policy.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
@@ -277,13 +277,13 @@ class BrandingPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
-                 branding_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 admin_settings: pulumi.Input[Optional[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
+                 branding_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_logo: pulumi.Input[Optional[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 help_settings: pulumi.Input[Optional[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -423,13 +423,13 @@ class BrandingPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
-                 branding_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 admin_settings: pulumi.Input[Optional[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
+                 branding_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 custom_logo: pulumi.Input[Optional[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 help_settings: pulumi.Input[Optional[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -458,13 +458,13 @@ class BrandingPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
-            branding_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'BrandingPolicies':
+            admin_settings: pulumi.Input[Optional[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
+            branding_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            custom_logo: pulumi.Input[Optional[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            help_settings: pulumi.Input[Optional[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'BrandingPolicies':
         """
         Get an existing BrandingPolicies resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

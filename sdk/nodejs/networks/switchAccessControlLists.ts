@@ -114,15 +114,15 @@ export interface SwitchAccessControlListsState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the access control list rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRule>[] | undefined>;
     /**
      * An ordered array of the access control list rules
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRulesResponse>[] | undefined>;
 }
 
 /**
@@ -136,9 +136,9 @@ export interface SwitchAccessControlListsArgs {
     /**
      * An ordered array of the access control list rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRule>[] | undefined>;
     /**
      * An ordered array of the access control list rules
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessControlListsRulesResponse>[] | undefined>;
 }

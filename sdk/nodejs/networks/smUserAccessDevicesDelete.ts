@@ -96,11 +96,11 @@ export interface SmUserAccessDevicesDeleteState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * userAccessDeviceId path parameter. User access device ID
      */
-    userAccessDeviceId?: pulumi.Input<string>;
+    userAccessDeviceId?: pulumi.Input<string | undefined>;
 }
 
 /**

@@ -176,19 +176,19 @@ export interface GetFirmwareUpgradesByDeviceOutputArgs {
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * firmwareUpgradeBatchIds query parameter. Optional parameter to filter by firmware upgrade batch ids.
      */
-    firmwareUpgradeBatchIds?: pulumi.Input<pulumi.Input<string>[]>;
+    firmwareUpgradeBatchIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * macs query parameter. Optional parameter to filter by one or more MAC addresses belonging to devices. All devices returned belong to MAC addresses that are an exact match.
      */
-    macs?: pulumi.Input<pulumi.Input<string>[]>;
+    macs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkIds query parameter. Optional parameter to filter by network
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -196,17 +196,17 @@ export interface GetFirmwareUpgradesByDeviceOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 50.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * serials query parameter. Optional parameter to filter by serial number.  All returned devices will have a serial number that is an exact match.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * upgradeStatuses query parameter. Optional parameter to filter by firmware upgrade statuses.
      */
-    upgradestatuses?: pulumi.Input<pulumi.Input<string>[]>;
+    upgradestatuses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

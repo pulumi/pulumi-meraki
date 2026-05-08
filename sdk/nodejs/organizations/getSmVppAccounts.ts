@@ -73,9 +73,9 @@ export interface GetSmVppAccountsOutputArgs {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * vppAccountId path parameter. Vpp account ID
      */
-    vppAccountId?: pulumi.Input<string>;
+    vppAccountId?: pulumi.Input<string | undefined>;
 }

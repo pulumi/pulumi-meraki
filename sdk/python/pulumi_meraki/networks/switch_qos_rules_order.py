@@ -20,14 +20,14 @@ __all__ = ['SwitchQosRulesOrderArgs', 'SwitchQosRulesOrder']
 class SwitchQosRulesOrderArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_rule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 src_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchQosRulesOrder resource.
 
@@ -73,113 +73,113 @@ class SwitchQosRulesOrderArgs:
 
     @_builtins.property
     @pulumi.getter
-    def dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
         """
         return pulumi.get(self, "dscp")
 
     @dscp.setter
-    def dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="dstPort")
-    def dst_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def dst_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
         """
         return pulumi.get(self, "dst_port")
 
     @dst_port.setter
-    def dst_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def dst_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "dst_port", value)
 
     @_builtins.property
     @pulumi.getter(name="dstPortRange")
-    def dst_port_range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dst_port_range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
         """
         return pulumi.get(self, "dst_port_range")
 
     @dst_port_range.setter
-    def dst_port_range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dst_port_range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dst_port_range", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY"
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="qosRuleId")
-    def qos_rule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def qos_rule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         qosRuleId path parameter. Qos rule ID
         """
         return pulumi.get(self, "qos_rule_id")
 
     @qos_rule_id.setter
-    def qos_rule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def qos_rule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "qos_rule_id", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPort")
-    def src_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def src_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The source port of the incoming packet. Applicable only if protocol is TCP or UDP.
         """
         return pulumi.get(self, "src_port")
 
     @src_port.setter
-    def src_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def src_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "src_port", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPortRange")
-    def src_port_range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def src_port_range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
         """
         return pulumi.get(self, "src_port_range")
 
     @src_port_range.setter
-    def src_port_range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def src_port_range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "src_port_range", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN of the incoming packet. A null value will match any VLAN.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
 @pulumi.input_type
 class _SwitchQosRulesOrderState:
     def __init__(__self__, *,
-                 dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_rule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 src_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchQosRulesOrder resources.
 
@@ -214,110 +214,110 @@ class _SwitchQosRulesOrderState:
 
     @_builtins.property
     @pulumi.getter
-    def dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
         """
         return pulumi.get(self, "dscp")
 
     @dscp.setter
-    def dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="dstPort")
-    def dst_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def dst_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
         """
         return pulumi.get(self, "dst_port")
 
     @dst_port.setter
-    def dst_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def dst_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "dst_port", value)
 
     @_builtins.property
     @pulumi.getter(name="dstPortRange")
-    def dst_port_range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dst_port_range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
         """
         return pulumi.get(self, "dst_port_range")
 
     @dst_port_range.setter
-    def dst_port_range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dst_port_range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dst_port_range", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY"
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="qosRuleId")
-    def qos_rule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def qos_rule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         qosRuleId path parameter. Qos rule ID
         """
         return pulumi.get(self, "qos_rule_id")
 
     @qos_rule_id.setter
-    def qos_rule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def qos_rule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "qos_rule_id", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPort")
-    def src_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def src_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The source port of the incoming packet. Applicable only if protocol is TCP or UDP.
         """
         return pulumi.get(self, "src_port")
 
     @src_port.setter
-    def src_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def src_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "src_port", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPortRange")
-    def src_port_range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def src_port_range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
         """
         return pulumi.get(self, "src_port_range")
 
     @src_port_range.setter
-    def src_port_range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def src_port_range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "src_port_range", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The VLAN of the incoming packet. A null value will match any VLAN.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
@@ -327,15 +327,15 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_rule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 src_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -422,15 +422,15 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 dst_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_rule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 src_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -461,15 +461,15 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            dscp: Optional[pulumi.Input[_builtins.int]] = None,
-            dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-            dst_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            qos_rule_id: Optional[pulumi.Input[_builtins.str]] = None,
-            src_port: Optional[pulumi.Input[_builtins.int]] = None,
-            src_port_range: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan: Optional[pulumi.Input[_builtins.int]] = None) -> 'SwitchQosRulesOrder':
+            dscp: pulumi.Input[Optional[_builtins.int]] = None,
+            dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+            dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            src_port: pulumi.Input[Optional[_builtins.int]] = None,
+            src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchQosRulesOrder':
         """
         Get an existing SwitchQosRulesOrder resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

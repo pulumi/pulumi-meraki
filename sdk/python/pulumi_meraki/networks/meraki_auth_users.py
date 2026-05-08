@@ -22,14 +22,14 @@ __all__ = ['MerakiAuthUsersArgs', 'MerakiAuthUsers']
 class MerakiAuthUsersArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 account_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 email_password_to_user: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_admin: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meraki_auth_user_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None):
+                 account_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorizations: pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a MerakiAuthUsers resource.
 
@@ -75,114 +75,114 @@ class MerakiAuthUsersArgs:
 
     @_builtins.property
     @pulumi.getter(name="accountType")
-    def account_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def account_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authorization type for user.
         """
         return pulumi.get(self, "account_type")
 
     @account_type.setter
-    def account_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def account_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "account_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def authorizations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]:
+    def authorizations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]:
         """
         User authorization info
         """
         return pulumi.get(self, "authorizations")
 
     @authorizations.setter
-    def authorizations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]):
+    def authorizations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]):
         pulumi.set(self, "authorizations", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Email address of the user
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="emailPasswordToUser")
-    def email_password_to_user(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def email_password_to_user(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not Meraki should email the password to user. Default is false.
         """
         return pulumi.get(self, "email_password_to_user")
 
     @email_password_to_user.setter
-    def email_password_to_user(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def email_password_to_user(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "email_password_to_user", value)
 
     @_builtins.property
     @pulumi.getter(name="isAdmin")
-    def is_admin(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_admin(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not the user is a Dashboard administrator
         """
         return pulumi.get(self, "is_admin")
 
     @is_admin.setter
-    def is_admin(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_admin(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_admin", value)
 
     @_builtins.property
     @pulumi.getter(name="merakiAuthUserId")
-    def meraki_auth_user_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def meraki_auth_user_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         merakiAuthUserId path parameter. Meraki auth user ID
         """
         return pulumi.get(self, "meraki_auth_user_id")
 
     @meraki_auth_user_id.setter
-    def meraki_auth_user_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def meraki_auth_user_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "meraki_auth_user_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the user
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The password for this user account. Only required If the user is not a Dashboard administrator.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
 
 @pulumi.input_type
 class _MerakiAuthUsersState:
     def __init__(__self__, *,
-                 account_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]] = None,
-                 created_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 email_password_to_user: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_admin: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meraki_auth_user_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None):
+                 account_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorizations: pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]] = None,
+                 created_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering MerakiAuthUsers resources.
 
@@ -220,122 +220,122 @@ class _MerakiAuthUsersState:
 
     @_builtins.property
     @pulumi.getter(name="accountType")
-    def account_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def account_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authorization type for user.
         """
         return pulumi.get(self, "account_type")
 
     @account_type.setter
-    def account_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def account_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "account_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def authorizations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]:
+    def authorizations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]:
         """
         User authorization info
         """
         return pulumi.get(self, "authorizations")
 
     @authorizations.setter
-    def authorizations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]):
+    def authorizations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]]]):
         pulumi.set(self, "authorizations", value)
 
     @_builtins.property
     @pulumi.getter(name="createdAt")
-    def created_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Creation time of the user
         """
         return pulumi.get(self, "created_at")
 
     @created_at.setter
-    def created_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Email address of the user
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="emailPasswordToUser")
-    def email_password_to_user(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def email_password_to_user(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not Meraki should email the password to user. Default is false.
         """
         return pulumi.get(self, "email_password_to_user")
 
     @email_password_to_user.setter
-    def email_password_to_user(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def email_password_to_user(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "email_password_to_user", value)
 
     @_builtins.property
     @pulumi.getter(name="isAdmin")
-    def is_admin(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_admin(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not the user is a Dashboard administrator
         """
         return pulumi.get(self, "is_admin")
 
     @is_admin.setter
-    def is_admin(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_admin(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_admin", value)
 
     @_builtins.property
     @pulumi.getter(name="merakiAuthUserId")
-    def meraki_auth_user_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def meraki_auth_user_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         merakiAuthUserId path parameter. Meraki auth user ID
         """
         return pulumi.get(self, "meraki_auth_user_id")
 
     @meraki_auth_user_id.setter
-    def meraki_auth_user_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def meraki_auth_user_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "meraki_auth_user_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the user
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The password for this user account. Only required If the user is not a Dashboard administrator.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
 
@@ -345,15 +345,15 @@ class MerakiAuthUsers(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 email_password_to_user: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_admin: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meraki_auth_user_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
+                 account_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorizations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -446,15 +446,15 @@ class MerakiAuthUsers(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 account_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 email_password_to_user: Optional[pulumi.Input[_builtins.bool]] = None,
-                 is_admin: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meraki_auth_user_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
+                 account_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorizations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+                 is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -488,16 +488,16 @@ class MerakiAuthUsers(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            account_type: Optional[pulumi.Input[_builtins.str]] = None,
-            authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
-            created_at: Optional[pulumi.Input[_builtins.str]] = None,
-            email: Optional[pulumi.Input[_builtins.str]] = None,
-            email_password_to_user: Optional[pulumi.Input[_builtins.bool]] = None,
-            is_admin: Optional[pulumi.Input[_builtins.bool]] = None,
-            meraki_auth_user_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            password: Optional[pulumi.Input[_builtins.str]] = None) -> 'MerakiAuthUsers':
+            account_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authorizations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+            is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+            meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None) -> 'MerakiAuthUsers':
         """
         Get an existing MerakiAuthUsers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

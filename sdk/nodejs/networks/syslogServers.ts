@@ -105,11 +105,11 @@ export interface SyslogServersState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * List of the syslog servers for this network
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.networks.SyslogServersServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.networks.SyslogServersServer>[] | undefined>;
 }
 
 /**
@@ -123,5 +123,5 @@ export interface SyslogServersArgs {
     /**
      * List of the syslog servers for this network
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.networks.SyslogServersServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.networks.SyslogServersServer>[] | undefined>;
 }

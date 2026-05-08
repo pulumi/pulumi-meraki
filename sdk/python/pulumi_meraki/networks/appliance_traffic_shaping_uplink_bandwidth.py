@@ -22,7 +22,7 @@ __all__ = ['ApplianceTrafficShapingUplinkBandwidthArgs', 'ApplianceTrafficShapin
 class ApplianceTrafficShapingUplinkBandwidthArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] = None):
+                 bandwidth_limits: pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingUplinkBandwidth resource.
 
@@ -47,22 +47,22 @@ class ApplianceTrafficShapingUplinkBandwidthArgs:
 
     @_builtins.property
     @pulumi.getter(name="bandwidthLimits")
-    def bandwidth_limits(self) -> Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]:
+    def bandwidth_limits(self) -> pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]:
         """
         A hash uplink keys and their configured settings for the Appliance
         """
         return pulumi.get(self, "bandwidth_limits")
 
     @bandwidth_limits.setter
-    def bandwidth_limits(self, value: Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]):
+    def bandwidth_limits(self, value: pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]):
         pulumi.set(self, "bandwidth_limits", value)
 
 
 @pulumi.input_type
 class _ApplianceTrafficShapingUplinkBandwidthState:
     def __init__(__self__, *,
-                 bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 bandwidth_limits: pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingUplinkBandwidth resources.
 
@@ -76,26 +76,26 @@ class _ApplianceTrafficShapingUplinkBandwidthState:
 
     @_builtins.property
     @pulumi.getter(name="bandwidthLimits")
-    def bandwidth_limits(self) -> Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]:
+    def bandwidth_limits(self) -> pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]:
         """
         A hash uplink keys and their configured settings for the Appliance
         """
         return pulumi.get(self, "bandwidth_limits")
 
     @bandwidth_limits.setter
-    def bandwidth_limits(self, value: Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]):
+    def bandwidth_limits(self, value: pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]):
         pulumi.set(self, "bandwidth_limits", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -200,8 +200,8 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -225,8 +225,8 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceTrafficShapingUplinkBandwidth':
+            bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceTrafficShapingUplinkBandwidth':
         """
         Get an existing ApplianceTrafficShapingUplinkBandwidth resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

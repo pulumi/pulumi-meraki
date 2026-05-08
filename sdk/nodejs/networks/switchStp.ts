@@ -118,19 +118,19 @@ export interface SwitchStpState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The spanning tree protocol status in network
      */
-    rstpEnabled?: pulumi.Input<boolean>;
+    rstpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
      */
-    stpBridgePriorities?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriority>[]>;
+    stpBridgePriorities?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriority>[] | undefined>;
     /**
      * STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
      */
-    stpBridgePriorityResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriorityResponse>[]>;
+    stpBridgePriorityResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriorityResponse>[] | undefined>;
 }
 
 /**
@@ -144,9 +144,9 @@ export interface SwitchStpArgs {
     /**
      * The spanning tree protocol status in network
      */
-    rstpEnabled?: pulumi.Input<boolean>;
+    rstpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
      */
-    stpBridgePriorities?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriority>[]>;
+    stpBridgePriorities?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStpStpBridgePriority>[] | undefined>;
 }

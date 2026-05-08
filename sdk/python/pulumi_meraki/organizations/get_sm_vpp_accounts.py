@@ -117,8 +117,8 @@ def get_sm_vpp_accounts(organization_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         vpp_account_id=pulumi.get(__ret__, 'vpp_account_id'))
-def get_sm_vpp_accounts_output(organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                               vpp_account_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_sm_vpp_accounts_output(organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                               vpp_account_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmVppAccountsResult]:
     """
     ## Example Usage

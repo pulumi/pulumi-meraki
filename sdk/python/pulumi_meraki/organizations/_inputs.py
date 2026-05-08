@@ -256,15 +256,15 @@ __all__ = [
 ]
 
 class ActionBatchesActionArgsDict(TypedDict):
-    body: NotRequired[pulumi.Input[_builtins.str]]
+    body: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Data provided in the body of the Action. Contents depend on the Action type
     """
-    operation: NotRequired[pulumi.Input[_builtins.str]]
+    operation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The operation to be used by this action
     """
-    resource: NotRequired[pulumi.Input[_builtins.str]]
+    resource: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Unique identifier for the resource to be acted on
     """
@@ -272,9 +272,9 @@ class ActionBatchesActionArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesActionArgs:
     def __init__(__self__, *,
-                 body: Optional[pulumi.Input[_builtins.str]] = None,
-                 operation: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource: Optional[pulumi.Input[_builtins.str]] = None):
+                 body: pulumi.Input[Optional[_builtins.str]] = None,
+                 operation: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] body: Data provided in the body of the Action. Contents depend on the Action type
         :param pulumi.Input[_builtins.str] operation: The operation to be used by this action
@@ -289,63 +289,63 @@ class ActionBatchesActionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def body(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def body(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Data provided in the body of the Action. Contents depend on the Action type
         """
         return pulumi.get(self, "body")
 
     @body.setter
-    def body(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def body(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "body", value)
 
     @_builtins.property
     @pulumi.getter
-    def operation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def operation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The operation to be used by this action
         """
         return pulumi.get(self, "operation")
 
     @operation.setter
-    def operation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def operation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "operation", value)
 
     @_builtins.property
     @pulumi.getter
-    def resource(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resource(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unique identifier for the resource to be acted on
         """
         return pulumi.get(self, "resource")
 
     @resource.setter
-    def resource(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resource(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resource", value)
 
 
 class ActionBatchesCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input['ActionBatchesCallbackHttpServerArgsDict']]
+    http_server: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgs']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
     """
-    payload_template: NotRequired[pulumi.Input['ActionBatchesCallbackPayloadTemplateArgsDict']]
+    payload_template: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgs']]]
     """
     The payload template of the webhook used for the callback
     """
-    shared_secret: NotRequired[pulumi.Input[_builtins.str]]
+    shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The status of the callback
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
     """
@@ -353,12 +353,12 @@ class ActionBatchesCallbackArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesCallbackArgs:
     def __init__(__self__, *,
-                 http_server: Optional[pulumi.Input['ActionBatchesCallbackHttpServerArgs']] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template: Optional[pulumi.Input['ActionBatchesCallbackPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server: pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgs']] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template: pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['ActionBatchesCallbackHttpServerArgs'] http_server: The webhook receiver used for the callback webhook.
         :param pulumi.Input[_builtins.str] id: The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
@@ -382,79 +382,79 @@ class ActionBatchesCallbackArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input['ActionBatchesCallbackHttpServerArgs']]:
+    def http_server(self) -> pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgs']]:
         """
         The webhook receiver used for the callback webhook.
         """
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input['ActionBatchesCallbackHttpServerArgs']]):
+    def http_server(self, value: pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgs']]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['ActionBatchesCallbackPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgs']]:
         """
         The payload template of the webhook used for the callback
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['ActionBatchesCallbackPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The status of the callback
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class ActionBatchesCallbackHttpServerArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
     """
@@ -462,7 +462,7 @@ class ActionBatchesCallbackHttpServerArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesCallbackHttpServerArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
@@ -471,19 +471,19 @@ class ActionBatchesCallbackHttpServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class ActionBatchesCallbackPayloadTemplateArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
     """
@@ -491,7 +491,7 @@ class ActionBatchesCallbackPayloadTemplateArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
@@ -500,31 +500,31 @@ class ActionBatchesCallbackPayloadTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class ActionBatchesStatusArgsDict(TypedDict):
-    completed: NotRequired[pulumi.Input[_builtins.bool]]
+    completed: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag describing whether all actions in the action batch have completed
     """
-    created_resources: NotRequired[pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgsDict']]]]
+    created_resources: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]]
     """
     Resources created as a result of this action batch
     """
-    errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    errors: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of errors encountered when running actions in the action batch
     """
-    failed: NotRequired[pulumi.Input[_builtins.bool]]
+    failed: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag describing whether any actions in the action batch failed
     """
@@ -532,10 +532,10 @@ class ActionBatchesStatusArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesStatusArgs:
     def __init__(__self__, *,
-                 completed: Optional[pulumi.Input[_builtins.bool]] = None,
-                 created_resources: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]] = None,
-                 errors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 failed: Optional[pulumi.Input[_builtins.bool]] = None):
+                 completed: pulumi.Input[Optional[_builtins.bool]] = None,
+                 created_resources: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]] = None,
+                 errors: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 failed: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] completed: Flag describing whether all actions in the action batch have completed
         :param pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]] created_resources: Resources created as a result of this action batch
@@ -553,59 +553,59 @@ class ActionBatchesStatusArgs:
 
     @_builtins.property
     @pulumi.getter
-    def completed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def completed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether all actions in the action batch have completed
         """
         return pulumi.get(self, "completed")
 
     @completed.setter
-    def completed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def completed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "completed", value)
 
     @_builtins.property
     @pulumi.getter(name="createdResources")
-    def created_resources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]:
+    def created_resources(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]:
         """
         Resources created as a result of this action batch
         """
         return pulumi.get(self, "created_resources")
 
     @created_resources.setter
-    def created_resources(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]):
+    def created_resources(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]):
         pulumi.set(self, "created_resources", value)
 
     @_builtins.property
     @pulumi.getter
-    def errors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def errors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of errors encountered when running actions in the action batch
         """
         return pulumi.get(self, "errors")
 
     @errors.setter
-    def errors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def errors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "errors", value)
 
     @_builtins.property
     @pulumi.getter
-    def failed(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def failed(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag describing whether any actions in the action batch failed
         """
         return pulumi.get(self, "failed")
 
     @failed.setter
-    def failed(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def failed(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "failed", value)
 
 
 class ActionBatchesStatusCreatedResourceArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     ID of the created resource
     """
-    uri: NotRequired[pulumi.Input[_builtins.str]]
+    uri: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     URI, not including base, of the created resource
     """
@@ -613,8 +613,8 @@ class ActionBatchesStatusCreatedResourceArgsDict(TypedDict):
 @pulumi.input_type
 class ActionBatchesStatusCreatedResourceArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 uri: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 uri: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: ID of the created resource
         :param pulumi.Input[_builtins.str] uri: URI, not including base, of the created resource
@@ -626,43 +626,43 @@ class ActionBatchesStatusCreatedResourceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the created resource
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def uri(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uri(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URI, not including base, of the created resource
         """
         return pulumi.get(self, "uri")
 
     @uri.setter
-    def uri(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uri(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uri", value)
 
 
 class AdaptivePolicyAclsRuleArgsDict(TypedDict):
-    dst_port: NotRequired[pulumi.Input[_builtins.str]]
+    dst_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Destination port
     """
-    policy: NotRequired[pulumi.Input[_builtins.str]]
+    policy: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     'allow' or 'deny' traffic specified by this rule
     """
-    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of protocol
     """
-    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    src_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Source port
     """
@@ -670,10 +670,10 @@ class AdaptivePolicyAclsRuleArgsDict(TypedDict):
 @pulumi.input_type
 class AdaptivePolicyAclsRuleArgs:
     def __init__(__self__, *,
-                 dst_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.str]] = None):
+                 dst_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] dst_port: Destination port
         :param pulumi.Input[_builtins.str] policy: 'allow' or 'deny' traffic specified by this rule
@@ -691,59 +691,59 @@ class AdaptivePolicyAclsRuleArgs:
 
     @_builtins.property
     @pulumi.getter(name="dstPort")
-    def dst_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dst_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Destination port
         """
         return pulumi.get(self, "dst_port")
 
     @dst_port.setter
-    def dst_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dst_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dst_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'allow' or 'deny' traffic specified by this rule
         """
         return pulumi.get(self, "policy")
 
     @policy.setter
-    def policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of protocol
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPort")
-    def src_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def src_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source port
         """
         return pulumi.get(self, "src_port")
 
     @src_port.setter
-    def src_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def src_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "src_port", value)
 
 
 class AdaptivePolicyGroupsPolicyObjectArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the policy object
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the policy object
     """
@@ -751,8 +751,8 @@ class AdaptivePolicyGroupsPolicyObjectArgsDict(TypedDict):
 @pulumi.input_type
 class AdaptivePolicyGroupsPolicyObjectArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the policy object
         :param pulumi.Input[_builtins.str] name: The name of the policy object
@@ -764,35 +764,35 @@ class AdaptivePolicyGroupsPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the policy object
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class AdaptivePolicyPoliciesAclArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the adaptive policy ACL
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the adaptive policy ACL
     """
@@ -800,8 +800,8 @@ class AdaptivePolicyPoliciesAclArgsDict(TypedDict):
 @pulumi.input_type
 class AdaptivePolicyPoliciesAclArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the adaptive policy ACL
         :param pulumi.Input[_builtins.str] name: The name of the adaptive policy ACL
@@ -813,39 +813,39 @@ class AdaptivePolicyPoliciesAclArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the adaptive policy ACL
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the adaptive policy ACL
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class AdaptivePolicyPoliciesDestinationGroupArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the destination adaptive policy group
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the destination adaptive policy group
     """
-    sgt: NotRequired[pulumi.Input[_builtins.int]]
+    sgt: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The SGT of the destination adaptive policy group
     """
@@ -853,9 +853,9 @@ class AdaptivePolicyPoliciesDestinationGroupArgsDict(TypedDict):
 @pulumi.input_type
 class AdaptivePolicyPoliciesDestinationGroupArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.int]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the destination adaptive policy group
         :param pulumi.Input[_builtins.str] name: The name of the destination adaptive policy group
@@ -870,51 +870,51 @@ class AdaptivePolicyPoliciesDestinationGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the destination adaptive policy group
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the destination adaptive policy group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The SGT of the destination adaptive policy group
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sgt", value)
 
 
 class AdaptivePolicyPoliciesSourceGroupArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the source adaptive policy group
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the source adaptive policy group
     """
-    sgt: NotRequired[pulumi.Input[_builtins.int]]
+    sgt: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The SGT of the source adaptive policy group
     """
@@ -922,9 +922,9 @@ class AdaptivePolicyPoliciesSourceGroupArgsDict(TypedDict):
 @pulumi.input_type
 class AdaptivePolicyPoliciesSourceGroupArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sgt: Optional[pulumi.Input[_builtins.int]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sgt: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] id: The ID of the source adaptive policy group
         :param pulumi.Input[_builtins.str] name: The name of the source adaptive policy group
@@ -939,47 +939,47 @@ class AdaptivePolicyPoliciesSourceGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the source adaptive policy group
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the source adaptive policy group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sgt(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sgt(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The SGT of the source adaptive policy group
         """
         return pulumi.get(self, "sgt")
 
     @sgt.setter
-    def sgt(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sgt(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sgt", value)
 
 
 class AdminsNetworkArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Admin's level of access to the network
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network ID
     """
@@ -987,8 +987,8 @@ class AdminsNetworkArgsDict(TypedDict):
 @pulumi.input_type
 class AdminsNetworkArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] access: Admin's level of access to the network
         :param pulumi.Input[_builtins.str] id: Network ID
@@ -1000,35 +1000,35 @@ class AdminsNetworkArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Admin's level of access to the network
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class AdminsTagArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Access level for the tag
     """
-    tag: NotRequired[pulumi.Input[_builtins.str]]
+    tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Tag value
     """
@@ -1036,8 +1036,8 @@ class AdminsTagArgsDict(TypedDict):
 @pulumi.input_type
 class AdminsTagArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.str]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] access: Access level for the tag
         :param pulumi.Input[_builtins.str] tag: Tag value
@@ -1049,59 +1049,59 @@ class AdminsTagArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Access level for the tag
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tag value
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tag", value)
 
 
 class AlertsProfilesAlertConditionArgsDict(TypedDict):
-    bit_rate_bps: NotRequired[pulumi.Input[_builtins.int]]
+    bit_rate_bps: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The threshold the metric must cross to be valid for alerting. Used only for WAN Utilization alerts.
     """
-    duration: NotRequired[pulumi.Input[_builtins.int]]
+    duration: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The total duration in seconds that the threshold should be crossed before alerting
     """
-    interface: NotRequired[pulumi.Input[_builtins.str]]
+    interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The uplink observed for the alert
     """
-    jitter_ms: NotRequired[pulumi.Input[_builtins.int]]
+    jitter_ms: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The threshold the metric must cross to be valid for alerting. Used only for VoIP Jitter alerts.
     """
-    latency_ms: NotRequired[pulumi.Input[_builtins.int]]
+    latency_ms: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The threshold the metric must cross to be valid for alerting. Used only for WAN Latency alerts.
     """
-    loss_ratio: NotRequired[pulumi.Input[_builtins.float]]
+    loss_ratio: NotRequired[pulumi.Input[Optional[_builtins.float]]]
     """
     The threshold the metric must cross to be valid for alerting. Used only for Packet Loss alerts.
     """
-    mos: NotRequired[pulumi.Input[_builtins.float]]
+    mos: NotRequired[pulumi.Input[Optional[_builtins.float]]]
     """
     The threshold the metric must drop below to be valid for alerting. Used only for VoIP MOS alerts.
     """
-    window: NotRequired[pulumi.Input[_builtins.int]]
+    window: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The look back period in seconds for sensing the alert
     """
@@ -1109,14 +1109,14 @@ class AlertsProfilesAlertConditionArgsDict(TypedDict):
 @pulumi.input_type
 class AlertsProfilesAlertConditionArgs:
     def __init__(__self__, *,
-                 bit_rate_bps: Optional[pulumi.Input[_builtins.int]] = None,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 jitter_ms: Optional[pulumi.Input[_builtins.int]] = None,
-                 latency_ms: Optional[pulumi.Input[_builtins.int]] = None,
-                 loss_ratio: Optional[pulumi.Input[_builtins.float]] = None,
-                 mos: Optional[pulumi.Input[_builtins.float]] = None,
-                 window: Optional[pulumi.Input[_builtins.int]] = None):
+                 bit_rate_bps: pulumi.Input[Optional[_builtins.int]] = None,
+                 duration: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 jitter_ms: pulumi.Input[Optional[_builtins.int]] = None,
+                 latency_ms: pulumi.Input[Optional[_builtins.int]] = None,
+                 loss_ratio: pulumi.Input[Optional[_builtins.float]] = None,
+                 mos: pulumi.Input[Optional[_builtins.float]] = None,
+                 window: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] bit_rate_bps: The threshold the metric must cross to be valid for alerting. Used only for WAN Utilization alerts.
         :param pulumi.Input[_builtins.int] duration: The total duration in seconds that the threshold should be crossed before alerting
@@ -1146,107 +1146,107 @@ class AlertsProfilesAlertConditionArgs:
 
     @_builtins.property
     @pulumi.getter(name="bitRateBps")
-    def bit_rate_bps(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def bit_rate_bps(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The threshold the metric must cross to be valid for alerting. Used only for WAN Utilization alerts.
         """
         return pulumi.get(self, "bit_rate_bps")
 
     @bit_rate_bps.setter
-    def bit_rate_bps(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def bit_rate_bps(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "bit_rate_bps", value)
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The total duration in seconds that the threshold should be crossed before alerting
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter
-    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The uplink observed for the alert
         """
         return pulumi.get(self, "interface")
 
     @interface.setter
-    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface", value)
 
     @_builtins.property
     @pulumi.getter(name="jitterMs")
-    def jitter_ms(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def jitter_ms(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The threshold the metric must cross to be valid for alerting. Used only for VoIP Jitter alerts.
         """
         return pulumi.get(self, "jitter_ms")
 
     @jitter_ms.setter
-    def jitter_ms(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def jitter_ms(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "jitter_ms", value)
 
     @_builtins.property
     @pulumi.getter(name="latencyMs")
-    def latency_ms(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def latency_ms(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The threshold the metric must cross to be valid for alerting. Used only for WAN Latency alerts.
         """
         return pulumi.get(self, "latency_ms")
 
     @latency_ms.setter
-    def latency_ms(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def latency_ms(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "latency_ms", value)
 
     @_builtins.property
     @pulumi.getter(name="lossRatio")
-    def loss_ratio(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def loss_ratio(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         The threshold the metric must cross to be valid for alerting. Used only for Packet Loss alerts.
         """
         return pulumi.get(self, "loss_ratio")
 
     @loss_ratio.setter
-    def loss_ratio(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def loss_ratio(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "loss_ratio", value)
 
     @_builtins.property
     @pulumi.getter
-    def mos(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def mos(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         The threshold the metric must drop below to be valid for alerting. Used only for VoIP MOS alerts.
         """
         return pulumi.get(self, "mos")
 
     @mos.setter
-    def mos(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def mos(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "mos", value)
 
     @_builtins.property
     @pulumi.getter
-    def window(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def window(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The look back period in seconds for sensing the alert
         """
         return pulumi.get(self, "window")
 
     @window.setter
-    def window(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def window(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "window", value)
 
 
 class AlertsProfilesRecipientsArgsDict(TypedDict):
-    emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    emails: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of emails that will receive information about the alert
     """
-    http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    http_server_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list base64 encoded urls of webhook endpoints that will receive information about the alert
     """
@@ -1254,8 +1254,8 @@ class AlertsProfilesRecipientsArgsDict(TypedDict):
 @pulumi.input_type
 class AlertsProfilesRecipientsArgs:
     def __init__(__self__, *,
-                 emails: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 http_server_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 emails: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 http_server_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] emails: A list of emails that will receive information about the alert
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] http_server_ids: A list base64 encoded urls of webhook endpoints that will receive information about the alert
@@ -1267,35 +1267,35 @@ class AlertsProfilesRecipientsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def emails(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def emails(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of emails that will receive information about the alert
         """
         return pulumi.get(self, "emails")
 
     @emails.setter
-    def emails(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def emails(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "emails", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServerIds")
-    def http_server_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def http_server_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list base64 encoded urls of webhook endpoints that will receive information about the alert
         """
         return pulumi.get(self, "http_server_ids")
 
     @http_server_ids.setter
-    def http_server_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def http_server_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "http_server_ids", value)
 
 
 class ApplianceSecurityIntrusionAllowedRuleArgsDict(TypedDict):
-    message: NotRequired[pulumi.Input[_builtins.str]]
+    message: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
     """
-    rule_id: NotRequired[pulumi.Input[_builtins.str]]
+    rule_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
     """
@@ -1303,8 +1303,8 @@ class ApplianceSecurityIntrusionAllowedRuleArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceSecurityIntrusionAllowedRuleArgs:
     def __init__(__self__, *,
-                 message: Optional[pulumi.Input[_builtins.str]] = None,
-                 rule_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 message: pulumi.Input[Optional[_builtins.str]] = None,
+                 rule_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] message: Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
         :param pulumi.Input[_builtins.str] rule_id: A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
@@ -1316,67 +1316,67 @@ class ApplianceSecurityIntrusionAllowedRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
         """
         return pulumi.get(self, "message")
 
     @message.setter
-    def message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "message", value)
 
     @_builtins.property
     @pulumi.getter(name="ruleId")
-    def rule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
         """
         return pulumi.get(self, "rule_id")
 
     @rule_id.setter
-    def rule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rule_id", value)
 
 
 class ApplianceVpnThirdPartyVpnpeersPeerArgsDict(TypedDict):
-    ike_version: NotRequired[pulumi.Input[_builtins.str]]
+    ike_version: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
     """
-    ipsec_policies: NotRequired[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict']]
+    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]]
     """
     Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
     """
-    ipsec_policies_preset: NotRequired[pulumi.Input[_builtins.str]]
+    ipsec_policies_preset: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
     """
-    local_id: NotRequired[pulumi.Input[_builtins.str]]
+    local_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the VPN peer
     """
-    network_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    network_tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
     """
-    private_subnets: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    private_subnets: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The list of the private subnets of the VPN peer
     """
-    public_ip: NotRequired[pulumi.Input[_builtins.str]]
+    public_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The public IP of the VPN peer
     """
-    remote_id: NotRequired[pulumi.Input[_builtins.str]]
+    remote_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
     """
-    secret: NotRequired[pulumi.Input[_builtins.str]]
+    secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The shared secret with the VPN peer
     """
@@ -1384,16 +1384,16 @@ class ApplianceVpnThirdPartyVpnpeersPeerArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeerArgs:
     def __init__(__self__, *,
-                 ike_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_policies: Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']] = None,
-                 ipsec_policies_preset: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 private_subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 public_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 remote_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 secret: Optional[pulumi.Input[_builtins.str]] = None):
+                 ike_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_policies: pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']] = None,
+                 ipsec_policies_preset: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 private_subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 public_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 remote_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 secret: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] ike_version: [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
         :param pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs'] ipsec_policies: Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
@@ -1429,159 +1429,159 @@ class ApplianceVpnThirdPartyVpnpeersPeerArgs:
 
     @_builtins.property
     @pulumi.getter(name="ikeVersion")
-    def ike_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ike_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
         """
         return pulumi.get(self, "ike_version")
 
     @ike_version.setter
-    def ike_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ike_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ike_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPolicies")
-    def ipsec_policies(self) -> Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]:
+    def ipsec_policies(self) -> pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]:
         """
         Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
         """
         return pulumi.get(self, "ipsec_policies")
 
     @ipsec_policies.setter
-    def ipsec_policies(self, value: Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]):
+    def ipsec_policies(self, value: pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]):
         pulumi.set(self, "ipsec_policies", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPoliciesPreset")
-    def ipsec_policies_preset(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_policies_preset(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
         """
         return pulumi.get(self, "ipsec_policies_preset")
 
     @ipsec_policies_preset.setter
-    def ipsec_policies_preset(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_policies_preset(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_policies_preset", value)
 
     @_builtins.property
     @pulumi.getter(name="localId")
-    def local_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
         """
         return pulumi.get(self, "local_id")
 
     @local_id.setter
-    def local_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VPN peer
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkTags")
-    def network_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
         """
         return pulumi.get(self, "network_tags")
 
     @network_tags.setter
-    def network_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_tags", value)
 
     @_builtins.property
     @pulumi.getter(name="privateSubnets")
-    def private_subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def private_subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of the private subnets of the VPN peer
         """
         return pulumi.get(self, "private_subnets")
 
     @private_subnets.setter
-    def private_subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def private_subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "private_subnets", value)
 
     @_builtins.property
     @pulumi.getter(name="publicIp")
-    def public_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def public_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The public IP of the VPN peer
         """
         return pulumi.get(self, "public_ip")
 
     @public_ip.setter
-    def public_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def public_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "public_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="remoteId")
-    def remote_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def remote_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
         """
         return pulumi.get(self, "remote_id")
 
     @remote_id.setter
-    def remote_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def remote_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The shared secret with the VPN peer
         """
         return pulumi.get(self, "secret")
 
     @secret.setter
-    def secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secret", value)
 
 
 class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict(TypedDict):
-    child_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_auth_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
     """
-    child_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_cipher_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
     """
-    child_lifetime: NotRequired[pulumi.Input[_builtins.int]]
+    child_lifetime: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The lifetime of the Phase 2 SA in seconds.
     """
-    child_pfs_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_pfs_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
     """
-    ike_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_auth_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
     """
-    ike_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_cipher_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
     """
-    ike_diffie_hellman_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_diffie_hellman_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
     """
-    ike_lifetime: NotRequired[pulumi.Input[_builtins.int]]
+    ike_lifetime: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The lifetime of the Phase 1 SA in seconds.
     """
-    ike_prf_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_prf_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
     """
@@ -1589,15 +1589,15 @@ class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs:
     def __init__(__self__, *,
-                 child_auth_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 child_cipher_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 child_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 child_pfs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_auth_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_cipher_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_diffie_hellman_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ike_prf_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 child_auth_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 child_cipher_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 child_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 child_pfs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_auth_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_cipher_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_diffie_hellman_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_prf_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] child_auth_algos: This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] child_cipher_algos: This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
@@ -1630,151 +1630,151 @@ class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter(name="childAuthAlgos")
-    def child_auth_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_auth_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         """
         return pulumi.get(self, "child_auth_algos")
 
     @child_auth_algos.setter
-    def child_auth_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_auth_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_auth_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="childCipherAlgos")
-    def child_cipher_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_cipher_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
         """
         return pulumi.get(self, "child_cipher_algos")
 
     @child_cipher_algos.setter
-    def child_cipher_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_cipher_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_cipher_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="childLifetime")
-    def child_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def child_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The lifetime of the Phase 2 SA in seconds.
         """
         return pulumi.get(self, "child_lifetime")
 
     @child_lifetime.setter
-    def child_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def child_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "child_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="childPfsGroups")
-    def child_pfs_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_pfs_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
         """
         return pulumi.get(self, "child_pfs_groups")
 
     @child_pfs_groups.setter
-    def child_pfs_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_pfs_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_pfs_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeAuthAlgos")
-    def ike_auth_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_auth_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         """
         return pulumi.get(self, "ike_auth_algos")
 
     @ike_auth_algos.setter
-    def ike_auth_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_auth_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_auth_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeCipherAlgos")
-    def ike_cipher_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_cipher_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
         """
         return pulumi.get(self, "ike_cipher_algos")
 
     @ike_cipher_algos.setter
-    def ike_cipher_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_cipher_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_cipher_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeDiffieHellmanGroups")
-    def ike_diffie_hellman_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_diffie_hellman_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
         """
         return pulumi.get(self, "ike_diffie_hellman_groups")
 
     @ike_diffie_hellman_groups.setter
-    def ike_diffie_hellman_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_diffie_hellman_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_diffie_hellman_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeLifetime")
-    def ike_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ike_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The lifetime of the Phase 1 SA in seconds.
         """
         return pulumi.get(self, "ike_lifetime")
 
     @ike_lifetime.setter
-    def ike_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ike_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ike_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ikePrfAlgos")
-    def ike_prf_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_prf_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
         """
         return pulumi.get(self, "ike_prf_algos")
 
     @ike_prf_algos.setter
-    def ike_prf_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_prf_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_prf_algos", value)
 
 
 class ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict(TypedDict):
-    ike_version: NotRequired[pulumi.Input[_builtins.str]]
+    ike_version: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
     """
-    ipsec_policies: NotRequired[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict']]
+    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]]
     """
     Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
     """
-    ipsec_policies_preset: NotRequired[pulumi.Input[_builtins.str]]
+    ipsec_policies_preset: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
     """
-    local_id: NotRequired[pulumi.Input[_builtins.str]]
+    local_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the VPN peer
     """
-    network_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    network_tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
     """
-    private_subnets: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    private_subnets: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The list of the private subnets of the VPN peer
     """
-    public_ip: NotRequired[pulumi.Input[_builtins.str]]
+    public_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The public IP of the VPN peer
     """
-    remote_id: NotRequired[pulumi.Input[_builtins.str]]
+    remote_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
     """
-    secret: NotRequired[pulumi.Input[_builtins.str]]
+    secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The shared secret with the VPN peer
     """
@@ -1782,16 +1782,16 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeersResponseArgs:
     def __init__(__self__, *,
-                 ike_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_policies: Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']] = None,
-                 ipsec_policies_preset: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 private_subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 public_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 remote_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 secret: Optional[pulumi.Input[_builtins.str]] = None):
+                 ike_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_policies: pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']] = None,
+                 ipsec_policies_preset: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 private_subnets: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 public_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 remote_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 secret: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] ike_version: [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
         :param pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs'] ipsec_policies: Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
@@ -1827,159 +1827,159 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseArgs:
 
     @_builtins.property
     @pulumi.getter(name="ikeVersion")
-    def ike_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ike_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
         """
         return pulumi.get(self, "ike_version")
 
     @ike_version.setter
-    def ike_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ike_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ike_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPolicies")
-    def ipsec_policies(self) -> Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]:
+    def ipsec_policies(self) -> pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]:
         """
         Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
         """
         return pulumi.get(self, "ipsec_policies")
 
     @ipsec_policies.setter
-    def ipsec_policies(self, value: Optional[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]):
+    def ipsec_policies(self, value: pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]):
         pulumi.set(self, "ipsec_policies", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPoliciesPreset")
-    def ipsec_policies_preset(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_policies_preset(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
         """
         return pulumi.get(self, "ipsec_policies_preset")
 
     @ipsec_policies_preset.setter
-    def ipsec_policies_preset(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_policies_preset(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_policies_preset", value)
 
     @_builtins.property
     @pulumi.getter(name="localId")
-    def local_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
         """
         return pulumi.get(self, "local_id")
 
     @local_id.setter
-    def local_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VPN peer
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkTags")
-    def network_tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
         """
         return pulumi.get(self, "network_tags")
 
     @network_tags.setter
-    def network_tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_tags", value)
 
     @_builtins.property
     @pulumi.getter(name="privateSubnets")
-    def private_subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def private_subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The list of the private subnets of the VPN peer
         """
         return pulumi.get(self, "private_subnets")
 
     @private_subnets.setter
-    def private_subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def private_subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "private_subnets", value)
 
     @_builtins.property
     @pulumi.getter(name="publicIp")
-    def public_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def public_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The public IP of the VPN peer
         """
         return pulumi.get(self, "public_ip")
 
     @public_ip.setter
-    def public_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def public_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "public_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="remoteId")
-    def remote_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def remote_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
         """
         return pulumi.get(self, "remote_id")
 
     @remote_id.setter
-    def remote_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def remote_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The shared secret with the VPN peer
         """
         return pulumi.get(self, "secret")
 
     @secret.setter
-    def secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secret", value)
 
 
 class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict(TypedDict):
-    child_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_auth_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
     """
-    child_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_cipher_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
     """
-    child_lifetime: NotRequired[pulumi.Input[_builtins.int]]
+    child_lifetime: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The lifetime of the Phase 2 SA in seconds.
     """
-    child_pfs_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    child_pfs_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
     """
-    ike_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_auth_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
     """
-    ike_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_cipher_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
     """
-    ike_diffie_hellman_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_diffie_hellman_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
     """
-    ike_lifetime: NotRequired[pulumi.Input[_builtins.int]]
+    ike_lifetime: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The lifetime of the Phase 1 SA in seconds.
     """
-    ike_prf_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ike_prf_algos: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
     """
@@ -1987,15 +1987,15 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict(TypedDict
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs:
     def __init__(__self__, *,
-                 child_auth_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 child_cipher_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 child_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 child_pfs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_auth_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_cipher_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_diffie_hellman_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ike_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ike_prf_algos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 child_auth_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 child_cipher_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 child_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 child_pfs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_auth_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_cipher_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_diffie_hellman_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ike_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_prf_algos: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] child_auth_algos: This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] child_cipher_algos: This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
@@ -2028,143 +2028,143 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs:
 
     @_builtins.property
     @pulumi.getter(name="childAuthAlgos")
-    def child_auth_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_auth_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         """
         return pulumi.get(self, "child_auth_algos")
 
     @child_auth_algos.setter
-    def child_auth_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_auth_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_auth_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="childCipherAlgos")
-    def child_cipher_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_cipher_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
         """
         return pulumi.get(self, "child_cipher_algos")
 
     @child_cipher_algos.setter
-    def child_cipher_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_cipher_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_cipher_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="childLifetime")
-    def child_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def child_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The lifetime of the Phase 2 SA in seconds.
         """
         return pulumi.get(self, "child_lifetime")
 
     @child_lifetime.setter
-    def child_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def child_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "child_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="childPfsGroups")
-    def child_pfs_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def child_pfs_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
         """
         return pulumi.get(self, "child_pfs_groups")
 
     @child_pfs_groups.setter
-    def child_pfs_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def child_pfs_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "child_pfs_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeAuthAlgos")
-    def ike_auth_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_auth_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
         """
         return pulumi.get(self, "ike_auth_algos")
 
     @ike_auth_algos.setter
-    def ike_auth_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_auth_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_auth_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeCipherAlgos")
-    def ike_cipher_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_cipher_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
         """
         return pulumi.get(self, "ike_cipher_algos")
 
     @ike_cipher_algos.setter
-    def ike_cipher_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_cipher_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_cipher_algos", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeDiffieHellmanGroups")
-    def ike_diffie_hellman_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_diffie_hellman_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
         """
         return pulumi.get(self, "ike_diffie_hellman_groups")
 
     @ike_diffie_hellman_groups.setter
-    def ike_diffie_hellman_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_diffie_hellman_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_diffie_hellman_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="ikeLifetime")
-    def ike_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ike_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The lifetime of the Phase 1 SA in seconds.
         """
         return pulumi.get(self, "ike_lifetime")
 
     @ike_lifetime.setter
-    def ike_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ike_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ike_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ikePrfAlgos")
-    def ike_prf_algos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ike_prf_algos(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
         """
         return pulumi.get(self, "ike_prf_algos")
 
     @ike_prf_algos.setter
-    def ike_prf_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ike_prf_algos(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ike_prf_algos", value)
 
 
 class ApplianceVpnVpnFirewallRulesRuleArgsDict(TypedDict):
-    comment: NotRequired[pulumi.Input[_builtins.str]]
+    comment: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Description of the rule (optional)
     """
-    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    dest_cidr: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
     """
-    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    dest_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
     """
-    policy: NotRequired[pulumi.Input[_builtins.str]]
+    policy: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     'allow' or 'deny' traffic specified by this rule
     """
-    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
     """
-    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    src_cidr: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
     """
-    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    src_port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
     """
-    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    syslog_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
     """
@@ -2172,14 +2172,14 @@ class ApplianceVpnVpnFirewallRulesRuleArgsDict(TypedDict):
 @pulumi.input_type
 class ApplianceVpnVpnFirewallRulesRuleArgs:
     def __init__(__self__, *,
-                 comment: Optional[pulumi.Input[_builtins.str]] = None,
-                 dest_cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 dest_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 src_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 syslog_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 comment: pulumi.Input[Optional[_builtins.str]] = None,
+                 dest_cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 dest_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 src_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 syslog_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] comment: Description of the rule (optional)
         :param pulumi.Input[_builtins.str] dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
@@ -2209,107 +2209,107 @@ class ApplianceVpnVpnFirewallRulesRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def comment(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the rule (optional)
         """
         return pulumi.get(self, "comment")
 
     @comment.setter
-    def comment(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def comment(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "comment", value)
 
     @_builtins.property
     @pulumi.getter(name="destCidr")
-    def dest_cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
         """
         return pulumi.get(self, "dest_cidr")
 
     @dest_cidr.setter
-    def dest_cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_cidr", value)
 
     @_builtins.property
     @pulumi.getter(name="destPort")
-    def dest_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
         """
         return pulumi.get(self, "dest_port")
 
     @dest_port.setter
-    def dest_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_port", value)
 
     @_builtins.property
     @pulumi.getter
-    def policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'allow' or 'deny' traffic specified by this rule
         """
         return pulumi.get(self, "policy")
 
     @policy.setter
-    def policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="srcCidr")
-    def src_cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def src_cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
         """
         return pulumi.get(self, "src_cidr")
 
     @src_cidr.setter
-    def src_cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def src_cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "src_cidr", value)
 
     @_builtins.property
     @pulumi.getter(name="srcPort")
-    def src_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def src_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
         """
         return pulumi.get(self, "src_port")
 
     @src_port.setter
-    def src_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def src_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "src_port", value)
 
     @_builtins.property
     @pulumi.getter(name="syslogEnabled")
-    def syslog_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def syslog_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
         """
         return pulumi.get(self, "syslog_enabled")
 
     @syslog_enabled.setter
-    def syslog_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def syslog_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "syslog_enabled", value)
 
 
 class BrandingPoliciesAdminSettingsArgsDict(TypedDict):
-    applies_to: NotRequired[pulumi.Input[_builtins.str]]
+    applies_to: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
     """
-    values: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    values: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
       entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
@@ -2320,8 +2320,8 @@ class BrandingPoliciesAdminSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class BrandingPoliciesAdminSettingsArgs:
     def __init__(__self__, *,
-                 applies_to: Optional[pulumi.Input[_builtins.str]] = None,
-                 values: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 applies_to: pulumi.Input[Optional[_builtins.str]] = None,
+                 values: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] applies_to: Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] values: If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
@@ -2336,19 +2336,19 @@ class BrandingPoliciesAdminSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="appliesTo")
-    def applies_to(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def applies_to(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
         """
         return pulumi.get(self, "applies_to")
 
     @applies_to.setter
-    def applies_to(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def applies_to(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "applies_to", value)
 
     @_builtins.property
     @pulumi.getter
-    def values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def values(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
           entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
@@ -2358,16 +2358,16 @@ class BrandingPoliciesAdminSettingsArgs:
         return pulumi.get(self, "values")
 
     @values.setter
-    def values(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def values(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "values", value)
 
 
 class BrandingPoliciesCustomLogoArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether or not there is a custom logo enabled.
     """
-    image: NotRequired[pulumi.Input['BrandingPoliciesCustomLogoImageArgsDict']]
+    image: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgs']]]
     """
     Properties of the image.
     """
@@ -2375,8 +2375,8 @@ class BrandingPoliciesCustomLogoArgsDict(TypedDict):
 @pulumi.input_type
 class BrandingPoliciesCustomLogoArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 image: Optional[pulumi.Input['BrandingPoliciesCustomLogoImageArgs']] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 image: pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgs']] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Whether or not there is a custom logo enabled.
         :param pulumi.Input['BrandingPoliciesCustomLogoImageArgs'] image: Properties of the image.
@@ -2388,39 +2388,39 @@ class BrandingPoliciesCustomLogoArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not there is a custom logo enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def image(self) -> Optional[pulumi.Input['BrandingPoliciesCustomLogoImageArgs']]:
+    def image(self) -> pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgs']]:
         """
         Properties of the image.
         """
         return pulumi.get(self, "image")
 
     @image.setter
-    def image(self, value: Optional[pulumi.Input['BrandingPoliciesCustomLogoImageArgs']]):
+    def image(self, value: pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgs']]):
         pulumi.set(self, "image", value)
 
 
 class BrandingPoliciesCustomLogoImageArgsDict(TypedDict):
-    contents: NotRequired[pulumi.Input[_builtins.str]]
+    contents: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The file contents (a base 64 encoded string) of your new logo.
     """
-    format: NotRequired[pulumi.Input[_builtins.str]]
+    format: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The format of the encoded contents.  Supported formats are 'png', 'gif', and jpg'.
     """
-    preview: NotRequired[pulumi.Input['BrandingPoliciesCustomLogoImagePreviewArgsDict']]
+    preview: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgs']]]
     """
     Preview of the image
     """
@@ -2428,9 +2428,9 @@ class BrandingPoliciesCustomLogoImageArgsDict(TypedDict):
 @pulumi.input_type
 class BrandingPoliciesCustomLogoImageArgs:
     def __init__(__self__, *,
-                 contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 format: Optional[pulumi.Input[_builtins.str]] = None,
-                 preview: Optional[pulumi.Input['BrandingPoliciesCustomLogoImagePreviewArgs']] = None):
+                 contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 format: pulumi.Input[Optional[_builtins.str]] = None,
+                 preview: pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] contents: The file contents (a base 64 encoded string) of your new logo.
         :param pulumi.Input[_builtins.str] format: The format of the encoded contents.  Supported formats are 'png', 'gif', and jpg'.
@@ -2445,47 +2445,47 @@ class BrandingPoliciesCustomLogoImageArgs:
 
     @_builtins.property
     @pulumi.getter
-    def contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The file contents (a base 64 encoded string) of your new logo.
         """
         return pulumi.get(self, "contents")
 
     @contents.setter
-    def contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "contents", value)
 
     @_builtins.property
     @pulumi.getter
-    def format(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def format(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The format of the encoded contents.  Supported formats are 'png', 'gif', and jpg'.
         """
         return pulumi.get(self, "format")
 
     @format.setter
-    def format(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def format(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "format", value)
 
     @_builtins.property
     @pulumi.getter
-    def preview(self) -> Optional[pulumi.Input['BrandingPoliciesCustomLogoImagePreviewArgs']]:
+    def preview(self) -> pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgs']]:
         """
         Preview of the image
         """
         return pulumi.get(self, "preview")
 
     @preview.setter
-    def preview(self, value: Optional[pulumi.Input['BrandingPoliciesCustomLogoImagePreviewArgs']]):
+    def preview(self, value: pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgs']]):
         pulumi.set(self, "preview", value)
 
 
 class BrandingPoliciesCustomLogoImagePreviewArgsDict(TypedDict):
-    expires_at: NotRequired[pulumi.Input[_builtins.str]]
+    expires_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Timestamp of the preview image
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Url of the preview image
     """
@@ -2493,8 +2493,8 @@ class BrandingPoliciesCustomLogoImagePreviewArgsDict(TypedDict):
 @pulumi.input_type
 class BrandingPoliciesCustomLogoImagePreviewArgs:
     def __init__(__self__, *,
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] expires_at: Timestamp of the preview image
         :param pulumi.Input[_builtins.str] url: Url of the preview image
@@ -2506,97 +2506,97 @@ class BrandingPoliciesCustomLogoImagePreviewArgs:
 
     @_builtins.property
     @pulumi.getter(name="expiresAt")
-    def expires_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expires_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Timestamp of the preview image
         """
         return pulumi.get(self, "expires_at")
 
     @expires_at.setter
-    def expires_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expires_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expires_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Url of the preview image
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class BrandingPoliciesHelpSettingsArgsDict(TypedDict):
-    api_docs_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    api_docs_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
       'default or inherit', 'hide' or 'show'.
     """
-    cases_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    cases_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
       of 'default or inherit', 'hide' or 'show'.
     """
-    cisco_meraki_product_documentation: NotRequired[pulumi.Input[_builtins.str]]
+    cisco_meraki_product_documentation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
     """
-    community_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    community_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    data_protection_requests_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    data_protection_requests_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
       be audited. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    firewall_info_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    firewall_info_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
       listed. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    get_help_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    get_help_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
       that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
       and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    get_help_subtab_knowledge_base_search: NotRequired[pulumi.Input[_builtins.str]]
+    get_help_subtab_knowledge_base_search: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
     """
-    hardware_replacements_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    hardware_replacements_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
       'default or inherit', 'hide' or 'show'.
     """
-    help_tab: NotRequired[pulumi.Input[_builtins.str]]
+    help_tab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
       customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    help_widget: NotRequired[pulumi.Input[_builtins.str]]
+    help_widget: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
       and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    new_features_subtab: NotRequired[pulumi.Input[_builtins.str]]
+    new_features_subtab: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    sm_forums: NotRequired[pulumi.Input[_builtins.str]]
+    sm_forums: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
       organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
     """
-    support_contact_info: NotRequired[pulumi.Input[_builtins.str]]
+    support_contact_info: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
     """
-    universal_search_knowledge_base_search: NotRequired[pulumi.Input[_builtins.str]]
+    universal_search_knowledge_base_search: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
       whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2605,21 +2605,21 @@ class BrandingPoliciesHelpSettingsArgsDict(TypedDict):
 @pulumi.input_type
 class BrandingPoliciesHelpSettingsArgs:
     def __init__(__self__, *,
-                 api_docs_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 cases_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 cisco_meraki_product_documentation: Optional[pulumi.Input[_builtins.str]] = None,
-                 community_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_protection_requests_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 firewall_info_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 get_help_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 get_help_subtab_knowledge_base_search: Optional[pulumi.Input[_builtins.str]] = None,
-                 hardware_replacements_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 help_tab: Optional[pulumi.Input[_builtins.str]] = None,
-                 help_widget: Optional[pulumi.Input[_builtins.str]] = None,
-                 new_features_subtab: Optional[pulumi.Input[_builtins.str]] = None,
-                 sm_forums: Optional[pulumi.Input[_builtins.str]] = None,
-                 support_contact_info: Optional[pulumi.Input[_builtins.str]] = None,
-                 universal_search_knowledge_base_search: Optional[pulumi.Input[_builtins.str]] = None):
+                 api_docs_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 cases_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 cisco_meraki_product_documentation: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_protection_requests_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 firewall_info_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 get_help_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 get_help_subtab_knowledge_base_search: pulumi.Input[Optional[_builtins.str]] = None,
+                 hardware_replacements_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 help_tab: pulumi.Input[Optional[_builtins.str]] = None,
+                 help_widget: pulumi.Input[Optional[_builtins.str]] = None,
+                 new_features_subtab: pulumi.Input[Optional[_builtins.str]] = None,
+                 sm_forums: pulumi.Input[Optional[_builtins.str]] = None,
+                 support_contact_info: pulumi.Input[Optional[_builtins.str]] = None,
+                 universal_search_knowledge_base_search: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] api_docs_subtab: The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
                  'default or inherit', 'hide' or 'show'.
@@ -2681,7 +2681,7 @@ class BrandingPoliciesHelpSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="apiDocsSubtab")
-    def api_docs_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def api_docs_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
           'default or inherit', 'hide' or 'show'.
@@ -2689,12 +2689,12 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "api_docs_subtab")
 
     @api_docs_subtab.setter
-    def api_docs_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def api_docs_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "api_docs_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="casesSubtab")
-    def cases_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cases_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
           of 'default or inherit', 'hide' or 'show'.
@@ -2702,36 +2702,36 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "cases_subtab")
 
     @cases_subtab.setter
-    def cases_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cases_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cases_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="ciscoMerakiProductDocumentation")
-    def cisco_meraki_product_documentation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cisco_meraki_product_documentation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         """
         return pulumi.get(self, "cisco_meraki_product_documentation")
 
     @cisco_meraki_product_documentation.setter
-    def cisco_meraki_product_documentation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cisco_meraki_product_documentation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cisco_meraki_product_documentation", value)
 
     @_builtins.property
     @pulumi.getter(name="communitySubtab")
-    def community_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def community_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "community_subtab")
 
     @community_subtab.setter
-    def community_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def community_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "community_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="dataProtectionRequestsSubtab")
-    def data_protection_requests_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_protection_requests_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
           be audited. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2739,12 +2739,12 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "data_protection_requests_subtab")
 
     @data_protection_requests_subtab.setter
-    def data_protection_requests_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_protection_requests_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_protection_requests_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="firewallInfoSubtab")
-    def firewall_info_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def firewall_info_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
           listed. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2752,12 +2752,12 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "firewall_info_subtab")
 
     @firewall_info_subtab.setter
-    def firewall_info_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def firewall_info_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "firewall_info_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="getHelpSubtab")
-    def get_help_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def get_help_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
           that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
@@ -2766,24 +2766,24 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "get_help_subtab")
 
     @get_help_subtab.setter
-    def get_help_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def get_help_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "get_help_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="getHelpSubtabKnowledgeBaseSearch")
-    def get_help_subtab_knowledge_base_search(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def get_help_subtab_knowledge_base_search(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         """
         return pulumi.get(self, "get_help_subtab_knowledge_base_search")
 
     @get_help_subtab_knowledge_base_search.setter
-    def get_help_subtab_knowledge_base_search(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def get_help_subtab_knowledge_base_search(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "get_help_subtab_knowledge_base_search", value)
 
     @_builtins.property
     @pulumi.getter(name="hardwareReplacementsSubtab")
-    def hardware_replacements_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hardware_replacements_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
           'default or inherit', 'hide' or 'show'.
@@ -2791,12 +2791,12 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "hardware_replacements_subtab")
 
     @hardware_replacements_subtab.setter
-    def hardware_replacements_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hardware_replacements_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hardware_replacements_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="helpTab")
-    def help_tab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def help_tab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
           customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2804,12 +2804,12 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "help_tab")
 
     @help_tab.setter
-    def help_tab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def help_tab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "help_tab", value)
 
     @_builtins.property
     @pulumi.getter(name="helpWidget")
-    def help_widget(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def help_widget(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
           and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2817,24 +2817,24 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "help_widget")
 
     @help_widget.setter
-    def help_widget(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def help_widget(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "help_widget", value)
 
     @_builtins.property
     @pulumi.getter(name="newFeaturesSubtab")
-    def new_features_subtab(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def new_features_subtab(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "new_features_subtab")
 
     @new_features_subtab.setter
-    def new_features_subtab(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def new_features_subtab(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "new_features_subtab", value)
 
     @_builtins.property
     @pulumi.getter(name="smForums")
-    def sm_forums(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sm_forums(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
           organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2842,24 +2842,24 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "sm_forums")
 
     @sm_forums.setter
-    def sm_forums(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sm_forums(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sm_forums", value)
 
     @_builtins.property
     @pulumi.getter(name="supportContactInfo")
-    def support_contact_info(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def support_contact_info(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         """
         return pulumi.get(self, "support_contact_info")
 
     @support_contact_info.setter
-    def support_contact_info(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def support_contact_info(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "support_contact_info", value)
 
     @_builtins.property
     @pulumi.getter(name="universalSearchKnowledgeBaseSearch")
-    def universal_search_knowledge_base_search(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def universal_search_knowledge_base_search(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
           whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
@@ -2867,16 +2867,16 @@ class BrandingPoliciesHelpSettingsArgs:
         return pulumi.get(self, "universal_search_knowledge_base_search")
 
     @universal_search_knowledge_base_search.setter
-    def universal_search_knowledge_base_search(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def universal_search_knowledge_base_search(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "universal_search_knowledge_base_search", value)
 
 
 class CameraCustomAnalyticsArtifactsStatusArgsDict(TypedDict):
-    message: NotRequired[pulumi.Input[_builtins.str]]
+    message: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Status message
     """
-    type: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Status type
     """
@@ -2884,8 +2884,8 @@ class CameraCustomAnalyticsArtifactsStatusArgsDict(TypedDict):
 @pulumi.input_type
 class CameraCustomAnalyticsArtifactsStatusArgs:
     def __init__(__self__, *,
-                 message: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 message: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] message: Status message
         :param pulumi.Input[_builtins.str] type: Status type
@@ -2897,49 +2897,49 @@ class CameraCustomAnalyticsArtifactsStatusArgs:
 
     @_builtins.property
     @pulumi.getter
-    def message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status message
         """
         return pulumi.get(self, "message")
 
     @message.setter
-    def message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "message", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
 
 class CameraRolesAppliedOnDeviceArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device id.
     """
-    in_networks_with_id: NotRequired[pulumi.Input[_builtins.str]]
+    in_networks_with_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network id scope
     """
-    in_networks_with_tag: NotRequired[pulumi.Input[_builtins.str]]
+    in_networks_with_tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network tag scope
     """
-    permission_level: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope_id: NotRequired[pulumi.Input[_builtins.str]]
+    permission_level: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permission scope id
     """
-    tag: NotRequired[pulumi.Input[_builtins.str]]
+    tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device tag.
     """
@@ -2947,13 +2947,13 @@ class CameraRolesAppliedOnDeviceArgsDict(TypedDict):
 @pulumi.input_type
 class CameraRolesAppliedOnDeviceArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 in_networks_with_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 in_networks_with_tag: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 in_networks_with_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 in_networks_with_tag: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: Device id.
         :param pulumi.Input[_builtins.str] in_networks_with_id: Network id scope
@@ -2978,95 +2978,95 @@ class CameraRolesAppliedOnDeviceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device id.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="inNetworksWithId")
-    def in_networks_with_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def in_networks_with_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network id scope
         """
         return pulumi.get(self, "in_networks_with_id")
 
     @in_networks_with_id.setter
-    def in_networks_with_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def in_networks_with_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "in_networks_with_id", value)
 
     @_builtins.property
     @pulumi.getter(name="inNetworksWithTag")
-    def in_networks_with_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def in_networks_with_tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network tag scope
         """
         return pulumi.get(self, "in_networks_with_tag")
 
     @in_networks_with_tag.setter
-    def in_networks_with_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def in_networks_with_tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "in_networks_with_tag", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionLevel")
-    def permission_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_level")
 
     @permission_level.setter
-    def permission_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_level", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScope")
-    def permission_scope(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_scope")
 
     @permission_scope.setter
-    def permission_scope(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScopeId")
-    def permission_scope_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permission scope id
         """
         return pulumi.get(self, "permission_scope_id")
 
     @permission_scope_id.setter
-    def permission_scope_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device tag.
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tag", value)
 
 
 class CameraRolesAppliedOnNetworkArgsDict(TypedDict):
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network id.
     """
-    permission_level: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope_id: NotRequired[pulumi.Input[_builtins.str]]
+    permission_level: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permission scope id
     """
-    tag: NotRequired[pulumi.Input[_builtins.str]]
+    tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network tag
     """
@@ -3074,11 +3074,11 @@ class CameraRolesAppliedOnNetworkArgsDict(TypedDict):
 @pulumi.input_type
 class CameraRolesAppliedOnNetworkArgs:
     def __init__(__self__, *,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.str]] = None):
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] id: Network id.
         :param pulumi.Input[_builtins.str] permission_scope_id: Permission scope id
@@ -3097,75 +3097,75 @@ class CameraRolesAppliedOnNetworkArgs:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network id.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionLevel")
-    def permission_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_level")
 
     @permission_level.setter
-    def permission_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_level", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScope")
-    def permission_scope(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_scope")
 
     @permission_scope.setter
-    def permission_scope(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScopeId")
-    def permission_scope_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permission scope id
         """
         return pulumi.get(self, "permission_scope_id")
 
     @permission_scope_id.setter
-    def permission_scope_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network tag
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tag", value)
 
 
 class CameraRolesAppliedOrgWideArgsDict(TypedDict):
-    permission_level: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope: NotRequired[pulumi.Input[_builtins.str]]
-    permission_scope_id: NotRequired[pulumi.Input[_builtins.str]]
+    permission_level: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    permission_scope_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permission scope id
     """
-    tag: NotRequired[pulumi.Input[_builtins.str]]
+    tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
 
 @pulumi.input_type
 class CameraRolesAppliedOrgWideArgs:
     def __init__(__self__, *,
-                 permission_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope: Optional[pulumi.Input[_builtins.str]] = None,
-                 permission_scope_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.str]] = None):
+                 permission_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 permission_scope_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] permission_scope_id: Permission scope id
         """
@@ -3180,54 +3180,54 @@ class CameraRolesAppliedOrgWideArgs:
 
     @_builtins.property
     @pulumi.getter(name="permissionLevel")
-    def permission_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_level")
 
     @permission_level.setter
-    def permission_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_level", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScope")
-    def permission_scope(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "permission_scope")
 
     @permission_scope.setter
-    def permission_scope(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope", value)
 
     @_builtins.property
     @pulumi.getter(name="permissionScopeId")
-    def permission_scope_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def permission_scope_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permission scope id
         """
         return pulumi.get(self, "permission_scope_id")
 
     @permission_scope_id.setter
-    def permission_scope_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def permission_scope_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "permission_scope_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tag", value)
 
 
 class ClaimItemArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgsDict']]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]]
     """
     The licenses claimed
     """
-    orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    orders: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The numbers of the orders claimed
     """
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The serials of the devices claimed
     """
@@ -3235,9 +3235,9 @@ class ClaimItemArgsDict(TypedDict):
 @pulumi.input_type
 class ClaimItemArgs:
     def __init__(__self__, *,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]] = None,
-                 orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]] = None,
+                 orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgs']]] licenses: The licenses claimed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] orders: The numbers of the orders claimed
@@ -3252,47 +3252,47 @@ class ClaimItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]:
         """
         The licenses claimed
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
     @_builtins.property
     @pulumi.getter
-    def orders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def orders(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The numbers of the orders claimed
         """
         return pulumi.get(self, "orders")
 
     @orders.setter
-    def orders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def orders(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "orders", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The serials of the devices claimed
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class ClaimItemLicenseArgsDict(TypedDict):
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The mode of the license
     """
@@ -3300,8 +3300,8 @@ class ClaimItemLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class ClaimItemLicenseArgs:
     def __init__(__self__, *,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] key: The key of the license
         :param pulumi.Input[_builtins.str] mode: The mode of the license
@@ -3313,39 +3313,39 @@ class ClaimItemLicenseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The mode of the license
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class ClaimParametersArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgsDict']]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]]
     """
     The licenses that should be claimed
     """
-    orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    orders: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The numbers of the orders that should be claimed
     """
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The serials of the devices that should be claimed
     """
@@ -3353,9 +3353,9 @@ class ClaimParametersArgsDict(TypedDict):
 @pulumi.input_type
 class ClaimParametersArgs:
     def __init__(__self__, *,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]] = None,
-                 orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]] = None,
+                 orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]] licenses: The licenses that should be claimed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] orders: The numbers of the orders that should be claimed
@@ -3370,47 +3370,47 @@ class ClaimParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]:
         """
         The licenses that should be claimed
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
     @_builtins.property
     @pulumi.getter
-    def orders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def orders(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The numbers of the orders that should be claimed
         """
         return pulumi.get(self, "orders")
 
     @orders.setter
-    def orders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def orders(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "orders", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The serials of the devices that should be claimed
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class ClaimParametersLicenseArgsDict(TypedDict):
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. This parameter is legacy and does not apply to organizations with per-device licensing enabled.
     """
@@ -3418,8 +3418,8 @@ class ClaimParametersLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class ClaimParametersLicenseArgs:
     def __init__(__self__, *,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] key: The key of the license
         :param pulumi.Input[_builtins.str] mode: Either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. This parameter is legacy and does not apply to organizations with per-device licensing enabled.
@@ -3431,55 +3431,55 @@ class ClaimParametersLicenseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. This parameter is legacy and does not apply to organizations with per-device licensing enabled.
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class CloneItemArgsDict(TypedDict):
-    api: NotRequired[pulumi.Input['CloneItemApiArgsDict']]
+    api: NotRequired[pulumi.Input[Optional['CloneItemApiArgs']]]
     """
     API related settings
     """
-    cloud: NotRequired[pulumi.Input['CloneItemCloudArgsDict']]
+    cloud: NotRequired[pulumi.Input[Optional['CloneItemCloudArgs']]]
     """
     Data for this organization
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization ID
     """
-    licensing: NotRequired[pulumi.Input['CloneItemLicensingArgsDict']]
+    licensing: NotRequired[pulumi.Input[Optional['CloneItemLicensingArgs']]]
     """
     Licensing related settings
     """
-    management: NotRequired[pulumi.Input['CloneItemManagementArgsDict']]
+    management: NotRequired[pulumi.Input[Optional['CloneItemManagementArgs']]]
     """
     Information about the organization's management system
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization name
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization URL
     """
@@ -3487,13 +3487,13 @@ class CloneItemArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemArgs:
     def __init__(__self__, *,
-                 api: Optional[pulumi.Input['CloneItemApiArgs']] = None,
-                 cloud: Optional[pulumi.Input['CloneItemCloudArgs']] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 licensing: Optional[pulumi.Input['CloneItemLicensingArgs']] = None,
-                 management: Optional[pulumi.Input['CloneItemManagementArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 api: pulumi.Input[Optional['CloneItemApiArgs']] = None,
+                 cloud: pulumi.Input[Optional['CloneItemCloudArgs']] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 licensing: pulumi.Input[Optional['CloneItemLicensingArgs']] = None,
+                 management: pulumi.Input[Optional['CloneItemManagementArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['CloneItemApiArgs'] api: API related settings
         :param pulumi.Input['CloneItemCloudArgs'] cloud: Data for this organization
@@ -3520,91 +3520,91 @@ class CloneItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def api(self) -> Optional[pulumi.Input['CloneItemApiArgs']]:
+    def api(self) -> pulumi.Input[Optional['CloneItemApiArgs']]:
         """
         API related settings
         """
         return pulumi.get(self, "api")
 
     @api.setter
-    def api(self, value: Optional[pulumi.Input['CloneItemApiArgs']]):
+    def api(self, value: pulumi.Input[Optional['CloneItemApiArgs']]):
         pulumi.set(self, "api", value)
 
     @_builtins.property
     @pulumi.getter
-    def cloud(self) -> Optional[pulumi.Input['CloneItemCloudArgs']]:
+    def cloud(self) -> pulumi.Input[Optional['CloneItemCloudArgs']]:
         """
         Data for this organization
         """
         return pulumi.get(self, "cloud")
 
     @cloud.setter
-    def cloud(self, value: Optional[pulumi.Input['CloneItemCloudArgs']]):
+    def cloud(self, value: pulumi.Input[Optional['CloneItemCloudArgs']]):
         pulumi.set(self, "cloud", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def licensing(self) -> Optional[pulumi.Input['CloneItemLicensingArgs']]:
+    def licensing(self) -> pulumi.Input[Optional['CloneItemLicensingArgs']]:
         """
         Licensing related settings
         """
         return pulumi.get(self, "licensing")
 
     @licensing.setter
-    def licensing(self, value: Optional[pulumi.Input['CloneItemLicensingArgs']]):
+    def licensing(self, value: pulumi.Input[Optional['CloneItemLicensingArgs']]):
         pulumi.set(self, "licensing", value)
 
     @_builtins.property
     @pulumi.getter
-    def management(self) -> Optional[pulumi.Input['CloneItemManagementArgs']]:
+    def management(self) -> pulumi.Input[Optional['CloneItemManagementArgs']]:
         """
         Information about the organization's management system
         """
         return pulumi.get(self, "management")
 
     @management.setter
-    def management(self, value: Optional[pulumi.Input['CloneItemManagementArgs']]):
+    def management(self, value: pulumi.Input[Optional['CloneItemManagementArgs']]):
         pulumi.set(self, "management", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization URL
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class CloneItemApiArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Enable API access
     """
@@ -3612,7 +3612,7 @@ class CloneItemApiArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemApiArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Enable API access
         """
@@ -3621,19 +3621,19 @@ class CloneItemApiArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable API access
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 class CloneItemCloudArgsDict(TypedDict):
-    region: NotRequired[pulumi.Input['CloneItemCloudRegionArgsDict']]
+    region: NotRequired[pulumi.Input[Optional['CloneItemCloudRegionArgs']]]
     """
     Region info
     """
@@ -3641,7 +3641,7 @@ class CloneItemCloudArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemCloudArgs:
     def __init__(__self__, *,
-                 region: Optional[pulumi.Input['CloneItemCloudRegionArgs']] = None):
+                 region: pulumi.Input[Optional['CloneItemCloudRegionArgs']] = None):
         """
         :param pulumi.Input['CloneItemCloudRegionArgs'] region: Region info
         """
@@ -3650,19 +3650,19 @@ class CloneItemCloudArgs:
 
     @_builtins.property
     @pulumi.getter
-    def region(self) -> Optional[pulumi.Input['CloneItemCloudRegionArgs']]:
+    def region(self) -> pulumi.Input[Optional['CloneItemCloudRegionArgs']]:
         """
         Region info
         """
         return pulumi.get(self, "region")
 
     @region.setter
-    def region(self, value: Optional[pulumi.Input['CloneItemCloudRegionArgs']]):
+    def region(self, value: pulumi.Input[Optional['CloneItemCloudRegionArgs']]):
         pulumi.set(self, "region", value)
 
 
 class CloneItemCloudRegionArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of region
     """
@@ -3670,7 +3670,7 @@ class CloneItemCloudRegionArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemCloudRegionArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name of region
         """
@@ -3679,19 +3679,19 @@ class CloneItemCloudRegionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of region
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class CloneItemLicensingArgsDict(TypedDict):
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
     """
@@ -3699,7 +3699,7 @@ class CloneItemLicensingArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemLicensingArgs:
     def __init__(__self__, *,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] model: Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
         """
@@ -3708,19 +3708,19 @@ class CloneItemLicensingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class CloneItemManagementArgsDict(TypedDict):
-    details: NotRequired[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgsDict']]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]]
     """
     Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
     """
@@ -3728,7 +3728,7 @@ class CloneItemManagementArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemManagementArgs:
     def __init__(__self__, *,
-                 details: Optional[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]] = None):
+                 details: pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]] details: Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
         """
@@ -3737,23 +3737,23 @@ class CloneItemManagementArgs:
 
     @_builtins.property
     @pulumi.getter
-    def details(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]:
+    def details(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]:
         """
         Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
         """
         return pulumi.get(self, "details")
 
     @details.setter
-    def details(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]):
+    def details(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]):
         pulumi.set(self, "details", value)
 
 
 class CloneItemManagementDetailArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of management data
     """
-    value: NotRequired[pulumi.Input[_builtins.str]]
+    value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Value of management data
     """
@@ -3761,8 +3761,8 @@ class CloneItemManagementDetailArgsDict(TypedDict):
 @pulumi.input_type
 class CloneItemManagementDetailArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 value: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name of management data
         :param pulumi.Input[_builtins.str] value: Value of management data
@@ -3774,31 +3774,31 @@ class CloneItemManagementDetailArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of management data
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Value of management data
         """
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "value", value)
 
 
 class CloneParametersArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the new organization
     """
@@ -3806,7 +3806,7 @@ class CloneParametersArgsDict(TypedDict):
 @pulumi.input_type
 class CloneParametersArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: The name of the new organization
         """
@@ -3815,19 +3815,19 @@ class CloneParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the new organization
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class ConfigTemplatesSwitchProfilesPortsMirrorArgsDict(TypedDict):
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
     """
@@ -3835,7 +3835,7 @@ class ConfigTemplatesSwitchProfilesPortsMirrorArgsDict(TypedDict):
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsMirrorArgs:
     def __init__(__self__, *,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] mode: The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
         """
@@ -3844,19 +3844,19 @@ class ConfigTemplatesSwitchProfilesPortsMirrorArgs:
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class ConfigTemplatesSwitchProfilesPortsModuleArgsDict(TypedDict):
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The model of the expansion module.
     """
@@ -3864,7 +3864,7 @@ class ConfigTemplatesSwitchProfilesPortsModuleArgsDict(TypedDict):
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsModuleArgs:
     def __init__(__self__, *,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] model: The model of the expansion module.
         """
@@ -3873,27 +3873,27 @@ class ConfigTemplatesSwitchProfilesPortsModuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The model of the expansion module.
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class ConfigTemplatesSwitchProfilesPortsProfileArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     When enabled, override this port's configuration with a port profile.
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When enabled, the ID of the port profile used to override the port's configuration.
     """
-    iname: NotRequired[pulumi.Input[_builtins.str]]
+    iname: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When enabled, the IName of the profile.
     """
@@ -3901,9 +3901,9 @@ class ConfigTemplatesSwitchProfilesPortsProfileArgsDict(TypedDict):
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsProfileArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 iname: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 iname: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: When enabled, override this port's configuration with a port profile.
         :param pulumi.Input[_builtins.str] id: When enabled, the ID of the port profile used to override the port's configuration.
@@ -3918,51 +3918,51 @@ class ConfigTemplatesSwitchProfilesPortsProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         When enabled, override this port's configuration with a port profile.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When enabled, the ID of the port profile used to override the port's configuration.
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter
-    def iname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def iname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When enabled, the IName of the profile.
         """
         return pulumi.get(self, "iname")
 
     @iname.setter
-    def iname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def iname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "iname", value)
 
 
 class InventoryClaimItemArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgsDict']]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]]
     """
     The licenses claimed
     """
-    orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    orders: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The numbers of the orders claimed
     """
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The serials of the devices claimed
     """
@@ -3970,9 +3970,9 @@ class InventoryClaimItemArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryClaimItemArgs:
     def __init__(__self__, *,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]] = None,
-                 orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]] = None,
+                 orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]] licenses: The licenses claimed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] orders: The numbers of the orders claimed
@@ -3987,47 +3987,47 @@ class InventoryClaimItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]:
         """
         The licenses claimed
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
     @_builtins.property
     @pulumi.getter
-    def orders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def orders(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The numbers of the orders claimed
         """
         return pulumi.get(self, "orders")
 
     @orders.setter
-    def orders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def orders(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "orders", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The serials of the devices claimed
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class InventoryClaimItemLicenseArgsDict(TypedDict):
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The mode of the license
     """
@@ -4035,8 +4035,8 @@ class InventoryClaimItemLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryClaimItemLicenseArgs:
     def __init__(__self__, *,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] key: The key of the license
         :param pulumi.Input[_builtins.str] mode: The mode of the license
@@ -4048,39 +4048,39 @@ class InventoryClaimItemLicenseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The mode of the license
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class InventoryClaimParametersArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgsDict']]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]]
     """
     The licenses that should be claimed
     """
-    orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    orders: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The numbers of the orders that should be claimed
     """
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The serials of the devices that should be claimed
     """
@@ -4088,9 +4088,9 @@ class InventoryClaimParametersArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryClaimParametersArgs:
     def __init__(__self__, *,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]] = None,
-                 orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]] = None,
+                 orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]] licenses: The licenses that should be claimed
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] orders: The numbers of the orders that should be claimed
@@ -4105,47 +4105,47 @@ class InventoryClaimParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]:
         """
         The licenses that should be claimed
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
     @_builtins.property
     @pulumi.getter
-    def orders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def orders(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The numbers of the orders that should be claimed
         """
         return pulumi.get(self, "orders")
 
     @orders.setter
-    def orders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def orders(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "orders", value)
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The serials of the devices that should be claimed
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class InventoryClaimParametersLicenseArgsDict(TypedDict):
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Co-term licensing only: either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. Does not apply to organizations using per-device licensing model.
     """
@@ -4153,8 +4153,8 @@ class InventoryClaimParametersLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryClaimParametersLicenseArgs:
     def __init__(__self__, *,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] key: The key of the license
         :param pulumi.Input[_builtins.str] mode: Co-term licensing only: either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. Does not apply to organizations using per-device licensing model.
@@ -4166,43 +4166,43 @@ class InventoryClaimParametersLicenseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Co-term licensing only: either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. Does not apply to organizations using per-device licensing model.
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 class InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict(TypedDict):
-    log_event: NotRequired[pulumi.Input[_builtins.str]]
+    log_event: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The type of log event this is recording, e.g. download or opening a banner
     """
-    request: NotRequired[pulumi.Input[_builtins.str]]
+    request: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used
     """
-    target_os: NotRequired[pulumi.Input[_builtins.str]]
+    target_os: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the onboarding distro being downloaded
     """
-    timestamp: NotRequired[pulumi.Input[_builtins.int]]
+    timestamp: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     A JavaScript UTC datetime stamp for when the even occurred
     """
@@ -4210,10 +4210,10 @@ class InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict(TypedDict
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringExportEventsParametersArgs:
     def __init__(__self__, *,
-                 log_event: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_os: Optional[pulumi.Input[_builtins.str]] = None,
-                 timestamp: Optional[pulumi.Input[_builtins.int]] = None):
+                 log_event: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_os: pulumi.Input[Optional[_builtins.str]] = None,
+                 timestamp: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] log_event: The type of log event this is recording, e.g. download or opening a banner
         :param pulumi.Input[_builtins.str] request: Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used
@@ -4231,65 +4231,65 @@ class InventoryOnboardingCloudMonitoringExportEventsParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="logEvent")
-    def log_event(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def log_event(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of log event this is recording, e.g. download or opening a banner
         """
         return pulumi.get(self, "log_event")
 
     @log_event.setter
-    def log_event(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def log_event(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "log_event", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def request(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def request(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter(name="targetOs")
-    def target_os(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def target_os(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the onboarding distro being downloaded
         """
         return pulumi.get(self, "target_os")
 
     @target_os.setter
-    def target_os(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def target_os(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "target_os", value)
 
     @_builtins.property
     @pulumi.getter
-    def timestamp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timestamp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         A JavaScript UTC datetime stamp for when the even occurred
         """
         return pulumi.get(self, "timestamp")
 
     @timestamp.setter
-    def timestamp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timestamp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timestamp", value)
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersArgsDict(TypedDict):
-    devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict']]]]
+    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]]
     """
     A set of device imports to commit
     """
-    items: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict']]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersArgs:
     def __init__(__self__, *,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]] = None,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]] = None):
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]] = None,
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]] devices: A set of device imports to commit
         """
@@ -4300,36 +4300,36 @@ class InventoryOnboardingCloudMonitoringImportsParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]:
         """
         A set of device imports to commit
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]:
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]):
         pulumi.set(self, "items", value)
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict(TypedDict):
-    device_id: NotRequired[pulumi.Input[_builtins.str]]
+    device_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Import ID from the Import operation
     """
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network Id
     """
-    udi: NotRequired[pulumi.Input[_builtins.str]]
+    udi: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device UDI certificate
     """
@@ -4337,9 +4337,9 @@ class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict(TypedDic
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs:
     def __init__(__self__, *,
-                 device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 udi: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 udi: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] device_id: Import ID from the Import operation
         :param pulumi.Input[_builtins.str] network_id: Network Id
@@ -4354,43 +4354,43 @@ class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs:
 
     @_builtins.property
     @pulumi.getter(name="deviceId")
-    def device_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Import ID from the Import operation
         """
         return pulumi.get(self, "device_id")
 
     @device_id.setter
-    def device_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_id", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network Id
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def udi(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udi(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device UDI certificate
         """
         return pulumi.get(self, "udi")
 
     @udi.setter
-    def udi(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udi(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udi", value)
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict']]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]]
     """
     Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringImport
     """
@@ -4398,7 +4398,7 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict(TypedDict)
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersItemArgs:
     def __init__(__self__, *,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]] = None):
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringImport
         """
@@ -4407,27 +4407,27 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]:
         """
         Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringImport
         """
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]):
         pulumi.set(self, "items", value)
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict(TypedDict):
-    import_id: NotRequired[pulumi.Input[_builtins.str]]
+    import_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Unique id associated with the import of the device
     """
-    message: NotRequired[pulumi.Input[_builtins.str]]
+    message: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Response method
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Cloud monitor import status
     """
@@ -4435,9 +4435,9 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict(TypedD
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs:
     def __init__(__self__, *,
-                 import_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 message: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None):
+                 import_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 message: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] import_id: Unique id associated with the import of the device
         :param pulumi.Input[_builtins.str] message: Response method
@@ -4452,59 +4452,59 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="importId")
-    def import_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def import_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unique id associated with the import of the device
         """
         return pulumi.get(self, "import_id")
 
     @import_id.setter
-    def import_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def import_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "import_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Response method
         """
         return pulumi.get(self, "message")
 
     @message.setter
-    def message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "message", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Cloud monitor import status
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemArgsDict(TypedDict):
-    config_params: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict']]
+    config_params: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]]
     """
     Params used in order to connect to the device
     """
-    device_id: NotRequired[pulumi.Input[_builtins.str]]
+    device_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Import ID from the Import operation
     """
-    message: NotRequired[pulumi.Input[_builtins.str]]
+    message: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Message related to whether or not the device was found and can be imported.
     """
-    status: NotRequired[pulumi.Input[_builtins.str]]
+    status: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The import status of the device
     """
-    udi: NotRequired[pulumi.Input[_builtins.str]]
+    udi: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device UDI certificate
     """
@@ -4512,11 +4512,11 @@ class InventoryOnboardingCloudMonitoringPrepareItemArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemArgs:
     def __init__(__self__, *,
-                 config_params: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']] = None,
-                 device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 message: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 udi: Optional[pulumi.Input[_builtins.str]] = None):
+                 config_params: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']] = None,
+                 device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 message: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 udi: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs'] config_params: Params used in order to connect to the device
         :param pulumi.Input[_builtins.str] device_id: Import ID from the Import operation
@@ -4537,75 +4537,75 @@ class InventoryOnboardingCloudMonitoringPrepareItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="configParams")
-    def config_params(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]:
+    def config_params(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]:
         """
         Params used in order to connect to the device
         """
         return pulumi.get(self, "config_params")
 
     @config_params.setter
-    def config_params(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]):
+    def config_params(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]):
         pulumi.set(self, "config_params", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceId")
-    def device_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Import ID from the Import operation
         """
         return pulumi.get(self, "device_id")
 
     @device_id.setter
-    def device_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def message(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def message(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Message related to whether or not the device was found and can be imported.
         """
         return pulumi.get(self, "message")
 
     @message.setter
-    def message(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def message(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "message", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The import status of the device
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def udi(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udi(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device UDI certificate
         """
         return pulumi.get(self, "udi")
 
     @udi.setter
-    def udi(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udi(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udi", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict(TypedDict):
-    cloud_static_ip: NotRequired[pulumi.Input[_builtins.str]]
+    cloud_static_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Static IP Address used to connect to the device
     """
-    tunnel: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict']]
+    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]]
     """
     Configuration options used to connect to the device
     """
-    user: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict']]
+    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]]
     """
     User credentials used to connect to the device
     """
@@ -4613,9 +4613,9 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict(TypedDic
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs:
     def __init__(__self__, *,
-                 cloud_static_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']] = None,
-                 user: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']] = None):
+                 cloud_static_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']] = None,
+                 user: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] cloud_static_ip: Static IP Address used to connect to the device
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs'] tunnel: Configuration options used to connect to the device
@@ -4630,56 +4630,56 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs:
 
     @_builtins.property
     @pulumi.getter(name="cloudStaticIp")
-    def cloud_static_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cloud_static_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Static IP Address used to connect to the device
         """
         return pulumi.get(self, "cloud_static_ip")
 
     @cloud_static_ip.setter
-    def cloud_static_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cloud_static_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cloud_static_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def tunnel(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]:
+    def tunnel(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]:
         """
         Configuration options used to connect to the device
         """
         return pulumi.get(self, "tunnel")
 
     @tunnel.setter
-    def tunnel(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]):
+    def tunnel(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]):
         pulumi.set(self, "tunnel", value)
 
     @_builtins.property
     @pulumi.getter
-    def user(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]:
+    def user(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]:
         """
         User credentials used to connect to the device
         """
         return pulumi.get(self, "user")
 
     @user.setter
-    def user(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]):
+    def user(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]):
         pulumi.set(self, "user", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict(TypedDict):
-    host: NotRequired[pulumi.Input[_builtins.str]]
+    host: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     SSH tunnel URL used to connect to the device
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the tunnel we are attempting to connect to
     """
-    port: NotRequired[pulumi.Input[_builtins.str]]
+    port: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The port used for the ssh tunnel.
     """
-    root_certificate: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict']]
+    root_certificate: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]]
     """
     Root certificate information
     """
@@ -4687,11 +4687,11 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict(Ty
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs:
     def __init__(__self__, *,
-                 host: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 root_certificate: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']] = None):
+                 host: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 root_certificate: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] host: SSH tunnel URL used to connect to the device
         :param pulumi.Input[_builtins.str] name: The name of the tunnel we are attempting to connect to
@@ -4711,68 +4711,68 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs:
 
     @_builtins.property
     @pulumi.getter
-    def host(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def host(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SSH tunnel URL used to connect to the device
         """
         return pulumi.get(self, "host")
 
     @host.setter
-    def host(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def host(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "host", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the tunnel we are attempting to connect to
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The port used for the ssh tunnel.
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="rootCertificate")
-    def root_certificate(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]:
+    def root_certificate(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]:
         """
         Root certificate information
         """
         return pulumi.get(self, "root_certificate")
 
     @root_certificate.setter
-    def root_certificate(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]):
+    def root_certificate(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]):
         pulumi.set(self, "root_certificate", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict(TypedDict):
-    content: NotRequired[pulumi.Input[_builtins.str]]
+    content: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Public certificate value
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the server protected by the certificate
     """
@@ -4780,8 +4780,8 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertifi
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs:
     def __init__(__self__, *,
-                 content: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 content: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] content: Public certificate value
         :param pulumi.Input[_builtins.str] name: The name of the server protected by the certificate
@@ -4793,39 +4793,39 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertifi
 
     @_builtins.property
     @pulumi.getter
-    def content(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def content(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Public certificate value
         """
         return pulumi.get(self, "content")
 
     @content.setter
-    def content(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def content(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "content", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the server protected by the certificate
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict(TypedDict):
-    public_key: NotRequired[pulumi.Input[_builtins.str]]
+    public_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The public key for the registered user
     """
-    secret: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict']]
+    secret: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]]
     """
     Stores the user secret hash
     """
-    username: NotRequired[pulumi.Input[_builtins.str]]
+    username: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The username added to Catalyst device
     """
@@ -4833,9 +4833,9 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict(Type
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs:
     def __init__(__self__, *,
-                 public_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 secret: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 public_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 secret: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] public_key: The public key for the registered user
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs'] secret: Stores the user secret hash
@@ -4850,43 +4850,43 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs:
 
     @_builtins.property
     @pulumi.getter(name="publicKey")
-    def public_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def public_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The public key for the registered user
         """
         return pulumi.get(self, "public_key")
 
     @public_key.setter
-    def public_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def public_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "public_key", value)
 
     @_builtins.property
     @pulumi.getter
-    def secret(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]:
+    def secret(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]:
         """
         Stores the user secret hash
         """
         return pulumi.get(self, "secret")
 
     @secret.setter
-    def secret(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]):
+    def secret(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]):
         pulumi.set(self, "secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The username added to Catalyst device
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict(TypedDict):
-    hash: NotRequired[pulumi.Input[_builtins.str]]
+    hash: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The hashed secret
     """
@@ -4894,7 +4894,7 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDic
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs:
     def __init__(__self__, *,
-                 hash: Optional[pulumi.Input[_builtins.str]] = None):
+                 hash: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] hash: The hashed secret
         """
@@ -4903,19 +4903,19 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs:
 
     @_builtins.property
     @pulumi.getter
-    def hash(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hash(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The hashed secret
         """
         return pulumi.get(self, "hash")
 
     @hash.setter
-    def hash(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hash(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hash", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersArgsDict(TypedDict):
-    devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict']]]]
+    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]]
     """
     A set of devices to import (or update)
     """
@@ -4923,7 +4923,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersArgs:
     def __init__(__self__, *,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]] = None):
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]] devices: A set of devices to import (or update)
         """
@@ -4932,31 +4932,31 @@ class InventoryOnboardingCloudMonitoringPrepareParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]:
         """
         A set of devices to import (or update)
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict(TypedDict):
-    sudi: NotRequired[pulumi.Input[_builtins.str]]
+    sudi: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Device SUDI certificate
     """
-    tunnel: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict']]
+    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]]
     """
     TLS Related Parameters
     """
-    user: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict']]
+    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]]
     """
     User parameters
     """
-    vty: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict']]
+    vty: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]]
     """
     VTY Related Parameters
     """
@@ -4964,10 +4964,10 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict(TypedDic
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs:
     def __init__(__self__, *,
-                 sudi: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']] = None,
-                 user: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']] = None,
-                 vty: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']] = None):
+                 sudi: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']] = None,
+                 user: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']] = None,
+                 vty: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] sudi: Device SUDI certificate
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs'] tunnel: TLS Related Parameters
@@ -4985,67 +4985,67 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def sudi(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sudi(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Device SUDI certificate
         """
         return pulumi.get(self, "sudi")
 
     @sudi.setter
-    def sudi(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sudi(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sudi", value)
 
     @_builtins.property
     @pulumi.getter
-    def tunnel(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]:
+    def tunnel(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]:
         """
         TLS Related Parameters
         """
         return pulumi.get(self, "tunnel")
 
     @tunnel.setter
-    def tunnel(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]):
+    def tunnel(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]):
         pulumi.set(self, "tunnel", value)
 
     @_builtins.property
     @pulumi.getter
-    def user(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]:
+    def user(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]:
         """
         User parameters
         """
         return pulumi.get(self, "user")
 
     @user.setter
-    def user(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]):
+    def user(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]):
         pulumi.set(self, "user", value)
 
     @_builtins.property
     @pulumi.getter
-    def vty(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]:
+    def vty(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]:
         """
         VTY Related Parameters
         """
         return pulumi.get(self, "vty")
 
     @vty.setter
-    def vty(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]):
+    def vty(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]):
         pulumi.set(self, "vty", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict(TypedDict):
-    certificate_name: NotRequired[pulumi.Input[_builtins.str]]
+    certificate_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of the configured TLS certificate
     """
-    local_interface: NotRequired[pulumi.Input[_builtins.int]]
+    local_interface: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of the vlan expected to be used to connect to the cloud
     """
-    loopback_number: NotRequired[pulumi.Input[_builtins.int]]
+    loopback_number: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Number of the configured Loopback Interface used for TLS overlay
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of the configured TLS tunnel
     """
@@ -5053,10 +5053,10 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict(Ty
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs:
     def __init__(__self__, *,
-                 certificate_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_interface: Optional[pulumi.Input[_builtins.int]] = None,
-                 loopback_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 certificate_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_interface: pulumi.Input[Optional[_builtins.int]] = None,
+                 loopback_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] certificate_name: Name of the configured TLS certificate
         :param pulumi.Input[_builtins.int] local_interface: Number of the vlan expected to be used to connect to the cloud
@@ -5074,55 +5074,55 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs:
 
     @_builtins.property
     @pulumi.getter(name="certificateName")
-    def certificate_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the configured TLS certificate
         """
         return pulumi.get(self, "certificate_name")
 
     @certificate_name.setter
-    def certificate_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_name", value)
 
     @_builtins.property
     @pulumi.getter(name="localInterface")
-    def local_interface(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def local_interface(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of the vlan expected to be used to connect to the cloud
         """
         return pulumi.get(self, "local_interface")
 
     @local_interface.setter
-    def local_interface(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def local_interface(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "local_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="loopbackNumber")
-    def loopback_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def loopback_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of the configured Loopback Interface used for TLS overlay
         """
         return pulumi.get(self, "loopback_number")
 
     @loopback_number.setter
-    def loopback_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def loopback_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "loopback_number", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of the configured TLS tunnel
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict(TypedDict):
-    username: NotRequired[pulumi.Input[_builtins.str]]
+    username: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the device user for Meraki monitoring
     """
@@ -5130,7 +5130,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict(Type
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs:
     def __init__(__self__, *,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] username: The name of the device user for Meraki monitoring
         """
@@ -5139,39 +5139,39 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs:
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the device user for Meraki monitoring
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict(TypedDict):
-    access_list: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict']]
+    access_list: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]]
     """
     AccessList details
     """
-    authentication: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict']]
+    authentication: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]]
     """
     VTY AAA authentication
     """
-    authorization: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict']]
+    authorization: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]]
     """
     VTY AAA authorization
     """
-    end_line_number: NotRequired[pulumi.Input[_builtins.int]]
+    end_line_number: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Ending line VTY number
     """
-    rotary_number: NotRequired[pulumi.Input[_builtins.int]]
+    rotary_number: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     SSH rotary number
     """
-    start_line_number: NotRequired[pulumi.Input[_builtins.int]]
+    start_line_number: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     Starting line VTY number
     """
@@ -5179,12 +5179,12 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict(Typed
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs:
     def __init__(__self__, *,
-                 access_list: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']] = None,
-                 authentication: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']] = None,
-                 authorization: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']] = None,
-                 end_line_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 rotary_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 start_line_number: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_list: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']] = None,
+                 authentication: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']] = None,
+                 authorization: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']] = None,
+                 end_line_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 rotary_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 start_line_number: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs'] access_list: AccessList details
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs'] authentication: VTY AAA authentication
@@ -5208,83 +5208,83 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessList")
-    def access_list(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]:
+    def access_list(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]:
         """
         AccessList details
         """
         return pulumi.get(self, "access_list")
 
     @access_list.setter
-    def access_list(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]):
+    def access_list(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]):
         pulumi.set(self, "access_list", value)
 
     @_builtins.property
     @pulumi.getter
-    def authentication(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]:
+    def authentication(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]:
         """
         VTY AAA authentication
         """
         return pulumi.get(self, "authentication")
 
     @authentication.setter
-    def authentication(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]):
+    def authentication(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]):
         pulumi.set(self, "authentication", value)
 
     @_builtins.property
     @pulumi.getter
-    def authorization(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]:
+    def authorization(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]:
         """
         VTY AAA authorization
         """
         return pulumi.get(self, "authorization")
 
     @authorization.setter
-    def authorization(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]):
+    def authorization(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]):
         pulumi.set(self, "authorization", value)
 
     @_builtins.property
     @pulumi.getter(name="endLineNumber")
-    def end_line_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def end_line_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Ending line VTY number
         """
         return pulumi.get(self, "end_line_number")
 
     @end_line_number.setter
-    def end_line_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def end_line_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "end_line_number", value)
 
     @_builtins.property
     @pulumi.getter(name="rotaryNumber")
-    def rotary_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rotary_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SSH rotary number
         """
         return pulumi.get(self, "rotary_number")
 
     @rotary_number.setter
-    def rotary_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rotary_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rotary_number", value)
 
     @_builtins.property
     @pulumi.getter(name="startLineNumber")
-    def start_line_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def start_line_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Starting line VTY number
         """
         return pulumi.get(self, "start_line_number")
 
     @start_line_number.setter
-    def start_line_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def start_line_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "start_line_number", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict(TypedDict):
-    vty_in: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict']]
+    vty_in: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]]
     """
     VTY in ACL
     """
-    vty_out: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict']]
+    vty_out: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]]
     """
     VTY out ACL
     """
@@ -5292,8 +5292,8 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs:
     def __init__(__self__, *,
-                 vty_in: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']] = None,
-                 vty_out: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']] = None):
+                 vty_in: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']] = None,
+                 vty_out: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']] = None):
         """
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs'] vty_in: VTY in ACL
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs'] vty_out: VTY out ACL
@@ -5305,31 +5305,31 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs
 
     @_builtins.property
     @pulumi.getter(name="vtyIn")
-    def vty_in(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]:
+    def vty_in(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]:
         """
         VTY in ACL
         """
         return pulumi.get(self, "vty_in")
 
     @vty_in.setter
-    def vty_in(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]):
+    def vty_in(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]):
         pulumi.set(self, "vty_in", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyOut")
-    def vty_out(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]:
+    def vty_out(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]:
         """
         VTY out ACL
         """
         return pulumi.get(self, "vty_out")
 
     @vty_out.setter
-    def vty_out(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]):
+    def vty_out(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]):
         pulumi.set(self, "vty_out", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name
     """
@@ -5337,7 +5337,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyI
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         """
@@ -5346,19 +5346,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyI
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name
     """
@@ -5366,7 +5366,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyO
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         """
@@ -5375,19 +5375,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyO
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict']]
+    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]]
     """
     Group Details
     """
@@ -5395,7 +5395,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs:
     def __init__(__self__, *,
-                 group: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']] = None):
+                 group: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']] = None):
         """
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs'] group: Group Details
         """
@@ -5404,19 +5404,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
 
     @_builtins.property
     @pulumi.getter
-    def group(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]:
+    def group(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]:
         """
         Group Details
         """
         return pulumi.get(self, "group")
 
     @group.setter
-    def group(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]):
+    def group(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]):
         pulumi.set(self, "group", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Group Name
     """
@@ -5424,7 +5424,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Group Name
         """
@@ -5433,19 +5433,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Group Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict']]
+    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]]
     """
     Group Details
     """
@@ -5453,7 +5453,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationA
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs:
     def __init__(__self__, *,
-                 group: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']] = None):
+                 group: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']] = None):
         """
         :param pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs'] group: Group Details
         """
@@ -5462,19 +5462,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationA
 
     @_builtins.property
     @pulumi.getter
-    def group(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]:
+    def group(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]:
         """
         Group Details
         """
         return pulumi.get(self, "group")
 
     @group.setter
-    def group(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]):
+    def group(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]):
         pulumi.set(self, "group", value)
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Group Name
     """
@@ -5482,7 +5482,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationG
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Group Name
         """
@@ -5491,19 +5491,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationG
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Group Name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class InventoryReleaseItemArgsDict(TypedDict):
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Serials of the devices that were released
     """
@@ -5511,7 +5511,7 @@ class InventoryReleaseItemArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryReleaseItemArgs:
     def __init__(__self__, *,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: Serials of the devices that were released
         """
@@ -5520,19 +5520,19 @@ class InventoryReleaseItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Serials of the devices that were released
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class InventoryReleaseParametersArgsDict(TypedDict):
-    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Serials of the devices that should be released
     """
@@ -5540,7 +5540,7 @@ class InventoryReleaseParametersArgsDict(TypedDict):
 @pulumi.input_type
 class InventoryReleaseParametersArgs:
     def __init__(__self__, *,
-                 serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: Serials of the devices that should be released
         """
@@ -5549,19 +5549,19 @@ class InventoryReleaseParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Serials of the devices that should be released
         """
         return pulumi.get(self, "serials")
 
     @serials.setter
-    def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "serials", value)
 
 
 class LicensesAssignSeatsItemArgsDict(TypedDict):
-    resulting_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgsDict']]]]
+    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]]
     """
     Resulting licenses from the move
     """
@@ -5569,7 +5569,7 @@ class LicensesAssignSeatsItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesAssignSeatsItemArgs:
     def __init__(__self__, *,
-                 resulting_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]] = None):
+                 resulting_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]] resulting_licenses: Resulting licenses from the move
         """
@@ -5578,75 +5578,75 @@ class LicensesAssignSeatsItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="resultingLicenses")
-    def resulting_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]:
+    def resulting_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]:
         """
         Resulting licenses from the move
         """
         return pulumi.get(self, "resulting_licenses")
 
     @resulting_licenses.setter
-    def resulting_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]):
+    def resulting_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]):
         pulumi.set(self, "resulting_licenses", value)
 
 
 class LicensesAssignSeatsItemResultingLicenseArgsDict(TypedDict):
-    activation_date: NotRequired[pulumi.Input[_builtins.str]]
+    activation_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license started burning
     """
-    claim_date: NotRequired[pulumi.Input[_builtins.str]]
+    claim_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license was claimed into the organization
     """
-    device_serial: NotRequired[pulumi.Input[_builtins.str]]
+    device_serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Serial number of the device the license is assigned to
     """
-    duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the individual license
     """
-    expiration_date: NotRequired[pulumi.Input[_builtins.str]]
+    expiration_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license will expire
     """
-    head_license_id: NotRequired[pulumi.Input[_builtins.str]]
+    head_license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the head license this license is queued behind. If there is no head license, it returns nil.
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License ID
     """
-    license_key: NotRequired[pulumi.Input[_builtins.str]]
+    license_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License key
     """
-    license_type: NotRequired[pulumi.Input[_builtins.str]]
+    license_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License type
     """
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     ID of the network the license is assigned to
     """
-    order_number: NotRequired[pulumi.Input[_builtins.str]]
+    order_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Order number
     """
-    permanently_queued_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]
+    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]]
     """
     DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
     """
-    seat_count: NotRequired[pulumi.Input[_builtins.int]]
+    seat_count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of seats of the license. Only applicable to SM licenses.
     """
-    state: NotRequired[pulumi.Input[_builtins.str]]
+    state: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The state of the license. All queued licenses have a status of *recentlyQueued*.
     """
-    total_duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    total_duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the license plus all permanently queued licenses associated with it
     """
@@ -5654,21 +5654,21 @@ class LicensesAssignSeatsItemResultingLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesAssignSeatsItemResultingLicenseArgs:
     def __init__(__self__, *,
-                 activation_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 claim_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 expiration_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 head_license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 permanently_queued_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 total_duration_in_days: Optional[pulumi.Input[_builtins.int]] = None):
+                 activation_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 claim_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 expiration_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 head_license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] activation_date: The date the license started burning
         :param pulumi.Input[_builtins.str] claim_date: The date the license was claimed into the organization
@@ -5719,203 +5719,203 @@ class LicensesAssignSeatsItemResultingLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="activationDate")
-    def activation_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def activation_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license started burning
         """
         return pulumi.get(self, "activation_date")
 
     @activation_date.setter
-    def activation_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def activation_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "activation_date", value)
 
     @_builtins.property
     @pulumi.getter(name="claimDate")
-    def claim_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claim_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license was claimed into the organization
         """
         return pulumi.get(self, "claim_date")
 
     @claim_date.setter
-    def claim_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claim_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claim_date", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSerial")
-    def device_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the device the license is assigned to
         """
         return pulumi.get(self, "device_serial")
 
     @device_serial.setter
-    def device_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter(name="expirationDate")
-    def expiration_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expiration_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license will expire
         """
         return pulumi.get(self, "expiration_date")
 
     @expiration_date.setter
-    def expiration_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expiration_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expiration_date", value)
 
     @_builtins.property
     @pulumi.getter(name="headLicenseId")
-    def head_license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def head_license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the head license this license is queued behind. If there is no head license, it returns nil.
         """
         return pulumi.get(self, "head_license_id")
 
     @head_license_id.setter
-    def head_license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def head_license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "head_license_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the network the license is assigned to
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
     @_builtins.property
     @pulumi.getter(name="permanentlyQueuedLicenses")
-    def permanently_queued_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]:
+    def permanently_queued_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]:
         """
         DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
         """
         return pulumi.get(self, "permanently_queued_licenses")
 
     @permanently_queued_licenses.setter
-    def permanently_queued_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]):
+    def permanently_queued_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]):
         pulumi.set(self, "permanently_queued_licenses", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats of the license. Only applicable to SM licenses.
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state of the license. All queued licenses have a status of *recentlyQueued*.
         """
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
     @_builtins.property
     @pulumi.getter(name="totalDurationInDays")
-    def total_duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def total_duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the license plus all permanently queued licenses associated with it
         """
         return pulumi.get(self, "total_duration_in_days")
 
     @total_duration_in_days.setter
-    def total_duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def total_duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "total_duration_in_days", value)
 
 
 class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(TypedDict):
-    duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the individual license
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permanently queued license ID
     """
-    license_key: NotRequired[pulumi.Input[_builtins.str]]
+    license_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License key
     """
-    license_type: NotRequired[pulumi.Input[_builtins.str]]
+    license_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License type
     """
-    order_number: NotRequired[pulumi.Input[_builtins.str]]
+    order_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Order number
     """
@@ -5923,11 +5923,11 @@ class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(Ty
 @pulumi.input_type
 class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
     def __init__(__self__, *,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None):
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] duration_in_days: The duration of the individual license
         :param pulumi.Input[_builtins.str] id: Permanently queued license ID
@@ -5948,75 +5948,75 @@ class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permanently queued license ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
 
 class LicensesAssignSeatsParametersArgsDict(TypedDict):
-    license_id: NotRequired[pulumi.Input[_builtins.str]]
+    license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the SM license to assign seats from
     """
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the SM network to assign the seats to
     """
-    seat_count: NotRequired[pulumi.Input[_builtins.int]]
+    seat_count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license
     """
@@ -6024,9 +6024,9 @@ class LicensesAssignSeatsParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesAssignSeatsParametersArgs:
     def __init__(__self__, *,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None):
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] license_id: The ID of the SM license to assign seats from
         :param pulumi.Input[_builtins.str] network_id: The ID of the SM network to assign the seats to
@@ -6041,47 +6041,47 @@ class LicensesAssignSeatsParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="licenseId")
-    def license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the SM license to assign seats from
         """
         return pulumi.get(self, "license_id")
 
     @license_id.setter
-    def license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_id", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the SM network to assign the seats to
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
 
 class LicensesMoveItemArgsDict(TypedDict):
-    dest_organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    dest_organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization to move the licenses to
     """
-    license_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    license_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of IDs of licenses to move to the new organization
     """
@@ -6089,8 +6089,8 @@ class LicensesMoveItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesMoveItemArgs:
     def __init__(__self__, *,
-                 dest_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 dest_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] dest_organization_id: The ID of the organization to move the licenses to
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] license_ids: A list of IDs of licenses to move to the new organization
@@ -6102,35 +6102,35 @@ class LicensesMoveItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="destOrganizationId")
-    def dest_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization to move the licenses to
         """
         return pulumi.get(self, "dest_organization_id")
 
     @dest_organization_id.setter
-    def dest_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseIds")
-    def license_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def license_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of IDs of licenses to move to the new organization
         """
         return pulumi.get(self, "license_ids")
 
     @license_ids.setter
-    def license_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def license_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "license_ids", value)
 
 
 class LicensesMoveParametersArgsDict(TypedDict):
-    dest_organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    dest_organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization to move the licenses to
     """
-    license_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    license_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of IDs of licenses to move to the new organization
     """
@@ -6138,8 +6138,8 @@ class LicensesMoveParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesMoveParametersArgs:
     def __init__(__self__, *,
-                 dest_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 dest_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] dest_organization_id: The ID of the organization to move the licenses to
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] license_ids: A list of IDs of licenses to move to the new organization
@@ -6151,39 +6151,39 @@ class LicensesMoveParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="destOrganizationId")
-    def dest_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization to move the licenses to
         """
         return pulumi.get(self, "dest_organization_id")
 
     @dest_organization_id.setter
-    def dest_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseIds")
-    def license_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def license_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of IDs of licenses to move to the new organization
         """
         return pulumi.get(self, "license_ids")
 
     @license_ids.setter
-    def license_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def license_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "license_ids", value)
 
 
 class LicensesMoveSeatsItemArgsDict(TypedDict):
-    dest_organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    dest_organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization to move the SM seats to
     """
-    license_id: NotRequired[pulumi.Input[_builtins.str]]
+    license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the SM license to move the seats from
     """
-    seat_count: NotRequired[pulumi.Input[_builtins.int]]
+    seat_count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
     """
@@ -6191,9 +6191,9 @@ class LicensesMoveSeatsItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesMoveSeatsItemArgs:
     def __init__(__self__, *,
-                 dest_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None):
+                 dest_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] dest_organization_id: The ID of the organization to move the SM seats to
         :param pulumi.Input[_builtins.str] license_id: The ID of the SM license to move the seats from
@@ -6208,51 +6208,51 @@ class LicensesMoveSeatsItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="destOrganizationId")
-    def dest_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization to move the SM seats to
         """
         return pulumi.get(self, "dest_organization_id")
 
     @dest_organization_id.setter
-    def dest_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseId")
-    def license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the SM license to move the seats from
         """
         return pulumi.get(self, "license_id")
 
     @license_id.setter
-    def license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_id", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
 
 class LicensesMoveSeatsParametersArgsDict(TypedDict):
-    dest_organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    dest_organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization to move the SM seats to
     """
-    license_id: NotRequired[pulumi.Input[_builtins.str]]
+    license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the SM license to move the seats from
     """
-    seat_count: NotRequired[pulumi.Input[_builtins.int]]
+    seat_count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
     """
@@ -6260,9 +6260,9 @@ class LicensesMoveSeatsParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesMoveSeatsParametersArgs:
     def __init__(__self__, *,
-                 dest_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None):
+                 dest_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] dest_organization_id: The ID of the organization to move the SM seats to
         :param pulumi.Input[_builtins.str] license_id: The ID of the SM license to move the seats from
@@ -6277,59 +6277,59 @@ class LicensesMoveSeatsParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="destOrganizationId")
-    def dest_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dest_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization to move the SM seats to
         """
         return pulumi.get(self, "dest_organization_id")
 
     @dest_organization_id.setter
-    def dest_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dest_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dest_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseId")
-    def license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the SM license to move the seats from
         """
         return pulumi.get(self, "license_id")
 
     @license_id.setter
-    def license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_id", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
 
 class LicensesPermanentlyQueuedLicenseArgsDict(TypedDict):
-    duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the individual license
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permanently queued license ID
     """
-    license_key: NotRequired[pulumi.Input[_builtins.str]]
+    license_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License key
     """
-    license_type: NotRequired[pulumi.Input[_builtins.str]]
+    license_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License type
     """
-    order_number: NotRequired[pulumi.Input[_builtins.str]]
+    order_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Order number
     """
@@ -6337,11 +6337,11 @@ class LicensesPermanentlyQueuedLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesPermanentlyQueuedLicenseArgs:
     def __init__(__self__, *,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None):
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] duration_in_days: The duration of the individual license
         :param pulumi.Input[_builtins.str] id: Permanently queued license ID
@@ -6362,67 +6362,67 @@ class LicensesPermanentlyQueuedLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permanently queued license ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
 
 class LicensesRenewSeatsItemArgsDict(TypedDict):
-    resulting_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgsDict']]]]
+    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]]
     """
     Resulting licenses from the move
     """
@@ -6430,7 +6430,7 @@ class LicensesRenewSeatsItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesRenewSeatsItemArgs:
     def __init__(__self__, *,
-                 resulting_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]] = None):
+                 resulting_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]] resulting_licenses: Resulting licenses from the move
         """
@@ -6439,75 +6439,75 @@ class LicensesRenewSeatsItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="resultingLicenses")
-    def resulting_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]:
+    def resulting_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]:
         """
         Resulting licenses from the move
         """
         return pulumi.get(self, "resulting_licenses")
 
     @resulting_licenses.setter
-    def resulting_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]):
+    def resulting_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]):
         pulumi.set(self, "resulting_licenses", value)
 
 
 class LicensesRenewSeatsItemResultingLicenseArgsDict(TypedDict):
-    activation_date: NotRequired[pulumi.Input[_builtins.str]]
+    activation_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license started burning
     """
-    claim_date: NotRequired[pulumi.Input[_builtins.str]]
+    claim_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license was claimed into the organization
     """
-    device_serial: NotRequired[pulumi.Input[_builtins.str]]
+    device_serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Serial number of the device the license is assigned to
     """
-    duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the individual license
     """
-    expiration_date: NotRequired[pulumi.Input[_builtins.str]]
+    expiration_date: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The date the license will expire
     """
-    head_license_id: NotRequired[pulumi.Input[_builtins.str]]
+    head_license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The id of the head license this license is queued behind. If there is no head license, it returns nil.
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License ID
     """
-    license_key: NotRequired[pulumi.Input[_builtins.str]]
+    license_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License key
     """
-    license_type: NotRequired[pulumi.Input[_builtins.str]]
+    license_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License type
     """
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     ID of the network the license is assigned to
     """
-    order_number: NotRequired[pulumi.Input[_builtins.str]]
+    order_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Order number
     """
-    permanently_queued_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]
+    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]]
     """
     DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
     """
-    seat_count: NotRequired[pulumi.Input[_builtins.int]]
+    seat_count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of seats of the license. Only applicable to SM licenses.
     """
-    state: NotRequired[pulumi.Input[_builtins.str]]
+    state: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The state of the license. All queued licenses have a status of *recentlyQueued*.
     """
-    total_duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    total_duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the license plus all permanently queued licenses associated with it
     """
@@ -6515,21 +6515,21 @@ class LicensesRenewSeatsItemResultingLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesRenewSeatsItemResultingLicenseArgs:
     def __init__(__self__, *,
-                 activation_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 claim_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 expiration_date: Optional[pulumi.Input[_builtins.str]] = None,
-                 head_license_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 permanently_queued_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]] = None,
-                 seat_count: Optional[pulumi.Input[_builtins.int]] = None,
-                 state: Optional[pulumi.Input[_builtins.str]] = None,
-                 total_duration_in_days: Optional[pulumi.Input[_builtins.int]] = None):
+                 activation_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 claim_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 expiration_date: pulumi.Input[Optional[_builtins.str]] = None,
+                 head_license_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]] = None,
+                 seat_count: pulumi.Input[Optional[_builtins.int]] = None,
+                 state: pulumi.Input[Optional[_builtins.str]] = None,
+                 total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] activation_date: The date the license started burning
         :param pulumi.Input[_builtins.str] claim_date: The date the license was claimed into the organization
@@ -6580,203 +6580,203 @@ class LicensesRenewSeatsItemResultingLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="activationDate")
-    def activation_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def activation_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license started burning
         """
         return pulumi.get(self, "activation_date")
 
     @activation_date.setter
-    def activation_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def activation_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "activation_date", value)
 
     @_builtins.property
     @pulumi.getter(name="claimDate")
-    def claim_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claim_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license was claimed into the organization
         """
         return pulumi.get(self, "claim_date")
 
     @claim_date.setter
-    def claim_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claim_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claim_date", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceSerial")
-    def device_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the device the license is assigned to
         """
         return pulumi.get(self, "device_serial")
 
     @device_serial.setter
-    def device_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter(name="expirationDate")
-    def expiration_date(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expiration_date(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The date the license will expire
         """
         return pulumi.get(self, "expiration_date")
 
     @expiration_date.setter
-    def expiration_date(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expiration_date(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expiration_date", value)
 
     @_builtins.property
     @pulumi.getter(name="headLicenseId")
-    def head_license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def head_license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the head license this license is queued behind. If there is no head license, it returns nil.
         """
         return pulumi.get(self, "head_license_id")
 
     @head_license_id.setter
-    def head_license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def head_license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "head_license_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the network the license is assigned to
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
     @_builtins.property
     @pulumi.getter(name="permanentlyQueuedLicenses")
-    def permanently_queued_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]:
+    def permanently_queued_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]:
         """
         DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
         """
         return pulumi.get(self, "permanently_queued_licenses")
 
     @permanently_queued_licenses.setter
-    def permanently_queued_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]):
+    def permanently_queued_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]):
         pulumi.set(self, "permanently_queued_licenses", value)
 
     @_builtins.property
     @pulumi.getter(name="seatCount")
-    def seat_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def seat_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of seats of the license. Only applicable to SM licenses.
         """
         return pulumi.get(self, "seat_count")
 
     @seat_count.setter
-    def seat_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def seat_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "seat_count", value)
 
     @_builtins.property
     @pulumi.getter
-    def state(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def state(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The state of the license. All queued licenses have a status of *recentlyQueued*.
         """
         return pulumi.get(self, "state")
 
     @state.setter
-    def state(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def state(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "state", value)
 
     @_builtins.property
     @pulumi.getter(name="totalDurationInDays")
-    def total_duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def total_duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the license plus all permanently queued licenses associated with it
         """
         return pulumi.get(self, "total_duration_in_days")
 
     @total_duration_in_days.setter
-    def total_duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def total_duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "total_duration_in_days", value)
 
 
 class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(TypedDict):
-    duration_in_days: NotRequired[pulumi.Input[_builtins.int]]
+    duration_in_days: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration of the individual license
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Permanently queued license ID
     """
-    license_key: NotRequired[pulumi.Input[_builtins.str]]
+    license_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License key
     """
-    license_type: NotRequired[pulumi.Input[_builtins.str]]
+    license_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     License type
     """
-    order_number: NotRequired[pulumi.Input[_builtins.str]]
+    order_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Order number
     """
@@ -6784,11 +6784,11 @@ class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(Typ
 @pulumi.input_type
 class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
     def __init__(__self__, *,
-                 duration_in_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 license_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 order_number: Optional[pulumi.Input[_builtins.str]] = None):
+                 duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 license_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 order_number: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] duration_in_days: The duration of the individual license
         :param pulumi.Input[_builtins.str] id: Permanently queued license ID
@@ -6809,71 +6809,71 @@ class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="durationInDays")
-    def duration_in_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration_in_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration of the individual license
         """
         return pulumi.get(self, "duration_in_days")
 
     @duration_in_days.setter
-    def duration_in_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration_in_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration_in_days", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Permanently queued license ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseKey")
-    def license_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License key
         """
         return pulumi.get(self, "license_key")
 
     @license_key.setter
-    def license_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_key", value)
 
     @_builtins.property
     @pulumi.getter(name="licenseType")
-    def license_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         License type
         """
         return pulumi.get(self, "license_type")
 
     @license_type.setter
-    def license_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_type", value)
 
     @_builtins.property
     @pulumi.getter(name="orderNumber")
-    def order_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def order_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Order number
         """
         return pulumi.get(self, "order_number")
 
     @order_number.setter
-    def order_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def order_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "order_number", value)
 
 
 class LicensesRenewSeatsParametersArgsDict(TypedDict):
-    license_id_to_renew: NotRequired[pulumi.Input[_builtins.str]]
+    license_id_to_renew: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the SM license to renew. This license must already be assigned to an SM network
     """
-    unused_license_id: NotRequired[pulumi.Input[_builtins.str]]
+    unused_license_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The SM license to use to renew the seats on 'licenseIdToRenew'. This license must have at least as many seats available as there are seats on 'licenseIdToRenew'
     """
@@ -6881,8 +6881,8 @@ class LicensesRenewSeatsParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensesRenewSeatsParametersArgs:
     def __init__(__self__, *,
-                 license_id_to_renew: Optional[pulumi.Input[_builtins.str]] = None,
-                 unused_license_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 license_id_to_renew: pulumi.Input[Optional[_builtins.str]] = None,
+                 unused_license_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] license_id_to_renew: The ID of the SM license to renew. This license must already be assigned to an SM network
         :param pulumi.Input[_builtins.str] unused_license_id: The SM license to use to renew the seats on 'licenseIdToRenew'. This license must have at least as many seats available as there are seats on 'licenseIdToRenew'
@@ -6894,35 +6894,35 @@ class LicensesRenewSeatsParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="licenseIdToRenew")
-    def license_id_to_renew(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def license_id_to_renew(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the SM license to renew. This license must already be assigned to an SM network
         """
         return pulumi.get(self, "license_id_to_renew")
 
     @license_id_to_renew.setter
-    def license_id_to_renew(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def license_id_to_renew(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "license_id_to_renew", value)
 
     @_builtins.property
     @pulumi.getter(name="unusedLicenseId")
-    def unused_license_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unused_license_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The SM license to use to renew the seats on 'licenseIdToRenew'. This license must have at least as many seats available as there are seats on 'licenseIdToRenew'
         """
         return pulumi.get(self, "unused_license_id")
 
     @unused_license_id.setter
-    def unused_license_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unused_license_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unused_license_id", value)
 
 
 class LicensingCotermLicensesMoveItemArgsDict(TypedDict):
-    moved_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgsDict']]]]
+    moved_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]]
     """
     Newly moved licenses created in the destination organization of the license move operation
     """
-    remainder_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgsDict']]]]
+    remainder_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]]
     """
     Remainder licenses created in the source organization as a result of moving a subset of the counts of a license
     """
@@ -6930,8 +6930,8 @@ class LicensingCotermLicensesMoveItemArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemArgs:
     def __init__(__self__, *,
-                 moved_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]] = None,
-                 remainder_licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]] = None):
+                 moved_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]] = None,
+                 remainder_licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]] moved_licenses: Newly moved licenses created in the destination organization of the license move operation
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]] remainder_licenses: Remainder licenses created in the source organization as a result of moving a subset of the counts of a license
@@ -6943,71 +6943,71 @@ class LicensingCotermLicensesMoveItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="movedLicenses")
-    def moved_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]:
+    def moved_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]:
         """
         Newly moved licenses created in the destination organization of the license move operation
         """
         return pulumi.get(self, "moved_licenses")
 
     @moved_licenses.setter
-    def moved_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]):
+    def moved_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]):
         pulumi.set(self, "moved_licenses", value)
 
     @_builtins.property
     @pulumi.getter(name="remainderLicenses")
-    def remainder_licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]:
+    def remainder_licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]:
         """
         Remainder licenses created in the source organization as a result of moving a subset of the counts of a license
         """
         return pulumi.get(self, "remainder_licenses")
 
     @remainder_licenses.setter
-    def remainder_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]):
+    def remainder_licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]):
         pulumi.set(self, "remainder_licenses", value)
 
 
 class LicensingCotermLicensesMoveItemMovedLicenseArgsDict(TypedDict):
-    claimed_at: NotRequired[pulumi.Input[_builtins.str]]
+    claimed_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license was claimed into the organization
     """
-    counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict']]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]]
     """
     The counts of the license by model type
     """
-    duration: NotRequired[pulumi.Input[_builtins.int]]
+    duration: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration (term length) of the license, measured in days
     """
-    editions: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict']]]]
+    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]]
     """
     The editions of the license for each relevant product type
     """
-    expired: NotRequired[pulumi.Input[_builtins.bool]]
+    expired: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag to indicate if the license is expired
     """
-    invalidated: NotRequired[pulumi.Input[_builtins.bool]]
+    invalidated: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag to indicated that the license is invalidated
     """
-    invalidated_at: NotRequired[pulumi.Input[_builtins.str]]
+    invalidated_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license was invalidated. Will be null for active licenses
     """
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The operation mode of the license when it was claimed
     """
-    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization that the license is claimed in
     """
-    started_at: NotRequired[pulumi.Input[_builtins.str]]
+    started_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license's term began (approximately the date when the license was created)
     """
@@ -7015,17 +7015,17 @@ class LicensingCotermLicensesMoveItemMovedLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseArgs:
     def __init__(__self__, *,
-                 claimed_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 counts: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]] = None,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 editions: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]] = None,
-                 expired: Optional[pulumi.Input[_builtins.bool]] = None,
-                 invalidated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 invalidated_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 started_at: Optional[pulumi.Input[_builtins.str]] = None):
+                 claimed_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 counts: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]] = None,
+                 duration: pulumi.Input[Optional[_builtins.int]] = None,
+                 editions: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]] = None,
+                 expired: pulumi.Input[Optional[_builtins.bool]] = None,
+                 invalidated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 invalidated_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 started_at: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] claimed_at: When the license was claimed into the organization
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]] counts: The counts of the license by model type
@@ -7064,143 +7064,143 @@ class LicensingCotermLicensesMoveItemMovedLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="claimedAt")
-    def claimed_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claimed_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license was claimed into the organization
         """
         return pulumi.get(self, "claimed_at")
 
     @claimed_at.setter
-    def claimed_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claimed_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claimed_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def counts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]:
+    def counts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]:
         """
         The counts of the license by model type
         """
         return pulumi.get(self, "counts")
 
     @counts.setter
-    def counts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]):
+    def counts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]):
         pulumi.set(self, "counts", value)
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration (term length) of the license, measured in days
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter
-    def editions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]:
+    def editions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]:
         """
         The editions of the license for each relevant product type
         """
         return pulumi.get(self, "editions")
 
     @editions.setter
-    def editions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]):
+    def editions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]):
         pulumi.set(self, "editions", value)
 
     @_builtins.property
     @pulumi.getter
-    def expired(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def expired(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag to indicate if the license is expired
         """
         return pulumi.get(self, "expired")
 
     @expired.setter
-    def expired(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def expired(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "expired", value)
 
     @_builtins.property
     @pulumi.getter
-    def invalidated(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def invalidated(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag to indicated that the license is invalidated
         """
         return pulumi.get(self, "invalidated")
 
     @invalidated.setter
-    def invalidated(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def invalidated(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "invalidated", value)
 
     @_builtins.property
     @pulumi.getter(name="invalidatedAt")
-    def invalidated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def invalidated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license was invalidated. Will be null for active licenses
         """
         return pulumi.get(self, "invalidated_at")
 
     @invalidated_at.setter
-    def invalidated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def invalidated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "invalidated_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The operation mode of the license when it was claimed
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization that the license is claimed in
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="startedAt")
-    def started_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def started_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license's term began (approximately the date when the license was created)
         """
         return pulumi.get(self, "started_at")
 
     @started_at.setter
-    def started_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def started_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "started_at", value)
 
 
 class LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict(TypedDict):
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of counts the license contains of this model
     """
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The license model type
     """
@@ -7208,8 +7208,8 @@ class LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseCountArgs:
     def __init__(__self__, *,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] count: The number of counts the license contains of this model
         :param pulumi.Input[_builtins.str] model: The license model type
@@ -7221,35 +7221,35 @@ class LicensingCotermLicensesMoveItemMovedLicenseCountArgs:
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of counts the license contains of this model
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license model type
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict(TypedDict):
-    edition: NotRequired[pulumi.Input[_builtins.str]]
+    edition: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the license edition
     """
-    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    product_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The product type of the license edition
     """
@@ -7257,8 +7257,8 @@ class LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseEditionArgs:
     def __init__(__self__, *,
-                 edition: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_type: Optional[pulumi.Input[_builtins.str]] = None):
+                 edition: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] edition: The name of the license edition
         :param pulumi.Input[_builtins.str] product_type: The product type of the license edition
@@ -7270,71 +7270,71 @@ class LicensingCotermLicensesMoveItemMovedLicenseEditionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def edition(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def edition(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the license edition
         """
         return pulumi.get(self, "edition")
 
     @edition.setter
-    def edition(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def edition(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "edition", value)
 
     @_builtins.property
     @pulumi.getter(name="productType")
-    def product_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def product_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The product type of the license edition
         """
         return pulumi.get(self, "product_type")
 
     @product_type.setter
-    def product_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def product_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "product_type", value)
 
 
 class LicensingCotermLicensesMoveItemRemainderLicenseArgsDict(TypedDict):
-    claimed_at: NotRequired[pulumi.Input[_builtins.str]]
+    claimed_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license was claimed into the organization
     """
-    counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict']]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]]
     """
     The counts of the license by model type
     """
-    duration: NotRequired[pulumi.Input[_builtins.int]]
+    duration: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The duration (term length) of the license, measured in days
     """
-    editions: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict']]]]
+    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]]
     """
     The editions of the license for each relevant product type
     """
-    expired: NotRequired[pulumi.Input[_builtins.bool]]
+    expired: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag to indicate if the license is expired
     """
-    invalidated: NotRequired[pulumi.Input[_builtins.bool]]
+    invalidated: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Flag to indicated that the license is invalidated
     """
-    invalidated_at: NotRequired[pulumi.Input[_builtins.str]]
+    invalidated_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license was invalidated. Will be null for active licenses
     """
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The key of the license
     """
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The operation mode of the license when it was claimed
     """
-    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The ID of the organization that the license is claimed in
     """
-    started_at: NotRequired[pulumi.Input[_builtins.str]]
+    started_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     When the license's term began (approximately the date when the license was created)
     """
@@ -7342,17 +7342,17 @@ class LicensingCotermLicensesMoveItemRemainderLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseArgs:
     def __init__(__self__, *,
-                 claimed_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 counts: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]] = None,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 editions: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]] = None,
-                 expired: Optional[pulumi.Input[_builtins.bool]] = None,
-                 invalidated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 invalidated_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 key: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 started_at: Optional[pulumi.Input[_builtins.str]] = None):
+                 claimed_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 counts: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]] = None,
+                 duration: pulumi.Input[Optional[_builtins.int]] = None,
+                 editions: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]] = None,
+                 expired: pulumi.Input[Optional[_builtins.bool]] = None,
+                 invalidated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 invalidated_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 key: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 started_at: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] claimed_at: When the license was claimed into the organization
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]] counts: The counts of the license by model type
@@ -7391,143 +7391,143 @@ class LicensingCotermLicensesMoveItemRemainderLicenseArgs:
 
     @_builtins.property
     @pulumi.getter(name="claimedAt")
-    def claimed_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def claimed_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license was claimed into the organization
         """
         return pulumi.get(self, "claimed_at")
 
     @claimed_at.setter
-    def claimed_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def claimed_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "claimed_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def counts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]:
+    def counts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]:
         """
         The counts of the license by model type
         """
         return pulumi.get(self, "counts")
 
     @counts.setter
-    def counts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]):
+    def counts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]):
         pulumi.set(self, "counts", value)
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The duration (term length) of the license, measured in days
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter
-    def editions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]:
+    def editions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]:
         """
         The editions of the license for each relevant product type
         """
         return pulumi.get(self, "editions")
 
     @editions.setter
-    def editions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]):
+    def editions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]):
         pulumi.set(self, "editions", value)
 
     @_builtins.property
     @pulumi.getter
-    def expired(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def expired(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag to indicate if the license is expired
         """
         return pulumi.get(self, "expired")
 
     @expired.setter
-    def expired(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def expired(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "expired", value)
 
     @_builtins.property
     @pulumi.getter
-    def invalidated(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def invalidated(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flag to indicated that the license is invalidated
         """
         return pulumi.get(self, "invalidated")
 
     @invalidated.setter
-    def invalidated(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def invalidated(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "invalidated", value)
 
     @_builtins.property
     @pulumi.getter(name="invalidatedAt")
-    def invalidated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def invalidated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license was invalidated. Will be null for active licenses
         """
         return pulumi.get(self, "invalidated_at")
 
     @invalidated_at.setter
-    def invalidated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def invalidated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "invalidated_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The key of the license
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The operation mode of the license when it was claimed
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the organization that the license is claimed in
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="startedAt")
-    def started_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def started_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         When the license's term began (approximately the date when the license was created)
         """
         return pulumi.get(self, "started_at")
 
     @started_at.setter
-    def started_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def started_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "started_at", value)
 
 
 class LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict(TypedDict):
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of counts the license contains of this model
     """
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The license model type
     """
@@ -7535,8 +7535,8 @@ class LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseCountArgs:
     def __init__(__self__, *,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] count: The number of counts the license contains of this model
         :param pulumi.Input[_builtins.str] model: The license model type
@@ -7548,35 +7548,35 @@ class LicensingCotermLicensesMoveItemRemainderLicenseCountArgs:
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of counts the license contains of this model
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license model type
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict(TypedDict):
-    edition: NotRequired[pulumi.Input[_builtins.str]]
+    edition: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the license edition
     """
-    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    product_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The product type of the license edition
     """
@@ -7584,8 +7584,8 @@ class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs:
     def __init__(__self__, *,
-                 edition: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_type: Optional[pulumi.Input[_builtins.str]] = None):
+                 edition: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_type: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] edition: The name of the license edition
         :param pulumi.Input[_builtins.str] product_type: The product type of the license edition
@@ -7597,35 +7597,35 @@ class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def edition(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def edition(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the license edition
         """
         return pulumi.get(self, "edition")
 
     @edition.setter
-    def edition(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def edition(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "edition", value)
 
     @_builtins.property
     @pulumi.getter(name="productType")
-    def product_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def product_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The product type of the license edition
         """
         return pulumi.get(self, "product_type")
 
     @product_type.setter
-    def product_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def product_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "product_type", value)
 
 
 class LicensingCotermLicensesMoveParametersArgsDict(TypedDict):
-    destination: NotRequired[pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgsDict']]
+    destination: NotRequired[pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgs']]]
     """
     Destination data for the license move
     """
-    licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgsDict']]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]]
     """
     The list of licenses to move
     """
@@ -7633,8 +7633,8 @@ class LicensingCotermLicensesMoveParametersArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersArgs:
     def __init__(__self__, *,
-                 destination: Optional[pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgs']] = None,
-                 licenses: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]] = None):
+                 destination: pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgs']] = None,
+                 licenses: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]] = None):
         """
         :param pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgs'] destination: Destination data for the license move
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]] licenses: The list of licenses to move
@@ -7646,35 +7646,35 @@ class LicensingCotermLicensesMoveParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def destination(self) -> Optional[pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgs']]:
+    def destination(self) -> pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgs']]:
         """
         Destination data for the license move
         """
         return pulumi.get(self, "destination")
 
     @destination.setter
-    def destination(self, value: Optional[pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgs']]):
+    def destination(self, value: pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgs']]):
         pulumi.set(self, "destination", value)
 
     @_builtins.property
     @pulumi.getter
-    def licenses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]:
+    def licenses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]:
         """
         The list of licenses to move
         """
         return pulumi.get(self, "licenses")
 
     @licenses.setter
-    def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]):
+    def licenses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
 
 class LicensingCotermLicensesMoveParametersDestinationArgsDict(TypedDict):
-    mode: NotRequired[pulumi.Input[_builtins.str]]
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The claim mode of the moved license
     """
-    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The organization to move the license to
     """
@@ -7682,8 +7682,8 @@ class LicensingCotermLicensesMoveParametersDestinationArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersDestinationArgs:
     def __init__(__self__, *,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] mode: The claim mode of the moved license
         :param pulumi.Input[_builtins.str] organization_id: The organization to move the license to
@@ -7695,35 +7695,35 @@ class LicensingCotermLicensesMoveParametersDestinationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The claim mode of the moved license
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The organization to move the license to
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
 class LicensingCotermLicensesMoveParametersLicenseArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgsDict']]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]]
     """
     The counts to move from the license by model type
     """
-    key: NotRequired[pulumi.Input[_builtins.str]]
+    key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The license key to move counts from
     """
@@ -7731,8 +7731,8 @@ class LicensingCotermLicensesMoveParametersLicenseArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersLicenseArgs:
     def __init__(__self__, *,
-                 counts: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]] = None,
-                 key: Optional[pulumi.Input[_builtins.str]] = None):
+                 counts: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]] = None,
+                 key: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]] counts: The counts to move from the license by model type
         :param pulumi.Input[_builtins.str] key: The license key to move counts from
@@ -7744,35 +7744,35 @@ class LicensingCotermLicensesMoveParametersLicenseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def counts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]:
+    def counts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]:
         """
         The counts to move from the license by model type
         """
         return pulumi.get(self, "counts")
 
     @counts.setter
-    def counts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]):
+    def counts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]):
         pulumi.set(self, "counts", value)
 
     @_builtins.property
     @pulumi.getter
-    def key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license key to move counts from
         """
         return pulumi.get(self, "key")
 
     @key.setter
-    def key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "key", value)
 
 
 class LicensingCotermLicensesMoveParametersLicenseCountArgsDict(TypedDict):
-    count: NotRequired[pulumi.Input[_builtins.int]]
+    count: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
     The number of counts to move
     """
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The license model type to move counts of
     """
@@ -7780,8 +7780,8 @@ class LicensingCotermLicensesMoveParametersLicenseCountArgsDict(TypedDict):
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersLicenseCountArgs:
     def __init__(__self__, *,
-                 count: Optional[pulumi.Input[_builtins.int]] = None,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 count: pulumi.Input[Optional[_builtins.int]] = None,
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] count: The number of counts to move
         :param pulumi.Input[_builtins.str] model: The license model type to move counts of
@@ -7793,31 +7793,31 @@ class LicensingCotermLicensesMoveParametersLicenseCountArgs:
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def count(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The number of counts to move
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The license model type to move counts of
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class LoginSecurityApiAuthenticationArgsDict(TypedDict):
-    ip_restrictions_for_keys: NotRequired[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict']]
+    ip_restrictions_for_keys: NotRequired[pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]]
     """
     Details for API-only IP restrictions.
     """
@@ -7825,7 +7825,7 @@ class LoginSecurityApiAuthenticationArgsDict(TypedDict):
 @pulumi.input_type
 class LoginSecurityApiAuthenticationArgs:
     def __init__(__self__, *,
-                 ip_restrictions_for_keys: Optional[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']] = None):
+                 ip_restrictions_for_keys: pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']] = None):
         """
         :param pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs'] ip_restrictions_for_keys: Details for API-only IP restrictions.
         """
@@ -7834,23 +7834,23 @@ class LoginSecurityApiAuthenticationArgs:
 
     @_builtins.property
     @pulumi.getter(name="ipRestrictionsForKeys")
-    def ip_restrictions_for_keys(self) -> Optional[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]:
+    def ip_restrictions_for_keys(self) -> pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]:
         """
         Details for API-only IP restrictions.
         """
         return pulumi.get(self, "ip_restrictions_for_keys")
 
     @ip_restrictions_for_keys.setter
-    def ip_restrictions_for_keys(self, value: Optional[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]):
+    def ip_restrictions_for_keys(self, value: pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]):
         pulumi.set(self, "ip_restrictions_for_keys", value)
 
 
 class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Boolean indicating whether the organization will restrict API key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR ranges.
     """
-    ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
     """
@@ -7858,8 +7858,8 @@ class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict(TypedDict):
 @pulumi.input_type
 class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ranges: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Boolean indicating whether the organization will restrict API key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR ranges.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ranges: List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
@@ -7871,31 +7871,31 @@ class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether the organization will restrict API key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR ranges.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
         """
         return pulumi.get(self, "ranges")
 
     @ranges.setter
-    def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ranges", value)
 
 
 class NetworksCombineItemArgsDict(TypedDict):
-    resulting_network: NotRequired[pulumi.Input['NetworksCombineItemResultingNetworkArgsDict']]
+    resulting_network: NotRequired[pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgs']]]
     """
     Network after the combination
     """
@@ -7903,7 +7903,7 @@ class NetworksCombineItemArgsDict(TypedDict):
 @pulumi.input_type
 class NetworksCombineItemArgs:
     def __init__(__self__, *,
-                 resulting_network: Optional[pulumi.Input['NetworksCombineItemResultingNetworkArgs']] = None):
+                 resulting_network: pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgs']] = None):
         """
         :param pulumi.Input['NetworksCombineItemResultingNetworkArgs'] resulting_network: Network after the combination
         """
@@ -7912,55 +7912,55 @@ class NetworksCombineItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="resultingNetwork")
-    def resulting_network(self) -> Optional[pulumi.Input['NetworksCombineItemResultingNetworkArgs']]:
+    def resulting_network(self) -> pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgs']]:
         """
         Network after the combination
         """
         return pulumi.get(self, "resulting_network")
 
     @resulting_network.setter
-    def resulting_network(self, value: Optional[pulumi.Input['NetworksCombineItemResultingNetworkArgs']]):
+    def resulting_network(self, value: pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgs']]):
         pulumi.set(self, "resulting_network", value)
 
 
 class NetworksCombineItemResultingNetworkArgsDict(TypedDict):
-    enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
+    enrollment_string: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Enrollment string for the network
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network ID
     """
-    is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
+    is_bound_to_config_template: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     If the network is bound to a config template
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Network name
     """
-    notes: NotRequired[pulumi.Input[_builtins.str]]
+    notes: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Notes for the network
     """
-    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    organization_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization ID
     """
-    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    product_types: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     List of the product types that the network supports
     """
-    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Network tags
     """
-    time_zone: NotRequired[pulumi.Input[_builtins.str]]
+    time_zone: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Timezone of the network
     """
-    url: NotRequired[pulumi.Input[_builtins.str]]
+    url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     URL to the network Dashboard UI
     """
@@ -7968,16 +7968,16 @@ class NetworksCombineItemResultingNetworkArgsDict(TypedDict):
 @pulumi.input_type
 class NetworksCombineItemResultingNetworkArgs:
     def __init__(__self__, *,
-                 enrollment_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None,
-                 is_bound_to_config_template: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 notes: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 product_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 time_zone: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 enrollment_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                 is_bound_to_config_template: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 notes: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 product_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 time_zone: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] enrollment_string: Enrollment string for the network
         :param pulumi.Input[_builtins.str] id: Network ID
@@ -8013,135 +8013,135 @@ class NetworksCombineItemResultingNetworkArgs:
 
     @_builtins.property
     @pulumi.getter(name="enrollmentString")
-    def enrollment_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enrollment_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enrollment string for the network
         """
         return pulumi.get(self, "enrollment_string")
 
     @enrollment_string.setter
-    def enrollment_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enrollment_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enrollment_string", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
     @_builtins.property
     @pulumi.getter(name="isBoundToConfigTemplate")
-    def is_bound_to_config_template(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_bound_to_config_template(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If the network is bound to a config template
         """
         return pulumi.get(self, "is_bound_to_config_template")
 
     @is_bound_to_config_template.setter
-    def is_bound_to_config_template(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_bound_to_config_template(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_bound_to_config_template", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def notes(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def notes(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Notes for the network
         """
         return pulumi.get(self, "notes")
 
     @notes.setter
-    def notes(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def notes(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "notes", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="productTypes")
-    def product_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def product_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of the product types that the network supports
         """
         return pulumi.get(self, "product_types")
 
     @product_types.setter
-    def product_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def product_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "product_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Network tags
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
     @_builtins.property
     @pulumi.getter(name="timeZone")
-    def time_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def time_zone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Timezone of the network
         """
         return pulumi.get(self, "time_zone")
 
     @time_zone.setter
-    def time_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def time_zone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "time_zone", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URL to the network Dashboard UI
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 class NetworksCombineParametersArgsDict(TypedDict):
-    enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
+    enrollment_string: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
     """
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the combined network
     """
-    network_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    network_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network
     """
@@ -8149,9 +8149,9 @@ class NetworksCombineParametersArgsDict(TypedDict):
 @pulumi.input_type
 class NetworksCombineParametersArgs:
     def __init__(__self__, *,
-                 enrollment_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 enrollment_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] enrollment_string: A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
         :param pulumi.Input[_builtins.str] name: The name of the combined network
@@ -8166,47 +8166,47 @@ class NetworksCombineParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="enrollmentString")
-    def enrollment_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enrollment_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
         """
         return pulumi.get(self, "enrollment_string")
 
     @enrollment_string.setter
-    def enrollment_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enrollment_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enrollment_string", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the combined network
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkIds")
-    def network_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def network_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network
         """
         return pulumi.get(self, "network_ids")
 
     @network_ids.setter
-    def network_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def network_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "network_ids", value)
 
 
 class SamlRolesCameraArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Camera access ability
     """
-    org_wide: NotRequired[pulumi.Input[_builtins.bool]]
+    org_wide: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Whether or not SAML administrator has org-wide access
     """
@@ -8214,8 +8214,8 @@ class SamlRolesCameraArgsDict(TypedDict):
 @pulumi.input_type
 class SamlRolesCameraArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 org_wide: Optional[pulumi.Input[_builtins.bool]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 org_wide: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] access: Camera access ability
         :param pulumi.Input[_builtins.bool] org_wide: Whether or not SAML administrator has org-wide access
@@ -8227,35 +8227,35 @@ class SamlRolesCameraArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Camera access ability
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter(name="orgWide")
-    def org_wide(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def org_wide(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not SAML administrator has org-wide access
         """
         return pulumi.get(self, "org_wide")
 
     @org_wide.setter
-    def org_wide(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def org_wide(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "org_wide", value)
 
 
 class SamlRolesNetworkArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The privilege of the SAML administrator on the network
     """
-    id: NotRequired[pulumi.Input[_builtins.str]]
+    id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The network ID
     """
@@ -8263,8 +8263,8 @@ class SamlRolesNetworkArgsDict(TypedDict):
 @pulumi.input_type
 class SamlRolesNetworkArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 id: Optional[pulumi.Input[_builtins.str]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] access: The privilege of the SAML administrator on the network
         :param pulumi.Input[_builtins.str] id: The network ID
@@ -8276,35 +8276,35 @@ class SamlRolesNetworkArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The privilege of the SAML administrator on the network
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The network ID
         """
         return pulumi.get(self, "id")
 
     @id.setter
-    def id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "id", value)
 
 
 class SamlRolesTagArgsDict(TypedDict):
-    access: NotRequired[pulumi.Input[_builtins.str]]
+    access: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The privilege of the SAML administrator on the tag
     """
-    tag: NotRequired[pulumi.Input[_builtins.str]]
+    tag: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The name of the tag
     """
@@ -8312,8 +8312,8 @@ class SamlRolesTagArgsDict(TypedDict):
 @pulumi.input_type
 class SamlRolesTagArgs:
     def __init__(__self__, *,
-                 access: Optional[pulumi.Input[_builtins.str]] = None,
-                 tag: Optional[pulumi.Input[_builtins.str]] = None):
+                 access: pulumi.Input[Optional[_builtins.str]] = None,
+                 tag: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] access: The privilege of the SAML administrator on the tag
         :param pulumi.Input[_builtins.str] tag: The name of the tag
@@ -8325,31 +8325,31 @@ class SamlRolesTagArgs:
 
     @_builtins.property
     @pulumi.getter
-    def access(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The privilege of the SAML administrator on the tag
         """
         return pulumi.get(self, "access")
 
     @access.setter
-    def access(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access", value)
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tag(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the tag
         """
         return pulumi.get(self, "tag")
 
     @tag.setter
-    def tag(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tag(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tag", value)
 
 
 class SmSentryPoliciesAssignmentsItemArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgsDict']]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]]
     """
     Sentry Group Policies for the Organization keyed by Network Id
     """
@@ -8357,7 +8357,7 @@ class SmSentryPoliciesAssignmentsItemArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemArgs:
     def __init__(__self__, *,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]] = None):
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]] items: Sentry Group Policies for the Organization keyed by Network Id
         """
@@ -8366,23 +8366,23 @@ class SmSentryPoliciesAssignmentsItemArgs:
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]:
         """
         Sentry Group Policies for the Organization keyed by Network Id
         """
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]):
         pulumi.set(self, "items", value)
 
 
 class SmSentryPoliciesAssignmentsItemItemArgsDict(TypedDict):
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Network
     """
-    policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgsDict']]]]
+    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]]
     """
     Array of Sentry Group Policies for the Network
     """
@@ -8390,8 +8390,8 @@ class SmSentryPoliciesAssignmentsItemItemArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemItemArgs:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]] = None):
         """
         :param pulumi.Input[_builtins.str] network_id: The Id of the Network
         :param pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]] policies: Array of Sentry Group Policies for the Network
@@ -8403,67 +8403,67 @@ class SmSentryPoliciesAssignmentsItemItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Network
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]:
+    def policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]:
         """
         Array of Sentry Group Policies for the Network
         """
         return pulumi.get(self, "policies")
 
     @policies.setter
-    def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]):
+    def policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
 
 class SmSentryPoliciesAssignmentsItemItemPolicyArgsDict(TypedDict):
-    created_at: NotRequired[pulumi.Input[_builtins.str]]
+    created_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The creation time of the Sentry Policy
     """
-    group_number: NotRequired[pulumi.Input[_builtins.str]]
+    group_number: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The number of the Group Policy
     """
-    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    group_policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Group Policy. This is associated with the network specified by the networkId.
     """
-    last_updated_at: NotRequired[pulumi.Input[_builtins.str]]
+    last_updated_at: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The last update time of the Sentry Policy
     """
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Network the Sentry Policy is associated with. In a locale, this should be the Wireless Group if present, otherwise the Wired Group.
     """
-    policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Sentry Policy
     """
-    priority: NotRequired[pulumi.Input[_builtins.str]]
+    priority: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The priority of the Sentry Policy
     """
-    scope: NotRequired[pulumi.Input[_builtins.str]]
+    scope: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The scope of the Sentry Policy
     """
-    sm_network_id: NotRequired[pulumi.Input[_builtins.str]]
+    sm_network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Systems Manager Network the Sentry Policy is assigned to
     """
-    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The tags of the Sentry Policy
     """
@@ -8471,16 +8471,16 @@ class SmSentryPoliciesAssignmentsItemItemPolicyArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemItemPolicyArgs:
     def __init__(__self__, *,
-                 created_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 last_updated_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.str]] = None,
-                 scope: Optional[pulumi.Input[_builtins.str]] = None,
-                 sm_network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 created_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 last_updated_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 priority: pulumi.Input[Optional[_builtins.str]] = None,
+                 scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 sm_network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] created_at: The creation time of the Sentry Policy
         :param pulumi.Input[_builtins.str] group_number: The number of the Group Policy
@@ -8516,127 +8516,127 @@ class SmSentryPoliciesAssignmentsItemItemPolicyArgs:
 
     @_builtins.property
     @pulumi.getter(name="createdAt")
-    def created_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def created_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The creation time of the Sentry Policy
         """
         return pulumi.get(self, "created_at")
 
     @created_at.setter
-    def created_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def created_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "created_at", value)
 
     @_builtins.property
     @pulumi.getter(name="groupNumber")
-    def group_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The number of the Group Policy
         """
         return pulumi.get(self, "group_number")
 
     @group_number.setter
-    def group_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_number", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Group Policy. This is associated with the network specified by the networkId.
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="lastUpdatedAt")
-    def last_updated_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def last_updated_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The last update time of the Sentry Policy
         """
         return pulumi.get(self, "last_updated_at")
 
     @last_updated_at.setter
-    def last_updated_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def last_updated_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "last_updated_at", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Network the Sentry Policy is associated with. In a locale, this should be the Wireless Group if present, otherwise the Wired Group.
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="policyId")
-    def policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Sentry Policy
         """
         return pulumi.get(self, "policy_id")
 
     @policy_id.setter
-    def policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def priority(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The priority of the Sentry Policy
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def priority(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "priority", value)
 
     @_builtins.property
     @pulumi.getter
-    def scope(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scope(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The scope of the Sentry Policy
         """
         return pulumi.get(self, "scope")
 
     @scope.setter
-    def scope(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scope", value)
 
     @_builtins.property
     @pulumi.getter(name="smNetworkId")
-    def sm_network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sm_network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Systems Manager Network the Sentry Policy is assigned to
         """
         return pulumi.get(self, "sm_network_id")
 
     @sm_network_id.setter
-    def sm_network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sm_network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sm_network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The tags of the Sentry Policy
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
 
 class SmSentryPoliciesAssignmentsParametersArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgsDict']]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]]
     """
     Sentry Group Policies for the Organization keyed by Network Id
     """
@@ -8644,7 +8644,7 @@ class SmSentryPoliciesAssignmentsParametersArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersArgs:
     def __init__(__self__, *,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]] = None):
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]] items: Sentry Group Policies for the Organization keyed by Network Id
         """
@@ -8653,23 +8653,23 @@ class SmSentryPoliciesAssignmentsParametersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]:
         """
         Sentry Group Policies for the Organization keyed by Network Id
         """
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]):
         pulumi.set(self, "items", value)
 
 
 class SmSentryPoliciesAssignmentsParametersItemArgsDict(TypedDict):
-    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Network
     """
-    policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict']]]]
+    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]]
     """
     Array of Sentry Group Policies for the Network
     """
@@ -8677,8 +8677,8 @@ class SmSentryPoliciesAssignmentsParametersItemArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersItemArgs:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policies: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policies: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]] = None):
         """
         :param pulumi.Input[_builtins.str] network_id: The Id of the Network
         :param pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]] policies: Array of Sentry Group Policies for the Network
@@ -8690,47 +8690,47 @@ class SmSentryPoliciesAssignmentsParametersItemArgs:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Network
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]:
+    def policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]:
         """
         Array of Sentry Group Policies for the Network
         """
         return pulumi.get(self, "policies")
 
     @policies.setter
-    def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]):
+    def policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
 
 class SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict(TypedDict):
-    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    group_policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Group Policy Id
     """
-    policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Sentry Policy Id, if updating an existing Sentry Policy
     """
-    scope: NotRequired[pulumi.Input[_builtins.str]]
+    scope: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The scope of the Sentry Policy
     """
-    sm_network_id: NotRequired[pulumi.Input[_builtins.str]]
+    sm_network_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     The Id of the Systems Manager Network
     """
-    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     The tags for the Sentry Policy
     """
@@ -8738,11 +8738,11 @@ class SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict(TypedDict):
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersItemPolicyArgs:
     def __init__(__self__, *,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scope: Optional[pulumi.Input[_builtins.str]] = None,
-                 sm_network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scope: pulumi.Input[Optional[_builtins.str]] = None,
+                 sm_network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] group_policy_id: The Group Policy Id
         :param pulumi.Input[_builtins.str] policy_id: The Sentry Policy Id, if updating an existing Sentry Policy
@@ -8763,71 +8763,71 @@ class SmSentryPoliciesAssignmentsParametersItemPolicyArgs:
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Group Policy Id
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="policyId")
-    def policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Sentry Policy Id, if updating an existing Sentry Policy
         """
         return pulumi.get(self, "policy_id")
 
     @policy_id.setter
-    def policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def scope(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scope(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The scope of the Sentry Policy
         """
         return pulumi.get(self, "scope")
 
     @scope.setter
-    def scope(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scope(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scope", value)
 
     @_builtins.property
     @pulumi.getter(name="smNetworkId")
-    def sm_network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sm_network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The Id of the Systems Manager Network
         """
         return pulumi.get(self, "sm_network_id")
 
     @sm_network_id.setter
-    def sm_network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sm_network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sm_network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tags(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The tags for the Sentry Policy
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tags(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
 
 class SwitchDevicesCloneParametersArgsDict(TypedDict):
-    source_serial: NotRequired[pulumi.Input[_builtins.str]]
+    source_serial: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Serial number of the source switch (must be on a network not bound to a template)
     """
-    target_serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    target_serials: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
     """
     Array of serial numbers of one or more target switches (must be on a network not bound to a template)
     """
@@ -8835,8 +8835,8 @@ class SwitchDevicesCloneParametersArgsDict(TypedDict):
 @pulumi.input_type
 class SwitchDevicesCloneParametersArgs:
     def __init__(__self__, *,
-                 source_serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 source_serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         :param pulumi.Input[_builtins.str] source_serial: Serial number of the source switch (must be on a network not bound to a template)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_serials: Array of serial numbers of one or more target switches (must be on a network not bound to a template)
@@ -8848,31 +8848,31 @@ class SwitchDevicesCloneParametersArgs:
 
     @_builtins.property
     @pulumi.getter(name="sourceSerial")
-    def source_serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Serial number of the source switch (must be on a network not bound to a template)
         """
         return pulumi.get(self, "source_serial")
 
     @source_serial.setter
-    def source_serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_serial", value)
 
     @_builtins.property
     @pulumi.getter(name="targetSerials")
-    def target_serials(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def target_serials(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Array of serial numbers of one or more target switches (must be on a network not bound to a template)
         """
         return pulumi.get(self, "target_serials")
 
     @target_serials.setter
-    def target_serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def target_serials(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_serials", value)
 
 
 class BaseApiArgsDict(TypedDict):
-    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
     """
     Enable API access
     """
@@ -8880,7 +8880,7 @@ class BaseApiArgsDict(TypedDict):
 @pulumi.input_type
 class BaseApiArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Enable API access
         """
@@ -8889,19 +8889,19 @@ class BaseApiArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable API access
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
 
 class BaseCloudArgsDict(TypedDict):
-    region: NotRequired[pulumi.Input['BaseCloudRegionArgsDict']]
+    region: NotRequired[pulumi.Input[Optional['BaseCloudRegionArgs']]]
     """
     Region info
     """
@@ -8909,7 +8909,7 @@ class BaseCloudArgsDict(TypedDict):
 @pulumi.input_type
 class BaseCloudArgs:
     def __init__(__self__, *,
-                 region: Optional[pulumi.Input['BaseCloudRegionArgs']] = None):
+                 region: pulumi.Input[Optional['BaseCloudRegionArgs']] = None):
         """
         :param pulumi.Input['BaseCloudRegionArgs'] region: Region info
         """
@@ -8918,19 +8918,19 @@ class BaseCloudArgs:
 
     @_builtins.property
     @pulumi.getter
-    def region(self) -> Optional[pulumi.Input['BaseCloudRegionArgs']]:
+    def region(self) -> pulumi.Input[Optional['BaseCloudRegionArgs']]:
         """
         Region info
         """
         return pulumi.get(self, "region")
 
     @region.setter
-    def region(self, value: Optional[pulumi.Input['BaseCloudRegionArgs']]):
+    def region(self, value: pulumi.Input[Optional['BaseCloudRegionArgs']]):
         pulumi.set(self, "region", value)
 
 
 class BaseCloudRegionArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of region
     """
@@ -8938,7 +8938,7 @@ class BaseCloudRegionArgsDict(TypedDict):
 @pulumi.input_type
 class BaseCloudRegionArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name of region
         """
@@ -8947,19 +8947,19 @@ class BaseCloudRegionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of region
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 class BaseLicensingArgsDict(TypedDict):
-    model: NotRequired[pulumi.Input[_builtins.str]]
+    model: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
     """
@@ -8967,7 +8967,7 @@ class BaseLicensingArgsDict(TypedDict):
 @pulumi.input_type
 class BaseLicensingArgs:
     def __init__(__self__, *,
-                 model: Optional[pulumi.Input[_builtins.str]] = None):
+                 model: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] model: Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
         """
@@ -8976,19 +8976,19 @@ class BaseLicensingArgs:
 
     @_builtins.property
     @pulumi.getter
-    def model(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def model(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
         """
         return pulumi.get(self, "model")
 
     @model.setter
-    def model(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def model(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "model", value)
 
 
 class BaseManagementArgsDict(TypedDict):
-    details: NotRequired[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgsDict']]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]]
     """
     Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
     """
@@ -8996,7 +8996,7 @@ class BaseManagementArgsDict(TypedDict):
 @pulumi.input_type
 class BaseManagementArgs:
     def __init__(__self__, *,
-                 details: Optional[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgs']]]] = None):
+                 details: pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgs']]]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgs']]] details: Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
         """
@@ -9005,23 +9005,23 @@ class BaseManagementArgs:
 
     @_builtins.property
     @pulumi.getter
-    def details(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]:
+    def details(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]:
         """
         Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
         """
         return pulumi.get(self, "details")
 
     @details.setter
-    def details(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]):
+    def details(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]):
         pulumi.set(self, "details", value)
 
 
 class BaseManagementDetailArgsDict(TypedDict):
-    name: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Name of management data
     """
-    value: NotRequired[pulumi.Input[_builtins.str]]
+    value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Value of management data
     """
@@ -9029,8 +9029,8 @@ class BaseManagementDetailArgsDict(TypedDict):
 @pulumi.input_type
 class BaseManagementDetailArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 value: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name of management data
         :param pulumi.Input[_builtins.str] value: Value of management data
@@ -9042,26 +9042,26 @@ class BaseManagementDetailArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of management data
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Value of management data
         """
         return pulumi.get(self, "value")
 
     @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "value", value)
 
 

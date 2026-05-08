@@ -21,11 +21,11 @@ class WirelessSsidsIdentityPsksArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_psk_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 passphrase: Optional[pulumi.Input[_builtins.str]] = None):
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 passphrase: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSsidsIdentityPsks resource.
 
@@ -76,77 +76,77 @@ class WirelessSsidsIdentityPsksArgs:
 
     @_builtins.property
     @pulumi.getter(name="expiresAt")
-    def expires_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expires_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Timestamp for when the Identity PSK expires, or 'null' to never expire
         """
         return pulumi.get(self, "expires_at")
 
     @expires_at.setter
-    def expires_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expires_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expires_at", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The group policy to be applied to clients
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="identityPskId")
-    def identity_psk_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_psk_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         identityPskId path parameter. Identity psk ID
         """
         return pulumi.get(self, "identity_psk_id")
 
     @identity_psk_id.setter
-    def identity_psk_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_psk_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_psk_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Identity PSK
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def passphrase(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def passphrase(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The passphrase for client authentication
         """
         return pulumi.get(self, "passphrase")
 
     @passphrase.setter
-    def passphrase(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def passphrase(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "passphrase", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsIdentityPsksState:
     def __init__(__self__, *,
-                 email: Optional[pulumi.Input[_builtins.str]] = None,
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_psk_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 passphrase: Optional[pulumi.Input[_builtins.str]] = None,
-                 wifi_personal_network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 email: pulumi.Input[Optional[_builtins.str]] = None,
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 passphrase: pulumi.Input[Optional[_builtins.str]] = None,
+                 wifi_personal_network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsIdentityPsks resources.
 
@@ -181,110 +181,110 @@ class _WirelessSsidsIdentityPsksState:
 
     @_builtins.property
     @pulumi.getter
-    def email(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def email(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The email associated with the System's Manager User
         """
         return pulumi.get(self, "email")
 
     @email.setter
-    def email(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def email(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "email", value)
 
     @_builtins.property
     @pulumi.getter(name="expiresAt")
-    def expires_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expires_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Timestamp for when the Identity PSK expires, or 'null' to never expire
         """
         return pulumi.get(self, "expires_at")
 
     @expires_at.setter
-    def expires_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expires_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expires_at", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The group policy to be applied to clients
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="identityPskId")
-    def identity_psk_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def identity_psk_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         identityPskId path parameter. Identity psk ID
         """
         return pulumi.get(self, "identity_psk_id")
 
     @identity_psk_id.setter
-    def identity_psk_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def identity_psk_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "identity_psk_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Identity PSK
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def passphrase(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def passphrase(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The passphrase for client authentication
         """
         return pulumi.get(self, "passphrase")
 
     @passphrase.setter
-    def passphrase(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def passphrase(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "passphrase", value)
 
     @_builtins.property
     @pulumi.getter(name="wifiPersonalNetworkId")
-    def wifi_personal_network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wifi_personal_network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The WiFi Personal Network unique identifier
         """
         return pulumi.get(self, "wifi_personal_network_id")
 
     @wifi_personal_network_id.setter
-    def wifi_personal_network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wifi_personal_network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wifi_personal_network_id", value)
 
 
@@ -294,13 +294,13 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_psk_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 passphrase: Optional[pulumi.Input[_builtins.str]] = None,
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 passphrase: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -381,13 +381,13 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 identity_psk_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 passphrase: Optional[pulumi.Input[_builtins.str]] = None,
+                 expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 passphrase: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -420,15 +420,15 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            email: Optional[pulumi.Input[_builtins.str]] = None,
-            expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-            group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            identity_psk_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            passphrase: Optional[pulumi.Input[_builtins.str]] = None,
-            wifi_personal_network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessSsidsIdentityPsks':
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            passphrase: pulumi.Input[Optional[_builtins.str]] = None,
+            wifi_personal_network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSsidsIdentityPsks':
         """
         Get an existing WirelessSsidsIdentityPsks resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

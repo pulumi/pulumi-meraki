@@ -131,27 +131,27 @@ export interface CellularGatewayLanState {
     /**
      * Lan IP of the MG
      */
-    deviceLanIp?: pulumi.Input<string>;
+    deviceLanIp?: pulumi.Input<string | undefined>;
     /**
      * Name of the MG.
      */
-    deviceName?: pulumi.Input<string>;
+    deviceName?: pulumi.Input<string | undefined>;
     /**
      * Subnet configuration of the MG.
      */
-    deviceSubnet?: pulumi.Input<string>;
+    deviceSubnet?: pulumi.Input<string | undefined>;
     /**
      * list of all fixed IP assignments for a single MG
      */
-    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanFixedIpAssignment>[]>;
+    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanFixedIpAssignment>[] | undefined>;
     /**
      * list of all reserved IP ranges for a single MG
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanReservedIpRange>[] | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -161,11 +161,11 @@ export interface CellularGatewayLanArgs {
     /**
      * list of all fixed IP assignments for a single MG
      */
-    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanFixedIpAssignment>[]>;
+    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanFixedIpAssignment>[] | undefined>;
     /**
      * list of all reserved IP ranges for a single MG
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayLanReservedIpRange>[] | undefined>;
     /**
      * serial path parameter.
      */

@@ -106,15 +106,15 @@ export interface SensorMqttBrokersState {
     /**
      * Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * ID of the MQTT Broker.
      */
-    mqttBrokerId?: pulumi.Input<string>;
+    mqttBrokerId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -124,7 +124,7 @@ export interface SensorMqttBrokersArgs {
     /**
      * Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * ID of the MQTT Broker.
      */

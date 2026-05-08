@@ -20,9 +20,9 @@ __all__ = ['WirelessBluetoothSettingsArgs', 'WirelessBluetoothSettings']
 class WirelessBluetoothSettingsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None):
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessBluetoothSettings resource.
 
@@ -53,48 +53,48 @@ class WirelessBluetoothSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def major(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def major(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "major")
 
     @major.setter
-    def major(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def major(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "major", value)
 
     @_builtins.property
     @pulumi.getter
-    def minor(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def minor(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "minor")
 
     @minor.setter
-    def minor(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def minor(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "minor", value)
 
     @_builtins.property
     @pulumi.getter
-    def uuid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uuid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "uuid")
 
     @uuid.setter
-    def uuid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uuid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uuid", value)
 
 
 @pulumi.input_type
 class _WirelessBluetoothSettingsState:
     def __init__(__self__, *,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None):
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessBluetoothSettings resources.
 
@@ -114,50 +114,50 @@ class _WirelessBluetoothSettingsState:
 
     @_builtins.property
     @pulumi.getter
-    def major(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def major(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "major")
 
     @major.setter
-    def major(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def major(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "major", value)
 
     @_builtins.property
     @pulumi.getter
-    def minor(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def minor(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "minor")
 
     @minor.setter
-    def minor(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def minor(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "minor", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def uuid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uuid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         """
         return pulumi.get(self, "uuid")
 
     @uuid.setter
-    def uuid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uuid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uuid", value)
 
 
@@ -167,10 +167,10 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -244,10 +244,10 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -273,10 +273,10 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            major: Optional[pulumi.Input[_builtins.int]] = None,
-            minor: Optional[pulumi.Input[_builtins.int]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            uuid: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessBluetoothSettings':
+            major: pulumi.Input[Optional[_builtins.int]] = None,
+            minor: pulumi.Input[Optional[_builtins.int]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            uuid: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessBluetoothSettings':
         """
         Get an existing WirelessBluetoothSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

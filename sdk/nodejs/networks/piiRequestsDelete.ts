@@ -96,11 +96,11 @@ export interface PiiRequestsDeleteState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * requestId path parameter. Request ID
      */
-    requestId?: pulumi.Input<string>;
+    requestId?: pulumi.Input<string | undefined>;
 }
 
 /**

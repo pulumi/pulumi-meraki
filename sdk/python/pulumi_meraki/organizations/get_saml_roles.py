@@ -117,8 +117,8 @@ def get_saml_roles(organization_id: Optional[_builtins.str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         saml_role_id=pulumi.get(__ret__, 'saml_role_id'))
-def get_saml_roles_output(organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                          saml_role_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_saml_roles_output(organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                          saml_role_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlRolesResult]:
     """
     ## Example Usage

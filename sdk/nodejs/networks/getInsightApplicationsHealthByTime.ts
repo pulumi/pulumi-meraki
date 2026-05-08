@@ -148,17 +148,17 @@ export interface GetInsightApplicationsHealthByTimeOutputArgs {
     /**
      * resolution query parameter. The time resolution in seconds for returned data. The valid resolutions are: 60, 300, 3600, 86400. The default is 300.
      */
-    resolution?: pulumi.Input<number>;
+    resolution?: pulumi.Input<number | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
 }

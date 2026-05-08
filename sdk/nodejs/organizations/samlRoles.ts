@@ -137,31 +137,31 @@ export interface SamlRolesState {
     /**
      * The list of camera access privileges for SAML administrator
      */
-    cameras?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesCamera>[]>;
+    cameras?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesCamera>[] | undefined>;
     /**
      * The list of networks that the SAML administrator has privileges on
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesNetwork>[] | undefined>;
     /**
      * The privilege of the SAML administrator on the organization
      */
-    orgAccess?: pulumi.Input<string>;
+    orgAccess?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * The role of the SAML administrator
      */
-    role?: pulumi.Input<string>;
+    role?: pulumi.Input<string | undefined>;
     /**
      * samlRoleId path parameter. Saml role ID
      */
-    samlRoleId?: pulumi.Input<string>;
+    samlRoleId?: pulumi.Input<string | undefined>;
     /**
      * The list of tags that the SAML administrator has privleges on
      */
-    tags?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesTag>[]>;
+    tags?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesTag>[] | undefined>;
 }
 
 /**
@@ -171,11 +171,11 @@ export interface SamlRolesArgs {
     /**
      * The list of networks that the SAML administrator has privileges on
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesNetwork>[] | undefined>;
     /**
      * The privilege of the SAML administrator on the organization
      */
-    orgAccess?: pulumi.Input<string>;
+    orgAccess?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -183,13 +183,13 @@ export interface SamlRolesArgs {
     /**
      * The role of the SAML administrator
      */
-    role?: pulumi.Input<string>;
+    role?: pulumi.Input<string | undefined>;
     /**
      * samlRoleId path parameter. Saml role ID
      */
-    samlRoleId?: pulumi.Input<string>;
+    samlRoleId?: pulumi.Input<string | undefined>;
     /**
      * The list of tags that the SAML administrator has privleges on
      */
-    tags?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesTag>[]>;
+    tags?: pulumi.Input<pulumi.Input<inputs.organizations.SamlRolesTag>[] | undefined>;
 }

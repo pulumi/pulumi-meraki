@@ -105,11 +105,11 @@ export interface CellularGatewayPortForwardingRulesState {
     /**
      * An array of port forwarding params
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayPortForwardingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayPortForwardingRulesRule>[] | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -119,7 +119,7 @@ export interface CellularGatewayPortForwardingRulesArgs {
     /**
      * An array of port forwarding params
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayPortForwardingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.devices.CellularGatewayPortForwardingRulesRule>[] | undefined>;
     /**
      * serial path parameter.
      */

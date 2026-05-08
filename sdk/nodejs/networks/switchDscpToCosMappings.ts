@@ -102,11 +102,11 @@ export interface SwitchDscpToCosMappingsState {
     /**
      * An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
      */
-    mappings?: pulumi.Input<pulumi.Input<inputs.networks.SwitchDscpToCosMappingsMapping>[]>;
+    mappings?: pulumi.Input<pulumi.Input<inputs.networks.SwitchDscpToCosMappingsMapping>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -116,7 +116,7 @@ export interface SwitchDscpToCosMappingsArgs {
     /**
      * An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
      */
-    mappings?: pulumi.Input<pulumi.Input<inputs.networks.SwitchDscpToCosMappingsMapping>[]>;
+    mappings?: pulumi.Input<pulumi.Input<inputs.networks.SwitchDscpToCosMappingsMapping>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

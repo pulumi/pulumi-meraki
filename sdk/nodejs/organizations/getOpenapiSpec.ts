@@ -93,5 +93,5 @@ export interface GetOpenapiSpecOutputArgs {
     /**
      * version query parameter. OpenAPI Specification version to return. Default is 2
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }

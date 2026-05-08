@@ -111,11 +111,11 @@ export interface ApplianceFirewallOneToOneNatRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An array of 1:1 nat rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallOneToOneNatRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallOneToOneNatRulesRule>[] | undefined>;
 }
 
 /**
@@ -129,5 +129,5 @@ export interface ApplianceFirewallOneToOneNatRulesArgs {
     /**
      * An array of 1:1 nat rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallOneToOneNatRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallOneToOneNatRulesRule>[] | undefined>;
 }

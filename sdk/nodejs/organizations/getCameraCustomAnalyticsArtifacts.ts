@@ -73,9 +73,9 @@ export interface GetCameraCustomAnalyticsArtifactsOutputArgs {
     /**
      * artifactId path parameter. Artifact ID
      */
-    artifactId?: pulumi.Input<string>;
+    artifactId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

@@ -252,91 +252,91 @@ export interface SwitchAccessPoliciesState {
     /**
      * accessPolicyNumber path parameter. Access policy number
      */
-    accessPolicyNumber?: pulumi.Input<string>;
+    accessPolicyNumber?: pulumi.Input<string | undefined>;
     /**
      * Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
      */
-    accessPolicyType?: pulumi.Input<string>;
+    accessPolicyType?: pulumi.Input<string | undefined>;
     /**
      * Counts associated with the access policy
      */
-    counts?: pulumi.Input<inputs.networks.SwitchAccessPoliciesCounts>;
+    counts?: pulumi.Input<inputs.networks.SwitchAccessPoliciesCounts | undefined>;
     /**
      * 802.1x Settings
      */
-    dot1x?: pulumi.Input<inputs.networks.SwitchAccessPoliciesDot1x>;
+    dot1x?: pulumi.Input<inputs.networks.SwitchAccessPoliciesDot1x | undefined>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    guestPortBouncing?: pulumi.Input<boolean>;
+    guestPortBouncing?: pulumi.Input<boolean | undefined>;
     /**
      * ID for the guest VLAN allow unauthorized devices access to limited network resources
      */
-    guestVlanId?: pulumi.Input<number>;
+    guestVlanId?: pulumi.Input<number | undefined>;
     /**
      * Choose the Host Mode for the access policy.
      */
-    hostMode?: pulumi.Input<string>;
+    hostMode?: pulumi.Input<string | undefined>;
     /**
      * Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
      */
-    increaseAccessSpeed?: pulumi.Input<boolean>;
+    increaseAccessSpeed?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the access policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Object for RADIUS Settings
      */
-    radius?: pulumi.Input<inputs.networks.SwitchAccessPoliciesRadius>;
+    radius?: pulumi.Input<inputs.networks.SwitchAccessPoliciesRadius | undefined>;
     /**
      * Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
      */
-    radiusAccountingEnabled?: pulumi.Input<boolean>;
+    radiusAccountingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServer>[]>;
+    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServer>[] | undefined>;
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse>[]>;
+    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse>[] | undefined>;
     /**
      * Change of authentication for RADIUS re-authentication and disconnection
      */
-    radiusCoaSupportEnabled?: pulumi.Input<boolean>;
+    radiusCoaSupportEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Acceptable values are *""* for None, or *"11"* for Group Policies ACL
      */
-    radiusGroupAttribute?: pulumi.Input<string>;
+    radiusGroupAttribute?: pulumi.Input<string | undefined>;
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServer>[] | undefined>;
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServersResponse>[]>;
+    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServersResponse>[] | undefined>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    radiusTestingEnabled?: pulumi.Input<boolean>;
+    radiusTestingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      */
-    urlRedirectWalledGardenEnabled?: pulumi.Input<boolean>;
+    urlRedirectWalledGardenEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
      */
-    urlRedirectWalledGardenRanges?: pulumi.Input<pulumi.Input<string>[]>;
+    urlRedirectWalledGardenRanges?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
      */
-    voiceVlanClients?: pulumi.Input<boolean>;
+    voiceVlanClients?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -346,35 +346,35 @@ export interface SwitchAccessPoliciesArgs {
     /**
      * accessPolicyNumber path parameter. Access policy number
      */
-    accessPolicyNumber?: pulumi.Input<string>;
+    accessPolicyNumber?: pulumi.Input<string | undefined>;
     /**
      * Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
      */
-    accessPolicyType?: pulumi.Input<string>;
+    accessPolicyType?: pulumi.Input<string | undefined>;
     /**
      * 802.1x Settings
      */
-    dot1x?: pulumi.Input<inputs.networks.SwitchAccessPoliciesDot1x>;
+    dot1x?: pulumi.Input<inputs.networks.SwitchAccessPoliciesDot1x | undefined>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    guestPortBouncing?: pulumi.Input<boolean>;
+    guestPortBouncing?: pulumi.Input<boolean | undefined>;
     /**
      * ID for the guest VLAN allow unauthorized devices access to limited network resources
      */
-    guestVlanId?: pulumi.Input<number>;
+    guestVlanId?: pulumi.Input<number | undefined>;
     /**
      * Choose the Host Mode for the access policy.
      */
-    hostMode?: pulumi.Input<string>;
+    hostMode?: pulumi.Input<string | undefined>;
     /**
      * Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
      */
-    increaseAccessSpeed?: pulumi.Input<boolean>;
+    increaseAccessSpeed?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the access policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -382,41 +382,41 @@ export interface SwitchAccessPoliciesArgs {
     /**
      * Object for RADIUS Settings
      */
-    radius?: pulumi.Input<inputs.networks.SwitchAccessPoliciesRadius>;
+    radius?: pulumi.Input<inputs.networks.SwitchAccessPoliciesRadius | undefined>;
     /**
      * Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
      */
-    radiusAccountingEnabled?: pulumi.Input<boolean>;
+    radiusAccountingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServer>[]>;
+    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServer>[] | undefined>;
     /**
      * Change of authentication for RADIUS re-authentication and disconnection
      */
-    radiusCoaSupportEnabled?: pulumi.Input<boolean>;
+    radiusCoaSupportEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Acceptable values are *""* for None, or *"11"* for Group Policies ACL
      */
-    radiusGroupAttribute?: pulumi.Input<string>;
+    radiusGroupAttribute?: pulumi.Input<string | undefined>;
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServer>[] | undefined>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    radiusTestingEnabled?: pulumi.Input<boolean>;
+    radiusTestingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      */
-    urlRedirectWalledGardenEnabled?: pulumi.Input<boolean>;
+    urlRedirectWalledGardenEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
      */
-    urlRedirectWalledGardenRanges?: pulumi.Input<pulumi.Input<string>[]>;
+    urlRedirectWalledGardenRanges?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
      */
-    voiceVlanClients?: pulumi.Input<boolean>;
+    voiceVlanClients?: pulumi.Input<boolean | undefined>;
 }

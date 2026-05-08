@@ -22,8 +22,8 @@ __all__ = ['LiveToolsThroughputTestArgs', 'LiveToolsThroughputTest']
 class LiveToolsThroughputTestArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 callback: Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']] = None,
-                 throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']] = None,
+                 throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a LiveToolsThroughputTest resource.
 
@@ -51,40 +51,40 @@ class LiveToolsThroughputTestArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter(name="throughputTestId")
-    def throughput_test_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def throughput_test_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of throughput test job
         """
         return pulumi.get(self, "throughput_test_id")
 
     @throughput_test_id.setter
-    def throughput_test_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def throughput_test_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "throughput_test_id", value)
 
 
 @pulumi.input_type
 class _LiveToolsThroughputTestState:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']] = None,
-                 error: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input['LiveToolsThroughputTestRequestArgs']] = None,
-                 result: Optional[pulumi.Input['LiveToolsThroughputTestResultArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']] = None,
+                 error: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional['LiveToolsThroughputTestRequestArgs']] = None,
+                 result: pulumi.Input[Optional['LiveToolsThroughputTestResultArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsThroughputTest resources.
 
@@ -116,98 +116,98 @@ class _LiveToolsThroughputTestState:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsThroughputTestCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsThroughputTestCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def error(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def error(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description of the error.
         """
         return pulumi.get(self, "error")
 
     @error.setter
-    def error(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def error(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "error", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input['LiveToolsThroughputTestRequestArgs']]:
+    def request(self) -> pulumi.Input[Optional['LiveToolsThroughputTestRequestArgs']]:
         """
         The parameters of the throughput test request
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input['LiveToolsThroughputTestRequestArgs']]):
+    def request(self, value: pulumi.Input[Optional['LiveToolsThroughputTestRequestArgs']]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter
-    def result(self) -> Optional[pulumi.Input['LiveToolsThroughputTestResultArgs']]:
+    def result(self) -> pulumi.Input[Optional['LiveToolsThroughputTestResultArgs']]:
         """
         Result of the throughput test request
         """
         return pulumi.get(self, "result")
 
     @result.setter
-    def result(self, value: Optional[pulumi.Input['LiveToolsThroughputTestResultArgs']]):
+    def result(self, value: pulumi.Input[Optional['LiveToolsThroughputTestResultArgs']]):
         pulumi.set(self, "result", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the throughput test request
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter(name="throughputTestId")
-    def throughput_test_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def throughput_test_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of throughput test job
         """
         return pulumi.get(self, "throughput_test_id")
 
     @throughput_test_id.setter
-    def throughput_test_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def throughput_test_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "throughput_test_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         GET this url to check the status of your throughput test request
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
@@ -217,9 +217,9 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -306,9 +306,9 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -338,14 +338,14 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            callback: Optional[pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
-            error: Optional[pulumi.Input[_builtins.str]] = None,
-            request: Optional[pulumi.Input[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict']]] = None,
-            result: Optional[pulumi.Input[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            status: Optional[pulumi.Input[_builtins.str]] = None,
-            throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None,
-            url: Optional[pulumi.Input[_builtins.str]] = None) -> 'LiveToolsThroughputTest':
+            callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict']]] = None,
+            result: pulumi.Input[Optional[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> 'LiveToolsThroughputTest':
         """
         Get an existing LiveToolsThroughputTest resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

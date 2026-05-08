@@ -110,12 +110,12 @@ export class MqttBrokers extends pulumi.CustomResource {
  * Input properties used for looking up and filtering MqttBrokers resources.
  */
 export interface MqttBrokersState {
-    item?: pulumi.Input<inputs.networks.MqttBrokersItem>;
+    item?: pulumi.Input<inputs.networks.MqttBrokersItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.MqttBrokersParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.MqttBrokersParameters | undefined>;
 }
 
 /**

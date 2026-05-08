@@ -22,12 +22,12 @@ __all__ = ['ApplianceTrafficShapingUplinkSelectionArgs', 'ApplianceTrafficShapin
 class ApplianceTrafficShapingUplinkSelectionArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 active_active_auto_vpn_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_uplink: Optional[pulumi.Input[_builtins.str]] = None,
-                 failover_and_failback: Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']] = None,
-                 load_balancing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vpn_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]] = None,
-                 wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
+                 active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+                 failover_and_failback: pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']] = None,
+                 load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]] = None,
+                 wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingUplinkSelection resource.
 
@@ -67,87 +67,87 @@ class ApplianceTrafficShapingUplinkSelectionArgs:
 
     @_builtins.property
     @pulumi.getter(name="activeActiveAutoVpnEnabled")
-    def active_active_auto_vpn_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def active_active_auto_vpn_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether active-active AutoVPN is enabled
         """
         return pulumi.get(self, "active_active_auto_vpn_enabled")
 
     @active_active_auto_vpn_enabled.setter
-    def active_active_auto_vpn_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def active_active_auto_vpn_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "active_active_auto_vpn_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultUplink")
-    def default_uplink(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_uplink(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The default uplink. Must be one of: 'wan1' or 'wan2'
         """
         return pulumi.get(self, "default_uplink")
 
     @default_uplink.setter
-    def default_uplink(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_uplink(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_uplink", value)
 
     @_builtins.property
     @pulumi.getter(name="failoverAndFailback")
-    def failover_and_failback(self) -> Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]:
+    def failover_and_failback(self) -> pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]:
         """
         WAN failover and failback
         """
         return pulumi.get(self, "failover_and_failback")
 
     @failover_and_failback.setter
-    def failover_and_failback(self, value: Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]):
+    def failover_and_failback(self, value: pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]):
         pulumi.set(self, "failover_and_failback", value)
 
     @_builtins.property
     @pulumi.getter(name="loadBalancingEnabled")
-    def load_balancing_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def load_balancing_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether load balancing is enabled
         """
         return pulumi.get(self, "load_balancing_enabled")
 
     @load_balancing_enabled.setter
-    def load_balancing_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def load_balancing_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "load_balancing_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnTrafficUplinkPreferences")
-    def vpn_traffic_uplink_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]:
+    def vpn_traffic_uplink_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]:
         """
         Uplink preference rules for VPN traffic
         """
         return pulumi.get(self, "vpn_traffic_uplink_preferences")
 
     @vpn_traffic_uplink_preferences.setter
-    def vpn_traffic_uplink_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]):
+    def vpn_traffic_uplink_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]):
         pulumi.set(self, "vpn_traffic_uplink_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="wanTrafficUplinkPreferences")
-    def wan_traffic_uplink_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]:
+    def wan_traffic_uplink_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]:
         """
         Uplink preference rules for WAN traffic
         """
         return pulumi.get(self, "wan_traffic_uplink_preferences")
 
     @wan_traffic_uplink_preferences.setter
-    def wan_traffic_uplink_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]):
+    def wan_traffic_uplink_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]):
         pulumi.set(self, "wan_traffic_uplink_preferences", value)
 
 
 @pulumi.input_type
 class _ApplianceTrafficShapingUplinkSelectionState:
     def __init__(__self__, *,
-                 active_active_auto_vpn_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_uplink: Optional[pulumi.Input[_builtins.str]] = None,
-                 failover_and_failback: Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']] = None,
-                 load_balancing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]] = None,
-                 wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
+                 active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+                 failover_and_failback: pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']] = None,
+                 load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]] = None,
+                 wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingUplinkSelection resources.
 
@@ -176,86 +176,86 @@ class _ApplianceTrafficShapingUplinkSelectionState:
 
     @_builtins.property
     @pulumi.getter(name="activeActiveAutoVpnEnabled")
-    def active_active_auto_vpn_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def active_active_auto_vpn_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether active-active AutoVPN is enabled
         """
         return pulumi.get(self, "active_active_auto_vpn_enabled")
 
     @active_active_auto_vpn_enabled.setter
-    def active_active_auto_vpn_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def active_active_auto_vpn_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "active_active_auto_vpn_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultUplink")
-    def default_uplink(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_uplink(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The default uplink. Must be one of: 'wan1' or 'wan2'
         """
         return pulumi.get(self, "default_uplink")
 
     @default_uplink.setter
-    def default_uplink(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_uplink(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_uplink", value)
 
     @_builtins.property
     @pulumi.getter(name="failoverAndFailback")
-    def failover_and_failback(self) -> Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]:
+    def failover_and_failback(self) -> pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]:
         """
         WAN failover and failback
         """
         return pulumi.get(self, "failover_and_failback")
 
     @failover_and_failback.setter
-    def failover_and_failback(self, value: Optional[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]):
+    def failover_and_failback(self, value: pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs']]):
         pulumi.set(self, "failover_and_failback", value)
 
     @_builtins.property
     @pulumi.getter(name="loadBalancingEnabled")
-    def load_balancing_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def load_balancing_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether load balancing is enabled
         """
         return pulumi.get(self, "load_balancing_enabled")
 
     @load_balancing_enabled.setter
-    def load_balancing_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def load_balancing_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "load_balancing_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnTrafficUplinkPreferences")
-    def vpn_traffic_uplink_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]:
+    def vpn_traffic_uplink_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]:
         """
         Uplink preference rules for VPN traffic
         """
         return pulumi.get(self, "vpn_traffic_uplink_preferences")
 
     @vpn_traffic_uplink_preferences.setter
-    def vpn_traffic_uplink_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]):
+    def vpn_traffic_uplink_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs']]]]):
         pulumi.set(self, "vpn_traffic_uplink_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="wanTrafficUplinkPreferences")
-    def wan_traffic_uplink_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]:
+    def wan_traffic_uplink_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]:
         """
         Uplink preference rules for WAN traffic
         """
         return pulumi.get(self, "wan_traffic_uplink_preferences")
 
     @wan_traffic_uplink_preferences.setter
-    def wan_traffic_uplink_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]):
+    def wan_traffic_uplink_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]]):
         pulumi.set(self, "wan_traffic_uplink_preferences", value)
 
 
@@ -265,13 +265,13 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_active_auto_vpn_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_uplink: Optional[pulumi.Input[_builtins.str]] = None,
-                 failover_and_failback: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
-                 load_balancing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
-                 wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None,
+                 active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+                 failover_and_failback: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
+                 load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
+                 wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -458,13 +458,13 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_active_auto_vpn_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_uplink: Optional[pulumi.Input[_builtins.str]] = None,
-                 failover_and_failback: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
-                 load_balancing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
-                 wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None,
+                 active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+                 failover_and_failback: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
+                 load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
+                 wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -493,13 +493,13 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            active_active_auto_vpn_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_uplink: Optional[pulumi.Input[_builtins.str]] = None,
-            failover_and_failback: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
-            load_balancing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vpn_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
-            wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None) -> 'ApplianceTrafficShapingUplinkSelection':
+            active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+            failover_and_failback: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict']]] = None,
+            load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict']]]]] = None,
+            wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict']]]]] = None) -> 'ApplianceTrafficShapingUplinkSelection':
         """
         Get an existing ApplianceTrafficShapingUplinkSelection resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

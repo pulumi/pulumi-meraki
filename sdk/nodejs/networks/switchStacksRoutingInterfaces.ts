@@ -184,55 +184,55 @@ export interface SwitchStacksRoutingInterfacesState {
     /**
      * IPv4 default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * IPv4 default gateway
      */
-    defaultGatewayResponse?: pulumi.Input<string>;
+    defaultGatewayResponse?: pulumi.Input<string | undefined>;
     /**
      * The id
      */
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * IPv4 address
      */
-    interfaceIp?: pulumi.Input<string>;
+    interfaceIp?: pulumi.Input<string | undefined>;
     /**
      * IPv6 addressing
      */
-    ipv6?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesIpv6 | undefined>;
     /**
      * Multicast routing status
      */
-    multicastRouting?: pulumi.Input<string>;
+    multicastRouting?: pulumi.Input<string | undefined>;
     /**
      * The name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * IPv4 OSPF Settings
      */
-    ospfSettings?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfSettings>;
+    ospfSettings?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfSettings | undefined>;
     /**
      * IPv6 OSPF Settings
      */
-    ospfV3?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfV3>;
+    ospfV3?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfV3 | undefined>;
     /**
      * IPv4 subnet
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
     /**
      * VLAN id
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -242,27 +242,27 @@ export interface SwitchStacksRoutingInterfacesArgs {
     /**
      * IPv4 default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * The id
      */
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * IPv4 address
      */
-    interfaceIp?: pulumi.Input<string>;
+    interfaceIp?: pulumi.Input<string | undefined>;
     /**
      * IPv6 addressing
      */
-    ipv6?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesIpv6 | undefined>;
     /**
      * Multicast routing status
      */
-    multicastRouting?: pulumi.Input<string>;
+    multicastRouting?: pulumi.Input<string | undefined>;
     /**
      * The name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -270,11 +270,11 @@ export interface SwitchStacksRoutingInterfacesArgs {
     /**
      * IPv4 OSPF Settings
      */
-    ospfSettings?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfSettings>;
+    ospfSettings?: pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesOspfSettings | undefined>;
     /**
      * IPv4 subnet
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
@@ -282,5 +282,5 @@ export interface SwitchStacksRoutingInterfacesArgs {
     /**
      * VLAN id
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }

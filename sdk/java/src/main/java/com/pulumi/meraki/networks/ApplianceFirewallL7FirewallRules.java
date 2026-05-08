@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRules;
  * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -71,8 +71,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleValueObjArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -113,8 +113,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRules;
  * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -131,7 +131,7 @@ import javax.annotation.Nullable;
  *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
  *                 .policy("deny")
  *                 .type("blockedCountries")
- *                 .valueList(List.of(                
+ *                 .valueList(Arrays.asList(                
  *                     "IT",
  *                     "IL",
  *                     "US"))

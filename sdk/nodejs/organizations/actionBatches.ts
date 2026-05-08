@@ -143,31 +143,31 @@ export interface ActionBatchesState {
     /**
      * actionBatchId path parameter. Action batch ID
      */
-    actionBatchId?: pulumi.Input<string>;
+    actionBatchId?: pulumi.Input<string | undefined>;
     /**
      * A set of changes made as part of this action (\n\nmore details\n\n)
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.organizations.ActionBatchesAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.organizations.ActionBatchesAction>[] | undefined>;
     /**
      * Information for callback used to send back results
      */
-    callback?: pulumi.Input<inputs.organizations.ActionBatchesCallback>;
+    callback?: pulumi.Input<inputs.organizations.ActionBatchesCallback | undefined>;
     /**
      * Flag describing whether the action should be previewed before executing or not
      */
-    confirmed?: pulumi.Input<boolean>;
+    confirmed?: pulumi.Input<boolean | undefined>;
     /**
      * ID of the organization this action batch belongs to
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Status of action batch
      */
-    status?: pulumi.Input<inputs.organizations.ActionBatchesStatus>;
+    status?: pulumi.Input<inputs.organizations.ActionBatchesStatus | undefined>;
     /**
      * Flag describing whether actions should run synchronously or asynchronously
      */
-    synchronous?: pulumi.Input<boolean>;
+    synchronous?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -177,19 +177,19 @@ export interface ActionBatchesArgs {
     /**
      * actionBatchId path parameter. Action batch ID
      */
-    actionBatchId?: pulumi.Input<string>;
+    actionBatchId?: pulumi.Input<string | undefined>;
     /**
      * A set of changes made as part of this action (\n\nmore details\n\n)
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.organizations.ActionBatchesAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.organizations.ActionBatchesAction>[] | undefined>;
     /**
      * Information for callback used to send back results
      */
-    callback?: pulumi.Input<inputs.organizations.ActionBatchesCallback>;
+    callback?: pulumi.Input<inputs.organizations.ActionBatchesCallback | undefined>;
     /**
      * Flag describing whether the action should be previewed before executing or not
      */
-    confirmed?: pulumi.Input<boolean>;
+    confirmed?: pulumi.Input<boolean | undefined>;
     /**
      * ID of the organization this action batch belongs to
      */
@@ -197,5 +197,5 @@ export interface ActionBatchesArgs {
     /**
      * Flag describing whether actions should run synchronously or asynchronously
      */
-    synchronous?: pulumi.Input<boolean>;
+    synchronous?: pulumi.Input<boolean | undefined>;
 }

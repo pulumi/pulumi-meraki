@@ -22,7 +22,7 @@ __all__ = ['ApplianceUplinksSettingsArgs', 'ApplianceUplinksSettings']
 class ApplianceUplinksSettingsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 interfaces: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']] = None):
+                 interfaces: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']] = None):
         """
         The set of arguments for constructing a ApplianceUplinksSettings resource.
 
@@ -47,22 +47,22 @@ class ApplianceUplinksSettingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']]:
+    def interfaces(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']]:
         """
         Interface settings.
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']]):
+    def interfaces(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']]):
         pulumi.set(self, "interfaces", value)
 
 
 @pulumi.input_type
 class _ApplianceUplinksSettingsState:
     def __init__(__self__, *,
-                 interfaces: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 interfaces: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceUplinksSettings resources.
 
@@ -76,26 +76,26 @@ class _ApplianceUplinksSettingsState:
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']]:
+    def interfaces(self) -> pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']]:
         """
         Interface settings.
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']]):
+    def interfaces(self, value: pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesArgs']]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -320,8 +320,8 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -345,8 +345,8 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceUplinksSettings':
+            interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceUplinksSettings':
         """
         Get an existing ApplianceUplinksSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

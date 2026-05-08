@@ -105,12 +105,12 @@ export class ApplianceTrafficShapingVpnExclusions extends pulumi.CustomResource 
  * Input properties used for looking up and filtering ApplianceTrafficShapingVpnExclusions resources.
  */
 export interface ApplianceTrafficShapingVpnExclusionsState {
-    item?: pulumi.Input<inputs.networks.ApplianceTrafficShapingVpnExclusionsItem>;
+    item?: pulumi.Input<inputs.networks.ApplianceTrafficShapingVpnExclusionsItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.ApplianceTrafficShapingVpnExclusionsParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.ApplianceTrafficShapingVpnExclusionsParameters | undefined>;
 }
 
 /**

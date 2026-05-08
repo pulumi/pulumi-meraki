@@ -22,8 +22,8 @@ __all__ = ['TrafficAnalysisArgs', 'TrafficAnalysis']
 class TrafficAnalysisArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 custom_pie_chart_items: Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None):
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TrafficAnalysis resource.
 
@@ -52,19 +52,19 @@ class TrafficAnalysisArgs:
 
     @_builtins.property
     @pulumi.getter(name="customPieChartItems")
-    def custom_pie_chart_items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]:
+    def custom_pie_chart_items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]:
         """
         The list of items that make up the custom pie chart for traffic reporting.
         """
         return pulumi.get(self, "custom_pie_chart_items")
 
     @custom_pie_chart_items.setter
-    def custom_pie_chart_items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]):
+    def custom_pie_chart_items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]):
         pulumi.set(self, "custom_pie_chart_items", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
         'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
@@ -72,16 +72,16 @@ class TrafficAnalysisArgs:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
 
 @pulumi.input_type
 class _TrafficAnalysisState:
     def __init__(__self__, *,
-                 custom_pie_chart_items: Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering TrafficAnalysis resources.
 
@@ -99,19 +99,19 @@ class _TrafficAnalysisState:
 
     @_builtins.property
     @pulumi.getter(name="customPieChartItems")
-    def custom_pie_chart_items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]:
+    def custom_pie_chart_items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]:
         """
         The list of items that make up the custom pie chart for traffic reporting.
         """
         return pulumi.get(self, "custom_pie_chart_items")
 
     @custom_pie_chart_items.setter
-    def custom_pie_chart_items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]):
+    def custom_pie_chart_items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]]]):
         pulumi.set(self, "custom_pie_chart_items", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
         'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
@@ -119,19 +119,19 @@ class _TrafficAnalysisState:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -141,9 +141,9 @@ class TrafficAnalysis(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_pie_chart_items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -223,9 +223,9 @@ class TrafficAnalysis(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_pie_chart_items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -250,9 +250,9 @@ class TrafficAnalysis(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            custom_pie_chart_items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'TrafficAnalysis':
+            custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'TrafficAnalysis':
         """
         Get an existing TrafficAnalysis resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

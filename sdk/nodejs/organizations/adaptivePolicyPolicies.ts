@@ -145,30 +145,30 @@ export interface AdaptivePolicyPoliciesState {
     /**
      * An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
      */
-    acls?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesAcl>[]>;
-    adaptivePolicyId?: pulumi.Input<string>;
-    createdAt?: pulumi.Input<string>;
+    acls?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesAcl>[] | undefined>;
+    adaptivePolicyId?: pulumi.Input<string | undefined>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * The destination adaptive policy group (requires one unique attribute)
      */
-    destinationGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesDestinationGroup>;
+    destinationGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesDestinationGroup | undefined>;
     /**
      * The rule to apply if there is no matching ACL (default: "default")
      */
-    lastEntryRule?: pulumi.Input<string>;
+    lastEntryRule?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * id path parameter.
      */
-    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string>;
+    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string | undefined>;
     /**
      * The source adaptive policy group (requires one unique attribute)
      */
-    sourceGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
-    updatedAt?: pulumi.Input<string>;
+    sourceGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesSourceGroup | undefined>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -178,15 +178,15 @@ export interface AdaptivePolicyPoliciesArgs {
     /**
      * An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
      */
-    acls?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesAcl>[]>;
+    acls?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesAcl>[] | undefined>;
     /**
      * The destination adaptive policy group (requires one unique attribute)
      */
-    destinationGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesDestinationGroup>;
+    destinationGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesDestinationGroup | undefined>;
     /**
      * The rule to apply if there is no matching ACL (default: "default")
      */
-    lastEntryRule?: pulumi.Input<string>;
+    lastEntryRule?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -194,9 +194,9 @@ export interface AdaptivePolicyPoliciesArgs {
     /**
      * id path parameter.
      */
-    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string>;
+    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string | undefined>;
     /**
      * The source adaptive policy group (requires one unique attribute)
      */
-    sourceGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
+    sourceGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesSourceGroup | undefined>;
 }

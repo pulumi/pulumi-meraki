@@ -100,8 +100,8 @@ export interface ApplianceTrafficShapingCustomPerformanceClassesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.ApplianceTrafficShapingCustomPerformanceClassesParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.ApplianceTrafficShapingCustomPerformanceClassesParameters | undefined>;
 }
 
 /**

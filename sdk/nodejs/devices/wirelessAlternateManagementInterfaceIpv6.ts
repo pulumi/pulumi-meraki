@@ -109,12 +109,12 @@ export class WirelessAlternateManagementInterfaceIpv6 extends pulumi.CustomResou
  * Input properties used for looking up and filtering WirelessAlternateManagementInterfaceIpv6 resources.
  */
 export interface WirelessAlternateManagementInterfaceIpv6State {
-    item?: pulumi.Input<inputs.devices.WirelessAlternateManagementInterfaceIpv6Item>;
-    parameters?: pulumi.Input<inputs.devices.WirelessAlternateManagementInterfaceIpv6Parameters>;
+    item?: pulumi.Input<inputs.devices.WirelessAlternateManagementInterfaceIpv6Item | undefined>;
+    parameters?: pulumi.Input<inputs.devices.WirelessAlternateManagementInterfaceIpv6Parameters | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

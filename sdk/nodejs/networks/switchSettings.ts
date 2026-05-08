@@ -133,27 +133,27 @@ export interface SwitchSettingsState {
     /**
      * MAC blocklist
      */
-    macBlocklist?: pulumi.Input<inputs.networks.SwitchSettingsMacBlocklist>;
+    macBlocklist?: pulumi.Input<inputs.networks.SwitchSettingsMacBlocklist | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Exceptions on a per switch basis to "useCombinedPower"
      */
-    powerExceptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchSettingsPowerException>[]>;
+    powerExceptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchSettingsPowerException>[] | undefined>;
     /**
      * Uplink client sampling
      */
-    uplinkClientSampling?: pulumi.Input<inputs.networks.SwitchSettingsUplinkClientSampling>;
+    uplinkClientSampling?: pulumi.Input<inputs.networks.SwitchSettingsUplinkClientSampling | undefined>;
     /**
      * The use Combined Power as the default behavior of secondary power supplies on supported devices.
      */
-    useCombinedPower?: pulumi.Input<boolean>;
+    useCombinedPower?: pulumi.Input<boolean | undefined>;
     /**
      * Management VLAN
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -163,7 +163,7 @@ export interface SwitchSettingsArgs {
     /**
      * MAC blocklist
      */
-    macBlocklist?: pulumi.Input<inputs.networks.SwitchSettingsMacBlocklist>;
+    macBlocklist?: pulumi.Input<inputs.networks.SwitchSettingsMacBlocklist | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -171,17 +171,17 @@ export interface SwitchSettingsArgs {
     /**
      * Exceptions on a per switch basis to "useCombinedPower"
      */
-    powerExceptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchSettingsPowerException>[]>;
+    powerExceptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchSettingsPowerException>[] | undefined>;
     /**
      * Uplink client sampling
      */
-    uplinkClientSampling?: pulumi.Input<inputs.networks.SwitchSettingsUplinkClientSampling>;
+    uplinkClientSampling?: pulumi.Input<inputs.networks.SwitchSettingsUplinkClientSampling | undefined>;
     /**
      * The use Combined Power as the default behavior of secondary power supplies on supported devices.
      */
-    useCombinedPower?: pulumi.Input<boolean>;
+    useCombinedPower?: pulumi.Input<boolean | undefined>;
     /**
      * Management VLAN
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }

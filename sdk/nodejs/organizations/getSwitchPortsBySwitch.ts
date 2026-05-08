@@ -212,27 +212,27 @@ export interface GetSwitchPortsBySwitchOutputArgs {
     /**
      * configurationUpdatedAfter query parameter. Optional parameter to filter results by switches where the configuration has been updated after the given timestamp.
      */
-    configurationUpdatedAfter?: pulumi.Input<string>;
+    configurationUpdatedAfter?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * mac query parameter. Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match.
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * macs query parameter. Optional parameter to filter switchports by one or more MAC addresses belonging to devices. All switchports returned belong to MAC addresses of switches that are an exact match.
      */
-    macs?: pulumi.Input<pulumi.Input<string>[]>;
+    macs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * name query parameter. Optional parameter to filter switchports belonging to switches by name. All returned switches will have a name that contains the search term or is an exact match.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkIds query parameter. Optional parameter to filter switchports by network.
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -240,21 +240,21 @@ export interface GetSwitchPortsBySwitchOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 50. Default is 50.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * portProfileIds query parameter. Optional parameter to filter switchports belonging to the specified port profiles.
      */
-    portProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    portProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * serial query parameter. Optional parameter to filter switchports belonging to switches by serial number. All returned switches will have a serial number that contains the search term or is an exact match.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * serials query parameter. Optional parameter to filter switchports belonging to switches with one or more serial numbers. All switchports returned belong to serial numbers of switches that are an exact match.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
 }

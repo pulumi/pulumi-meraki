@@ -160,46 +160,46 @@ export interface PolicyObjectsState {
     /**
      * Category of a policy object (one of: adaptivePolicy, network)
      */
-    category?: pulumi.Input<string>;
+    category?: pulumi.Input<string | undefined>;
     /**
      * CIDR Value of a policy object (e.g. 10.11.12.1/24")
      */
-    cidr?: pulumi.Input<string>;
-    createdAt?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Fully qualified domain name of policy object (e.g. "example.com")
      */
-    fqdn?: pulumi.Input<string>;
+    fqdn?: pulumi.Input<string | undefined>;
     /**
      * The IDs of policy object groups the policy object belongs to
      */
-    groupIds?: pulumi.Input<pulumi.Input<string>[]>;
+    groupIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * IP Address of a policy object (e.g. "1.2.3.4")
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * Mask of a policy object (e.g. "255.255.0.0")
      */
-    mask?: pulumi.Input<string>;
+    mask?: pulumi.Input<string | undefined>;
     /**
      * Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    name?: pulumi.Input<string>;
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    name?: pulumi.Input<string | undefined>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * policyObjectId path parameter. Policy object ID
      */
-    policyObjectId?: pulumi.Input<string>;
+    policyObjectId?: pulumi.Input<string | undefined>;
     /**
      * Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask)
      */
-    type?: pulumi.Input<string>;
-    updatedAt?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -209,31 +209,31 @@ export interface PolicyObjectsArgs {
     /**
      * Category of a policy object (one of: adaptivePolicy, network)
      */
-    category?: pulumi.Input<string>;
+    category?: pulumi.Input<string | undefined>;
     /**
      * CIDR Value of a policy object (e.g. 10.11.12.1/24")
      */
-    cidr?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
     /**
      * Fully qualified domain name of policy object (e.g. "example.com")
      */
-    fqdn?: pulumi.Input<string>;
+    fqdn?: pulumi.Input<string | undefined>;
     /**
      * The IDs of policy object groups the policy object belongs to
      */
-    groupIds?: pulumi.Input<pulumi.Input<string>[]>;
+    groupIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * IP Address of a policy object (e.g. "1.2.3.4")
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * Mask of a policy object (e.g. "255.255.0.0")
      */
-    mask?: pulumi.Input<string>;
+    mask?: pulumi.Input<string | undefined>;
     /**
      * Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -241,9 +241,9 @@ export interface PolicyObjectsArgs {
     /**
      * policyObjectId path parameter. Policy object ID
      */
-    policyObjectId?: pulumi.Input<string>;
+    policyObjectId?: pulumi.Input<string | undefined>;
     /**
      * Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask)
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }

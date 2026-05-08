@@ -83,13 +83,13 @@ export interface GetSwitchStacksRoutingStaticRoutesOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * staticRouteId path parameter. Static route ID
      */
-    staticRouteId?: pulumi.Input<string>;
+    staticRouteId?: pulumi.Input<string | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }

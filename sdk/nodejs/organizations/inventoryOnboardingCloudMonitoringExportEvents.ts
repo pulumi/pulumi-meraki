@@ -100,8 +100,8 @@ export interface InventoryOnboardingCloudMonitoringExportEventsState {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringExportEventsParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.InventoryOnboardingCloudMonitoringExportEventsParameters | undefined>;
 }
 
 /**

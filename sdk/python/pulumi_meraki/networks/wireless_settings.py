@@ -22,12 +22,12 @@ __all__ = ['WirelessSettingsArgs', 'WirelessSettings']
 class WirelessSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 ipv6_bridge_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 led_lights_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 location_analytics_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meshing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 named_vlans: Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']] = None,
-                 upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None):
+                 ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 named_vlans: pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']] = None,
+                 upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSettings resource.
 
@@ -67,88 +67,88 @@ class WirelessSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="ipv6BridgeEnabled")
-    def ipv6_bridge_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_bridge_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
         """
         return pulumi.get(self, "ipv6_bridge_enabled")
 
     @ipv6_bridge_enabled.setter
-    def ipv6_bridge_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_bridge_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_bridge_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="ledLightsOn")
-    def led_lights_on(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def led_lights_on(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
         """
         return pulumi.get(self, "led_lights_on")
 
     @led_lights_on.setter
-    def led_lights_on(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def led_lights_on(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "led_lights_on", value)
 
     @_builtins.property
     @pulumi.getter(name="locationAnalyticsEnabled")
-    def location_analytics_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def location_analytics_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling location analytics for your network
         """
         return pulumi.get(self, "location_analytics_enabled")
 
     @location_analytics_enabled.setter
-    def location_analytics_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def location_analytics_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "location_analytics_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="meshingEnabled")
-    def meshing_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def meshing_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling meshing in a network
         """
         return pulumi.get(self, "meshing_enabled")
 
     @meshing_enabled.setter
-    def meshing_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def meshing_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "meshing_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="namedVlans")
-    def named_vlans(self) -> Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']]:
+    def named_vlans(self) -> pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']]:
         """
         Named VLAN settings for wireless networks.
         """
         return pulumi.get(self, "named_vlans")
 
     @named_vlans.setter
-    def named_vlans(self, value: Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']]):
+    def named_vlans(self, value: pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']]):
         pulumi.set(self, "named_vlans", value)
 
     @_builtins.property
     @pulumi.getter
-    def upgradestrategy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def upgradestrategy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
         """
         return pulumi.get(self, "upgradestrategy")
 
     @upgradestrategy.setter
-    def upgradestrategy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def upgradestrategy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "upgradestrategy", value)
 
 
 @pulumi.input_type
 class _WirelessSettingsState:
     def __init__(__self__, *,
-                 ipv6_bridge_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 led_lights_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 location_analytics_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meshing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 named_vlans: Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 regulatory_domain: Optional[pulumi.Input['WirelessSettingsRegulatoryDomainArgs']] = None,
-                 upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None):
+                 ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 named_vlans: pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 regulatory_domain: pulumi.Input[Optional['WirelessSettingsRegulatoryDomainArgs']] = None,
+                 upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSettings resources.
 
@@ -180,98 +180,98 @@ class _WirelessSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="ipv6BridgeEnabled")
-    def ipv6_bridge_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_bridge_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
         """
         return pulumi.get(self, "ipv6_bridge_enabled")
 
     @ipv6_bridge_enabled.setter
-    def ipv6_bridge_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_bridge_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_bridge_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="ledLightsOn")
-    def led_lights_on(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def led_lights_on(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
         """
         return pulumi.get(self, "led_lights_on")
 
     @led_lights_on.setter
-    def led_lights_on(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def led_lights_on(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "led_lights_on", value)
 
     @_builtins.property
     @pulumi.getter(name="locationAnalyticsEnabled")
-    def location_analytics_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def location_analytics_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling location analytics for your network
         """
         return pulumi.get(self, "location_analytics_enabled")
 
     @location_analytics_enabled.setter
-    def location_analytics_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def location_analytics_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "location_analytics_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="meshingEnabled")
-    def meshing_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def meshing_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Toggle for enabling or disabling meshing in a network
         """
         return pulumi.get(self, "meshing_enabled")
 
     @meshing_enabled.setter
-    def meshing_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def meshing_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "meshing_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="namedVlans")
-    def named_vlans(self) -> Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']]:
+    def named_vlans(self) -> pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']]:
         """
         Named VLAN settings for wireless networks.
         """
         return pulumi.get(self, "named_vlans")
 
     @named_vlans.setter
-    def named_vlans(self, value: Optional[pulumi.Input['WirelessSettingsNamedVlansArgs']]):
+    def named_vlans(self, value: pulumi.Input[Optional['WirelessSettingsNamedVlansArgs']]):
         pulumi.set(self, "named_vlans", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="regulatoryDomain")
-    def regulatory_domain(self) -> Optional[pulumi.Input['WirelessSettingsRegulatoryDomainArgs']]:
+    def regulatory_domain(self) -> pulumi.Input[Optional['WirelessSettingsRegulatoryDomainArgs']]:
         """
         Regulatory domain information for this network.
         """
         return pulumi.get(self, "regulatory_domain")
 
     @regulatory_domain.setter
-    def regulatory_domain(self, value: Optional[pulumi.Input['WirelessSettingsRegulatoryDomainArgs']]):
+    def regulatory_domain(self, value: pulumi.Input[Optional['WirelessSettingsRegulatoryDomainArgs']]):
         pulumi.set(self, "regulatory_domain", value)
 
     @_builtins.property
     @pulumi.getter
-    def upgradestrategy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def upgradestrategy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
         """
         return pulumi.get(self, "upgradestrategy")
 
     @upgradestrategy.setter
-    def upgradestrategy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def upgradestrategy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "upgradestrategy", value)
 
 
@@ -281,13 +281,13 @@ class WirelessSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv6_bridge_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 led_lights_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 location_analytics_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meshing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 named_vlans: Optional[pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None,
+                 ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -380,13 +380,13 @@ class WirelessSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv6_bridge_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 led_lights_on: Optional[pulumi.Input[_builtins.bool]] = None,
-                 location_analytics_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 meshing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 named_vlans: Optional[pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None,
+                 ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+                 location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -416,14 +416,14 @@ class WirelessSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ipv6_bridge_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            led_lights_on: Optional[pulumi.Input[_builtins.bool]] = None,
-            location_analytics_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            meshing_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            named_vlans: Optional[pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            regulatory_domain: Optional[pulumi.Input[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict']]] = None,
-            upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessSettings':
+            ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+            location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            regulatory_domain: pulumi.Input[Optional[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict']]] = None,
+            upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSettings':
         """
         Get an existing WirelessSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

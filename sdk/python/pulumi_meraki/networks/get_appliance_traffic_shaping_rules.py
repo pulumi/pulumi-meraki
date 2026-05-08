@@ -96,7 +96,7 @@ def get_appliance_traffic_shaping_rules(network_id: Optional[_builtins.str] = No
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_appliance_traffic_shaping_rules_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_traffic_shaping_rules_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceTrafficShapingRulesResult]:
     """
     ## Example Usage

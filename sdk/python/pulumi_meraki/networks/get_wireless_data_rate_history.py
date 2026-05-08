@@ -223,7 +223,7 @@ def get_wireless_data_rate_history(ap_tag: Optional[_builtins.str] = None,
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessDataRateHistoryExample", example.items)
     ```
 
@@ -269,17 +269,17 @@ def get_wireless_data_rate_history(ap_tag: Optional[_builtins.str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-def get_wireless_data_rate_history_output(ap_tag: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          auto_resolution: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
-                                          band: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          client_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          device_serial: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                          resolution: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                          ssid: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                          t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
+def get_wireless_data_rate_history_output(ap_tag: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          auto_resolution: pulumi.Input[Optional[Optional[_builtins.bool]]] = None,
+                                          band: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          client_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          device_serial: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                          resolution: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                          ssid: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                          t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessDataRateHistoryResult]:
     """
     ## Example Usage
@@ -298,7 +298,7 @@ def get_wireless_data_rate_history_output(ap_tag: Optional[pulumi.Input[Optional
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessDataRateHistoryExample", example.items)
     ```
 

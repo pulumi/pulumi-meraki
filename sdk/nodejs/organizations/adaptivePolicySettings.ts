@@ -101,11 +101,11 @@ export interface AdaptivePolicySettingsState {
     /**
      * List of network IDs with adaptive policy enabled
      */
-    enabledNetworks?: pulumi.Input<pulumi.Input<string>[]>;
+    enabledNetworks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -115,7 +115,7 @@ export interface AdaptivePolicySettingsArgs {
     /**
      * List of network IDs with adaptive policy enabled
      */
-    enabledNetworks?: pulumi.Input<pulumi.Input<string>[]>;
+    enabledNetworks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

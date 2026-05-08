@@ -125,26 +125,26 @@ export interface PolicyObjectsGroupsState {
     /**
      * Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
      */
-    category?: pulumi.Input<string>;
-    createdAt?: pulumi.Input<string>;
+    category?: pulumi.Input<string | undefined>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    name?: pulumi.Input<string>;
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    name?: pulumi.Input<string | undefined>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * A list of Policy Object ID's that this NetworkObjectGroup should be associated to (note: these ID's will replace the existing associated Policy Objects)
      */
-    objectIds?: pulumi.Input<pulumi.Input<string>[]>;
+    objectIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * policyObjectGroupId path parameter. Policy object group ID
      */
-    policyObjectGroupId?: pulumi.Input<string>;
-    updatedAt?: pulumi.Input<string>;
+    policyObjectGroupId?: pulumi.Input<string | undefined>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -154,15 +154,15 @@ export interface PolicyObjectsGroupsArgs {
     /**
      * Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
      */
-    category?: pulumi.Input<string>;
+    category?: pulumi.Input<string | undefined>;
     /**
      * A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * A list of Policy Object ID's that this NetworkObjectGroup should be associated to (note: these ID's will replace the existing associated Policy Objects)
      */
-    objectIds?: pulumi.Input<pulumi.Input<string>[]>;
+    objectIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -170,5 +170,5 @@ export interface PolicyObjectsGroupsArgs {
     /**
      * policyObjectGroupId path parameter. Policy object group ID
      */
-    policyObjectGroupId?: pulumi.Input<string>;
+    policyObjectGroupId?: pulumi.Input<string | undefined>;
 }

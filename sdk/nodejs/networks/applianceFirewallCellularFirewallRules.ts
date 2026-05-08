@@ -107,11 +107,11 @@ export interface ApplianceFirewallCellularFirewallRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallCellularFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallCellularFirewallRulesRule>[] | undefined>;
 }
 
 /**
@@ -125,5 +125,5 @@ export interface ApplianceFirewallCellularFirewallRulesArgs {
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallCellularFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallCellularFirewallRulesRule>[] | undefined>;
 }

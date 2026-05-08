@@ -113,8 +113,8 @@ def get_switch_routing_interfaces_dhcp(interface_id: Optional[_builtins.str] = N
         interface_id=pulumi.get(__ret__, 'interface_id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_switch_routing_interfaces_dhcp_output(interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                              serial: Optional[pulumi.Input[_builtins.str]] = None,
+def get_switch_routing_interfaces_dhcp_output(interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                              serial: pulumi.Input[Optional[_builtins.str]] = None,
                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingInterfacesDhcpResult]:
     """
     ## Example Usage

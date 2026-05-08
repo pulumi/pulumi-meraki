@@ -142,35 +142,35 @@ export interface AdaptivePolicyAclsState {
     /**
      * ID of the adaptive policy ACL
      */
-    aclId?: pulumi.Input<string>;
+    aclId?: pulumi.Input<string | undefined>;
     /**
      * When the adaptive policy ACL was created
      */
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Description of the adaptive policy ACL
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IP version of adpative policy ACL
      */
-    ipVersion?: pulumi.Input<string>;
+    ipVersion?: pulumi.Input<string | undefined>;
     /**
      * Name of the adaptive policy ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the adaptive policy ACL rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyAclsRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyAclsRule>[] | undefined>;
     /**
      * When the adaptive policy ACL was last updated
      */
-    updatedAt?: pulumi.Input<string>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -180,19 +180,19 @@ export interface AdaptivePolicyAclsArgs {
     /**
      * ID of the adaptive policy ACL
      */
-    aclId?: pulumi.Input<string>;
+    aclId?: pulumi.Input<string | undefined>;
     /**
      * Description of the adaptive policy ACL
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IP version of adpative policy ACL
      */
-    ipVersion?: pulumi.Input<string>;
+    ipVersion?: pulumi.Input<string | undefined>;
     /**
      * Name of the adaptive policy ACL
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -200,5 +200,5 @@ export interface AdaptivePolicyAclsArgs {
     /**
      * An ordered array of the adaptive policy ACL rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyAclsRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.organizations.AdaptivePolicyAclsRule>[] | undefined>;
 }

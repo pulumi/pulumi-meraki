@@ -22,11 +22,11 @@ __all__ = ['WebhooksHttpServersArgs', 'WebhooksHttpServers']
 class WebhooksHttpServersArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 http_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template: Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template: pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WebhooksHttpServers resource.
 
@@ -63,74 +63,74 @@ class WebhooksHttpServersArgs:
 
     @_builtins.property
     @pulumi.getter(name="httpServerId")
-    def http_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         httpServerId path parameter. Http server ID
         """
         return pulumi.get(self, "http_server_id")
 
     @http_server_id.setter
-    def http_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A name for easy reference to the HTTP server
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']]:
         """
         The payload template to use when posting data to the HTTP server.
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The URL of the HTTP server.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
 @pulumi.input_type
 class _WebhooksHttpServersState:
     def __init__(__self__, *,
-                 http_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template: Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 http_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template: pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WebhooksHttpServers resources.
 
@@ -156,74 +156,74 @@ class _WebhooksHttpServersState:
 
     @_builtins.property
     @pulumi.getter(name="httpServerId")
-    def http_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         httpServerId path parameter. Http server ID
         """
         return pulumi.get(self, "http_server_id")
 
     @http_server_id.setter
-    def http_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A name for easy reference to the HTTP server
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A Meraki network ID.
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="payloadTemplate")
-    def payload_template(self) -> Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']]:
+    def payload_template(self) -> pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']]:
         """
         The payload template to use when posting data to the HTTP server.
         """
         return pulumi.get(self, "payload_template")
 
     @payload_template.setter
-    def payload_template(self, value: Optional[pulumi.Input['WebhooksHttpServersPayloadTemplateArgs']]):
+    def payload_template(self, value: pulumi.Input[Optional['WebhooksHttpServersPayloadTemplateArgs']]):
         pulumi.set(self, "payload_template", value)
 
     @_builtins.property
     @pulumi.getter(name="sharedSecret")
-    def shared_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
         """
         return pulumi.get(self, "shared_secret")
 
     @shared_secret.setter
-    def shared_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shared_secret", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The URL of the HTTP server.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
@@ -233,12 +233,12 @@ class WebhooksHttpServers(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 http_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
+                 http_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template: pulumi.Input[Optional[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -322,12 +322,12 @@ class WebhooksHttpServers(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 http_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
-                 shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
+                 http_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 payload_template: pulumi.Input[Optional[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
+                 shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -355,12 +355,12 @@ class WebhooksHttpServers(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            http_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
-            shared_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            url: Optional[pulumi.Input[_builtins.str]] = None) -> 'WebhooksHttpServers':
+            http_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            payload_template: pulumi.Input[Optional[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
+            shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> 'WebhooksHttpServers':
         """
         Get an existing WebhooksHttpServers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

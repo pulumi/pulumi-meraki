@@ -140,7 +140,7 @@ export interface GetDevicesUplinksLossAndLatencyOutputArgs {
     /**
      * ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -148,17 +148,17 @@ export interface GetDevicesUplinksLossAndLatencyOutputArgs {
     /**
      * t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 60 days from today.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
     /**
      * uplink query parameter. Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, wan3, cellular. Default will return all uplinks.
      */
-    uplink?: pulumi.Input<string>;
+    uplink?: pulumi.Input<string | undefined>;
 }

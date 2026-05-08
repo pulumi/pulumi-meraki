@@ -73,9 +73,9 @@ export interface GetApplianceSsidsOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
 }

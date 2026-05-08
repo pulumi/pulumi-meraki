@@ -188,11 +188,11 @@ export interface GetDevicesBootsHistoryOutputArgs {
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * mostRecentPerDevice query parameter. If true, only the most recent boot for each device is returned.
      */
-    mostRecentPerDevice?: pulumi.Input<boolean>;
+    mostRecentPerDevice?: pulumi.Input<boolean | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -200,29 +200,29 @@ export interface GetDevicesBootsHistoryOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * serials query parameter. Optional parameter to filter device by device serial numbers. This filter uses multiple exact matches.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * sortOrder query parameter. Sorted order of entries. Order options are 'ascending' and 'descending'. Default is 'descending'.
      */
-    sortOrder?: pulumi.Input<string>;
+    sortOrder?: pulumi.Input<string | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * t0 query parameter. The beginning of the timespan for the data.
      */
-    t0?: pulumi.Input<string>;
+    t0?: pulumi.Input<string | undefined>;
     /**
      * t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 730 days after t0.
      */
-    t1?: pulumi.Input<string>;
+    t1?: pulumi.Input<string | undefined>;
     /**
      * timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 730 days.
      */
-    timespan?: pulumi.Input<number>;
+    timespan?: pulumi.Input<number | undefined>;
 }

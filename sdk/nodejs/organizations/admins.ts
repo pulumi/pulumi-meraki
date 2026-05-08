@@ -169,51 +169,51 @@ export interface AdminsState {
     /**
      * Status of the admin's account
      */
-    accountStatus?: pulumi.Input<string>;
+    accountStatus?: pulumi.Input<string | undefined>;
     /**
      * adminId path parameter. Admin ID
      */
-    adminId?: pulumi.Input<string>;
+    adminId?: pulumi.Input<string | undefined>;
     /**
      * Admin's authentication method
      */
-    authenticationMethod?: pulumi.Input<string>;
+    authenticationMethod?: pulumi.Input<string | undefined>;
     /**
      * Admin's email address
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Indicates whether the admin has an API key
      */
-    hasApiKey?: pulumi.Input<boolean>;
+    hasApiKey?: pulumi.Input<boolean | undefined>;
     /**
      * Time when the admin was last active
      */
-    lastActive?: pulumi.Input<string>;
+    lastActive?: pulumi.Input<string | undefined>;
     /**
      * Admin's username
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Admin network access information
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsNetwork>[] | undefined>;
     /**
      * Admin's level of access to the organization
      */
-    orgAccess?: pulumi.Input<string>;
+    orgAccess?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Admin tag information
      */
-    tags?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsTag>[]>;
+    tags?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsTag>[] | undefined>;
     /**
      * Indicates whether two-factor authentication is enabled
      */
-    twoFactorAuthEnabled?: pulumi.Input<boolean>;
+    twoFactorAuthEnabled?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -223,27 +223,27 @@ export interface AdminsArgs {
     /**
      * adminId path parameter. Admin ID
      */
-    adminId?: pulumi.Input<string>;
+    adminId?: pulumi.Input<string | undefined>;
     /**
      * Admin's authentication method
      */
-    authenticationMethod?: pulumi.Input<string>;
+    authenticationMethod?: pulumi.Input<string | undefined>;
     /**
      * Admin's email address
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Admin's username
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Admin network access information
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsNetwork>[] | undefined>;
     /**
      * Admin's level of access to the organization
      */
-    orgAccess?: pulumi.Input<string>;
+    orgAccess?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -251,5 +251,5 @@ export interface AdminsArgs {
     /**
      * Admin tag information
      */
-    tags?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsTag>[]>;
+    tags?: pulumi.Input<pulumi.Input<inputs.organizations.AdminsTag>[] | undefined>;
 }

@@ -112,19 +112,19 @@ export interface SwitchStacksState {
     /**
      * Name of the Switch stack
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Serials of the switches in the switch stack
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -134,7 +134,7 @@ export interface SwitchStacksArgs {
     /**
      * Name of the Switch stack
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -142,9 +142,9 @@ export interface SwitchStacksArgs {
     /**
      * Serials of the switches in the switch stack
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }

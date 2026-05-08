@@ -20,7 +20,7 @@ __all__ = ['CameraVideoSettingsArgs', 'CameraVideoSettings']
 class CameraVideoSettingsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraVideoSettings resource.
 
@@ -45,23 +45,23 @@ class CameraVideoSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="externalRtspEnabled")
-    def external_rtsp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def external_rtsp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if external rtsp stream is exposed
         """
         return pulumi.get(self, "external_rtsp_enabled")
 
     @external_rtsp_enabled.setter
-    def external_rtsp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def external_rtsp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "external_rtsp_enabled", value)
 
 
 @pulumi.input_type
 class _CameraVideoSettingsState:
     def __init__(__self__, *,
-                 external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rtsp_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rtsp_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraVideoSettings resources.
 
@@ -78,38 +78,38 @@ class _CameraVideoSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="externalRtspEnabled")
-    def external_rtsp_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def external_rtsp_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if external rtsp stream is exposed
         """
         return pulumi.get(self, "external_rtsp_enabled")
 
     @external_rtsp_enabled.setter
-    def external_rtsp_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def external_rtsp_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "external_rtsp_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="rtspUrl")
-    def rtsp_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rtsp_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         External rstp url. Will only be returned if external rtsp stream is exposed
         """
         return pulumi.get(self, "rtsp_url")
 
     @rtsp_url.setter
-    def rtsp_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rtsp_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rtsp_url", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -119,8 +119,8 @@ class CameraVideoSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -188,8 +188,8 @@ class CameraVideoSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -214,9 +214,9 @@ class CameraVideoSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            rtsp_url: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraVideoSettings':
+            external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            rtsp_url: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraVideoSettings':
         """
         Get an existing CameraVideoSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

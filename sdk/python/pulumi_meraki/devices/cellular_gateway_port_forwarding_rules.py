@@ -22,7 +22,7 @@ __all__ = ['CellularGatewayPortForwardingRulesArgs', 'CellularGatewayPortForward
 class CellularGatewayPortForwardingRulesArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayPortForwardingRules resource.
 
@@ -47,22 +47,22 @@ class CellularGatewayPortForwardingRulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]:
         """
         An array of port forwarding params
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
 
 @pulumi.input_type
 class _CellularGatewayPortForwardingRulesState:
     def __init__(__self__, *,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayPortForwardingRules resources.
 
@@ -76,26 +76,26 @@ class _CellularGatewayPortForwardingRulesState:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]:
         """
         An array of port forwarding params
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -105,8 +105,8 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -188,8 +188,8 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -213,8 +213,8 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CellularGatewayPortForwardingRules':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CellularGatewayPortForwardingRules':
         """
         Get an existing CellularGatewayPortForwardingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

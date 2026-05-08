@@ -96,11 +96,11 @@ export interface SmDevicesRefreshDetailsState {
     /**
      * deviceId path parameter. Device ID
      */
-    deviceId?: pulumi.Input<string>;
+    deviceId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**

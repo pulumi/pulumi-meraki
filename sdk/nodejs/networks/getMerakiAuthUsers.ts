@@ -73,9 +73,9 @@ export interface GetMerakiAuthUsersOutputArgs {
     /**
      * merakiAuthUserId path parameter. Meraki auth user ID
      */
-    merakiAuthUserId?: pulumi.Input<string>;
+    merakiAuthUserId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

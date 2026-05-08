@@ -214,39 +214,39 @@ export interface SensorAlertsProfilesState {
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    conditions?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesCondition>[]>;
+    conditions?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesCondition>[] | undefined>;
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    conditionsResponses?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponse>[]>;
+    conditionsResponses?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponse>[] | undefined>;
     /**
      * Name of the sensor alert profile.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * id path parameter.
      */
-    networksSensorAlertsProfilesId?: pulumi.Input<string>;
+    networksSensorAlertsProfilesId?: pulumi.Input<string | undefined>;
     /**
      * ID of the sensor alert profile.
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * List of recipients that will receive the alert.
      */
-    recipients?: pulumi.Input<inputs.networks.SensorAlertsProfilesRecipients>;
+    recipients?: pulumi.Input<inputs.networks.SensorAlertsProfilesRecipients | undefined>;
     /**
      * The sensor schedule to use with the alert profile.
      */
-    schedule?: pulumi.Input<inputs.networks.SensorAlertsProfilesSchedule>;
+    schedule?: pulumi.Input<inputs.networks.SensorAlertsProfilesSchedule | undefined>;
     /**
      * List of device serials assigned to this sensor alert profile.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -256,11 +256,11 @@ export interface SensorAlertsProfilesArgs {
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    conditions?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesCondition>[]>;
+    conditions?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesCondition>[] | undefined>;
     /**
      * Name of the sensor alert profile.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -268,17 +268,17 @@ export interface SensorAlertsProfilesArgs {
     /**
      * id path parameter.
      */
-    networksSensorAlertsProfilesId?: pulumi.Input<string>;
+    networksSensorAlertsProfilesId?: pulumi.Input<string | undefined>;
     /**
      * List of recipients that will receive the alert.
      */
-    recipients?: pulumi.Input<inputs.networks.SensorAlertsProfilesRecipients>;
+    recipients?: pulumi.Input<inputs.networks.SensorAlertsProfilesRecipients | undefined>;
     /**
      * The sensor schedule to use with the alert profile.
      */
-    schedule?: pulumi.Input<inputs.networks.SensorAlertsProfilesSchedule>;
+    schedule?: pulumi.Input<inputs.networks.SensorAlertsProfilesSchedule | undefined>;
     /**
      * List of device serials assigned to this sensor alert profile.
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

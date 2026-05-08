@@ -73,9 +73,9 @@ export interface GetApplianceVlansOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * vlanId path parameter. Vlan ID
      */
-    vlanId?: pulumi.Input<string>;
+    vlanId?: pulumi.Input<string | undefined>;
 }

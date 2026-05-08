@@ -22,8 +22,8 @@ __all__ = ['FirmwareUpgradesStagedEventsArgs', 'FirmwareUpgradesStagedEvents']
 class FirmwareUpgradesStagedEventsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 products: Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']] = None,
-                 stages: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
+                 products: pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedEvents resource.
 
@@ -51,36 +51,36 @@ class FirmwareUpgradesStagedEventsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def products(self) -> Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']]:
+    def products(self) -> pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']]:
         """
         The network devices to be updated
         """
         return pulumi.get(self, "products")
 
     @products.setter
-    def products(self, value: Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']]):
+    def products(self, value: pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']]):
         pulumi.set(self, "products", value)
 
     @_builtins.property
     @pulumi.getter
-    def stages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]:
+    def stages(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]:
         """
         The ordered stages in the network
         """
         return pulumi.get(self, "stages")
 
     @stages.setter
-    def stages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]):
+    def stages(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]):
         pulumi.set(self, "stages", value)
 
 
 @pulumi.input_type
 class _FirmwareUpgradesStagedEventsState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']] = None,
-                 reasons: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]] = None,
-                 stages: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']] = None,
+                 reasons: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedEvents resources.
 
@@ -100,50 +100,50 @@ class _FirmwareUpgradesStagedEventsState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def products(self) -> Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']]:
+    def products(self) -> pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']]:
         """
         The network devices to be updated
         """
         return pulumi.get(self, "products")
 
     @products.setter
-    def products(self, value: Optional[pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs']]):
+    def products(self, value: pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsArgs']]):
         pulumi.set(self, "products", value)
 
     @_builtins.property
     @pulumi.getter
-    def reasons(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]]:
+    def reasons(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]]:
         """
         Reasons for the rollback
         """
         return pulumi.get(self, "reasons")
 
     @reasons.setter
-    def reasons(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]]):
+    def reasons(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]]]):
         pulumi.set(self, "reasons", value)
 
     @_builtins.property
     @pulumi.getter
-    def stages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]:
+    def stages(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]:
         """
         The ordered stages in the network
         """
         return pulumi.get(self, "stages")
 
     @stages.setter
-    def stages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]):
+    def stages(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]]):
         pulumi.set(self, "stages", value)
 
 
@@ -153,9 +153,9 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-                 stages: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -270,9 +270,9 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-                 stages: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -298,10 +298,10 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            products: Optional[pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-            reasons: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict']]]]] = None,
-            stages: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None) -> 'FirmwareUpgradesStagedEvents':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
+            reasons: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict']]]]] = None,
+            stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None) -> 'FirmwareUpgradesStagedEvents':
         """
         Get an existing FirmwareUpgradesStagedEvents resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -128,23 +128,23 @@ export interface SwitchAlternateManagementInterfaceState {
     /**
      * Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
      */
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
      */
-    switches?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAlternateManagementInterfaceSwitch>[]>;
+    switches?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAlternateManagementInterfaceSwitch>[] | undefined>;
     /**
      * Alternate management VLAN, must be between 1 and 4094
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -154,7 +154,7 @@ export interface SwitchAlternateManagementInterfaceArgs {
     /**
      * Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -162,13 +162,13 @@ export interface SwitchAlternateManagementInterfaceArgs {
     /**
      * Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
      */
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
      */
-    switches?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAlternateManagementInterfaceSwitch>[]>;
+    switches?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAlternateManagementInterfaceSwitch>[] | undefined>;
     /**
      * Alternate management VLAN, must be between 1 and 4094
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
 }

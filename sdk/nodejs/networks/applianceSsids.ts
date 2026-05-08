@@ -27,7 +27,7 @@ import * as utilities from "../utilities";
  *     encryptionMode: "wpa",
  *     name: "My SSID",
  *     networkId: "string",
- *     number: "string",
+ *     number: Number("string"),
  *     psk: "psk",
  *     radiusServers: [{
  *         host: "0.0.0.0",
@@ -193,59 +193,59 @@ export interface ApplianceSsidsState {
     /**
      * The association control method for the SSID.
      */
-    authMode?: pulumi.Input<string>;
+    authMode?: pulumi.Input<string | undefined>;
     /**
      * The VLAN ID of the VLAN associated to this SSID.
      */
-    defaultVlanId?: pulumi.Input<number>;
+    defaultVlanId?: pulumi.Input<number | undefined>;
     /**
      * DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
      */
-    dhcpEnforcedDeauthentication?: pulumi.Input<inputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication>;
+    dhcpEnforcedDeauthentication?: pulumi.Input<inputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    dot11w?: pulumi.Input<inputs.networks.ApplianceSsidsDot11w>;
+    dot11w?: pulumi.Input<inputs.networks.ApplianceSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The psk encryption mode for the SSID.
      */
-    encryptionMode?: pulumi.Input<string>;
+    encryptionMode?: pulumi.Input<string | undefined>;
     /**
      * The name of the SSID.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The number of the SSID.
      */
-    number?: pulumi.Input<number>;
+    number?: pulumi.Input<number | undefined>;
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'.
      */
-    psk?: pulumi.Input<string>;
+    psk?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS 802.1x servers to be used for authentication.
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServer>[] | undefined>;
     /**
      * The RADIUS 802.1x servers to be used for authentication.
      */
-    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServersResponse>[]>;
+    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServersResponse>[] | undefined>;
     /**
      * Boolean indicating whether the MX should advertise or hide this SSID.
      */
-    visible?: pulumi.Input<boolean>;
+    visible?: pulumi.Input<boolean | undefined>;
     /**
      * WPA encryption mode for the SSID.
      */
-    wpaEncryptionMode?: pulumi.Input<string>;
+    wpaEncryptionMode?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -255,31 +255,31 @@ export interface ApplianceSsidsArgs {
     /**
      * The association control method for the SSID.
      */
-    authMode?: pulumi.Input<string>;
+    authMode?: pulumi.Input<string | undefined>;
     /**
      * The VLAN ID of the VLAN associated to this SSID.
      */
-    defaultVlanId?: pulumi.Input<number>;
+    defaultVlanId?: pulumi.Input<number | undefined>;
     /**
      * DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
      */
-    dhcpEnforcedDeauthentication?: pulumi.Input<inputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication>;
+    dhcpEnforcedDeauthentication?: pulumi.Input<inputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    dot11w?: pulumi.Input<inputs.networks.ApplianceSsidsDot11w>;
+    dot11w?: pulumi.Input<inputs.networks.ApplianceSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The psk encryption mode for the SSID.
      */
-    encryptionMode?: pulumi.Input<string>;
+    encryptionMode?: pulumi.Input<string | undefined>;
     /**
      * The name of the SSID.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -291,17 +291,17 @@ export interface ApplianceSsidsArgs {
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'.
      */
-    psk?: pulumi.Input<string>;
+    psk?: pulumi.Input<string | undefined>;
     /**
      * The RADIUS 802.1x servers to be used for authentication.
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceSsidsRadiusServer>[] | undefined>;
     /**
      * Boolean indicating whether the MX should advertise or hide this SSID.
      */
-    visible?: pulumi.Input<boolean>;
+    visible?: pulumi.Input<boolean | undefined>;
     /**
      * WPA encryption mode for the SSID.
      */
-    wpaEncryptionMode?: pulumi.Input<string>;
+    wpaEncryptionMode?: pulumi.Input<string | undefined>;
 }

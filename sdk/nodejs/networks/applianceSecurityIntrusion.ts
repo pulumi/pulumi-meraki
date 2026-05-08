@@ -124,19 +124,19 @@ export interface ApplianceSecurityIntrusionState {
     /**
      * Intrusion detection ruleset
      */
-    idsRulesets?: pulumi.Input<string>;
+    idsRulesets?: pulumi.Input<string | undefined>;
     /**
      * Intrusion detection mode
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Networks included in and excluded from the detection engine
      */
-    protectedNetworks?: pulumi.Input<inputs.networks.ApplianceSecurityIntrusionProtectedNetworks>;
+    protectedNetworks?: pulumi.Input<inputs.networks.ApplianceSecurityIntrusionProtectedNetworks | undefined>;
 }
 
 /**
@@ -146,11 +146,11 @@ export interface ApplianceSecurityIntrusionArgs {
     /**
      * Intrusion detection ruleset
      */
-    idsRulesets?: pulumi.Input<string>;
+    idsRulesets?: pulumi.Input<string | undefined>;
     /**
      * Intrusion detection mode
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -158,5 +158,5 @@ export interface ApplianceSecurityIntrusionArgs {
     /**
      * Networks included in and excluded from the detection engine
      */
-    protectedNetworks?: pulumi.Input<inputs.networks.ApplianceSecurityIntrusionProtectedNetworks>;
+    protectedNetworks?: pulumi.Input<inputs.networks.ApplianceSecurityIntrusionProtectedNetworks | undefined>;
 }

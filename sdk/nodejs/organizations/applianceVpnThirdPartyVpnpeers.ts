@@ -128,15 +128,15 @@ export interface ApplianceVpnThirdPartyVpnpeersState {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * The list of VPN peers
      */
-    peers?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer>[]>;
+    peers?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer>[] | undefined>;
     /**
      * The list of VPN peers
      */
-    peersResponses?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse>[]>;
+    peersResponses?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse>[] | undefined>;
 }
 
 /**
@@ -150,5 +150,5 @@ export interface ApplianceVpnThirdPartyVpnpeersArgs {
     /**
      * The list of VPN peers
      */
-    peers?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer>[]>;
+    peers?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer>[] | undefined>;
 }

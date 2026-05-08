@@ -113,8 +113,8 @@ def get_camera_video_link(serial: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         timestamp=pulumi.get(__ret__, 'timestamp'))
-def get_camera_video_link_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
-                                 timestamp: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_camera_video_link_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
+                                 timestamp: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraVideoLinkResult]:
     """
     ## Example Usage

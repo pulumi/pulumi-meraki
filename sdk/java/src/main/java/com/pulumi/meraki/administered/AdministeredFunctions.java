@@ -34,8 +34,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -70,8 +70,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -106,8 +106,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -142,8 +142,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -178,8 +178,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -214,8 +214,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -250,8 +250,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -287,8 +287,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -326,8 +326,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -365,8 +365,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -404,8 +404,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -443,8 +443,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -482,8 +482,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -521,8 +521,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -560,8 +560,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -607,8 +607,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -654,8 +654,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -701,8 +701,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -748,8 +748,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -795,8 +795,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -842,8 +842,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -889,8 +889,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -929,8 +929,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -969,8 +969,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1009,8 +1009,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1049,8 +1049,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1089,8 +1089,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1129,8 +1129,8 @@ public final class AdministeredFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.administered.AdministeredFunctions;
      * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

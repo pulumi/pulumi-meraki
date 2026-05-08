@@ -56,9 +56,9 @@ class InventoryOnboardingCloudMonitoringPrepareArgs:
 @pulumi.input_type
 class _InventoryOnboardingCloudMonitoringPrepareState:
     def __init__(__self__, *,
-                 items: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersArgs']] = None):
+                 items: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryOnboardingCloudMonitoringPrepare resources.
 
@@ -74,35 +74,35 @@ class _InventoryOnboardingCloudMonitoringPrepareState:
 
     @_builtins.property
     @pulumi.getter
-    def items(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]]:
+    def items(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]]:
         """
         Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
         """
         return pulumi.get(self, "items")
 
     @items.setter
-    def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]]):
+    def items(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]]):
         pulumi.set(self, "items", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -112,8 +112,8 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -294,8 +294,8 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -322,9 +322,9 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
+            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
         """
         Get an existing InventoryOnboardingCloudMonitoringPrepare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -94,9 +94,9 @@ export interface GetLicensingSubscriptionSubscriptionsComplianceStatusesOutputAr
     /**
      * organizationIds query parameter. Organizations to get subscription compliance information for
      */
-    organizationIds?: pulumi.Input<pulumi.Input<string>[]>;
+    organizationIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * subscriptionIds query parameter. Subscription ids
      */
-    subscriptionIds?: pulumi.Input<pulumi.Input<string>[]>;
+    subscriptionIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

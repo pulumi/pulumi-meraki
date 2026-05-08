@@ -22,14 +22,14 @@ __all__ = ['FloorPlansArgs', 'FloorPlans']
 class FloorPlansArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 bottom_left_corner: Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']] = None,
-                 bottom_right_corner: Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']] = None,
-                 center: Optional[pulumi.Input['FloorPlansCenterArgs']] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 top_left_corner: Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']] = None,
-                 top_right_corner: Optional[pulumi.Input['FloorPlansTopRightCornerArgs']] = None):
+                 bottom_left_corner: pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']] = None,
+                 bottom_right_corner: pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']] = None,
+                 center: pulumi.Input[Optional['FloorPlansCenterArgs']] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 top_left_corner: pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']] = None,
+                 top_right_corner: pulumi.Input[Optional['FloorPlansTopRightCornerArgs']] = None):
         """
         The set of arguments for constructing a FloorPlans resource.
 
@@ -75,120 +75,120 @@ class FloorPlansArgs:
 
     @_builtins.property
     @pulumi.getter(name="bottomLeftCorner")
-    def bottom_left_corner(self) -> Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']]:
+    def bottom_left_corner(self) -> pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']]:
         """
         The longitude and latitude of the bottom left corner of your floor plan.
         """
         return pulumi.get(self, "bottom_left_corner")
 
     @bottom_left_corner.setter
-    def bottom_left_corner(self, value: Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']]):
+    def bottom_left_corner(self, value: pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']]):
         pulumi.set(self, "bottom_left_corner", value)
 
     @_builtins.property
     @pulumi.getter(name="bottomRightCorner")
-    def bottom_right_corner(self) -> Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']]:
+    def bottom_right_corner(self) -> pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']]:
         """
         The longitude and latitude of the bottom right corner of your floor plan.
         """
         return pulumi.get(self, "bottom_right_corner")
 
     @bottom_right_corner.setter
-    def bottom_right_corner(self, value: Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']]):
+    def bottom_right_corner(self, value: pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']]):
         pulumi.set(self, "bottom_right_corner", value)
 
     @_builtins.property
     @pulumi.getter
-    def center(self) -> Optional[pulumi.Input['FloorPlansCenterArgs']]:
+    def center(self) -> pulumi.Input[Optional['FloorPlansCenterArgs']]:
         """
         The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
         """
         return pulumi.get(self, "center")
 
     @center.setter
-    def center(self, value: Optional[pulumi.Input['FloorPlansCenterArgs']]):
+    def center(self, value: pulumi.Input[Optional['FloorPlansCenterArgs']]):
         pulumi.set(self, "center", value)
 
     @_builtins.property
     @pulumi.getter(name="floorPlanId")
-    def floor_plan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def floor_plan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Floor plan ID
         """
         return pulumi.get(self, "floor_plan_id")
 
     @floor_plan_id.setter
-    def floor_plan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def floor_plan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "floor_plan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="imageContents")
-    def image_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
         """
         return pulumi.get(self, "image_contents")
 
     @image_contents.setter
-    def image_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_contents", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of your floor plan.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="topLeftCorner")
-    def top_left_corner(self) -> Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']]:
+    def top_left_corner(self) -> pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']]:
         """
         The longitude and latitude of the top left corner of your floor plan.
         """
         return pulumi.get(self, "top_left_corner")
 
     @top_left_corner.setter
-    def top_left_corner(self, value: Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']]):
+    def top_left_corner(self, value: pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']]):
         pulumi.set(self, "top_left_corner", value)
 
     @_builtins.property
     @pulumi.getter(name="topRightCorner")
-    def top_right_corner(self) -> Optional[pulumi.Input['FloorPlansTopRightCornerArgs']]:
+    def top_right_corner(self) -> pulumi.Input[Optional['FloorPlansTopRightCornerArgs']]:
         """
         The longitude and latitude of the top right corner of your floor plan.
         """
         return pulumi.get(self, "top_right_corner")
 
     @top_right_corner.setter
-    def top_right_corner(self, value: Optional[pulumi.Input['FloorPlansTopRightCornerArgs']]):
+    def top_right_corner(self, value: pulumi.Input[Optional['FloorPlansTopRightCornerArgs']]):
         pulumi.set(self, "top_right_corner", value)
 
 
 @pulumi.input_type
 class _FloorPlansState:
     def __init__(__self__, *,
-                 bottom_left_corner: Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']] = None,
-                 bottom_right_corner: Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']] = None,
-                 center: Optional[pulumi.Input['FloorPlansCenterArgs']] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 height: Optional[pulumi.Input[_builtins.float]] = None,
-                 image_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_extension: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_md5: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_url_expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 top_left_corner: Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']] = None,
-                 top_right_corner: Optional[pulumi.Input['FloorPlansTopRightCornerArgs']] = None,
-                 width: Optional[pulumi.Input[_builtins.float]] = None):
+                 bottom_left_corner: pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']] = None,
+                 bottom_right_corner: pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']] = None,
+                 center: pulumi.Input[Optional['FloorPlansCenterArgs']] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 height: pulumi.Input[Optional[_builtins.float]] = None,
+                 image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_extension: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_md5: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_url_expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 top_left_corner: pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']] = None,
+                 top_right_corner: pulumi.Input[Optional['FloorPlansTopRightCornerArgs']] = None,
+                 width: pulumi.Input[Optional[_builtins.float]] = None):
         """
         Input properties used for looking up and filtering FloorPlans resources.
 
@@ -244,194 +244,194 @@ class _FloorPlansState:
 
     @_builtins.property
     @pulumi.getter(name="bottomLeftCorner")
-    def bottom_left_corner(self) -> Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']]:
+    def bottom_left_corner(self) -> pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']]:
         """
         The longitude and latitude of the bottom left corner of your floor plan.
         """
         return pulumi.get(self, "bottom_left_corner")
 
     @bottom_left_corner.setter
-    def bottom_left_corner(self, value: Optional[pulumi.Input['FloorPlansBottomLeftCornerArgs']]):
+    def bottom_left_corner(self, value: pulumi.Input[Optional['FloorPlansBottomLeftCornerArgs']]):
         pulumi.set(self, "bottom_left_corner", value)
 
     @_builtins.property
     @pulumi.getter(name="bottomRightCorner")
-    def bottom_right_corner(self) -> Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']]:
+    def bottom_right_corner(self) -> pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']]:
         """
         The longitude and latitude of the bottom right corner of your floor plan.
         """
         return pulumi.get(self, "bottom_right_corner")
 
     @bottom_right_corner.setter
-    def bottom_right_corner(self, value: Optional[pulumi.Input['FloorPlansBottomRightCornerArgs']]):
+    def bottom_right_corner(self, value: pulumi.Input[Optional['FloorPlansBottomRightCornerArgs']]):
         pulumi.set(self, "bottom_right_corner", value)
 
     @_builtins.property
     @pulumi.getter
-    def center(self) -> Optional[pulumi.Input['FloorPlansCenterArgs']]:
+    def center(self) -> pulumi.Input[Optional['FloorPlansCenterArgs']]:
         """
         The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
         """
         return pulumi.get(self, "center")
 
     @center.setter
-    def center(self, value: Optional[pulumi.Input['FloorPlansCenterArgs']]):
+    def center(self, value: pulumi.Input[Optional['FloorPlansCenterArgs']]):
         pulumi.set(self, "center", value)
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]]:
         """
         List of devices for the floorplan
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FloorPlansDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter(name="floorPlanId")
-    def floor_plan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def floor_plan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Floor plan ID
         """
         return pulumi.get(self, "floor_plan_id")
 
     @floor_plan_id.setter
-    def floor_plan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def floor_plan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "floor_plan_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def height(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def height(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         The height of your floor plan.
         """
         return pulumi.get(self, "height")
 
     @height.setter
-    def height(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def height(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "height", value)
 
     @_builtins.property
     @pulumi.getter(name="imageContents")
-    def image_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
         """
         return pulumi.get(self, "image_contents")
 
     @image_contents.setter
-    def image_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_contents", value)
 
     @_builtins.property
     @pulumi.getter(name="imageExtension")
-    def image_extension(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_extension(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The format type of the image.
         """
         return pulumi.get(self, "image_extension")
 
     @image_extension.setter
-    def image_extension(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_extension(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_extension", value)
 
     @_builtins.property
     @pulumi.getter(name="imageMd5")
-    def image_md5(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_md5(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields ('center, 'topLeftCorner', etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image.
         """
         return pulumi.get(self, "image_md5")
 
     @image_md5.setter
-    def image_md5(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_md5(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_md5", value)
 
     @_builtins.property
     @pulumi.getter(name="imageUrl")
-    def image_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The url link for the floor plan image.
         """
         return pulumi.get(self, "image_url")
 
     @image_url.setter
-    def image_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_url", value)
 
     @_builtins.property
     @pulumi.getter(name="imageUrlExpiresAt")
-    def image_url_expires_at(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def image_url_expires_at(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The time the image url link will expire.
         """
         return pulumi.get(self, "image_url_expires_at")
 
     @image_url_expires_at.setter
-    def image_url_expires_at(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def image_url_expires_at(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "image_url_expires_at", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of your floor plan.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="topLeftCorner")
-    def top_left_corner(self) -> Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']]:
+    def top_left_corner(self) -> pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']]:
         """
         The longitude and latitude of the top left corner of your floor plan.
         """
         return pulumi.get(self, "top_left_corner")
 
     @top_left_corner.setter
-    def top_left_corner(self, value: Optional[pulumi.Input['FloorPlansTopLeftCornerArgs']]):
+    def top_left_corner(self, value: pulumi.Input[Optional['FloorPlansTopLeftCornerArgs']]):
         pulumi.set(self, "top_left_corner", value)
 
     @_builtins.property
     @pulumi.getter(name="topRightCorner")
-    def top_right_corner(self) -> Optional[pulumi.Input['FloorPlansTopRightCornerArgs']]:
+    def top_right_corner(self) -> pulumi.Input[Optional['FloorPlansTopRightCornerArgs']]:
         """
         The longitude and latitude of the top right corner of your floor plan.
         """
         return pulumi.get(self, "top_right_corner")
 
     @top_right_corner.setter
-    def top_right_corner(self, value: Optional[pulumi.Input['FloorPlansTopRightCornerArgs']]):
+    def top_right_corner(self, value: pulumi.Input[Optional['FloorPlansTopRightCornerArgs']]):
         pulumi.set(self, "top_right_corner", value)
 
     @_builtins.property
     @pulumi.getter
-    def width(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def width(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         The width of your floor plan.
         """
         return pulumi.get(self, "width")
 
     @width.setter
-    def width(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def width(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "width", value)
 
 
@@ -441,15 +441,15 @@ class FloorPlans(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bottom_left_corner: Optional[pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-                 bottom_right_corner: Optional[pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-                 center: Optional[pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 top_left_corner: Optional[pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-                 top_right_corner: Optional[pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
+                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
+                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
+                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -566,15 +566,15 @@ class FloorPlans(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bottom_left_corner: Optional[pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-                 bottom_right_corner: Optional[pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-                 center: Optional[pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
-                 floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 image_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 top_left_corner: Optional[pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-                 top_right_corner: Optional[pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
+                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
+                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
+                 floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
+                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -612,22 +612,22 @@ class FloorPlans(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bottom_left_corner: Optional[pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-            bottom_right_corner: Optional[pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-            center: Optional[pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict']]]]] = None,
-            floor_plan_id: Optional[pulumi.Input[_builtins.str]] = None,
-            height: Optional[pulumi.Input[_builtins.float]] = None,
-            image_contents: Optional[pulumi.Input[_builtins.str]] = None,
-            image_extension: Optional[pulumi.Input[_builtins.str]] = None,
-            image_md5: Optional[pulumi.Input[_builtins.str]] = None,
-            image_url: Optional[pulumi.Input[_builtins.str]] = None,
-            image_url_expires_at: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            top_left_corner: Optional[pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-            top_right_corner: Optional[pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
-            width: Optional[pulumi.Input[_builtins.float]] = None) -> 'FloorPlans':
+            bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
+            bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
+            center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict']]]]] = None,
+            floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            height: pulumi.Input[Optional[_builtins.float]] = None,
+            image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            image_extension: pulumi.Input[Optional[_builtins.str]] = None,
+            image_md5: pulumi.Input[Optional[_builtins.str]] = None,
+            image_url: pulumi.Input[Optional[_builtins.str]] = None,
+            image_url_expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
+            top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+            width: pulumi.Input[Optional[_builtins.float]] = None) -> 'FloorPlans':
         """
         Get an existing FloorPlans resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -147,39 +147,39 @@ export interface AppliancePortsState {
     /**
      * The name of the policy. Only applicable to Access ports.
      */
-    accessPolicy?: pulumi.Input<string>;
+    accessPolicy?: pulumi.Input<string | undefined>;
     /**
      * Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
      */
-    allowedVlans?: pulumi.Input<string>;
+    allowedVlans?: pulumi.Input<string | undefined>;
     /**
      * Whether the trunk port can drop all untagged traffic.
      */
-    dropUntaggedTraffic?: pulumi.Input<boolean>;
+    dropUntaggedTraffic?: pulumi.Input<boolean | undefined>;
     /**
      * The status of the port
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Number of the port
      */
-    number?: pulumi.Input<number>;
+    number?: pulumi.Input<number | undefined>;
     /**
      * portId path parameter. Port ID
      */
-    portId?: pulumi.Input<string>;
+    portId?: pulumi.Input<string | undefined>;
     /**
      * The type of the port: 'access' or 'trunk'.
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -189,19 +189,19 @@ export interface AppliancePortsArgs {
     /**
      * The name of the policy. Only applicable to Access ports.
      */
-    accessPolicy?: pulumi.Input<string>;
+    accessPolicy?: pulumi.Input<string | undefined>;
     /**
      * Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
      */
-    allowedVlans?: pulumi.Input<string>;
+    allowedVlans?: pulumi.Input<string | undefined>;
     /**
      * Whether the trunk port can drop all untagged traffic.
      */
-    dropUntaggedTraffic?: pulumi.Input<boolean>;
+    dropUntaggedTraffic?: pulumi.Input<boolean | undefined>;
     /**
      * The status of the port
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -213,9 +213,9 @@ export interface AppliancePortsArgs {
     /**
      * The type of the port: 'access' or 'trunk'.
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
 }

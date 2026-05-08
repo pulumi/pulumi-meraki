@@ -133,19 +133,19 @@ export interface FirmwareUpgradesStagedEventsState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The network devices to be updated
      */
-    products?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsProducts>;
+    products?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsProducts | undefined>;
     /**
      * Reasons for the rollback
      */
-    reasons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsReason>[]>;
+    reasons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsReason>[] | undefined>;
     /**
      * The ordered stages in the network
      */
-    stages?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsStage>[]>;
+    stages?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsStage>[] | undefined>;
 }
 
 /**
@@ -159,9 +159,9 @@ export interface FirmwareUpgradesStagedEventsArgs {
     /**
      * The network devices to be updated
      */
-    products?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsProducts>;
+    products?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsProducts | undefined>;
     /**
      * The ordered stages in the network
      */
-    stages?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsStage>[]>;
+    stages?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedEventsStage>[] | undefined>;
 }

@@ -185,31 +185,31 @@ export interface ApplianceTrafficShapingUplinkSelectionState {
     /**
      * Whether active-active AutoVPN is enabled
      */
-    activeActiveAutoVpnEnabled?: pulumi.Input<boolean>;
+    activeActiveAutoVpnEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The default uplink. Must be one of: 'wan1' or 'wan2'
      */
-    defaultUplink?: pulumi.Input<string>;
+    defaultUplink?: pulumi.Input<string | undefined>;
     /**
      * WAN failover and failback
      */
-    failoverAndFailback?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback>;
+    failoverAndFailback?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback | undefined>;
     /**
      * Whether load balancing is enabled
      */
-    loadBalancingEnabled?: pulumi.Input<boolean>;
+    loadBalancingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Uplink preference rules for VPN traffic
      */
-    vpnTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference>[]>;
+    vpnTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference>[] | undefined>;
     /**
      * Uplink preference rules for WAN traffic
      */
-    wanTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference>[]>;
+    wanTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference>[] | undefined>;
 }
 
 /**
@@ -219,19 +219,19 @@ export interface ApplianceTrafficShapingUplinkSelectionArgs {
     /**
      * Whether active-active AutoVPN is enabled
      */
-    activeActiveAutoVpnEnabled?: pulumi.Input<boolean>;
+    activeActiveAutoVpnEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The default uplink. Must be one of: 'wan1' or 'wan2'
      */
-    defaultUplink?: pulumi.Input<string>;
+    defaultUplink?: pulumi.Input<string | undefined>;
     /**
      * WAN failover and failback
      */
-    failoverAndFailback?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback>;
+    failoverAndFailback?: pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback | undefined>;
     /**
      * Whether load balancing is enabled
      */
-    loadBalancingEnabled?: pulumi.Input<boolean>;
+    loadBalancingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -239,9 +239,9 @@ export interface ApplianceTrafficShapingUplinkSelectionArgs {
     /**
      * Uplink preference rules for VPN traffic
      */
-    vpnTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference>[]>;
+    vpnTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference>[] | undefined>;
     /**
      * Uplink preference rules for WAN traffic
      */
-    wanTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference>[]>;
+    wanTrafficUplinkPreferences?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference>[] | undefined>;
 }

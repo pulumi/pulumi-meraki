@@ -79,5 +79,5 @@ export interface GetLicensingSubscriptionEntitlementsOutputArgs {
     /**
      * skus query parameter. Filter to entitlements with the specified SKUs
      */
-    skuses?: pulumi.Input<pulumi.Input<string>[]>;
+    skuses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

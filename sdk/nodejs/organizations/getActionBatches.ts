@@ -83,13 +83,13 @@ export interface GetActionBatchesOutputArgs {
     /**
      * actionBatchId path parameter. Action batch ID
      */
-    actionBatchId?: pulumi.Input<string>;
+    actionBatchId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * status query parameter. Filter batches by status. Valid types are pending, completed, and failed.
      */
-    status?: pulumi.Input<string>;
+    status?: pulumi.Input<string | undefined>;
 }

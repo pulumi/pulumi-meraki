@@ -56,8 +56,8 @@ class ApplianceTrafficShapingCustomPerformanceClassesArgs:
 @pulumi.input_type
 class _ApplianceTrafficShapingCustomPerformanceClassesState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingCustomPerformanceClasses resources.
 
@@ -70,23 +70,23 @@ class _ApplianceTrafficShapingCustomPerformanceClassesState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -96,8 +96,8 @@ class ApplianceTrafficShapingCustomPerformanceClasses(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -168,8 +168,8 @@ class ApplianceTrafficShapingCustomPerformanceClasses(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -195,8 +195,8 @@ class ApplianceTrafficShapingCustomPerformanceClasses(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None) -> 'ApplianceTrafficShapingCustomPerformanceClasses':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['ApplianceTrafficShapingCustomPerformanceClassesParametersArgs', 'ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict']]] = None) -> 'ApplianceTrafficShapingCustomPerformanceClasses':
         """
         Get an existing ApplianceTrafficShapingCustomPerformanceClasses resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

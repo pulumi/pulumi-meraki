@@ -135,30 +135,30 @@ export interface ApplianceWarmSpareState {
     /**
      * Enable warm spare
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    primarySerial?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
+    primarySerial?: pulumi.Input<string | undefined>;
     /**
      * Serial number of the warm spare appliance
      */
-    spareSerial?: pulumi.Input<string>;
+    spareSerial?: pulumi.Input<string | undefined>;
     /**
      * Uplink mode, either virtual or public
      */
-    uplinkMode?: pulumi.Input<string>;
+    uplinkMode?: pulumi.Input<string | undefined>;
     /**
      * The WAN 1 shared IP
      */
-    virtualIp1?: pulumi.Input<string>;
+    virtualIp1?: pulumi.Input<string | undefined>;
     /**
      * The WAN 2 shared IP
      */
-    virtualIp2?: pulumi.Input<string>;
-    wan1?: pulumi.Input<inputs.networks.ApplianceWarmSpareWan1>;
-    wan2?: pulumi.Input<inputs.networks.ApplianceWarmSpareWan2>;
+    virtualIp2?: pulumi.Input<string | undefined>;
+    wan1?: pulumi.Input<inputs.networks.ApplianceWarmSpareWan1 | undefined>;
+    wan2?: pulumi.Input<inputs.networks.ApplianceWarmSpareWan2 | undefined>;
 }
 
 /**
@@ -168,7 +168,7 @@ export interface ApplianceWarmSpareArgs {
     /**
      * Enable warm spare
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -176,17 +176,17 @@ export interface ApplianceWarmSpareArgs {
     /**
      * Serial number of the warm spare appliance
      */
-    spareSerial?: pulumi.Input<string>;
+    spareSerial?: pulumi.Input<string | undefined>;
     /**
      * Uplink mode, either virtual or public
      */
-    uplinkMode?: pulumi.Input<string>;
+    uplinkMode?: pulumi.Input<string | undefined>;
     /**
      * The WAN 1 shared IP
      */
-    virtualIp1?: pulumi.Input<string>;
+    virtualIp1?: pulumi.Input<string | undefined>;
     /**
      * The WAN 2 shared IP
      */
-    virtualIp2?: pulumi.Input<string>;
+    virtualIp2?: pulumi.Input<string | undefined>;
 }

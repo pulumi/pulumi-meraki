@@ -145,39 +145,39 @@ export interface WirelessSsidsIdentityPsksState {
     /**
      * The email associated with the System's Manager User
      */
-    email?: pulumi.Input<string>;
+    email?: pulumi.Input<string | undefined>;
     /**
      * Timestamp for when the Identity PSK expires, or 'null' to never expire
      */
-    expiresAt?: pulumi.Input<string>;
+    expiresAt?: pulumi.Input<string | undefined>;
     /**
      * The group policy to be applied to clients
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * identityPskId path parameter. Identity psk ID
      */
-    identityPskId?: pulumi.Input<string>;
+    identityPskId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Identity PSK
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * The passphrase for client authentication
      */
-    passphrase?: pulumi.Input<string>;
+    passphrase?: pulumi.Input<string | undefined>;
     /**
      * The WiFi Personal Network unique identifier
      */
-    wifiPersonalNetworkId?: pulumi.Input<string>;
+    wifiPersonalNetworkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -187,19 +187,19 @@ export interface WirelessSsidsIdentityPsksArgs {
     /**
      * Timestamp for when the Identity PSK expires, or 'null' to never expire
      */
-    expiresAt?: pulumi.Input<string>;
+    expiresAt?: pulumi.Input<string | undefined>;
     /**
      * The group policy to be applied to clients
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * identityPskId path parameter. Identity psk ID
      */
-    identityPskId?: pulumi.Input<string>;
+    identityPskId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Identity PSK
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -211,5 +211,5 @@ export interface WirelessSsidsIdentityPsksArgs {
     /**
      * The passphrase for client authentication
      */
-    passphrase?: pulumi.Input<string>;
+    passphrase?: pulumi.Input<string | undefined>;
 }

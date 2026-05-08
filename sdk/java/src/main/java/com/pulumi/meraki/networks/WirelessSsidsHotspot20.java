@@ -35,8 +35,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20NaiRealmArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20OperatorArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20VenueArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -61,8 +61,8 @@ import javax.annotation.Nullable;
  *                 .format("1")
  *                 .methods(WirelessSsidsHotspot20NaiRealmMethodArgs.builder()
  *                     .authenticationTypes(WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs.builder()
- *                         .eapinnerAuthentication(List.of("EAP-TTLS with MSCHAPv2"))
- *                         .nonEapinnerAuthentication(List.of("MSCHAP"))
+ *                         .eapinnerAuthentication(Arrays.asList("EAP-TTLS with MSCHAPv2"))
+ *                         .nonEapinnerAuthentication(Arrays.asList("MSCHAP"))
  *                         .build())
  *                     .id("1")
  *                     .build())

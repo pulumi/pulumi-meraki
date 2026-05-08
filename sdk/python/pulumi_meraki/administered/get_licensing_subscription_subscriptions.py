@@ -239,15 +239,15 @@ def get_licensing_subscription_subscriptions(end_date: Optional[_builtins.str] =
         starting_after=pulumi.get(__ret__, 'starting_after'),
         statuses=pulumi.get(__ret__, 'statuses'),
         subscription_ids=pulumi.get(__ret__, 'subscription_ids'))
-def get_licensing_subscription_subscriptions_output(end_date: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    organization_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                    per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                    product_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                    start_date: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    statuses: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                    subscription_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_licensing_subscription_subscriptions_output(end_date: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    organization_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                    per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                    product_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                    start_date: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    statuses: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                    subscription_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicensingSubscriptionSubscriptionsResult]:
     """
     ## Example Usage

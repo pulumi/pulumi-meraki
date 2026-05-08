@@ -102,15 +102,15 @@ export interface CameraVideoSettingsState {
     /**
      * Boolean indicating if external rtsp stream is exposed
      */
-    externalRtspEnabled?: pulumi.Input<boolean>;
+    externalRtspEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * External rstp url. Will only be returned if external rtsp stream is exposed
      */
-    rtspUrl?: pulumi.Input<string>;
+    rtspUrl?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -120,7 +120,7 @@ export interface CameraVideoSettingsArgs {
     /**
      * Boolean indicating if external rtsp stream is exposed
      */
-    externalRtspEnabled?: pulumi.Input<boolean>;
+    externalRtspEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */

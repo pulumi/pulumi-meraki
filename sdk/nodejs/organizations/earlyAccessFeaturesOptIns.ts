@@ -121,27 +121,27 @@ export interface EarlyAccessFeaturesOptInsState {
     /**
      * Time when Early Access Feature was created
      */
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Networks assigned to the Early Access Feature
      */
-    limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[]>;
+    limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Networks assigned to the Early Access Feature
      */
-    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[]>;
+    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * optInId path parameter. Opt in ID
      */
-    optInId?: pulumi.Input<string>;
+    optInId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * Name of Early Access Feature
      */
-    shortName?: pulumi.Input<string>;
+    shortName?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -151,15 +151,15 @@ export interface EarlyAccessFeaturesOptInsArgs {
     /**
      * Networks assigned to the Early Access Feature
      */
-    limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[]>;
+    limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Networks assigned to the Early Access Feature
      */
-    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[]>;
+    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * optInId path parameter. Opt in ID
      */
-    optInId?: pulumi.Input<string>;
+    optInId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -167,5 +167,5 @@ export interface EarlyAccessFeaturesOptInsArgs {
     /**
      * Name of Early Access Feature
      */
-    shortName?: pulumi.Input<string>;
+    shortName?: pulumi.Input<string | undefined>;
 }

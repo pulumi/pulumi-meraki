@@ -22,10 +22,10 @@ __all__ = ['CameraWirelessProfilesArgs', 'CameraWirelessProfiles']
 class CameraWirelessProfilesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 identity: Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssid: Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']] = None,
-                 wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 identity: pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssid: pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']] = None,
+                 wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CameraWirelessProfiles resource.
 
@@ -59,62 +59,62 @@ class CameraWirelessProfilesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def identity(self) -> Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']]:
+    def identity(self) -> pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']]:
         """
         The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         """
         return pulumi.get(self, "identity")
 
     @identity.setter
-    def identity(self, value: Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']]):
+    def identity(self, value: pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']]):
         pulumi.set(self, "identity", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the camera wireless profile. This parameter is required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssid(self) -> Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']]:
+    def ssid(self) -> pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']]:
         """
         The details of the SSID config.
         """
         return pulumi.get(self, "ssid")
 
     @ssid.setter
-    def ssid(self, value: Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']]):
+    def ssid(self, value: pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']]):
         pulumi.set(self, "ssid", value)
 
     @_builtins.property
     @pulumi.getter(name="wirelessProfileId")
-    def wireless_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wireless_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         wirelessProfileId path parameter. Wireless profile ID
         """
         return pulumi.get(self, "wireless_profile_id")
 
     @wireless_profile_id.setter
-    def wireless_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wireless_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wireless_profile_id", value)
 
 
 @pulumi.input_type
 class _CameraWirelessProfilesState:
     def __init__(__self__, *,
-                 applied_device_count: Optional[pulumi.Input[_builtins.int]] = None,
-                 identity: Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssid: Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']] = None,
-                 wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 applied_device_count: pulumi.Input[Optional[_builtins.int]] = None,
+                 identity: pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssid: pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']] = None,
+                 wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraWirelessProfiles resources.
 
@@ -139,71 +139,71 @@ class _CameraWirelessProfilesState:
 
     @_builtins.property
     @pulumi.getter(name="appliedDeviceCount")
-    def applied_device_count(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def applied_device_count(self) -> pulumi.Input[Optional[_builtins.int]]:
         return pulumi.get(self, "applied_device_count")
 
     @applied_device_count.setter
-    def applied_device_count(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def applied_device_count(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "applied_device_count", value)
 
     @_builtins.property
     @pulumi.getter
-    def identity(self) -> Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']]:
+    def identity(self) -> pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']]:
         """
         The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         """
         return pulumi.get(self, "identity")
 
     @identity.setter
-    def identity(self, value: Optional[pulumi.Input['CameraWirelessProfilesIdentityArgs']]):
+    def identity(self, value: pulumi.Input[Optional['CameraWirelessProfilesIdentityArgs']]):
         pulumi.set(self, "identity", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the camera wireless profile. This parameter is required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssid(self) -> Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']]:
+    def ssid(self) -> pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']]:
         """
         The details of the SSID config.
         """
         return pulumi.get(self, "ssid")
 
     @ssid.setter
-    def ssid(self, value: Optional[pulumi.Input['CameraWirelessProfilesSsidArgs']]):
+    def ssid(self, value: pulumi.Input[Optional['CameraWirelessProfilesSsidArgs']]):
         pulumi.set(self, "ssid", value)
 
     @_builtins.property
     @pulumi.getter(name="wirelessProfileId")
-    def wireless_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wireless_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         wirelessProfileId path parameter. Wireless profile ID
         """
         return pulumi.get(self, "wireless_profile_id")
 
     @wireless_profile_id.setter
-    def wireless_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wireless_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wireless_profile_id", value)
 
 
@@ -213,11 +213,11 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 identity: Optional[pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssid: Optional[pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
-                 wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+                 wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -298,11 +298,11 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 identity: Optional[pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssid: Optional[pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
-                 wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+                 wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -330,12 +330,12 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            applied_device_count: Optional[pulumi.Input[_builtins.int]] = None,
-            identity: Optional[pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ssid: Optional[pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
-            wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraWirelessProfiles':
+            applied_device_count: pulumi.Input[Optional[_builtins.int]] = None,
+            identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+            wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraWirelessProfiles':
         """
         Get an existing CameraWirelessProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

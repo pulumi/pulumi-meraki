@@ -21,12 +21,12 @@ class AppliancePortsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  port_id: pulumi.Input[_builtins.str],
-                 access_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 drop_untagged_traffic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a AppliancePorts resource.
 
@@ -80,89 +80,89 @@ class AppliancePortsArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessPolicy")
-    def access_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy. Only applicable to Access ports.
         """
         return pulumi.get(self, "access_policy")
 
     @access_policy.setter
-    def access_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_policy", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedVlans")
-    def allowed_vlans(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allowed_vlans(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
         """
         return pulumi.get(self, "allowed_vlans")
 
     @allowed_vlans.setter
-    def allowed_vlans(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allowed_vlans(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allowed_vlans", value)
 
     @_builtins.property
     @pulumi.getter(name="dropUntaggedTraffic")
-    def drop_untagged_traffic(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def drop_untagged_traffic(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether the trunk port can drop all untagged traffic.
         """
         return pulumi.get(self, "drop_untagged_traffic")
 
     @drop_untagged_traffic.setter
-    def drop_untagged_traffic(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def drop_untagged_traffic(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "drop_untagged_traffic", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The status of the port
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the port: 'access' or 'trunk'.
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
 @pulumi.input_type
 class _AppliancePortsState:
     def __init__(__self__, *,
-                 access_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 drop_untagged_traffic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AppliancePorts resources.
 
@@ -197,110 +197,110 @@ class _AppliancePortsState:
 
     @_builtins.property
     @pulumi.getter(name="accessPolicy")
-    def access_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy. Only applicable to Access ports.
         """
         return pulumi.get(self, "access_policy")
 
     @access_policy.setter
-    def access_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_policy", value)
 
     @_builtins.property
     @pulumi.getter(name="allowedVlans")
-    def allowed_vlans(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allowed_vlans(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
         """
         return pulumi.get(self, "allowed_vlans")
 
     @allowed_vlans.setter
-    def allowed_vlans(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allowed_vlans(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allowed_vlans", value)
 
     @_builtins.property
     @pulumi.getter(name="dropUntaggedTraffic")
-    def drop_untagged_traffic(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def drop_untagged_traffic(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether the trunk port can drop all untagged traffic.
         """
         return pulumi.get(self, "drop_untagged_traffic")
 
     @drop_untagged_traffic.setter
-    def drop_untagged_traffic(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def drop_untagged_traffic(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "drop_untagged_traffic", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         The status of the port
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of the port
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter(name="portId")
-    def port_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         portId path parameter. Port ID
         """
         return pulumi.get(self, "port_id")
 
     @port_id.setter
-    def port_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The type of the port: 'access' or 'trunk'.
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def vlan(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode.
         """
         return pulumi.get(self, "vlan")
 
     @vlan.setter
-    def vlan(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan", value)
 
 
@@ -310,14 +310,14 @@ class AppliancePorts(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 drop_untagged_traffic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -403,14 +403,14 @@ class AppliancePorts(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-                 drop_untagged_traffic: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan: Optional[pulumi.Input[_builtins.int]] = None,
+                 access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+                 drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -443,15 +443,15 @@ class AppliancePorts(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_policy: Optional[pulumi.Input[_builtins.str]] = None,
-            allowed_vlans: Optional[pulumi.Input[_builtins.str]] = None,
-            drop_untagged_traffic: Optional[pulumi.Input[_builtins.bool]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.int]] = None,
-            port_id: Optional[pulumi.Input[_builtins.str]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan: Optional[pulumi.Input[_builtins.int]] = None) -> 'AppliancePorts':
+            access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+            drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.int]] = None,
+            port_id: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> 'AppliancePorts':
         """
         Get an existing AppliancePorts resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

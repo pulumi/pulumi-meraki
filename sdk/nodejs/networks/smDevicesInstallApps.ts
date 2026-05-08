@@ -111,12 +111,12 @@ export interface SmDevicesInstallAppsState {
     /**
      * deviceId path parameter. Device ID
      */
-    deviceId?: pulumi.Input<string>;
+    deviceId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesInstallAppsParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesInstallAppsParameters | undefined>;
 }
 
 /**

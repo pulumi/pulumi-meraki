@@ -200,59 +200,59 @@ export interface SwitchStacksRoutingInterfacesDhcpState {
     /**
      * The PXE boot server file name for the DHCP server running on the switch stack interface
      */
-    bootFileName?: pulumi.Input<string>;
+    bootFileName?: pulumi.Input<string | undefined>;
     /**
      * The PXE boot server IP for the DHCP server running on the switch stack interface
      */
-    bootNextServer?: pulumi.Input<string>;
+    bootNextServer?: pulumi.Input<string | undefined>;
     /**
      * Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
      */
-    bootOptionsEnabled?: pulumi.Input<boolean>;
+    bootOptionsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
      */
-    dhcpMode?: pulumi.Input<string>;
+    dhcpMode?: pulumi.Input<string | undefined>;
     /**
      * Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
      */
-    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption>[]>;
+    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption>[] | undefined>;
     /**
      * The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
      */
-    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DHCP name server IPs when DHCP name server option is 'custom'
      */
-    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
      */
-    dnsNameserversOption?: pulumi.Input<string>;
+    dnsNameserversOption?: pulumi.Input<string | undefined>;
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment>[]>;
+    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment>[] | undefined>;
     /**
      * interfaceId path parameter. Interface ID
      */
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange>[] | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -262,43 +262,43 @@ export interface SwitchStacksRoutingInterfacesDhcpArgs {
     /**
      * The PXE boot server file name for the DHCP server running on the switch stack interface
      */
-    bootFileName?: pulumi.Input<string>;
+    bootFileName?: pulumi.Input<string | undefined>;
     /**
      * The PXE boot server IP for the DHCP server running on the switch stack interface
      */
-    bootNextServer?: pulumi.Input<string>;
+    bootNextServer?: pulumi.Input<string | undefined>;
     /**
      * Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
      */
-    bootOptionsEnabled?: pulumi.Input<boolean>;
+    bootOptionsEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
      */
-    dhcpLeaseTime?: pulumi.Input<string>;
+    dhcpLeaseTime?: pulumi.Input<string | undefined>;
     /**
      * The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
      */
-    dhcpMode?: pulumi.Input<string>;
+    dhcpMode?: pulumi.Input<string | undefined>;
     /**
      * Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
      */
-    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption>[]>;
+    dhcpOptions?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption>[] | undefined>;
     /**
      * The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
      */
-    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[]>;
+    dhcpRelayServerIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DHCP name server IPs when DHCP name server option is 'custom'
      */
-    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsCustomNameservers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
      */
-    dnsNameserversOption?: pulumi.Input<string>;
+    dnsNameserversOption?: pulumi.Input<string | undefined>;
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment>[]>;
+    fixedIpAssignments?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment>[] | undefined>;
     /**
      * interfaceId path parameter. Interface ID
      */
@@ -310,7 +310,7 @@ export interface SwitchStacksRoutingInterfacesDhcpArgs {
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange>[]>;
+    reservedIpRanges?: pulumi.Input<pulumi.Input<inputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange>[] | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */

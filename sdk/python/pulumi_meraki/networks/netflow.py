@@ -20,11 +20,11 @@ __all__ = ['NetflowArgs', 'Netflow']
 class NetflowArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 collector_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 collector_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Netflow resource.
 
@@ -61,74 +61,74 @@ class NetflowArgs:
 
     @_builtins.property
     @pulumi.getter(name="collectorIp")
-    def collector_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def collector_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IPv4 address of the NetFlow collector.
         """
         return pulumi.get(self, "collector_ip")
 
     @collector_ip.setter
-    def collector_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def collector_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "collector_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="collectorPort")
-    def collector_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def collector_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The port that the NetFlow collector will be listening on.
         """
         return pulumi.get(self, "collector_port")
 
     @collector_port.setter
-    def collector_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def collector_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "collector_port", value)
 
     @_builtins.property
     @pulumi.getter(name="etaDstPort")
-    def eta_dst_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eta_dst_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The port that the Encrypted Traffic Analytics collector will be listening on.
         """
         return pulumi.get(self, "eta_dst_port")
 
     @eta_dst_port.setter
-    def eta_dst_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eta_dst_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eta_dst_port", value)
 
     @_builtins.property
     @pulumi.getter(name="etaEnabled")
-    def eta_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eta_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false).
         """
         return pulumi.get(self, "eta_enabled")
 
     @eta_enabled.setter
-    def eta_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eta_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eta_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="reportingEnabled")
-    def reporting_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def reporting_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
         """
         return pulumi.get(self, "reporting_enabled")
 
     @reporting_enabled.setter
-    def reporting_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def reporting_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "reporting_enabled", value)
 
 
 @pulumi.input_type
 class _NetflowState:
     def __init__(__self__, *,
-                 collector_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 collector_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Netflow resources.
 
@@ -154,74 +154,74 @@ class _NetflowState:
 
     @_builtins.property
     @pulumi.getter(name="collectorIp")
-    def collector_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def collector_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IPv4 address of the NetFlow collector.
         """
         return pulumi.get(self, "collector_ip")
 
     @collector_ip.setter
-    def collector_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def collector_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "collector_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="collectorPort")
-    def collector_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def collector_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The port that the NetFlow collector will be listening on.
         """
         return pulumi.get(self, "collector_port")
 
     @collector_port.setter
-    def collector_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def collector_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "collector_port", value)
 
     @_builtins.property
     @pulumi.getter(name="etaDstPort")
-    def eta_dst_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eta_dst_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The port that the Encrypted Traffic Analytics collector will be listening on.
         """
         return pulumi.get(self, "eta_dst_port")
 
     @eta_dst_port.setter
-    def eta_dst_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eta_dst_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eta_dst_port", value)
 
     @_builtins.property
     @pulumi.getter(name="etaEnabled")
-    def eta_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def eta_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false).
         """
         return pulumi.get(self, "eta_enabled")
 
     @eta_enabled.setter
-    def eta_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def eta_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "eta_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="reportingEnabled")
-    def reporting_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def reporting_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
         """
         return pulumi.get(self, "reporting_enabled")
 
     @reporting_enabled.setter
-    def reporting_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def reporting_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "reporting_enabled", value)
 
 
@@ -231,12 +231,12 @@ class Netflow(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 collector_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 collector_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -316,12 +316,12 @@ class Netflow(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 collector_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 collector_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 eta_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -349,12 +349,12 @@ class Netflow(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            collector_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            collector_port: Optional[pulumi.Input[_builtins.int]] = None,
-            eta_dst_port: Optional[pulumi.Input[_builtins.int]] = None,
-            eta_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None) -> 'Netflow':
+            collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+            eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+            eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'Netflow':
         """
         Get an existing Netflow resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

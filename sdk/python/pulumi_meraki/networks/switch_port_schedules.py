@@ -22,9 +22,9 @@ __all__ = ['SwitchPortSchedulesArgs', 'SwitchPortSchedules']
 class SwitchPortSchedulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule: Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule: pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchPortSchedules resource.
 
@@ -57,19 +57,19 @@ class SwitchPortSchedulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name for your port schedule. Required
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="portSchedule")
-    def port_schedule(self) -> Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']]:
+    def port_schedule(self) -> pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']]:
         """
         The schedule for switch port scheduling. Schedules are applied to days of the week.
         When it's empty, default schedule with all days of a week are configured.
@@ -78,29 +78,29 @@ class SwitchPortSchedulesArgs:
         return pulumi.get(self, "port_schedule")
 
     @port_schedule.setter
-    def port_schedule(self, value: Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']]):
+    def port_schedule(self, value: pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']]):
         pulumi.set(self, "port_schedule", value)
 
     @_builtins.property
     @pulumi.getter(name="portScheduleId")
-    def port_schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         portScheduleId path parameter. Port schedule ID
         """
         return pulumi.get(self, "port_schedule_id")
 
     @port_schedule_id.setter
-    def port_schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_schedule_id", value)
 
 
 @pulumi.input_type
 class _SwitchPortSchedulesState:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule: Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule: pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchPortSchedules resources.
 
@@ -122,31 +122,31 @@ class _SwitchPortSchedulesState:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name for your port schedule. Required
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="portSchedule")
-    def port_schedule(self) -> Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']]:
+    def port_schedule(self) -> pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']]:
         """
         The schedule for switch port scheduling. Schedules are applied to days of the week.
         When it's empty, default schedule with all days of a week are configured.
@@ -155,19 +155,19 @@ class _SwitchPortSchedulesState:
         return pulumi.get(self, "port_schedule")
 
     @port_schedule.setter
-    def port_schedule(self, value: Optional[pulumi.Input['SwitchPortSchedulesPortScheduleArgs']]):
+    def port_schedule(self, value: pulumi.Input[Optional['SwitchPortSchedulesPortScheduleArgs']]):
         pulumi.set(self, "port_schedule", value)
 
     @_builtins.property
     @pulumi.getter(name="portScheduleId")
-    def port_schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         portScheduleId path parameter. Port schedule ID
         """
         return pulumi.get(self, "port_schedule_id")
 
     @port_schedule_id.setter
-    def port_schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_schedule_id", value)
 
 
@@ -177,10 +177,10 @@ class SwitchPortSchedules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -326,10 +326,10 @@ class SwitchPortSchedules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
-                 port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+                 port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -355,10 +355,10 @@ class SwitchPortSchedules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
-            port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchPortSchedules':
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+            port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchPortSchedules':
         """
         Get an existing SwitchPortSchedules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

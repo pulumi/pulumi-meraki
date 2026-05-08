@@ -22,7 +22,7 @@ __all__ = ['ApplianceSecurityIntrusionArgs', 'ApplianceSecurityIntrusion']
 class ApplianceSecurityIntrusionArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]] = None):
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceSecurityIntrusion resource.
 
@@ -47,22 +47,22 @@ class ApplianceSecurityIntrusionArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowedRules")
-    def allowed_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]:
+    def allowed_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]:
         """
         Sets a list of specific SNORT signatures to allow
         """
         return pulumi.get(self, "allowed_rules")
 
     @allowed_rules.setter
-    def allowed_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]):
+    def allowed_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]):
         pulumi.set(self, "allowed_rules", value)
 
 
 @pulumi.input_type
 class _ApplianceSecurityIntrusionState:
     def __init__(__self__, *,
-                 allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSecurityIntrusion resources.
 
@@ -76,26 +76,26 @@ class _ApplianceSecurityIntrusionState:
 
     @_builtins.property
     @pulumi.getter(name="allowedRules")
-    def allowed_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]:
+    def allowed_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]:
         """
         Sets a list of specific SNORT signatures to allow
         """
         return pulumi.get(self, "allowed_rules")
 
     @allowed_rules.setter
-    def allowed_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]):
+    def allowed_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]]):
         pulumi.set(self, "allowed_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -180,8 +180,8 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -205,8 +205,8 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceSecurityIntrusion':
+            allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSecurityIntrusion':
         """
         Get an existing ApplianceSecurityIntrusion resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

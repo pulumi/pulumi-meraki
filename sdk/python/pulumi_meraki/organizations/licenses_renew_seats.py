@@ -56,9 +56,9 @@ class LicensesRenewSeatsArgs:
 @pulumi.input_type
 class _LicensesRenewSeatsState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['LicensesRenewSeatsItemArgs']] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['LicensesRenewSeatsParametersArgs']] = None):
+                 item: pulumi.Input[Optional['LicensesRenewSeatsItemArgs']] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['LicensesRenewSeatsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering LicensesRenewSeats resources.
 
@@ -73,32 +73,32 @@ class _LicensesRenewSeatsState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['LicensesRenewSeatsItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['LicensesRenewSeatsItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['LicensesRenewSeatsItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['LicensesRenewSeatsItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['LicensesRenewSeatsParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['LicensesRenewSeatsParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['LicensesRenewSeatsParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['LicensesRenewSeatsParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -108,8 +108,8 @@ class LicensesRenewSeats(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -176,8 +176,8 @@ class LicensesRenewSeats(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -204,9 +204,9 @@ class LicensesRenewSeats(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['LicensesRenewSeatsItemArgs', 'LicensesRenewSeatsItemArgsDict']]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None) -> 'LicensesRenewSeats':
+            item: pulumi.Input[Optional[Union['LicensesRenewSeatsItemArgs', 'LicensesRenewSeatsItemArgsDict']]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensesRenewSeatsParametersArgs', 'LicensesRenewSeatsParametersArgsDict']]] = None) -> 'LicensesRenewSeats':
         """
         Get an existing LicensesRenewSeats resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

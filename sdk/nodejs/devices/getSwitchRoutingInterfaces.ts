@@ -73,9 +73,9 @@ export interface GetSwitchRoutingInterfacesOutputArgs {
     /**
      * interfaceId path parameter. Interface ID
      */
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }

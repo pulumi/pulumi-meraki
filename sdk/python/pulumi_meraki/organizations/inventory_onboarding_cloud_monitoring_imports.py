@@ -56,8 +56,8 @@ class InventoryOnboardingCloudMonitoringImportsArgs:
 @pulumi.input_type
 class _InventoryOnboardingCloudMonitoringImportsState:
     def __init__(__self__, *,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersArgs']] = None):
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringImportsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryOnboardingCloudMonitoringImports resources.
 
@@ -70,23 +70,23 @@ class _InventoryOnboardingCloudMonitoringImportsState:
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['InventoryOnboardingCloudMonitoringImportsParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['InventoryOnboardingCloudMonitoringImportsParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -96,8 +96,8 @@ class InventoryOnboardingCloudMonitoringImports(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -182,8 +182,8 @@ class InventoryOnboardingCloudMonitoringImports(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -209,8 +209,8 @@ class InventoryOnboardingCloudMonitoringImports(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringImports':
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringImportsParametersArgs', 'InventoryOnboardingCloudMonitoringImportsParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringImports':
         """
         Get an existing InventoryOnboardingCloudMonitoringImports resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

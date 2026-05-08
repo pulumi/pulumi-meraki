@@ -113,15 +113,15 @@ export interface WirelessBillingState {
     /**
      * The currency code of this node group's billing plans
      */
-    currency?: pulumi.Input<string>;
+    currency?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Array of billing plans in the node group. (Can configure a maximum of 5)
      */
-    plans?: pulumi.Input<pulumi.Input<inputs.networks.WirelessBillingPlan>[]>;
+    plans?: pulumi.Input<pulumi.Input<inputs.networks.WirelessBillingPlan>[] | undefined>;
 }
 
 /**
@@ -131,7 +131,7 @@ export interface WirelessBillingArgs {
     /**
      * The currency code of this node group's billing plans
      */
-    currency?: pulumi.Input<string>;
+    currency?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -139,5 +139,5 @@ export interface WirelessBillingArgs {
     /**
      * Array of billing plans in the node group. (Can configure a maximum of 5)
      */
-    plans?: pulumi.Input<pulumi.Input<inputs.networks.WirelessBillingPlan>[]>;
+    plans?: pulumi.Input<pulumi.Input<inputs.networks.WirelessBillingPlan>[] | undefined>;
 }

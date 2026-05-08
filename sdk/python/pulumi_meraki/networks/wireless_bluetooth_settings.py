@@ -20,12 +20,12 @@ __all__ = ['WirelessBluetoothSettingsArgs', 'WirelessBluetoothSettings']
 class WirelessBluetoothSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 advertising_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 major_minor_assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 scanning_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessBluetoothSettings resource.
 
@@ -65,88 +65,88 @@ class WirelessBluetoothSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertisingEnabled")
-    def advertising_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertising_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether APs will advertise beacons.
         """
         return pulumi.get(self, "advertising_enabled")
 
     @advertising_enabled.setter
-    def advertising_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertising_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertising_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def major(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def major(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
         """
         return pulumi.get(self, "major")
 
     @major.setter
-    def major(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def major(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "major", value)
 
     @_builtins.property
     @pulumi.getter(name="majorMinorAssignmentMode")
-    def major_minor_assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def major_minor_assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
         """
         return pulumi.get(self, "major_minor_assignment_mode")
 
     @major_minor_assignment_mode.setter
-    def major_minor_assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def major_minor_assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "major_minor_assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def minor(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def minor(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
         """
         return pulumi.get(self, "minor")
 
     @minor.setter
-    def minor(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def minor(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "minor", value)
 
     @_builtins.property
     @pulumi.getter(name="scanningEnabled")
-    def scanning_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def scanning_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether APs will scan for Bluetooth enabled clients.
         """
         return pulumi.get(self, "scanning_enabled")
 
     @scanning_enabled.setter
-    def scanning_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def scanning_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "scanning_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def uuid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uuid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The UUID to be used in the beacon identifier.
         """
         return pulumi.get(self, "uuid")
 
     @uuid.setter
-    def uuid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uuid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uuid", value)
 
 
 @pulumi.input_type
 class _WirelessBluetoothSettingsState:
     def __init__(__self__, *,
-                 advertising_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 esl_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 major_minor_assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scanning_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 esl_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessBluetoothSettings resources.
 
@@ -178,98 +178,98 @@ class _WirelessBluetoothSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="advertisingEnabled")
-    def advertising_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertising_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether APs will advertise beacons.
         """
         return pulumi.get(self, "advertising_enabled")
 
     @advertising_enabled.setter
-    def advertising_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertising_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertising_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="eslEnabled")
-    def esl_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def esl_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether ESL is enabled on this network.
         """
         return pulumi.get(self, "esl_enabled")
 
     @esl_enabled.setter
-    def esl_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def esl_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "esl_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def major(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def major(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
         """
         return pulumi.get(self, "major")
 
     @major.setter
-    def major(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def major(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "major", value)
 
     @_builtins.property
     @pulumi.getter(name="majorMinorAssignmentMode")
-    def major_minor_assignment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def major_minor_assignment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
         """
         return pulumi.get(self, "major_minor_assignment_mode")
 
     @major_minor_assignment_mode.setter
-    def major_minor_assignment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def major_minor_assignment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "major_minor_assignment_mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def minor(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def minor(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
         """
         return pulumi.get(self, "minor")
 
     @minor.setter
-    def minor(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def minor(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "minor", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="scanningEnabled")
-    def scanning_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def scanning_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether APs will scan for Bluetooth enabled clients.
         """
         return pulumi.get(self, "scanning_enabled")
 
     @scanning_enabled.setter
-    def scanning_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def scanning_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "scanning_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def uuid(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def uuid(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The UUID to be used in the beacon identifier.
         """
         return pulumi.get(self, "uuid")
 
     @uuid.setter
-    def uuid(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def uuid(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "uuid", value)
 
 
@@ -279,13 +279,13 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertising_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 major_minor_assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scanning_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -368,13 +368,13 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertising_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 major: Optional[pulumi.Input[_builtins.int]] = None,
-                 major_minor_assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 minor: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 scanning_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 uuid: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 major: pulumi.Input[Optional[_builtins.int]] = None,
+                 major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 minor: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 uuid: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -404,14 +404,14 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertising_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            esl_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            major: Optional[pulumi.Input[_builtins.int]] = None,
-            major_minor_assignment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            minor: Optional[pulumi.Input[_builtins.int]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            scanning_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            uuid: Optional[pulumi.Input[_builtins.str]] = None) -> 'WirelessBluetoothSettings':
+            advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            esl_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            major: pulumi.Input[Optional[_builtins.int]] = None,
+            major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            minor: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            uuid: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessBluetoothSettings':
         """
         Get an existing WirelessBluetoothSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

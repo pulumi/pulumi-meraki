@@ -115,23 +115,23 @@ export interface ConfigTemplatesState {
     /**
      * configTemplateId path parameter. Config template ID
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * The name of the configuration template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * The product types of the configuration template
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
      */
-    timeZone?: pulumi.Input<string>;
+    timeZone?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -141,11 +141,11 @@ export interface ConfigTemplatesArgs {
     /**
      * configTemplateId path parameter. Config template ID
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * The name of the configuration template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -153,5 +153,5 @@ export interface ConfigTemplatesArgs {
     /**
      * The timezone of the configuration template. For a list of allowed timezones, please see the 'TZ' column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
      */
-    timeZone?: pulumi.Input<string>;
+    timeZone?: pulumi.Input<string | undefined>;
 }

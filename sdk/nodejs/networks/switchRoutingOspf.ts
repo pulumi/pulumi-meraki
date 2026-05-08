@@ -156,35 +156,35 @@ export interface SwitchRoutingOspfState {
     /**
      * OSPF areas
      */
-    areas?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingOspfArea>[]>;
+    areas?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingOspfArea>[] | undefined>;
     /**
      * Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
      */
-    deadTimerInSeconds?: pulumi.Input<number>;
+    deadTimerInSeconds?: pulumi.Input<number | undefined>;
     /**
      * Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
      */
-    helloTimerInSeconds?: pulumi.Input<number>;
+    helloTimerInSeconds?: pulumi.Input<number | undefined>;
     /**
      * Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
      */
-    md5AuthenticationEnabled?: pulumi.Input<boolean>;
+    md5AuthenticationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
      */
-    md5AuthenticationKey?: pulumi.Input<inputs.networks.SwitchRoutingOspfMd5AuthenticationKey>;
+    md5AuthenticationKey?: pulumi.Input<inputs.networks.SwitchRoutingOspfMd5AuthenticationKey | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * OSPF v3 configuration
      */
-    v3?: pulumi.Input<inputs.networks.SwitchRoutingOspfV3>;
+    v3?: pulumi.Input<inputs.networks.SwitchRoutingOspfV3 | undefined>;
 }
 
 /**
@@ -194,27 +194,27 @@ export interface SwitchRoutingOspfArgs {
     /**
      * OSPF areas
      */
-    areas?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingOspfArea>[]>;
+    areas?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingOspfArea>[] | undefined>;
     /**
      * Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
      */
-    deadTimerInSeconds?: pulumi.Input<number>;
+    deadTimerInSeconds?: pulumi.Input<number | undefined>;
     /**
      * Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
      */
-    helloTimerInSeconds?: pulumi.Input<number>;
+    helloTimerInSeconds?: pulumi.Input<number | undefined>;
     /**
      * Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
      */
-    md5AuthenticationEnabled?: pulumi.Input<boolean>;
+    md5AuthenticationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
      */
-    md5AuthenticationKey?: pulumi.Input<inputs.networks.SwitchRoutingOspfMd5AuthenticationKey>;
+    md5AuthenticationKey?: pulumi.Input<inputs.networks.SwitchRoutingOspfMd5AuthenticationKey | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -222,5 +222,5 @@ export interface SwitchRoutingOspfArgs {
     /**
      * OSPF v3 configuration
      */
-    v3?: pulumi.Input<inputs.networks.SwitchRoutingOspfV3>;
+    v3?: pulumi.Input<inputs.networks.SwitchRoutingOspfV3 | undefined>;
 }

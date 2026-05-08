@@ -122,19 +122,19 @@ export interface ApplianceRadioSettingsState {
     /**
      * Manual radio settings for 5 GHz
      */
-    fiveGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsFiveGhzSettings | undefined>;
     /**
      * RF Profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * The device serial
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Manual radio settings for 2.4 GHz
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsTwoFourGhzSettings | undefined>;
 }
 
 /**
@@ -144,11 +144,11 @@ export interface ApplianceRadioSettingsArgs {
     /**
      * Manual radio settings for 5 GHz
      */
-    fiveGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsFiveGhzSettings | undefined>;
     /**
      * RF Profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * The device serial
      */
@@ -156,5 +156,5 @@ export interface ApplianceRadioSettingsArgs {
     /**
      * Manual radio settings for 2.4 GHz
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.devices.ApplianceRadioSettingsTwoFourGhzSettings | undefined>;
 }

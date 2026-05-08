@@ -97,12 +97,12 @@ export class Clone extends pulumi.CustomResource {
  * Input properties used for looking up and filtering Clone resources.
  */
 export interface CloneState {
-    item?: pulumi.Input<inputs.organizations.CloneItem>;
+    item?: pulumi.Input<inputs.organizations.CloneItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.CloneParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.CloneParameters | undefined>;
 }
 
 /**

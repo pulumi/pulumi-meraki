@@ -71,10 +71,10 @@ class SwitchStacksRemoveArgs:
 @pulumi.input_type
 class _SwitchStacksRemoveState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['SwitchStacksRemoveItemArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['SwitchStacksRemoveParametersArgs']] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 item: pulumi.Input[Optional['SwitchStacksRemoveItemArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['SwitchStacksRemoveParametersArgs']] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchStacksRemove resources.
 
@@ -92,44 +92,44 @@ class _SwitchStacksRemoveState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['SwitchStacksRemoveItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['SwitchStacksRemoveItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['SwitchStacksRemoveItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['SwitchStacksRemoveItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['SwitchStacksRemoveParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['SwitchStacksRemoveParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['SwitchStacksRemoveParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['SwitchStacksRemoveParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
     @_builtins.property
     @pulumi.getter(name="switchStackId")
-    def switch_stack_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def switch_stack_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         switchStackId path parameter. Switch stack ID
         """
         return pulumi.get(self, "switch_stack_id")
 
     @switch_stack_id.setter
-    def switch_stack_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def switch_stack_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "switch_stack_id", value)
 
 
@@ -139,9 +139,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -209,9 +209,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
-                 switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+                 switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -241,10 +241,10 @@ class SwitchStacksRemove(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
-            switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchStacksRemove':
+            item: pulumi.Input[Optional[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+            switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchStacksRemove':
         """
         Get an existing SwitchStacksRemove resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

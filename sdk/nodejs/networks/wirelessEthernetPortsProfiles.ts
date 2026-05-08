@@ -137,27 +137,27 @@ export interface WirelessEthernetPortsProfilesState {
     /**
      * Is default profile
      */
-    isDefault?: pulumi.Input<boolean>;
+    isDefault?: pulumi.Input<boolean | undefined>;
     /**
      * AP port profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Ports config
      */
-    ports?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesPort>[]>;
+    ports?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesPort>[] | undefined>;
     /**
      * AP port profile ID
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * Usb ports config
      */
-    usbPorts?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesUsbPort>[]>;
+    usbPorts?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesUsbPort>[] | undefined>;
 }
 
 /**
@@ -167,7 +167,7 @@ export interface WirelessEthernetPortsProfilesArgs {
     /**
      * AP port profile name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -175,7 +175,7 @@ export interface WirelessEthernetPortsProfilesArgs {
     /**
      * Ports config
      */
-    ports?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesPort>[]>;
+    ports?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesPort>[] | undefined>;
     /**
      * AP port profile ID
      */
@@ -183,5 +183,5 @@ export interface WirelessEthernetPortsProfilesArgs {
     /**
      * Usb ports config
      */
-    usbPorts?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesUsbPort>[]>;
+    usbPorts?: pulumi.Input<pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesUsbPort>[] | undefined>;
 }

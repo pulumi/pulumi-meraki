@@ -97,12 +97,12 @@ export class DevicesClaimVmx extends pulumi.CustomResource {
  * Input properties used for looking up and filtering DevicesClaimVmx resources.
  */
 export interface DevicesClaimVmxState {
-    item?: pulumi.Input<inputs.networks.DevicesClaimVmxItem>;
+    item?: pulumi.Input<inputs.networks.DevicesClaimVmxItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.DevicesClaimVmxParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.DevicesClaimVmxParameters | undefined>;
 }
 
 /**

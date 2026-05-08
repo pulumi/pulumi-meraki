@@ -127,23 +127,23 @@ export interface WirelessSsidsFirewallL3FirewallRulesState {
     /**
      * Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
      */
-    allowLanAccess?: pulumi.Input<boolean>;
+    allowLanAccess?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[] | undefined>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[] | undefined>;
 }
 
 /**
@@ -153,7 +153,7 @@ export interface WirelessSsidsFirewallL3FirewallRulesArgs {
     /**
      * Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
      */
-    allowLanAccess?: pulumi.Input<boolean>;
+    allowLanAccess?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -165,9 +165,9 @@ export interface WirelessSsidsFirewallL3FirewallRulesArgs {
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[] | undefined>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[] | undefined>;
 }

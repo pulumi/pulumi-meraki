@@ -183,38 +183,38 @@ export interface GetLicensingSubscriptionSubscriptionsOutputArgs {
      * endDate query parameter. Filter subscriptions by end date, ISO 8601 format. To filter with a range of dates, use 'endDate[
      * ]=?' in the request. Accepted options include lt, gt, lte, gte.
      */
-    endDate?: pulumi.Input<string>;
+    endDate?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * organizationIds query parameter. Organizations to get associated subscriptions for
      */
-    organizationIds?: pulumi.Input<pulumi.Input<string>[]>;
+    organizationIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * productTypes query parameter. List of product types that returned subscriptions need to have entitlements for.
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startDate query parameter. Filter subscriptions by start date, ISO 8601 format. To filter with a range of dates, use 'startDate[
      * ]=?' in the request. Accepted options include lt, gt, lte, gte.
      */
-    startDate?: pulumi.Input<string>;
+    startDate?: pulumi.Input<string | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * statuses query parameter. List of statuses that returned subscriptions can have
      */
-    statuses?: pulumi.Input<pulumi.Input<string>[]>;
+    statuses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * subscriptionIds query parameter. List of subscription ids to fetch
      */
-    subscriptionIds?: pulumi.Input<pulumi.Input<string>[]>;
+    subscriptionIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

@@ -22,7 +22,7 @@ __all__ = ['CameraWirelessProfilesArgs', 'CameraWirelessProfiles']
 class CameraWirelessProfilesArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 ids: Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']] = None):
+                 ids: pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']] = None):
         """
         The set of arguments for constructing a CameraWirelessProfiles resource.
 
@@ -47,22 +47,22 @@ class CameraWirelessProfilesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ids(self) -> Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']]:
+    def ids(self) -> pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']]:
         """
         The ids of the wireless profile to assign to the given camera
         """
         return pulumi.get(self, "ids")
 
     @ids.setter
-    def ids(self, value: Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']]):
+    def ids(self, value: pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']]):
         pulumi.set(self, "ids", value)
 
 
 @pulumi.input_type
 class _CameraWirelessProfilesState:
     def __init__(__self__, *,
-                 ids: Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 ids: pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraWirelessProfiles resources.
 
@@ -76,26 +76,26 @@ class _CameraWirelessProfilesState:
 
     @_builtins.property
     @pulumi.getter
-    def ids(self) -> Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']]:
+    def ids(self) -> pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']]:
         """
         The ids of the wireless profile to assign to the given camera
         """
         return pulumi.get(self, "ids")
 
     @ids.setter
-    def ids(self, value: Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']]):
+    def ids(self, value: pulumi.Input[Optional['CameraWirelessProfilesIdsArgs']]):
         pulumi.set(self, "ids", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -105,8 +105,8 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 ids: pulumi.Input[Optional[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 ids: pulumi.Input[Optional[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraWirelessProfiles':
+            ids: pulumi.Input[Optional[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraWirelessProfiles':
         """
         Get an existing CameraWirelessProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

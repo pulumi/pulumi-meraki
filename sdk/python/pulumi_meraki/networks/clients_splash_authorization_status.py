@@ -23,7 +23,7 @@ class ClientsSplashAuthorizationStatusArgs:
     def __init__(__self__, *,
                  client_id: pulumi.Input[_builtins.str],
                  network_id: pulumi.Input[_builtins.str],
-                 ssids: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
+                 ssids: pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
         """
         The set of arguments for constructing a ClientsSplashAuthorizationStatus resource.
 
@@ -62,23 +62,23 @@ class ClientsSplashAuthorizationStatusArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ssids(self) -> Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']]:
+    def ssids(self) -> pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']]:
         """
         The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
         """
         return pulumi.get(self, "ssids")
 
     @ssids.setter
-    def ssids(self, value: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']]):
+    def ssids(self, value: pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']]):
         pulumi.set(self, "ssids", value)
 
 
 @pulumi.input_type
 class _ClientsSplashAuthorizationStatusState:
     def __init__(__self__, *,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
         """
         Input properties used for looking up and filtering ClientsSplashAuthorizationStatus resources.
 
@@ -95,38 +95,38 @@ class _ClientsSplashAuthorizationStatusState:
 
     @_builtins.property
     @pulumi.getter(name="clientId")
-    def client_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def client_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         clientId path parameter. Client ID
         """
         return pulumi.get(self, "client_id")
 
     @client_id.setter
-    def client_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def client_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "client_id", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssids(self) -> Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']]:
+    def ssids(self) -> pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']]:
         """
         The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
         """
         return pulumi.get(self, "ssids")
 
     @ssids.setter
-    def ssids(self, value: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']]):
+    def ssids(self, value: pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsArgs']]):
         pulumi.set(self, "ssids", value)
 
 
@@ -136,9 +136,9 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -223,9 +223,9 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -252,9 +252,9 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            client_id: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None) -> 'ClientsSplashAuthorizationStatus':
+            client_id: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ssids: pulumi.Input[Optional[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None) -> 'ClientsSplashAuthorizationStatus':
         """
         Get an existing ClientsSplashAuthorizationStatus resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

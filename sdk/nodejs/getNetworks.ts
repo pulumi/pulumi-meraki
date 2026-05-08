@@ -143,37 +143,37 @@ export interface GetNetworksOutputArgs {
     /**
      * configTemplateId query parameter. An optional parameter that is the ID of a config template. Will return all networks bound to that template.
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * isBoundToConfigTemplate query parameter. An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
      */
-    isBoundToConfigTemplate?: pulumi.Input<boolean>;
+    isBoundToConfigTemplate?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 100000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * tags query parameter. An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * tagsFilterType query parameter. An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
      */
-    tagsFilterType?: pulumi.Input<string>;
+    tagsFilterType?: pulumi.Input<string | undefined>;
 }

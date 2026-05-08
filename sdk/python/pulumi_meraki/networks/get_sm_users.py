@@ -167,11 +167,11 @@ def get_sm_users(emails: Optional[Sequence[_builtins.str]] = None,
         network_id=pulumi.get(__ret__, 'network_id'),
         scopes=pulumi.get(__ret__, 'scopes'),
         usernames=pulumi.get(__ret__, 'usernames'))
-def get_sm_users_output(emails: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                        ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                        network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                        scopes: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                        usernames: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_sm_users_output(emails: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                        ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                        network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                        scopes: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                        usernames: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmUsersResult]:
     """
     ## Example Usage

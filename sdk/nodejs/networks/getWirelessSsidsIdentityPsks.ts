@@ -83,13 +83,13 @@ export interface GetWirelessSsidsIdentityPsksOutputArgs {
     /**
      * identityPskId path parameter. Identity psk ID
      */
-    identityPskId?: pulumi.Input<string>;
+    identityPskId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
 }

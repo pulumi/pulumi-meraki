@@ -113,19 +113,19 @@ export interface SwitchLinkAggregationsState {
     /**
      * linkAggregationId path parameter. Link aggregation ID
      */
-    linkAggregationId?: pulumi.Input<string>;
+    linkAggregationId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    switchPorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchPort>[]>;
+    switchPorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchPort>[] | undefined>;
     /**
      * Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    switchProfilePorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchProfilePort>[]>;
+    switchProfilePorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchProfilePort>[] | undefined>;
 }
 
 /**
@@ -135,7 +135,7 @@ export interface SwitchLinkAggregationsArgs {
     /**
      * linkAggregationId path parameter. Link aggregation ID
      */
-    linkAggregationId?: pulumi.Input<string>;
+    linkAggregationId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -143,9 +143,9 @@ export interface SwitchLinkAggregationsArgs {
     /**
      * Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    switchPorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchPort>[]>;
+    switchPorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchPort>[] | undefined>;
     /**
      * Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    switchProfilePorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchProfilePort>[]>;
+    switchProfilePorts?: pulumi.Input<pulumi.Input<inputs.networks.SwitchLinkAggregationsSwitchProfilePort>[] | undefined>;
 }

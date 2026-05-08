@@ -135,27 +135,27 @@ export interface WirelessSsidsEapOverrideState {
     /**
      * EAPOL Key settings.
      */
-    eapolKey?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideEapolKey>;
+    eapolKey?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideEapolKey | undefined>;
     /**
      * EAP settings for identity requests.
      */
-    identity?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideIdentity>;
+    identity?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideIdentity | undefined>;
     /**
      * Maximum number of general EAP retries.
      */
-    maxRetries?: pulumi.Input<number>;
+    maxRetries?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * General EAP timeout in seconds.
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -165,15 +165,15 @@ export interface WirelessSsidsEapOverrideArgs {
     /**
      * EAPOL Key settings.
      */
-    eapolKey?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideEapolKey>;
+    eapolKey?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideEapolKey | undefined>;
     /**
      * EAP settings for identity requests.
      */
-    identity?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideIdentity>;
+    identity?: pulumi.Input<inputs.networks.WirelessSsidsEapOverrideIdentity | undefined>;
     /**
      * Maximum number of general EAP retries.
      */
-    maxRetries?: pulumi.Input<number>;
+    maxRetries?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -185,5 +185,5 @@ export interface WirelessSsidsEapOverrideArgs {
     /**
      * General EAP timeout in seconds.
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
 }

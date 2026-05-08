@@ -212,7 +212,7 @@ export interface GetSmDevicesOutputArgs {
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * fields query parameter. Additional fields that will be displayed for each device.
      * The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
@@ -222,11 +222,11 @@ export interface GetSmDevicesOutputArgs {
      * isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
      * hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, cellular, and url.
      */
-    fields?: pulumi.Input<pulumi.Input<string>[]>;
+    fields?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * ids query parameter. Filter devices by id(s).
      */
-    ids?: pulumi.Input<pulumi.Input<string>[]>;
+    ids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -234,29 +234,29 @@ export interface GetSmDevicesOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * scope query parameter. Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags.
      */
-    scopes?: pulumi.Input<pulumi.Input<string>[]>;
+    scopes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * serials query parameter. Filter devices by serial(s).
      */
-    serials?: pulumi.Input<pulumi.Input<string>[]>;
+    serials?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
     /**
      * systemTypes query parameter. Filter devices by system type(s).
      */
-    systemTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    systemTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * uuids query parameter. Filter devices by uuid(s).
      */
-    uuids?: pulumi.Input<pulumi.Input<string>[]>;
+    uuids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * wifiMacs query parameter. Filter devices by wifi mac(s).
      */
-    wifiMacs?: pulumi.Input<pulumi.Input<string>[]>;
+    wifiMacs?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

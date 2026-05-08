@@ -115,19 +115,19 @@ export interface SnmpState {
     /**
      * The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
      */
-    access?: pulumi.Input<string>;
+    access?: pulumi.Input<string | undefined>;
     /**
      * SNMP community string if access is 'community'.
      */
-    communityString?: pulumi.Input<string>;
+    communityString?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * SNMP settings if access is 'users'.
      */
-    users?: pulumi.Input<pulumi.Input<inputs.networks.SnmpUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.networks.SnmpUser>[] | undefined>;
 }
 
 /**
@@ -137,11 +137,11 @@ export interface SnmpArgs {
     /**
      * The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
      */
-    access?: pulumi.Input<string>;
+    access?: pulumi.Input<string | undefined>;
     /**
      * SNMP community string if access is 'community'.
      */
-    communityString?: pulumi.Input<string>;
+    communityString?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -149,5 +149,5 @@ export interface SnmpArgs {
     /**
      * SNMP settings if access is 'users'.
      */
-    users?: pulumi.Input<pulumi.Input<inputs.networks.SnmpUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.networks.SnmpUser>[] | undefined>;
 }

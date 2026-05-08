@@ -143,35 +143,35 @@ export interface LiveToolsArpTableState {
     /**
      * Id of the ARP table request. Used to check the status of the request.
      */
-    arpTableId?: pulumi.Input<string>;
+    arpTableId?: pulumi.Input<string | undefined>;
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsArpTableCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsArpTableCallback | undefined>;
     /**
      * The ARP table entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.devices.LiveToolsArpTableEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.devices.LiveToolsArpTableEntry>[] | undefined>;
     /**
      * An error message for a failed execution
      */
-    error?: pulumi.Input<string>;
+    error?: pulumi.Input<string | undefined>;
     /**
      * ARP table request parameters
      */
-    request?: pulumi.Input<inputs.devices.LiveToolsArpTableRequest>;
+    request?: pulumi.Input<inputs.devices.LiveToolsArpTableRequest | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Status of the ARP table request.
      */
-    status?: pulumi.Input<string>;
+    status?: pulumi.Input<string | undefined>;
     /**
      * GET this url to check the status of your ARP table request.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -181,11 +181,11 @@ export interface LiveToolsArpTableArgs {
     /**
      * Id of the ARP table request. Used to check the status of the request.
      */
-    arpTableId?: pulumi.Input<string>;
+    arpTableId?: pulumi.Input<string | undefined>;
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    callback?: pulumi.Input<inputs.devices.LiveToolsArpTableCallback>;
+    callback?: pulumi.Input<inputs.devices.LiveToolsArpTableCallback | undefined>;
     /**
      * serial path parameter.
      */

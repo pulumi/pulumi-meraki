@@ -20,13 +20,13 @@ __all__ = ['CameraQualityAndRetentionArgs', 'CameraQualityAndRetention']
 class CameraQualityAndRetentionArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality: Optional[pulumi.Input[_builtins.str]] = None,
-                 resolution: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality: pulumi.Input[Optional[_builtins.str]] = None,
+                 resolution: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraQualityAndRetention resource.
 
@@ -69,100 +69,100 @@ class CameraQualityAndRetentionArgs:
 
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
-    def audio_recording_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def audio_recording_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
         """
         return pulumi.get(self, "audio_recording_enabled")
 
     @audio_recording_enabled.setter
-    def audio_recording_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def audio_recording_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "audio_recording_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionBasedRetentionEnabled")
-    def motion_based_retention_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def motion_based_retention_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
         """
         return pulumi.get(self, "motion_based_retention_enabled")
 
     @motion_based_retention_enabled.setter
-    def motion_based_retention_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def motion_based_retention_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "motion_based_retention_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionDetectorVersion")
-    def motion_detector_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def motion_detector_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
         """
         return pulumi.get(self, "motion_detector_version")
 
     @motion_detector_version.setter
-    def motion_detector_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def motion_detector_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "motion_detector_version", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
         """
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def quality(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def quality(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
         """
         return pulumi.get(self, "quality")
 
     @quality.setter
-    def quality(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def quality(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "quality", value)
 
     @_builtins.property
     @pulumi.getter
-    def resolution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resolution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
         """
         return pulumi.get(self, "resolution")
 
     @resolution.setter
-    def resolution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resolution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resolution", value)
 
     @_builtins.property
     @pulumi.getter(name="restrictedBandwidthModeEnabled")
-    def restricted_bandwidth_mode_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def restricted_bandwidth_mode_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "restricted_bandwidth_mode_enabled")
 
     @restricted_bandwidth_mode_enabled.setter
-    def restricted_bandwidth_mode_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def restricted_bandwidth_mode_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "restricted_bandwidth_mode_enabled", value)
 
 
 @pulumi.input_type
 class _CameraQualityAndRetentionState:
     def __init__(__self__, *,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality: Optional[pulumi.Input[_builtins.str]] = None,
-                 resolution: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality: pulumi.Input[Optional[_builtins.str]] = None,
+                 resolution: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraQualityAndRetention resources.
 
@@ -194,98 +194,98 @@ class _CameraQualityAndRetentionState:
 
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
-    def audio_recording_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def audio_recording_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
         """
         return pulumi.get(self, "audio_recording_enabled")
 
     @audio_recording_enabled.setter
-    def audio_recording_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def audio_recording_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "audio_recording_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionBasedRetentionEnabled")
-    def motion_based_retention_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def motion_based_retention_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
         """
         return pulumi.get(self, "motion_based_retention_enabled")
 
     @motion_based_retention_enabled.setter
-    def motion_based_retention_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def motion_based_retention_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "motion_based_retention_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionDetectorVersion")
-    def motion_detector_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def motion_detector_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
         """
         return pulumi.get(self, "motion_detector_version")
 
     @motion_detector_version.setter
-    def motion_detector_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def motion_detector_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "motion_detector_version", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
         """
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def quality(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def quality(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
         """
         return pulumi.get(self, "quality")
 
     @quality.setter
-    def quality(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def quality(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "quality", value)
 
     @_builtins.property
     @pulumi.getter
-    def resolution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resolution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
         """
         return pulumi.get(self, "resolution")
 
     @resolution.setter
-    def resolution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resolution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resolution", value)
 
     @_builtins.property
     @pulumi.getter(name="restrictedBandwidthModeEnabled")
-    def restricted_bandwidth_mode_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def restricted_bandwidth_mode_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "restricted_bandwidth_mode_enabled")
 
     @restricted_bandwidth_mode_enabled.setter
-    def restricted_bandwidth_mode_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def restricted_bandwidth_mode_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "restricted_bandwidth_mode_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -295,14 +295,14 @@ class CameraQualityAndRetention(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality: Optional[pulumi.Input[_builtins.str]] = None,
-                 resolution: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality: pulumi.Input[Optional[_builtins.str]] = None,
+                 resolution: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -388,14 +388,14 @@ class CameraQualityAndRetention(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality: Optional[pulumi.Input[_builtins.str]] = None,
-                 resolution: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality: pulumi.Input[Optional[_builtins.str]] = None,
+                 resolution: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -425,14 +425,14 @@ class CameraQualityAndRetention(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-            profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            quality: Optional[pulumi.Input[_builtins.str]] = None,
-            resolution: Optional[pulumi.Input[_builtins.str]] = None,
-            restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'CameraQualityAndRetention':
+            audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            quality: pulumi.Input[Optional[_builtins.str]] = None,
+            resolution: pulumi.Input[Optional[_builtins.str]] = None,
+            restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraQualityAndRetention':
         """
         Get an existing CameraQualityAndRetention resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

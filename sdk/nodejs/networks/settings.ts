@@ -141,31 +141,31 @@ export interface SettingsState {
     /**
      * A hash of FIPS options applied to the Network
      */
-    fips?: pulumi.Input<inputs.networks.SettingsFips>;
+    fips?: pulumi.Input<inputs.networks.SettingsFips | undefined>;
     /**
      * A hash of Local Status page(s)' authentication options applied to the Network.
      */
-    localStatusPage?: pulumi.Input<inputs.networks.SettingsLocalStatusPage>;
+    localStatusPage?: pulumi.Input<inputs.networks.SettingsLocalStatusPage | undefined>;
     /**
      * Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
      */
-    localStatusPageEnabled?: pulumi.Input<boolean>;
+    localStatusPageEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * A hash of Named VLANs options applied to the Network.
      */
-    namedVlans?: pulumi.Input<inputs.networks.SettingsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.SettingsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Enables / disables access to the device status page (\n\nhttp://[device's LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
      */
-    remoteStatusPageEnabled?: pulumi.Input<boolean>;
+    remoteStatusPageEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * A hash of SecureConnect options applied to the Network.
      */
-    securePort?: pulumi.Input<inputs.networks.SettingsSecurePort>;
+    securePort?: pulumi.Input<inputs.networks.SettingsSecurePort | undefined>;
 }
 
 /**
@@ -175,15 +175,15 @@ export interface SettingsArgs {
     /**
      * A hash of Local Status page(s)' authentication options applied to the Network.
      */
-    localStatusPage?: pulumi.Input<inputs.networks.SettingsLocalStatusPage>;
+    localStatusPage?: pulumi.Input<inputs.networks.SettingsLocalStatusPage | undefined>;
     /**
      * Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
      */
-    localStatusPageEnabled?: pulumi.Input<boolean>;
+    localStatusPageEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * A hash of Named VLANs options applied to the Network.
      */
-    namedVlans?: pulumi.Input<inputs.networks.SettingsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.SettingsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -191,9 +191,9 @@ export interface SettingsArgs {
     /**
      * Enables / disables access to the device status page (\n\nhttp://[device's LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
      */
-    remoteStatusPageEnabled?: pulumi.Input<boolean>;
+    remoteStatusPageEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * A hash of SecureConnect options applied to the Network.
      */
-    securePort?: pulumi.Input<inputs.networks.SettingsSecurePort>;
+    securePort?: pulumi.Input<inputs.networks.SettingsSecurePort | undefined>;
 }

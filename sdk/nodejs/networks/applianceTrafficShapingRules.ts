@@ -121,17 +121,17 @@ export interface ApplianceTrafficShapingRulesState {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    defaultRulesEnabled?: pulumi.Input<boolean>;
+    defaultRulesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An array of traffic shaping rules. Rules are applied in the order that
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingRulesRule>[] | undefined>;
 }
 
 /**
@@ -141,7 +141,7 @@ export interface ApplianceTrafficShapingRulesArgs {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    defaultRulesEnabled?: pulumi.Input<boolean>;
+    defaultRulesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -151,5 +151,5 @@ export interface ApplianceTrafficShapingRulesArgs {
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceTrafficShapingRulesRule>[] | undefined>;
 }

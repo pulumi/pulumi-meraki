@@ -22,8 +22,8 @@ __all__ = ['SwitchMtuArgs', 'SwitchMtu']
 class SwitchMtuArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 default_mtu_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
+                 default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 overrides: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchMtu resource.
 
@@ -52,19 +52,19 @@ class SwitchMtuArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultMtuSize")
-    def default_mtu_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_mtu_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU size for the entire network. Default value is 9578.
         """
         return pulumi.get(self, "default_mtu_size")
 
     @default_mtu_size.setter
-    def default_mtu_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_mtu_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_mtu_size", value)
 
     @_builtins.property
     @pulumi.getter
-    def overrides(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
+    def overrides(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
         """
         Override MTU size for individual switches or switch templates.
           An empty array will clear overrides.
@@ -72,16 +72,16 @@ class SwitchMtuArgs:
         return pulumi.get(self, "overrides")
 
     @overrides.setter
-    def overrides(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]):
+    def overrides(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]):
         pulumi.set(self, "overrides", value)
 
 
 @pulumi.input_type
 class _SwitchMtuState:
     def __init__(__self__, *,
-                 default_mtu_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
+                 default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 overrides: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchMtu resources.
 
@@ -99,31 +99,31 @@ class _SwitchMtuState:
 
     @_builtins.property
     @pulumi.getter(name="defaultMtuSize")
-    def default_mtu_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_mtu_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         MTU size for the entire network. Default value is 9578.
         """
         return pulumi.get(self, "default_mtu_size")
 
     @default_mtu_size.setter
-    def default_mtu_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_mtu_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_mtu_size", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def overrides(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
+    def overrides(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
         """
         Override MTU size for individual switches or switch templates.
           An empty array will clear overrides.
@@ -131,7 +131,7 @@ class _SwitchMtuState:
         return pulumi.get(self, "overrides")
 
     @overrides.setter
-    def overrides(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]):
+    def overrides(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]):
         pulumi.set(self, "overrides", value)
 
 
@@ -141,9 +141,9 @@ class SwitchMtu(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_mtu_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None,
+                 default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 overrides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -229,9 +229,9 @@ class SwitchMtu(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_mtu_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None,
+                 default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 overrides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -256,9 +256,9 @@ class SwitchMtu(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_mtu_size: Optional[pulumi.Input[_builtins.int]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None) -> 'SwitchMtu':
+            default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            overrides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]]] = None) -> 'SwitchMtu':
         """
         Get an existing SwitchMtu resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,9 +22,9 @@ __all__ = ['ApplianceVpnSiteToSiteVpnArgs', 'ApplianceVpnSiteToSiteVpn']
 class ApplianceVpnSiteToSiteVpnArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 hubs: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
+                 hubs: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceVpnSiteToSiteVpn resource.
 
@@ -55,48 +55,48 @@ class ApplianceVpnSiteToSiteVpnArgs:
 
     @_builtins.property
     @pulumi.getter
-    def hubs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]:
+    def hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]:
         """
         The list of VPN hubs, in order of preference.
         """
         return pulumi.get(self, "hubs")
 
     @hubs.setter
-    def hubs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]):
+    def hubs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]):
         pulumi.set(self, "hubs", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The site-to-site VPN mode.
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]:
         """
         The list of subnets and their VPN presence.
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]):
         pulumi.set(self, "subnets", value)
 
 
 @pulumi.input_type
 class _ApplianceVpnSiteToSiteVpnState:
     def __init__(__self__, *,
-                 hubs: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
+                 hubs: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnSiteToSiteVpn resources.
 
@@ -116,50 +116,50 @@ class _ApplianceVpnSiteToSiteVpnState:
 
     @_builtins.property
     @pulumi.getter
-    def hubs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]:
+    def hubs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]:
         """
         The list of VPN hubs, in order of preference.
         """
         return pulumi.get(self, "hubs")
 
     @hubs.setter
-    def hubs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]):
+    def hubs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]]]):
         pulumi.set(self, "hubs", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The site-to-site VPN mode.
         """
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]:
+    def subnets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]:
         """
         The list of subnets and their VPN presence.
         """
         return pulumi.get(self, "subnets")
 
     @subnets.setter
-    def subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]):
+    def subnets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]]):
         pulumi.set(self, "subnets", value)
 
 
@@ -169,10 +169,10 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 hubs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None,
+                 hubs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -258,10 +258,10 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 hubs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None,
+                 hubs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -287,10 +287,10 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            hubs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None) -> 'ApplianceVpnSiteToSiteVpn':
+            hubs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnSubnetArgs', 'ApplianceVpnSiteToSiteVpnSubnetArgsDict']]]]] = None) -> 'ApplianceVpnSiteToSiteVpn':
         """
         Get an existing ApplianceVpnSiteToSiteVpn resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

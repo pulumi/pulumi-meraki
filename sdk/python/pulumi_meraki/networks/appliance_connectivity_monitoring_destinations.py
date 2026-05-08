@@ -22,7 +22,7 @@ __all__ = ['ApplianceConnectivityMonitoringDestinationsArgs', 'ApplianceConnecti
 class ApplianceConnectivityMonitoringDestinationsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]] = None):
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceConnectivityMonitoringDestinations resource.
 
@@ -47,22 +47,22 @@ class ApplianceConnectivityMonitoringDestinationsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]:
+    def destinations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]:
         """
         The list of connectivity monitoring destinations
         """
         return pulumi.get(self, "destinations")
 
     @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]):
+    def destinations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]):
         pulumi.set(self, "destinations", value)
 
 
 @pulumi.input_type
 class _ApplianceConnectivityMonitoringDestinationsState:
     def __init__(__self__, *,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceConnectivityMonitoringDestinations resources.
 
@@ -76,26 +76,26 @@ class _ApplianceConnectivityMonitoringDestinationsState:
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]:
+    def destinations(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]:
         """
         The list of connectivity monitoring destinations
         """
         return pulumi.get(self, "destinations")
 
     @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]):
+    def destinations(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceConnectivityMonitoringDestinationsDestinationArgs']]]]):
         pulumi.set(self, "destinations", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceConnectivityMonitoringDestinations(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class ApplianceConnectivityMonitoringDestinations(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class ApplianceConnectivityMonitoringDestinations(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            destinations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceConnectivityMonitoringDestinations':
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceConnectivityMonitoringDestinationsDestinationArgs', 'ApplianceConnectivityMonitoringDestinationsDestinationArgsDict']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceConnectivityMonitoringDestinations':
         """
         Get an existing ApplianceConnectivityMonitoringDestinations resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

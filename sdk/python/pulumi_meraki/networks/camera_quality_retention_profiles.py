@@ -22,16 +22,16 @@ __all__ = ['CameraQualityRetentionProfilesArgs', 'CameraQualityRetentionProfiles
 class CameraQualityRetentionProfilesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_archive_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_retention_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality_retention_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 video_settings: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 video_settings: pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
         """
         The set of arguments for constructing a CameraQualityRetentionProfiles resource.
 
@@ -83,139 +83,139 @@ class CameraQualityRetentionProfilesArgs:
 
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
-    def audio_recording_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def audio_recording_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to record audio. Can be either true or false. Defaults to false.
         """
         return pulumi.get(self, "audio_recording_enabled")
 
     @audio_recording_enabled.setter
-    def audio_recording_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def audio_recording_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "audio_recording_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudArchiveEnabled")
-    def cloud_archive_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_archive_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
         """
         return pulumi.get(self, "cloud_archive_enabled")
 
     @cloud_archive_enabled.setter
-    def cloud_archive_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_archive_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_archive_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="maxRetentionDays")
-    def max_retention_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_retention_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
         """
         return pulumi.get(self, "max_retention_days")
 
     @max_retention_days.setter
-    def max_retention_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_retention_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_retention_days", value)
 
     @_builtins.property
     @pulumi.getter(name="motionBasedRetentionEnabled")
-    def motion_based_retention_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def motion_based_retention_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "motion_based_retention_enabled")
 
     @motion_based_retention_enabled.setter
-    def motion_based_retention_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def motion_based_retention_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "motion_based_retention_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionDetectorVersion")
-    def motion_detector_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def motion_detector_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
         """
         return pulumi.get(self, "motion_detector_version")
 
     @motion_detector_version.setter
-    def motion_detector_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def motion_detector_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "motion_detector_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the new profile. Must be unique. This parameter is required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="qualityRetentionProfileId")
-    def quality_retention_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def quality_retention_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         qualityRetentionProfileId path parameter. Quality retention profile ID
         """
         return pulumi.get(self, "quality_retention_profile_id")
 
     @quality_retention_profile_id.setter
-    def quality_retention_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def quality_retention_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "quality_retention_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="restrictedBandwidthModeEnabled")
-    def restricted_bandwidth_mode_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def restricted_bandwidth_mode_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "restricted_bandwidth_mode_enabled")
 
     @restricted_bandwidth_mode_enabled.setter
-    def restricted_bandwidth_mode_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def restricted_bandwidth_mode_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "restricted_bandwidth_mode_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="scheduleId")
-    def schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Schedule for which this camera will record video, or 'null' to always record.
         """
         return pulumi.get(self, "schedule_id")
 
     @schedule_id.setter
-    def schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schedule_id", value)
 
     @_builtins.property
     @pulumi.getter(name="videoSettings")
-    def video_settings(self) -> Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']]:
+    def video_settings(self) -> pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']]:
         """
         Video quality and resolution settings for all the camera models.
         """
         return pulumi.get(self, "video_settings")
 
     @video_settings.setter
-    def video_settings(self, value: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']]):
+    def video_settings(self, value: pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']]):
         pulumi.set(self, "video_settings", value)
 
 
 @pulumi.input_type
 class _CameraQualityRetentionProfilesState:
     def __init__(__self__, *,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_archive_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_retention_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality_retention_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 video_settings: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 video_settings: pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering CameraQualityRetentionProfiles resources.
 
@@ -256,134 +256,134 @@ class _CameraQualityRetentionProfilesState:
 
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
-    def audio_recording_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def audio_recording_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not to record audio. Can be either true or false. Defaults to false.
         """
         return pulumi.get(self, "audio_recording_enabled")
 
     @audio_recording_enabled.setter
-    def audio_recording_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def audio_recording_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "audio_recording_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudArchiveEnabled")
-    def cloud_archive_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_archive_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
         """
         return pulumi.get(self, "cloud_archive_enabled")
 
     @cloud_archive_enabled.setter
-    def cloud_archive_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_archive_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_archive_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="maxRetentionDays")
-    def max_retention_days(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_retention_days(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
         """
         return pulumi.get(self, "max_retention_days")
 
     @max_retention_days.setter
-    def max_retention_days(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_retention_days(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_retention_days", value)
 
     @_builtins.property
     @pulumi.getter(name="motionBasedRetentionEnabled")
-    def motion_based_retention_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def motion_based_retention_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "motion_based_retention_enabled")
 
     @motion_based_retention_enabled.setter
-    def motion_based_retention_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def motion_based_retention_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "motion_based_retention_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="motionDetectorVersion")
-    def motion_detector_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def motion_detector_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
         """
         return pulumi.get(self, "motion_detector_version")
 
     @motion_detector_version.setter
-    def motion_detector_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def motion_detector_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "motion_detector_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the new profile. Must be unique. This parameter is required.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="qualityRetentionProfileId")
-    def quality_retention_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def quality_retention_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         qualityRetentionProfileId path parameter. Quality retention profile ID
         """
         return pulumi.get(self, "quality_retention_profile_id")
 
     @quality_retention_profile_id.setter
-    def quality_retention_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def quality_retention_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "quality_retention_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="restrictedBandwidthModeEnabled")
-    def restricted_bandwidth_mode_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def restricted_bandwidth_mode_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         """
         return pulumi.get(self, "restricted_bandwidth_mode_enabled")
 
     @restricted_bandwidth_mode_enabled.setter
-    def restricted_bandwidth_mode_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def restricted_bandwidth_mode_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "restricted_bandwidth_mode_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="scheduleId")
-    def schedule_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def schedule_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Schedule for which this camera will record video, or 'null' to always record.
         """
         return pulumi.get(self, "schedule_id")
 
     @schedule_id.setter
-    def schedule_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def schedule_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "schedule_id", value)
 
     @_builtins.property
     @pulumi.getter(name="videoSettings")
-    def video_settings(self) -> Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']]:
+    def video_settings(self) -> pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']]:
         """
         Video quality and resolution settings for all the camera models.
         """
         return pulumi.get(self, "video_settings")
 
     @video_settings.setter
-    def video_settings(self, value: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']]):
+    def video_settings(self, value: pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsArgs']]):
         pulumi.set(self, "video_settings", value)
 
 
@@ -393,17 +393,17 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_archive_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_retention_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality_retention_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -480,17 +480,17 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_archive_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_retention_days: Optional[pulumi.Input[_builtins.int]] = None,
-                 motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 quality_retention_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
+                 audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+                 motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -523,17 +523,17 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audio_recording_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            cloud_archive_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            max_retention_days: Optional[pulumi.Input[_builtins.int]] = None,
-            motion_based_retention_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            motion_detector_version: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            quality_retention_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            schedule_id: Optional[pulumi.Input[_builtins.str]] = None,
-            video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None) -> 'CameraQualityRetentionProfiles':
+            audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+            motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None) -> 'CameraQualityRetentionProfiles':
         """
         Get an existing CameraQualityRetentionProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

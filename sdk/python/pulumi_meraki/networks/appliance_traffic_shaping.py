@@ -22,7 +22,7 @@ __all__ = ['ApplianceTrafficShapingArgs', 'ApplianceTrafficShaping']
 class ApplianceTrafficShapingArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 global_bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] = None):
+                 global_bandwidth_limits: pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShaping resource.
 
@@ -47,22 +47,22 @@ class ApplianceTrafficShapingArgs:
 
     @_builtins.property
     @pulumi.getter(name="globalBandwidthLimits")
-    def global_bandwidth_limits(self) -> Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]:
+    def global_bandwidth_limits(self) -> pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]:
         """
         Global per-client bandwidth limit
         """
         return pulumi.get(self, "global_bandwidth_limits")
 
     @global_bandwidth_limits.setter
-    def global_bandwidth_limits(self, value: Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]):
+    def global_bandwidth_limits(self, value: pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]):
         pulumi.set(self, "global_bandwidth_limits", value)
 
 
 @pulumi.input_type
 class _ApplianceTrafficShapingState:
     def __init__(__self__, *,
-                 global_bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 global_bandwidth_limits: pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShaping resources.
 
@@ -76,26 +76,26 @@ class _ApplianceTrafficShapingState:
 
     @_builtins.property
     @pulumi.getter(name="globalBandwidthLimits")
-    def global_bandwidth_limits(self) -> Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]:
+    def global_bandwidth_limits(self) -> pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]:
         """
         Global per-client bandwidth limit
         """
         return pulumi.get(self, "global_bandwidth_limits")
 
     @global_bandwidth_limits.setter
-    def global_bandwidth_limits(self, value: Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]):
+    def global_bandwidth_limits(self, value: pulumi.Input[Optional['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]):
         pulumi.set(self, "global_bandwidth_limits", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 global_bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -180,8 +180,8 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 global_bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -205,8 +205,8 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceTrafficShaping':
+            global_bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceTrafficShaping':
         """
         Get an existing ApplianceTrafficShaping resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

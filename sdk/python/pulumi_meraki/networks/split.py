@@ -45,8 +45,8 @@ class SplitArgs:
 @pulumi.input_type
 class _SplitState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['SplitItemArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 item: pulumi.Input[Optional['SplitItemArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Split resources.
 
@@ -59,23 +59,23 @@ class _SplitState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['SplitItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['SplitItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['SplitItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['SplitItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -85,7 +85,7 @@ class Split(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -136,7 +136,7 @@ class Split(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -160,8 +160,8 @@ class Split(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['SplitItemArgs', 'SplitItemArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'Split':
+            item: pulumi.Input[Optional[Union['SplitItemArgs', 'SplitItemArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'Split':
         """
         Get an existing Split resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

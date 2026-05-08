@@ -107,16 +107,16 @@ export class SwitchStacksAdd extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SwitchStacksAdd resources.
  */
 export interface SwitchStacksAddState {
-    item?: pulumi.Input<inputs.networks.SwitchStacksAddItem>;
+    item?: pulumi.Input<inputs.networks.SwitchStacksAddItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SwitchStacksAddParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SwitchStacksAddParameters | undefined>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    switchStackId?: pulumi.Input<string>;
+    switchStackId?: pulumi.Input<string | undefined>;
 }
 
 /**

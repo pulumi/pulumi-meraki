@@ -149,21 +149,21 @@ export interface SwitchPortSchedulesState {
     /**
      * The name for your port schedule. Required
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The schedule for switch port scheduling. Schedules are applied to days of the week.
      * When it's empty, default schedule with all days of a week are configured.
      * Any unspecified day in the schedule is added as a default schedule configuration of the day.
      */
-    portSchedule?: pulumi.Input<inputs.networks.SwitchPortSchedulesPortSchedule>;
+    portSchedule?: pulumi.Input<inputs.networks.SwitchPortSchedulesPortSchedule | undefined>;
     /**
      * portScheduleId path parameter. Port schedule ID
      */
-    portScheduleId?: pulumi.Input<string>;
+    portScheduleId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -173,7 +173,7 @@ export interface SwitchPortSchedulesArgs {
     /**
      * The name for your port schedule. Required
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -183,9 +183,9 @@ export interface SwitchPortSchedulesArgs {
      * When it's empty, default schedule with all days of a week are configured.
      * Any unspecified day in the schedule is added as a default schedule configuration of the day.
      */
-    portSchedule?: pulumi.Input<inputs.networks.SwitchPortSchedulesPortSchedule>;
+    portSchedule?: pulumi.Input<inputs.networks.SwitchPortSchedulesPortSchedule | undefined>;
     /**
      * portScheduleId path parameter. Port schedule ID
      */
-    portScheduleId?: pulumi.Input<string>;
+    portScheduleId?: pulumi.Input<string | undefined>;
 }

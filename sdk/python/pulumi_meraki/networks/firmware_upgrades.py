@@ -22,9 +22,9 @@ __all__ = ['FirmwareUpgradesArgs', 'FirmwareUpgrades']
 class FirmwareUpgradesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 products: Optional[pulumi.Input['FirmwareUpgradesProductsArgs']] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgrade_window: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']] = None):
+                 products: pulumi.Input[Optional['FirmwareUpgradesProductsArgs']] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgrade_window: pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']] = None):
         """
         The set of arguments for constructing a FirmwareUpgrades resource.
 
@@ -55,48 +55,48 @@ class FirmwareUpgradesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def products(self) -> Optional[pulumi.Input['FirmwareUpgradesProductsArgs']]:
+    def products(self) -> pulumi.Input[Optional['FirmwareUpgradesProductsArgs']]:
         """
         The network devices to be updated
         """
         return pulumi.get(self, "products")
 
     @products.setter
-    def products(self, value: Optional[pulumi.Input['FirmwareUpgradesProductsArgs']]):
+    def products(self, value: pulumi.Input[Optional['FirmwareUpgradesProductsArgs']]):
         pulumi.set(self, "products", value)
 
     @_builtins.property
     @pulumi.getter
-    def timezone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The timezone for the network
         """
         return pulumi.get(self, "timezone")
 
     @timezone.setter
-    def timezone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone", value)
 
     @_builtins.property
     @pulumi.getter(name="upgradeWindow")
-    def upgrade_window(self) -> Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']]:
+    def upgrade_window(self) -> pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']]:
         """
         Upgrade window for devices in network
         """
         return pulumi.get(self, "upgrade_window")
 
     @upgrade_window.setter
-    def upgrade_window(self, value: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']]):
+    def upgrade_window(self, value: pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']]):
         pulumi.set(self, "upgrade_window", value)
 
 
 @pulumi.input_type
 class _FirmwareUpgradesState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input['FirmwareUpgradesProductsArgs']] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgrade_window: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional['FirmwareUpgradesProductsArgs']] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgrade_window: pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgrades resources.
 
@@ -116,50 +116,50 @@ class _FirmwareUpgradesState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def products(self) -> Optional[pulumi.Input['FirmwareUpgradesProductsArgs']]:
+    def products(self) -> pulumi.Input[Optional['FirmwareUpgradesProductsArgs']]:
         """
         The network devices to be updated
         """
         return pulumi.get(self, "products")
 
     @products.setter
-    def products(self, value: Optional[pulumi.Input['FirmwareUpgradesProductsArgs']]):
+    def products(self, value: pulumi.Input[Optional['FirmwareUpgradesProductsArgs']]):
         pulumi.set(self, "products", value)
 
     @_builtins.property
     @pulumi.getter
-    def timezone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The timezone for the network
         """
         return pulumi.get(self, "timezone")
 
     @timezone.setter
-    def timezone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone", value)
 
     @_builtins.property
     @pulumi.getter(name="upgradeWindow")
-    def upgrade_window(self) -> Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']]:
+    def upgrade_window(self) -> pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']]:
         """
         Upgrade window for devices in network
         """
         return pulumi.get(self, "upgrade_window")
 
     @upgrade_window.setter
-    def upgrade_window(self, value: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']]):
+    def upgrade_window(self, value: pulumi.Input[Optional['FirmwareUpgradesUpgradeWindowArgs']]):
         pulumi.set(self, "upgrade_window", value)
 
 
@@ -169,10 +169,10 @@ class FirmwareUpgrades(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgrade_window: Optional[pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -380,10 +380,10 @@ class FirmwareUpgrades(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 products: Optional[pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 upgrade_window: Optional[pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -409,10 +409,10 @@ class FirmwareUpgrades(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            products: Optional[pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
-            timezone: Optional[pulumi.Input[_builtins.str]] = None,
-            upgrade_window: Optional[pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None) -> 'FirmwareUpgrades':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+            timezone: pulumi.Input[Optional[_builtins.str]] = None,
+            upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None) -> 'FirmwareUpgrades':
         """
         Get an existing FirmwareUpgrades resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

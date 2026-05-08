@@ -113,8 +113,8 @@ def get_openapi_spec(organization_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         version=pulumi.get(__ret__, 'version'))
-def get_openapi_spec_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                            version: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+def get_openapi_spec_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                            version: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOpenapiSpecResult]:
     """
     ## Example Usage

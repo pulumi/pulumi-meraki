@@ -22,7 +22,7 @@ __all__ = ['SwitchDscpToCosMappingsArgs', 'SwitchDscpToCosMappings']
 class SwitchDscpToCosMappingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]] = None):
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchDscpToCosMappings resource.
 
@@ -47,22 +47,22 @@ class SwitchDscpToCosMappingsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def mappings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]:
+    def mappings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]:
         """
         An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
         """
         return pulumi.get(self, "mappings")
 
     @mappings.setter
-    def mappings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]):
+    def mappings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]):
         pulumi.set(self, "mappings", value)
 
 
 @pulumi.input_type
 class _SwitchDscpToCosMappingsState:
     def __init__(__self__, *,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchDscpToCosMappings resources.
 
@@ -76,26 +76,26 @@ class _SwitchDscpToCosMappingsState:
 
     @_builtins.property
     @pulumi.getter
-    def mappings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]:
+    def mappings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]:
         """
         An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
         """
         return pulumi.get(self, "mappings")
 
     @mappings.setter
-    def mappings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]):
+    def mappings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchDscpToCosMappingsMappingArgs']]]]):
         pulumi.set(self, "mappings", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -105,8 +105,8 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchDscpToCosMappings':
+            mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchDscpToCosMappings':
         """
         Get an existing SwitchDscpToCosMappings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

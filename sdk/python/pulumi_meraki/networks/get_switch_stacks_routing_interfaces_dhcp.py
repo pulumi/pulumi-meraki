@@ -130,9 +130,9 @@ def get_switch_stacks_routing_interfaces_dhcp(interface_id: Optional[_builtins.s
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         switch_stack_id=pulumi.get(__ret__, 'switch_stack_id'))
-def get_switch_stacks_routing_interfaces_dhcp_output(interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                     network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                     switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_switch_stacks_routing_interfaces_dhcp_output(interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                     network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                     switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksRoutingInterfacesDhcpResult]:
     """
     ## Example Usage

@@ -112,15 +112,15 @@ export interface WirelessSsidsFirewallL7FirewallRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL7FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL7FirewallRulesRule>[] | undefined>;
 }
 
 /**
@@ -138,5 +138,5 @@ export interface WirelessSsidsFirewallL7FirewallRulesArgs {
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL7FirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL7FirewallRulesRule>[] | undefined>;
 }

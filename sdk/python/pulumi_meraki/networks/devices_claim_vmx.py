@@ -56,9 +56,9 @@ class DevicesClaimVmxArgs:
 @pulumi.input_type
 class _DevicesClaimVmxState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['DevicesClaimVmxItemArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input['DevicesClaimVmxParametersArgs']] = None):
+                 item: pulumi.Input[Optional['DevicesClaimVmxItemArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional['DevicesClaimVmxParametersArgs']] = None):
         """
         Input properties used for looking up and filtering DevicesClaimVmx resources.
 
@@ -73,32 +73,32 @@ class _DevicesClaimVmxState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['DevicesClaimVmxItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['DevicesClaimVmxItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['DevicesClaimVmxItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['DevicesClaimVmxItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['DevicesClaimVmxParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['DevicesClaimVmxParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['DevicesClaimVmxParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['DevicesClaimVmxParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
 
@@ -108,8 +108,8 @@ class DevicesClaimVmx(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -174,8 +174,8 @@ class DevicesClaimVmx(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 parameters: Optional[pulumi.Input[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 parameters: pulumi.Input[Optional[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -202,9 +202,9 @@ class DevicesClaimVmx(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['DevicesClaimVmxItemArgs', 'DevicesClaimVmxItemArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            parameters: Optional[pulumi.Input[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None) -> 'DevicesClaimVmx':
+            item: pulumi.Input[Optional[Union['DevicesClaimVmxItemArgs', 'DevicesClaimVmxItemArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['DevicesClaimVmxParametersArgs', 'DevicesClaimVmxParametersArgsDict']]] = None) -> 'DevicesClaimVmx':
         """
         Get an existing DevicesClaimVmx resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

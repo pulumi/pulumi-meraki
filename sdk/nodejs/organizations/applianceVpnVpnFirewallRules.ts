@@ -114,15 +114,15 @@ export interface ApplianceVpnVpnFirewallRulesState {
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnVpnFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnVpnFirewallRulesRule>[] | undefined>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    syslogDefaultRule?: pulumi.Input<boolean>;
+    syslogDefaultRule?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -136,9 +136,9 @@ export interface ApplianceVpnVpnFirewallRulesArgs {
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnVpnFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnVpnFirewallRulesRule>[] | undefined>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    syslogDefaultRule?: pulumi.Input<boolean>;
+    syslogDefaultRule?: pulumi.Input<boolean | undefined>;
 }

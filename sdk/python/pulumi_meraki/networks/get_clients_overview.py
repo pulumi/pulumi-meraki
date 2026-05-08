@@ -136,7 +136,7 @@ def get_clients_overview(network_id: Optional[_builtins.str] = None,
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksClientsOverviewExample", example.item)
     ```
 
@@ -164,11 +164,11 @@ def get_clients_overview(network_id: Optional[_builtins.str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-def get_clients_overview_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                resolution: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
+def get_clients_overview_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                resolution: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetClientsOverviewResult]:
     """
     ## Example Usage
@@ -181,7 +181,7 @@ def get_clients_overview_output(network_id: Optional[pulumi.Input[_builtins.str]
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksClientsOverviewExample", example.item)
     ```
 

@@ -20,12 +20,12 @@ __all__ = ['SwitchRoutingStaticRoutesArgs', 'SwitchRoutingStaticRoutes']
 class SwitchRoutingStaticRoutesArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 advertise_via_ospf_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 next_hop_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 prefer_over_ospf_routes_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 static_route_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchRoutingStaticRoutes resource.
 
@@ -65,87 +65,87 @@ class SwitchRoutingStaticRoutesArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertiseViaOspfEnabled")
-    def advertise_via_ospf_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_via_ospf_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Option to advertise static routes via OSPF
         """
         return pulumi.get(self, "advertise_via_ospf_enabled")
 
     @advertise_via_ospf_enabled.setter
-    def advertise_via_ospf_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_via_ospf_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_via_ospf_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name or description of the layer 3 static route
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nextHopIp")
-    def next_hop_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def next_hop_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the router to which traffic for this destination network should be sent
         """
         return pulumi.get(self, "next_hop_ip")
 
     @next_hop_ip.setter
-    def next_hop_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def next_hop_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "next_hop_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="preferOverOspfRoutesEnabled")
-    def prefer_over_ospf_routes_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prefer_over_ospf_routes_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Option to prefer static routes over OSPF routes
         """
         return pulumi.get(self, "prefer_over_ospf_routes_enabled")
 
     @prefer_over_ospf_routes_enabled.setter
-    def prefer_over_ospf_routes_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prefer_over_ospf_routes_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prefer_over_ospf_routes_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="staticRouteId")
-    def static_route_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_route_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The identifier of a layer 3 static route
         """
         return pulumi.get(self, "static_route_id")
 
     @static_route_id.setter
-    def static_route_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_route_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_route_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
 
 @pulumi.input_type
 class _SwitchRoutingStaticRoutesState:
     def __init__(__self__, *,
-                 advertise_via_ospf_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 next_hop_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 prefer_over_ospf_routes_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_route_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingStaticRoutes resources.
 
@@ -174,86 +174,86 @@ class _SwitchRoutingStaticRoutesState:
 
     @_builtins.property
     @pulumi.getter(name="advertiseViaOspfEnabled")
-    def advertise_via_ospf_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_via_ospf_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Option to advertise static routes via OSPF
         """
         return pulumi.get(self, "advertise_via_ospf_enabled")
 
     @advertise_via_ospf_enabled.setter
-    def advertise_via_ospf_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_via_ospf_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_via_ospf_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name or description of the layer 3 static route
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nextHopIp")
-    def next_hop_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def next_hop_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the router to which traffic for this destination network should be sent
         """
         return pulumi.get(self, "next_hop_ip")
 
     @next_hop_ip.setter
-    def next_hop_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def next_hop_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "next_hop_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="preferOverOspfRoutesEnabled")
-    def prefer_over_ospf_routes_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def prefer_over_ospf_routes_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Option to prefer static routes over OSPF routes
         """
         return pulumi.get(self, "prefer_over_ospf_routes_enabled")
 
     @prefer_over_ospf_routes_enabled.setter
-    def prefer_over_ospf_routes_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def prefer_over_ospf_routes_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "prefer_over_ospf_routes_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="staticRouteId")
-    def static_route_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def static_route_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The identifier of a layer 3 static route
         """
         return pulumi.get(self, "static_route_id")
 
     @static_route_id.setter
-    def static_route_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def static_route_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "static_route_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
 
@@ -263,13 +263,13 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_via_ospf_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 next_hop_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 prefer_over_ospf_routes_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_route_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -350,13 +350,13 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_via_ospf_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 next_hop_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 prefer_over_ospf_routes_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_route_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -385,13 +385,13 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertise_via_ospf_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            next_hop_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            prefer_over_ospf_routes_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            static_route_id: Optional[pulumi.Input[_builtins.str]] = None,
-            subnet: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchRoutingStaticRoutes':
+            advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchRoutingStaticRoutes':
         """
         Get an existing SwitchRoutingStaticRoutes resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

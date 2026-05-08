@@ -73,9 +73,9 @@ export interface GetFirmwareUpgradesStagedGroupsOutputArgs {
     /**
      * groupId path parameter. Group ID
      */
-    groupId?: pulumi.Input<string>;
+    groupId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

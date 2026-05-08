@@ -197,75 +197,75 @@ export interface BaseState {
     /**
      * Physical address of the device
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Additional device information
      */
-    details?: pulumi.Input<pulumi.Input<inputs.devices.BaseDetail>[]>;
+    details?: pulumi.Input<pulumi.Input<inputs.devices.BaseDetail>[] | undefined>;
     /**
      * Firmware version of the device
      */
-    firmware?: pulumi.Input<string>;
+    firmware?: pulumi.Input<string | undefined>;
     /**
      * The floor plan to associate to this device. null disassociates the device from the floorplan.
      */
-    floorPlanId?: pulumi.Input<string>;
+    floorPlanId?: pulumi.Input<string | undefined>;
     /**
      * IMEI of the device, if applicable
      */
-    imei?: pulumi.Input<string>;
+    imei?: pulumi.Input<string | undefined>;
     /**
      * LAN IP address of the device
      */
-    lanIp?: pulumi.Input<string>;
+    lanIp?: pulumi.Input<string | undefined>;
     /**
      * Latitude of the device
      */
-    lat?: pulumi.Input<number>;
+    lat?: pulumi.Input<number | undefined>;
     /**
      * Longitude of the device
      */
-    lng?: pulumi.Input<number>;
+    lng?: pulumi.Input<number | undefined>;
     /**
      * MAC address of the device
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * Model of the device
      */
-    model?: pulumi.Input<string>;
+    model?: pulumi.Input<string | undefined>;
     /**
      * Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
      */
-    moveMapMarker?: pulumi.Input<boolean>;
+    moveMapMarker?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * ID of the network the device belongs to
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Notes for the device, limited to 255 characters
      */
-    notes?: pulumi.Input<string>;
+    notes?: pulumi.Input<string | undefined>;
     /**
      * Product type of the device
      */
-    productType?: pulumi.Input<string>;
+    productType?: pulumi.Input<string | undefined>;
     /**
      * Serial number of the device
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
      */
-    switchProfileId?: pulumi.Input<string>;
+    switchProfileId?: pulumi.Input<string | undefined>;
     /**
      * List of tags assigned to the device
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -275,31 +275,31 @@ export interface BaseArgs {
     /**
      * Physical address of the device
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * The floor plan to associate to this device. null disassociates the device from the floorplan.
      */
-    floorPlanId?: pulumi.Input<string>;
+    floorPlanId?: pulumi.Input<string | undefined>;
     /**
      * Latitude of the device
      */
-    lat?: pulumi.Input<number>;
+    lat?: pulumi.Input<number | undefined>;
     /**
      * Longitude of the device
      */
-    lng?: pulumi.Input<number>;
+    lng?: pulumi.Input<number | undefined>;
     /**
      * Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
      */
-    moveMapMarker?: pulumi.Input<boolean>;
+    moveMapMarker?: pulumi.Input<boolean | undefined>;
     /**
      * Name of the device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Notes for the device, limited to 255 characters
      */
-    notes?: pulumi.Input<string>;
+    notes?: pulumi.Input<string | undefined>;
     /**
      * Serial number of the device
      */
@@ -307,9 +307,9 @@ export interface BaseArgs {
     /**
      * The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
      */
-    switchProfileId?: pulumi.Input<string>;
+    switchProfileId?: pulumi.Input<string | undefined>;
     /**
      * List of tags assigned to the device
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

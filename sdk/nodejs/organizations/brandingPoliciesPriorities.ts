@@ -100,11 +100,11 @@ export interface BrandingPoliciesPrioritiesState {
     /**
      * An ordered list of branding policy IDs that determines the priority order of how to apply the policies
      */
-    brandingPolicyIds?: pulumi.Input<pulumi.Input<string>[]>;
+    brandingPolicyIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -114,7 +114,7 @@ export interface BrandingPoliciesPrioritiesArgs {
     /**
      * An ordered list of branding policy IDs that determines the priority order of how to apply the policies
      */
-    brandingPolicyIds?: pulumi.Input<pulumi.Input<string>[]>;
+    brandingPolicyIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

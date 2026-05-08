@@ -60,9 +60,9 @@ class SmDevicesUnenrollArgs:
 @pulumi.input_type
 class _SmDevicesUnenrollState:
     def __init__(__self__, *,
-                 device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 item: Optional[pulumi.Input['SmDevicesUnenrollItemArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 item: pulumi.Input[Optional['SmDevicesUnenrollItemArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SmDevicesUnenroll resources.
 
@@ -78,35 +78,35 @@ class _SmDevicesUnenrollState:
 
     @_builtins.property
     @pulumi.getter(name="deviceId")
-    def device_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         deviceId path parameter. Device ID
         """
         return pulumi.get(self, "device_id")
 
     @device_id.setter
-    def device_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['SmDevicesUnenrollItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['SmDevicesUnenrollItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['SmDevicesUnenrollItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['SmDevicesUnenrollItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -116,8 +116,8 @@ class SmDevicesUnenroll(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -179,8 +179,8 @@ class SmDevicesUnenroll(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 device_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,9 +207,9 @@ class SmDevicesUnenroll(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device_id: Optional[pulumi.Input[_builtins.str]] = None,
-            item: Optional[pulumi.Input[Union['SmDevicesUnenrollItemArgs', 'SmDevicesUnenrollItemArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'SmDevicesUnenroll':
+            device_id: pulumi.Input[Optional[_builtins.str]] = None,
+            item: pulumi.Input[Optional[Union['SmDevicesUnenrollItemArgs', 'SmDevicesUnenrollItemArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SmDevicesUnenroll':
         """
         Get an existing SmDevicesUnenroll resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

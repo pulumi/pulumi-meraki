@@ -116,8 +116,8 @@ def get_inventory_onboarding_cloud_monitoring_imports(import_ids: Optional[Seque
         import_ids=pulumi.get(__ret__, 'import_ids'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: Optional[pulumi.Input[Sequence[_builtins.str]]] = None,
-                                                             organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: pulumi.Input[Optional[Sequence[_builtins.str]]] = None,
+                                                             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringImportsResult]:
     """
     ## Example Usage

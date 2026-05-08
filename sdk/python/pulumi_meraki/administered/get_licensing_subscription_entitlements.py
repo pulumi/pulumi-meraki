@@ -96,7 +96,7 @@ def get_licensing_subscription_entitlements(skuses: Optional[Sequence[_builtins.
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         skuses=pulumi.get(__ret__, 'skuses'))
-def get_licensing_subscription_entitlements_output(skuses: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_licensing_subscription_entitlements_output(skuses: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicensingSubscriptionEntitlementsResult]:
     """
     ## Example Usage

@@ -113,8 +113,8 @@ def get_live_tools_wake_on_lan(serial: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         wake_on_lan_id=pulumi.get(__ret__, 'wake_on_lan_id'))
-def get_live_tools_wake_on_lan_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
-                                      wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_live_tools_wake_on_lan_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
+                                      wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsWakeOnLanResult]:
     """
     ## Example Usage

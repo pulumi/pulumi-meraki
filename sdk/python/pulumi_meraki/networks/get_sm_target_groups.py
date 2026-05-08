@@ -133,9 +133,9 @@ def get_sm_target_groups(network_id: Optional[_builtins.str] = None,
         network_id=pulumi.get(__ret__, 'network_id'),
         target_group_id=pulumi.get(__ret__, 'target_group_id'),
         with_details=pulumi.get(__ret__, 'with_details'))
-def get_sm_target_groups_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                target_group_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                with_details: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
+def get_sm_target_groups_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                target_group_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                with_details: pulumi.Input[Optional[Optional[_builtins.bool]]] = None,
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmTargetGroupsResult]:
     """
     ## Example Usage

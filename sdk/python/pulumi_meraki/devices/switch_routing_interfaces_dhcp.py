@@ -23,17 +23,17 @@ class SwitchRoutingInterfacesDhcpArgs:
     def __init__(__self__, *,
                  interface_id: pulumi.Input[_builtins.str],
                  serial: pulumi.Input[_builtins.str],
-                 boot_file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]] = None):
+                 boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchRoutingInterfacesDhcp resource.
 
@@ -102,153 +102,153 @@ class SwitchRoutingInterfacesDhcpArgs:
 
     @_builtins.property
     @pulumi.getter(name="bootFileName")
-    def boot_file_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def boot_file_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The PXE boot server file name for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "boot_file_name")
 
     @boot_file_name.setter
-    def boot_file_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def boot_file_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "boot_file_name", value)
 
     @_builtins.property
     @pulumi.getter(name="bootNextServer")
-    def boot_next_server(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def boot_next_server(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The PXE boot server IP for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "boot_next_server")
 
     @boot_next_server.setter
-    def boot_next_server(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def boot_next_server(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "boot_next_server", value)
 
     @_builtins.property
     @pulumi.getter(name="bootOptionsEnabled")
-    def boot_options_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def boot_options_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
         """
         return pulumi.get(self, "boot_options_enabled")
 
     @boot_options_enabled.setter
-    def boot_options_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def boot_options_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "boot_options_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpMode")
-    def dhcp_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
         """
         return pulumi.get(self, "dhcp_mode")
 
     @dhcp_mode.setter
-    def dhcp_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpOptions")
-    def dhcp_options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]:
+    def dhcp_options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]:
         """
         Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "dhcp_options")
 
     @dhcp_options.setter
-    def dhcp_options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]):
+    def dhcp_options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]):
         pulumi.set(self, "dhcp_options", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpRelayServerIps")
-    def dhcp_relay_server_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dhcp_relay_server_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
         """
         return pulumi.get(self, "dhcp_relay_server_ips")
 
     @dhcp_relay_server_ips.setter
-    def dhcp_relay_server_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dhcp_relay_server_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dhcp_relay_server_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsCustomNameservers")
-    def dns_custom_nameservers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_custom_nameservers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The DHCP name server IPs when DHCP name server option is 'custom'
         """
         return pulumi.get(self, "dns_custom_nameservers")
 
     @dns_custom_nameservers.setter
-    def dns_custom_nameservers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_custom_nameservers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_custom_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameserversOption")
-    def dns_nameservers_option(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
         """
         return pulumi.get(self, "dns_nameservers_option")
 
     @dns_nameservers_option.setter
-    def dns_nameservers_option(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers_option(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers_option", value)
 
     @_builtins.property
     @pulumi.getter(name="fixedIpAssignments")
-    def fixed_ip_assignments(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]:
+    def fixed_ip_assignments(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]:
         """
         Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "fixed_ip_assignments")
 
     @fixed_ip_assignments.setter
-    def fixed_ip_assignments(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]):
+    def fixed_ip_assignments(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]):
         pulumi.set(self, "fixed_ip_assignments", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]:
         """
         Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
 
 @pulumi.input_type
 class _SwitchRoutingInterfacesDhcpState:
     def __init__(__self__, *,
-                 boot_file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingInterfacesDhcp resources.
 
@@ -295,158 +295,158 @@ class _SwitchRoutingInterfacesDhcpState:
 
     @_builtins.property
     @pulumi.getter(name="bootFileName")
-    def boot_file_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def boot_file_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The PXE boot server file name for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "boot_file_name")
 
     @boot_file_name.setter
-    def boot_file_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def boot_file_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "boot_file_name", value)
 
     @_builtins.property
     @pulumi.getter(name="bootNextServer")
-    def boot_next_server(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def boot_next_server(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The PXE boot server IP for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "boot_next_server")
 
     @boot_next_server.setter
-    def boot_next_server(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def boot_next_server(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "boot_next_server", value)
 
     @_builtins.property
     @pulumi.getter(name="bootOptionsEnabled")
-    def boot_options_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def boot_options_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
         """
         return pulumi.get(self, "boot_options_enabled")
 
     @boot_options_enabled.setter
-    def boot_options_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def boot_options_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "boot_options_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpMode")
-    def dhcp_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
         """
         return pulumi.get(self, "dhcp_mode")
 
     @dhcp_mode.setter
-    def dhcp_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpOptions")
-    def dhcp_options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]:
+    def dhcp_options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]:
         """
         Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "dhcp_options")
 
     @dhcp_options.setter
-    def dhcp_options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]):
+    def dhcp_options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpDhcpOptionArgs']]]]):
         pulumi.set(self, "dhcp_options", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpRelayServerIps")
-    def dhcp_relay_server_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dhcp_relay_server_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
         """
         return pulumi.get(self, "dhcp_relay_server_ips")
 
     @dhcp_relay_server_ips.setter
-    def dhcp_relay_server_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dhcp_relay_server_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dhcp_relay_server_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsCustomNameservers")
-    def dns_custom_nameservers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_custom_nameservers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The DHCP name server IPs when DHCP name server option is 'custom'
         """
         return pulumi.get(self, "dns_custom_nameservers")
 
     @dns_custom_nameservers.setter
-    def dns_custom_nameservers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_custom_nameservers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_custom_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameserversOption")
-    def dns_nameservers_option(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers_option(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
         """
         return pulumi.get(self, "dns_nameservers_option")
 
     @dns_nameservers_option.setter
-    def dns_nameservers_option(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers_option(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers_option", value)
 
     @_builtins.property
     @pulumi.getter(name="fixedIpAssignments")
-    def fixed_ip_assignments(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]:
+    def fixed_ip_assignments(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]:
         """
         Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "fixed_ip_assignments")
 
     @fixed_ip_assignments.setter
-    def fixed_ip_assignments(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]):
+    def fixed_ip_assignments(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs']]]]):
         pulumi.set(self, "fixed_ip_assignments", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         interfaceId path parameter. Interface ID
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]:
         """
         Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingInterfacesDhcpReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -456,19 +456,19 @@ class SwitchRoutingInterfacesDhcp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 boot_file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -593,19 +593,19 @@ class SwitchRoutingInterfacesDhcp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 boot_file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers_option: Optional[pulumi.Input[_builtins.str]] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -642,19 +642,19 @@ class SwitchRoutingInterfacesDhcp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            boot_file_name: Optional[pulumi.Input[_builtins.str]] = None,
-            boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-            boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
-            dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_nameservers_option: Optional[pulumi.Input[_builtins.str]] = None,
-            fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
-            interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-            reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchRoutingInterfacesDhcp':
+            boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+            boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+            boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+            dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchRoutingInterfacesDhcp':
         """
         Get an existing SwitchRoutingInterfacesDhcp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

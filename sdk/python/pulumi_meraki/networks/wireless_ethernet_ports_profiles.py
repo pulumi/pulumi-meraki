@@ -23,9 +23,9 @@ class WirelessEthernetPortsProfilesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  profile_id: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]] = None,
-                 usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessEthernetPortsProfiles resource.
 
@@ -70,50 +70,50 @@ class WirelessEthernetPortsProfilesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AP port profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]:
+    def ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]:
         """
         Ports config
         """
         return pulumi.get(self, "ports")
 
     @ports.setter
-    def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]):
+    def ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]):
         pulumi.set(self, "ports", value)
 
     @_builtins.property
     @pulumi.getter(name="usbPorts")
-    def usb_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]:
+    def usb_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]:
         """
         Usb ports config
         """
         return pulumi.get(self, "usb_ports")
 
     @usb_ports.setter
-    def usb_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]):
+    def usb_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]):
         pulumi.set(self, "usb_ports", value)
 
 
 @pulumi.input_type
 class _WirelessEthernetPortsProfilesState:
     def __init__(__self__, *,
-                 is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
+                 is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessEthernetPortsProfiles resources.
 
@@ -139,74 +139,74 @@ class _WirelessEthernetPortsProfilesState:
 
     @_builtins.property
     @pulumi.getter(name="isDefault")
-    def is_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def is_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Is default profile
         """
         return pulumi.get(self, "is_default")
 
     @is_default.setter
-    def is_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def is_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "is_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AP port profile name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]:
+    def ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]:
         """
         Ports config
         """
         return pulumi.get(self, "ports")
 
     @ports.setter
-    def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]):
+    def ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesPortArgs']]]]):
         pulumi.set(self, "ports", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         AP port profile ID
         """
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="usbPorts")
-    def usb_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]:
+    def usb_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]:
         """
         Usb ports config
         """
         return pulumi.get(self, "usb_ports")
 
     @usb_ports.setter
-    def usb_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]):
+    def usb_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]]):
         pulumi.set(self, "usb_ports", value)
 
 
@@ -216,11 +216,11 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -315,11 +315,11 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -349,12 +349,12 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            is_default: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
-            profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None) -> 'WirelessEthernetPortsProfiles':
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None) -> 'WirelessEthernetPortsProfiles':
         """
         Get an existing WirelessEthernetPortsProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -73,9 +73,9 @@ export interface GetGroupPoliciesOutputArgs {
     /**
      * groupPolicyId path parameter. Group policy ID
      */
-    groupPolicyId?: pulumi.Input<string>;
+    groupPolicyId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

@@ -102,11 +102,11 @@ export interface CameraWirelessProfilesState {
     /**
      * The ids of the wireless profile to assign to the given camera
      */
-    ids?: pulumi.Input<inputs.devices.CameraWirelessProfilesIds>;
+    ids?: pulumi.Input<inputs.devices.CameraWirelessProfilesIds | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -116,7 +116,7 @@ export interface CameraWirelessProfilesArgs {
     /**
      * The ids of the wireless profile to assign to the given camera
      */
-    ids?: pulumi.Input<inputs.devices.CameraWirelessProfilesIds>;
+    ids?: pulumi.Input<inputs.devices.CameraWirelessProfilesIds | undefined>;
     /**
      * serial path parameter.
      */

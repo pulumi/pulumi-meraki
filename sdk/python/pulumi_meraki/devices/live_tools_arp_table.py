@@ -22,8 +22,8 @@ __all__ = ['LiveToolsArpTableArgs', 'LiveToolsArpTable']
 class LiveToolsArpTableArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 callback: Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']] = None):
+                 arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']] = None):
         """
         The set of arguments for constructing a LiveToolsArpTable resource.
 
@@ -51,40 +51,40 @@ class LiveToolsArpTableArgs:
 
     @_builtins.property
     @pulumi.getter(name="arpTableId")
-    def arp_table_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_table_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id of the ARP table request. Used to check the status of the request.
         """
         return pulumi.get(self, "arp_table_id")
 
     @arp_table_id.setter
-    def arp_table_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_table_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_table_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
 
 @pulumi.input_type
 class _LiveToolsArpTableState:
     def __init__(__self__, *,
-                 arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 callback: Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]] = None,
-                 error: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input['LiveToolsArpTableRequestArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]] = None,
+                 error: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional['LiveToolsArpTableRequestArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsArpTable resources.
 
@@ -116,98 +116,98 @@ class _LiveToolsArpTableState:
 
     @_builtins.property
     @pulumi.getter(name="arpTableId")
-    def arp_table_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_table_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Id of the ARP table request. Used to check the status of the request.
         """
         return pulumi.get(self, "arp_table_id")
 
     @arp_table_id.setter
-    def arp_table_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_table_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_table_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsArpTableCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]]:
         """
         The ARP table entries
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
-    def error(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def error(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         An error message for a failed execution
         """
         return pulumi.get(self, "error")
 
     @error.setter
-    def error(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def error(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "error", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input['LiveToolsArpTableRequestArgs']]:
+    def request(self) -> pulumi.Input[Optional['LiveToolsArpTableRequestArgs']]:
         """
         ARP table request parameters
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input['LiveToolsArpTableRequestArgs']]):
+    def request(self, value: pulumi.Input[Optional['LiveToolsArpTableRequestArgs']]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the ARP table request.
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         GET this url to check the status of your ARP table request.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
@@ -217,9 +217,9 @@ class LiveToolsArpTable(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -306,9 +306,9 @@ class LiveToolsArpTable(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -338,14 +338,14 @@ class LiveToolsArpTable(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arp_table_id: Optional[pulumi.Input[_builtins.str]] = None,
-            callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LiveToolsArpTableEntryArgs', 'LiveToolsArpTableEntryArgsDict']]]]] = None,
-            error: Optional[pulumi.Input[_builtins.str]] = None,
-            request: Optional[pulumi.Input[Union['LiveToolsArpTableRequestArgs', 'LiveToolsArpTableRequestArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            status: Optional[pulumi.Input[_builtins.str]] = None,
-            url: Optional[pulumi.Input[_builtins.str]] = None) -> 'LiveToolsArpTable':
+            arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+            callback: pulumi.Input[Optional[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LiveToolsArpTableEntryArgs', 'LiveToolsArpTableEntryArgsDict']]]]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsArpTableRequestArgs', 'LiveToolsArpTableRequestArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> 'LiveToolsArpTable':
         """
         Get an existing LiveToolsArpTable resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

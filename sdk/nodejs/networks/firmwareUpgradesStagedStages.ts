@@ -108,15 +108,15 @@ export interface FirmwareUpgradesStagedStagesState {
     /**
      * The Staged Upgrade Group
      */
-    group?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesGroup>;
+    group?: pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesGroup | undefined>;
     /**
      * Array of Staged Upgrade Groups
      */
-    jsons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesJson>[]>;
+    jsons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesJson>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -126,7 +126,7 @@ export interface FirmwareUpgradesStagedStagesArgs {
     /**
      * Array of Staged Upgrade Groups
      */
-    jsons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesJson>[]>;
+    jsons?: pulumi.Input<pulumi.Input<inputs.networks.FirmwareUpgradesStagedStagesJson>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

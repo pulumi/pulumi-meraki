@@ -131,24 +131,24 @@ export interface ApplianceContentFilteringState {
     /**
      * A list of URL patterns that are allowed
      */
-    allowedUrlPatterns?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedUrlPatterns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * A list of URL categories to block
      */
-    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
-    blockedUrlCategoriesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse>[]>;
+    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    blockedUrlCategoriesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse>[] | undefined>;
     /**
      * A list of URL patterns that are blocked
      */
-    blockedUrlPatterns?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlPatterns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * URL category list size which is either 'topSites' or 'fullList'
      */
-    urlCategoryListSize?: pulumi.Input<string>;
+    urlCategoryListSize?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -158,15 +158,15 @@ export interface ApplianceContentFilteringArgs {
     /**
      * A list of URL patterns that are allowed
      */
-    allowedUrlPatterns?: pulumi.Input<pulumi.Input<string>[]>;
+    allowedUrlPatterns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * A list of URL categories to block
      */
-    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * A list of URL patterns that are blocked
      */
-    blockedUrlPatterns?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlPatterns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -174,5 +174,5 @@ export interface ApplianceContentFilteringArgs {
     /**
      * URL category list size which is either 'topSites' or 'fullList'
      */
-    urlCategoryListSize?: pulumi.Input<string>;
+    urlCategoryListSize?: pulumi.Input<string | undefined>;
 }

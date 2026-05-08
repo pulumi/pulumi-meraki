@@ -23,7 +23,7 @@ class LicensingSubscriptionSubscriptionsBindArgs:
     def __init__(__self__, *,
                  parameters: pulumi.Input['LicensingSubscriptionSubscriptionsBindParametersArgs'],
                  subscription_id: pulumi.Input[_builtins.str],
-                 validate: Optional[pulumi.Input[_builtins.bool]] = None):
+                 validate: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LicensingSubscriptionSubscriptionsBind resource.
 
@@ -58,24 +58,24 @@ class LicensingSubscriptionSubscriptionsBindArgs:
 
     @_builtins.property
     @pulumi.getter
-    def validate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def validate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
         """
         return pulumi.get(self, "validate")
 
     @validate.setter
-    def validate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def validate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "validate", value)
 
 
 @pulumi.input_type
 class _LicensingSubscriptionSubscriptionsBindState:
     def __init__(__self__, *,
-                 item: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemArgs']] = None,
-                 parameters: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindParametersArgs']] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate: Optional[pulumi.Input[_builtins.bool]] = None):
+                 item: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindItemArgs']] = None,
+                 parameters: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindParametersArgs']] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsBind resources.
 
@@ -93,44 +93,44 @@ class _LicensingSubscriptionSubscriptionsBindState:
 
     @_builtins.property
     @pulumi.getter
-    def item(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemArgs']]:
+    def item(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindItemArgs']]:
         return pulumi.get(self, "item")
 
     @item.setter
-    def item(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemArgs']]):
+    def item(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindItemArgs']]):
         pulumi.set(self, "item", value)
 
     @_builtins.property
     @pulumi.getter
-    def parameters(self) -> Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindParametersArgs']]:
+    def parameters(self) -> pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindParametersArgs']]:
         return pulumi.get(self, "parameters")
 
     @parameters.setter
-    def parameters(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsBindParametersArgs']]):
+    def parameters(self, value: pulumi.Input[Optional['LicensingSubscriptionSubscriptionsBindParametersArgs']]):
         pulumi.set(self, "parameters", value)
 
     @_builtins.property
     @pulumi.getter(name="subscriptionId")
-    def subscription_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subscription_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         subscriptionId path parameter. Subscription ID
         """
         return pulumi.get(self, "subscription_id")
 
     @subscription_id.setter
-    def subscription_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subscription_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subscription_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def validate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def validate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
         """
         return pulumi.get(self, "validate")
 
     @validate.setter
-    def validate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def validate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "validate", value)
 
 
@@ -140,9 +140,9 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate: Optional[pulumi.Input[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -216,9 +216,9 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
-                 subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 validate: Optional[pulumi.Input[_builtins.bool]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
+                 subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 validate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -246,10 +246,10 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindItemArgs', 'LicensingSubscriptionSubscriptionsBindItemArgsDict']]] = None,
-            parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
-            subscription_id: Optional[pulumi.Input[_builtins.str]] = None,
-            validate: Optional[pulumi.Input[_builtins.bool]] = None) -> 'LicensingSubscriptionSubscriptionsBind':
+            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindItemArgs', 'LicensingSubscriptionSubscriptionsBindItemArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
+            subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+            validate: pulumi.Input[Optional[_builtins.bool]] = None) -> 'LicensingSubscriptionSubscriptionsBind':
         """
         Get an existing LicensingSubscriptionSubscriptionsBind resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

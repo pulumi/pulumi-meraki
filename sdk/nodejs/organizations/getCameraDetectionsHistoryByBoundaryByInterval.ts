@@ -144,11 +144,11 @@ export interface GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs {
     /**
      * boundaryTypes query parameter. The detection types. Defaults to 'person'.
      */
-    boundaryTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    boundaryTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * duration query parameter. The minimum time, in seconds, that the person or car remains in the area to be counted. Defaults to boundary configuration or 60.
      */
-    duration?: pulumi.Input<number>;
+    duration?: pulumi.Input<number | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -156,7 +156,7 @@ export interface GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 1 1000. Defaults to 1000.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * ranges query parameter. A list of time ranges with intervals
      */

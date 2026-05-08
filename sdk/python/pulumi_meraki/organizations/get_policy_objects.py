@@ -163,11 +163,11 @@ def get_policy_objects(ending_before: Optional[_builtins.str] = None,
         per_page=pulumi.get(__ret__, 'per_page'),
         policy_object_id=pulumi.get(__ret__, 'policy_object_id'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-def get_policy_objects_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              organization_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                              policy_object_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_policy_objects_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              organization_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                              policy_object_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                              starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectsResult]:
     """
     ## Example Usage

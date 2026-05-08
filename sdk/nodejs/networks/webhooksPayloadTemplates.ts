@@ -147,39 +147,39 @@ export interface WebhooksPayloadTemplatesState {
     /**
      * The body of the payload template, in liquid template
      */
-    body?: pulumi.Input<string>;
+    body?: pulumi.Input<string | undefined>;
     /**
      * A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
      */
-    bodyFile?: pulumi.Input<string>;
+    bodyFile?: pulumi.Input<string | undefined>;
     /**
      * The payload template headers, will be rendered as a key-value pair in the webhook.
      */
-    headers?: pulumi.Input<pulumi.Input<inputs.networks.WebhooksPayloadTemplatesHeader>[]>;
+    headers?: pulumi.Input<pulumi.Input<inputs.networks.WebhooksPayloadTemplatesHeader>[] | undefined>;
     /**
      * A file containing the liquid template used with the webhook headers.
      */
-    headersFile?: pulumi.Input<string>;
+    headersFile?: pulumi.Input<string | undefined>;
     /**
      * The name of the payload template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Webhook payload template Id
      */
-    payloadTemplateId?: pulumi.Input<string>;
+    payloadTemplateId?: pulumi.Input<string | undefined>;
     /**
      * Information on which entities have access to the template
      */
-    sharing?: pulumi.Input<inputs.networks.WebhooksPayloadTemplatesSharing>;
+    sharing?: pulumi.Input<inputs.networks.WebhooksPayloadTemplatesSharing | undefined>;
     /**
      * The type of the payload template
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -189,23 +189,23 @@ export interface WebhooksPayloadTemplatesArgs {
     /**
      * The body of the payload template, in liquid template
      */
-    body?: pulumi.Input<string>;
+    body?: pulumi.Input<string | undefined>;
     /**
      * A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
      */
-    bodyFile?: pulumi.Input<string>;
+    bodyFile?: pulumi.Input<string | undefined>;
     /**
      * The payload template headers, will be rendered as a key-value pair in the webhook.
      */
-    headers?: pulumi.Input<pulumi.Input<inputs.networks.WebhooksPayloadTemplatesHeader>[]>;
+    headers?: pulumi.Input<pulumi.Input<inputs.networks.WebhooksPayloadTemplatesHeader>[] | undefined>;
     /**
      * A file containing the liquid template used with the webhook headers.
      */
-    headersFile?: pulumi.Input<string>;
+    headersFile?: pulumi.Input<string | undefined>;
     /**
      * The name of the payload template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -213,5 +213,5 @@ export interface WebhooksPayloadTemplatesArgs {
     /**
      * Webhook payload template Id
      */
-    payloadTemplateId?: pulumi.Input<string>;
+    payloadTemplateId?: pulumi.Input<string | undefined>;
 }

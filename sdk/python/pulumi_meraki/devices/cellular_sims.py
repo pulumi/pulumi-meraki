@@ -22,8 +22,8 @@ __all__ = ['CellularSimsArgs', 'CellularSims']
 class CellularSimsArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 sim_failover: Optional[pulumi.Input['CellularSimsSimFailoverArgs']] = None,
-                 sims: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
+                 sim_failover: pulumi.Input[Optional['CellularSimsSimFailoverArgs']] = None,
+                 sims: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
         """
         The set of arguments for constructing a CellularSims resource.
 
@@ -51,35 +51,35 @@ class CellularSimsArgs:
 
     @_builtins.property
     @pulumi.getter(name="simFailover")
-    def sim_failover(self) -> Optional[pulumi.Input['CellularSimsSimFailoverArgs']]:
+    def sim_failover(self) -> pulumi.Input[Optional['CellularSimsSimFailoverArgs']]:
         """
         SIM Failover settings.
         """
         return pulumi.get(self, "sim_failover")
 
     @sim_failover.setter
-    def sim_failover(self, value: Optional[pulumi.Input['CellularSimsSimFailoverArgs']]):
+    def sim_failover(self, value: pulumi.Input[Optional['CellularSimsSimFailoverArgs']]):
         pulumi.set(self, "sim_failover", value)
 
     @_builtins.property
     @pulumi.getter
-    def sims(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]]:
+    def sims(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]]:
         """
         List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
         """
         return pulumi.get(self, "sims")
 
     @sims.setter
-    def sims(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]]):
+    def sims(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]]):
         pulumi.set(self, "sims", value)
 
 
 @pulumi.input_type
 class _CellularSimsState:
     def __init__(__self__, *,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover: Optional[pulumi.Input['CellularSimsSimFailoverArgs']] = None,
-                 sims: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover: pulumi.Input[Optional['CellularSimsSimFailoverArgs']] = None,
+                 sims: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
         """
         Input properties used for looking up and filtering CellularSims resources.
 
@@ -96,38 +96,38 @@ class _CellularSimsState:
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailover")
-    def sim_failover(self) -> Optional[pulumi.Input['CellularSimsSimFailoverArgs']]:
+    def sim_failover(self) -> pulumi.Input[Optional['CellularSimsSimFailoverArgs']]:
         """
         SIM Failover settings.
         """
         return pulumi.get(self, "sim_failover")
 
     @sim_failover.setter
-    def sim_failover(self, value: Optional[pulumi.Input['CellularSimsSimFailoverArgs']]):
+    def sim_failover(self, value: pulumi.Input[Optional['CellularSimsSimFailoverArgs']]):
         pulumi.set(self, "sim_failover", value)
 
     @_builtins.property
     @pulumi.getter
-    def sims(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]]:
+    def sims(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]]:
         """
         List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
         """
         return pulumi.get(self, "sims")
 
     @sims.setter
-    def sims(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]]):
+    def sims(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimArgs']]]]):
         pulumi.set(self, "sims", value)
 
 
@@ -137,9 +137,9 @@ class CellularSims(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover: Optional[pulumi.Input[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
-                 sims: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover: pulumi.Input[Optional[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
+                 sims: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -204,9 +204,9 @@ class CellularSims(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover: Optional[pulumi.Input[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
-                 sims: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover: pulumi.Input[Optional[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
+                 sims: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -231,9 +231,9 @@ class CellularSims(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            sim_failover: Optional[pulumi.Input[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
-            sims: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None) -> 'CellularSims':
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover: pulumi.Input[Optional[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict']]] = None,
+            sims: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict']]]]] = None) -> 'CellularSims':
         """
         Get an existing CellularSims resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

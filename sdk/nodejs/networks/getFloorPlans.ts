@@ -73,9 +73,9 @@ export interface GetFloorPlansOutputArgs {
     /**
      * floorPlanId path parameter. Floor plan ID
      */
-    floorPlanId?: pulumi.Input<string>;
+    floorPlanId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

@@ -22,9 +22,9 @@ __all__ = ['SwitchLinkAggregationsArgs', 'SwitchLinkAggregations']
 class SwitchLinkAggregationsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 link_aggregation_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
+                 link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]] = None,
+                 switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchLinkAggregations resource.
 
@@ -55,48 +55,48 @@ class SwitchLinkAggregationsArgs:
 
     @_builtins.property
     @pulumi.getter(name="linkAggregationId")
-    def link_aggregation_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_aggregation_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         linkAggregationId path parameter. Link aggregation ID
         """
         return pulumi.get(self, "link_aggregation_id")
 
     @link_aggregation_id.setter
-    def link_aggregation_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_aggregation_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_aggregation_id", value)
 
     @_builtins.property
     @pulumi.getter(name="switchPorts")
-    def switch_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]:
+    def switch_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]:
         """
         Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         return pulumi.get(self, "switch_ports")
 
     @switch_ports.setter
-    def switch_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]):
+    def switch_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]):
         pulumi.set(self, "switch_ports", value)
 
     @_builtins.property
     @pulumi.getter(name="switchProfilePorts")
-    def switch_profile_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]:
+    def switch_profile_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]:
         """
         Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         return pulumi.get(self, "switch_profile_ports")
 
     @switch_profile_ports.setter
-    def switch_profile_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]):
+    def switch_profile_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]):
         pulumi.set(self, "switch_profile_ports", value)
 
 
 @pulumi.input_type
 class _SwitchLinkAggregationsState:
     def __init__(__self__, *,
-                 link_aggregation_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
+                 link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]] = None,
+                 switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchLinkAggregations resources.
 
@@ -116,50 +116,50 @@ class _SwitchLinkAggregationsState:
 
     @_builtins.property
     @pulumi.getter(name="linkAggregationId")
-    def link_aggregation_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def link_aggregation_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         linkAggregationId path parameter. Link aggregation ID
         """
         return pulumi.get(self, "link_aggregation_id")
 
     @link_aggregation_id.setter
-    def link_aggregation_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def link_aggregation_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "link_aggregation_id", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="switchPorts")
-    def switch_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]:
+    def switch_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]:
         """
         Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         return pulumi.get(self, "switch_ports")
 
     @switch_ports.setter
-    def switch_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]):
+    def switch_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]]]):
         pulumi.set(self, "switch_ports", value)
 
     @_builtins.property
     @pulumi.getter(name="switchProfilePorts")
-    def switch_profile_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]:
+    def switch_profile_ports(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]:
         """
         Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         return pulumi.get(self, "switch_profile_ports")
 
     @switch_profile_ports.setter
-    def switch_profile_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]):
+    def switch_profile_ports(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]]):
         pulumi.set(self, "switch_profile_ports", value)
 
 
@@ -169,10 +169,10 @@ class SwitchLinkAggregations(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 link_aggregation_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
+                 link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+                 switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -248,10 +248,10 @@ class SwitchLinkAggregations(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 link_aggregation_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
+                 link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+                 switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -277,10 +277,10 @@ class SwitchLinkAggregations(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            link_aggregation_id: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
-            switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None) -> 'SwitchLinkAggregations':
+            link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+            switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None) -> 'SwitchLinkAggregations':
         """
         Get an existing SwitchLinkAggregations resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

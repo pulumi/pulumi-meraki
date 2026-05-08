@@ -111,17 +111,17 @@ export interface CellularGatewaySubnetPoolState {
     /**
      * CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
      */
-    cidr?: pulumi.Input<string>;
-    deploymentMode?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
+    deploymentMode?: pulumi.Input<string | undefined>;
     /**
      * Mask used for the subnet of all MGs in  this network.
      */
-    mask?: pulumi.Input<number>;
+    mask?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    subnets?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewaySubnetPoolSubnet>[]>;
+    networkId?: pulumi.Input<string | undefined>;
+    subnets?: pulumi.Input<pulumi.Input<inputs.networks.CellularGatewaySubnetPoolSubnet>[] | undefined>;
 }
 
 /**
@@ -131,11 +131,11 @@ export interface CellularGatewaySubnetPoolArgs {
     /**
      * CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
      */
-    cidr?: pulumi.Input<string>;
+    cidr?: pulumi.Input<string | undefined>;
     /**
      * Mask used for the subnet of all MGs in  this network.
      */
-    mask?: pulumi.Input<number>;
+    mask?: pulumi.Input<number | undefined>;
     /**
      * networkId path parameter. Network ID
      */

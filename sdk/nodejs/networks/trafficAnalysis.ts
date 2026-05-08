@@ -110,16 +110,16 @@ export interface TrafficAnalysisState {
     /**
      * The list of items that make up the custom pie chart for traffic reporting.
      */
-    customPieChartItems?: pulumi.Input<pulumi.Input<inputs.networks.TrafficAnalysisCustomPieChartItem>[]>;
+    customPieChartItems?: pulumi.Input<pulumi.Input<inputs.networks.TrafficAnalysisCustomPieChartItem>[] | undefined>;
     /**
      * The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
      * 'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -129,12 +129,12 @@ export interface TrafficAnalysisArgs {
     /**
      * The list of items that make up the custom pie chart for traffic reporting.
      */
-    customPieChartItems?: pulumi.Input<pulumi.Input<inputs.networks.TrafficAnalysisCustomPieChartItem>[]>;
+    customPieChartItems?: pulumi.Input<pulumi.Input<inputs.networks.TrafficAnalysisCustomPieChartItem>[] | undefined>;
     /**
      * The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
      * 'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */

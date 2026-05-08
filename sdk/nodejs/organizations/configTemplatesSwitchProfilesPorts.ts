@@ -313,123 +313,123 @@ export interface ConfigTemplatesSwitchProfilesPortsState {
     /**
      * The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
      */
-    accessPolicyNumber?: pulumi.Input<number>;
+    accessPolicyNumber?: pulumi.Input<number | undefined>;
     /**
      * The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
      */
-    accessPolicyType?: pulumi.Input<string>;
+    accessPolicyType?: pulumi.Input<string | undefined>;
     /**
      * The VLANs allowed on the switch template port. Only applicable to trunk ports.
      */
-    allowedVlans?: pulumi.Input<string>;
+    allowedVlans?: pulumi.Input<string | undefined>;
     /**
      * configTemplateId path parameter. Config template ID
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
      */
-    daiTrusted?: pulumi.Input<boolean>;
+    daiTrusted?: pulumi.Input<boolean | undefined>;
     /**
      * The status of the switch template port.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
      */
-    flexibleStackingEnabled?: pulumi.Input<boolean>;
+    flexibleStackingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The isolation status of the switch template port.
      */
-    isolationEnabled?: pulumi.Input<boolean>;
+    isolationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The link speed for the switch template port.
      */
-    linkNegotiation?: pulumi.Input<string>;
+    linkNegotiation?: pulumi.Input<string | undefined>;
     /**
      * Available link speeds for the switch template port.
      */
-    linkNegotiationCapabilities?: pulumi.Input<pulumi.Input<string>[]>;
+    linkNegotiationCapabilities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
      */
-    macAllowLists?: pulumi.Input<pulumi.Input<string>[]>;
+    macAllowLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Port mirror
      */
-    mirror?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsMirror>;
+    mirror?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsMirror | undefined>;
     /**
      * Expansion module
      */
-    module?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsModule>;
+    module?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsModule | undefined>;
     /**
      * The name of the switch template port.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * The PoE status of the switch template port.
      */
-    poeEnabled?: pulumi.Input<boolean>;
+    poeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The identifier of the switch template port.
      */
-    portId?: pulumi.Input<string>;
+    portId?: pulumi.Input<string | undefined>;
     /**
      * The ID of the port schedule. A value of null will clear the port schedule.
      */
-    portScheduleId?: pulumi.Input<string>;
+    portScheduleId?: pulumi.Input<string | undefined>;
     /**
      * Profile attributes
      */
-    profile?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile>;
+    profile?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile | undefined>;
     /**
      * profileId path parameter. Profile ID
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
     /**
      * The rapid spanning tree protocol status.
      */
-    rstpEnabled?: pulumi.Input<boolean>;
+    rstpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    stickyMacAllowListLimit?: pulumi.Input<number>;
+    stickyMacAllowListLimit?: pulumi.Input<number | undefined>;
     /**
      * The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    stickyMacAllowLists?: pulumi.Input<pulumi.Input<string>[]>;
+    stickyMacAllowLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The storm control status of the switch template port.
      */
-    stormControlEnabled?: pulumi.Input<boolean>;
+    stormControlEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
      */
-    stpGuard?: pulumi.Input<string>;
+    stpGuard?: pulumi.Input<string | undefined>;
     /**
      * The list of tags of the switch template port.
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The type of the switch template port ('trunk' or 'access').
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
      */
-    udld?: pulumi.Input<string>;
+    udld?: pulumi.Input<string | undefined>;
     /**
      * The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
     /**
      * The voice VLAN of the switch template port. Only applicable to access ports.
      */
-    voiceVlan?: pulumi.Input<number>;
+    voiceVlan?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -439,15 +439,15 @@ export interface ConfigTemplatesSwitchProfilesPortsArgs {
     /**
      * The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
      */
-    accessPolicyNumber?: pulumi.Input<number>;
+    accessPolicyNumber?: pulumi.Input<number | undefined>;
     /**
      * The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
      */
-    accessPolicyType?: pulumi.Input<string>;
+    accessPolicyType?: pulumi.Input<string | undefined>;
     /**
      * The VLANs allowed on the switch template port. Only applicable to trunk ports.
      */
-    allowedVlans?: pulumi.Input<string>;
+    allowedVlans?: pulumi.Input<string | undefined>;
     /**
      * configTemplateId path parameter. Config template ID
      */
@@ -455,31 +455,31 @@ export interface ConfigTemplatesSwitchProfilesPortsArgs {
     /**
      * If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
      */
-    daiTrusted?: pulumi.Input<boolean>;
+    daiTrusted?: pulumi.Input<boolean | undefined>;
     /**
      * The status of the switch template port.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
      */
-    flexibleStackingEnabled?: pulumi.Input<boolean>;
+    flexibleStackingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The isolation status of the switch template port.
      */
-    isolationEnabled?: pulumi.Input<boolean>;
+    isolationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The link speed for the switch template port.
      */
-    linkNegotiation?: pulumi.Input<string>;
+    linkNegotiation?: pulumi.Input<string | undefined>;
     /**
      * Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
      */
-    macAllowLists?: pulumi.Input<pulumi.Input<string>[]>;
+    macAllowLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the switch template port.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -487,7 +487,7 @@ export interface ConfigTemplatesSwitchProfilesPortsArgs {
     /**
      * The PoE status of the switch template port.
      */
-    poeEnabled?: pulumi.Input<boolean>;
+    poeEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The identifier of the switch template port.
      */
@@ -495,11 +495,11 @@ export interface ConfigTemplatesSwitchProfilesPortsArgs {
     /**
      * The ID of the port schedule. A value of null will clear the port schedule.
      */
-    portScheduleId?: pulumi.Input<string>;
+    portScheduleId?: pulumi.Input<string | undefined>;
     /**
      * Profile attributes
      */
-    profile?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile>;
+    profile?: pulumi.Input<inputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile | undefined>;
     /**
      * profileId path parameter. Profile ID
      */
@@ -507,41 +507,41 @@ export interface ConfigTemplatesSwitchProfilesPortsArgs {
     /**
      * The rapid spanning tree protocol status.
      */
-    rstpEnabled?: pulumi.Input<boolean>;
+    rstpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    stickyMacAllowListLimit?: pulumi.Input<number>;
+    stickyMacAllowListLimit?: pulumi.Input<number | undefined>;
     /**
      * The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    stickyMacAllowLists?: pulumi.Input<pulumi.Input<string>[]>;
+    stickyMacAllowLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The storm control status of the switch template port.
      */
-    stormControlEnabled?: pulumi.Input<boolean>;
+    stormControlEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
      */
-    stpGuard?: pulumi.Input<string>;
+    stpGuard?: pulumi.Input<string | undefined>;
     /**
      * The list of tags of the switch template port.
      */
-    tags?: pulumi.Input<pulumi.Input<string>[]>;
+    tags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The type of the switch template port ('trunk' or 'access').
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
      */
-    udld?: pulumi.Input<string>;
+    udld?: pulumi.Input<string | undefined>;
     /**
      * The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports.
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
     /**
      * The voice VLAN of the switch template port. Only applicable to access ports.
      */
-    voiceVlan?: pulumi.Input<number>;
+    voiceVlan?: pulumi.Input<number | undefined>;
 }

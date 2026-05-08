@@ -119,19 +119,19 @@ export interface WirelessRadioSettingsState {
     /**
      * Manual radio settings for 5 GHz.
      */
-    fiveGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsFiveGhzSettings | undefined>;
     /**
      * The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * Manual radio settings for 2.4 GHz.
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsTwoFourGhzSettings | undefined>;
 }
 
 /**
@@ -141,11 +141,11 @@ export interface WirelessRadioSettingsArgs {
     /**
      * Manual radio settings for 5 GHz.
      */
-    fiveGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsFiveGhzSettings | undefined>;
     /**
      * The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
@@ -153,5 +153,5 @@ export interface WirelessRadioSettingsArgs {
     /**
      * Manual radio settings for 2.4 GHz.
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.devices.WirelessRadioSettingsTwoFourGhzSettings | undefined>;
 }

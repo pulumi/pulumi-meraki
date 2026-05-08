@@ -108,15 +108,15 @@ export interface SensorRelationshipsState {
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    livestream?: pulumi.Input<inputs.devices.SensorRelationshipsLivestream>;
+    livestream?: pulumi.Input<inputs.devices.SensorRelationshipsLivestream | undefined>;
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    livestreamRequests?: pulumi.Input<pulumi.Input<inputs.devices.SensorRelationshipsLivestreamRequest>[]>;
+    livestreamRequests?: pulumi.Input<pulumi.Input<inputs.devices.SensorRelationshipsLivestreamRequest>[] | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -126,11 +126,11 @@ export interface SensorRelationshipsArgs {
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    livestream?: pulumi.Input<inputs.devices.SensorRelationshipsLivestream>;
+    livestream?: pulumi.Input<inputs.devices.SensorRelationshipsLivestream | undefined>;
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    livestreamRequests?: pulumi.Input<pulumi.Input<inputs.devices.SensorRelationshipsLivestreamRequest>[]>;
+    livestreamRequests?: pulumi.Input<pulumi.Input<inputs.devices.SensorRelationshipsLivestreamRequest>[] | undefined>;
     /**
      * serial path parameter.
      */

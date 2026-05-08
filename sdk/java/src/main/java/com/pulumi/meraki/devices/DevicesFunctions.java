@@ -123,8 +123,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -162,8 +162,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -201,8 +201,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -240,8 +240,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -279,8 +279,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -318,8 +318,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -357,8 +357,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -396,8 +396,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -435,8 +435,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -474,8 +474,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -513,8 +513,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -552,8 +552,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -591,8 +591,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -630,8 +630,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -669,8 +669,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -708,8 +708,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -747,8 +747,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -786,8 +786,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -825,8 +825,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -864,8 +864,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -903,8 +903,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -942,8 +942,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -981,8 +981,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1020,8 +1020,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1059,8 +1059,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1098,8 +1098,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1137,8 +1137,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1176,8 +1176,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1215,8 +1215,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1254,8 +1254,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1293,8 +1293,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1332,8 +1332,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1371,8 +1371,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1410,8 +1410,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1449,8 +1449,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1488,8 +1488,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1528,8 +1528,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1568,8 +1568,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1608,8 +1608,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1648,8 +1648,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1688,8 +1688,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1727,8 +1727,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1766,8 +1766,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1805,8 +1805,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1844,8 +1844,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1883,8 +1883,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1922,8 +1922,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1961,8 +1961,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2000,8 +2000,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2039,8 +2039,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2078,8 +2078,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2117,8 +2117,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2156,8 +2156,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2195,8 +2195,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2234,8 +2234,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2273,8 +2273,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2312,8 +2312,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2351,8 +2351,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2390,8 +2390,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2429,8 +2429,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2468,8 +2468,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2507,8 +2507,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2546,8 +2546,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2585,8 +2585,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2624,8 +2624,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2663,8 +2663,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2703,8 +2703,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2743,8 +2743,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2783,8 +2783,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2823,8 +2823,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2863,8 +2863,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2903,8 +2903,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2943,8 +2943,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2983,8 +2983,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3023,8 +3023,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3063,8 +3063,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3103,8 +3103,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3143,8 +3143,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3183,8 +3183,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3223,8 +3223,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3263,8 +3263,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3303,8 +3303,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3343,8 +3343,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3383,8 +3383,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3423,8 +3423,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3463,8 +3463,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3503,8 +3503,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3543,8 +3543,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3583,8 +3583,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3623,8 +3623,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3663,8 +3663,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3703,8 +3703,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3743,8 +3743,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3783,8 +3783,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3823,8 +3823,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3863,8 +3863,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3902,8 +3902,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3941,8 +3941,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3980,8 +3980,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4019,8 +4019,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4058,8 +4058,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4097,8 +4097,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4136,8 +4136,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4175,8 +4175,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4214,8 +4214,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4253,8 +4253,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4292,8 +4292,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4331,8 +4331,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4370,8 +4370,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4409,8 +4409,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4497,8 +4497,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4513,7 +4513,7 @@ public final class DevicesFunctions {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
      *             .serial("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
@@ -4538,8 +4538,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4554,7 +4554,7 @@ public final class DevicesFunctions {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
      *             .serial("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
@@ -4579,8 +4579,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4595,7 +4595,7 @@ public final class DevicesFunctions {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
      *             .serial("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
@@ -4620,8 +4620,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4636,7 +4636,7 @@ public final class DevicesFunctions {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
      *             .serial("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
@@ -4661,8 +4661,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4677,7 +4677,7 @@ public final class DevicesFunctions {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
      *             .serial("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
@@ -4751,8 +4751,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4791,8 +4791,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4831,8 +4831,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4871,8 +4871,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4911,8 +4911,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5000,8 +5000,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5039,8 +5039,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5078,8 +5078,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5117,8 +5117,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5156,8 +5156,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5195,8 +5195,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5234,8 +5234,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5273,8 +5273,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5312,8 +5312,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5351,8 +5351,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5390,8 +5390,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5410,7 +5410,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5436,8 +5436,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5456,7 +5456,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5482,8 +5482,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5502,7 +5502,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5528,8 +5528,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5548,7 +5548,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5574,8 +5574,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5594,7 +5594,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5620,8 +5620,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5641,7 +5641,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5667,8 +5667,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5688,7 +5688,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5714,8 +5714,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5735,7 +5735,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5761,8 +5761,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5782,7 +5782,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5808,8 +5808,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5829,7 +5829,7 @@ public final class DevicesFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -5855,8 +5855,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5894,8 +5894,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5933,8 +5933,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5972,8 +5972,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6011,8 +6011,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6050,8 +6050,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6089,8 +6089,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6128,8 +6128,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6167,8 +6167,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6206,8 +6206,8 @@ public final class DevicesFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.devices.DevicesFunctions;
      * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

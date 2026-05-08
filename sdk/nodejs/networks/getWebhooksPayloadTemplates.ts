@@ -73,9 +73,9 @@ export interface GetWebhooksPayloadTemplatesOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * payloadTemplateId path parameter. Payload template ID
      */
-    payloadTemplateId?: pulumi.Input<string>;
+    payloadTemplateId?: pulumi.Input<string | undefined>;
 }

@@ -69,9 +69,9 @@ export interface GetAdaptivePolicyGroupsOutputArgs {
     /**
      * id path parameter.
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

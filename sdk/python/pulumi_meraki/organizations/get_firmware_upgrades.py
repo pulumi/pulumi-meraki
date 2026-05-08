@@ -184,12 +184,12 @@ def get_firmware_upgrades(ending_before: Optional[_builtins.str] = None,
         product_types=pulumi.get(__ret__, 'product_types'),
         starting_after=pulumi.get(__ret__, 'starting_after'),
         statuses=pulumi.get(__ret__, 'statuses'))
-def get_firmware_upgrades_output(ending_before: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                 per_page: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                 product_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                 starting_after: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                 statuses: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_firmware_upgrades_output(ending_before: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                 per_page: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                 product_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                 starting_after: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                 statuses: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesResult]:
     """
     ## Example Usage

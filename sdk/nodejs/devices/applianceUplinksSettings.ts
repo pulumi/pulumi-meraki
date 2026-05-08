@@ -171,11 +171,11 @@ export interface ApplianceUplinksSettingsState {
     /**
      * Interface settings.
      */
-    interfaces?: pulumi.Input<inputs.devices.ApplianceUplinksSettingsInterfaces>;
+    interfaces?: pulumi.Input<inputs.devices.ApplianceUplinksSettingsInterfaces | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -185,7 +185,7 @@ export interface ApplianceUplinksSettingsArgs {
     /**
      * Interface settings.
      */
-    interfaces?: pulumi.Input<inputs.devices.ApplianceUplinksSettingsInterfaces>;
+    interfaces?: pulumi.Input<inputs.devices.ApplianceUplinksSettingsInterfaces | undefined>;
     /**
      * serial path parameter.
      */

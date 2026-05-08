@@ -20,7 +20,7 @@ __all__ = ['AdaptivePolicySettingsArgs', 'AdaptivePolicySettings']
 class AdaptivePolicySettingsArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 enabled_networks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AdaptivePolicySettings resource.
 
@@ -45,22 +45,22 @@ class AdaptivePolicySettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="enabledNetworks")
-    def enabled_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def enabled_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of network IDs with adaptive policy enabled
         """
         return pulumi.get(self, "enabled_networks")
 
     @enabled_networks.setter
-    def enabled_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def enabled_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "enabled_networks", value)
 
 
 @pulumi.input_type
 class _AdaptivePolicySettingsState:
     def __init__(__self__, *,
-                 enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 enabled_networks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicySettings resources.
 
@@ -74,26 +74,26 @@ class _AdaptivePolicySettingsState:
 
     @_builtins.property
     @pulumi.getter(name="enabledNetworks")
-    def enabled_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def enabled_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of network IDs with adaptive policy enabled
         """
         return pulumi.get(self, "enabled_networks")
 
     @enabled_networks.setter
-    def enabled_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def enabled_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "enabled_networks", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
@@ -103,8 +103,8 @@ class AdaptivePolicySettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled_networks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class AdaptivePolicySettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 enabled_networks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class AdaptivePolicySettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'AdaptivePolicySettings':
+            enabled_networks: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'AdaptivePolicySettings':
         """
         Get an existing AdaptivePolicySettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

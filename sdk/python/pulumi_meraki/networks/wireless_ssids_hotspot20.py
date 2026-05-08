@@ -23,14 +23,14 @@ class WirelessSsidsHotspot20Args:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 domains: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]] = None,
-                 network_access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']] = None,
-                 roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 venue: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']] = None):
+                 domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]] = None,
+                 nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]] = None,
+                 network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']] = None,
+                 roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 venue: pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']] = None):
         """
         The set of arguments for constructing a WirelessSsidsHotspot20 resource.
 
@@ -90,114 +90,114 @@ class WirelessSsidsHotspot20Args:
 
     @_builtins.property
     @pulumi.getter
-    def domains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def domains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An array of domain names
         """
         return pulumi.get(self, "domains")
 
     @domains.setter
-    def domains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def domains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "domains", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not Hotspot 2.0 for this SSID is enabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="mccMncs")
-    def mcc_mncs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]:
+    def mcc_mncs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]:
         """
         An array of MCC/MNC pairs
         """
         return pulumi.get(self, "mcc_mncs")
 
     @mcc_mncs.setter
-    def mcc_mncs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]):
+    def mcc_mncs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]):
         pulumi.set(self, "mcc_mncs", value)
 
     @_builtins.property
     @pulumi.getter(name="naiRealms")
-    def nai_realms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]:
+    def nai_realms(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]:
         """
         An array of NAI realms
         """
         return pulumi.get(self, "nai_realms")
 
     @nai_realms.setter
-    def nai_realms(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]):
+    def nai_realms(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]):
         pulumi.set(self, "nai_realms", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAccessType")
-    def network_access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_access_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
         """
         return pulumi.get(self, "network_access_type")
 
     @network_access_type.setter
-    def network_access_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_access_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_access_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def operator(self) -> Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']]:
+    def operator(self) -> pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']]:
         """
         Operator settings for this SSID
         """
         return pulumi.get(self, "operator")
 
     @operator.setter
-    def operator(self, value: Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']]):
+    def operator(self, value: pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']]):
         pulumi.set(self, "operator", value)
 
     @_builtins.property
     @pulumi.getter(name="roamConsortOis")
-    def roam_consort_ois(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def roam_consort_ois(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
         """
         return pulumi.get(self, "roam_consort_ois")
 
     @roam_consort_ois.setter
-    def roam_consort_ois(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def roam_consort_ois(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "roam_consort_ois", value)
 
     @_builtins.property
     @pulumi.getter
-    def venue(self) -> Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']]:
+    def venue(self) -> pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']]:
         """
         Venue settings for this SSID
         """
         return pulumi.get(self, "venue")
 
     @venue.setter
-    def venue(self, value: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']]):
+    def venue(self, value: pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']]):
         pulumi.set(self, "venue", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsHotspot20State:
     def __init__(__self__, *,
-                 domains: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]] = None,
-                 network_access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']] = None,
-                 roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 venue: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']] = None):
+                 domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]] = None,
+                 nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]] = None,
+                 network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']] = None,
+                 roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 venue: pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsHotspot20 resources.
 
@@ -235,122 +235,122 @@ class _WirelessSsidsHotspot20State:
 
     @_builtins.property
     @pulumi.getter
-    def domains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def domains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An array of domain names
         """
         return pulumi.get(self, "domains")
 
     @domains.setter
-    def domains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def domains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "domains", value)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Whether or not Hotspot 2.0 for this SSID is enabled
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="mccMncs")
-    def mcc_mncs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]:
+    def mcc_mncs(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]:
         """
         An array of MCC/MNC pairs
         """
         return pulumi.get(self, "mcc_mncs")
 
     @mcc_mncs.setter
-    def mcc_mncs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]):
+    def mcc_mncs(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]]]):
         pulumi.set(self, "mcc_mncs", value)
 
     @_builtins.property
     @pulumi.getter(name="naiRealms")
-    def nai_realms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]:
+    def nai_realms(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]:
         """
         An array of NAI realms
         """
         return pulumi.get(self, "nai_realms")
 
     @nai_realms.setter
-    def nai_realms(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]):
+    def nai_realms(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmArgs']]]]):
         pulumi.set(self, "nai_realms", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAccessType")
-    def network_access_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_access_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
         """
         return pulumi.get(self, "network_access_type")
 
     @network_access_type.setter
-    def network_access_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_access_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_access_type", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def operator(self) -> Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']]:
+    def operator(self) -> pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']]:
         """
         Operator settings for this SSID
         """
         return pulumi.get(self, "operator")
 
     @operator.setter
-    def operator(self, value: Optional[pulumi.Input['WirelessSsidsHotspot20OperatorArgs']]):
+    def operator(self, value: pulumi.Input[Optional['WirelessSsidsHotspot20OperatorArgs']]):
         pulumi.set(self, "operator", value)
 
     @_builtins.property
     @pulumi.getter(name="roamConsortOis")
-    def roam_consort_ois(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def roam_consort_ois(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
         """
         return pulumi.get(self, "roam_consort_ois")
 
     @roam_consort_ois.setter
-    def roam_consort_ois(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def roam_consort_ois(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "roam_consort_ois", value)
 
     @_builtins.property
     @pulumi.getter
-    def venue(self) -> Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']]:
+    def venue(self) -> pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']]:
         """
         Venue settings for this SSID
         """
         return pulumi.get(self, "venue")
 
     @venue.setter
-    def venue(self, value: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']]):
+    def venue(self, value: pulumi.Input[Optional['WirelessSsidsHotspot20VenueArgs']]):
         pulumi.set(self, "venue", value)
 
 
@@ -360,16 +360,16 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 domains: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
-                 network_access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
-                 roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
+                 domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+                 nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
+                 network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
+                 roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 venue: pulumi.Input[Optional[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -507,16 +507,16 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 domains: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
-                 network_access_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
-                 roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
+                 domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+                 nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
+                 network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 operator: pulumi.Input[Optional[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
+                 roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 venue: pulumi.Input[Optional[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -550,16 +550,16 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            domains: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
-            nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
-            network_access_type: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
-            roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None) -> 'WirelessSsidsHotspot20':
+            domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+            nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
+            network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            operator: pulumi.Input[Optional[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
+            roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            venue: pulumi.Input[Optional[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None) -> 'WirelessSsidsHotspot20':
         """
         Get an existing WirelessSsidsHotspot20 resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

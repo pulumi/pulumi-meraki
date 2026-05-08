@@ -97,12 +97,12 @@ export class LicensingSubscriptionSubscriptionsClaim extends pulumi.CustomResour
  * Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsClaim resources.
  */
 export interface LicensingSubscriptionSubscriptionsClaimState {
-    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimItem>;
-    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimParameters>;
+    item?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimItem | undefined>;
+    parameters?: pulumi.Input<inputs.administered.LicensingSubscriptionSubscriptionsClaimParameters | undefined>;
     /**
      * validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
      */
-    validate?: pulumi.Input<boolean>;
+    validate?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -113,5 +113,5 @@ export interface LicensingSubscriptionSubscriptionsClaimArgs {
     /**
      * validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
      */
-    validate?: pulumi.Input<boolean>;
+    validate?: pulumi.Input<boolean | undefined>;
 }

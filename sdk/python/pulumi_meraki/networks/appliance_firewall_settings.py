@@ -22,7 +22,7 @@ __all__ = ['ApplianceFirewallSettingsArgs', 'ApplianceFirewallSettings']
 class ApplianceFirewallSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 spoofing_protection: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
+                 spoofing_protection: pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
         """
         The set of arguments for constructing a ApplianceFirewallSettings resource.
 
@@ -47,22 +47,22 @@ class ApplianceFirewallSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="spoofingProtection")
-    def spoofing_protection(self) -> Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']]:
+    def spoofing_protection(self) -> pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']]:
         """
         Spoofing protection settings
         """
         return pulumi.get(self, "spoofing_protection")
 
     @spoofing_protection.setter
-    def spoofing_protection(self, value: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']]):
+    def spoofing_protection(self, value: pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']]):
         pulumi.set(self, "spoofing_protection", value)
 
 
 @pulumi.input_type
 class _ApplianceFirewallSettingsState:
     def __init__(__self__, *,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofing_protection: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofing_protection: pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallSettings resources.
 
@@ -76,26 +76,26 @@ class _ApplianceFirewallSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="spoofingProtection")
-    def spoofing_protection(self) -> Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']]:
+    def spoofing_protection(self) -> pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']]:
         """
         Spoofing protection settings
         """
         return pulumi.get(self, "spoofing_protection")
 
     @spoofing_protection.setter
-    def spoofing_protection(self, value: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']]):
+    def spoofing_protection(self, value: pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionArgs']]):
         pulumi.set(self, "spoofing_protection", value)
 
 
@@ -105,8 +105,8 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofing_protection: pulumi.Input[Optional[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -182,8 +182,8 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoofing_protection: pulumi.Input[Optional[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,8 +207,8 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None) -> 'ApplianceFirewallSettings':
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            spoofing_protection: pulumi.Input[Optional[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None) -> 'ApplianceFirewallSettings':
         """
         Get an existing ApplianceFirewallSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

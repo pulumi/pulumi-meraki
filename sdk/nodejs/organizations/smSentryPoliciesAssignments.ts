@@ -109,12 +109,12 @@ export class SmSentryPoliciesAssignments extends pulumi.CustomResource {
  * Input properties used for looking up and filtering SmSentryPoliciesAssignments resources.
  */
 export interface SmSentryPoliciesAssignmentsState {
-    item?: pulumi.Input<inputs.organizations.SmSentryPoliciesAssignmentsItem>;
+    item?: pulumi.Input<inputs.organizations.SmSentryPoliciesAssignmentsItem | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.organizations.SmSentryPoliciesAssignmentsParameters>;
+    organizationId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.organizations.SmSentryPoliciesAssignmentsParameters | undefined>;
 }
 
 /**

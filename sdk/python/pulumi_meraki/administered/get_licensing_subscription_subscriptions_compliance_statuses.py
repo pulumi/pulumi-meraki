@@ -116,8 +116,8 @@ def get_licensing_subscription_subscriptions_compliance_statuses(organization_id
         items=pulumi.get(__ret__, 'items'),
         organization_ids=pulumi.get(__ret__, 'organization_ids'),
         subscription_ids=pulumi.get(__ret__, 'subscription_ids'))
-def get_licensing_subscription_subscriptions_compliance_statuses_output(organization_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                                        subscription_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_licensing_subscription_subscriptions_compliance_statuses_output(organization_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                                        subscription_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicensingSubscriptionSubscriptionsComplianceStatusesResult]:
     """
     ## Example Usage

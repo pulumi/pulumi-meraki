@@ -113,8 +113,8 @@ def get_vlan_profiles(iname: Optional[_builtins.str] = None,
         iname=pulumi.get(__ret__, 'iname'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_vlan_profiles_output(iname: Optional[pulumi.Input[_builtins.str]] = None,
-                             network_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_vlan_profiles_output(iname: pulumi.Input[Optional[_builtins.str]] = None,
+                             network_id: pulumi.Input[Optional[_builtins.str]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVlanProfilesResult]:
     """
     ## Example Usage

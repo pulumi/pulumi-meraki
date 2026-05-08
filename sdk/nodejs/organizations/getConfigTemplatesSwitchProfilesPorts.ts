@@ -93,17 +93,17 @@ export interface GetConfigTemplatesSwitchProfilesPortsOutputArgs {
     /**
      * configTemplateId path parameter. Config template ID
      */
-    configTemplateId?: pulumi.Input<string>;
+    configTemplateId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * portId path parameter. Port ID
      */
-    portId?: pulumi.Input<string>;
+    portId?: pulumi.Input<string | undefined>;
     /**
      * profileId path parameter. Profile ID
      */
-    profileId?: pulumi.Input<string>;
+    profileId?: pulumi.Input<string | undefined>;
 }

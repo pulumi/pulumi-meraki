@@ -21,8 +21,8 @@ class ClientsPolicyArgs:
     def __init__(__self__, *,
                  client_id: pulumi.Input[_builtins.str],
                  network_id: pulumi.Input[_builtins.str],
-                 device_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ClientsPolicy resource.
 
@@ -64,37 +64,37 @@ class ClientsPolicyArgs:
 
     @_builtins.property
     @pulumi.getter(name="devicePolicy")
-    def device_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the client's policy
         """
         return pulumi.get(self, "device_policy")
 
     @device_policy.setter
-    def device_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_policy", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The group policy identifier of the client
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
 
 @pulumi.input_type
 class _ClientsPolicyState:
     def __init__(__self__, *,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ClientsPolicy resources.
 
@@ -117,62 +117,62 @@ class _ClientsPolicyState:
 
     @_builtins.property
     @pulumi.getter(name="clientId")
-    def client_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def client_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         clientId path parameter. Client ID
         """
         return pulumi.get(self, "client_id")
 
     @client_id.setter
-    def client_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def client_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "client_id", value)
 
     @_builtins.property
     @pulumi.getter(name="devicePolicy")
-    def device_policy(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_policy(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the client's policy
         """
         return pulumi.get(self, "device_policy")
 
     @device_policy.setter
-    def device_policy(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_policy(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_policy", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The group policy identifier of the client
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The MAC address of the client
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -182,10 +182,10 @@ class ClientsPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -259,10 +259,10 @@ class ClientsPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_policy: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 client_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -291,11 +291,11 @@ class ClientsPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            client_id: Optional[pulumi.Input[_builtins.str]] = None,
-            device_policy: Optional[pulumi.Input[_builtins.str]] = None,
-            group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            mac: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ClientsPolicy':
+            client_id: pulumi.Input[Optional[_builtins.str]] = None,
+            device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ClientsPolicy':
         """
         Get an existing ClientsPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,10 +22,10 @@ __all__ = ['SwitchAlternateManagementInterfaceArgs', 'SwitchAlternateManagementI
 class SwitchAlternateManagementInterfaceArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchAlternateManagementInterface resource.
 
@@ -59,61 +59,61 @@ class SwitchAlternateManagementInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def protocols(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
         """
         return pulumi.get(self, "protocols")
 
     @protocols.setter
-    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def protocols(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "protocols", value)
 
     @_builtins.property
     @pulumi.getter
-    def switches(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]:
+    def switches(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]:
         """
         Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
         """
         return pulumi.get(self, "switches")
 
     @switches.setter
-    def switches(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]):
+    def switches(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]):
         pulumi.set(self, "switches", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Alternate management VLAN, must be between 1 and 4094
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
 @pulumi.input_type
 class _SwitchAlternateManagementInterfaceState:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchAlternateManagementInterface resources.
 
@@ -136,62 +136,62 @@ class _SwitchAlternateManagementInterfaceState:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def protocols(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
         """
         return pulumi.get(self, "protocols")
 
     @protocols.setter
-    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def protocols(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "protocols", value)
 
     @_builtins.property
     @pulumi.getter
-    def switches(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]:
+    def switches(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]:
         """
         Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
         """
         return pulumi.get(self, "switches")
 
     @switches.setter
-    def switches(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]):
+    def switches(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SwitchAlternateManagementInterfaceSwitchArgs']]]]):
         pulumi.set(self, "switches", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Alternate management VLAN, must be between 1 and 4094
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
 
@@ -201,11 +201,11 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -300,11 +300,11 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -331,11 +331,11 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            switches: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.int]] = None) -> 'SwitchAlternateManagementInterface':
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchAlternateManagementInterface':
         """
         Get an existing SwitchAlternateManagementInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

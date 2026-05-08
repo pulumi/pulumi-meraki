@@ -23,9 +23,9 @@ class WirelessSsidsSchedulesArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  number: pulumi.Input[_builtins.str],
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ranges: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]] = None,
-                 ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsSchedules resource.
 
@@ -70,49 +70,49 @@ class WirelessSsidsSchedulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, the SSID outage schedule is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]:
+    def ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]:
         """
         List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
         """
         return pulumi.get(self, "ranges")
 
     @ranges.setter
-    def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]):
+    def ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="rangesInSeconds")
-    def ranges_in_seconds(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]:
+    def ranges_in_seconds(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]:
         """
         List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
         """
         return pulumi.get(self, "ranges_in_seconds")
 
     @ranges_in_seconds.setter
-    def ranges_in_seconds(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]):
+    def ranges_in_seconds(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]):
         pulumi.set(self, "ranges_in_seconds", value)
 
 
 @pulumi.input_type
 class _WirelessSsidsSchedulesState:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 ranges: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]] = None,
-                 ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsSchedules resources.
 
@@ -135,62 +135,62 @@ class _WirelessSsidsSchedulesState:
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If true, the SSID outage schedule is enabled.
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         number path parameter.
         """
         return pulumi.get(self, "number")
 
     @number.setter
-    def number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "number", value)
 
     @_builtins.property
     @pulumi.getter
-    def ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]:
+    def ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]:
         """
         List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
         """
         return pulumi.get(self, "ranges")
 
     @ranges.setter
-    def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]):
+    def ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
     @_builtins.property
     @pulumi.getter(name="rangesInSeconds")
-    def ranges_in_seconds(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]:
+    def ranges_in_seconds(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]:
         """
         List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
         """
         return pulumi.get(self, "ranges_in_seconds")
 
     @ranges_in_seconds.setter
-    def ranges_in_seconds(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]):
+    def ranges_in_seconds(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]]):
         pulumi.set(self, "ranges_in_seconds", value)
 
 
@@ -200,11 +200,11 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-                 ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -289,11 +289,11 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 number: Optional[pulumi.Input[_builtins.str]] = None,
-                 ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-                 ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
+                 enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 number: pulumi.Input[Optional[_builtins.str]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -322,11 +322,11 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            number: Optional[pulumi.Input[_builtins.str]] = None,
-            ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-            ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None) -> 'WirelessSsidsSchedules':
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
+            ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None) -> 'WirelessSsidsSchedules':
         """
         Get an existing WirelessSsidsSchedules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

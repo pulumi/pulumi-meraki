@@ -21,10 +21,10 @@ __all__ = ['BaseArgs', 'Base']
 @pulumi.input_type
 class BaseArgs:
     def __init__(__self__, *,
-                 api: Optional[pulumi.Input['BaseApiArgs']] = None,
-                 management: Optional[pulumi.Input['BaseManagementArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 api: pulumi.Input[Optional['BaseApiArgs']] = None,
+                 management: pulumi.Input[Optional['BaseManagementArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Base resource.
 
@@ -44,63 +44,63 @@ class BaseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def api(self) -> Optional[pulumi.Input['BaseApiArgs']]:
+    def api(self) -> pulumi.Input[Optional['BaseApiArgs']]:
         """
         API related settings
         """
         return pulumi.get(self, "api")
 
     @api.setter
-    def api(self, value: Optional[pulumi.Input['BaseApiArgs']]):
+    def api(self, value: pulumi.Input[Optional['BaseApiArgs']]):
         pulumi.set(self, "api", value)
 
     @_builtins.property
     @pulumi.getter
-    def management(self) -> Optional[pulumi.Input['BaseManagementArgs']]:
+    def management(self) -> pulumi.Input[Optional['BaseManagementArgs']]:
         """
         Information about the organization's management system
         """
         return pulumi.get(self, "management")
 
     @management.setter
-    def management(self, value: Optional[pulumi.Input['BaseManagementArgs']]):
+    def management(self, value: pulumi.Input[Optional['BaseManagementArgs']]):
         pulumi.set(self, "management", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
 @pulumi.input_type
 class _BaseState:
     def __init__(__self__, *,
-                 api: Optional[pulumi.Input['BaseApiArgs']] = None,
-                 cloud: Optional[pulumi.Input['BaseCloudArgs']] = None,
-                 licensing: Optional[pulumi.Input['BaseLicensingArgs']] = None,
-                 management: Optional[pulumi.Input['BaseManagementArgs']] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None):
+                 api: pulumi.Input[Optional['BaseApiArgs']] = None,
+                 cloud: pulumi.Input[Optional['BaseCloudArgs']] = None,
+                 licensing: pulumi.Input[Optional['BaseLicensingArgs']] = None,
+                 management: pulumi.Input[Optional['BaseManagementArgs']] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Base resources.
 
@@ -129,86 +129,86 @@ class _BaseState:
 
     @_builtins.property
     @pulumi.getter
-    def api(self) -> Optional[pulumi.Input['BaseApiArgs']]:
+    def api(self) -> pulumi.Input[Optional['BaseApiArgs']]:
         """
         API related settings
         """
         return pulumi.get(self, "api")
 
     @api.setter
-    def api(self, value: Optional[pulumi.Input['BaseApiArgs']]):
+    def api(self, value: pulumi.Input[Optional['BaseApiArgs']]):
         pulumi.set(self, "api", value)
 
     @_builtins.property
     @pulumi.getter
-    def cloud(self) -> Optional[pulumi.Input['BaseCloudArgs']]:
+    def cloud(self) -> pulumi.Input[Optional['BaseCloudArgs']]:
         """
         Data for this organization
         """
         return pulumi.get(self, "cloud")
 
     @cloud.setter
-    def cloud(self, value: Optional[pulumi.Input['BaseCloudArgs']]):
+    def cloud(self, value: pulumi.Input[Optional['BaseCloudArgs']]):
         pulumi.set(self, "cloud", value)
 
     @_builtins.property
     @pulumi.getter
-    def licensing(self) -> Optional[pulumi.Input['BaseLicensingArgs']]:
+    def licensing(self) -> pulumi.Input[Optional['BaseLicensingArgs']]:
         """
         Licensing related settings
         """
         return pulumi.get(self, "licensing")
 
     @licensing.setter
-    def licensing(self, value: Optional[pulumi.Input['BaseLicensingArgs']]):
+    def licensing(self, value: pulumi.Input[Optional['BaseLicensingArgs']]):
         pulumi.set(self, "licensing", value)
 
     @_builtins.property
     @pulumi.getter
-    def management(self) -> Optional[pulumi.Input['BaseManagementArgs']]:
+    def management(self) -> pulumi.Input[Optional['BaseManagementArgs']]:
         """
         Information about the organization's management system
         """
         return pulumi.get(self, "management")
 
     @management.setter
-    def management(self, value: Optional[pulumi.Input['BaseManagementArgs']]):
+    def management(self, value: pulumi.Input[Optional['BaseManagementArgs']]):
         pulumi.set(self, "management", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization URL
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
 
@@ -218,10 +218,10 @@ class Base(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-                 management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -301,10 +301,10 @@ class Base(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-                 management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -331,13 +331,13 @@ class Base(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-            cloud: Optional[pulumi.Input[Union['BaseCloudArgs', 'BaseCloudArgsDict']]] = None,
-            licensing: Optional[pulumi.Input[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']]] = None,
-            management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            url: Optional[pulumi.Input[_builtins.str]] = None) -> 'Base':
+            api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+            cloud: pulumi.Input[Optional[Union['BaseCloudArgs', 'BaseCloudArgsDict']]] = None,
+            licensing: pulumi.Input[Optional[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']]] = None,
+            management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> 'Base':
         """
         Get an existing Base resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

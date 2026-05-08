@@ -135,27 +135,27 @@ export interface CameraRolesState {
     /**
      * Device tag on which this specified permission is applied.
      */
-    appliedOnDevices?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnDevice>[]>;
+    appliedOnDevices?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnDevice>[] | undefined>;
     /**
      * Network tag on which this specified permission is applied.
      */
-    appliedOnNetworks?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnNetwork>[]>;
+    appliedOnNetworks?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnNetwork>[] | undefined>;
     /**
      * Permissions to be applied org wide.
      */
-    appliedOrgWides?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOrgWide>[]>;
+    appliedOrgWides?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOrgWide>[] | undefined>;
     /**
      * The name of the new role. Must be unique. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
     /**
      * roleId path parameter. Role ID
      */
-    roleId?: pulumi.Input<string>;
+    roleId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -165,19 +165,19 @@ export interface CameraRolesArgs {
     /**
      * Device tag on which this specified permission is applied.
      */
-    appliedOnDevices?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnDevice>[]>;
+    appliedOnDevices?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnDevice>[] | undefined>;
     /**
      * Network tag on which this specified permission is applied.
      */
-    appliedOnNetworks?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnNetwork>[]>;
+    appliedOnNetworks?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOnNetwork>[] | undefined>;
     /**
      * Permissions to be applied org wide.
      */
-    appliedOrgWides?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOrgWide>[]>;
+    appliedOrgWides?: pulumi.Input<pulumi.Input<inputs.organizations.CameraRolesAppliedOrgWide>[] | undefined>;
     /**
      * The name of the new role. Must be unique. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -185,5 +185,5 @@ export interface CameraRolesArgs {
     /**
      * roleId path parameter. Role ID
      */
-    roleId?: pulumi.Input<string>;
+    roleId?: pulumi.Input<string | undefined>;
 }

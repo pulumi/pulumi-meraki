@@ -245,39 +245,39 @@ export interface GetEventsOutputArgs {
     /**
      * clientIp query parameter. The IP of the client which the list of events will be filtered with. Only supported for track-by-IP networks.
      */
-    clientIp?: pulumi.Input<string>;
+    clientIp?: pulumi.Input<string | undefined>;
     /**
      * clientMac query parameter. The MAC address of the client which the list of events will be filtered with. Only supported for track-by-MAC networks.
      */
-    clientMac?: pulumi.Input<string>;
+    clientMac?: pulumi.Input<string | undefined>;
     /**
      * clientName query parameter. The name, or partial name, of the client which the list of events will be filtered with
      */
-    clientName?: pulumi.Input<string>;
+    clientName?: pulumi.Input<string | undefined>;
     /**
      * deviceMac query parameter. The MAC address of the Meraki device which the list of events will be filtered with
      */
-    deviceMac?: pulumi.Input<string>;
+    deviceMac?: pulumi.Input<string | undefined>;
     /**
      * deviceName query parameter. The name of the Meraki device which the list of events will be filtered with
      */
-    deviceName?: pulumi.Input<string>;
+    deviceName?: pulumi.Input<string | undefined>;
     /**
      * deviceSerial query parameter. The serial of the Meraki device which the list of events will be filtered with
      */
-    deviceSerial?: pulumi.Input<string>;
+    deviceSerial?: pulumi.Input<string | undefined>;
     /**
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    endingBefore?: pulumi.Input<string>;
+    endingBefore?: pulumi.Input<string | undefined>;
     /**
      * excludedEventTypes query parameter. A list of event types. The returned events will be filtered to exclude events with these types.
      */
-    excludedEventTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    excludedEventTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
      */
-    includedEventTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    includedEventTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -285,21 +285,21 @@ export interface GetEventsOutputArgs {
     /**
      * perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 10.
      */
-    perPage?: pulumi.Input<number>;
+    perPage?: pulumi.Input<number | undefined>;
     /**
      * productType query parameter. The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
      */
-    productType?: pulumi.Input<string>;
+    productType?: pulumi.Input<string | undefined>;
     /**
      * smDeviceMac query parameter. The MAC address of the Systems Manager device which the list of events will be filtered with
      */
-    smDeviceMac?: pulumi.Input<string>;
+    smDeviceMac?: pulumi.Input<string | undefined>;
     /**
      * smDeviceName query parameter. The name of the Systems Manager device which the list of events will be filtered with
      */
-    smDeviceName?: pulumi.Input<string>;
+    smDeviceName?: pulumi.Input<string | undefined>;
     /**
      * startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
-    startingAfter?: pulumi.Input<string>;
+    startingAfter?: pulumi.Input<string | undefined>;
 }

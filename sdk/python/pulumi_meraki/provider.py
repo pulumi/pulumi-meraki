@@ -19,10 +19,10 @@ __all__ = ['ProviderArgs', 'Provider']
 @pulumi.input_type
 class ProviderArgs:
     def __init__(__self__, *,
-                 meraki_base_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_dashboard_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_debug: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_requests_per_second: Optional[pulumi.Input[_builtins.int]] = None):
+                 meraki_base_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_dashboard_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_debug: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_requests_per_second: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a Provider resource.
 
@@ -42,50 +42,50 @@ class ProviderArgs:
 
     @_builtins.property
     @pulumi.getter(name="merakiBaseUrl")
-    def meraki_base_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def meraki_base_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         """
         return pulumi.get(self, "meraki_base_url")
 
     @meraki_base_url.setter
-    def meraki_base_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def meraki_base_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "meraki_base_url", value)
 
     @_builtins.property
     @pulumi.getter(name="merakiDashboardApiKey")
-    def meraki_dashboard_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def meraki_dashboard_api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         """
         return pulumi.get(self, "meraki_dashboard_api_key")
 
     @meraki_dashboard_api_key.setter
-    def meraki_dashboard_api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def meraki_dashboard_api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "meraki_dashboard_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="merakiDebug")
-    def meraki_debug(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def meraki_debug(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         """
         return pulumi.get(self, "meraki_debug")
 
     @meraki_debug.setter
-    def meraki_debug(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def meraki_debug(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "meraki_debug", value)
 
     @_builtins.property
     @pulumi.getter(name="merakiRequestsPerSecond")
-    def meraki_requests_per_second(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def meraki_requests_per_second(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Flag requests per second allowed for client. Default is (10)
         """
         return pulumi.get(self, "meraki_requests_per_second")
 
     @meraki_requests_per_second.setter
-    def meraki_requests_per_second(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def meraki_requests_per_second(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "meraki_requests_per_second", value)
 
 
@@ -95,10 +95,10 @@ class Provider(pulumi.ProviderResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 meraki_base_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_dashboard_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_debug: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_requests_per_second: Optional[pulumi.Input[_builtins.int]] = None,
+                 meraki_base_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_dashboard_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_debug: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_requests_per_second: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         The provider type for the meraki package. By default, resources use package-wide configuration
@@ -142,10 +142,10 @@ class Provider(pulumi.ProviderResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 meraki_base_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_dashboard_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_debug: Optional[pulumi.Input[_builtins.str]] = None,
-                 meraki_requests_per_second: Optional[pulumi.Input[_builtins.int]] = None,
+                 meraki_base_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_dashboard_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_debug: pulumi.Input[Optional[_builtins.str]] = None,
+                 meraki_requests_per_second: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):

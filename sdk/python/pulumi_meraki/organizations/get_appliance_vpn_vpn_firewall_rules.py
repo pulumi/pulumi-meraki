@@ -96,7 +96,7 @@ def get_appliance_vpn_vpn_firewall_rules(organization_id: Optional[_builtins.str
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-def get_appliance_vpn_vpn_firewall_rules_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_vpn_vpn_firewall_rules_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceVpnVpnFirewallRulesResult]:
     """
     ## Example Usage

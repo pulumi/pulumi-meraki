@@ -73,9 +73,9 @@ export interface GetWebhooksHttpServersOutputArgs {
     /**
      * httpServerId path parameter. Http server ID
      */
-    httpServerId?: pulumi.Input<string>;
+    httpServerId?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
 }

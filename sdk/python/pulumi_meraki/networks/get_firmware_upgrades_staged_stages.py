@@ -99,7 +99,7 @@ def get_firmware_upgrades_staged_stages(network_id: Optional[_builtins.str] = No
         id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
-def get_firmware_upgrades_staged_stages_output(network_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_firmware_upgrades_staged_stages_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesStagedStagesResult]:
     """
     ## Example Usage

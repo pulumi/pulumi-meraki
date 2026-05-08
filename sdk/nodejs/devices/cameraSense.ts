@@ -123,24 +123,24 @@ export interface CameraSenseState {
     /**
      * The details of the audio detection config.
      */
-    audioDetection?: pulumi.Input<inputs.devices.CameraSenseAudioDetection>;
+    audioDetection?: pulumi.Input<inputs.devices.CameraSenseAudioDetection | undefined>;
     /**
      * The ID of the object detection model
      */
-    detectionModelId?: pulumi.Input<string>;
+    detectionModelId?: pulumi.Input<string | undefined>;
     /**
      * The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
      */
-    mqttBrokerId?: pulumi.Input<string>;
-    mqttTopics?: pulumi.Input<pulumi.Input<string>[]>;
+    mqttBrokerId?: pulumi.Input<string | undefined>;
+    mqttTopics?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
      */
-    senseEnabled?: pulumi.Input<boolean>;
+    senseEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -150,19 +150,19 @@ export interface CameraSenseArgs {
     /**
      * The details of the audio detection config.
      */
-    audioDetection?: pulumi.Input<inputs.devices.CameraSenseAudioDetection>;
+    audioDetection?: pulumi.Input<inputs.devices.CameraSenseAudioDetection | undefined>;
     /**
      * The ID of the object detection model
      */
-    detectionModelId?: pulumi.Input<string>;
+    detectionModelId?: pulumi.Input<string | undefined>;
     /**
      * The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
      */
-    mqttBrokerId?: pulumi.Input<string>;
+    mqttBrokerId?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
      */
-    senseEnabled?: pulumi.Input<boolean>;
+    senseEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */

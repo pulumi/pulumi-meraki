@@ -96,7 +96,7 @@ def get_appliance_performance(serial: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-def get_appliance_performance_output(serial: Optional[pulumi.Input[_builtins.str]] = None,
+def get_appliance_performance_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppliancePerformanceResult]:
     """
     ## Example Usage

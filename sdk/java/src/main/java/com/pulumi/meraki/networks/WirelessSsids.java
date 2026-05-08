@@ -67,8 +67,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusAccountingServerArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusServerArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsSpeedBurstArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -212,7 +212,7 @@ import javax.annotation.Nullable;
  *                     .build())
  *                 .build())
  *             .mandatoryDhcpEnabled(false)
- *             .minBitrate(5.5)
+ *             .minBitrate(5)
  *             .name("My SSID")
  *             .namedVlans(WirelessSsidsNamedVlansArgs.builder()
  *                 .radius(WirelessSsidsNamedVlansRadiusArgs.builder()

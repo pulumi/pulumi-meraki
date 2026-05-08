@@ -116,23 +116,23 @@ export interface InsightMonitoredMediaServersState {
     /**
      * The IP address (IPv4 only) or hostname of the media server to monitor
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead
      */
-    bestEffortMonitoringEnabled?: pulumi.Input<boolean>;
+    bestEffortMonitoringEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * monitoredMediaServerId path parameter. Monitored media server ID
      */
-    monitoredMediaServerId?: pulumi.Input<string>;
+    monitoredMediaServerId?: pulumi.Input<string | undefined>;
     /**
      * The name of the VoIP provider
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -142,19 +142,19 @@ export interface InsightMonitoredMediaServersArgs {
     /**
      * The IP address (IPv4 only) or hostname of the media server to monitor
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead
      */
-    bestEffortMonitoringEnabled?: pulumi.Input<boolean>;
+    bestEffortMonitoringEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * monitoredMediaServerId path parameter. Monitored media server ID
      */
-    monitoredMediaServerId?: pulumi.Input<string>;
+    monitoredMediaServerId?: pulumi.Input<string | undefined>;
     /**
      * The name of the VoIP provider
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

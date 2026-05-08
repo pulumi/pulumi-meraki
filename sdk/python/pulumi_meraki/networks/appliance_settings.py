@@ -22,9 +22,9 @@ __all__ = ['ApplianceSettingsArgs', 'ApplianceSettings']
 class ApplianceSettingsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 client_tracking_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_dns: Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']] = None):
+                 client_tracking_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dynamic_dns: pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceSettings resource.
 
@@ -55,48 +55,48 @@ class ApplianceSettingsArgs:
 
     @_builtins.property
     @pulumi.getter(name="clientTrackingMethod")
-    def client_tracking_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def client_tracking_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Client tracking method of a network
         """
         return pulumi.get(self, "client_tracking_method")
 
     @client_tracking_method.setter
-    def client_tracking_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def client_tracking_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "client_tracking_method", value)
 
     @_builtins.property
     @pulumi.getter(name="deploymentMode")
-    def deployment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deployment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Deployment mode of a network
         """
         return pulumi.get(self, "deployment_mode")
 
     @deployment_mode.setter
-    def deployment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deployment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deployment_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="dynamicDns")
-    def dynamic_dns(self) -> Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']]:
+    def dynamic_dns(self) -> pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']]:
         """
         Dynamic DNS settings for a network
         """
         return pulumi.get(self, "dynamic_dns")
 
     @dynamic_dns.setter
-    def dynamic_dns(self, value: Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']]):
+    def dynamic_dns(self, value: pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']]):
         pulumi.set(self, "dynamic_dns", value)
 
 
 @pulumi.input_type
 class _ApplianceSettingsState:
     def __init__(__self__, *,
-                 client_tracking_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_dns: Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 client_tracking_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dynamic_dns: pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSettings resources.
 
@@ -116,50 +116,50 @@ class _ApplianceSettingsState:
 
     @_builtins.property
     @pulumi.getter(name="clientTrackingMethod")
-    def client_tracking_method(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def client_tracking_method(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Client tracking method of a network
         """
         return pulumi.get(self, "client_tracking_method")
 
     @client_tracking_method.setter
-    def client_tracking_method(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def client_tracking_method(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "client_tracking_method", value)
 
     @_builtins.property
     @pulumi.getter(name="deploymentMode")
-    def deployment_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deployment_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Deployment mode of a network
         """
         return pulumi.get(self, "deployment_mode")
 
     @deployment_mode.setter
-    def deployment_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deployment_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deployment_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="dynamicDns")
-    def dynamic_dns(self) -> Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']]:
+    def dynamic_dns(self) -> pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']]:
         """
         Dynamic DNS settings for a network
         """
         return pulumi.get(self, "dynamic_dns")
 
     @dynamic_dns.setter
-    def dynamic_dns(self, value: Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']]):
+    def dynamic_dns(self, value: pulumi.Input[Optional['ApplianceSettingsDynamicDnsArgs']]):
         pulumi.set(self, "dynamic_dns", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -169,10 +169,10 @@ class ApplianceSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_tracking_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 client_tracking_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dynamic_dns: pulumi.Input[Optional[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -252,10 +252,10 @@ class ApplianceSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 client_tracking_method: Optional[pulumi.Input[_builtins.str]] = None,
-                 deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 client_tracking_method: pulumi.Input[Optional[_builtins.str]] = None,
+                 deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 dynamic_dns: pulumi.Input[Optional[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -281,10 +281,10 @@ class ApplianceSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            client_tracking_method: Optional[pulumi.Input[_builtins.str]] = None,
-            deployment_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceSettings':
+            client_tracking_method: pulumi.Input[Optional[_builtins.str]] = None,
+            deployment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            dynamic_dns: pulumi.Input[Optional[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSettings':
         """
         Get an existing ApplianceSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -20,9 +20,9 @@ __all__ = ['SwitchRoutingMulticastRendezvousPointsArgs', 'SwitchRoutingMulticast
 class SwitchRoutingMulticastRendezvousPointsArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 multicast_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchRoutingMulticastRendezvousPoints resource.
 
@@ -53,50 +53,50 @@ class SwitchRoutingMulticastRendezvousPointsArgs:
 
     @_builtins.property
     @pulumi.getter(name="interfaceIp")
-    def interface_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the interface where the RP needs to be created.
         """
         return pulumi.get(self, "interface_ip")
 
     @interface_ip.setter
-    def interface_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastGroup")
-    def multicast_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multicast_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'Any', or the IP address of a multicast group
         """
         return pulumi.get(self, "multicast_group")
 
     @multicast_group.setter
-    def multicast_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multicast_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multicast_group", value)
 
     @_builtins.property
     @pulumi.getter(name="rendezvousPointId")
-    def rendezvous_point_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rendezvous_point_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         rendezvousPointId path parameter. Rendezvous point ID
         """
         return pulumi.get(self, "rendezvous_point_id")
 
     @rendezvous_point_id.setter
-    def rendezvous_point_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rendezvous_point_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rendezvous_point_id", value)
 
 
 @pulumi.input_type
 class _SwitchRoutingMulticastRendezvousPointsState:
     def __init__(__self__, *,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 multicast_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None):
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingMulticastRendezvousPoints resources.
 
@@ -120,68 +120,68 @@ class _SwitchRoutingMulticastRendezvousPointsState:
 
     @_builtins.property
     @pulumi.getter(name="interfaceIp")
-    def interface_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address of the interface where the RP needs to be created.
         """
         return pulumi.get(self, "interface_ip")
 
     @interface_ip.setter
-    def interface_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "interface_name")
 
     @interface_name.setter
-    def interface_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastGroup")
-    def multicast_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multicast_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         'Any', or the IP address of a multicast group
         """
         return pulumi.get(self, "multicast_group")
 
     @multicast_group.setter
-    def multicast_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multicast_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multicast_group", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="rendezvousPointId")
-    def rendezvous_point_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rendezvous_point_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         rendezvousPointId path parameter. Rendezvous point ID
         """
         return pulumi.get(self, "rendezvous_point_id")
 
     @rendezvous_point_id.setter
-    def rendezvous_point_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rendezvous_point_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rendezvous_point_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
 
@@ -191,10 +191,10 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 multicast_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -266,10 +266,10 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 multicast_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -297,12 +297,12 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            interface_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-            multicast_group: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None) -> 'SwitchRoutingMulticastRendezvousPoints':
+            interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchRoutingMulticastRendezvousPoints':
         """
         Get an existing SwitchRoutingMulticastRendezvousPoints resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

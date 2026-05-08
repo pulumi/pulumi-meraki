@@ -113,17 +113,17 @@ export interface SmBypassActivationLockAttemptsState {
     /**
      * attemptId path parameter. Attempt ID
      */
-    attemptId?: pulumi.Input<string>;
-    data?: pulumi.Input<inputs.networks.SmBypassActivationLockAttemptsData>;
+    attemptId?: pulumi.Input<string | undefined>;
+    data?: pulumi.Input<inputs.networks.SmBypassActivationLockAttemptsData | undefined>;
     /**
      * The ids of the devices to attempt activation lock bypass.
      */
-    ids?: pulumi.Input<pulumi.Input<string>[]>;
+    ids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    status?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
+    status?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -133,11 +133,11 @@ export interface SmBypassActivationLockAttemptsArgs {
     /**
      * attemptId path parameter. Attempt ID
      */
-    attemptId?: pulumi.Input<string>;
+    attemptId?: pulumi.Input<string | undefined>;
     /**
      * The ids of the devices to attempt activation lock bypass.
      */
-    ids?: pulumi.Input<pulumi.Input<string>[]>;
+    ids?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */

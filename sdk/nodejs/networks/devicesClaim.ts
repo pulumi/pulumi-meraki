@@ -101,12 +101,12 @@ export class DevicesClaim extends pulumi.CustomResource {
  * Input properties used for looking up and filtering DevicesClaim resources.
  */
 export interface DevicesClaimState {
-    item?: pulumi.Input<inputs.networks.DevicesClaimItem>;
+    item?: pulumi.Input<inputs.networks.DevicesClaimItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.DevicesClaimParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.DevicesClaimParameters | undefined>;
 }
 
 /**

@@ -118,19 +118,19 @@ export interface ApplianceVpnSiteToSiteVpnState {
     /**
      * The list of VPN hubs, in order of preference.
      */
-    hubs?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnHub>[]>;
+    hubs?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnHub>[] | undefined>;
     /**
      * The site-to-site VPN mode.
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The list of subnets and their VPN presence.
      */
-    subnets?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnSubnet>[]>;
+    subnets?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnSubnet>[] | undefined>;
 }
 
 /**
@@ -140,11 +140,11 @@ export interface ApplianceVpnSiteToSiteVpnArgs {
     /**
      * The list of VPN hubs, in order of preference.
      */
-    hubs?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnHub>[]>;
+    hubs?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnHub>[] | undefined>;
     /**
      * The site-to-site VPN mode.
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -152,5 +152,5 @@ export interface ApplianceVpnSiteToSiteVpnArgs {
     /**
      * The list of subnets and their VPN presence.
      */
-    subnets?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnSubnet>[]>;
+    subnets?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceVpnSiteToSiteVpnSubnet>[] | undefined>;
 }

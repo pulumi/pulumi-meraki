@@ -20,10 +20,10 @@ __all__ = ['InsightMonitoredMediaServersArgs', 'InsightMonitoredMediaServers']
 class InsightMonitoredMediaServersArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 best_effort_monitoring_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitored_media_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 best_effort_monitoring_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitored_media_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a InsightMonitoredMediaServers resource.
 
@@ -57,61 +57,61 @@ class InsightMonitoredMediaServersArgs:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address (IPv4 only) or hostname of the media server to monitor
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="bestEffortMonitoringEnabled")
-    def best_effort_monitoring_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def best_effort_monitoring_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead
         """
         return pulumi.get(self, "best_effort_monitoring_enabled")
 
     @best_effort_monitoring_enabled.setter
-    def best_effort_monitoring_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def best_effort_monitoring_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "best_effort_monitoring_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoredMediaServerId")
-    def monitored_media_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def monitored_media_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         monitoredMediaServerId path parameter. Monitored media server ID
         """
         return pulumi.get(self, "monitored_media_server_id")
 
     @monitored_media_server_id.setter
-    def monitored_media_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def monitored_media_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "monitored_media_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VoIP provider
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _InsightMonitoredMediaServersState:
     def __init__(__self__, *,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 best_effort_monitoring_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitored_media_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 best_effort_monitoring_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitored_media_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering InsightMonitoredMediaServers resources.
 
@@ -134,62 +134,62 @@ class _InsightMonitoredMediaServersState:
 
     @_builtins.property
     @pulumi.getter
-    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The IP address (IPv4 only) or hostname of the media server to monitor
         """
         return pulumi.get(self, "address")
 
     @address.setter
-    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address", value)
 
     @_builtins.property
     @pulumi.getter(name="bestEffortMonitoringEnabled")
-    def best_effort_monitoring_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def best_effort_monitoring_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Indicates that if the media server doesn't respond to ICMP pings, the nearest hop will be used in its stead
         """
         return pulumi.get(self, "best_effort_monitoring_enabled")
 
     @best_effort_monitoring_enabled.setter
-    def best_effort_monitoring_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def best_effort_monitoring_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "best_effort_monitoring_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoredMediaServerId")
-    def monitored_media_server_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def monitored_media_server_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         monitoredMediaServerId path parameter. Monitored media server ID
         """
         return pulumi.get(self, "monitored_media_server_id")
 
     @monitored_media_server_id.setter
-    def monitored_media_server_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def monitored_media_server_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "monitored_media_server_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VoIP provider
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
@@ -199,11 +199,11 @@ class InsightMonitoredMediaServers(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 best_effort_monitoring_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitored_media_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 best_effort_monitoring_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitored_media_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -278,11 +278,11 @@ class InsightMonitoredMediaServers(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address: Optional[pulumi.Input[_builtins.str]] = None,
-                 best_effort_monitoring_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitored_media_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 address: pulumi.Input[Optional[_builtins.str]] = None,
+                 best_effort_monitoring_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitored_media_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -309,11 +309,11 @@ class InsightMonitoredMediaServers(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address: Optional[pulumi.Input[_builtins.str]] = None,
-            best_effort_monitoring_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            monitored_media_server_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'InsightMonitoredMediaServers':
+            address: pulumi.Input[Optional[_builtins.str]] = None,
+            best_effort_monitoring_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            monitored_media_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'InsightMonitoredMediaServers':
         """
         Get an existing InsightMonitoredMediaServers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

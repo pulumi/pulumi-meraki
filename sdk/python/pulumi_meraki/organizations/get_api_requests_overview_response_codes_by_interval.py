@@ -207,7 +207,7 @@ def get_api_requests_overview_response_codes_by_interval(admin_ids: Optional[Seq
         source_ips=["string"],
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items)
@@ -252,16 +252,16 @@ def get_api_requests_overview_response_codes_by_interval(admin_ids: Optional[Seq
         timespan=pulumi.get(__ret__, 'timespan'),
         user_agent=pulumi.get(__ret__, 'user_agent'),
         version=pulumi.get(__ret__, 'version'))
-def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                                interval: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                                                operation_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                                organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                source_ips: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                                                t0: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                                t1: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                                timespan: Optional[pulumi.Input[Optional[_builtins.float]]] = None,
-                                                                user_agent: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                                version: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+def get_api_requests_overview_response_codes_by_interval_output(admin_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                                interval: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
+                                                                operation_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                                organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                source_ips: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                                                t0: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                                t1: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                                timespan: pulumi.Input[Optional[Optional[_builtins.float]]] = None,
+                                                                user_agent: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                                version: pulumi.Input[Optional[Optional[_builtins.int]]] = None,
                                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApiRequestsOverviewResponseCodesByIntervalResult]:
     """
     ## Example Usage
@@ -277,7 +277,7 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optio
         source_ips=["string"],
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items)

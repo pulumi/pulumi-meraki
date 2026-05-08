@@ -20,9 +20,9 @@ __all__ = ['CellularGatewayDhcpArgs', 'CellularGatewayDhcp']
 class CellularGatewayDhcpArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None):
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CellularGatewayDhcp resource.
 
@@ -53,48 +53,48 @@ class CellularGatewayDhcpArgs:
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP Lease time for all MG in the network.
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsCustomNameservers")
-    def dns_custom_nameservers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_custom_nameservers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
         """
         return pulumi.get(self, "dns_custom_nameservers")
 
     @dns_custom_nameservers.setter
-    def dns_custom_nameservers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_custom_nameservers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_custom_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameservers")
-    def dns_nameservers(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DNS name servers mode for all MG in the network.
         """
         return pulumi.get(self, "dns_nameservers")
 
     @dns_nameservers.setter
-    def dns_nameservers(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers", value)
 
 
 @pulumi.input_type
 class _CellularGatewayDhcpState:
     def __init__(__self__, *,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayDhcp resources.
 
@@ -114,50 +114,50 @@ class _CellularGatewayDhcpState:
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP Lease time for all MG in the network.
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsCustomNameservers")
-    def dns_custom_nameservers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_custom_nameservers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
         """
         return pulumi.get(self, "dns_custom_nameservers")
 
     @dns_custom_nameservers.setter
-    def dns_custom_nameservers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_custom_nameservers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_custom_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameservers")
-    def dns_nameservers(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DNS name servers mode for all MG in the network.
         """
         return pulumi.get(self, "dns_nameservers")
 
     @dns_nameservers.setter
-    def dns_nameservers(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
 
@@ -167,10 +167,10 @@ class CellularGatewayDhcp(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -250,10 +250,10 @@ class CellularGatewayDhcp(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -279,10 +279,10 @@ class CellularGatewayDhcp(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-            dns_custom_nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'CellularGatewayDhcp':
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'CellularGatewayDhcp':
         """
         Get an existing CellularGatewayDhcp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

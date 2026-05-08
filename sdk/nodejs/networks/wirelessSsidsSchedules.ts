@@ -126,23 +126,23 @@ export interface WirelessSsidsSchedulesState {
     /**
      * If true, the SSID outage schedule is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * number path parameter.
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRange>[] | undefined>;
     /**
      * List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
      */
-    rangesInSeconds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRangesInSecond>[]>;
+    rangesInSeconds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRangesInSecond>[] | undefined>;
 }
 
 /**
@@ -152,7 +152,7 @@ export interface WirelessSsidsSchedulesArgs {
     /**
      * If true, the SSID outage schedule is enabled.
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -164,9 +164,9 @@ export interface WirelessSsidsSchedulesArgs {
     /**
      * List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRange>[] | undefined>;
     /**
      * List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
      */
-    rangesInSeconds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRangesInSecond>[]>;
+    rangesInSeconds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsSchedulesRangesInSecond>[] | undefined>;
 }

@@ -102,12 +102,12 @@ export class WirelessEthernetPortsProfilesAssign extends pulumi.CustomResource {
  * Input properties used for looking up and filtering WirelessEthernetPortsProfilesAssign resources.
  */
 export interface WirelessEthernetPortsProfilesAssignState {
-    item?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesAssignItem>;
+    item?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesAssignItem | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesAssignParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.WirelessEthernetPortsProfilesAssignParameters | undefined>;
 }
 
 /**

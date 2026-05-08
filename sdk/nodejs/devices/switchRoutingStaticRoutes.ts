@@ -130,31 +130,31 @@ export interface SwitchRoutingStaticRoutesState {
     /**
      * Option to advertise static routes via OSPF
      */
-    advertiseViaOspfEnabled?: pulumi.Input<boolean>;
+    advertiseViaOspfEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The name or description of the layer 3 static route
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the router to which traffic for this destination network should be sent
      */
-    nextHopIp?: pulumi.Input<string>;
+    nextHopIp?: pulumi.Input<string | undefined>;
     /**
      * Option to prefer static routes over OSPF routes
      */
-    preferOverOspfRoutesEnabled?: pulumi.Input<boolean>;
+    preferOverOspfRoutesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * The identifier of a layer 3 static route
      */
-    staticRouteId?: pulumi.Input<string>;
+    staticRouteId?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -164,19 +164,19 @@ export interface SwitchRoutingStaticRoutesArgs {
     /**
      * Option to advertise static routes via OSPF
      */
-    advertiseViaOspfEnabled?: pulumi.Input<boolean>;
+    advertiseViaOspfEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The name or description of the layer 3 static route
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the router to which traffic for this destination network should be sent
      */
-    nextHopIp?: pulumi.Input<string>;
+    nextHopIp?: pulumi.Input<string | undefined>;
     /**
      * Option to prefer static routes over OSPF routes
      */
-    preferOverOspfRoutesEnabled?: pulumi.Input<boolean>;
+    preferOverOspfRoutesEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * serial path parameter.
      */
@@ -184,9 +184,9 @@ export interface SwitchRoutingStaticRoutesArgs {
     /**
      * The identifier of a layer 3 static route
      */
-    staticRouteId?: pulumi.Input<string>;
+    staticRouteId?: pulumi.Input<string | undefined>;
     /**
      * The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
 }

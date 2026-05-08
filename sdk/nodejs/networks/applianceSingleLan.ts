@@ -132,23 +132,23 @@ export interface ApplianceSingleLanState {
     /**
      * The local IP of the appliance on the single LAN
      */
-    applianceIp?: pulumi.Input<string>;
+    applianceIp?: pulumi.Input<string | undefined>;
     /**
      * IPv6 configuration on the single LAN
      */
-    ipv6?: pulumi.Input<inputs.networks.ApplianceSingleLanIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.ApplianceSingleLanIpv6 | undefined>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceSingleLanMandatoryDhcp>;
+    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceSingleLanMandatoryDhcp | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The subnet of the single LAN
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -158,15 +158,15 @@ export interface ApplianceSingleLanArgs {
     /**
      * The local IP of the appliance on the single LAN
      */
-    applianceIp?: pulumi.Input<string>;
+    applianceIp?: pulumi.Input<string | undefined>;
     /**
      * IPv6 configuration on the single LAN
      */
-    ipv6?: pulumi.Input<inputs.networks.ApplianceSingleLanIpv6>;
+    ipv6?: pulumi.Input<inputs.networks.ApplianceSingleLanIpv6 | undefined>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceSingleLanMandatoryDhcp>;
+    mandatoryDhcp?: pulumi.Input<inputs.networks.ApplianceSingleLanMandatoryDhcp | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -174,5 +174,5 @@ export interface ApplianceSingleLanArgs {
     /**
      * The subnet of the single LAN
      */
-    subnet?: pulumi.Input<string>;
+    subnet?: pulumi.Input<string | undefined>;
 }

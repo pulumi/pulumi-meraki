@@ -22,10 +22,10 @@ __all__ = ['LiveToolsWakeOnLanArgs', 'LiveToolsWakeOnLan']
 class LiveToolsWakeOnLanArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
-                 callback: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a LiveToolsWakeOnLan resource.
 
@@ -59,65 +59,65 @@ class LiveToolsWakeOnLanArgs:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The target's MAC address
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The target's VLAN (1 to 4094)
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="wakeOnLanId")
-    def wake_on_lan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wake_on_lan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the Wake-on-LAN job
         """
         return pulumi.get(self, "wake_on_lan_id")
 
     @wake_on_lan_id.setter
-    def wake_on_lan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wake_on_lan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wake_on_lan_id", value)
 
 
 @pulumi.input_type
 class _LiveToolsWakeOnLanState:
     def __init__(__self__, *,
-                 callback: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']] = None,
-                 error: Optional[pulumi.Input[_builtins.str]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 request: Optional[pulumi.Input['LiveToolsWakeOnLanRequestArgs']] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 status: Optional[pulumi.Input[_builtins.str]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 callback: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']] = None,
+                 error: pulumi.Input[Optional[_builtins.str]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 request: pulumi.Input[Optional['LiveToolsWakeOnLanRequestArgs']] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 status: pulumi.Input[Optional[_builtins.str]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsWakeOnLan resources.
 
@@ -152,110 +152,110 @@ class _LiveToolsWakeOnLanState:
 
     @_builtins.property
     @pulumi.getter
-    def callback(self) -> Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']]:
+    def callback(self) -> pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']]:
         """
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
 
     @callback.setter
-    def callback(self, value: Optional[pulumi.Input['LiveToolsWakeOnLanCallbackArgs']]):
+    def callback(self, value: pulumi.Input[Optional['LiveToolsWakeOnLanCallbackArgs']]):
         pulumi.set(self, "callback", value)
 
     @_builtins.property
     @pulumi.getter
-    def error(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def error(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         An error message for a failed execution
         """
         return pulumi.get(self, "error")
 
     @error.setter
-    def error(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def error(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "error", value)
 
     @_builtins.property
     @pulumi.getter
-    def mac(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mac(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The target's MAC address
         """
         return pulumi.get(self, "mac")
 
     @mac.setter
-    def mac(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mac(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mac", value)
 
     @_builtins.property
     @pulumi.getter
-    def request(self) -> Optional[pulumi.Input['LiveToolsWakeOnLanRequestArgs']]:
+    def request(self) -> pulumi.Input[Optional['LiveToolsWakeOnLanRequestArgs']]:
         """
         The parameters of the Wake-on-LAN request
         """
         return pulumi.get(self, "request")
 
     @request.setter
-    def request(self, value: Optional[pulumi.Input['LiveToolsWakeOnLanRequestArgs']]):
+    def request(self, value: pulumi.Input[Optional['LiveToolsWakeOnLanRequestArgs']]):
         pulumi.set(self, "request", value)
 
     @_builtins.property
     @pulumi.getter
-    def serial(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def serial(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         serial path parameter.
         """
         return pulumi.get(self, "serial")
 
     @serial.setter
-    def serial(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def serial(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "serial", value)
 
     @_builtins.property
     @pulumi.getter
-    def status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Status of the Wake-on-LAN request
         """
         return pulumi.get(self, "status")
 
     @status.setter
-    def status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "status", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         GET this url to check the status of your ping request
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The target's VLAN (1 to 4094)
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="wakeOnLanId")
-    def wake_on_lan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def wake_on_lan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ID of the Wake-on-LAN job
         """
         return pulumi.get(self, "wake_on_lan_id")
 
     @wake_on_lan_id.setter
-    def wake_on_lan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def wake_on_lan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "wake_on_lan_id", value)
 
 
@@ -265,11 +265,11 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -362,11 +362,11 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
-                 mac: Optional[pulumi.Input[_builtins.str]] = None,
-                 serial: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
+                 mac: pulumi.Input[Optional[_builtins.str]] = None,
+                 serial: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -397,15 +397,15 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
-            error: Optional[pulumi.Input[_builtins.str]] = None,
-            mac: Optional[pulumi.Input[_builtins.str]] = None,
-            request: Optional[pulumi.Input[Union['LiveToolsWakeOnLanRequestArgs', 'LiveToolsWakeOnLanRequestArgsDict']]] = None,
-            serial: Optional[pulumi.Input[_builtins.str]] = None,
-            status: Optional[pulumi.Input[_builtins.str]] = None,
-            url: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-            wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'LiveToolsWakeOnLan':
+            callback: pulumi.Input[Optional[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsWakeOnLanRequestArgs', 'LiveToolsWakeOnLanRequestArgsDict']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'LiveToolsWakeOnLan':
         """
         Get an existing LiveToolsWakeOnLan resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

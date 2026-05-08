@@ -128,27 +128,27 @@ export interface WebhooksHttpServersState {
     /**
      * httpServerId path parameter. Http server ID
      */
-    httpServerId?: pulumi.Input<string>;
+    httpServerId?: pulumi.Input<string | undefined>;
     /**
      * A name for easy reference to the HTTP server
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * A Meraki network ID.
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The payload template to use when posting data to the HTTP server.
      */
-    payloadTemplate?: pulumi.Input<inputs.networks.WebhooksHttpServersPayloadTemplate>;
+    payloadTemplate?: pulumi.Input<inputs.networks.WebhooksHttpServersPayloadTemplate | undefined>;
     /**
      * A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
      */
-    sharedSecret?: pulumi.Input<string>;
+    sharedSecret?: pulumi.Input<string | undefined>;
     /**
      * The URL of the HTTP server.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -158,11 +158,11 @@ export interface WebhooksHttpServersArgs {
     /**
      * httpServerId path parameter. Http server ID
      */
-    httpServerId?: pulumi.Input<string>;
+    httpServerId?: pulumi.Input<string | undefined>;
     /**
      * A name for easy reference to the HTTP server
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * A Meraki network ID.
      */
@@ -170,13 +170,13 @@ export interface WebhooksHttpServersArgs {
     /**
      * The payload template to use when posting data to the HTTP server.
      */
-    payloadTemplate?: pulumi.Input<inputs.networks.WebhooksHttpServersPayloadTemplate>;
+    payloadTemplate?: pulumi.Input<inputs.networks.WebhooksHttpServersPayloadTemplate | undefined>;
     /**
      * A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
      */
-    sharedSecret?: pulumi.Input<string>;
+    sharedSecret?: pulumi.Input<string | undefined>;
     /**
      * The URL of the HTTP server.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }

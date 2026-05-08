@@ -86,11 +86,11 @@ export class ApplianceVmxAuthenticationToken extends pulumi.CustomResource {
  * Input properties used for looking up and filtering ApplianceVmxAuthenticationToken resources.
  */
 export interface ApplianceVmxAuthenticationTokenState {
-    item?: pulumi.Input<inputs.devices.ApplianceVmxAuthenticationTokenItem>;
+    item?: pulumi.Input<inputs.devices.ApplianceVmxAuthenticationTokenItem | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

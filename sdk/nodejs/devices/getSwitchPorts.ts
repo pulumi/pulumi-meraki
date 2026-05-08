@@ -73,9 +73,9 @@ export interface GetSwitchPortsOutputArgs {
     /**
      * portId path parameter. Port ID
      */
-    portId?: pulumi.Input<string>;
+    portId?: pulumi.Input<string | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }

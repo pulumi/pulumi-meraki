@@ -467,55 +467,55 @@ export interface WirelessRfProfilesState {
     /**
      * Settings that will be enabled if selectionType is set to 'ap'.
      */
-    apBandSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesApBandSettings>;
+    apBandSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesApBandSettings | undefined>;
     /**
      * Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
      */
-    bandSelectionType?: pulumi.Input<string>;
+    bandSelectionType?: pulumi.Input<string | undefined>;
     /**
      * Steers client to best available access point. Can be either true or false. Defaults to true.
      */
-    clientBalancingEnabled?: pulumi.Input<boolean>;
+    clientBalancingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Settings related to 5Ghz band
      */
-    fiveGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesFiveGhzSettings | undefined>;
     /**
      * Flex radio settings.
      */
-    flexRadios?: pulumi.Input<inputs.networks.WirelessRfProfilesFlexRadios>;
+    flexRadios?: pulumi.Input<inputs.networks.WirelessRfProfilesFlexRadios | undefined>;
     /**
      * Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
      */
-    minBitrateType?: pulumi.Input<string>;
+    minBitrateType?: pulumi.Input<string | undefined>;
     /**
      * The name of the new profile. Must be unique. This param is required on creation.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The network ID of the RF Profile
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Per-SSID radio settings by number.
      */
-    perSsidSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesPerSsidSettings>;
+    perSsidSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesPerSsidSettings | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
      */
-    sixGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesSixGhzSettings>;
+    sixGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesSixGhzSettings | undefined>;
     /**
      * Settings related to radio transmission.
      */
-    transmission?: pulumi.Input<inputs.networks.WirelessRfProfilesTransmission>;
+    transmission?: pulumi.Input<inputs.networks.WirelessRfProfilesTransmission | undefined>;
     /**
      * Settings related to 2.4Ghz band
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesTwoFourGhzSettings | undefined>;
 }
 
 /**
@@ -525,31 +525,31 @@ export interface WirelessRfProfilesArgs {
     /**
      * Settings that will be enabled if selectionType is set to 'ap'.
      */
-    apBandSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesApBandSettings>;
+    apBandSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesApBandSettings | undefined>;
     /**
      * Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
      */
-    bandSelectionType?: pulumi.Input<string>;
+    bandSelectionType?: pulumi.Input<string | undefined>;
     /**
      * Steers client to best available access point. Can be either true or false. Defaults to true.
      */
-    clientBalancingEnabled?: pulumi.Input<boolean>;
+    clientBalancingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Settings related to 5Ghz band
      */
-    fiveGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesFiveGhzSettings>;
+    fiveGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesFiveGhzSettings | undefined>;
     /**
      * Flex radio settings.
      */
-    flexRadios?: pulumi.Input<inputs.networks.WirelessRfProfilesFlexRadios>;
+    flexRadios?: pulumi.Input<inputs.networks.WirelessRfProfilesFlexRadios | undefined>;
     /**
      * Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
      */
-    minBitrateType?: pulumi.Input<string>;
+    minBitrateType?: pulumi.Input<string | undefined>;
     /**
      * The name of the new profile. Must be unique. This param is required on creation.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The network ID of the RF Profile
      */
@@ -557,21 +557,21 @@ export interface WirelessRfProfilesArgs {
     /**
      * Per-SSID radio settings by number.
      */
-    perSsidSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesPerSsidSettings>;
+    perSsidSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesPerSsidSettings | undefined>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    rfProfileId?: pulumi.Input<string>;
+    rfProfileId?: pulumi.Input<string | undefined>;
     /**
      * Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
      */
-    sixGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesSixGhzSettings>;
+    sixGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesSixGhzSettings | undefined>;
     /**
      * Settings related to radio transmission.
      */
-    transmission?: pulumi.Input<inputs.networks.WirelessRfProfilesTransmission>;
+    transmission?: pulumi.Input<inputs.networks.WirelessRfProfilesTransmission | undefined>;
     /**
      * Settings related to 2.4Ghz band
      */
-    twoFourGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesTwoFourGhzSettings>;
+    twoFourGhzSettings?: pulumi.Input<inputs.networks.WirelessRfProfilesTwoFourGhzSettings | undefined>;
 }

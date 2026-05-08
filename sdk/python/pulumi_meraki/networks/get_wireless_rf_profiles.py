@@ -129,9 +129,9 @@ def get_wireless_rf_profiles(include_template_profiles: Optional[_builtins.bool]
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rf_profile_id=pulumi.get(__ret__, 'rf_profile_id'))
-def get_wireless_rf_profiles_output(include_template_profiles: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
-                                    network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                    rf_profile_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_wireless_rf_profiles_output(include_template_profiles: pulumi.Input[Optional[Optional[_builtins.bool]]] = None,
+                                    network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                    rf_profile_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessRfProfilesResult]:
     """
     ## Example Usage

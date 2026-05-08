@@ -121,27 +121,27 @@ export class CameraWirelessProfiles extends pulumi.CustomResource {
  * Input properties used for looking up and filtering CameraWirelessProfiles resources.
  */
 export interface CameraWirelessProfilesState {
-    appliedDeviceCount?: pulumi.Input<number>;
+    appliedDeviceCount?: pulumi.Input<number | undefined>;
     /**
      * The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
      */
-    identity?: pulumi.Input<inputs.networks.CameraWirelessProfilesIdentity>;
+    identity?: pulumi.Input<inputs.networks.CameraWirelessProfilesIdentity | undefined>;
     /**
      * The name of the camera wireless profile. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * The details of the SSID config.
      */
-    ssid?: pulumi.Input<inputs.networks.CameraWirelessProfilesSsid>;
+    ssid?: pulumi.Input<inputs.networks.CameraWirelessProfilesSsid | undefined>;
     /**
      * wirelessProfileId path parameter. Wireless profile ID
      */
-    wirelessProfileId?: pulumi.Input<string>;
+    wirelessProfileId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -151,11 +151,11 @@ export interface CameraWirelessProfilesArgs {
     /**
      * The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
      */
-    identity?: pulumi.Input<inputs.networks.CameraWirelessProfilesIdentity>;
+    identity?: pulumi.Input<inputs.networks.CameraWirelessProfilesIdentity | undefined>;
     /**
      * The name of the camera wireless profile. This parameter is required.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -163,9 +163,9 @@ export interface CameraWirelessProfilesArgs {
     /**
      * The details of the SSID config.
      */
-    ssid?: pulumi.Input<inputs.networks.CameraWirelessProfilesSsid>;
+    ssid?: pulumi.Input<inputs.networks.CameraWirelessProfilesSsid | undefined>;
     /**
      * wirelessProfileId path parameter. Wireless profile ID
      */
-    wirelessProfileId?: pulumi.Input<string>;
+    wirelessProfileId?: pulumi.Input<string | undefined>;
 }

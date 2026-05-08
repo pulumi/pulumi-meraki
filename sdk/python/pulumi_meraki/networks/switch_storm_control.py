@@ -20,9 +20,9 @@ __all__ = ['SwitchStormControlArgs', 'SwitchStormControl']
 class SwitchStormControlArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
-                 broadcast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 multicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 unknown_unicast_threshold: Optional[pulumi.Input[_builtins.int]] = None):
+                 broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchStormControl resource.
 
@@ -53,48 +53,48 @@ class SwitchStormControlArgs:
 
     @_builtins.property
     @pulumi.getter(name="broadcastThreshold")
-    def broadcast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def broadcast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Broadcast threshold.
         """
         return pulumi.get(self, "broadcast_threshold")
 
     @broadcast_threshold.setter
-    def broadcast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def broadcast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "broadcast_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastThreshold")
-    def multicast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multicast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Multicast threshold.
         """
         return pulumi.get(self, "multicast_threshold")
 
     @multicast_threshold.setter
-    def multicast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multicast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multicast_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownUnicastThreshold")
-    def unknown_unicast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def unknown_unicast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Unknown Unicast threshold.
         """
         return pulumi.get(self, "unknown_unicast_threshold")
 
     @unknown_unicast_threshold.setter
-    def unknown_unicast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def unknown_unicast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "unknown_unicast_threshold", value)
 
 
 @pulumi.input_type
 class _SwitchStormControlState:
     def __init__(__self__, *,
-                 broadcast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 multicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_unicast_threshold: Optional[pulumi.Input[_builtins.int]] = None):
+                 broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchStormControl resources.
 
@@ -114,50 +114,50 @@ class _SwitchStormControlState:
 
     @_builtins.property
     @pulumi.getter(name="broadcastThreshold")
-    def broadcast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def broadcast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Broadcast threshold.
         """
         return pulumi.get(self, "broadcast_threshold")
 
     @broadcast_threshold.setter
-    def broadcast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def broadcast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "broadcast_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="multicastThreshold")
-    def multicast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multicast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Multicast threshold.
         """
         return pulumi.get(self, "multicast_threshold")
 
     @multicast_threshold.setter
-    def multicast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multicast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multicast_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownUnicastThreshold")
-    def unknown_unicast_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def unknown_unicast_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Unknown Unicast threshold.
         """
         return pulumi.get(self, "unknown_unicast_threshold")
 
     @unknown_unicast_threshold.setter
-    def unknown_unicast_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def unknown_unicast_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "unknown_unicast_threshold", value)
 
 
@@ -167,10 +167,10 @@ class SwitchStormControl(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 broadcast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 multicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_unicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
+                 broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -244,10 +244,10 @@ class SwitchStormControl(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 broadcast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 multicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_unicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
+                 broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -273,10 +273,10 @@ class SwitchStormControl(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            broadcast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            multicast_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            unknown_unicast_threshold: Optional[pulumi.Input[_builtins.int]] = None) -> 'SwitchStormControl':
+            broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchStormControl':
         """
         Get an existing SwitchStormControl resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

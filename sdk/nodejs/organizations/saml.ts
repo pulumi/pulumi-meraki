@@ -96,11 +96,11 @@ export interface SamlState {
     /**
      * Toggle depicting if SAML SSO settings are enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -110,7 +110,7 @@ export interface SamlArgs {
     /**
      * Toggle depicting if SAML SSO settings are enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */

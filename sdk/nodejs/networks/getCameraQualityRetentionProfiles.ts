@@ -73,9 +73,9 @@ export interface GetCameraQualityRetentionProfilesOutputArgs {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * qualityRetentionProfileId path parameter. Quality retention profile ID
      */
-    qualityRetentionProfileId?: pulumi.Input<string>;
+    qualityRetentionProfileId?: pulumi.Input<string | undefined>;
 }

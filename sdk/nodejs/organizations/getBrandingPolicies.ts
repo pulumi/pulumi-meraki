@@ -73,9 +73,9 @@ export interface GetBrandingPoliciesOutputArgs {
     /**
      * brandingPolicyId path parameter. Branding policy ID
      */
-    brandingPolicyId?: pulumi.Input<string>;
+    brandingPolicyId?: pulumi.Input<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    organizationId?: pulumi.Input<string>;
+    organizationId?: pulumi.Input<string | undefined>;
 }

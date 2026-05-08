@@ -133,31 +133,31 @@ export interface AppliancePrefixesDelegatedStaticsState {
     /**
      * Prefix creation time.
      */
-    createdAt?: pulumi.Input<string>;
+    createdAt?: pulumi.Input<string | undefined>;
     /**
      * Identifying description for the prefix.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * WAN1/WAN2/Independent prefix.
      */
-    origin?: pulumi.Input<inputs.networks.AppliancePrefixesDelegatedStaticsOrigin>;
+    origin?: pulumi.Input<inputs.networks.AppliancePrefixesDelegatedStaticsOrigin | undefined>;
     /**
      * IPv6 prefix/prefix length.
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Static delegated prefix id.
      */
-    staticDelegatedPrefixId?: pulumi.Input<string>;
+    staticDelegatedPrefixId?: pulumi.Input<string | undefined>;
     /**
      * Prefix Updated time.
      */
-    updatedAt?: pulumi.Input<string>;
+    updatedAt?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -167,7 +167,7 @@ export interface AppliancePrefixesDelegatedStaticsArgs {
     /**
      * Identifying description for the prefix.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -175,13 +175,13 @@ export interface AppliancePrefixesDelegatedStaticsArgs {
     /**
      * WAN1/WAN2/Independent prefix.
      */
-    origin?: pulumi.Input<inputs.networks.AppliancePrefixesDelegatedStaticsOrigin>;
+    origin?: pulumi.Input<inputs.networks.AppliancePrefixesDelegatedStaticsOrigin | undefined>;
     /**
      * IPv6 prefix/prefix length.
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Static delegated prefix id.
      */
-    staticDelegatedPrefixId?: pulumi.Input<string>;
+    staticDelegatedPrefixId?: pulumi.Input<string | undefined>;
 }

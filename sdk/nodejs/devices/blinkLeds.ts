@@ -99,12 +99,12 @@ export class BlinkLeds extends pulumi.CustomResource {
  * Input properties used for looking up and filtering BlinkLeds resources.
  */
 export interface BlinkLedsState {
-    item?: pulumi.Input<inputs.devices.BlinkLedsItem>;
-    parameters?: pulumi.Input<inputs.devices.BlinkLedsParameters>;
+    item?: pulumi.Input<inputs.devices.BlinkLedsItem | undefined>;
+    parameters?: pulumi.Input<inputs.devices.BlinkLedsParameters | undefined>;
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
 }
 
 /**

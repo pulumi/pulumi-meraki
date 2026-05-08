@@ -113,8 +113,8 @@ def get_camera_permissions(organization_id: Optional[_builtins.str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         permission_scope_id=pulumi.get(__ret__, 'permission_scope_id'))
-def get_camera_permissions_output(organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  permission_scope_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_camera_permissions_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  permission_scope_id: pulumi.Input[Optional[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraPermissionsResult]:
     """
     ## Example Usage

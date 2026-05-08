@@ -20,7 +20,7 @@ __all__ = ['BrandingPoliciesPrioritiesArgs', 'BrandingPoliciesPriorities']
 class BrandingPoliciesPrioritiesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 branding_policy_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a BrandingPoliciesPriorities resource.
 
@@ -45,22 +45,22 @@ class BrandingPoliciesPrioritiesArgs:
 
     @_builtins.property
     @pulumi.getter(name="brandingPolicyIds")
-    def branding_policy_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def branding_policy_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An ordered list of branding policy IDs that determines the priority order of how to apply the policies
         """
         return pulumi.get(self, "branding_policy_ids")
 
     @branding_policy_ids.setter
-    def branding_policy_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def branding_policy_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "branding_policy_ids", value)
 
 
 @pulumi.input_type
 class _BrandingPoliciesPrioritiesState:
     def __init__(__self__, *,
-                 branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 branding_policy_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BrandingPoliciesPriorities resources.
 
@@ -74,26 +74,26 @@ class _BrandingPoliciesPrioritiesState:
 
     @_builtins.property
     @pulumi.getter(name="brandingPolicyIds")
-    def branding_policy_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def branding_policy_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         An ordered list of branding policy IDs that determines the priority order of how to apply the policies
         """
         return pulumi.get(self, "branding_policy_ids")
 
     @branding_policy_ids.setter
-    def branding_policy_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def branding_policy_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "branding_policy_ids", value)
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
 
@@ -103,8 +103,8 @@ class BrandingPoliciesPriorities(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 branding_policy_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -180,8 +180,8 @@ class BrandingPoliciesPriorities(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 branding_policy_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -205,8 +205,8 @@ class BrandingPoliciesPriorities(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None) -> 'BrandingPoliciesPriorities':
+            branding_policy_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'BrandingPoliciesPriorities':
         """
         Get an existing BrandingPoliciesPriorities resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -73,9 +73,9 @@ export interface GetSwitchRoutingStaticRoutesOutputArgs {
     /**
      * serial path parameter.
      */
-    serial?: pulumi.Input<string>;
+    serial?: pulumi.Input<string | undefined>;
     /**
      * staticRouteId path parameter. Static route ID
      */
-    staticRouteId?: pulumi.Input<string>;
+    staticRouteId?: pulumi.Input<string | undefined>;
 }

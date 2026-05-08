@@ -120,19 +120,19 @@ export interface ApplianceFirewallInboundFirewallRulesState {
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRule>[] | undefined>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRulesResponse>[]>;
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRulesResponse>[] | undefined>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    syslogDefaultRule?: pulumi.Input<boolean>;
+    syslogDefaultRule?: pulumi.Input<boolean | undefined>;
 }
 
 /**
@@ -146,9 +146,9 @@ export interface ApplianceFirewallInboundFirewallRulesArgs {
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRule>[] | undefined>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    syslogDefaultRule?: pulumi.Input<boolean>;
+    syslogDefaultRule?: pulumi.Input<boolean | undefined>;
 }

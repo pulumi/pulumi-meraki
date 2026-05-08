@@ -133,9 +133,9 @@ def get_switch_stacks_routing_static_routes(network_id: Optional[_builtins.str] 
         network_id=pulumi.get(__ret__, 'network_id'),
         static_route_id=pulumi.get(__ret__, 'static_route_id'),
         switch_stack_id=pulumi.get(__ret__, 'switch_stack_id'))
-def get_switch_stacks_routing_static_routes_output(network_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   static_route_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                   switch_stack_id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_switch_stacks_routing_static_routes_output(network_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   static_route_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   switch_stack_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksRoutingStaticRoutesResult]:
     """
     ## Example Usage

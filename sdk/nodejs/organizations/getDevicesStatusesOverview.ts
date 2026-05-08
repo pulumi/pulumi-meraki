@@ -101,7 +101,7 @@ export interface GetDevicesStatusesOverviewOutputArgs {
     /**
      * networkIds query parameter. An optional parameter to filter device statuses by network.
      */
-    networkIds?: pulumi.Input<pulumi.Input<string>[]>;
+    networkIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
@@ -109,5 +109,5 @@ export interface GetDevicesStatusesOverviewOutputArgs {
     /**
      * productTypes query parameter. An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
      */
-    productTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    productTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

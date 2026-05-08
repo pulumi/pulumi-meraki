@@ -118,12 +118,12 @@ export interface SmDevicesModifyTagsState {
     /**
      * Array of ResponseSmModifyNetworkSmDevicesTags
      */
-    items?: pulumi.Input<pulumi.Input<inputs.networks.SmDevicesModifyTagsItem>[]>;
+    items?: pulumi.Input<pulumi.Input<inputs.networks.SmDevicesModifyTagsItem>[] | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
-    parameters?: pulumi.Input<inputs.networks.SmDevicesModifyTagsParameters>;
+    networkId?: pulumi.Input<string | undefined>;
+    parameters?: pulumi.Input<inputs.networks.SmDevicesModifyTagsParameters | undefined>;
 }
 
 /**

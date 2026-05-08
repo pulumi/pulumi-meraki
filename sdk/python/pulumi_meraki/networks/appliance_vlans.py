@@ -23,25 +23,25 @@ class ApplianceVlansArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[_builtins.str],
                  vlan_id: pulumi.Input[_builtins.str],
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_filename: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_handling: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceVlansIpv6Args']] = None,
-                 mandatory_dhcp: Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_vlan_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceVlansIpv6Args']] = None,
+                 mandatory_dhcp: pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceVlans resource.
 
@@ -134,258 +134,258 @@ class ApplianceVlansArgs:
 
     @_builtins.property
     @pulumi.getter(name="applianceIp")
-    def appliance_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def appliance_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The local IP of the appliance on the VLAN
         """
         return pulumi.get(self, "appliance_ip")
 
     @appliance_ip.setter
-    def appliance_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def appliance_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "appliance_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
         """
         return pulumi.get(self, "cidr")
 
     @cidr.setter
-    def cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cidr", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootFilename")
-    def dhcp_boot_filename(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_boot_filename(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP boot option for boot filename
         """
         return pulumi.get(self, "dhcp_boot_filename")
 
     @dhcp_boot_filename.setter
-    def dhcp_boot_filename(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_boot_filename(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_boot_filename", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootNextServer")
-    def dhcp_boot_next_server(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_boot_next_server(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP boot option to direct boot clients to the server to load the boot file from
         """
         return pulumi.get(self, "dhcp_boot_next_server")
 
     @dhcp_boot_next_server.setter
-    def dhcp_boot_next_server(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_boot_next_server(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_boot_next_server", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootOptionsEnabled")
-    def dhcp_boot_options_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dhcp_boot_options_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use DHCP boot options specified in other properties
         """
         return pulumi.get(self, "dhcp_boot_options_enabled")
 
     @dhcp_boot_options_enabled.setter
-    def dhcp_boot_options_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dhcp_boot_options_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dhcp_boot_options_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpHandling")
-    def dhcp_handling(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_handling(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
         """
         return pulumi.get(self, "dhcp_handling")
 
     @dhcp_handling.setter
-    def dhcp_handling(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_handling(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_handling", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpOptions")
-    def dhcp_options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]:
+    def dhcp_options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]:
         """
         The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
         """
         return pulumi.get(self, "dhcp_options")
 
     @dhcp_options.setter
-    def dhcp_options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]):
+    def dhcp_options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]):
         pulumi.set(self, "dhcp_options", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpRelayServerIps")
-    def dhcp_relay_server_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dhcp_relay_server_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The IPs of the DHCP servers that DHCP requests should be relayed to
         """
         return pulumi.get(self, "dhcp_relay_server_ips")
 
     @dhcp_relay_server_ips.setter
-    def dhcp_relay_server_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dhcp_relay_server_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dhcp_relay_server_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameservers")
-    def dns_nameservers(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
         """
         return pulumi.get(self, "dns_nameservers")
 
     @dns_nameservers.setter
-    def dns_nameservers(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the desired group policy to apply to the VLAN
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceVlansIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceVlansIpv6Args']]:
         """
         IPv6 configuration on the VLAN
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceVlansIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceVlansIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="mandatoryDhcp")
-    def mandatory_dhcp(self) -> Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']]:
+    def mandatory_dhcp(self) -> pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']]:
         """
         Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         """
         return pulumi.get(self, "mandatory_dhcp")
 
     @mandatory_dhcp.setter
-    def mandatory_dhcp(self, value: Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']]):
+    def mandatory_dhcp(self, value: pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']]):
         pulumi.set(self, "mandatory_dhcp", value)
 
     @_builtins.property
     @pulumi.getter
-    def mask(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mask(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Mask used for the subnet of all bound to the template networks. Applicable only for template network.
         """
         return pulumi.get(self, "mask")
 
     @mask.setter
-    def mask(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mask(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mask", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VLAN
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]:
         """
         The DHCP reserved IP ranges on the VLAN
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet of the VLAN
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter(name="templateVlanType")
-    def template_vlan_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_vlan_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of subnetting of the VLAN. Applicable only for template network.
         """
         return pulumi.get(self, "template_vlan_type")
 
     @template_vlan_type.setter
-    def template_vlan_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_vlan_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_vlan_type", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnNatSubnet")
-    def vpn_nat_subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_nat_subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         return pulumi.get(self, "vpn_nat_subnet")
 
     @vpn_nat_subnet.setter
-    def vpn_nat_subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_nat_subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_nat_subnet", value)
 
 
 @pulumi.input_type
 class _ApplianceVlansState:
     def __init__(__self__, *,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_filename: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_handling: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input['ApplianceVlansIpv6Args']] = None,
-                 mandatory_dhcp: Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_vlan_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None):
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional['ApplianceVlansIpv6Args']] = None,
+                 mandatory_dhcp: pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceVlans resources.
 
@@ -459,266 +459,266 @@ class _ApplianceVlansState:
 
     @_builtins.property
     @pulumi.getter(name="applianceIp")
-    def appliance_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def appliance_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The local IP of the appliance on the VLAN
         """
         return pulumi.get(self, "appliance_ip")
 
     @appliance_ip.setter
-    def appliance_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def appliance_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "appliance_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def cidr(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cidr(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
         """
         return pulumi.get(self, "cidr")
 
     @cidr.setter
-    def cidr(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cidr(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cidr", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootFilename")
-    def dhcp_boot_filename(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_boot_filename(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP boot option for boot filename
         """
         return pulumi.get(self, "dhcp_boot_filename")
 
     @dhcp_boot_filename.setter
-    def dhcp_boot_filename(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_boot_filename(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_boot_filename", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootNextServer")
-    def dhcp_boot_next_server(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_boot_next_server(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         DHCP boot option to direct boot clients to the server to load the boot file from
         """
         return pulumi.get(self, "dhcp_boot_next_server")
 
     @dhcp_boot_next_server.setter
-    def dhcp_boot_next_server(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_boot_next_server(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_boot_next_server", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpBootOptionsEnabled")
-    def dhcp_boot_options_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dhcp_boot_options_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Use DHCP boot options specified in other properties
         """
         return pulumi.get(self, "dhcp_boot_options_enabled")
 
     @dhcp_boot_options_enabled.setter
-    def dhcp_boot_options_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dhcp_boot_options_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dhcp_boot_options_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpHandling")
-    def dhcp_handling(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_handling(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
         """
         return pulumi.get(self, "dhcp_handling")
 
     @dhcp_handling.setter
-    def dhcp_handling(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_handling(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_handling", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
-    def dhcp_lease_time(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dhcp_lease_time(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
         """
         return pulumi.get(self, "dhcp_lease_time")
 
     @dhcp_lease_time.setter
-    def dhcp_lease_time(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dhcp_lease_time(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dhcp_lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpOptions")
-    def dhcp_options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]:
+    def dhcp_options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]:
         """
         The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
         """
         return pulumi.get(self, "dhcp_options")
 
     @dhcp_options.setter
-    def dhcp_options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]):
+    def dhcp_options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansDhcpOptionArgs']]]]):
         pulumi.set(self, "dhcp_options", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpRelayServerIps")
-    def dhcp_relay_server_ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dhcp_relay_server_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         The IPs of the DHCP servers that DHCP requests should be relayed to
         """
         return pulumi.get(self, "dhcp_relay_server_ips")
 
     @dhcp_relay_server_ips.setter
-    def dhcp_relay_server_ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dhcp_relay_server_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dhcp_relay_server_ips", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsNameservers")
-    def dns_nameservers(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_nameservers(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
         """
         return pulumi.get(self, "dns_nameservers")
 
     @dns_nameservers.setter
-    def dns_nameservers(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_nameservers(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_nameservers", value)
 
     @_builtins.property
     @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def group_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The id of the desired group policy to apply to the VLAN
         """
         return pulumi.get(self, "group_policy_id")
 
     @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def group_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "group_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The interface ID of the VLAN
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def ipv6(self) -> Optional[pulumi.Input['ApplianceVlansIpv6Args']]:
+    def ipv6(self) -> pulumi.Input[Optional['ApplianceVlansIpv6Args']]:
         """
         IPv6 configuration on the VLAN
         """
         return pulumi.get(self, "ipv6")
 
     @ipv6.setter
-    def ipv6(self, value: Optional[pulumi.Input['ApplianceVlansIpv6Args']]):
+    def ipv6(self, value: pulumi.Input[Optional['ApplianceVlansIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="mandatoryDhcp")
-    def mandatory_dhcp(self) -> Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']]:
+    def mandatory_dhcp(self) -> pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']]:
         """
         Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         """
         return pulumi.get(self, "mandatory_dhcp")
 
     @mandatory_dhcp.setter
-    def mandatory_dhcp(self, value: Optional[pulumi.Input['ApplianceVlansMandatoryDhcpArgs']]):
+    def mandatory_dhcp(self, value: pulumi.Input[Optional['ApplianceVlansMandatoryDhcpArgs']]):
         pulumi.set(self, "mandatory_dhcp", value)
 
     @_builtins.property
     @pulumi.getter
-    def mask(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def mask(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Mask used for the subnet of all bound to the template networks. Applicable only for template network.
         """
         return pulumi.get(self, "mask")
 
     @mask.setter
-    def mask(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def mask(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "mask", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the VLAN
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkId")
-    def network_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
 
     @network_id.setter
-    def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_id", value)
 
     @_builtins.property
     @pulumi.getter(name="reservedIpRanges")
-    def reserved_ip_ranges(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]:
+    def reserved_ip_ranges(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]:
         """
         The DHCP reserved IP ranges on the VLAN
         """
         return pulumi.get(self, "reserved_ip_ranges")
 
     @reserved_ip_ranges.setter
-    def reserved_ip_ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]):
+    def reserved_ip_ranges(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]]):
         pulumi.set(self, "reserved_ip_ranges", value)
 
     @_builtins.property
     @pulumi.getter
-    def subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The subnet of the VLAN
         """
         return pulumi.get(self, "subnet")
 
     @subnet.setter
-    def subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet", value)
 
     @_builtins.property
     @pulumi.getter(name="templateVlanType")
-    def template_vlan_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_vlan_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of subnetting of the VLAN. Applicable only for template network.
         """
         return pulumi.get(self, "template_vlan_type")
 
     @template_vlan_type.setter
-    def template_vlan_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_vlan_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_vlan_type", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The VLAN ID of the VLAN
         """
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnNatSubnet")
-    def vpn_nat_subnet(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_nat_subnet(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         return pulumi.get(self, "vpn_nat_subnet")
 
     @vpn_nat_subnet.setter
-    def vpn_nat_subnet(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_nat_subnet(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_nat_subnet", value)
 
 
@@ -728,27 +728,27 @@ class ApplianceVlans(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_filename: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_handling: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_vlan_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -879,27 +879,27 @@ class ApplianceVlans(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 cidr: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_filename: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dhcp_handling: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
-                 dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6: Optional[pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
-                 mask: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
-                 subnet: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_vlan_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None,
+                 appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 cidr: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+                 dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+                 mask: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+                 subnet: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -945,28 +945,28 @@ class ApplianceVlans(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            appliance_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            cidr: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_boot_filename: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_boot_next_server: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_boot_options_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            dhcp_handling: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_lease_time: Optional[pulumi.Input[_builtins.str]] = None,
-            dhcp_options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
-            dhcp_relay_server_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None,
-            group_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6: Optional[pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-            mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
-            mask: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_id: Optional[pulumi.Input[_builtins.str]] = None,
-            reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
-            subnet: Optional[pulumi.Input[_builtins.str]] = None,
-            template_vlan_type: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None) -> 'ApplianceVlans':
+            appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            cidr: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+            dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
+            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+            mask: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceVlans':
         """
         Get an existing ApplianceVlans resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -168,7 +168,7 @@ import * as utilities from "../utilities";
  *         },
  *     },
  *     networkId: "string",
- *     number: "string",
+ *     number: Number("string"),
  *     oauth: {
  *         allowedDomains: ["example.com"],
  *     },
@@ -737,264 +737,264 @@ export interface WirelessSsidsState {
     /**
      * The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
      */
-    activeDirectory?: pulumi.Input<inputs.networks.WirelessSsidsActiveDirectory>;
-    adminSplashUrl?: pulumi.Input<string>;
+    activeDirectory?: pulumi.Input<inputs.networks.WirelessSsidsActiveDirectory | undefined>;
+    adminSplashUrl?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether or not adult content will be blocked
      */
-    adultContentFilteringEnabled?: pulumi.Input<boolean>;
+    adultContentFilteringEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    apTagsAndVlanIds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsApTagsAndVlanId>[]>;
+    apTagsAndVlanIds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsApTagsAndVlanId>[] | undefined>;
     /**
      * The association control method for the SSID
      */
-    authMode?: pulumi.Input<string>;
+    authMode?: pulumi.Input<string | undefined>;
     /**
      * List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
      */
-    availabilityTags?: pulumi.Input<pulumi.Input<string>[]>;
+    availabilityTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
      */
-    availableOnAllAps?: pulumi.Input<boolean>;
+    availableOnAllAps?: pulumi.Input<boolean | undefined>;
     /**
      * The client-serving radio frequencies of this SSID in the default indoor RF profile
      */
-    bandSelection?: pulumi.Input<string>;
+    bandSelection?: pulumi.Input<string | undefined>;
     /**
      * The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
      */
-    concentratorNetworkId?: pulumi.Input<string>;
+    concentratorNetworkId?: pulumi.Input<string | undefined>;
     /**
      * The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    defaultVlanId?: pulumi.Input<number>;
+    defaultVlanId?: pulumi.Input<number | undefined>;
     /**
      * Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
      */
-    disassociateClientsOnVpnFailover?: pulumi.Input<boolean>;
+    disassociateClientsOnVpnFailover?: pulumi.Input<boolean | undefined>;
     /**
      * DNS servers rewrite settings
      */
-    dnsRewrite?: pulumi.Input<inputs.networks.WirelessSsidsDnsRewrite>;
+    dnsRewrite?: pulumi.Input<inputs.networks.WirelessSsidsDnsRewrite | undefined>;
     /**
      * The current setting for 802.11r
      */
-    dot11r?: pulumi.Input<inputs.networks.WirelessSsidsDot11r>;
+    dot11r?: pulumi.Input<inputs.networks.WirelessSsidsDot11r | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    dot11w?: pulumi.Input<inputs.networks.WirelessSsidsDot11w>;
+    dot11w?: pulumi.Input<inputs.networks.WirelessSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The psk encryption mode for the SSID
      */
-    encryptionMode?: pulumi.Input<string>;
+    encryptionMode?: pulumi.Input<string | undefined>;
     /**
      * Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
      */
-    enterpriseAdminAccess?: pulumi.Input<string>;
+    enterpriseAdminAccess?: pulumi.Input<string | undefined>;
     /**
      * Ethernet over GRE settings
      */
-    gre?: pulumi.Input<inputs.networks.WirelessSsidsGre>;
+    gre?: pulumi.Input<inputs.networks.WirelessSsidsGre | undefined>;
     /**
      * The client IP assignment mode
      */
-    ipAssignmentMode?: pulumi.Input<string>;
+    ipAssignmentMode?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
      */
-    lanIsolationEnabled?: pulumi.Input<boolean>;
+    lanIsolationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
      */
-    ldap?: pulumi.Input<inputs.networks.WirelessSsidsLdap>;
+    ldap?: pulumi.Input<inputs.networks.WirelessSsidsLdap | undefined>;
     /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
-    localRadius?: pulumi.Input<inputs.networks.WirelessSsidsLocalRadius>;
+    localRadius?: pulumi.Input<inputs.networks.WirelessSsidsLocalRadius | undefined>;
     /**
      * Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
      */
-    mandatoryDhcpEnabled?: pulumi.Input<boolean>;
+    mandatoryDhcpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The minimum bitrate in Mbps of this SSID in the default indoor RF profile
      */
-    minBitrate?: pulumi.Input<number>;
+    minBitrate?: pulumi.Input<number | undefined>;
     /**
      * The name of the SSID
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Named VLAN settings.
      */
-    namedVlans?: pulumi.Input<inputs.networks.WirelessSsidsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.WirelessSsidsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    networkId?: pulumi.Input<string>;
+    networkId?: pulumi.Input<string | undefined>;
     /**
      * Unique identifier of the SSID
      */
-    number?: pulumi.Input<number>;
+    number?: pulumi.Input<number | undefined>;
     /**
      * The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
      */
-    oauth?: pulumi.Input<inputs.networks.WirelessSsidsOauth>;
+    oauth?: pulumi.Input<inputs.networks.WirelessSsidsOauth | undefined>;
     /**
      * The download bandwidth limit in Kbps. (0 represents no limit.)
      */
-    perClientBandwidthLimitDown?: pulumi.Input<number>;
+    perClientBandwidthLimitDown?: pulumi.Input<number | undefined>;
     /**
      * The upload bandwidth limit in Kbps. (0 represents no limit.)
      */
-    perClientBandwidthLimitUp?: pulumi.Input<number>;
+    perClientBandwidthLimitUp?: pulumi.Input<number | undefined>;
     /**
      * The total download bandwidth limit in Kbps (0 represents no limit)
      */
-    perSsidBandwidthLimitDown?: pulumi.Input<number>;
+    perSsidBandwidthLimitDown?: pulumi.Input<number | undefined>;
     /**
      * The total upload bandwidth limit in Kbps (0 represents no limit)
      */
-    perSsidBandwidthLimitUp?: pulumi.Input<number>;
+    perSsidBandwidthLimitUp?: pulumi.Input<number | undefined>;
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'
      */
-    psk?: pulumi.Input<string>;
+    psk?: pulumi.Input<string | undefined>;
     /**
      * Whether or not RADIUS accounting is enabled
      */
-    radiusAccountingEnabled?: pulumi.Input<boolean>;
+    radiusAccountingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      */
-    radiusAccountingInterimInterval?: pulumi.Input<number>;
+    radiusAccountingInterimInterval?: pulumi.Input<number | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServer>[]>;
+    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServer>[] | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServersResponse>[]>;
+    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServersResponse>[] | undefined>;
     /**
      * RADIUS attribute used to look up group policies
      */
-    radiusAttributeForGroupPolicies?: pulumi.Input<string>;
+    radiusAttributeForGroupPolicies?: pulumi.Input<string | undefined>;
     /**
      * The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    radiusAuthenticationNasId?: pulumi.Input<string>;
+    radiusAuthenticationNasId?: pulumi.Input<string | undefined>;
     /**
      * The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    radiusCalledStationId?: pulumi.Input<string>;
+    radiusCalledStationId?: pulumi.Input<string | undefined>;
     /**
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
-    radiusCoaEnabled?: pulumi.Input<boolean>;
+    radiusCoaEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
      */
-    radiusFailoverPolicy?: pulumi.Input<string>;
+    radiusFailoverPolicy?: pulumi.Input<string | undefined>;
     /**
      * Whether or not higher priority RADIUS servers should be retried after 60 seconds.
      */
-    radiusFallbackEnabled?: pulumi.Input<boolean>;
+    radiusFallbackEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    radiusGuestVlanEnabled?: pulumi.Input<boolean>;
+    radiusGuestVlanEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    radiusGuestVlanId?: pulumi.Input<number>;
+    radiusGuestVlanId?: pulumi.Input<number | undefined>;
     /**
      * Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
      */
-    radiusLoadBalancingPolicy?: pulumi.Input<string>;
+    radiusLoadBalancingPolicy?: pulumi.Input<string | undefined>;
     /**
      * If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
      */
-    radiusOverride?: pulumi.Input<boolean>;
+    radiusOverride?: pulumi.Input<boolean | undefined>;
     /**
      * If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      */
-    radiusProxyEnabled?: pulumi.Input<boolean>;
+    radiusProxyEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      */
-    radiusServerAttemptsLimit?: pulumi.Input<number>;
+    radiusServerAttemptsLimit?: pulumi.Input<number | undefined>;
     /**
      * The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      */
-    radiusServerTimeout?: pulumi.Input<number>;
+    radiusServerTimeout?: pulumi.Input<number | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServer>[] | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
-    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServersResponse>[]>;
+    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServersResponse>[] | undefined>;
     /**
      * If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
      */
-    radiusTestingEnabled?: pulumi.Input<boolean>;
+    radiusTestingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
      */
-    secondaryConcentratorNetworkId?: pulumi.Input<string>;
+    secondaryConcentratorNetworkId?: pulumi.Input<string | undefined>;
     /**
      * The SpeedBurst setting for this SSID'
      */
-    speedBurst?: pulumi.Input<inputs.networks.WirelessSsidsSpeedBurst>;
+    speedBurst?: pulumi.Input<inputs.networks.WirelessSsidsSpeedBurst | undefined>;
     /**
      * Array of valid sponsor email domains for sponsored guest splash type.
      */
-    splashGuestSponsorDomains?: pulumi.Input<pulumi.Input<string>[]>;
+    splashGuestSponsorDomains?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The type of splash page for the SSID
      */
-    splashPage?: pulumi.Input<string>;
+    splashPage?: pulumi.Input<string | undefined>;
     /**
      * Splash page timeout
      */
-    splashTimeout?: pulumi.Input<string>;
+    splashTimeout?: pulumi.Input<string | undefined>;
     /**
      * SSID Administrator access status
      */
-    ssidAdminAccessible?: pulumi.Input<boolean>;
+    ssidAdminAccessible?: pulumi.Input<boolean | undefined>;
     /**
      * Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    useVlanTagging?: pulumi.Input<boolean>;
+    useVlanTagging?: pulumi.Input<boolean | undefined>;
     /**
      * Whether the SSID is advertised or hidden by the AP
      */
-    visible?: pulumi.Input<boolean>;
+    visible?: pulumi.Input<boolean | undefined>;
     /**
      * The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Allow users to access a configurable list of IP ranges prior to sign-on
      */
-    walledGardenEnabled?: pulumi.Input<boolean>;
+    walledGardenEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Domain names and IP address ranges available in Walled Garden mode
      */
-    walledGardenRanges?: pulumi.Input<pulumi.Input<string>[]>;
+    walledGardenRanges?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The types of WPA encryption
      */
-    wpaEncryptionMode?: pulumi.Input<string>;
+    wpaEncryptionMode?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -1004,103 +1004,103 @@ export interface WirelessSsidsArgs {
     /**
      * The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
      */
-    activeDirectory?: pulumi.Input<inputs.networks.WirelessSsidsActiveDirectory>;
+    activeDirectory?: pulumi.Input<inputs.networks.WirelessSsidsActiveDirectory | undefined>;
     /**
      * Boolean indicating whether or not adult content will be blocked
      */
-    adultContentFilteringEnabled?: pulumi.Input<boolean>;
+    adultContentFilteringEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    apTagsAndVlanIds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsApTagsAndVlanId>[]>;
+    apTagsAndVlanIds?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsApTagsAndVlanId>[] | undefined>;
     /**
      * The association control method for the SSID
      */
-    authMode?: pulumi.Input<string>;
+    authMode?: pulumi.Input<string | undefined>;
     /**
      * List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
      */
-    availabilityTags?: pulumi.Input<pulumi.Input<string>[]>;
+    availabilityTags?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
      */
-    availableOnAllAps?: pulumi.Input<boolean>;
+    availableOnAllAps?: pulumi.Input<boolean | undefined>;
     /**
      * The client-serving radio frequencies of this SSID in the default indoor RF profile
      */
-    bandSelection?: pulumi.Input<string>;
+    bandSelection?: pulumi.Input<string | undefined>;
     /**
      * The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
      */
-    concentratorNetworkId?: pulumi.Input<string>;
+    concentratorNetworkId?: pulumi.Input<string | undefined>;
     /**
      * The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    defaultVlanId?: pulumi.Input<number>;
+    defaultVlanId?: pulumi.Input<number | undefined>;
     /**
      * Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
      */
-    disassociateClientsOnVpnFailover?: pulumi.Input<boolean>;
+    disassociateClientsOnVpnFailover?: pulumi.Input<boolean | undefined>;
     /**
      * DNS servers rewrite settings
      */
-    dnsRewrite?: pulumi.Input<inputs.networks.WirelessSsidsDnsRewrite>;
+    dnsRewrite?: pulumi.Input<inputs.networks.WirelessSsidsDnsRewrite | undefined>;
     /**
      * The current setting for 802.11r
      */
-    dot11r?: pulumi.Input<inputs.networks.WirelessSsidsDot11r>;
+    dot11r?: pulumi.Input<inputs.networks.WirelessSsidsDot11r | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    dot11w?: pulumi.Input<inputs.networks.WirelessSsidsDot11w>;
+    dot11w?: pulumi.Input<inputs.networks.WirelessSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled?: pulumi.Input<boolean | undefined>;
     /**
      * The psk encryption mode for the SSID
      */
-    encryptionMode?: pulumi.Input<string>;
+    encryptionMode?: pulumi.Input<string | undefined>;
     /**
      * Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
      */
-    enterpriseAdminAccess?: pulumi.Input<string>;
+    enterpriseAdminAccess?: pulumi.Input<string | undefined>;
     /**
      * Ethernet over GRE settings
      */
-    gre?: pulumi.Input<inputs.networks.WirelessSsidsGre>;
+    gre?: pulumi.Input<inputs.networks.WirelessSsidsGre | undefined>;
     /**
      * The client IP assignment mode
      */
-    ipAssignmentMode?: pulumi.Input<string>;
+    ipAssignmentMode?: pulumi.Input<string | undefined>;
     /**
      * Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
      */
-    lanIsolationEnabled?: pulumi.Input<boolean>;
+    lanIsolationEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
      */
-    ldap?: pulumi.Input<inputs.networks.WirelessSsidsLdap>;
+    ldap?: pulumi.Input<inputs.networks.WirelessSsidsLdap | undefined>;
     /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
-    localRadius?: pulumi.Input<inputs.networks.WirelessSsidsLocalRadius>;
+    localRadius?: pulumi.Input<inputs.networks.WirelessSsidsLocalRadius | undefined>;
     /**
      * Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
      */
-    mandatoryDhcpEnabled?: pulumi.Input<boolean>;
+    mandatoryDhcpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The minimum bitrate in Mbps of this SSID in the default indoor RF profile
      */
-    minBitrate?: pulumi.Input<number>;
+    minBitrate?: pulumi.Input<number | undefined>;
     /**
      * The name of the SSID
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Named VLAN settings.
      */
-    namedVlans?: pulumi.Input<inputs.networks.WirelessSsidsNamedVlans>;
+    namedVlans?: pulumi.Input<inputs.networks.WirelessSsidsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -1112,137 +1112,137 @@ export interface WirelessSsidsArgs {
     /**
      * The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
      */
-    oauth?: pulumi.Input<inputs.networks.WirelessSsidsOauth>;
+    oauth?: pulumi.Input<inputs.networks.WirelessSsidsOauth | undefined>;
     /**
      * The download bandwidth limit in Kbps. (0 represents no limit.)
      */
-    perClientBandwidthLimitDown?: pulumi.Input<number>;
+    perClientBandwidthLimitDown?: pulumi.Input<number | undefined>;
     /**
      * The upload bandwidth limit in Kbps. (0 represents no limit.)
      */
-    perClientBandwidthLimitUp?: pulumi.Input<number>;
+    perClientBandwidthLimitUp?: pulumi.Input<number | undefined>;
     /**
      * The total download bandwidth limit in Kbps (0 represents no limit)
      */
-    perSsidBandwidthLimitDown?: pulumi.Input<number>;
+    perSsidBandwidthLimitDown?: pulumi.Input<number | undefined>;
     /**
      * The total upload bandwidth limit in Kbps (0 represents no limit)
      */
-    perSsidBandwidthLimitUp?: pulumi.Input<number>;
+    perSsidBandwidthLimitUp?: pulumi.Input<number | undefined>;
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'
      */
-    psk?: pulumi.Input<string>;
+    psk?: pulumi.Input<string | undefined>;
     /**
      * Whether or not RADIUS accounting is enabled
      */
-    radiusAccountingEnabled?: pulumi.Input<boolean>;
+    radiusAccountingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      */
-    radiusAccountingInterimInterval?: pulumi.Input<number>;
+    radiusAccountingInterimInterval?: pulumi.Input<number | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServer>[]>;
+    radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServer>[] | undefined>;
     /**
      * RADIUS attribute used to look up group policies
      */
-    radiusAttributeForGroupPolicies?: pulumi.Input<string>;
+    radiusAttributeForGroupPolicies?: pulumi.Input<string | undefined>;
     /**
      * The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    radiusAuthenticationNasId?: pulumi.Input<string>;
+    radiusAuthenticationNasId?: pulumi.Input<string | undefined>;
     /**
      * The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    radiusCalledStationId?: pulumi.Input<string>;
+    radiusCalledStationId?: pulumi.Input<string | undefined>;
     /**
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
-    radiusCoaEnabled?: pulumi.Input<boolean>;
+    radiusCoaEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
      */
-    radiusFailoverPolicy?: pulumi.Input<string>;
+    radiusFailoverPolicy?: pulumi.Input<string | undefined>;
     /**
      * Whether or not higher priority RADIUS servers should be retried after 60 seconds.
      */
-    radiusFallbackEnabled?: pulumi.Input<boolean>;
+    radiusFallbackEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    radiusGuestVlanEnabled?: pulumi.Input<boolean>;
+    radiusGuestVlanEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    radiusGuestVlanId?: pulumi.Input<number>;
+    radiusGuestVlanId?: pulumi.Input<number | undefined>;
     /**
      * Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
      */
-    radiusLoadBalancingPolicy?: pulumi.Input<string>;
+    radiusLoadBalancingPolicy?: pulumi.Input<string | undefined>;
     /**
      * If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
      */
-    radiusOverride?: pulumi.Input<boolean>;
+    radiusOverride?: pulumi.Input<boolean | undefined>;
     /**
      * If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      */
-    radiusProxyEnabled?: pulumi.Input<boolean>;
+    radiusProxyEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      */
-    radiusServerAttemptsLimit?: pulumi.Input<number>;
+    radiusServerAttemptsLimit?: pulumi.Input<number | undefined>;
     /**
      * The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      */
-    radiusServerTimeout?: pulumi.Input<number>;
+    radiusServerTimeout?: pulumi.Input<number | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
-    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServer>[]>;
+    radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusServer>[] | undefined>;
     /**
      * If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
      */
-    radiusTestingEnabled?: pulumi.Input<boolean>;
+    radiusTestingEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
      */
-    secondaryConcentratorNetworkId?: pulumi.Input<string>;
+    secondaryConcentratorNetworkId?: pulumi.Input<string | undefined>;
     /**
      * The SpeedBurst setting for this SSID'
      */
-    speedBurst?: pulumi.Input<inputs.networks.WirelessSsidsSpeedBurst>;
+    speedBurst?: pulumi.Input<inputs.networks.WirelessSsidsSpeedBurst | undefined>;
     /**
      * Array of valid sponsor email domains for sponsored guest splash type.
      */
-    splashGuestSponsorDomains?: pulumi.Input<pulumi.Input<string>[]>;
+    splashGuestSponsorDomains?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The type of splash page for the SSID
      */
-    splashPage?: pulumi.Input<string>;
+    splashPage?: pulumi.Input<string | undefined>;
     /**
      * Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    useVlanTagging?: pulumi.Input<boolean>;
+    useVlanTagging?: pulumi.Input<boolean | undefined>;
     /**
      * Whether the SSID is advertised or hidden by the AP
      */
-    visible?: pulumi.Input<boolean>;
+    visible?: pulumi.Input<boolean | undefined>;
     /**
      * The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Allow users to access a configurable list of IP ranges prior to sign-on
      */
-    walledGardenEnabled?: pulumi.Input<boolean>;
+    walledGardenEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Domain names and IP address ranges available in Walled Garden mode
      */
-    walledGardenRanges?: pulumi.Input<pulumi.Input<string>[]>;
+    walledGardenRanges?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The types of WPA encryption
      */
-    wpaEncryptionMode?: pulumi.Input<string>;
+    wpaEncryptionMode?: pulumi.Input<string | undefined>;
 }

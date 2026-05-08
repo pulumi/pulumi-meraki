@@ -22,8 +22,8 @@ __all__ = ['ApplianceVpnVpnFirewallRulesArgs', 'ApplianceVpnVpnFirewallRules']
 class ApplianceVpnVpnFirewallRulesArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[_builtins.str],
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]] = None,
-                 syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]] = None,
+                 syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceVpnVpnFirewallRules resource.
 
@@ -51,35 +51,35 @@ class ApplianceVpnVpnFirewallRulesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]:
         """
         An ordered array of the firewall rules (not including the default rule)
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter(name="syslogDefaultRule")
-    def syslog_default_rule(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def syslog_default_rule(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         return pulumi.get(self, "syslog_default_rule")
 
     @syslog_default_rule.setter
-    def syslog_default_rule(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def syslog_default_rule(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "syslog_default_rule", value)
 
 
 @pulumi.input_type
 class _ApplianceVpnVpnFirewallRulesState:
     def __init__(__self__, *,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]] = None,
-                 syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]] = None,
+                 syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnVpnFirewallRules resources.
 
@@ -96,38 +96,38 @@ class _ApplianceVpnVpnFirewallRulesState:
 
     @_builtins.property
     @pulumi.getter(name="organizationId")
-    def organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
 
     @organization_id.setter
-    def organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]:
+    def rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]:
         """
         An ordered array of the firewall rules (not including the default rule)
         """
         return pulumi.get(self, "rules")
 
     @rules.setter
-    def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]):
+    def rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
     @_builtins.property
     @pulumi.getter(name="syslogDefaultRule")
-    def syslog_default_rule(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def syslog_default_rule(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         return pulumi.get(self, "syslog_default_rule")
 
     @syslog_default_rule.setter
-    def syslog_default_rule(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def syslog_default_rule(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "syslog_default_rule", value)
 
 
@@ -137,9 +137,9 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
-                 syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
+                 syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -228,9 +228,9 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
-                 syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None,
+                 organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
+                 syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -255,9 +255,9 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
-            syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None) -> 'ApplianceVpnVpnFirewallRules':
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
+            syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ApplianceVpnVpnFirewallRules':
         """
         Get an existing ApplianceVpnVpnFirewallRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

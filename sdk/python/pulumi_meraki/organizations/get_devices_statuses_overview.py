@@ -130,9 +130,9 @@ def get_devices_statuses_overview(network_ids: Optional[Sequence[_builtins.str]]
         network_ids=pulumi.get(__ret__, 'network_ids'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         product_types=pulumi.get(__ret__, 'product_types'))
-def get_devices_statuses_overview_output(network_ids: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
-                                         organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                         product_types: Optional[pulumi.Input[Optional[Sequence[_builtins.str]]]] = None,
+def get_devices_statuses_overview_output(network_ids: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
+                                         organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                         product_types: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesStatusesOverviewResult]:
     """
     ## Example Usage
