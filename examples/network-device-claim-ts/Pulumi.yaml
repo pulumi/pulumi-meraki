@@ -1,3 +1,0 @@
-name: meraki-network-device-claim-ts
-runtime: nodejs
-description: A minimal TypeScript Pulumi program
