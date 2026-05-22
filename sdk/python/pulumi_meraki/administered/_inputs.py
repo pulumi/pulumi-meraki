@@ -54,11 +54,11 @@ class LicensingSubscriptionSubscriptionsBindItemArgsDict(TypedDict):
     """
     Array of errors if failed
     """
-    insufficient_entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs']]]]]
+    insufficient_entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict']]]]]
     """
     A list of entitlements required to successfully bind the networks to the subscription
     """
-    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgs']]]]]
+    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict']]]]]
     """
     Unbound networks
     """
@@ -266,7 +266,7 @@ class LicensingSubscriptionSubscriptionsBindParametersArgs:
 
 
 class LicensingSubscriptionSubscriptionsClaimItemArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgs']]]
+    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict']]]
     """
     Numeric breakdown of network and entitlement counts
     """
@@ -278,7 +278,7 @@ class LicensingSubscriptionSubscriptionsClaimItemArgsDict(TypedDict):
     """
     Subscription expiration date
     """
-    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs']]]]]
+    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict']]]]]
     """
     Entitlement info
     """
@@ -479,7 +479,7 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict(TypedDict):
     """
     Number of networks bound to this subscription
     """
-    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict']]]
     """
     Seat distribution
     """
@@ -593,7 +593,7 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs:
 
 
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict(TypedDict):
-    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs']]]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict']]]
     """
     Seat distribution
     """
@@ -711,7 +711,7 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs:
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs']]]
+    counts: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict']]]
     """
     Numeric breakdown of network and entitlement counts
     """
@@ -723,7 +723,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict(TypedDict):
     """
     Subscription expiration date
     """
-    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs']]]]]
+    entitlements: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict']]]]]
     """
     Entitlement info
     """
@@ -924,7 +924,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict(Typed
     """
     Number of networks bound to this subscription
     """
-    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict']]]
     """
     Seat distribution
     """
@@ -1038,7 +1038,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs:
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict(TypedDict):
-    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs']]]
+    seats: NotRequired[pulumi.Input[Optional['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict']]]
     """
     Seat distribution
     """

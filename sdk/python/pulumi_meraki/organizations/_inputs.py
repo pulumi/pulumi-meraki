@@ -325,7 +325,7 @@ class ActionBatchesActionArgs:
 
 
 class ActionBatchesCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
@@ -333,7 +333,7 @@ class ActionBatchesCallbackArgsDict(TypedDict):
     """
     The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
     """
-    payload_template: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['ActionBatchesCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -516,7 +516,7 @@ class ActionBatchesStatusArgsDict(TypedDict):
     """
     Flag describing whether all actions in the action batch have completed
     """
-    created_resources: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgs']]]]]
+    created_resources: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgsDict']]]]]
     """
     Resources created as a result of this action batch
     """
@@ -1344,7 +1344,7 @@ class ApplianceVpnThirdPartyVpnpeersPeerArgsDict(TypedDict):
     """
     [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
     """
-    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs']]]
+    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict']]]
     """
     Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
     """
@@ -1742,7 +1742,7 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict(TypedDict):
     """
     [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
     """
-    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs']]]
+    ipsec_policies: NotRequired[pulumi.Input[Optional['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict']]]
     """
     Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
     """
@@ -2367,7 +2367,7 @@ class BrandingPoliciesCustomLogoArgsDict(TypedDict):
     """
     Whether or not there is a custom logo enabled.
     """
-    image: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgs']]]
+    image: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImageArgsDict']]]
     """
     Properties of the image.
     """
@@ -2420,7 +2420,7 @@ class BrandingPoliciesCustomLogoImageArgsDict(TypedDict):
     """
     The format of the encoded contents.  Supported formats are 'png', 'gif', and jpg'.
     """
-    preview: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgs']]]
+    preview: NotRequired[pulumi.Input[Optional['BrandingPoliciesCustomLogoImagePreviewArgsDict']]]
     """
     Preview of the image
     """
@@ -3219,7 +3219,7 @@ class CameraRolesAppliedOrgWideArgs:
 
 
 class ClaimItemArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgs']]]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimItemLicenseArgsDict']]]]]
     """
     The licenses claimed
     """
@@ -3337,7 +3337,7 @@ class ClaimItemLicenseArgs:
 
 
 class ClaimParametersArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgs']]]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClaimParametersLicenseArgsDict']]]]]
     """
     The licenses that should be claimed
     """
@@ -3455,11 +3455,11 @@ class ClaimParametersLicenseArgs:
 
 
 class CloneItemArgsDict(TypedDict):
-    api: NotRequired[pulumi.Input[Optional['CloneItemApiArgs']]]
+    api: NotRequired[pulumi.Input[Optional['CloneItemApiArgsDict']]]
     """
     API related settings
     """
-    cloud: NotRequired[pulumi.Input[Optional['CloneItemCloudArgs']]]
+    cloud: NotRequired[pulumi.Input[Optional['CloneItemCloudArgsDict']]]
     """
     Data for this organization
     """
@@ -3467,11 +3467,11 @@ class CloneItemArgsDict(TypedDict):
     """
     Organization ID
     """
-    licensing: NotRequired[pulumi.Input[Optional['CloneItemLicensingArgs']]]
+    licensing: NotRequired[pulumi.Input[Optional['CloneItemLicensingArgsDict']]]
     """
     Licensing related settings
     """
-    management: NotRequired[pulumi.Input[Optional['CloneItemManagementArgs']]]
+    management: NotRequired[pulumi.Input[Optional['CloneItemManagementArgsDict']]]
     """
     Information about the organization's management system
     """
@@ -3633,7 +3633,7 @@ class CloneItemApiArgs:
 
 
 class CloneItemCloudArgsDict(TypedDict):
-    region: NotRequired[pulumi.Input[Optional['CloneItemCloudRegionArgs']]]
+    region: NotRequired[pulumi.Input[Optional['CloneItemCloudRegionArgsDict']]]
     """
     Region info
     """
@@ -3720,7 +3720,7 @@ class CloneItemLicensingArgs:
 
 
 class CloneItemManagementArgsDict(TypedDict):
-    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CloneItemManagementDetailArgsDict']]]]]
     """
     Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
     """
@@ -3954,7 +3954,7 @@ class ConfigTemplatesSwitchProfilesPortsProfileArgs:
 
 
 class InventoryClaimItemArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgs']]]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimItemLicenseArgsDict']]]]]
     """
     The licenses claimed
     """
@@ -4072,7 +4072,7 @@ class InventoryClaimItemLicenseArgs:
 
 
 class InventoryClaimParametersArgsDict(TypedDict):
-    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgs']]]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgsDict']]]]]
     """
     The licenses that should be claimed
     """
@@ -4279,11 +4279,11 @@ class InventoryOnboardingCloudMonitoringExportEventsParametersArgs:
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersArgsDict(TypedDict):
-    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs']]]]]
+    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict']]]]]
     """
     A set of device imports to commit
     """
-    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict']]]]]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersArgs:
@@ -4390,7 +4390,7 @@ class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs:
 
 
 class InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict']]]]]
     """
     Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringImport
     """
@@ -4488,7 +4488,7 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs:
 
 
 class InventoryOnboardingCloudMonitoringPrepareItemArgsDict(TypedDict):
-    config_params: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs']]]
+    config_params: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict']]]
     """
     Params used in order to connect to the device
     """
@@ -4601,11 +4601,11 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict(TypedDic
     """
     Static IP Address used to connect to the device
     """
-    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs']]]
+    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict']]]
     """
     Configuration options used to connect to the device
     """
-    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]]
+    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict']]]
     """
     User credentials used to connect to the device
     """
@@ -4679,7 +4679,7 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict(Ty
     """
     The port used for the ssh tunnel.
     """
-    root_certificate: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs']]]
+    root_certificate: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict']]]
     """
     Root certificate information
     """
@@ -4821,7 +4821,7 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict(Type
     """
     The public key for the registered user
     """
-    secret: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs']]]
+    secret: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict']]]
     """
     Stores the user secret hash
     """
@@ -4915,7 +4915,7 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs:
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersArgsDict(TypedDict):
-    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]]
+    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict']]]]]
     """
     A set of devices to import (or update)
     """
@@ -4948,15 +4948,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict(TypedDic
     """
     Device SUDI certificate
     """
-    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs']]]
+    tunnel: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict']]]
     """
     TLS Related Parameters
     """
-    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs']]]
+    user: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict']]]
     """
     User parameters
     """
-    vty: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs']]]
+    vty: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict']]]
     """
     VTY Related Parameters
     """
@@ -5151,15 +5151,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs:
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict(TypedDict):
-    access_list: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs']]]
+    access_list: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict']]]
     """
     AccessList details
     """
-    authentication: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict']]]
     """
     VTY AAA authentication
     """
-    authorization: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs']]]
+    authorization: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict']]]
     """
     VTY AAA authorization
     """
@@ -5280,11 +5280,11 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs:
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict(TypedDict):
-    vty_in: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs']]]
+    vty_in: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict']]]
     """
     VTY in ACL
     """
-    vty_out: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs']]]
+    vty_out: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict']]]
     """
     VTY out ACL
     """
@@ -5387,7 +5387,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyO
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict']]]
     """
     Group Details
     """
@@ -5445,7 +5445,7 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
 
 
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict']]]
     """
     Group Details
     """
@@ -5561,7 +5561,7 @@ class InventoryReleaseParametersArgs:
 
 
 class LicensesAssignSeatsItemArgsDict(TypedDict):
-    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]]
+    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgsDict']]]]]
     """
     Resulting licenses from the move
     """
@@ -5634,7 +5634,7 @@ class LicensesAssignSeatsItemResultingLicenseArgsDict(TypedDict):
     """
     Order number
     """
-    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]]
+    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]]
     """
     DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
     """
@@ -6422,7 +6422,7 @@ class LicensesPermanentlyQueuedLicenseArgs:
 
 
 class LicensesRenewSeatsItemArgsDict(TypedDict):
-    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]]
+    resulting_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgsDict']]]]]
     """
     Resulting licenses from the move
     """
@@ -6495,7 +6495,7 @@ class LicensesRenewSeatsItemResultingLicenseArgsDict(TypedDict):
     """
     Order number
     """
-    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs']]]]]
+    permanently_queued_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]]
     """
     DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
     """
@@ -6918,11 +6918,11 @@ class LicensesRenewSeatsParametersArgs:
 
 
 class LicensingCotermLicensesMoveItemArgsDict(TypedDict):
-    moved_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgs']]]]]
+    moved_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgsDict']]]]]
     """
     Newly moved licenses created in the destination organization of the license move operation
     """
-    remainder_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]]
+    remainder_licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgsDict']]]]]
     """
     Remainder licenses created in the source organization as a result of moving a subset of the counts of a license
     """
@@ -6971,7 +6971,7 @@ class LicensingCotermLicensesMoveItemMovedLicenseArgsDict(TypedDict):
     """
     When the license was claimed into the organization
     """
-    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgs']]]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict']]]]]
     """
     The counts of the license by model type
     """
@@ -6979,7 +6979,7 @@ class LicensingCotermLicensesMoveItemMovedLicenseArgsDict(TypedDict):
     """
     The duration (term length) of the license, measured in days
     """
-    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgs']]]]]
+    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict']]]]]
     """
     The editions of the license for each relevant product type
     """
@@ -7298,7 +7298,7 @@ class LicensingCotermLicensesMoveItemRemainderLicenseArgsDict(TypedDict):
     """
     When the license was claimed into the organization
     """
-    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgs']]]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict']]]]]
     """
     The counts of the license by model type
     """
@@ -7306,7 +7306,7 @@ class LicensingCotermLicensesMoveItemRemainderLicenseArgsDict(TypedDict):
     """
     The duration (term length) of the license, measured in days
     """
-    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs']]]]]
+    editions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict']]]]]
     """
     The editions of the license for each relevant product type
     """
@@ -7621,11 +7621,11 @@ class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs:
 
 
 class LicensingCotermLicensesMoveParametersArgsDict(TypedDict):
-    destination: NotRequired[pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgs']]]
+    destination: NotRequired[pulumi.Input[Optional['LicensingCotermLicensesMoveParametersDestinationArgsDict']]]
     """
     Destination data for the license move
     """
-    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]]
+    licenses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgsDict']]]]]
     """
     The list of licenses to move
     """
@@ -7719,7 +7719,7 @@ class LicensingCotermLicensesMoveParametersDestinationArgs:
 
 
 class LicensingCotermLicensesMoveParametersLicenseArgsDict(TypedDict):
-    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgs']]]]]
+    counts: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgsDict']]]]]
     """
     The counts to move from the license by model type
     """
@@ -7817,7 +7817,7 @@ class LicensingCotermLicensesMoveParametersLicenseCountArgs:
 
 
 class LoginSecurityApiAuthenticationArgsDict(TypedDict):
-    ip_restrictions_for_keys: NotRequired[pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]]
+    ip_restrictions_for_keys: NotRequired[pulumi.Input[Optional['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict']]]
     """
     Details for API-only IP restrictions.
     """
@@ -7895,7 +7895,7 @@ class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs:
 
 
 class NetworksCombineItemArgsDict(TypedDict):
-    resulting_network: NotRequired[pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgs']]]
+    resulting_network: NotRequired[pulumi.Input[Optional['NetworksCombineItemResultingNetworkArgsDict']]]
     """
     Network after the combination
     """
@@ -8349,7 +8349,7 @@ class SamlRolesTagArgs:
 
 
 class SmSentryPoliciesAssignmentsItemArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgsDict']]]]]
     """
     Sentry Group Policies for the Organization keyed by Network Id
     """
@@ -8382,7 +8382,7 @@ class SmSentryPoliciesAssignmentsItemItemArgsDict(TypedDict):
     """
     The Id of the Network
     """
-    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]]
+    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgsDict']]]]]
     """
     Array of Sentry Group Policies for the Network
     """
@@ -8636,7 +8636,7 @@ class SmSentryPoliciesAssignmentsItemItemPolicyArgs:
 
 
 class SmSentryPoliciesAssignmentsParametersArgsDict(TypedDict):
-    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]]
+    items: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgsDict']]]]]
     """
     Sentry Group Policies for the Organization keyed by Network Id
     """
@@ -8669,7 +8669,7 @@ class SmSentryPoliciesAssignmentsParametersItemArgsDict(TypedDict):
     """
     The Id of the Network
     """
-    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]]
+    policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict']]]]]
     """
     Array of Sentry Group Policies for the Network
     """
@@ -8901,7 +8901,7 @@ class BaseApiArgs:
 
 
 class BaseCloudArgsDict(TypedDict):
-    region: NotRequired[pulumi.Input[Optional['BaseCloudRegionArgs']]]
+    region: NotRequired[pulumi.Input[Optional['BaseCloudRegionArgsDict']]]
     """
     Region info
     """
@@ -8988,7 +8988,7 @@ class BaseLicensingArgs:
 
 
 class BaseManagementArgsDict(TypedDict):
-    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['BaseManagementDetailArgsDict']]]]]
     """
     Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
     """

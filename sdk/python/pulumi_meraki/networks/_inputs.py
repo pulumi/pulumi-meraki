@@ -1102,7 +1102,7 @@ __all__ = [
 ]
 
 class AlertsSettingsAlertArgsDict(TypedDict):
-    alert_destinations: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertAlertDestinationsArgs']]]
+    alert_destinations: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertAlertDestinationsArgsDict']]]
     """
     A hash of destinations for this specific alert
     """
@@ -1110,7 +1110,7 @@ class AlertsSettingsAlertArgsDict(TypedDict):
     """
     A boolean depicting if the alert is turned on or off
     """
-    filters: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertFiltersArgs']]]
+    filters: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertFiltersArgsDict']]]
     """
     A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
     """
@@ -1326,7 +1326,7 @@ class AlertsSettingsAlertFiltersArgs:
 
 
 class AlertsSettingsAlertsResponseArgsDict(TypedDict):
-    alert_destinations: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertsResponseAlertDestinationsArgs']]]
+    alert_destinations: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertsResponseAlertDestinationsArgsDict']]]
     """
     A hash of destinations for this specific alert
     """
@@ -1334,7 +1334,7 @@ class AlertsSettingsAlertsResponseArgsDict(TypedDict):
     """
     A boolean depicting if the alert is turned on or off
     """
-    filters: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertsResponseFiltersArgs']]]
+    filters: NotRequired[pulumi.Input[Optional['AlertsSettingsAlertsResponseFiltersArgsDict']]]
     """
     A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
     """
@@ -1639,7 +1639,7 @@ class AlertsSettingsDefaultDestinationsArgs:
 
 
 class AlertsSettingsMutingArgsDict(TypedDict):
-    by_port_schedules: NotRequired[pulumi.Input[Optional['AlertsSettingsMutingByPortSchedulesArgs']]]
+    by_port_schedules: NotRequired[pulumi.Input[Optional['AlertsSettingsMutingByPortSchedulesArgsDict']]]
     """
     by_port_schedules
     """
@@ -2660,7 +2660,7 @@ class ApplianceFirewallL7FirewallRulesRuleArgsDict(TypedDict):
     """
     The 'value_list' of what you want to block. Send a lis of string in request.
     """
-    value_obj: NotRequired[pulumi.Input[Optional['ApplianceFirewallL7FirewallRulesRuleValueObjArgs']]]
+    value_obj: NotRequired[pulumi.Input[Optional['ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict']]]
     """
     The 'value_obj' of what you want to block. Send a dict in request.
     """
@@ -2802,7 +2802,7 @@ class ApplianceFirewallL7FirewallRulesRulesResponseArgsDict(TypedDict):
     """
     The 'value_list' of what you want to block. Send a list in request
     """
-    value_obj: NotRequired[pulumi.Input[Optional['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs']]]
+    value_obj: NotRequired[pulumi.Input[Optional['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict']]]
     """
     The 'value_obj' of what you want to block. Send a dict in request
     """
@@ -2928,7 +2928,7 @@ class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs:
 
 
 class ApplianceFirewallOneToManyNatRulesRuleArgsDict(TypedDict):
-    port_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRulePortRuleArgs']]]]]
+    port_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict']]]]]
     """
     An array of associated forwarding rules
     """
@@ -3126,7 +3126,7 @@ class ApplianceFirewallOneToManyNatRulesRulePortRuleArgs:
 
 
 class ApplianceFirewallOneToOneNatRulesRuleArgsDict(TypedDict):
-    allowed_inbounds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgs']]]]]
+    allowed_inbounds: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict']]]]]
     """
     The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource
     """
@@ -3453,7 +3453,7 @@ class ApplianceFirewallPortForwardingRulesRuleArgs:
 
 
 class ApplianceFirewallSettingsSpoofingProtectionArgsDict(TypedDict):
-    ip_source_guard: NotRequired[pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgs']]]
+    ip_source_guard: NotRequired[pulumi.Input[Optional['ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict']]]
     """
     IP source address spoofing settings
     """
@@ -3609,19 +3609,19 @@ class ApplianceRfProfilesFiveGhzSettingsArgs:
 
 
 class ApplianceRfProfilesPerSsidSettingsArgsDict(TypedDict):
-    status1: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus1Args']]]
+    status1: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict']]]
     """
     Settings for SSID 1.
     """
-    status2: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus2Args']]]
+    status2: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict']]]
     """
     Settings for SSID 2.
     """
-    status3: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus3Args']]]
+    status3: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict']]]
     """
     Settings for SSID 3.
     """
-    status4: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus4Args']]]
+    status4: NotRequired[pulumi.Input[Optional['ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict']]]
     """
     Settings for SSID 4.
     """
@@ -4183,7 +4183,7 @@ class ApplianceSingleLanIpv6ArgsDict(TypedDict):
     """
     Enable IPv6 on single LAN
     """
-    prefix_assignments: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentArgs']]]]]
+    prefix_assignments: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentArgsDict']]]]]
     """
     Prefix assignments on the single LAN
     """
@@ -4232,7 +4232,7 @@ class ApplianceSingleLanIpv6PrefixAssignmentArgsDict(TypedDict):
     """
     Auto assign a /64 prefix from the origin to the single LAN
     """
-    origin: NotRequired[pulumi.Input[Optional['ApplianceSingleLanIpv6PrefixAssignmentOriginArgs']]]
+    origin: NotRequired[pulumi.Input[Optional['ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict']]]
     """
     The origin of the prefix
     """
@@ -4749,7 +4749,7 @@ class ApplianceTrafficShapingGlobalBandwidthLimitsArgs:
 
 
 class ApplianceTrafficShapingRulesRuleArgsDict(TypedDict):
-    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionArgs']]]]]
+    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionArgsDict']]]]]
     """
     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
     """
@@ -4758,7 +4758,7 @@ class ApplianceTrafficShapingRulesRuleArgsDict(TypedDict):
     The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
     """
-    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs']]]
+    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]]
     """
     An object describing the bandwidth settings for your rule.
     """
@@ -4863,7 +4863,7 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgsDict(TypedDict):
     """
     The 'value_list' of what you want to block. Send a list in request
     """
-    value_obj: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs']]]
+    value_obj: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict']]]
     """
     The 'value_obj' of what you want to block. Send a dict in request
     """
@@ -4987,7 +4987,7 @@ class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs:
 
 
 class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
-    bandwidth_limits: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs']]]
+    bandwidth_limits: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]]
     """
     The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
     """
@@ -5085,15 +5085,15 @@ class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArg
 
 
 class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict(TypedDict):
-    cellular: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgs']]]
+    cellular: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict']]]
     """
     uplink cellular configured limits [optional]
     """
-    wan1: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1Args']]]
+    wan1: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict']]]
     """
     uplink wan1 configured limits [optional]
     """
-    wan2: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args']]]
+    wan2: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict']]]
     """
     uplink wan2 configured limits [optional]
     """
@@ -5301,7 +5301,7 @@ class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args:
 
 
 class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict(TypedDict):
-    immediate: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs']]]
+    immediate: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict']]]
     """
     Immediate WAN failover and failback
     """
@@ -5363,7 +5363,7 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict(T
     """
     Fail over criterion for uplink preference rule. Must be one of: 'poorPerformance' or 'uplinkDown'
     """
-    performance_class: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs']]]
+    performance_class: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict']]]
     """
     Performance class setting for uplink preference rule
     """
@@ -5371,7 +5371,7 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict(T
     """
     Preferred uplink for uplink preference rule. Must be one of: 'wan1', 'wan2', 'bestForVoIP', 'loadBalancing' or 'defaultUplink'
     """
-    traffic_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgs']]]]]
+    traffic_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict']]]]]
     """
     Traffic filters
     """
@@ -5521,7 +5521,7 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
     """
     Traffic filter type. Must be one of: 'applicationCategory', 'application' or 'custom'
     """
-    value: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgs']]]
+    value: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict']]]
     """
     Value of traffic filter
     """
@@ -5566,7 +5566,7 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
 
 
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
-    destination: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgs']]]
+    destination: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]]
     """
     Destination of 'custom' type traffic filter
     """
@@ -5578,7 +5578,7 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
     """
     Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp', 'icmp6' or 'any'
     """
-    source: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgs']]]
+    source: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]]
     """
     Source of 'custom' type traffic filter
     """
@@ -5897,7 +5897,7 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict(T
     """
     Preferred uplink for uplink preference rule. Must be one of: 'wan1' or 'wan2'
     """
-    traffic_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgs']]]]]
+    traffic_filters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict']]]]]
     """
     Traffic filters
     """
@@ -5946,7 +5946,7 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
     """
     Traffic filter type. Must be "custom"
     """
-    value: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgs']]]
+    value: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict']]]
     """
     Value of traffic filter
     """
@@ -5991,7 +5991,7 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
 
 
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
-    destination: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgs']]]
+    destination: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]]
     """
     Destination of 'custom' type traffic filter
     """
@@ -5999,7 +5999,7 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
     """
     Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp6' or 'any'
     """
-    source: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgs']]]
+    source: NotRequired[pulumi.Input[Optional['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]]
     """
     Source of 'custom' type traffic filter
     """
@@ -6198,11 +6198,11 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
 
 
 class ApplianceTrafficShapingVpnExclusionsItemArgsDict(TypedDict):
-    customs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemCustomArgs']]]]]
+    customs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict']]]]]
     """
     Custom VPN exclusion rules.
     """
-    major_applications: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgs']]]]]
+    major_applications: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict']]]]]
     """
     Major Application based VPN exclusion rules.
     """
@@ -6405,11 +6405,11 @@ class ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgs:
 
 
 class ApplianceTrafficShapingVpnExclusionsParametersArgsDict(TypedDict):
-    customs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersCustomArgs']]]]]
+    customs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict']]]]]
     """
     Custom VPN exclusion rules. Pass an empty array to clear existing rules.
     """
-    major_applications: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs']]]]]
+    major_applications: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict']]]]]
     """
     Major Application based VPN exclusion rules. Pass an empty array to clear existing rules.
     """
@@ -6645,7 +6645,7 @@ class ApplianceVlansIpv6ArgsDict(TypedDict):
     """
     Enable IPv6 on VLAN
     """
-    prefix_assignments: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentArgs']]]]]
+    prefix_assignments: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentArgsDict']]]]]
     """
     Prefix assignments on the VLAN
     """
@@ -6694,7 +6694,7 @@ class ApplianceVlansIpv6PrefixAssignmentArgsDict(TypedDict):
     """
     Auto assign a /64 prefix from the origin to the VLAN
     """
-    origin: NotRequired[pulumi.Input[Optional['ApplianceVlansIpv6PrefixAssignmentOriginArgs']]]
+    origin: NotRequired[pulumi.Input[Optional['ApplianceVlansIpv6PrefixAssignmentOriginArgsDict']]]
     """
     The origin of the prefix
     """
@@ -6930,7 +6930,7 @@ class ApplianceVpnBgpNeighborArgsDict(TypedDict):
     """
     When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false.
     """
-    authentication: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborAuthenticationArgsDict']]]
     """
     Authentication settings between BGP peers.
     """
@@ -6946,7 +6946,7 @@ class ApplianceVpnBgpNeighborArgsDict(TypedDict):
     """
     The IPv4 address of the neighbor
     """
-    ipv6: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborIpv6ArgsDict']]]
     """
     Information regarding IPv6 address of the neighbor, Required if *ip* is not present.
     """
@@ -6966,7 +6966,7 @@ class ApplianceVpnBgpNeighborArgsDict(TypedDict):
     """
     The output interface for peering with the remote BGP peer. Valid values are: 'wan1', 'wan2' or 'vlan{VLAN ID}'(e.g. 'vlan123').
     """
-    ttl_security: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborTtlSecurityArgs']]]
+    ttl_security: NotRequired[pulumi.Input[Optional['ApplianceVpnBgpNeighborTtlSecurityArgsDict']]]
     """
     Settings for BGP TTL security to protect BGP peering sessions from forged IP attacks.
     """
@@ -7684,51 +7684,51 @@ class BindParametersArgs:
 
 
 class CameraQualityRetentionProfilesVideoSettingsArgsDict(TypedDict):
-    m_v12_mv22_mv72: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72Args']]]
+    m_v12_mv22_mv72: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict']]]
     """
     Quality and resolution for MV12/MV22/MV72 camera models.
     """
-    m_v12_we: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV12WeArgs']]]
+    m_v12_we: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict']]]
     """
     Quality and resolution for MV12WE camera models.
     """
-    m_v13: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV13Args']]]
+    m_v13: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict']]]
     """
     Quality and resolution for MV13 camera models.
     """
-    m_v21_mv71: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV21MV71Args']]]
+    m_v21_mv71: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict']]]
     """
     Quality and resolution for MV21/MV71 camera models.
     """
-    m_v22_xmv72_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgs']]]
+    m_v22_xmv72_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict']]]
     """
     Quality and resolution for MV22X/MV72X camera models.
     """
-    m_v32: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV32Args']]]
+    m_v32: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict']]]
     """
     Quality and resolution for MV32 camera models.
     """
-    m_v33: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV33Args']]]
+    m_v33: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict']]]
     """
     Quality and resolution for MV33 camera models.
     """
-    m_v52: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV52Args']]]
+    m_v52: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict']]]
     """
     Quality and resolution for MV52 camera models.
     """
-    m_v63: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV63Args']]]
+    m_v63: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict']]]
     """
     Quality and resolution for MV63 camera models.
     """
-    m_v63_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV63XArgs']]]
+    m_v63_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict']]]
     """
     Quality and resolution for MV63X camera models.
     """
-    m_v93: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV93Args']]]
+    m_v93: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict']]]
     """
     Quality and resolution for MV93 camera models.
     """
-    m_v93_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV93XArgs']]]
+    m_v93_x: NotRequired[pulumi.Input[Optional['CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict']]]
     """
     Quality and resolution for MV93X camera models.
     """
@@ -8836,7 +8836,7 @@ class CellularGatewayUplinkBandwidthLimitsArgs:
 
 
 class ClientsProvisionItemArgsDict(TypedDict):
-    clients: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClientsProvisionItemClientArgs']]]]]
+    clients: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClientsProvisionItemClientArgsDict']]]]]
     """
     The list of clients to provision
     """
@@ -8994,7 +8994,7 @@ class ClientsProvisionItemClientArgs:
 
 
 class ClientsProvisionParametersArgsDict(TypedDict):
-    clients: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClientsProvisionParametersClientArgs']]]]]
+    clients: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ClientsProvisionParametersClientArgsDict']]]]]
     """
     The array of clients to provision
     """
@@ -9006,11 +9006,11 @@ class ClientsProvisionParametersArgsDict(TypedDict):
     """
     The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
     """
-    policies_by_security_appliance: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySecurityApplianceArgs']]]
+    policies_by_security_appliance: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict']]]
     """
     An object, describing what the policy-connection association is for the security appliance. (Only relevant if the security appliance is actually within the network)
     """
-    policies_by_ssid: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidArgs']]]
+    policies_by_ssid: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidArgsDict']]]
     """
     An object, describing the policy-connection associations for each active SSID within the network. Keys should be the number of enabled SSIDs, mapping to an object describing the client's policy
     """
@@ -9181,63 +9181,63 @@ class ClientsProvisionParametersPoliciesBySecurityApplianceArgs:
 
 
 class ClientsProvisionParametersPoliciesBySsidArgsDict(TypedDict):
-    status0: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus0Args']]]
+    status0: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict']]]
     """
     The number for the SSID
     """
-    status1: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus1Args']]]
+    status1: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict']]]
     """
     The number for the SSID
     """
-    status10: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus10Args']]]
+    status10: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict']]]
     """
     The number for the SSID
     """
-    status11: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus11Args']]]
+    status11: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict']]]
     """
     The number for the SSID
     """
-    status12: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus12Args']]]
+    status12: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict']]]
     """
     The number for the SSID
     """
-    status13: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus13Args']]]
+    status13: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict']]]
     """
     The number for the SSID
     """
-    status14: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus14Args']]]
+    status14: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict']]]
     """
     The number for the SSID
     """
-    status2: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus2Args']]]
+    status2: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict']]]
     """
     The number for the SSID
     """
-    status3: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus3Args']]]
+    status3: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict']]]
     """
     The number for the SSID
     """
-    status4: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus4Args']]]
+    status4: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict']]]
     """
     The number for the SSID
     """
-    status5: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus5Args']]]
+    status5: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict']]]
     """
     The number for the SSID
     """
-    status6: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus6Args']]]
+    status6: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict']]]
     """
     The number for the SSID
     """
-    status7: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus7Args']]]
+    status7: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict']]]
     """
     The number for the SSID
     """
-    status8: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus8Args']]]
+    status8: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict']]]
     """
     The number for the SSID
     """
-    status9: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus9Args']]]
+    status9: NotRequired[pulumi.Input[Optional['ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict']]]
     """
     The number for the SSID
     """
@@ -10225,63 +10225,63 @@ class ClientsProvisionParametersPoliciesBySsidStatus9Args:
 
 
 class ClientsSplashAuthorizationStatusSsidsArgsDict(TypedDict):
-    status0: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus0Args']]]
+    status0: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict']]]
     """
     Splash authorization for SSID 0
     """
-    status1: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus1Args']]]
+    status1: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict']]]
     """
     Splash authorization for SSID 1
     """
-    status10: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus10Args']]]
+    status10: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict']]]
     """
     Splash authorization for SSID 10
     """
-    status11: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus11Args']]]
+    status11: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict']]]
     """
     Splash authorization for SSID 11
     """
-    status12: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus12Args']]]
+    status12: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict']]]
     """
     Splash authorization for SSID 12
     """
-    status13: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus13Args']]]
+    status13: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict']]]
     """
     Splash authorization for SSID 13
     """
-    status14: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus14Args']]]
+    status14: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict']]]
     """
     Splash authorization for SSID 14
     """
-    status2: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus2Args']]]
+    status2: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict']]]
     """
     Splash authorization for SSID 2
     """
-    status3: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus3Args']]]
+    status3: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict']]]
     """
     Splash authorization for SSID 3
     """
-    status4: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus4Args']]]
+    status4: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict']]]
     """
     Splash authorization for SSID 4
     """
-    status5: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus5Args']]]
+    status5: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict']]]
     """
     Splash authorization for SSID 5
     """
-    status6: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus6Args']]]
+    status6: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict']]]
     """
     Splash authorization for SSID 6
     """
-    status7: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus7Args']]]
+    status7: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict']]]
     """
     Splash authorization for SSID 7
     """
-    status8: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus8Args']]]
+    status8: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict']]]
     """
     Splash authorization for SSID 8
     """
-    status9: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus9Args']]]
+    status9: NotRequired[pulumi.Input[Optional['ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict']]]
     """
     Splash authorization for SSID 9
     """
@@ -11057,7 +11057,7 @@ class DevicesClaimVmxItemArgsDict(TypedDict):
     """
     Physical address of the device
     """
-    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DevicesClaimVmxItemDetailArgs']]]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['DevicesClaimVmxItemDetailArgsDict']]]]]
     """
     Additional device information
     """
@@ -11469,31 +11469,31 @@ class DevicesRemoveParametersArgs:
 
 
 class FirmwareUpgradesProductsArgsDict(TypedDict):
-    appliance: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceArgs']]]
+    appliance: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceArgsDict']]]
     """
     The network device to be updated
     """
-    camera: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraArgs']]]
+    camera: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraArgsDict']]]
     """
     The network device to be updated
     """
-    cellular_gateway: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayArgs']]]
+    cellular_gateway: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayArgsDict']]]
     """
     The network device to be updated
     """
-    sensor: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorArgs']]]
+    sensor: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorArgsDict']]]
     """
     The network device to be updated
     """
-    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchArgs']]]
+    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchArgsDict']]]
     """
     The network device to be updated
     """
-    switch_catalyst: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystArgs']]]
+    switch_catalyst: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystArgsDict']]]
     """
     The network device to be updated
     """
-    wireless: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessArgs']]]
+    wireless: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessArgsDict']]]
     """
     The network device to be updated
     """
@@ -11618,19 +11618,19 @@ class FirmwareUpgradesProductsArgs:
 
 
 class FirmwareUpgradesProductsApplianceArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsApplianceAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsApplianceAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -11945,7 +11945,7 @@ class FirmwareUpgradesProductsApplianceCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsApplianceLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -11953,7 +11953,7 @@ class FirmwareUpgradesProductsApplianceLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -12236,7 +12236,7 @@ class FirmwareUpgradesProductsApplianceNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -12390,19 +12390,19 @@ class FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs:
 
 
 class FirmwareUpgradesProductsCameraArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsCameraAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsCameraAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -12717,7 +12717,7 @@ class FirmwareUpgradesProductsCameraCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsCameraLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -12725,7 +12725,7 @@ class FirmwareUpgradesProductsCameraLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -13008,7 +13008,7 @@ class FirmwareUpgradesProductsCameraNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -13162,19 +13162,19 @@ class FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs:
 
 
 class FirmwareUpgradesProductsCellularGatewayArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsCellularGatewayAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -13489,7 +13489,7 @@ class FirmwareUpgradesProductsCellularGatewayCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -13497,7 +13497,7 @@ class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -13780,7 +13780,7 @@ class FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -13934,19 +13934,19 @@ class FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs:
 
 
 class FirmwareUpgradesProductsSensorArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsSensorAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsSensorAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -14261,7 +14261,7 @@ class FirmwareUpgradesProductsSensorCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsSensorLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -14269,7 +14269,7 @@ class FirmwareUpgradesProductsSensorLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -14552,7 +14552,7 @@ class FirmwareUpgradesProductsSensorNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -14706,19 +14706,19 @@ class FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs:
 
 
 class FirmwareUpgradesProductsSwitchArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsSwitchAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsSwitchAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -14924,7 +14924,7 @@ class FirmwareUpgradesProductsSwitchAvailableVersionArgs:
 
 
 class FirmwareUpgradesProductsSwitchCatalystArgsDict(TypedDict):
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict']]]
     """
     The pending firmware upgrade if it exists
     """
@@ -14977,7 +14977,7 @@ class FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
     """
     The time of the last successful upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict']]]
     """
     The version to be updated to
     """
@@ -15160,7 +15160,7 @@ class FirmwareUpgradesProductsSwitchCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsSwitchLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -15168,7 +15168,7 @@ class FirmwareUpgradesProductsSwitchLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -15451,7 +15451,7 @@ class FirmwareUpgradesProductsSwitchNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -15605,19 +15605,19 @@ class FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs:
 
 
 class FirmwareUpgradesProductsWirelessArgsDict(TypedDict):
-    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsWirelessAvailableVersionArgs']]]]]
+    available_versions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesProductsWirelessAvailableVersionArgsDict']]]]]
     """
     Firmware versions available for upgrade
     """
-    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessCurrentVersionArgs']]]
+    current_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessCurrentVersionArgsDict']]]
     """
     Details of the current version on the device
     """
-    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeArgs']]]
+    last_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeArgsDict']]]
     """
     Details of the last firmware upgrade on the device
     """
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade on the device
     """
@@ -15932,7 +15932,7 @@ class FirmwareUpgradesProductsWirelessCurrentVersionArgs:
 
 
 class FirmwareUpgradesProductsWirelessLastUpgradeArgsDict(TypedDict):
-    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgs']]]
+    from_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict']]]
     """
     Details of the version the device upgraded from
     """
@@ -15940,7 +15940,7 @@ class FirmwareUpgradesProductsWirelessLastUpgradeArgsDict(TypedDict):
     """
     Timestamp of the last successful firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict']]]
     """
     Details of the version the device upgraded to
     """
@@ -16223,7 +16223,7 @@ class FirmwareUpgradesProductsWirelessNextUpgradeArgsDict(TypedDict):
     """
     Timestamp of the next scheduled firmware upgrade
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to if it exists
     """
@@ -16381,7 +16381,7 @@ class FirmwareUpgradesRollbacksItemArgsDict(TypedDict):
     """
     Product type to rollback (if the network is a combined network)
     """
-    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesRollbacksItemReasonArgs']]]]]
+    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesRollbacksItemReasonArgsDict']]]]]
     """
     Reasons for the rollback
     """
@@ -16393,7 +16393,7 @@ class FirmwareUpgradesRollbacksItemArgsDict(TypedDict):
     """
     Scheduled time for the rollback
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesRollbacksItemToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesRollbacksItemToVersionArgsDict']]]
     """
     Version to downgrade to (if the network has firmware flexibility)
     """
@@ -16668,7 +16668,7 @@ class FirmwareUpgradesRollbacksParametersArgsDict(TypedDict):
     """
     Product type to rollback (if the network is a combined network)
     """
-    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesRollbacksParametersReasonArgs']]]]]
+    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesRollbacksParametersReasonArgsDict']]]]]
     """
     Reasons for the rollback
     """
@@ -16676,7 +16676,7 @@ class FirmwareUpgradesRollbacksParametersArgsDict(TypedDict):
     """
     Scheduled time for the rollback
     """
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesRollbacksParametersToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesRollbacksParametersToVersionArgsDict']]]
     """
     Version to downgrade to (if the network has firmware flexibility)
     """
@@ -16831,15 +16831,15 @@ class FirmwareUpgradesRollbacksParametersToVersionArgs:
 
 
 class FirmwareUpgradesStagedEventsDeferItemArgsDict(TypedDict):
-    products: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsArgs']]]
+    products: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsArgsDict']]]
     """
     The network devices to be updated
     """
-    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemReasonArgs']]]]]
+    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemReasonArgsDict']]]]]
     """
     Reasons for the rollback
     """
-    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageArgs']]]]]
+    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageArgsDict']]]]]
     """
     The ordered stages in the network
     """
@@ -16900,7 +16900,7 @@ class FirmwareUpgradesStagedEventsDeferItemArgs:
 
 
 class FirmwareUpgradesStagedEventsDeferItemProductsArgsDict(TypedDict):
-    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgs']]]
+    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict']]]
     """
     The Switch network to be updated
     """
@@ -16929,7 +16929,7 @@ class FirmwareUpgradesStagedEventsDeferItemProductsArgs:
 
 
 class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict(TypedDict):
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade
     """
@@ -16958,7 +16958,7 @@ class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgs:
 
 
 class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict(TypedDict):
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to
     """
@@ -17085,11 +17085,11 @@ class FirmwareUpgradesStagedEventsDeferItemReasonArgs:
 
 
 class FirmwareUpgradesStagedEventsDeferItemStageArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemStageGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict']]]
     """
     The staged upgrade group
     """
-    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgs']]]
+    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict']]]
     """
     The Staged Upgrade Milestones for the stage
     """
@@ -17312,11 +17312,11 @@ class FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgs:
 
 
 class FirmwareUpgradesStagedEventsProductsArgsDict(TypedDict):
-    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchArgs']]]
+    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchArgsDict']]]
     """
     The Switch network to be updated
     """
-    switch_catalyst: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystArgs']]]
+    switch_catalyst: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict']]]
     """
     Version information for the switch network being upgraded
     """
@@ -17361,7 +17361,7 @@ class FirmwareUpgradesStagedEventsProductsArgs:
 
 
 class FirmwareUpgradesStagedEventsProductsSwitchArgsDict(TypedDict):
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade
     """
@@ -17390,7 +17390,7 @@ class FirmwareUpgradesStagedEventsProductsSwitchArgs:
 
 
 class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict(TypedDict):
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict']]]
     """
     The next upgrade version for the switch network
     """
@@ -17419,7 +17419,7 @@ class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgs:
 
 
 class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict']]]
     """
     The version to be updated to for switch Catalyst devices
     """
@@ -17477,7 +17477,7 @@ class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgs
 
 
 class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict(TypedDict):
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to
     """
@@ -17604,15 +17604,15 @@ class FirmwareUpgradesStagedEventsReasonArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksItemArgsDict(TypedDict):
-    products: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsArgs']]]
+    products: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict']]]
     """
     The network devices to be updated
     """
-    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemReasonArgs']]]]]
+    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict']]]]]
     """
     Reasons for the rollback
     """
-    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageArgs']]]]]
+    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict']]]]]
     """
     The ordered stages in the network
     """
@@ -17673,7 +17673,7 @@ class FirmwareUpgradesStagedEventsRollbacksItemArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict(TypedDict):
-    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgs']]]
+    switch: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict']]]
     """
     The Switch network to be updated
     """
@@ -17702,7 +17702,7 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict(TypedDict):
-    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgs']]]
+    next_upgrade: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict']]]
     """
     Details of the next firmware upgrade
     """
@@ -17731,7 +17731,7 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict(TypedDict):
-    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgs']]]
+    to_version: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict']]]
     """
     Details of the version the device will upgrade to
     """
@@ -17858,11 +17858,11 @@ class FirmwareUpgradesStagedEventsRollbacksItemReasonArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict']]]
     """
     The staged upgrade group
     """
-    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgs']]]
+    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict']]]
     """
     The Staged Upgrade Milestones for the stage
     """
@@ -18085,11 +18085,11 @@ class FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksParametersArgsDict(TypedDict):
-    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersReasonArgs']]]]]
+    reasons: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict']]]]]
     """
     The reason for rolling back the staged upgrade
     """
-    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageArgs']]]]]
+    stages: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict']]]]]
     """
     All completed or in-progress stages in the network with their new start times. All pending stages will be canceled
     """
@@ -18183,11 +18183,11 @@ class FirmwareUpgradesStagedEventsRollbacksParametersReasonArgs:
 
 
 class FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict']]]
     """
     The Staged Upgrade Group containing the name and ID
     """
-    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgs']]]
+    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict']]]
     """
     The Staged Upgrade Milestones for the specific stage
     """
@@ -18290,11 +18290,11 @@ class FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgs:
 
 
 class FirmwareUpgradesStagedEventsStageArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsStageGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsStageGroupArgsDict']]]
     """
     The staged upgrade group
     """
-    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsStageMilestonesArgs']]]
+    milestones: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedEventsStageMilestonesArgsDict']]]
     """
     The Staged Upgrade Milestones for the stage
     """
@@ -18517,11 +18517,11 @@ class FirmwareUpgradesStagedEventsStageMilestonesArgs:
 
 
 class FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict(TypedDict):
-    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs']]]]]
+    devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict']]]]]
     """
     Data Array of Devices containing the name and serial
     """
-    switch_stacks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgs']]]]]
+    switch_stacks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict']]]]]
     """
     Data Array of Switch Stacks containing the name and id
     """
@@ -18733,7 +18733,7 @@ class FirmwareUpgradesStagedStagesGroupArgs:
 
 
 class FirmwareUpgradesStagedStagesJsonArgsDict(TypedDict):
-    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedStagesJsonGroupArgs']]]
+    group: NotRequired[pulumi.Input[Optional['FirmwareUpgradesStagedStagesJsonGroupArgsDict']]]
     """
     The Staged Upgrade Group
     """
@@ -18991,7 +18991,7 @@ class FloorPlansDeviceArgsDict(TypedDict):
     """
     Physical address of the device
     """
-    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FloorPlansDeviceDetailArgs']]]]]
+    details: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FloorPlansDeviceDetailArgsDict']]]]]
     """
     Additional device information
     """
@@ -19443,7 +19443,7 @@ class FloorPlansTopRightCornerArgs:
 
 
 class GroupPoliciesBandwidthArgsDict(TypedDict):
-    bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesBandwidthBandwidthLimitsArgs']]]
+    bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesBandwidthBandwidthLimitsArgsDict']]]
     """
     The bandwidth limits object, specifying upload and download speed for clients bound to the group policy. These are only enforced if 'settings' is set to 'custom'.
     """
@@ -19541,7 +19541,7 @@ class GroupPoliciesBandwidthBandwidthLimitsArgs:
 
 
 class GroupPoliciesBonjourForwardingArgsDict(TypedDict):
-    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesBonjourForwardingRuleArgs']]]]]
+    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesBonjourForwardingRuleArgsDict']]]]]
     """
     A list of the Bonjour forwarding rules for your group policy. If 'settings' is set to 'custom', at least one rule must be specified.
     """
@@ -19659,15 +19659,15 @@ class GroupPoliciesBonjourForwardingRuleArgs:
 
 
 class GroupPoliciesContentFilteringArgsDict(TypedDict):
-    allowed_url_patterns: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringAllowedUrlPatternsArgs']]]
+    allowed_url_patterns: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict']]]
     """
     Settings for allowed URL patterns
     """
-    blocked_url_categories: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringBlockedUrlCategoriesArgs']]]
+    blocked_url_categories: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict']]]
     """
     Settings for blocked URL categories
     """
-    blocked_url_patterns: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringBlockedUrlPatternsArgs']]]
+    blocked_url_patterns: NotRequired[pulumi.Input[Optional['GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict']]]
     """
     Settings for blocked URL patterns
     """
@@ -19875,11 +19875,11 @@ class GroupPoliciesContentFilteringBlockedUrlPatternsArgs:
 
 
 class GroupPoliciesFirewallAndTrafficShapingArgsDict(TypedDict):
-    l3_firewall_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs']]]]]
+    l3_firewall_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict']]]]]
     """
     An ordered array of the L3 firewall rules
     """
-    l7_firewall_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs']]]]]
+    l7_firewall_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict']]]]]
     """
     An ordered array of L7 firewall rules
     """
@@ -19887,7 +19887,7 @@ class GroupPoliciesFirewallAndTrafficShapingArgsDict(TypedDict):
     """
     How firewall and traffic shaping rules are enforced. Can be 'network default', 'ignore' or 'custom'.
     """
-    traffic_shaping_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs']]]]]
+    traffic_shaping_rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict']]]]]
     """
     An array of traffic shaping rules. Rules are applied in the order that
     they are specified in. An empty list (or null) means no rules. Note that
@@ -20148,7 +20148,7 @@ class GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs:
 
 
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict(TypedDict):
-    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs']]]]]
+    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict']]]]]
     """
     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
     """
@@ -20162,7 +20162,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict(TypedDict
     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
     null means 'Do not set PCP tag'.
     """
-    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgs']]]
+    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict']]]
     """
     An object describing the bandwidth settings for your rule.
     """
@@ -20336,7 +20336,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs:
 
 
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict(TypedDict):
-    bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgs']]]
+    bandwidth_limits: NotRequired[pulumi.Input[Optional['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]]
     """
     The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
     """
@@ -20438,31 +20438,31 @@ class GroupPoliciesSchedulingArgsDict(TypedDict):
     """
     Whether scheduling is enabled (true) or disabled (false). Defaults to false. If true, the schedule objects for each day of the week (monday - sunday) are parsed.
     """
-    friday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingFridayArgs']]]
+    friday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingFridayArgsDict']]]
     """
     The schedule object for Friday.
     """
-    monday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingMondayArgs']]]
+    monday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingMondayArgsDict']]]
     """
     The schedule object for Monday.
     """
-    saturday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingSaturdayArgs']]]
+    saturday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingSaturdayArgsDict']]]
     """
     The schedule object for Saturday.
     """
-    sunday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingSundayArgs']]]
+    sunday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingSundayArgsDict']]]
     """
     The schedule object for Sunday.
     """
-    thursday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingThursdayArgs']]]
+    thursday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingThursdayArgsDict']]]
     """
     The schedule object for Thursday.
     """
-    tuesday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingTuesdayArgs']]]
+    tuesday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingTuesdayArgsDict']]]
     """
     The schedule object for Tuesday.
     """
-    wednesday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingWednesdayArgs']]]
+    wednesday: NotRequired[pulumi.Input[Optional['GroupPoliciesSchedulingWednesdayArgsDict']]]
     """
     The schedule object for Wednesday.
     """
@@ -21244,7 +21244,7 @@ class MerakiAuthUsersAuthorizationArgs:
 
 
 class MqttBrokersItemArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['MqttBrokersItemAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['MqttBrokersItemAuthenticationArgsDict']]]
     """
     Authentication settings of the MQTT broker
     """
@@ -21264,7 +21264,7 @@ class MqttBrokersItemArgsDict(TypedDict):
     """
     Host port though which the MQTT broker can be reached.
     """
-    security: NotRequired[pulumi.Input[Optional['MqttBrokersItemSecurityArgs']]]
+    security: NotRequired[pulumi.Input[Optional['MqttBrokersItemSecurityArgsDict']]]
     """
     Security settings of the MQTT broker.
     """
@@ -21406,7 +21406,7 @@ class MqttBrokersItemSecurityArgsDict(TypedDict):
     """
     Security protocol of the MQTT broker.
     """
-    tls: NotRequired[pulumi.Input[Optional['MqttBrokersItemSecurityTlsArgs']]]
+    tls: NotRequired[pulumi.Input[Optional['MqttBrokersItemSecurityTlsArgsDict']]]
     """
     TLS settings of the MQTT broker.
     """
@@ -21500,7 +21500,7 @@ class MqttBrokersItemSecurityTlsArgs:
 
 
 class MqttBrokersParametersArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['MqttBrokersParametersAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['MqttBrokersParametersAuthenticationArgsDict']]]
     """
     Authentication settings of the MQTT broker
     """
@@ -21516,7 +21516,7 @@ class MqttBrokersParametersArgsDict(TypedDict):
     """
     Host port though which the MQTT broker can be reached.
     """
-    security: NotRequired[pulumi.Input[Optional['MqttBrokersParametersSecurityArgs']]]
+    security: NotRequired[pulumi.Input[Optional['MqttBrokersParametersSecurityArgsDict']]]
     """
     Security settings of the MQTT broker.
     """
@@ -21662,7 +21662,7 @@ class MqttBrokersParametersSecurityArgsDict(TypedDict):
     """
     Security protocol of the MQTT broker.
     """
-    tls: NotRequired[pulumi.Input[Optional['MqttBrokersParametersSecurityTlsArgs']]]
+    tls: NotRequired[pulumi.Input[Optional['MqttBrokersParametersSecurityTlsArgsDict']]]
     """
     TLS settings of the MQTT broker.
     """
@@ -21768,7 +21768,7 @@ class SensorAlertsProfilesConditionArgsDict(TypedDict):
     """
     The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
     """
-    threshold: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdArgs']]]
+    threshold: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdArgsDict']]]
     """
     Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
     """
@@ -21845,63 +21845,63 @@ class SensorAlertsProfilesConditionArgs:
 
 
 class SensorAlertsProfilesConditionThresholdArgsDict(TypedDict):
-    apparent_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdApparentPowerArgs']]]
+    apparent_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdApparentPowerArgsDict']]]
     """
     Apparent power threshold. 'draw' must be provided.
     """
-    current: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdCurrentArgs']]]
+    current: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdCurrentArgsDict']]]
     """
     Electrical current threshold. 'level' must be provided.
     """
-    door: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdDoorArgs']]]
+    door: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdDoorArgsDict']]]
     """
     Door open threshold. 'open' must be provided and set to true.
     """
-    frequency: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdFrequencyArgs']]]
+    frequency: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdFrequencyArgsDict']]]
     """
     Electrical frequency threshold. 'level' must be provided.
     """
-    humidity: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdHumidityArgs']]]
+    humidity: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdHumidityArgsDict']]]
     """
     Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
     """
-    indoor_air_quality: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs']]]
+    indoor_air_quality: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict']]]
     """
     Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
     """
-    noise: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdNoiseArgs']]]
+    noise: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdNoiseArgsDict']]]
     """
     Noise threshold. 'ambient' must be provided.
     """
-    pm25: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdPm25Args']]]
+    pm25: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdPm25ArgsDict']]]
     """
     PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
     """
-    power_factor: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdPowerFactorArgs']]]
+    power_factor: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdPowerFactorArgsDict']]]
     """
     Power factor threshold. 'percentage' must be provided.
     """
-    real_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdRealPowerArgs']]]
+    real_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdRealPowerArgsDict']]]
     """
     Real power threshold. 'draw' must be provided.
     """
-    temperature: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdTemperatureArgs']]]
+    temperature: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdTemperatureArgsDict']]]
     """
     Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
     """
-    tvoc: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdTvocArgs']]]
+    tvoc: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdTvocArgsDict']]]
     """
     TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
     """
-    upstream_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdUpstreamPowerArgs']]]
+    upstream_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict']]]
     """
     Upstream power threshold. 'outageDetected' must be provided and set to true.
     """
-    voltage: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdVoltageArgs']]]
+    voltage: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdVoltageArgsDict']]]
     """
     Voltage threshold. 'level' must be provided.
     """
-    water: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdWaterArgs']]]
+    water: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdWaterArgsDict']]]
     """
     Water detection threshold. 'present' must be provided and set to true.
     """
@@ -22368,7 +22368,7 @@ class SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs:
 
 
 class SensorAlertsProfilesConditionThresholdNoiseArgsDict(TypedDict):
-    ambient: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdNoiseAmbientArgs']]]
+    ambient: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict']]]
     """
     Ambient noise threshold. One of 'level' or 'quality' must be provided.
     """
@@ -22770,7 +22770,7 @@ class SensorAlertsProfilesConditionsResponseArgsDict(TypedDict):
     """
     The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
     """
-    threshold: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdArgs']]]
+    threshold: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdArgsDict']]]
     """
     Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
     """
@@ -22847,63 +22847,63 @@ class SensorAlertsProfilesConditionsResponseArgs:
 
 
 class SensorAlertsProfilesConditionsResponseThresholdArgsDict(TypedDict):
-    apparent_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs']]]
+    apparent_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict']]]
     """
     Apparent power threshold. 'draw' must be provided.
     """
-    current: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdCurrentArgs']]]
+    current: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict']]]
     """
     Electrical current threshold. 'level' must be provided.
     """
-    door: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdDoorArgs']]]
+    door: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict']]]
     """
     Door open threshold. 'open' must be provided and set to true.
     """
-    frequency: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs']]]
+    frequency: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict']]]
     """
     Electrical frequency threshold. 'level' must be provided.
     """
-    humidity: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdHumidityArgs']]]
+    humidity: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict']]]
     """
     Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
     """
-    indoor_air_quality: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs']]]
+    indoor_air_quality: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict']]]
     """
     Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
     """
-    noise: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdNoiseArgs']]]
+    noise: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict']]]
     """
     Noise threshold. 'ambient' must be provided.
     """
-    pm25: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdPm25Args']]]
+    pm25: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict']]]
     """
     PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
     """
-    power_factor: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs']]]
+    power_factor: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict']]]
     """
     Power factor threshold. 'percentage' must be provided.
     """
-    real_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs']]]
+    real_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict']]]
     """
     Real power threshold. 'draw' must be provided.
     """
-    temperature: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs']]]
+    temperature: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict']]]
     """
     Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
     """
-    tvoc: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdTvocArgs']]]
+    tvoc: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict']]]
     """
     TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
     """
-    upstream_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs']]]
+    upstream_power: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict']]]
     """
     Upstream power threshold. 'outageDetected' must be provided and set to true.
     """
-    voltage: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdVoltageArgs']]]
+    voltage: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict']]]
     """
     Voltage threshold. 'level' must be provided.
     """
-    water: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdWaterArgs']]]
+    water: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict']]]
     """
     Water detection threshold. 'present' must be provided and set to true.
     """
@@ -23370,7 +23370,7 @@ class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs:
 
 
 class SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict(TypedDict):
-    ambient: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs']]]
+    ambient: NotRequired[pulumi.Input[Optional['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict']]]
     """
     Ambient noise threshold. One of 'level' or 'quality' must be provided.
     """
@@ -23907,7 +23907,7 @@ class SettingsFipsArgs:
 
 
 class SettingsLocalStatusPageArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['SettingsLocalStatusPageAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['SettingsLocalStatusPageAuthenticationArgsDict']]]
     """
     A hash of Local Status page(s)' authentication options applied to the Network.
     """
@@ -24063,8 +24063,8 @@ class SettingsSecurePortArgs:
 
 
 class SmBypassActivationLockAttemptsDataArgsDict(TypedDict):
-    status2090938209: NotRequired[pulumi.Input[Optional['SmBypassActivationLockAttemptsDataStatus2090938209Args']]]
-    status38290139892: NotRequired[pulumi.Input[Optional['SmBypassActivationLockAttemptsDataStatus38290139892Args']]]
+    status2090938209: NotRequired[pulumi.Input[Optional['SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict']]]
+    status38290139892: NotRequired[pulumi.Input[Optional['SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict']]]
 
 @pulumi.input_type
 class SmBypassActivationLockAttemptsDataArgs:
@@ -24376,7 +24376,7 @@ class SmDevicesFieldsItemArgs:
 
 
 class SmDevicesFieldsParametersArgsDict(TypedDict):
-    device_fields: NotRequired[pulumi.Input[Optional['SmDevicesFieldsParametersDeviceFieldsArgs']]]
+    device_fields: NotRequired[pulumi.Input[Optional['SmDevicesFieldsParametersDeviceFieldsArgsDict']]]
     """
     The new fields of the device. Each field of this object is optional.
     """
@@ -25618,7 +25618,7 @@ class SnmpUserArgs:
 
 
 class SplitItemArgsDict(TypedDict):
-    resulting_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SplitItemResultingNetworkArgs']]]]]
+    resulting_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SplitItemResultingNetworkArgsDict']]]]]
     """
     Networks after the split
     """
@@ -26234,7 +26234,7 @@ class SwitchAccessControlListsRulesResponseArgs:
 
 
 class SwitchAccessPoliciesCountsArgsDict(TypedDict):
-    ports: NotRequired[pulumi.Input[Optional['SwitchAccessPoliciesCountsPortsArgs']]]
+    ports: NotRequired[pulumi.Input[Optional['SwitchAccessPoliciesCountsPortsArgsDict']]]
     """
     Counts associated with ports
     """
@@ -26321,7 +26321,7 @@ class SwitchAccessPoliciesDot1xArgs:
 
 
 class SwitchAccessPoliciesRadiusArgsDict(TypedDict):
-    critical_auth: NotRequired[pulumi.Input[Optional['SwitchAccessPoliciesRadiusCriticalAuthArgs']]]
+    critical_auth: NotRequired[pulumi.Input[Optional['SwitchAccessPoliciesRadiusCriticalAuthArgsDict']]]
     """
     Critical auth settings for when authentication is rejected by the RADIUS server
     """
@@ -26824,7 +26824,7 @@ class SwitchAlternateManagementInterfaceSwitchArgs:
 
 
 class SwitchDhcpServerPolicyAlertsArgsDict(TypedDict):
-    email: NotRequired[pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsEmailArgs']]]
+    email: NotRequired[pulumi.Input[Optional['SwitchDhcpServerPolicyAlertsEmailArgsDict']]]
     """
     Alert settings for DHCP servers
     """
@@ -27196,31 +27196,31 @@ class SwitchMtuOverrideArgs:
 
 
 class SwitchPortSchedulesPortScheduleArgsDict(TypedDict):
-    friday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleFridayArgs']]]
+    friday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleFridayArgsDict']]]
     """
     The schedule object for Friday.
     """
-    monday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleMondayArgs']]]
+    monday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleMondayArgsDict']]]
     """
     The schedule object for Monday.
     """
-    saturday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleSaturdayArgs']]]
+    saturday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleSaturdayArgsDict']]]
     """
     The schedule object for Saturday.
     """
-    sunday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleSundayArgs']]]
+    sunday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleSundayArgsDict']]]
     """
     The schedule object for Sunday.
     """
-    thursday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleThursdayArgs']]]
+    thursday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleThursdayArgsDict']]]
     """
     The schedule object for Thursday.
     """
-    tuesday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleTuesdayArgs']]]
+    tuesday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleTuesdayArgsDict']]]
     """
     The schedule object for Tuesday.
     """
-    wednesday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleWednesdayArgs']]]
+    wednesday: NotRequired[pulumi.Input[Optional['SwitchPortSchedulesPortScheduleWednesdayArgsDict']]]
     """
     The schedule object for Wednesday.
     """
@@ -28104,7 +28104,7 @@ class SwitchRoutingOspfMd5AuthenticationKeyArgs:
 
 
 class SwitchRoutingOspfV3ArgsDict(TypedDict):
-    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingOspfV3AreaArgs']]]]]
+    areas: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SwitchRoutingOspfV3AreaArgsDict']]]]]
     """
     OSPF v3 areas
     """
@@ -29564,7 +29564,7 @@ class VlanProfilesAssignmentsReassignItemArgsDict(TypedDict):
     """
     Array of Switch Stack IDs
     """
-    vlan_profile: NotRequired[pulumi.Input[Optional['VlanProfilesAssignmentsReassignItemVlanProfileArgs']]]
+    vlan_profile: NotRequired[pulumi.Input[Optional['VlanProfilesAssignmentsReassignItemVlanProfileArgsDict']]]
     """
     The VLAN Profile
     """
@@ -29682,7 +29682,7 @@ class VlanProfilesAssignmentsReassignParametersArgsDict(TypedDict):
     """
     Array of Switch Stack IDs
     """
-    vlan_profile: NotRequired[pulumi.Input[Optional['VlanProfilesAssignmentsReassignParametersVlanProfileArgs']]]
+    vlan_profile: NotRequired[pulumi.Input[Optional['VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict']]]
     """
     The VLAN Profile
     """
@@ -29821,7 +29821,7 @@ class VlanProfilesVlanGroupArgs:
 
 
 class VlanProfilesVlanNameArgsDict(TypedDict):
-    adaptive_policy_group: NotRequired[pulumi.Input[Optional['VlanProfilesVlanNameAdaptivePolicyGroupArgs']]]
+    adaptive_policy_group: NotRequired[pulumi.Input[Optional['VlanProfilesVlanNameAdaptivePolicyGroupArgsDict']]]
     """
     Adaptive Policy Group assigned to Vlan ID
     """
@@ -30037,7 +30037,7 @@ class WebhooksPayloadTemplatesHeaderArgs:
 
 
 class WebhooksPayloadTemplatesSharingArgsDict(TypedDict):
-    by_network: NotRequired[pulumi.Input[Optional['WebhooksPayloadTemplatesSharingByNetworkArgs']]]
+    by_network: NotRequired[pulumi.Input[Optional['WebhooksPayloadTemplatesSharingByNetworkArgsDict']]]
     """
     Information on network access to the template
     """
@@ -30224,7 +30224,7 @@ class WirelessAlternateManagementInterfaceAccessPointArgs:
 
 
 class WirelessBillingPlanArgsDict(TypedDict):
-    bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessBillingPlanBandwidthLimitsArgs']]]
+    bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessBillingPlanBandwidthLimitsArgsDict']]]
     """
     The uplink bandwidth settings for the pricing plan.
     """
@@ -30704,7 +30704,7 @@ class WirelessRfProfilesApBandSettingsArgsDict(TypedDict):
     """
     Steers client to most open band. Can be either true or false. Defaults to true.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesApBandSettingsBandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesApBandSettingsBandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -30923,7 +30923,7 @@ class WirelessRfProfilesFiveGhzSettingsArgs:
 
 
 class WirelessRfProfilesFlexRadiosArgsDict(TypedDict):
-    by_models: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessRfProfilesFlexRadiosByModelArgs']]]]]
+    by_models: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessRfProfilesFlexRadiosByModelArgsDict']]]]]
     """
     Flex radios by model.
     """
@@ -31001,63 +31001,63 @@ class WirelessRfProfilesFlexRadiosByModelArgs:
 
 
 class WirelessRfProfilesPerSsidSettingsArgsDict(TypedDict):
-    status0: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus0Args']]]
+    status0: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus0ArgsDict']]]
     """
     Settings for SSID 0
     """
-    status1: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus1Args']]]
+    status1: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus1ArgsDict']]]
     """
     Settings for SSID 1
     """
-    status10: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus10Args']]]
+    status10: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus10ArgsDict']]]
     """
     Settings for SSID 10
     """
-    status11: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus11Args']]]
+    status11: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus11ArgsDict']]]
     """
     Settings for SSID 11
     """
-    status12: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus12Args']]]
+    status12: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus12ArgsDict']]]
     """
     Settings for SSID 12
     """
-    status13: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus13Args']]]
+    status13: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus13ArgsDict']]]
     """
     Settings for SSID 13
     """
-    status14: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus14Args']]]
+    status14: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus14ArgsDict']]]
     """
     Settings for SSID 14
     """
-    status2: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus2Args']]]
+    status2: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus2ArgsDict']]]
     """
     Settings for SSID 2
     """
-    status3: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus3Args']]]
+    status3: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus3ArgsDict']]]
     """
     Settings for SSID 3
     """
-    status4: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus4Args']]]
+    status4: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus4ArgsDict']]]
     """
     Settings for SSID 4
     """
-    status5: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus5Args']]]
+    status5: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus5ArgsDict']]]
     """
     Settings for SSID 5
     """
-    status6: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus6Args']]]
+    status6: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus6ArgsDict']]]
     """
     Settings for SSID 6
     """
-    status7: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus7Args']]]
+    status7: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus7ArgsDict']]]
     """
     Settings for SSID 7
     """
-    status8: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus8Args']]]
+    status8: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus8ArgsDict']]]
     """
     Settings for SSID 8
     """
-    status9: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus9Args']]]
+    status9: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus9ArgsDict']]]
     """
     Settings for SSID 9
     """
@@ -31318,7 +31318,7 @@ class WirelessRfProfilesPerSsidSettingsStatus0ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus0BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -31456,7 +31456,7 @@ class WirelessRfProfilesPerSsidSettingsStatus10ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus10BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -31594,7 +31594,7 @@ class WirelessRfProfilesPerSsidSettingsStatus11ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus11BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -31732,7 +31732,7 @@ class WirelessRfProfilesPerSsidSettingsStatus12ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus12BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -31870,7 +31870,7 @@ class WirelessRfProfilesPerSsidSettingsStatus13ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus13BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32008,7 +32008,7 @@ class WirelessRfProfilesPerSsidSettingsStatus14ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus14BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32146,7 +32146,7 @@ class WirelessRfProfilesPerSsidSettingsStatus1ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus1BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32284,7 +32284,7 @@ class WirelessRfProfilesPerSsidSettingsStatus2ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus2BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32422,7 +32422,7 @@ class WirelessRfProfilesPerSsidSettingsStatus3ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus3BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32560,7 +32560,7 @@ class WirelessRfProfilesPerSsidSettingsStatus4ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus4BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32698,7 +32698,7 @@ class WirelessRfProfilesPerSsidSettingsStatus5ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus5BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32836,7 +32836,7 @@ class WirelessRfProfilesPerSsidSettingsStatus6ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus6BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -32974,7 +32974,7 @@ class WirelessRfProfilesPerSsidSettingsStatus7ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus7BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -33112,7 +33112,7 @@ class WirelessRfProfilesPerSsidSettingsStatus8ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus8BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -33250,7 +33250,7 @@ class WirelessRfProfilesPerSsidSettingsStatus9ArgsDict(TypedDict):
     """
     Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
     """
-    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus9BandsArgs']]]
+    bands: NotRequired[pulumi.Input[Optional['WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict']]]
     """
     Settings related to all bands
     """
@@ -33667,7 +33667,7 @@ class WirelessRfProfilesTwoFourGhzSettingsArgs:
 
 
 class WirelessSettingsNamedVlansArgsDict(TypedDict):
-    pool_dhcp_monitoring: NotRequired[pulumi.Input[Optional['WirelessSettingsNamedVlansPoolDhcpMonitoringArgs']]]
+    pool_dhcp_monitoring: NotRequired[pulumi.Input[Optional['WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict']]]
     """
     Named VLAN Pool DHCP Monitoring settings.
     """
@@ -33814,11 +33814,11 @@ class WirelessSettingsRegulatoryDomainArgs:
 
 
 class WirelessSsidsActiveDirectoryArgsDict(TypedDict):
-    credentials: NotRequired[pulumi.Input[Optional['WirelessSsidsActiveDirectoryCredentialsArgs']]]
+    credentials: NotRequired[pulumi.Input[Optional['WirelessSsidsActiveDirectoryCredentialsArgsDict']]]
     """
     (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsActiveDirectoryServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsActiveDirectoryServerArgsDict']]]]]
     """
     The Active Directory servers to be used for authentication.
     """
@@ -34696,7 +34696,7 @@ class WirelessSsidsFirewallL7FirewallRulesRuleArgsDict(TypedDict):
     """
     The 'value_list' of what you want to block. Send a list in request
     """
-    value_obj: NotRequired[pulumi.Input[Optional['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs']]]
+    value_obj: NotRequired[pulumi.Input[Optional['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict']]]
     """
     The 'value_obj' of what you want to block. Send a dict in request
     """
@@ -34822,7 +34822,7 @@ class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs:
 
 
 class WirelessSsidsGreArgsDict(TypedDict):
-    concentrator: NotRequired[pulumi.Input[Optional['WirelessSsidsGreConcentratorArgs']]]
+    concentrator: NotRequired[pulumi.Input[Optional['WirelessSsidsGreConcentratorArgsDict']]]
     """
     The EoGRE concentrator's settings
     """
@@ -34953,7 +34953,7 @@ class WirelessSsidsHotspot20NaiRealmArgsDict(TypedDict):
     """
     The format for the realm ('1' or '0')
     """
-    methods: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodArgs']]]]]
+    methods: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodArgsDict']]]]]
     """
     An array of EAP methods for the realm.
     """
@@ -35031,7 +35031,7 @@ class WirelessSsidsHotspot20NaiRealmArgs:
 
 
 class WirelessSsidsHotspot20NaiRealmMethodArgsDict(TypedDict):
-    authentication_types: NotRequired[pulumi.Input[Optional['WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs']]]
+    authentication_types: NotRequired[pulumi.Input[Optional['WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict']]]
     """
     The authentication types for the method. These should be formatted as an object with the EAP method category in camelcase as the key and the list of types as the value (nonEapInnerAuthentication: Reserved, PAP, CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA, EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, none, Reserved, Vendor Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous, Vendor Specific)
     """
@@ -35221,15 +35221,15 @@ class WirelessSsidsLdapArgsDict(TypedDict):
     """
     The base distinguished name of users on the LDAP server.
     """
-    credentials: NotRequired[pulumi.Input[Optional['WirelessSsidsLdapCredentialsArgs']]]
+    credentials: NotRequired[pulumi.Input[Optional['WirelessSsidsLdapCredentialsArgsDict']]]
     """
     (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
     """
-    server_ca_certificate: NotRequired[pulumi.Input[Optional['WirelessSsidsLdapServerCaCertificateArgs']]]
+    server_ca_certificate: NotRequired[pulumi.Input[Optional['WirelessSsidsLdapServerCaCertificateArgsDict']]]
     """
     The CA certificate used to sign the LDAP server's key.
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsLdapServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsLdapServerArgsDict']]]]]
     """
     The LDAP servers to be used for authentication.
     """
@@ -35437,11 +35437,11 @@ class WirelessSsidsLocalRadiusArgsDict(TypedDict):
     """
     The duration (in seconds) for which LDAP and OCSP lookups are cached.
     """
-    certificate_authentication: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusCertificateAuthenticationArgs']]]
+    certificate_authentication: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict']]]
     """
     The current setting for certificate verification.
     """
-    password_authentication: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusPasswordAuthenticationArgs']]]
+    password_authentication: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict']]]
     """
     The current setting for password-based authentication.
     """
@@ -35502,7 +35502,7 @@ class WirelessSsidsLocalRadiusArgs:
 
 
 class WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict(TypedDict):
-    client_root_ca_certificate: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs']]]
+    client_root_ca_certificate: NotRequired[pulumi.Input[Optional['WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict']]]
     """
     The Client CA Certificate used to sign the client certificate.
     """
@@ -35669,11 +35669,11 @@ class WirelessSsidsLocalRadiusPasswordAuthenticationArgs:
 
 
 class WirelessSsidsNamedVlansArgsDict(TypedDict):
-    radius: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansRadiusArgs']]]
+    radius: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansRadiusArgsDict']]]
     """
     RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
     """
-    tagging: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansTaggingArgs']]]
+    tagging: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansTaggingArgsDict']]]
     """
     VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
     """
@@ -35718,7 +35718,7 @@ class WirelessSsidsNamedVlansArgs:
 
 
 class WirelessSsidsNamedVlansRadiusArgsDict(TypedDict):
-    guest_vlan: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansRadiusGuestVlanArgs']]]
+    guest_vlan: NotRequired[pulumi.Input[Optional['WirelessSsidsNamedVlansRadiusGuestVlanArgsDict']]]
     """
     Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
     """
@@ -35796,7 +35796,7 @@ class WirelessSsidsNamedVlansRadiusGuestVlanArgs:
 
 
 class WirelessSsidsNamedVlansTaggingArgsDict(TypedDict):
-    by_ap_tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsNamedVlansTaggingByApTagArgs']]]]]
+    by_ap_tags: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsNamedVlansTaggingByApTagArgsDict']]]]]
     """
     The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
     """
@@ -36626,7 +36626,7 @@ class WirelessSsidsSpeedBurstArgs:
 
 
 class WirelessSsidsSplashSettingsBillingArgsDict(TypedDict):
-    free_access: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingFreeAccessArgs']]]
+    free_access: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsBillingFreeAccessArgsDict']]]
     """
     Details associated with a free access plan with limits
     """
@@ -36850,7 +36850,7 @@ class WirelessSsidsSplashSettingsSentryEnrollmentArgsDict(TypedDict):
     """
     The strength of the enforcement of selected system types.
     """
-    systems_manager_network: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs']]]
+    systems_manager_network: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict']]]
     """
     Systems Manager network targeted for sentry enrollment.
     """
@@ -36944,7 +36944,7 @@ class WirelessSsidsSplashSettingsSplashImageArgsDict(TypedDict):
     """
     The extension of the image file.
     """
-    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageImageArgs']]]
+    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashImageImageArgsDict']]]
     """
     Properties for setting a new image.
     """
@@ -37062,7 +37062,7 @@ class WirelessSsidsSplashSettingsSplashLogoArgsDict(TypedDict):
     """
     The extension of the logo file.
     """
-    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoImageArgs']]]
+    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashLogoImageArgsDict']]]
     """
     Properties for setting a new image.
     """
@@ -37180,7 +37180,7 @@ class WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict(TypedDict):
     """
     The extension of the prepaid front image file.
     """
-    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs']]]
+    image: NotRequired[pulumi.Input[Optional['WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict']]]
     """
     Properties for setting a new image.
     """
@@ -37294,7 +37294,7 @@ class WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs:
 
 
 class WirelessSsidsTrafficShapingRulesRuleArgsDict(TypedDict):
-    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleDefinitionArgs']]]]]
+    definitions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict']]]]]
     """
     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
     """
@@ -37308,7 +37308,7 @@ class WirelessSsidsTrafficShapingRulesRuleArgsDict(TypedDict):
     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
     null means 'Do not set PCP tag'.
     """
-    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs']]]
+    per_client_bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]]
     """
     An object describing the bandwidth settings for your rule.
     """
@@ -37459,7 +37459,7 @@ class WirelessSsidsTrafficShapingRulesRuleDefinitionArgs:
 
 
 class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
-    bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs']]]
+    bandwidth_limits: NotRequired[pulumi.Input[Optional['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]]
     """
     The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
     """
@@ -37692,7 +37692,7 @@ class WirelessSsidsVpnSplitTunnelArgsDict(TypedDict):
     """
     If true, VPN split tunnel is enabled.
     """
-    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsVpnSplitTunnelRuleArgs']]]]]
+    rules: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessSsidsVpnSplitTunnelRuleArgsDict']]]]]
     """
     List of VPN split tunnel rules.
     """

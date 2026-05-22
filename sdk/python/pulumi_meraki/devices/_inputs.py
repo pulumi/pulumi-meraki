@@ -330,11 +330,11 @@ class ApplianceRadioSettingsTwoFourGhzSettingsArgs:
 
 
 class ApplianceUplinksSettingsInterfacesArgsDict(TypedDict):
-    wan1: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1Args']]]
+    wan1: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1ArgsDict']]]
     """
     WAN 1 settings.
     """
-    wan2: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2Args']]]
+    wan2: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2ArgsDict']]]
     """
     WAN 2 settings.
     """
@@ -383,15 +383,15 @@ class ApplianceUplinksSettingsInterfacesWan1ArgsDict(TypedDict):
     """
     Enable or disable the interface.
     """
-    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgs']]]
+    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict']]]
     """
     Configuration options for PPPoE.
     """
-    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgs']]]
+    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisArgsDict']]]
     """
     SVI settings by protocol.
     """
-    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs']]]
+    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict']]]
     """
     VLAN tagging settings.
     """
@@ -468,7 +468,7 @@ class ApplianceUplinksSettingsInterfacesWan1Args:
 
 
 class ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict']]]
     """
     Settings for PPPoE Authentication.
     """
@@ -586,11 +586,11 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs:
 
 
 class ApplianceUplinksSettingsInterfacesWan1SvisArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict']]]
     """
     IPv4 settings for static/dynamic mode.
     """
-    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict']]]
     """
     IPv6 settings for static/dynamic mode.
     """
@@ -647,7 +647,7 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict(TypedDict):
     """
     Gateway IP address when in static mode.
     """
-    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict']]]
     """
     The nameserver settings for this SVI.
     """
@@ -765,7 +765,7 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict(TypedDict):
     """
     Static gateway that will override the one received by autoconf.
     """
-    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict']]]
     """
     The nameserver settings for this SVI.
     """
@@ -924,15 +924,15 @@ class ApplianceUplinksSettingsInterfacesWan2ArgsDict(TypedDict):
     """
     Enable or disable the interface.
     """
-    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgs']]]
+    pppoe: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict']]]
     """
     Configuration options for PPPoE.
     """
-    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgs']]]
+    svis: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisArgsDict']]]
     """
     SVI settings by protocol.
     """
-    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs']]]
+    vlan_tagging: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict']]]
     """
     VLAN tagging settings.
     """
@@ -1009,7 +1009,7 @@ class ApplianceUplinksSettingsInterfacesWan2Args:
 
 
 class ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict(TypedDict):
-    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict']]]
     """
     Settings for PPPoE Authentication.
     """
@@ -1127,11 +1127,11 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs:
 
 
 class ApplianceUplinksSettingsInterfacesWan2SvisArgsDict(TypedDict):
-    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args']]]
+    ipv4: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict']]]
     """
     IPv4 settings for static/dynamic mode.
     """
-    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]]
+    ipv6: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict']]]
     """
     IPv6 settings for static/dynamic mode.
     """
@@ -1188,7 +1188,7 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict(TypedDict):
     """
     Gateway IP address when in static mode.
     """
-    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict']]]
     """
     The nameserver settings for this SVI.
     """
@@ -1306,7 +1306,7 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict(TypedDict):
     """
     Static gateway that will override the one received by autoconf.
     """
-    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict']]]
     """
     The nameserver settings for this SVI.
     """
@@ -2144,7 +2144,7 @@ class CellularGatewayPortForwardingRulesRuleArgs:
 
 
 class CellularSimsSimArgsDict(TypedDict):
-    apns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgs']]]]]
+    apns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CellularSimsSimApnArgsDict']]]]]
     """
     APN configurations. If empty, the default APN will be used.
     """
@@ -2217,7 +2217,7 @@ class CellularSimsSimApnArgsDict(TypedDict):
     """
     IP versions to support (permitted values include 'ipv4', 'ipv6').
     """
-    authentication: NotRequired[pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgs']]]
+    authentication: NotRequired[pulumi.Input[Optional['CellularSimsSimApnAuthenticationArgsDict']]]
     """
     APN authentication configurations.
     """
@@ -2400,11 +2400,11 @@ class CellularSimsSimFailoverArgs:
 
 
 class LiveToolsArpTableCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsArpTableCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -2665,11 +2665,11 @@ class LiveToolsArpTableRequestArgs:
 
 
 class LiveToolsCableCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsCableCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -2865,7 +2865,7 @@ class LiveToolsCableResultArgsDict(TypedDict):
     """
     If an error occurred during the cable test, the error message will be populated here.
     """
-    pairs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgs']]]]]
+    pairs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['LiveToolsCableResultPairArgsDict']]]]]
     """
     Results for each twisted pair within the cable.
     """
@@ -3039,7 +3039,7 @@ class LiveToolsCableResultPairArgs:
 
 
 class LiveToolsPingDeviceItemArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgs']]]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemCallbackArgsDict']]]
     """
     Information for callback used to send back results
     """
@@ -3047,7 +3047,7 @@ class LiveToolsPingDeviceItemArgsDict(TypedDict):
     """
     Id to check the status of your ping request.
     """
-    request: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgs']]]
+    request: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceItemRequestArgsDict']]]
     """
     Ping request parameters
     """
@@ -3286,7 +3286,7 @@ class LiveToolsPingDeviceItemRequestArgs:
 
 
 class LiveToolsPingDeviceParametersArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgs']]]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackArgsDict']]]
     """
     Details for the callback. Please include either an httpServerId OR url and sharedSecret
     """
@@ -3335,11 +3335,11 @@ class LiveToolsPingDeviceParametersArgs:
 
 
 class LiveToolsPingDeviceParametersCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -3482,7 +3482,7 @@ class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs:
 
 
 class LiveToolsPingItemArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingItemCallbackArgs']]]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingItemCallbackArgsDict']]]
     """
     Information for callback used to send back results
     """
@@ -3490,7 +3490,7 @@ class LiveToolsPingItemArgsDict(TypedDict):
     """
     Id to check the status of your ping request.
     """
-    request: NotRequired[pulumi.Input[Optional['LiveToolsPingItemRequestArgs']]]
+    request: NotRequired[pulumi.Input[Optional['LiveToolsPingItemRequestArgsDict']]]
     """
     Ping request parameters
     """
@@ -3729,7 +3729,7 @@ class LiveToolsPingItemRequestArgs:
 
 
 class LiveToolsPingParametersArgsDict(TypedDict):
-    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackArgs']]]
+    callback: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackArgsDict']]]
     """
     Details for the callback. Please include either an httpServerId OR url and sharedSecret
     """
@@ -3798,11 +3798,11 @@ class LiveToolsPingParametersArgs:
 
 
 class LiveToolsPingParametersCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsPingParametersCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -3945,11 +3945,11 @@ class LiveToolsPingParametersCallbackPayloadTemplateArgs:
 
 
 class LiveToolsThroughputTestCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -4121,7 +4121,7 @@ class LiveToolsThroughputTestRequestArgs:
 
 
 class LiveToolsThroughputTestResultArgsDict(TypedDict):
-    speeds: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgs']]]
+    speeds: NotRequired[pulumi.Input[Optional['LiveToolsThroughputTestResultSpeedsArgsDict']]]
     """
     Shows the speeds (Mbps)
     """
@@ -4179,11 +4179,11 @@ class LiveToolsThroughputTestResultSpeedsArgs:
 
 
 class LiveToolsWakeOnLanCallbackArgsDict(TypedDict):
-    http_server: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgs']]]
+    http_server: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackHttpServerArgsDict']]]
     """
     The webhook receiver used for the callback webhook.
     """
-    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgs']]]
+    payload_template: NotRequired[pulumi.Input[Optional['LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict']]]
     """
     The payload template of the webhook used for the callback
     """
@@ -4762,7 +4762,7 @@ class ManagementInterfaceWan2Args:
 
 
 class SensorRelationshipsLivestreamArgsDict(TypedDict):
-    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]]
+    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgsDict']]]]]
     """
     An array of the related devices for the role
     """
@@ -4840,7 +4840,7 @@ class SensorRelationshipsLivestreamRelatedDeviceArgs:
 
 
 class SensorRelationshipsLivestreamRequestArgsDict(TypedDict):
-    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]]
+    related_devices: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict']]]]]
     """
     An array of the related devices for the role
     """
@@ -5537,7 +5537,7 @@ class SwitchRoutingInterfacesOspfV3Args:
 
 
 class WirelessAlternateManagementInterfaceIpv6ItemArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict']]]]]
     """
     configured alternate management interface addresses
     """
@@ -5578,7 +5578,7 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict(TypedDict):
     """
     The gateway address configured for the alternate managment interface
     """
-    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict']]]
     """
     The DNS servers settings for this address.
     """
@@ -5724,7 +5724,7 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs:
 
 
 class WirelessAlternateManagementInterfaceIpv6ParametersArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict']]]]]
     """
     configured alternate management interface addresses
     """
@@ -5765,7 +5765,7 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict(TypedDic
     """
     The gateway address configured for the alternate managment interface
     """
-    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs']]]
+    nameservers: NotRequired[pulumi.Input[Optional['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict']]]
     """
     The DNS servers settings for this address.
     """
