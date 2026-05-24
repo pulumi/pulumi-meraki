@@ -16,16 +16,20 @@ export = async () => {
     tags: ["US-Env01-0001", "US-Env01-0002"],
   });
 
-  new meraki.networks.SyslogServers("example", {
+  new meraki.networks.SyslogServers("syslog-server", {
     networkId: network.id,
     servers: [
       {
-        host: "1.2.3.4",
-        port: 22,
+        host: "192.0.2.1",
+        port: 8008,
         roles: [
           "Wireless event log",
           "Appliance event log",
           "Switch event log",
+          "Air Marshal events",
+          "Flows",
+          "URLs",
+          "Security events",
         ],
       },
     ],
