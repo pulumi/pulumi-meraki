@@ -28,6 +28,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.FirmwareUpgradesStagedGroups;
  * import com.pulumi.meraki.networks.FirmwareUpgradesStagedGroupsArgs;
  * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedGroupsAssignedDevicesArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

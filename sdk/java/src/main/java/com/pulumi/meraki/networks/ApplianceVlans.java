@@ -34,6 +34,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceVlans;
  * import com.pulumi.meraki.networks.ApplianceVlansArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6PrefixAssignmentArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6PrefixAssignmentOriginArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceVlansMandatoryDhcpArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;

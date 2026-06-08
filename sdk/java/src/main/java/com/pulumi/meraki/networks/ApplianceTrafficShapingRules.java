@@ -29,6 +29,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceTrafficShapingRules;
  * import com.pulumi.meraki.networks.ApplianceTrafficShapingRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRuleDefinitionArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs;
  * import java.util.ArrayList;

@@ -33,6 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.WirelessSsidsHotspot20Args;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20MccMncArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20NaiRealmArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20NaiRealmMethodArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20OperatorArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsHotspot20VenueArgs;
  * import java.util.ArrayList;

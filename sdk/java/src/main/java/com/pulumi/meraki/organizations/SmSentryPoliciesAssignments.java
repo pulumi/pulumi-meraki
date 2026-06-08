@@ -31,6 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.SmSentryPoliciesAssignments;
  * import com.pulumi.meraki.organizations.SmSentryPoliciesAssignmentsArgs;
  * import com.pulumi.meraki.organizations.inputs.SmSentryPoliciesAssignmentsParametersArgs;
+ * import com.pulumi.meraki.organizations.inputs.SmSentryPoliciesAssignmentsParametersItemArgs;
+ * import com.pulumi.meraki.organizations.inputs.SmSentryPoliciesAssignmentsParametersItemPolicyArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

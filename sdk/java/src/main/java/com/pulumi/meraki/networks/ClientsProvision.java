@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ClientsProvision;
  * import com.pulumi.meraki.networks.ClientsProvisionArgs;
  * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersClientArgs;
  * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySecurityApplianceArgs;
  * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidArgs;
  * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus0Args;

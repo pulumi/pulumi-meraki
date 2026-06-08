@@ -29,6 +29,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.devices.SensorRelationships;
  * import com.pulumi.meraki.devices.SensorRelationshipsArgs;
  * import com.pulumi.meraki.devices.inputs.SensorRelationshipsLivestreamArgs;
+ * import com.pulumi.meraki.devices.inputs.SensorRelationshipsLivestreamRelatedDeviceArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

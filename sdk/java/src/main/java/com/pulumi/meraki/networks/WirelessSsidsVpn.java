@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnConcentratorArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnFailoverArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnSplitTunnelArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnSplitTunnelRuleArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

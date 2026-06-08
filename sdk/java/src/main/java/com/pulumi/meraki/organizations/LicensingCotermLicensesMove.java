@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.LicensingCotermLicensesMoveArgs;
  * import com.pulumi.meraki.organizations.inputs.LicensingCotermLicensesMoveParametersArgs;
  * import com.pulumi.meraki.organizations.inputs.LicensingCotermLicensesMoveParametersDestinationArgs;
+ * import com.pulumi.meraki.organizations.inputs.LicensingCotermLicensesMoveParametersLicenseArgs;
+ * import com.pulumi.meraki.organizations.inputs.LicensingCotermLicensesMoveParametersLicenseCountArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

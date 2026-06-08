@@ -31,6 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusions;
  * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusionsArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingVpnExclusionsParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingVpnExclusionsParametersCustomArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

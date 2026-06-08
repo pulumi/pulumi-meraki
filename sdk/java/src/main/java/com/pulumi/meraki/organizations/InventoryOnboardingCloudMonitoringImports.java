@@ -30,6 +30,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.InventoryOnboardingCloudMonitoringImports;
  * import com.pulumi.meraki.organizations.InventoryOnboardingCloudMonitoringImportsArgs;
  * import com.pulumi.meraki.organizations.inputs.InventoryOnboardingCloudMonitoringImportsParametersArgs;
+ * import com.pulumi.meraki.organizations.inputs.InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

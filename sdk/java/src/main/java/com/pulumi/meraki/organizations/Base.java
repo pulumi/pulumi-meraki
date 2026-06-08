@@ -30,6 +30,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.base;
  * import com.pulumi.meraki.organizations.baseArgs;
  * import com.pulumi.meraki.organizations.inputs.BaseManagementArgs;
+ * import com.pulumi.meraki.organizations.inputs.BaseManagementDetailArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

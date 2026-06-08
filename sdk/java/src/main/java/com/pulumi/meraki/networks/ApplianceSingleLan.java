@@ -28,6 +28,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceSingleLan;
  * import com.pulumi.meraki.networks.ApplianceSingleLanArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanIpv6PrefixAssignmentArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanIpv6PrefixAssignmentOriginArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanMandatoryDhcpArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
