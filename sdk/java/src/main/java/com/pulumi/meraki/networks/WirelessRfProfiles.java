@@ -38,6 +38,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesApBandSettingsBandsArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFiveGhzSettingsArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFlexRadiosArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFlexRadiosByModelArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus0Args;
  * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus0BandsArgs;

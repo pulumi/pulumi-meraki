@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.InventoryClaim;
  * import com.pulumi.meraki.organizations.InventoryClaimArgs;
  * import com.pulumi.meraki.organizations.inputs.InventoryClaimParametersArgs;
+ * import com.pulumi.meraki.organizations.inputs.InventoryClaimParametersLicenseArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

@@ -31,6 +31,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.FirmwareUpgradesRollbacks;
  * import com.pulumi.meraki.networks.FirmwareUpgradesRollbacksArgs;
  * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesRollbacksParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesRollbacksParametersReasonArgs;
  * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesRollbacksParametersToVersionArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;

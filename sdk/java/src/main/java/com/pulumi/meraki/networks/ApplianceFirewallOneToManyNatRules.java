@@ -28,6 +28,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceFirewallOneToManyNatRules;
  * import com.pulumi.meraki.networks.ApplianceFirewallOneToManyNatRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallOneToManyNatRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallOneToManyNatRulesRulePortRuleArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

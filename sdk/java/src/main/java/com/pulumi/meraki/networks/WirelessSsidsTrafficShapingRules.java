@@ -29,6 +29,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRules;
  * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRulesArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRuleDefinitionArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs;
  * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs;
  * import java.util.ArrayList;
