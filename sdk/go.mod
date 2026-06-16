@@ -2,7 +2,7 @@ module github.com/pulumi/pulumi-meraki/sdk
 
 go 1.25.8
 
-require github.com/pulumi/pulumi/sdk/v3 v3.245.0
+require github.com/pulumi/pulumi/sdk/v3 v3.246.0
 
 require (
 	github.com/BurntSushi/toml v1.6.0 // indirect
