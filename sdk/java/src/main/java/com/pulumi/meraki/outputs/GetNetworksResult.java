@@ -27,11 +27,6 @@ public final class GetNetworksResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return isBoundToConfigTemplate query parameter. An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
      * 
      */
@@ -87,13 +82,6 @@ public final class GetNetworksResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return isBoundToConfigTemplate query parameter. An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
@@ -166,7 +154,6 @@ public final class GetNetworksResult {
     public static final class Builder {
         private @Nullable String configTemplateId;
         private @Nullable String endingBefore;
-        private String id;
         private @Nullable Boolean isBoundToConfigTemplate;
         private GetNetworksItem item;
         private List<GetNetworksItem> items;
@@ -181,7 +168,6 @@ public final class GetNetworksResult {
     	      Objects.requireNonNull(defaults);
     	      this.configTemplateId = defaults.configTemplateId;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.isBoundToConfigTemplate = defaults.isBoundToConfigTemplate;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
@@ -203,14 +189,6 @@ public final class GetNetworksResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetNetworksResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -281,7 +259,6 @@ public final class GetNetworksResult {
             final var _resultValue = new GetNetworksResult();
             _resultValue.configTemplateId = configTemplateId;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.isBoundToConfigTemplate = isBoundToConfigTemplate;
             _resultValue.item = item;
             _resultValue.items = items;

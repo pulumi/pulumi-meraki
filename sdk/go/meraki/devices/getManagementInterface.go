@@ -55,8 +55,6 @@ type LookupManagementInterfaceArgs struct {
 
 // A collection of values returned by getManagementInterface.
 type LookupManagementInterfaceResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetManagementInterfaceItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupManagementInterfaceResultOutput) ToLookupManagementInterfaceResult
 
 func (o LookupManagementInterfaceResultOutput) ToLookupManagementInterfaceResultOutputWithContext(ctx context.Context) LookupManagementInterfaceResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupManagementInterfaceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupManagementInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupManagementInterfaceResultOutput) Item() GetManagementInterfaceItemOutput {

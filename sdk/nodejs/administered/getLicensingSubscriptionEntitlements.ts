@@ -41,10 +41,6 @@ export interface GetLicensingSubscriptionEntitlementsArgs {
  * A collection of values returned by getLicensingSubscriptionEntitlements.
  */
 export interface GetLicensingSubscriptionEntitlementsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.administered.GetLicensingSubscriptionEntitlementsItem;
     /**
      * skus query parameter. Filter to entitlements with the specified SKUs

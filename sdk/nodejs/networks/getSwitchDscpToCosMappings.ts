@@ -40,10 +40,6 @@ export interface GetSwitchDscpToCosMappingsArgs {
  * A collection of values returned by getSwitchDscpToCosMappings.
  */
 export interface GetSwitchDscpToCosMappingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchDscpToCosMappingsItem;
     /**
      * networkId path parameter. Network ID

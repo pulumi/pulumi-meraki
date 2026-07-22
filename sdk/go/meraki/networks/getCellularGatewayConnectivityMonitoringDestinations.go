@@ -55,8 +55,6 @@ type LookupCellularGatewayConnectivityMonitoringDestinationsArgs struct {
 
 // A collection of values returned by getCellularGatewayConnectivityMonitoringDestinations.
 type LookupCellularGatewayConnectivityMonitoringDestinationsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                                   `pulumi:"id"`
 	Item GetCellularGatewayConnectivityMonitoringDestinationsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput) ToL
 
 func (o LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput) ToLookupCellularGatewayConnectivityMonitoringDestinationsResultOutputWithContext(ctx context.Context) LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewayConnectivityMonitoringDestinationsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput) Item() GetCellularGatewayConnectivityMonitoringDestinationsItemOutput {

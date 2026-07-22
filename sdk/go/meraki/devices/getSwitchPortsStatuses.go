@@ -61,8 +61,6 @@ type GetSwitchPortsStatusesArgs struct {
 
 // A collection of values returned by getSwitchPortsStatuses.
 type GetSwitchPortsStatusesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSwitchGetDeviceSwitchPortsStatuses
 	Items []GetSwitchPortsStatusesItem `pulumi:"items"`
 	// serial path parameter.
@@ -109,11 +107,6 @@ func (o GetSwitchPortsStatusesResultOutput) ToGetSwitchPortsStatusesResultOutput
 
 func (o GetSwitchPortsStatusesResultOutput) ToGetSwitchPortsStatusesResultOutputWithContext(ctx context.Context) GetSwitchPortsStatusesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSwitchPortsStatusesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSwitchPortsStatusesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSwitchGetDeviceSwitchPortsStatuses

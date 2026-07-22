@@ -22,11 +22,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
      * 
      */
@@ -84,13 +79,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
@@ -173,7 +161,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private @Nullable Integer interval;
         private List<GetWirelessDevicesChannelUtilizationByNetworkItem> items;
         private @Nullable List<String> networkIds;
@@ -188,7 +175,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
         public Builder(GetWirelessDevicesChannelUtilizationByNetworkResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.interval = defaults.interval;
     	      this.items = defaults.items;
     	      this.networkIds = defaults.networkIds;
@@ -205,14 +191,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessDevicesChannelUtilizationByNetworkResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -291,7 +269,6 @@ public final class GetWirelessDevicesChannelUtilizationByNetworkResult {
         public GetWirelessDevicesChannelUtilizationByNetworkResult build() {
             final var _resultValue = new GetWirelessDevicesChannelUtilizationByNetworkResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.interval = interval;
             _resultValue.items = items;
             _resultValue.networkIds = networkIds;

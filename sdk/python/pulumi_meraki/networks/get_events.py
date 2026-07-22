@@ -27,7 +27,7 @@ class GetEventsResult:
     """
     A collection of values returned by getEvents.
     """
-    def __init__(__self__, client_ip=None, client_mac=None, client_name=None, device_mac=None, device_name=None, device_serial=None, ending_before=None, excluded_event_types=None, id=None, included_event_types=None, item=None, network_id=None, per_page=None, product_type=None, sm_device_mac=None, sm_device_name=None, starting_after=None):
+    def __init__(__self__, client_ip=None, client_mac=None, client_name=None, device_mac=None, device_name=None, device_serial=None, ending_before=None, excluded_event_types=None, included_event_types=None, item=None, network_id=None, per_page=None, product_type=None, sm_device_mac=None, sm_device_name=None, starting_after=None):
         if client_ip and not isinstance(client_ip, str):
             raise TypeError("Expected argument 'client_ip' to be a str")
         pulumi.set(__self__, "client_ip", client_ip)
@@ -52,9 +52,6 @@ class GetEventsResult:
         if excluded_event_types and not isinstance(excluded_event_types, list):
             raise TypeError("Expected argument 'excluded_event_types' to be a list")
         pulumi.set(__self__, "excluded_event_types", excluded_event_types)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if included_event_types and not isinstance(included_event_types, list):
             raise TypeError("Expected argument 'included_event_types' to be a list")
         pulumi.set(__self__, "included_event_types", included_event_types)
@@ -145,14 +142,6 @@ class GetEventsResult:
         return pulumi.get(self, "excluded_event_types")
 
     @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
     @pulumi.getter(name="includedEventTypes")
     def included_event_types(self) -> Optional[Sequence[_builtins.str]]:
         """
@@ -228,7 +217,6 @@ class AwaitableGetEventsResult(GetEventsResult):
             device_serial=self.device_serial,
             ending_before=self.ending_before,
             excluded_event_types=self.excluded_event_types,
-            id=self.id,
             included_event_types=self.included_event_types,
             item=self.item,
             network_id=self.network_id,
@@ -325,7 +313,6 @@ def get_events(client_ip: Optional[_builtins.str] = None,
         device_serial=pulumi.get(__ret__, 'device_serial'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
         excluded_event_types=pulumi.get(__ret__, 'excluded_event_types'),
-        id=pulumi.get(__ret__, 'id'),
         included_event_types=pulumi.get(__ret__, 'included_event_types'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -419,7 +406,6 @@ def get_events_output(client_ip: pulumi.Input[Optional[Optional[_builtins.str]]]
         device_serial=pulumi.get(__response__, 'device_serial'),
         ending_before=pulumi.get(__response__, 'ending_before'),
         excluded_event_types=pulumi.get(__response__, 'excluded_event_types'),
-        id=pulumi.get(__response__, 'id'),
         included_event_types=pulumi.get(__response__, 'included_event_types'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),

@@ -79,10 +79,6 @@ export interface GetInventoryOnboardingCloudMonitoringNetworksResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationInventoryOnboardingCloudMonitoringNetworks
      */
     readonly items: outputs.organizations.GetInventoryOnboardingCloudMonitoringNetworksItem[];

@@ -27,13 +27,10 @@ class GetBrandingPoliciesResult:
     """
     A collection of values returned by getBrandingPolicies.
     """
-    def __init__(__self__, branding_policy_id=None, id=None, item=None, items=None, organization_id=None):
+    def __init__(__self__, branding_policy_id=None, item=None, items=None, organization_id=None):
         if branding_policy_id and not isinstance(branding_policy_id, str):
             raise TypeError("Expected argument 'branding_policy_id' to be a str")
         pulumi.set(__self__, "branding_policy_id", branding_policy_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetBrandingPoliciesResult:
         brandingPolicyId path parameter. Branding policy ID
         """
         return pulumi.get(self, "branding_policy_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetBrandingPoliciesResult(GetBrandingPoliciesResult):
             yield self
         return GetBrandingPoliciesResult(
             branding_policy_id=self.branding_policy_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id)
@@ -113,7 +101,6 @@ def get_branding_policies(branding_policy_id: Optional[_builtins.str] = None,
 
     return AwaitableGetBrandingPoliciesResult(
         branding_policy_id=pulumi.get(__ret__, 'branding_policy_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -134,7 +121,6 @@ def get_branding_policies_output(branding_policy_id: pulumi.Input[Optional[Optio
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getBrandingPolicies:getBrandingPolicies', __args__, opts=opts, typ=GetBrandingPoliciesResult)
     return __ret__.apply(lambda __response__: GetBrandingPoliciesResult(
         branding_policy_id=pulumi.get(__response__, 'branding_policy_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

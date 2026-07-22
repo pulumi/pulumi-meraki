@@ -12,11 +12,6 @@ import java.util.Objects;
 @CustomType
 public final class GetSwitchStacksRoutingInterfacesDhcpResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interfaceId path parameter. Interface ID
      * 
      */
@@ -34,13 +29,6 @@ public final class GetSwitchStacksRoutingInterfacesDhcpResult {
     private String switchStackId;
 
     private GetSwitchStacksRoutingInterfacesDhcpResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return interfaceId path parameter. Interface ID
      * 
@@ -75,7 +63,6 @@ public final class GetSwitchStacksRoutingInterfacesDhcpResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private String interfaceId;
         private GetSwitchStacksRoutingInterfacesDhcpItem item;
         private String networkId;
@@ -83,21 +70,12 @@ public final class GetSwitchStacksRoutingInterfacesDhcpResult {
         public Builder() {}
         public Builder(GetSwitchStacksRoutingInterfacesDhcpResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.interfaceId = defaults.interfaceId;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.switchStackId = defaults.switchStackId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchStacksRoutingInterfacesDhcpResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaceId(String interfaceId) {
             if (interfaceId == null) {
@@ -132,7 +110,6 @@ public final class GetSwitchStacksRoutingInterfacesDhcpResult {
         }
         public GetSwitchStacksRoutingInterfacesDhcpResult build() {
             final var _resultValue = new GetSwitchStacksRoutingInterfacesDhcpResult();
-            _resultValue.id = id;
             _resultValue.interfaceId = interfaceId;
             _resultValue.item = item;
             _resultValue.networkId = networkId;

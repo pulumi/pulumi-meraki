@@ -34,8 +34,6 @@ type LookupSwitchStacksRoutingStaticRoutesArgs struct {
 
 // A collection of values returned by getSwitchStacksRoutingStaticRoutes.
 type LookupSwitchStacksRoutingStaticRoutesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                 `pulumi:"id"`
 	Item GetSwitchStacksRoutingStaticRoutesItem `pulumi:"item"`
 	// Array of ResponseSwitchGetNetworkSwitchStackRoutingStaticRoutes
 	Items []GetSwitchStacksRoutingStaticRoutesItem `pulumi:"items"`
@@ -83,11 +81,6 @@ func (o LookupSwitchStacksRoutingStaticRoutesResultOutput) ToLookupSwitchStacksR
 
 func (o LookupSwitchStacksRoutingStaticRoutesResultOutput) ToLookupSwitchStacksRoutingStaticRoutesResultOutputWithContext(ctx context.Context) LookupSwitchStacksRoutingStaticRoutesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchStacksRoutingStaticRoutesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchStacksRoutingStaticRoutesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchStacksRoutingStaticRoutesResultOutput) Item() GetSwitchStacksRoutingStaticRoutesItemOutput {

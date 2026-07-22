@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Organizations
         /// artifactId path parameter. Artifact ID
         /// </summary>
         public readonly string? ArtifactId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraCustomAnalyticsArtifactsItemResult Item;
         /// <summary>
         /// Array of ResponseCameraGetOrganizationCameraCustomAnalyticsArtifacts
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Organizations
         private GetCameraCustomAnalyticsArtifactsResult(
             string? artifactId,
 
-            string id,
-
             Outputs.GetCameraCustomAnalyticsArtifactsItemResult item,
 
             ImmutableArray<Outputs.GetCameraCustomAnalyticsArtifactsItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Organizations
             string? organizationId)
         {
             ArtifactId = artifactId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

@@ -26,11 +26,6 @@ public final class GetDevicesResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationDevices
      * 
      */
@@ -130,13 +125,6 @@ public final class GetDevicesResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationDevices
@@ -269,7 +257,6 @@ public final class GetDevicesResult {
     public static final class Builder {
         private @Nullable String configurationUpdatedAfter;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetDevicesItem> items;
         private @Nullable String mac;
         private @Nullable List<String> macs;
@@ -292,7 +279,6 @@ public final class GetDevicesResult {
     	      Objects.requireNonNull(defaults);
     	      this.configurationUpdatedAfter = defaults.configurationUpdatedAfter;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.mac = defaults.mac;
     	      this.macs = defaults.macs;
@@ -322,14 +308,6 @@ public final class GetDevicesResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -469,7 +447,6 @@ public final class GetDevicesResult {
             final var _resultValue = new GetDevicesResult();
             _resultValue.configurationUpdatedAfter = configurationUpdatedAfter;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.mac = mac;
             _resultValue.macs = macs;

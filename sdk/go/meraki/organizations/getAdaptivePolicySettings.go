@@ -55,8 +55,6 @@ type LookupAdaptivePolicySettingsArgs struct {
 
 // A collection of values returned by getAdaptivePolicySettings.
 type LookupAdaptivePolicySettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetAdaptivePolicySettingsItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupAdaptivePolicySettingsResultOutput) ToLookupAdaptivePolicySettings
 
 func (o LookupAdaptivePolicySettingsResultOutput) ToLookupAdaptivePolicySettingsResultOutputWithContext(ctx context.Context) LookupAdaptivePolicySettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAdaptivePolicySettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAdaptivePolicySettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupAdaptivePolicySettingsResultOutput) Item() GetAdaptivePolicySettingsItemOutput {

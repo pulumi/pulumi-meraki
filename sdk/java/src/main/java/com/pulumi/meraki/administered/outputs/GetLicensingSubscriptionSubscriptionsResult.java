@@ -27,11 +27,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptions
      * 
      */
@@ -88,13 +83,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptions
@@ -165,7 +153,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
     public static final class Builder {
         private @Nullable String endDate;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetLicensingSubscriptionSubscriptionsItem> items;
         private @Nullable List<String> organizationIds;
         private @Nullable Integer perPage;
@@ -179,7 +166,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
     	      Objects.requireNonNull(defaults);
     	      this.endDate = defaults.endDate;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationIds = defaults.organizationIds;
     	      this.perPage = defaults.perPage;
@@ -200,14 +186,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLicensingSubscriptionSubscriptionsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -279,7 +257,6 @@ public final class GetLicensingSubscriptionSubscriptionsResult {
             final var _resultValue = new GetLicensingSubscriptionSubscriptionsResult();
             _resultValue.endDate = endDate;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationIds = organizationIds;
             _resultValue.perPage = perPage;

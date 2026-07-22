@@ -184,10 +184,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSensorAlertsOverviewByMetricResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.
         /// </summary>
         public readonly int? Interval;
@@ -214,8 +210,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSensorAlertsOverviewByMetricResult(
-            string id,
-
             int? interval,
 
             ImmutableArray<Outputs.GetSensorAlertsOverviewByMetricItemResult> items,
@@ -228,7 +222,6 @@ namespace Pulumi.Meraki.Networks
 
             double? timespan)
         {
-            Id = id;
             Interval = interval;
             Items = items;
             NetworkId = networkId;

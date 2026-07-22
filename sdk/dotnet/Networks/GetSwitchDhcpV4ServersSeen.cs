@@ -203,10 +203,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchDhcpV4ServersSeen
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchDhcpV4ServersSeenItemResult> Items;
@@ -235,8 +231,6 @@ namespace Pulumi.Meraki.Networks
         private GetSwitchDhcpV4ServersSeenResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetSwitchDhcpV4ServersSeenItemResult> items,
 
             string networkId,
@@ -250,7 +244,6 @@ namespace Pulumi.Meraki.Networks
             double? timespan)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             PerPage = perPage;

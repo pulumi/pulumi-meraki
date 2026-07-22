@@ -51,10 +51,6 @@ export interface GetSmDevicesWlanListsResult {
      */
     readonly deviceId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceWlanLists
      */
     readonly items: outputs.networks.GetSmDevicesWlanListsItem[];

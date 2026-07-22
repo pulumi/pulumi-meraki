@@ -16,11 +16,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSummaryTopSsidsByUsageResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage
      * 
      */
@@ -47,13 +42,6 @@ public final class GetSummaryTopSsidsByUsageResult {
     private @Nullable Double timespan;
 
     private GetSummaryTopSsidsByUsageResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage
      * 
@@ -99,7 +87,6 @@ public final class GetSummaryTopSsidsByUsageResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSummaryTopSsidsByUsageItem> items;
         private String organizationId;
         private @Nullable String t0;
@@ -108,7 +95,6 @@ public final class GetSummaryTopSsidsByUsageResult {
         public Builder() {}
         public Builder(GetSummaryTopSsidsByUsageResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.t0 = defaults.t0;
@@ -116,14 +102,6 @@ public final class GetSummaryTopSsidsByUsageResult {
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSummaryTopSsidsByUsageResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSummaryTopSsidsByUsageItem> items) {
             if (items == null) {
@@ -163,7 +141,6 @@ public final class GetSummaryTopSsidsByUsageResult {
         }
         public GetSummaryTopSsidsByUsageResult build() {
             final var _resultValue = new GetSummaryTopSsidsByUsageResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.t0 = t0;

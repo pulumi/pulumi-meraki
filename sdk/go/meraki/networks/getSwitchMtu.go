@@ -55,8 +55,6 @@ type LookupSwitchMtuArgs struct {
 
 // A collection of values returned by getSwitchMtu.
 type LookupSwitchMtuResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string           `pulumi:"id"`
 	Item GetSwitchMtuItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchMtuResultOutput) ToLookupSwitchMtuResultOutput() LookupSwitc
 
 func (o LookupSwitchMtuResultOutput) ToLookupSwitchMtuResultOutputWithContext(ctx context.Context) LookupSwitchMtuResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchMtuResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchMtuResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchMtuResultOutput) Item() GetSwitchMtuItemOutput {

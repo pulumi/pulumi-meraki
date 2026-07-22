@@ -27,7 +27,7 @@ class GetCameraDetectionsHistoryByBoundaryByIntervalResult:
     """
     A collection of values returned by getCameraDetectionsHistoryByBoundaryByInterval.
     """
-    def __init__(__self__, boundary_ids=None, boundary_types=None, duration=None, id=None, items=None, organization_id=None, per_page=None, ranges=None):
+    def __init__(__self__, boundary_ids=None, boundary_types=None, duration=None, items=None, organization_id=None, per_page=None, ranges=None):
         if boundary_ids and not isinstance(boundary_ids, list):
             raise TypeError("Expected argument 'boundary_ids' to be a list")
         pulumi.set(__self__, "boundary_ids", boundary_ids)
@@ -37,9 +37,6 @@ class GetCameraDetectionsHistoryByBoundaryByIntervalResult:
         if duration and not isinstance(duration, int):
             raise TypeError("Expected argument 'duration' to be a int")
         pulumi.set(__self__, "duration", duration)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -76,14 +73,6 @@ class GetCameraDetectionsHistoryByBoundaryByIntervalResult:
         duration query parameter. The minimum time, in seconds, that the person or car remains in the area to be counted. Defaults to boundary configuration or 60.
         """
         return pulumi.get(self, "duration")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -127,7 +116,6 @@ class AwaitableGetCameraDetectionsHistoryByBoundaryByIntervalResult(GetCameraDet
             boundary_ids=self.boundary_ids,
             boundary_types=self.boundary_types,
             duration=self.duration,
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id,
             per_page=self.per_page,
@@ -179,7 +167,6 @@ def get_camera_detections_history_by_boundary_by_interval(boundary_ids: Optional
         boundary_ids=pulumi.get(__ret__, 'boundary_ids'),
         boundary_types=pulumi.get(__ret__, 'boundary_types'),
         duration=pulumi.get(__ret__, 'duration'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -228,7 +215,6 @@ def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: p
         boundary_ids=pulumi.get(__response__, 'boundary_ids'),
         boundary_types=pulumi.get(__response__, 'boundary_types'),
         duration=pulumi.get(__response__, 'duration'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         per_page=pulumi.get(__response__, 'per_page'),

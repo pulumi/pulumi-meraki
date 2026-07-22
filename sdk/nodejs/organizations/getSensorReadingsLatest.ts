@@ -81,10 +81,6 @@ export interface GetSensorReadingsLatestResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSensorGetOrganizationSensorReadingsLatest
      */
     readonly items: outputs.organizations.GetSensorReadingsLatestItem[];

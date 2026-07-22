@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetApplianceVlansResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceVlansItemResult Item;
         /// <summary>
         /// Array of ResponseApplianceGetNetworkApplianceVlans
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetApplianceVlansResult(
-            string id,
-
             Outputs.GetApplianceVlansItemResult item,
 
             ImmutableArray<Outputs.GetApplianceVlansItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? vlanId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

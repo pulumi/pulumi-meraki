@@ -27,24 +27,13 @@ class GetAdaptivePolicySettingsResult:
     """
     A collection of values returned by getAdaptivePolicySettings.
     """
-    def __init__(__self__, id=None, item=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, organization_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -66,7 +55,6 @@ class AwaitableGetAdaptivePolicySettingsResult(GetAdaptivePolicySettingsResult):
         if False:
             yield self
         return GetAdaptivePolicySettingsResult(
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id)
 
@@ -93,7 +81,6 @@ def get_adaptive_policy_settings(organization_id: Optional[_builtins.str] = None
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings', __args__, opts=opts, typ=GetAdaptivePolicySettingsResult).value
 
     return AwaitableGetAdaptivePolicySettingsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_adaptive_policy_settings_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -117,6 +104,5 @@ def get_adaptive_policy_settings_output(organization_id: pulumi.Input[Optional[_
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings', __args__, opts=opts, typ=GetAdaptivePolicySettingsResult)
     return __ret__.apply(lambda __response__: GetAdaptivePolicySettingsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id')))

@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetAdminsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationAdmins
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAdminsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetAdminsResult(
-            string id,
-
             ImmutableArray<Outputs.GetAdminsItemResult> items,
 
             string organizationId)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
         }

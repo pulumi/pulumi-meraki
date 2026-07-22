@@ -135,10 +135,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetApplianceRfProfilesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceRfProfilesItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -151,15 +147,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetApplianceRfProfilesResult(
-            string id,
-
             Outputs.GetApplianceRfProfilesItemResult item,
 
             string? networkId,
 
             string? rfProfileId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             RfProfileId = rfProfileId;

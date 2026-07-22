@@ -36,10 +36,6 @@ export interface GetSamlRolesArgs {
  * A collection of values returned by getSamlRoles.
  */
 export interface GetSamlRolesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetSamlRolesItem;
     /**
      * Array of ResponseOrganizationsGetOrganizationSamlRoles

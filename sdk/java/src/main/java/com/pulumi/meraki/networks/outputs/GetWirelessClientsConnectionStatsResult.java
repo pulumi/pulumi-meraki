@@ -30,11 +30,6 @@ public final class GetWirelessClientsConnectionStatsResult {
      * 
      */
     private String clientId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessClientsConnectionStatsItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -88,13 +83,6 @@ public final class GetWirelessClientsConnectionStatsResult {
      */
     public String clientId() {
         return this.clientId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetWirelessClientsConnectionStatsItem item() {
         return this.item;
@@ -154,7 +142,6 @@ public final class GetWirelessClientsConnectionStatsResult {
         private @Nullable String apTag;
         private @Nullable String band;
         private String clientId;
-        private String id;
         private GetWirelessClientsConnectionStatsItem item;
         private String networkId;
         private @Nullable Integer ssid;
@@ -168,7 +155,6 @@ public final class GetWirelessClientsConnectionStatsResult {
     	      this.apTag = defaults.apTag;
     	      this.band = defaults.band;
     	      this.clientId = defaults.clientId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.ssid = defaults.ssid;
@@ -196,14 +182,6 @@ public final class GetWirelessClientsConnectionStatsResult {
               throw new MissingRequiredPropertyException("GetWirelessClientsConnectionStatsResult", "clientId");
             }
             this.clientId = clientId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessClientsConnectionStatsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -257,7 +235,6 @@ public final class GetWirelessClientsConnectionStatsResult {
             _resultValue.apTag = apTag;
             _resultValue.band = band;
             _resultValue.clientId = clientId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.ssid = ssid;

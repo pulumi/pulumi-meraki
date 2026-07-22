@@ -19,11 +19,6 @@ public final class GetClientsSearchResult {
      * 
      */
     private @Nullable String endingBefore;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetClientsSearchItem item;
     /**
      * @return mac query parameter. The MAC address of the client. Required.
@@ -53,13 +48,6 @@ public final class GetClientsSearchResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetClientsSearchItem item() {
         return this.item;
@@ -103,7 +91,6 @@ public final class GetClientsSearchResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private GetClientsSearchItem item;
         private String mac;
         private String organizationId;
@@ -113,7 +100,6 @@ public final class GetClientsSearchResult {
         public Builder(GetClientsSearchResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.mac = defaults.mac;
     	      this.organizationId = defaults.organizationId;
@@ -125,14 +111,6 @@ public final class GetClientsSearchResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetClientsSearchResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -174,7 +152,6 @@ public final class GetClientsSearchResult {
         public GetClientsSearchResult build() {
             final var _resultValue = new GetClientsSearchResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.mac = mac;
             _resultValue.organizationId = organizationId;

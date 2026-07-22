@@ -58,8 +58,6 @@ type GetWebhooksWebhookTestsArgs struct {
 
 // A collection of values returned by getWebhooksWebhookTests.
 type GetWebhooksWebhookTestsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                      `pulumi:"id"`
 	Item GetWebhooksWebhookTestsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o GetWebhooksWebhookTestsResultOutput) ToGetWebhooksWebhookTestsResultOutp
 
 func (o GetWebhooksWebhookTestsResultOutput) ToGetWebhooksWebhookTestsResultOutputWithContext(ctx context.Context) GetWebhooksWebhookTestsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWebhooksWebhookTestsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWebhooksWebhookTestsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWebhooksWebhookTestsResultOutput) Item() GetWebhooksWebhookTestsItemOutput {

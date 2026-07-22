@@ -332,10 +332,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationDevicesPowerModulesStatusesByDevice
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDevicesPowerModulesStatusesByDeviceItemResult> Items;
@@ -376,8 +372,6 @@ namespace Pulumi.Meraki.Organizations
         private GetDevicesPowerModulesStatusesByDeviceResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetDevicesPowerModulesStatusesByDeviceItemResult> items,
 
             ImmutableArray<string> networkIds,
@@ -397,7 +391,6 @@ namespace Pulumi.Meraki.Organizations
             string? tagsFilterType)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

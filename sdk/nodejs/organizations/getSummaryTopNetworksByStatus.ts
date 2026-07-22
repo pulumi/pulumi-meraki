@@ -63,10 +63,6 @@ export interface GetSummaryTopNetworksByStatusResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopNetworksByStatus
      */
     readonly items: outputs.organizations.GetSummaryTopNetworksByStatusItem[];

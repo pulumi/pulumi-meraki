@@ -64,8 +64,6 @@ type GetClientsOverviewArgs struct {
 
 // A collection of values returned by getClientsOverview.
 type GetClientsOverviewResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetClientsOverviewItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -115,11 +113,6 @@ func (o GetClientsOverviewResultOutput) ToGetClientsOverviewResultOutput() GetCl
 
 func (o GetClientsOverviewResultOutput) ToGetClientsOverviewResultOutputWithContext(ctx context.Context) GetClientsOverviewResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetClientsOverviewResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetClientsOverviewResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetClientsOverviewResultOutput) Item() GetClientsOverviewItemOutput {

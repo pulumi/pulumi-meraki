@@ -181,10 +181,6 @@ namespace Pulumi.Meraki.Administered
     public sealed class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesItemResult> Items;
@@ -199,15 +195,12 @@ namespace Pulumi.Meraki.Administered
 
         [OutputConstructor]
         private GetLicensingSubscriptionSubscriptionsComplianceStatusesResult(
-            string id,
-
             ImmutableArray<Outputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesItemResult> items,
 
             ImmutableArray<string> organizationIds,
 
             ImmutableArray<string> subscriptionIds)
         {
-            Id = id;
             Items = items;
             OrganizationIds = organizationIds;
             SubscriptionIds = subscriptionIds;

@@ -59,10 +59,6 @@ export interface GetSummaryTopAppliancesByUtilizationArgs {
  */
 export interface GetSummaryTopAppliancesByUtilizationResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopAppliancesByUtilization
      */
     readonly items: outputs.organizations.GetSummaryTopAppliancesByUtilizationItem[];

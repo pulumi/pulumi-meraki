@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
      * 
      */
@@ -35,13 +30,6 @@ public final class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult
     private @Nullable List<String> subscriptionIds;
 
     private GetLicensingSubscriptionSubscriptionsComplianceStatusesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
      * 
@@ -73,27 +61,17 @@ public final class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetLicensingSubscriptionSubscriptionsComplianceStatusesItem> items;
         private @Nullable List<String> organizationIds;
         private @Nullable List<String> subscriptionIds;
         public Builder() {}
         public Builder(GetLicensingSubscriptionSubscriptionsComplianceStatusesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationIds = defaults.organizationIds;
     	      this.subscriptionIds = defaults.subscriptionIds;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLicensingSubscriptionSubscriptionsComplianceStatusesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetLicensingSubscriptionSubscriptionsComplianceStatusesItem> items) {
             if (items == null) {
@@ -125,7 +103,6 @@ public final class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult
         }
         public GetLicensingSubscriptionSubscriptionsComplianceStatusesResult build() {
             final var _resultValue = new GetLicensingSubscriptionSubscriptionsComplianceStatusesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationIds = organizationIds;
             _resultValue.subscriptionIds = subscriptionIds;

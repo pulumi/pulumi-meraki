@@ -27,10 +27,7 @@ class GetWirelessEthernetPortsProfilesResult:
     """
     A collection of values returned by getWirelessEthernetPortsProfiles.
     """
-    def __init__(__self__, id=None, item=None, network_id=None, profile_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_id=None, profile_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetWirelessEthernetPortsProfilesResult:
         if profile_id and not isinstance(profile_id, str):
             raise TypeError("Expected argument 'profile_id' to be a str")
         pulumi.set(__self__, "profile_id", profile_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetWirelessEthernetPortsProfilesResult(GetWirelessEthernetPortsPr
         if False:
             yield self
         return GetWirelessEthernetPortsProfilesResult(
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             profile_id=self.profile_id)
@@ -109,7 +97,6 @@ def get_wireless_ethernet_ports_profiles(network_id: Optional[_builtins.str] = N
     __ret__ = pulumi.runtime.invoke('meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles', __args__, opts=opts, typ=GetWirelessEthernetPortsProfilesResult).value
 
     return AwaitableGetWirelessEthernetPortsProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         profile_id=pulumi.get(__ret__, 'profile_id'))
@@ -138,7 +125,6 @@ def get_wireless_ethernet_ports_profiles_output(network_id: pulumi.Input[Optiona
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles', __args__, opts=opts, typ=GetWirelessEthernetPortsProfilesResult)
     return __ret__.apply(lambda __response__: GetWirelessEthernetPortsProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         profile_id=pulumi.get(__response__, 'profile_id')))

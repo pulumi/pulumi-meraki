@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetCellularGatewayPortForwardingRulesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCellularGatewayPortForwardingRulesItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetCellularGatewayPortForwardingRulesResult(
-            string id,
-
             Outputs.GetCellularGatewayPortForwardingRulesItemResult item,
 
             string serial)
         {
-            Id = id;
             Item = item;
             Serial = serial;
         }

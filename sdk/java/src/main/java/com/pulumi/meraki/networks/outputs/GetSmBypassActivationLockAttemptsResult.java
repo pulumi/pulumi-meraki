@@ -16,11 +16,6 @@ public final class GetSmBypassActivationLockAttemptsResult {
      * 
      */
     private String attemptId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSmBypassActivationLockAttemptsItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -35,13 +30,6 @@ public final class GetSmBypassActivationLockAttemptsResult {
      */
     public String attemptId() {
         return this.attemptId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetSmBypassActivationLockAttemptsItem item() {
         return this.item;
@@ -64,14 +52,12 @@ public final class GetSmBypassActivationLockAttemptsResult {
     @CustomType.Builder
     public static final class Builder {
         private String attemptId;
-        private String id;
         private GetSmBypassActivationLockAttemptsItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetSmBypassActivationLockAttemptsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.attemptId = defaults.attemptId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
@@ -82,14 +68,6 @@ public final class GetSmBypassActivationLockAttemptsResult {
               throw new MissingRequiredPropertyException("GetSmBypassActivationLockAttemptsResult", "attemptId");
             }
             this.attemptId = attemptId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmBypassActivationLockAttemptsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -111,7 +89,6 @@ public final class GetSmBypassActivationLockAttemptsResult {
         public GetSmBypassActivationLockAttemptsResult build() {
             final var _resultValue = new GetSmBypassActivationLockAttemptsResult();
             _resultValue.attemptId = attemptId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

@@ -63,10 +63,6 @@ export interface GetSmUserAccessDevicesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmUserAccessDevices
      */
     readonly items: outputs.networks.GetSmUserAccessDevicesItem[];

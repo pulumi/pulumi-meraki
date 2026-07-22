@@ -27,13 +27,10 @@ class GetWebhooksHttpServersResult:
     """
     A collection of values returned by getWebhooksHttpServers.
     """
-    def __init__(__self__, http_server_id=None, id=None, item=None, items=None, network_id=None):
+    def __init__(__self__, http_server_id=None, item=None, items=None, network_id=None):
         if http_server_id and not isinstance(http_server_id, str):
             raise TypeError("Expected argument 'http_server_id' to be a str")
         pulumi.set(__self__, "http_server_id", http_server_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetWebhooksHttpServersResult:
         httpServerId path parameter. Http server ID
         """
         return pulumi.get(self, "http_server_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetWebhooksHttpServersResult(GetWebhooksHttpServersResult):
             yield self
         return GetWebhooksHttpServersResult(
             http_server_id=self.http_server_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id)
@@ -113,7 +101,6 @@ def get_webhooks_http_servers(http_server_id: Optional[_builtins.str] = None,
 
     return AwaitableGetWebhooksHttpServersResult(
         http_server_id=pulumi.get(__ret__, 'http_server_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -134,7 +121,6 @@ def get_webhooks_http_servers_output(http_server_id: pulumi.Input[Optional[Optio
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers', __args__, opts=opts, typ=GetWebhooksHttpServersResult)
     return __ret__.apply(lambda __response__: GetWebhooksHttpServersResult(
         http_server_id=pulumi.get(__response__, 'http_server_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

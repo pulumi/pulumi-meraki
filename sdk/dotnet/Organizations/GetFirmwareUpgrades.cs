@@ -245,10 +245,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationFirmwareUpgrades
         /// </summary>
         public readonly ImmutableArray<Outputs.GetFirmwareUpgradesItemResult> Items;
@@ -277,8 +273,6 @@ namespace Pulumi.Meraki.Organizations
         private GetFirmwareUpgradesResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetFirmwareUpgradesItemResult> items,
 
             string organizationId,
@@ -292,7 +286,6 @@ namespace Pulumi.Meraki.Organizations
             ImmutableArray<string> statuses)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             PerPage = perPage;

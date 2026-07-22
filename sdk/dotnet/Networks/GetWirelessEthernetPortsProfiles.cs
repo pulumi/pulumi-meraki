@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWirelessEthernetPortsProfilesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessEthernetPortsProfilesItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessEthernetPortsProfilesResult(
-            string id,
-
             Outputs.GetWirelessEthernetPortsProfilesItemResult item,
 
             string networkId,
 
             string profileId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             ProfileId = profileId;

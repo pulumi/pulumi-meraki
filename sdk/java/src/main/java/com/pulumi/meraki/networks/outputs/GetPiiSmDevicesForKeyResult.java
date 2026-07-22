@@ -24,11 +24,6 @@ public final class GetPiiSmDevicesForKeyResult {
      */
     private @Nullable String email;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return imei query parameter. The IMEI of a Systems Manager device
      * 
      */
@@ -69,13 +64,6 @@ public final class GetPiiSmDevicesForKeyResult {
      */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return imei query parameter. The IMEI of a Systems Manager device
@@ -127,7 +115,6 @@ public final class GetPiiSmDevicesForKeyResult {
     public static final class Builder {
         private @Nullable String bluetoothMac;
         private @Nullable String email;
-        private String id;
         private @Nullable String imei;
         private GetPiiSmDevicesForKeyItem item;
         private @Nullable String mac;
@@ -139,7 +126,6 @@ public final class GetPiiSmDevicesForKeyResult {
     	      Objects.requireNonNull(defaults);
     	      this.bluetoothMac = defaults.bluetoothMac;
     	      this.email = defaults.email;
-    	      this.id = defaults.id;
     	      this.imei = defaults.imei;
     	      this.item = defaults.item;
     	      this.mac = defaults.mac;
@@ -158,14 +144,6 @@ public final class GetPiiSmDevicesForKeyResult {
         public Builder email(@Nullable String email) {
 
             this.email = email;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetPiiSmDevicesForKeyResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -212,7 +190,6 @@ public final class GetPiiSmDevicesForKeyResult {
             final var _resultValue = new GetPiiSmDevicesForKeyResult();
             _resultValue.bluetoothMac = bluetoothMac;
             _resultValue.email = email;
-            _resultValue.id = id;
             _resultValue.imei = imei;
             _resultValue.item = item;
             _resultValue.mac = mac;

@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetCameraWirelessProfilesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraWirelessProfilesItemResult Item;
         /// <summary>
         /// Array of ResponseCameraGetNetworkCameraWirelessProfiles
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetCameraWirelessProfilesResult(
-            string id,
-
             Outputs.GetCameraWirelessProfilesItemResult item,
 
             ImmutableArray<Outputs.GetCameraWirelessProfilesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? wirelessProfileId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -26,11 +26,6 @@ public final class GetBluetoothClientsResult {
      */
     private @Nullable Integer connectivityHistoryTimespan;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return includeConnectivityHistory query parameter. Include the connectivity history for this client
      * 
      */
@@ -56,13 +51,6 @@ public final class GetBluetoothClientsResult {
      */
     public Optional<Integer> connectivityHistoryTimespan() {
         return Optional.ofNullable(this.connectivityHistoryTimespan);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return includeConnectivityHistory query parameter. Include the connectivity history for this client
@@ -93,7 +81,6 @@ public final class GetBluetoothClientsResult {
     public static final class Builder {
         private String bluetoothClientId;
         private @Nullable Integer connectivityHistoryTimespan;
-        private String id;
         private @Nullable Boolean includeConnectivityHistory;
         private GetBluetoothClientsItem item;
         private String networkId;
@@ -102,7 +89,6 @@ public final class GetBluetoothClientsResult {
     	      Objects.requireNonNull(defaults);
     	      this.bluetoothClientId = defaults.bluetoothClientId;
     	      this.connectivityHistoryTimespan = defaults.connectivityHistoryTimespan;
-    	      this.id = defaults.id;
     	      this.includeConnectivityHistory = defaults.includeConnectivityHistory;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
@@ -120,14 +106,6 @@ public final class GetBluetoothClientsResult {
         public Builder connectivityHistoryTimespan(@Nullable Integer connectivityHistoryTimespan) {
 
             this.connectivityHistoryTimespan = connectivityHistoryTimespan;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetBluetoothClientsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -156,7 +134,6 @@ public final class GetBluetoothClientsResult {
             final var _resultValue = new GetBluetoothClientsResult();
             _resultValue.bluetoothClientId = bluetoothClientId;
             _resultValue.connectivityHistoryTimespan = connectivityHistoryTimespan;
-            _resultValue.id = id;
             _resultValue.includeConnectivityHistory = includeConnectivityHistory;
             _resultValue.item = item;
             _resultValue.networkId = networkId;

@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWebhooksWebhookTestsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWebhooksWebhookTestsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWebhooksWebhookTestsResult(
-            string id,
-
             Outputs.GetWebhooksWebhookTestsItemResult item,
 
             string networkId,
 
             string webhookTestId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             WebhookTestId = webhookTestId;

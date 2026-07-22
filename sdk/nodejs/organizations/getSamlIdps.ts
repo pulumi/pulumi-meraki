@@ -37,10 +37,6 @@ export interface GetSamlIdpsArgs {
  */
 export interface GetSamlIdpsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * idpId path parameter. Idp ID
      */
     readonly idpId?: string;

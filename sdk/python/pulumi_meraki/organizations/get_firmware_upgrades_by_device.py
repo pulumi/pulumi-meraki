@@ -27,16 +27,13 @@ class GetFirmwareUpgradesByDeviceResult:
     """
     A collection of values returned by getFirmwareUpgradesByDevice.
     """
-    def __init__(__self__, ending_before=None, firmware_upgrade_batch_ids=None, id=None, items=None, macs=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None, upgradestatuses=None):
+    def __init__(__self__, ending_before=None, firmware_upgrade_batch_ids=None, items=None, macs=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None, upgradestatuses=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
         if firmware_upgrade_batch_ids and not isinstance(firmware_upgrade_batch_ids, list):
             raise TypeError("Expected argument 'firmware_upgrade_batch_ids' to be a list")
         pulumi.set(__self__, "firmware_upgrade_batch_ids", firmware_upgrade_batch_ids)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -77,14 +74,6 @@ class GetFirmwareUpgradesByDeviceResult:
         firmwareUpgradeBatchIds query parameter. Optional parameter to filter by firmware upgrade batch ids.
         """
         return pulumi.get(self, "firmware_upgrade_batch_ids")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -159,7 +148,6 @@ class AwaitableGetFirmwareUpgradesByDeviceResult(GetFirmwareUpgradesByDeviceResu
         return GetFirmwareUpgradesByDeviceResult(
             ending_before=self.ending_before,
             firmware_upgrade_batch_ids=self.firmware_upgrade_batch_ids,
-            id=self.id,
             items=self.items,
             macs=self.macs,
             network_ids=self.network_ids,
@@ -226,7 +214,6 @@ def get_firmware_upgrades_by_device(ending_before: Optional[_builtins.str] = Non
     return AwaitableGetFirmwareUpgradesByDeviceResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
         firmware_upgrade_batch_ids=pulumi.get(__ret__, 'firmware_upgrade_batch_ids'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         macs=pulumi.get(__ret__, 'macs'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
@@ -290,7 +277,6 @@ def get_firmware_upgrades_by_device_output(ending_before: pulumi.Input[Optional[
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesByDeviceResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
         firmware_upgrade_batch_ids=pulumi.get(__response__, 'firmware_upgrade_batch_ids'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         macs=pulumi.get(__response__, 'macs'),
         network_ids=pulumi.get(__response__, 'network_ids'),

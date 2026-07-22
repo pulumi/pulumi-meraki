@@ -58,8 +58,6 @@ type GetCameraVideoLinkArgs struct {
 
 // A collection of values returned by getCameraVideoLink.
 type GetCameraVideoLinkResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetCameraVideoLinkItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -101,11 +99,6 @@ func (o GetCameraVideoLinkResultOutput) ToGetCameraVideoLinkResultOutput() GetCa
 
 func (o GetCameraVideoLinkResultOutput) ToGetCameraVideoLinkResultOutputWithContext(ctx context.Context) GetCameraVideoLinkResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCameraVideoLinkResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCameraVideoLinkResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetCameraVideoLinkResultOutput) Item() GetCameraVideoLinkItemOutput {

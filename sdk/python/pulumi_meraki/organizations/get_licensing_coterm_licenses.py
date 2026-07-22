@@ -27,16 +27,13 @@ class GetLicensingCotermLicensesResult:
     """
     A collection of values returned by getLicensingCotermLicenses.
     """
-    def __init__(__self__, ending_before=None, expired=None, id=None, invalidated=None, items=None, organization_id=None, per_page=None, starting_after=None):
+    def __init__(__self__, ending_before=None, expired=None, invalidated=None, items=None, organization_id=None, per_page=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
         if expired and not isinstance(expired, bool):
             raise TypeError("Expected argument 'expired' to be a bool")
         pulumi.set(__self__, "expired", expired)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if invalidated and not isinstance(invalidated, bool):
             raise TypeError("Expected argument 'invalidated' to be a bool")
         pulumi.set(__self__, "invalidated", invalidated)
@@ -68,14 +65,6 @@ class GetLicensingCotermLicensesResult:
         expired query parameter. Filter for licenses that are expired
         """
         return pulumi.get(self, "expired")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -126,7 +115,6 @@ class AwaitableGetLicensingCotermLicensesResult(GetLicensingCotermLicensesResult
         return GetLicensingCotermLicensesResult(
             ending_before=self.ending_before,
             expired=self.expired,
-            id=self.id,
             invalidated=self.invalidated,
             items=self.items,
             organization_id=self.organization_id,
@@ -178,7 +166,6 @@ def get_licensing_coterm_licenses(ending_before: Optional[_builtins.str] = None,
     return AwaitableGetLicensingCotermLicensesResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
         expired=pulumi.get(__ret__, 'expired'),
-        id=pulumi.get(__ret__, 'id'),
         invalidated=pulumi.get(__ret__, 'invalidated'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -227,7 +214,6 @@ def get_licensing_coterm_licenses_output(ending_before: pulumi.Input[Optional[Op
     return __ret__.apply(lambda __response__: GetLicensingCotermLicensesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
         expired=pulumi.get(__response__, 'expired'),
-        id=pulumi.get(__response__, 'id'),
         invalidated=pulumi.get(__response__, 'invalidated'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),

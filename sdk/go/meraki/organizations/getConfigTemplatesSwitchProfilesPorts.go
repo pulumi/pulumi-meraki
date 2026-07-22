@@ -37,10 +37,8 @@ type LookupConfigTemplatesSwitchProfilesPortsArgs struct {
 // A collection of values returned by getConfigTemplatesSwitchProfilesPorts.
 type LookupConfigTemplatesSwitchProfilesPortsResult struct {
 	// configTemplateId path parameter. Config template ID
-	ConfigTemplateId *string `pulumi:"configTemplateId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                    `pulumi:"id"`
-	Item GetConfigTemplatesSwitchProfilesPortsItem `pulumi:"item"`
+	ConfigTemplateId *string                                   `pulumi:"configTemplateId"`
+	Item             GetConfigTemplatesSwitchProfilesPortsItem `pulumi:"item"`
 	// Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfilePorts
 	Items []GetConfigTemplatesSwitchProfilesPortsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -94,11 +92,6 @@ func (o LookupConfigTemplatesSwitchProfilesPortsResultOutput) ToLookupConfigTemp
 // configTemplateId path parameter. Config template ID
 func (o LookupConfigTemplatesSwitchProfilesPortsResultOutput) ConfigTemplateId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupConfigTemplatesSwitchProfilesPortsResult) *string { return v.ConfigTemplateId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupConfigTemplatesSwitchProfilesPortsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupConfigTemplatesSwitchProfilesPortsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupConfigTemplatesSwitchProfilesPortsResultOutput) Item() GetConfigTemplatesSwitchProfilesPortsItemOutput {

@@ -40,10 +40,6 @@ export interface GetLoginSecurityArgs {
  * A collection of values returned by getLoginSecurity.
  */
 export interface GetLoginSecurityResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetLoginSecurityItem;
     /**
      * organizationId path parameter. Organization ID

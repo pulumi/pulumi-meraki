@@ -160,10 +160,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetCameraBoundariesLinesByDeviceResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseCameraGetOrganizationCameraBoundariesLinesByDevice
         /// </summary>
         public readonly ImmutableArray<Outputs.GetCameraBoundariesLinesByDeviceItemResult> Items;
@@ -178,15 +174,12 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetCameraBoundariesLinesByDeviceResult(
-            string id,
-
             ImmutableArray<Outputs.GetCameraBoundariesLinesByDeviceItemResult> items,
 
             string organizationId,
 
             ImmutableArray<string> serials)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             Serials = serials;

@@ -27,16 +27,13 @@ class GetInventoryOnboardingCloudMonitoringNetworksResult:
     """
     A collection of values returned by getInventoryOnboardingCloudMonitoringNetworks.
     """
-    def __init__(__self__, device_type=None, ending_before=None, id=None, items=None, organization_id=None, per_page=None, search=None, starting_after=None):
+    def __init__(__self__, device_type=None, ending_before=None, items=None, organization_id=None, per_page=None, search=None, starting_after=None):
         if device_type and not isinstance(device_type, str):
             raise TypeError("Expected argument 'device_type' to be a str")
         pulumi.set(__self__, "device_type", device_type)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -68,14 +65,6 @@ class GetInventoryOnboardingCloudMonitoringNetworksResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -126,7 +115,6 @@ class AwaitableGetInventoryOnboardingCloudMonitoringNetworksResult(GetInventoryO
         return GetInventoryOnboardingCloudMonitoringNetworksResult(
             device_type=self.device_type,
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id,
             per_page=self.per_page,
@@ -178,7 +166,6 @@ def get_inventory_onboarding_cloud_monitoring_networks(device_type: Optional[_bu
     return AwaitableGetInventoryOnboardingCloudMonitoringNetworksResult(
         device_type=pulumi.get(__ret__, 'device_type'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -227,7 +214,6 @@ def get_inventory_onboarding_cloud_monitoring_networks_output(device_type: pulum
     return __ret__.apply(lambda __response__: GetInventoryOnboardingCloudMonitoringNetworksResult(
         device_type=pulumi.get(__response__, 'device_type'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         per_page=pulumi.get(__response__, 'per_page'),

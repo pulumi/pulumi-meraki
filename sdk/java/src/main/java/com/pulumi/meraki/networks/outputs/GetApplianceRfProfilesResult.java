@@ -13,11 +13,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApplianceRfProfilesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceRfProfilesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -31,13 +26,6 @@ public final class GetApplianceRfProfilesResult {
     private @Nullable String rfProfileId;
 
     private GetApplianceRfProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceRfProfilesItem item() {
         return this.item;
     }
@@ -65,27 +53,17 @@ public final class GetApplianceRfProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceRfProfilesItem item;
         private @Nullable String networkId;
         private @Nullable String rfProfileId;
         public Builder() {}
         public Builder(GetApplianceRfProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.rfProfileId = defaults.rfProfileId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceRfProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceRfProfilesItem item) {
             if (item == null) {
@@ -108,7 +86,6 @@ public final class GetApplianceRfProfilesResult {
         }
         public GetApplianceRfProfilesResult build() {
             final var _resultValue = new GetApplianceRfProfilesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.rfProfileId = rfProfileId;

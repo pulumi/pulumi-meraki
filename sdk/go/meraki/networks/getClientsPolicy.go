@@ -59,10 +59,8 @@ type LookupClientsPolicyArgs struct {
 // A collection of values returned by getClientsPolicy.
 type LookupClientsPolicyResult struct {
 	// clientId path parameter. Client ID
-	ClientId string `pulumi:"clientId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
-	Item GetClientsPolicyItem `pulumi:"item"`
+	ClientId string               `pulumi:"clientId"`
+	Item     GetClientsPolicyItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 }
@@ -106,11 +104,6 @@ func (o LookupClientsPolicyResultOutput) ToLookupClientsPolicyResultOutputWithCo
 // clientId path parameter. Client ID
 func (o LookupClientsPolicyResultOutput) ClientId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupClientsPolicyResult) string { return v.ClientId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupClientsPolicyResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupClientsPolicyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupClientsPolicyResultOutput) Item() GetClientsPolicyItemOutput {

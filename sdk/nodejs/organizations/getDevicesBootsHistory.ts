@@ -99,10 +99,6 @@ export interface GetDevicesBootsHistoryResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesBootsHistory
      */
     readonly items: outputs.organizations.GetDevicesBootsHistoryItem[];

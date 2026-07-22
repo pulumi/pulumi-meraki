@@ -22,11 +22,6 @@ public final class GetWebhooksLogsResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationWebhooksLogs
      * 
      */
@@ -74,13 +69,6 @@ public final class GetWebhooksLogsResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationWebhooksLogs
@@ -149,7 +137,6 @@ public final class GetWebhooksLogsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetWebhooksLogsItem> items;
         private String organizationId;
         private @Nullable Integer perPage;
@@ -162,7 +149,6 @@ public final class GetWebhooksLogsResult {
         public Builder(GetWebhooksLogsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.perPage = defaults.perPage;
@@ -177,14 +163,6 @@ public final class GetWebhooksLogsResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWebhooksLogsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -245,7 +223,6 @@ public final class GetWebhooksLogsResult {
         public GetWebhooksLogsResult build() {
             final var _resultValue = new GetWebhooksLogsResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.perPage = perPage;

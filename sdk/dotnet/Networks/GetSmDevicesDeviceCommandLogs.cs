@@ -192,10 +192,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSmGetNetworkSmDeviceDeviceCommandLogs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSmDevicesDeviceCommandLogsItemResult> Items;
@@ -218,8 +214,6 @@ namespace Pulumi.Meraki.Networks
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetSmDevicesDeviceCommandLogsItemResult> items,
 
             string networkId,
@@ -230,7 +224,6 @@ namespace Pulumi.Meraki.Networks
         {
             DeviceId = deviceId;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             PerPage = perPage;

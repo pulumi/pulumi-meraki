@@ -55,8 +55,6 @@ type LookupApplianceFirewallCellularFirewallRulesArgs struct {
 
 // A collection of values returned by getApplianceFirewallCellularFirewallRules.
 type LookupApplianceFirewallCellularFirewallRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                        `pulumi:"id"`
 	Item GetApplianceFirewallCellularFirewallRulesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceFirewallCellularFirewallRulesResultOutput) ToLookupApplia
 
 func (o LookupApplianceFirewallCellularFirewallRulesResultOutput) ToLookupApplianceFirewallCellularFirewallRulesResultOutputWithContext(ctx context.Context) LookupApplianceFirewallCellularFirewallRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceFirewallCellularFirewallRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceFirewallCellularFirewallRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceFirewallCellularFirewallRulesResultOutput) Item() GetApplianceFirewallCellularFirewallRulesItemOutput {

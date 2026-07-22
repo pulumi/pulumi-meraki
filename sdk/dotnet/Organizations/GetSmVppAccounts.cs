@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetSmVppAccountsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSmVppAccountsItemResult Item;
         /// <summary>
         /// Array of ResponseSmGetOrganizationSmVppAccounts
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSmVppAccountsResult(
-            string id,
-
             Outputs.GetSmVppAccountsItemResult item,
 
             ImmutableArray<Outputs.GetSmVppAccountsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? vppAccountId)
         {
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

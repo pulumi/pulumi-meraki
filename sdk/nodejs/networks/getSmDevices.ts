@@ -121,10 +121,6 @@ export interface GetSmDevicesResult {
      */
     readonly fields?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * ids query parameter. Filter devices by id(s).
      */
     readonly ids?: string[];

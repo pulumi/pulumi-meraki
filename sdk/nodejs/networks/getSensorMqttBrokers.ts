@@ -36,10 +36,6 @@ export interface GetSensorMqttBrokersArgs {
  * A collection of values returned by getSensorMqttBrokers.
  */
 export interface GetSensorMqttBrokersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSensorMqttBrokersItem;
     /**
      * Array of ResponseSensorGetNetworkSensorMqttBrokers

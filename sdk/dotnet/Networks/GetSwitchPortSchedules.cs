@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSwitchPortSchedulesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchPortSchedules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchPortSchedulesItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSwitchPortSchedulesResult(
-            string id,
-
             ImmutableArray<Outputs.GetSwitchPortSchedulesItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

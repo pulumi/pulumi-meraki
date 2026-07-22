@@ -52,10 +52,6 @@ export interface GetDevicesStatusesOverviewArgs {
  * A collection of values returned by getDevicesStatusesOverview.
  */
 export interface GetDevicesStatusesOverviewResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetDevicesStatusesOverviewItem;
     /**
      * networkIds query parameter. An optional parameter to filter device statuses by network.

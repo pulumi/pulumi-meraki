@@ -36,10 +36,6 @@ export interface GetSwitchRoutingMulticastRendezvousPointsArgs {
  * A collection of values returned by getSwitchRoutingMulticastRendezvousPoints.
  */
 export interface GetSwitchRoutingMulticastRendezvousPointsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchRoutingMulticastRendezvousPointsItem;
     /**
      * Array of ResponseSwitchGetNetworkSwitchRoutingMulticastRendezvousPoints

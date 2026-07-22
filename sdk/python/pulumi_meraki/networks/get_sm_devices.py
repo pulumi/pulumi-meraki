@@ -27,16 +27,13 @@ class GetSmDevicesResult:
     """
     A collection of values returned by getSmDevices.
     """
-    def __init__(__self__, ending_before=None, fields=None, id=None, ids=None, items=None, network_id=None, per_page=None, scopes=None, serials=None, starting_after=None, system_types=None, uuids=None, wifi_macs=None):
+    def __init__(__self__, ending_before=None, fields=None, ids=None, items=None, network_id=None, per_page=None, scopes=None, serials=None, starting_after=None, system_types=None, uuids=None, wifi_macs=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
         if fields and not isinstance(fields, list):
             raise TypeError("Expected argument 'fields' to be a list")
         pulumi.set(__self__, "fields", fields)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if ids and not isinstance(ids, list):
             raise TypeError("Expected argument 'ids' to be a list")
         pulumi.set(__self__, "ids", ids)
@@ -89,14 +86,6 @@ class GetSmDevicesResult:
         hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, cellular, and url.
         """
         return pulumi.get(self, "fields")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -187,7 +176,6 @@ class AwaitableGetSmDevicesResult(GetSmDevicesResult):
         return GetSmDevicesResult(
             ending_before=self.ending_before,
             fields=self.fields,
-            id=self.id,
             ids=self.ids,
             items=self.items,
             network_id=self.network_id,
@@ -270,7 +258,6 @@ def get_sm_devices(ending_before: Optional[_builtins.str] = None,
     return AwaitableGetSmDevicesResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
         fields=pulumi.get(__ret__, 'fields'),
-        id=pulumi.get(__ret__, 'id'),
         ids=pulumi.get(__ret__, 'ids'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -350,7 +337,6 @@ def get_sm_devices_output(ending_before: pulumi.Input[Optional[Optional[_builtin
     return __ret__.apply(lambda __response__: GetSmDevicesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
         fields=pulumi.get(__response__, 'fields'),
-        id=pulumi.get(__response__, 'id'),
         ids=pulumi.get(__response__, 'ids'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

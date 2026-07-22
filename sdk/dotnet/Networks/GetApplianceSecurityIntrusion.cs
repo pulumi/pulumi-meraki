@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetApplianceSecurityIntrusionResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceSecurityIntrusionItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetApplianceSecurityIntrusionResult(
-            string id,
-
             Outputs.GetApplianceSecurityIntrusionItemResult item,
 
             string networkId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
         }

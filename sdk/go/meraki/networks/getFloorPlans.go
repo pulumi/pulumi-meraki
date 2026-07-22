@@ -33,10 +33,8 @@ type LookupFloorPlansArgs struct {
 // A collection of values returned by getFloorPlans.
 type LookupFloorPlansResult struct {
 	// floorPlanId path parameter. Floor plan ID
-	FloorPlanId *string `pulumi:"floorPlanId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string            `pulumi:"id"`
-	Item GetFloorPlansItem `pulumi:"item"`
+	FloorPlanId *string           `pulumi:"floorPlanId"`
+	Item        GetFloorPlansItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkFloorPlans
 	Items []GetFloorPlansItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -82,11 +80,6 @@ func (o LookupFloorPlansResultOutput) ToLookupFloorPlansResultOutputWithContext(
 // floorPlanId path parameter. Floor plan ID
 func (o LookupFloorPlansResultOutput) FloorPlanId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupFloorPlansResult) *string { return v.FloorPlanId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupFloorPlansResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupFloorPlansResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupFloorPlansResultOutput) Item() GetFloorPlansItemOutput {

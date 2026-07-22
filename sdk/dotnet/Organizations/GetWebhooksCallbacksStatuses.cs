@@ -142,10 +142,6 @@ namespace Pulumi.Meraki.Organizations
         /// callbackId path parameter. Callback ID
         /// </summary>
         public readonly string CallbackId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWebhooksCallbacksStatusesItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -156,14 +152,11 @@ namespace Pulumi.Meraki.Organizations
         private GetWebhooksCallbacksStatusesResult(
             string callbackId,
 
-            string id,
-
             Outputs.GetWebhooksCallbacksStatusesItemResult item,
 
             string organizationId)
         {
             CallbackId = callbackId;
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
         }

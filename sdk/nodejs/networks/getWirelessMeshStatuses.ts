@@ -63,10 +63,6 @@ export interface GetWirelessMeshStatusesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessMeshStatuses
      */
     readonly items: outputs.networks.GetWirelessMeshStatusesItem[];

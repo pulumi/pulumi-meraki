@@ -27,10 +27,7 @@ class GetSamlIdpsResult:
     """
     A collection of values returned by getSamlIdps.
     """
-    def __init__(__self__, id=None, idp_id=None, item=None, items=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, idp_id=None, item=None, items=None, organization_id=None):
         if idp_id and not isinstance(idp_id, str):
             raise TypeError("Expected argument 'idp_id' to be a str")
         pulumi.set(__self__, "idp_id", idp_id)
@@ -43,14 +40,6 @@ class GetSamlIdpsResult:
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="idpId")
@@ -88,7 +77,6 @@ class AwaitableGetSamlIdpsResult(GetSamlIdpsResult):
         if False:
             yield self
         return GetSamlIdpsResult(
-            id=self.id,
             idp_id=self.idp_id,
             item=self.item,
             items=self.items,
@@ -112,7 +100,6 @@ def get_saml_idps(idp_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getSamlIdps:getSamlIdps', __args__, opts=opts, typ=GetSamlIdpsResult).value
 
     return AwaitableGetSamlIdpsResult(
-        id=pulumi.get(__ret__, 'id'),
         idp_id=pulumi.get(__ret__, 'idp_id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
@@ -133,7 +120,6 @@ def get_saml_idps_output(idp_id: pulumi.Input[Optional[Optional[_builtins.str]]]
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSamlIdps:getSamlIdps', __args__, opts=opts, typ=GetSamlIdpsResult)
     return __ret__.apply(lambda __response__: GetSamlIdpsResult(
-        id=pulumi.get(__response__, 'id'),
         idp_id=pulumi.get(__response__, 'idp_id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),

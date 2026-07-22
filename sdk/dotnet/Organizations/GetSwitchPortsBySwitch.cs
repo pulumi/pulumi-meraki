@@ -381,10 +381,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetOrganizationSwitchPortsBySwitch
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchPortsBySwitchItemResult> Items;
@@ -435,8 +431,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetSwitchPortsBySwitchItemResult> items,
 
             string? mac,
@@ -461,7 +455,6 @@ namespace Pulumi.Meraki.Organizations
         {
             ConfigurationUpdatedAfter = configurationUpdatedAfter;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             Mac = mac;
             Macs = macs;

@@ -53,10 +53,6 @@ export interface GetSwitchPortsStatusesArgs {
  */
 export interface GetSwitchPortsStatusesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetDeviceSwitchPortsStatuses
      */
     readonly items: outputs.devices.GetSwitchPortsStatusesItem[];

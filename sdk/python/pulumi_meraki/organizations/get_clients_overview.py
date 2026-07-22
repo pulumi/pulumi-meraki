@@ -27,10 +27,7 @@ class GetClientsOverviewResult:
     """
     A collection of values returned by getClientsOverview.
     """
-    def __init__(__self__, id=None, item=None, organization_id=None, t0=None, t1=None, timespan=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, organization_id=None, t0=None, t1=None, timespan=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -46,14 +43,6 @@ class GetClientsOverviewResult:
         if timespan and not isinstance(timespan, float):
             raise TypeError("Expected argument 'timespan' to be a float")
         pulumi.set(__self__, "timespan", timespan)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -99,7 +88,6 @@ class AwaitableGetClientsOverviewResult(GetClientsOverviewResult):
         if False:
             yield self
         return GetClientsOverviewResult(
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id,
             t0=self.t0,
@@ -141,7 +129,6 @@ def get_clients_overview(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getClientsOverview:getClientsOverview', __args__, opts=opts, typ=GetClientsOverviewResult).value
 
     return AwaitableGetClientsOverviewResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         t0=pulumi.get(__ret__, 't0'),
@@ -180,7 +167,6 @@ def get_clients_overview_output(organization_id: pulumi.Input[Optional[_builtins
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getClientsOverview:getClientsOverview', __args__, opts=opts, typ=GetClientsOverviewResult)
     return __ret__.apply(lambda __response__: GetClientsOverviewResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         t0=pulumi.get(__response__, 't0'),

@@ -46,10 +46,6 @@ export interface GetWirelessSsidsEapOverrideArgs {
  * A collection of values returned by getWirelessSsidsEapOverride.
  */
 export interface GetWirelessSsidsEapOverrideResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsEapOverrideItem;
     /**
      * networkId path parameter. Network ID

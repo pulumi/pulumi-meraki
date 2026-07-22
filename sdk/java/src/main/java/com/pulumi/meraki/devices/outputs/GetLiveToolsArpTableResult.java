@@ -16,11 +16,6 @@ public final class GetLiveToolsArpTableResult {
      * 
      */
     private String arpTableId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetLiveToolsArpTableItem item;
     /**
      * @return serial path parameter.
@@ -35,13 +30,6 @@ public final class GetLiveToolsArpTableResult {
      */
     public String arpTableId() {
         return this.arpTableId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetLiveToolsArpTableItem item() {
         return this.item;
@@ -64,14 +52,12 @@ public final class GetLiveToolsArpTableResult {
     @CustomType.Builder
     public static final class Builder {
         private String arpTableId;
-        private String id;
         private GetLiveToolsArpTableItem item;
         private String serial;
         public Builder() {}
         public Builder(GetLiveToolsArpTableResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arpTableId = defaults.arpTableId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
@@ -82,14 +68,6 @@ public final class GetLiveToolsArpTableResult {
               throw new MissingRequiredPropertyException("GetLiveToolsArpTableResult", "arpTableId");
             }
             this.arpTableId = arpTableId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLiveToolsArpTableResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -111,7 +89,6 @@ public final class GetLiveToolsArpTableResult {
         public GetLiveToolsArpTableResult build() {
             final var _resultValue = new GetLiveToolsArpTableResult();
             _resultValue.arpTableId = arpTableId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

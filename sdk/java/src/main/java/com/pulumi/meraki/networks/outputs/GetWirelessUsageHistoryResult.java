@@ -43,11 +43,6 @@ public final class GetWirelessUsageHistoryResult {
      */
     private @Nullable String deviceSerial;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessUsageHistory
      * 
      */
@@ -120,13 +115,6 @@ public final class GetWirelessUsageHistoryResult {
         return Optional.ofNullable(this.deviceSerial);
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessUsageHistory
      * 
      */
@@ -190,7 +178,6 @@ public final class GetWirelessUsageHistoryResult {
         private @Nullable String band;
         private @Nullable String clientId;
         private @Nullable String deviceSerial;
-        private String id;
         private List<GetWirelessUsageHistoryItem> items;
         private String networkId;
         private @Nullable Integer resolution;
@@ -206,7 +193,6 @@ public final class GetWirelessUsageHistoryResult {
     	      this.band = defaults.band;
     	      this.clientId = defaults.clientId;
     	      this.deviceSerial = defaults.deviceSerial;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.resolution = defaults.resolution;
@@ -244,14 +230,6 @@ public final class GetWirelessUsageHistoryResult {
         public Builder deviceSerial(@Nullable String deviceSerial) {
 
             this.deviceSerial = deviceSerial;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessUsageHistoryResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -310,7 +288,6 @@ public final class GetWirelessUsageHistoryResult {
             _resultValue.band = band;
             _resultValue.clientId = clientId;
             _resultValue.deviceSerial = deviceSerial;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.resolution = resolution;

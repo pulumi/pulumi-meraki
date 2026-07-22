@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWebhooksWebhookTestsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWebhooksWebhookTestsItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -29,13 +24,6 @@ public final class GetWebhooksWebhookTestsResult {
     private String webhookTestId;
 
     private GetWebhooksWebhookTestsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWebhooksWebhookTestsItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetWebhooksWebhookTestsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWebhooksWebhookTestsItem item;
         private String networkId;
         private String webhookTestId;
         public Builder() {}
         public Builder(GetWebhooksWebhookTestsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.webhookTestId = defaults.webhookTestId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWebhooksWebhookTestsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWebhooksWebhookTestsItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetWebhooksWebhookTestsResult {
         }
         public GetWebhooksWebhookTestsResult build() {
             final var _resultValue = new GetWebhooksWebhookTestsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.webhookTestId = webhookTestId;

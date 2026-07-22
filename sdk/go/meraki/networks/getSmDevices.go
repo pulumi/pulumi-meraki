@@ -115,8 +115,6 @@ type GetSmDevicesResult struct {
 	// isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
 	// hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, cellular, and url.
 	Fields []string `pulumi:"fields"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// ids query parameter. Filter devices by id(s).
 	Ids []string `pulumi:"ids"`
 	// Array of ResponseSmGetNetworkSmDevices
@@ -213,11 +211,6 @@ func (o GetSmDevicesResultOutput) EndingBefore() pulumi.StringPtrOutput {
 // hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, cellular, and url.
 func (o GetSmDevicesResultOutput) Fields() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSmDevicesResult) []string { return v.Fields }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmDevicesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmDevicesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // ids query parameter. Filter devices by id(s).

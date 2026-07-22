@@ -16,11 +16,6 @@ public final class GetWebhooksCallbacksStatusesResult {
      * 
      */
     private String callbackId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWebhooksCallbacksStatusesItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -35,13 +30,6 @@ public final class GetWebhooksCallbacksStatusesResult {
      */
     public String callbackId() {
         return this.callbackId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetWebhooksCallbacksStatusesItem item() {
         return this.item;
@@ -64,14 +52,12 @@ public final class GetWebhooksCallbacksStatusesResult {
     @CustomType.Builder
     public static final class Builder {
         private String callbackId;
-        private String id;
         private GetWebhooksCallbacksStatusesItem item;
         private String organizationId;
         public Builder() {}
         public Builder(GetWebhooksCallbacksStatusesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.callbackId = defaults.callbackId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
         }
@@ -82,14 +68,6 @@ public final class GetWebhooksCallbacksStatusesResult {
               throw new MissingRequiredPropertyException("GetWebhooksCallbacksStatusesResult", "callbackId");
             }
             this.callbackId = callbackId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWebhooksCallbacksStatusesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -111,7 +89,6 @@ public final class GetWebhooksCallbacksStatusesResult {
         public GetWebhooksCallbacksStatusesResult build() {
             final var _resultValue = new GetWebhooksCallbacksStatusesResult();
             _resultValue.callbackId = callbackId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             return _resultValue;

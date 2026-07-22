@@ -55,8 +55,6 @@ type LookupCameraCustomAnalyticsArgs struct {
 
 // A collection of values returned by getCameraCustomAnalytics.
 type LookupCameraCustomAnalyticsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                       `pulumi:"id"`
 	Item GetCameraCustomAnalyticsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCameraCustomAnalyticsResultOutput) ToLookupCameraCustomAnalyticsRe
 
 func (o LookupCameraCustomAnalyticsResultOutput) ToLookupCameraCustomAnalyticsResultOutputWithContext(ctx context.Context) LookupCameraCustomAnalyticsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraCustomAnalyticsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraCustomAnalyticsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraCustomAnalyticsResultOutput) Item() GetCameraCustomAnalyticsItemOutput {

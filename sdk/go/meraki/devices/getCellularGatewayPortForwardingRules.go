@@ -55,8 +55,6 @@ type LookupCellularGatewayPortForwardingRulesArgs struct {
 
 // A collection of values returned by getCellularGatewayPortForwardingRules.
 type LookupCellularGatewayPortForwardingRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                    `pulumi:"id"`
 	Item GetCellularGatewayPortForwardingRulesItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewayPortForwardingRulesResultOutput) ToLookupCellularGa
 
 func (o LookupCellularGatewayPortForwardingRulesResultOutput) ToLookupCellularGatewayPortForwardingRulesResultOutputWithContext(ctx context.Context) LookupCellularGatewayPortForwardingRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewayPortForwardingRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewayPortForwardingRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewayPortForwardingRulesResultOutput) Item() GetCellularGatewayPortForwardingRulesItemOutput {

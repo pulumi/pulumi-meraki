@@ -41,10 +41,6 @@ export interface GetSmTargetGroupsArgs {
  * A collection of values returned by getSmTargetGroups.
  */
 export interface GetSmTargetGroupsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSmTargetGroupsItem;
     /**
      * Array of ResponseSmGetNetworkSmTargetGroups

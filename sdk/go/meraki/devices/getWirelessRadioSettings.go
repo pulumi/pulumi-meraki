@@ -55,8 +55,6 @@ type LookupWirelessRadioSettingsArgs struct {
 
 // A collection of values returned by getWirelessRadioSettings.
 type LookupWirelessRadioSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                       `pulumi:"id"`
 	Item GetWirelessRadioSettingsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupWirelessRadioSettingsResultOutput) ToLookupWirelessRadioSettingsRe
 
 func (o LookupWirelessRadioSettingsResultOutput) ToLookupWirelessRadioSettingsResultOutputWithContext(ctx context.Context) LookupWirelessRadioSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessRadioSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessRadioSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessRadioSettingsResultOutput) Item() GetWirelessRadioSettingsItemOutput {

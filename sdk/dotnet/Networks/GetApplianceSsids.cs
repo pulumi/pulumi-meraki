@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetApplianceSsidsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceSsidsItemResult Item;
         /// <summary>
         /// Array of ResponseApplianceGetNetworkApplianceSsids
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetApplianceSsidsResult(
-            string id,
-
             Outputs.GetApplianceSsidsItemResult item,
 
             ImmutableArray<Outputs.GetApplianceSsidsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? number)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -40,10 +40,6 @@ export interface GetSwitchRoutingOspfArgs {
  * A collection of values returned by getSwitchRoutingOspf.
  */
 export interface GetSwitchRoutingOspfResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchRoutingOspfItem;
     /**
      * networkId path parameter. Network ID

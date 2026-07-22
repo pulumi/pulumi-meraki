@@ -40,10 +40,6 @@ export interface GetSwitchStormControlArgs {
  * A collection of values returned by getSwitchStormControl.
  */
 export interface GetSwitchStormControlResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchStormControlItem;
     /**
      * networkId path parameter. Network ID

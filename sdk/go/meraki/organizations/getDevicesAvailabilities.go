@@ -89,8 +89,6 @@ type GetDevicesAvailabilitiesArgs struct {
 type GetDevicesAvailabilitiesResult struct {
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationDevicesAvailabilities
 	Items []GetDevicesAvailabilitiesItem `pulumi:"items"`
 	// networkIds query parameter. Optional parameter to filter device availabilities by network ID. This filter uses multiple exact matches.
@@ -164,11 +162,6 @@ func (o GetDevicesAvailabilitiesResultOutput) ToGetDevicesAvailabilitiesResultOu
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetDevicesAvailabilitiesResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDevicesAvailabilitiesResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetDevicesAvailabilitiesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDevicesAvailabilitiesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationDevicesAvailabilities

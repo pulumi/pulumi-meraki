@@ -19,11 +19,6 @@ public final class GetAdaptivePolicyAclsResult {
      * 
      */
     private @Nullable String aclId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetAdaptivePolicyAclsItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationAdaptivePolicyAcls
@@ -43,13 +38,6 @@ public final class GetAdaptivePolicyAclsResult {
      */
     public Optional<String> aclId() {
         return Optional.ofNullable(this.aclId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetAdaptivePolicyAclsItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetAdaptivePolicyAclsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String aclId;
-        private String id;
         private GetAdaptivePolicyAclsItem item;
         private List<GetAdaptivePolicyAclsItem> items;
         private @Nullable String organizationId;
@@ -87,7 +74,6 @@ public final class GetAdaptivePolicyAclsResult {
         public Builder(GetAdaptivePolicyAclsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.aclId = defaults.aclId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -97,14 +83,6 @@ public final class GetAdaptivePolicyAclsResult {
         public Builder aclId(@Nullable String aclId) {
 
             this.aclId = aclId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetAdaptivePolicyAclsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetAdaptivePolicyAclsResult {
         public GetAdaptivePolicyAclsResult build() {
             final var _resultValue = new GetAdaptivePolicyAclsResult();
             _resultValue.aclId = aclId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

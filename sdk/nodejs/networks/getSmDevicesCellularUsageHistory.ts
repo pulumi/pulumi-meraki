@@ -51,10 +51,6 @@ export interface GetSmDevicesCellularUsageHistoryResult {
      */
     readonly deviceId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceCellularUsageHistory
      */
     readonly items: outputs.networks.GetSmDevicesCellularUsageHistoryItem[];

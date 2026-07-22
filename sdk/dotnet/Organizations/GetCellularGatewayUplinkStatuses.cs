@@ -285,10 +285,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly ImmutableArray<string> Iccids;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses
         /// </summary>
         public readonly ImmutableArray<Outputs.GetCellularGatewayUplinkStatusesItemResult> Items;
@@ -319,8 +315,6 @@ namespace Pulumi.Meraki.Organizations
 
             ImmutableArray<string> iccids,
 
-            string id,
-
             ImmutableArray<Outputs.GetCellularGatewayUplinkStatusesItemResult> items,
 
             ImmutableArray<string> networkIds,
@@ -335,7 +329,6 @@ namespace Pulumi.Meraki.Organizations
         {
             EndingBefore = endingBefore;
             Iccids = iccids;
-            Id = id;
             Items = items;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

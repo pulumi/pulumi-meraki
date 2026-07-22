@@ -55,8 +55,6 @@ type GetAppliancePerformanceArgs struct {
 
 // A collection of values returned by getAppliancePerformance.
 type GetAppliancePerformanceResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                      `pulumi:"id"`
 	Item GetAppliancePerformanceItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o GetAppliancePerformanceResultOutput) ToGetAppliancePerformanceResultOutp
 
 func (o GetAppliancePerformanceResultOutput) ToGetAppliancePerformanceResultOutputWithContext(ctx context.Context) GetAppliancePerformanceResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetAppliancePerformanceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetAppliancePerformanceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetAppliancePerformanceResultOutput) Item() GetAppliancePerformanceItemOutput {

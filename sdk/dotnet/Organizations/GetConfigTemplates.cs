@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Organizations
         /// configTemplateId path parameter. Config template ID
         /// </summary>
         public readonly string? ConfigTemplateId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetConfigTemplatesItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationConfigTemplates
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Organizations
         private GetConfigTemplatesResult(
             string? configTemplateId,
 
-            string id,
-
             Outputs.GetConfigTemplatesItemResult item,
 
             ImmutableArray<Outputs.GetConfigTemplatesItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Organizations
             string? organizationId)
         {
             ConfigTemplateId = configTemplateId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

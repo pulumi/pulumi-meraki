@@ -58,8 +58,6 @@ type LookupVlanProfilesArgs struct {
 
 // A collection of values returned by getVlanProfiles.
 type LookupVlanProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// iname path parameter.
 	Iname string              `pulumi:"iname"`
 	Item  GetVlanProfilesItem `pulumi:"item"`
@@ -101,11 +99,6 @@ func (o LookupVlanProfilesResultOutput) ToLookupVlanProfilesResultOutput() Looku
 
 func (o LookupVlanProfilesResultOutput) ToLookupVlanProfilesResultOutputWithContext(ctx context.Context) LookupVlanProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupVlanProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupVlanProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // iname path parameter.

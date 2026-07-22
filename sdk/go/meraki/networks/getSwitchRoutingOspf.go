@@ -55,8 +55,6 @@ type LookupSwitchRoutingOspfArgs struct {
 
 // A collection of values returned by getSwitchRoutingOspf.
 type LookupSwitchRoutingOspfResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                   `pulumi:"id"`
 	Item GetSwitchRoutingOspfItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchRoutingOspfResultOutput) ToLookupSwitchRoutingOspfResultOutp
 
 func (o LookupSwitchRoutingOspfResultOutput) ToLookupSwitchRoutingOspfResultOutputWithContext(ctx context.Context) LookupSwitchRoutingOspfResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchRoutingOspfResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchRoutingOspfResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchRoutingOspfResultOutput) Item() GetSwitchRoutingOspfItemOutput {

@@ -27,10 +27,7 @@ class GetSummaryTopDevicesModelsByUsageResult:
     """
     A collection of values returned by getSummaryTopDevicesModelsByUsage.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None, t0=None, t1=None, timespan=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None, t0=None, t1=None, timespan=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -46,14 +43,6 @@ class GetSummaryTopDevicesModelsByUsageResult:
         if timespan and not isinstance(timespan, float):
             raise TypeError("Expected argument 'timespan' to be a float")
         pulumi.set(__self__, "timespan", timespan)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -102,7 +91,6 @@ class AwaitableGetSummaryTopDevicesModelsByUsageResult(GetSummaryTopDevicesModel
         if False:
             yield self
         return GetSummaryTopDevicesModelsByUsageResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id,
             t0=self.t0,
@@ -144,7 +132,6 @@ def get_summary_top_devices_models_by_usage(organization_id: Optional[_builtins.
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage', __args__, opts=opts, typ=GetSummaryTopDevicesModelsByUsageResult).value
 
     return AwaitableGetSummaryTopDevicesModelsByUsageResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         t0=pulumi.get(__ret__, 't0'),
@@ -183,7 +170,6 @@ def get_summary_top_devices_models_by_usage_output(organization_id: pulumi.Input
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage', __args__, opts=opts, typ=GetSummaryTopDevicesModelsByUsageResult)
     return __ret__.apply(lambda __response__: GetSummaryTopDevicesModelsByUsageResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         t0=pulumi.get(__response__, 't0'),

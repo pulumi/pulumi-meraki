@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOpenapiSpecResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetOpenapiSpecItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -32,13 +27,6 @@ public final class GetOpenapiSpecResult {
     private @Nullable Integer version;
 
     private GetOpenapiSpecResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetOpenapiSpecItem item() {
         return this.item;
     }
@@ -66,27 +54,17 @@ public final class GetOpenapiSpecResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetOpenapiSpecItem item;
         private String organizationId;
         private @Nullable Integer version;
         public Builder() {}
         public Builder(GetOpenapiSpecResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
     	      this.version = defaults.version;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetOpenapiSpecResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetOpenapiSpecItem item) {
             if (item == null) {
@@ -111,7 +89,6 @@ public final class GetOpenapiSpecResult {
         }
         public GetOpenapiSpecResult build() {
             final var _resultValue = new GetOpenapiSpecResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             _resultValue.version = version;

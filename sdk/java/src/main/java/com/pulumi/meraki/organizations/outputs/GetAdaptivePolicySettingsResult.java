@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAdaptivePolicySettingsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetAdaptivePolicySettingsItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -24,13 +19,6 @@ public final class GetAdaptivePolicySettingsResult {
     private String organizationId;
 
     private GetAdaptivePolicySettingsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetAdaptivePolicySettingsItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetAdaptivePolicySettingsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetAdaptivePolicySettingsItem item;
         private String organizationId;
         public Builder() {}
         public Builder(GetAdaptivePolicySettingsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetAdaptivePolicySettingsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetAdaptivePolicySettingsItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetAdaptivePolicySettingsResult {
         }
         public GetAdaptivePolicySettingsResult build() {
             final var _resultValue = new GetAdaptivePolicySettingsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             return _resultValue;

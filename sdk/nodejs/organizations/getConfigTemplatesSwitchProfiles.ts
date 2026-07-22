@@ -51,10 +51,6 @@ export interface GetConfigTemplatesSwitchProfilesResult {
      */
     readonly configTemplateId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles
      */
     readonly items: outputs.organizations.GetConfigTemplatesSwitchProfilesItem[];

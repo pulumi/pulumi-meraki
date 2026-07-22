@@ -40,10 +40,6 @@ export interface GetApplianceUplinksStatusesOverviewArgs {
  * A collection of values returned by getApplianceUplinksStatusesOverview.
  */
 export interface GetApplianceUplinksStatusesOverviewResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetApplianceUplinksStatusesOverviewItem;
     /**
      * organizationId path parameter. Organization ID

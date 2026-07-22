@@ -27,13 +27,10 @@ class GetLiveToolsArpTableResult:
     """
     A collection of values returned by getLiveToolsArpTable.
     """
-    def __init__(__self__, arp_table_id=None, id=None, item=None, serial=None):
+    def __init__(__self__, arp_table_id=None, item=None, serial=None):
         if arp_table_id and not isinstance(arp_table_id, str):
             raise TypeError("Expected argument 'arp_table_id' to be a str")
         pulumi.set(__self__, "arp_table_id", arp_table_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -48,14 +45,6 @@ class GetLiveToolsArpTableResult:
         arpTableId path parameter. Arp table ID
         """
         return pulumi.get(self, "arp_table_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -78,7 +67,6 @@ class AwaitableGetLiveToolsArpTableResult(GetLiveToolsArpTableResult):
             yield self
         return GetLiveToolsArpTableResult(
             arp_table_id=self.arp_table_id,
-            id=self.id,
             item=self.item,
             serial=self.serial)
 
@@ -110,7 +98,6 @@ def get_live_tools_arp_table(arp_table_id: Optional[_builtins.str] = None,
 
     return AwaitableGetLiveToolsArpTableResult(
         arp_table_id=pulumi.get(__ret__, 'arp_table_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_live_tools_arp_table_output(arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -139,6 +126,5 @@ def get_live_tools_arp_table_output(arp_table_id: pulumi.Input[Optional[_builtin
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable', __args__, opts=opts, typ=GetLiveToolsArpTableResult)
     return __ret__.apply(lambda __response__: GetLiveToolsArpTableResult(
         arp_table_id=pulumi.get(__response__, 'arp_table_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         serial=pulumi.get(__response__, 'serial')))

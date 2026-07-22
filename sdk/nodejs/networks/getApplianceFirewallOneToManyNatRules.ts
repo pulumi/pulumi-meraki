@@ -40,10 +40,6 @@ export interface GetApplianceFirewallOneToManyNatRulesArgs {
  * A collection of values returned by getApplianceFirewallOneToManyNatRules.
  */
 export interface GetApplianceFirewallOneToManyNatRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceFirewallOneToManyNatRulesItem;
     /**
      * networkId path parameter. Network ID

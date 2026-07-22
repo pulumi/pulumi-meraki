@@ -57,8 +57,6 @@ type LookupApplianceRfProfilesArgs struct {
 
 // A collection of values returned by getApplianceRfProfiles.
 type LookupApplianceRfProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetApplianceRfProfilesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId *string `pulumi:"networkId"`
@@ -100,11 +98,6 @@ func (o LookupApplianceRfProfilesResultOutput) ToLookupApplianceRfProfilesResult
 
 func (o LookupApplianceRfProfilesResultOutput) ToLookupApplianceRfProfilesResultOutputWithContext(ctx context.Context) LookupApplianceRfProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceRfProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceRfProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceRfProfilesResultOutput) Item() GetApplianceRfProfilesItemOutput {

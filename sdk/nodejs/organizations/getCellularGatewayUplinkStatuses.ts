@@ -85,10 +85,6 @@ export interface GetCellularGatewayUplinkStatusesResult {
      */
     readonly iccids?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses
      */
     readonly items: outputs.organizations.GetCellularGatewayUplinkStatusesItem[];

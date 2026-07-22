@@ -60,8 +60,6 @@ type LookupInventoryOnboardingCloudMonitoringImportsArgs struct {
 
 // A collection of values returned by getInventoryOnboardingCloudMonitoringImports.
 type LookupInventoryOnboardingCloudMonitoringImportsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// importIds query parameter. import ids from an imports
 	ImportIds []string `pulumi:"importIds"`
 	// Array of ResponseOrganizationsGetOrganizationInventoryOnboardingCloudMonitoringImports
@@ -104,11 +102,6 @@ func (o LookupInventoryOnboardingCloudMonitoringImportsResultOutput) ToLookupInv
 
 func (o LookupInventoryOnboardingCloudMonitoringImportsResultOutput) ToLookupInventoryOnboardingCloudMonitoringImportsResultOutputWithContext(ctx context.Context) LookupInventoryOnboardingCloudMonitoringImportsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupInventoryOnboardingCloudMonitoringImportsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupInventoryOnboardingCloudMonitoringImportsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // importIds query parameter. import ids from an imports

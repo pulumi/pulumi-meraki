@@ -142,10 +142,6 @@ namespace Pulumi.Meraki.Networks
         /// clientId path parameter. Client ID
         /// </summary>
         public readonly string ClientId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetClientsSplashAuthorizationStatusItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -156,14 +152,11 @@ namespace Pulumi.Meraki.Networks
         private GetClientsSplashAuthorizationStatusResult(
             string clientId,
 
-            string id,
-
             Outputs.GetClientsSplashAuthorizationStatusItemResult item,
 
             string networkId)
         {
             ClientId = clientId;
-            Id = id;
             Item = item;
             NetworkId = networkId;
         }

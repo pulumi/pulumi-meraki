@@ -64,8 +64,6 @@ type GetSummaryTopAppliancesByUtilizationArgs struct {
 
 // A collection of values returned by getSummaryTopAppliancesByUtilization.
 type GetSummaryTopAppliancesByUtilizationResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationSummaryTopAppliancesByUtilization
 	Items []GetSummaryTopAppliancesByUtilizationItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetSummaryTopAppliancesByUtilizationResultOutput) ToGetSummaryTopApplian
 
 func (o GetSummaryTopAppliancesByUtilizationResultOutput) ToGetSummaryTopAppliancesByUtilizationResultOutputWithContext(ctx context.Context) GetSummaryTopAppliancesByUtilizationResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSummaryTopAppliancesByUtilizationResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSummaryTopAppliancesByUtilizationResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationSummaryTopAppliancesByUtilization

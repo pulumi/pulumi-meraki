@@ -40,10 +40,6 @@ export interface GetWirelessBluetoothSettingsArgs {
  * A collection of values returned by getWirelessBluetoothSettings.
  */
 export interface GetWirelessBluetoothSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetWirelessBluetoothSettingsItem;
     /**
      * serial path parameter.

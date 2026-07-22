@@ -41,10 +41,6 @@ export interface GetTrafficShapingDscpTaggingOptionsArgs {
  */
 export interface GetTrafficShapingDscpTaggingOptionsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions
      */
     readonly items: outputs.networks.GetTrafficShapingDscpTaggingOptionsItem[];

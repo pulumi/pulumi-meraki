@@ -362,10 +362,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationDevicesAvailabilitiesChangeHistory
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDevicesAvailabilitiesChangeHistoryItemResult> Items;
@@ -414,8 +410,6 @@ namespace Pulumi.Meraki.Organizations
         private GetDevicesAvailabilitiesChangeHistoryResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetDevicesAvailabilitiesChangeHistoryItemResult> items,
 
             ImmutableArray<string> networkIds,
@@ -439,7 +433,6 @@ namespace Pulumi.Meraki.Organizations
             double? timespan)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

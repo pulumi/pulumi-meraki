@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMerakiAuthUsersResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetMerakiAuthUsersItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkMerakiAuthUsers
@@ -37,13 +32,6 @@ public final class GetMerakiAuthUsersResult {
     private @Nullable String networkId;
 
     private GetMerakiAuthUsersResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetMerakiAuthUsersItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetMerakiAuthUsersResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetMerakiAuthUsersItem item;
         private List<GetMerakiAuthUsersItem> items;
         private @Nullable String merakiAuthUserId;
@@ -86,21 +73,12 @@ public final class GetMerakiAuthUsersResult {
         public Builder() {}
         public Builder(GetMerakiAuthUsersResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.merakiAuthUserId = defaults.merakiAuthUserId;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetMerakiAuthUsersResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetMerakiAuthUsersItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetMerakiAuthUsersResult {
         }
         public GetMerakiAuthUsersResult build() {
             final var _resultValue = new GetMerakiAuthUsersResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.merakiAuthUserId = merakiAuthUserId;

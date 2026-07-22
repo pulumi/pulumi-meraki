@@ -22,11 +22,6 @@ public final class GetSensorReadingsHistoryResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSensorGetOrganizationSensorReadingsHistory
      * 
      */
@@ -84,13 +79,6 @@ public final class GetSensorReadingsHistoryResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSensorGetOrganizationSensorReadingsHistory
@@ -173,7 +161,6 @@ public final class GetSensorReadingsHistoryResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSensorReadingsHistoryItem> items;
         private @Nullable List<String> metrics;
         private @Nullable List<String> networkIds;
@@ -188,7 +175,6 @@ public final class GetSensorReadingsHistoryResult {
         public Builder(GetSensorReadingsHistoryResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.metrics = defaults.metrics;
     	      this.networkIds = defaults.networkIds;
@@ -205,14 +191,6 @@ public final class GetSensorReadingsHistoryResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSensorReadingsHistoryResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -294,7 +272,6 @@ public final class GetSensorReadingsHistoryResult {
         public GetSensorReadingsHistoryResult build() {
             final var _resultValue = new GetSensorReadingsHistoryResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.metrics = metrics;
             _resultValue.networkIds = networkIds;

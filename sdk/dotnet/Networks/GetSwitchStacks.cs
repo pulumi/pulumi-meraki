@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetSwitchStacksResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSwitchStacksItemResult Item;
         /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchStacks
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSwitchStacksResult(
-            string id,
-
             Outputs.GetSwitchStacksItemResult item,
 
             ImmutableArray<Outputs.GetSwitchStacksItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? switchStackId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

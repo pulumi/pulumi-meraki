@@ -33,10 +33,8 @@ type LookupFirmwareUpgradesStagedGroupsArgs struct {
 // A collection of values returned by getFirmwareUpgradesStagedGroups.
 type LookupFirmwareUpgradesStagedGroupsResult struct {
 	// groupId path parameter. Group ID
-	GroupId *string `pulumi:"groupId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                              `pulumi:"id"`
-	Item GetFirmwareUpgradesStagedGroupsItem `pulumi:"item"`
+	GroupId *string                             `pulumi:"groupId"`
+	Item    GetFirmwareUpgradesStagedGroupsItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedGroups
 	Items []GetFirmwareUpgradesStagedGroupsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -82,11 +80,6 @@ func (o LookupFirmwareUpgradesStagedGroupsResultOutput) ToLookupFirmwareUpgrades
 // groupId path parameter. Group ID
 func (o LookupFirmwareUpgradesStagedGroupsResultOutput) GroupId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupFirmwareUpgradesStagedGroupsResult) *string { return v.GroupId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupFirmwareUpgradesStagedGroupsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupFirmwareUpgradesStagedGroupsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupFirmwareUpgradesStagedGroupsResultOutput) Item() GetFirmwareUpgradesStagedGroupsItemOutput {

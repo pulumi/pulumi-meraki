@@ -32,8 +32,6 @@ type LookupInsightMonitoredMediaServersArgs struct {
 
 // A collection of values returned by getInsightMonitoredMediaServers.
 type LookupInsightMonitoredMediaServersResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                              `pulumi:"id"`
 	Item GetInsightMonitoredMediaServersItem `pulumi:"item"`
 	// Array of ResponseInsightGetOrganizationInsightMonitoredMediaServers
 	Items []GetInsightMonitoredMediaServersItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupInsightMonitoredMediaServersResultOutput) ToLookupInsightMonitored
 
 func (o LookupInsightMonitoredMediaServersResultOutput) ToLookupInsightMonitoredMediaServersResultOutputWithContext(ctx context.Context) LookupInsightMonitoredMediaServersResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupInsightMonitoredMediaServersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupInsightMonitoredMediaServersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupInsightMonitoredMediaServersResultOutput) Item() GetInsightMonitoredMediaServersItemOutput {

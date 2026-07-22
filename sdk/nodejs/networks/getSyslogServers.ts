@@ -40,10 +40,6 @@ export interface GetSyslogServersArgs {
  * A collection of values returned by getSyslogServers.
  */
 export interface GetSyslogServersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSyslogServersItem;
     /**
      * networkId path parameter. Network ID

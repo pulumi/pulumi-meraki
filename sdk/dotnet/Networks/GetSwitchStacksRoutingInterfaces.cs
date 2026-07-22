@@ -88,10 +88,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSwitchStacksRoutingInterfacesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// interfaceId path parameter. Interface ID
         /// </summary>
         public readonly string? InterfaceId;
@@ -111,8 +107,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSwitchStacksRoutingInterfacesResult(
-            string id,
-
             string? interfaceId,
 
             Outputs.GetSwitchStacksRoutingInterfacesItemResult item,
@@ -123,7 +117,6 @@ namespace Pulumi.Meraki.Networks
 
             string? switchStackId)
         {
-            Id = id;
             InterfaceId = interfaceId;
             Item = item;
             Items = items;

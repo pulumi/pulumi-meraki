@@ -41,10 +41,6 @@ export interface GetEarlyAccessFeaturesArgs {
  */
 export interface GetEarlyAccessFeaturesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationEarlyAccessFeatures
      */
     readonly items: outputs.organizations.GetEarlyAccessFeaturesItem[];

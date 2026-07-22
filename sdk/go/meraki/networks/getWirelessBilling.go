@@ -55,8 +55,6 @@ type LookupWirelessBillingArgs struct {
 
 // A collection of values returned by getWirelessBilling.
 type LookupWirelessBillingResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetWirelessBillingItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupWirelessBillingResultOutput) ToLookupWirelessBillingResultOutput()
 
 func (o LookupWirelessBillingResultOutput) ToLookupWirelessBillingResultOutputWithContext(ctx context.Context) LookupWirelessBillingResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessBillingResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessBillingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessBillingResultOutput) Item() GetWirelessBillingItemOutput {

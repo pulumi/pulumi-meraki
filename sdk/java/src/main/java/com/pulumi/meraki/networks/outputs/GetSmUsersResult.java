@@ -19,11 +19,6 @@ public final class GetSmUsersResult {
      */
     private @Nullable List<String> emails;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return ids query parameter. Filter users by id(s).
      * 
      */
@@ -56,13 +51,6 @@ public final class GetSmUsersResult {
      */
     public List<String> emails() {
         return this.emails == null ? List.of() : this.emails;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return ids query parameter. Filter users by id(s).
@@ -110,7 +98,6 @@ public final class GetSmUsersResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable List<String> emails;
-        private String id;
         private @Nullable List<String> ids;
         private List<GetSmUsersItem> items;
         private String networkId;
@@ -120,7 +107,6 @@ public final class GetSmUsersResult {
         public Builder(GetSmUsersResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.emails = defaults.emails;
-    	      this.id = defaults.id;
     	      this.ids = defaults.ids;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -136,14 +122,6 @@ public final class GetSmUsersResult {
         }
         public Builder emails(String... emails) {
             return emails(List.of(emails));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmUsersResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder ids(@Nullable List<String> ids) {
@@ -194,7 +172,6 @@ public final class GetSmUsersResult {
         public GetSmUsersResult build() {
             final var _resultValue = new GetSmUsersResult();
             _resultValue.emails = emails;
-            _resultValue.id = id;
             _resultValue.ids = ids;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

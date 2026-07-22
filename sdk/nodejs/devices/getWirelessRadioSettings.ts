@@ -40,10 +40,6 @@ export interface GetWirelessRadioSettingsArgs {
  * A collection of values returned by getWirelessRadioSettings.
  */
 export interface GetWirelessRadioSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetWirelessRadioSettingsItem;
     /**
      * serial path parameter.

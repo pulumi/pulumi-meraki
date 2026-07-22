@@ -142,10 +142,6 @@ namespace Pulumi.Meraki.Networks
         /// attemptId path parameter. Attempt ID
         /// </summary>
         public readonly string AttemptId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSmBypassActivationLockAttemptsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -156,14 +152,11 @@ namespace Pulumi.Meraki.Networks
         private GetSmBypassActivationLockAttemptsResult(
             string attemptId,
 
-            string id,
-
             Outputs.GetSmBypassActivationLockAttemptsItemResult item,
 
             string networkId)
         {
             AttemptId = attemptId;
-            Id = id;
             Item = item;
             NetworkId = networkId;
         }

@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetAlertsProfilesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationAlertsProfiles
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAlertsProfilesItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetAlertsProfilesResult(
-            string id,
-
             ImmutableArray<Outputs.GetAlertsProfilesItemResult> items,
 
             string organizationId)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
         }

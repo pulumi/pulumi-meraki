@@ -363,10 +363,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationApiRequests
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApiRequestsItemResult> Items;
@@ -429,8 +425,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetApiRequestsItemResult> items,
 
             string? method,
@@ -461,7 +455,6 @@ namespace Pulumi.Meraki.Organizations
         {
             AdminId = adminId;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             Method = method;
             OperationIds = operationIds;

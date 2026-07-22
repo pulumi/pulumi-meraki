@@ -18,11 +18,6 @@ public final class GetSmDevicesNetworkAdaptersResult {
      */
     private String deviceId;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmDeviceNetworkAdapters
      * 
      */
@@ -40,13 +35,6 @@ public final class GetSmDevicesNetworkAdaptersResult {
      */
     public String deviceId() {
         return this.deviceId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSmGetNetworkSmDeviceNetworkAdapters
@@ -73,14 +61,12 @@ public final class GetSmDevicesNetworkAdaptersResult {
     @CustomType.Builder
     public static final class Builder {
         private String deviceId;
-        private String id;
         private List<GetSmDevicesNetworkAdaptersItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetSmDevicesNetworkAdaptersResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.deviceId = defaults.deviceId;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
@@ -91,14 +77,6 @@ public final class GetSmDevicesNetworkAdaptersResult {
               throw new MissingRequiredPropertyException("GetSmDevicesNetworkAdaptersResult", "deviceId");
             }
             this.deviceId = deviceId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmDevicesNetworkAdaptersResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -123,7 +101,6 @@ public final class GetSmDevicesNetworkAdaptersResult {
         public GetSmDevicesNetworkAdaptersResult build() {
             final var _resultValue = new GetSmDevicesNetworkAdaptersResult();
             _resultValue.deviceId = deviceId;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

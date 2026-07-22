@@ -55,8 +55,6 @@ type GetApplianceContentFilteringCategoriesArgs struct {
 
 // A collection of values returned by getApplianceContentFilteringCategories.
 type GetApplianceContentFilteringCategoriesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                     `pulumi:"id"`
 	Item GetApplianceContentFilteringCategoriesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o GetApplianceContentFilteringCategoriesResultOutput) ToGetApplianceConten
 
 func (o GetApplianceContentFilteringCategoriesResultOutput) ToGetApplianceContentFilteringCategoriesResultOutputWithContext(ctx context.Context) GetApplianceContentFilteringCategoriesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApplianceContentFilteringCategoriesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApplianceContentFilteringCategoriesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetApplianceContentFilteringCategoriesResultOutput) Item() GetApplianceContentFilteringCategoriesItemOutput {

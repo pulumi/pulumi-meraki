@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInsightMonitoredMediaServersResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetInsightMonitoredMediaServersItem item;
     /**
      * @return Array of ResponseInsightGetOrganizationInsightMonitoredMediaServers
@@ -37,13 +32,6 @@ public final class GetInsightMonitoredMediaServersResult {
     private @Nullable String organizationId;
 
     private GetInsightMonitoredMediaServersResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetInsightMonitoredMediaServersItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetInsightMonitoredMediaServersResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetInsightMonitoredMediaServersItem item;
         private List<GetInsightMonitoredMediaServersItem> items;
         private @Nullable String monitoredMediaServerId;
@@ -86,21 +73,12 @@ public final class GetInsightMonitoredMediaServersResult {
         public Builder() {}
         public Builder(GetInsightMonitoredMediaServersResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.monitoredMediaServerId = defaults.monitoredMediaServerId;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetInsightMonitoredMediaServersResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetInsightMonitoredMediaServersItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetInsightMonitoredMediaServersResult {
         }
         public GetInsightMonitoredMediaServersResult build() {
             final var _resultValue = new GetInsightMonitoredMediaServersResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.monitoredMediaServerId = monitoredMediaServerId;

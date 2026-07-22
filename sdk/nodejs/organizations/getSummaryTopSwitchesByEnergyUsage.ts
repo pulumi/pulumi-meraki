@@ -59,10 +59,6 @@ export interface GetSummaryTopSwitchesByEnergyUsageArgs {
  */
 export interface GetSummaryTopSwitchesByEnergyUsageResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopSwitchesByEnergyUsage
      */
     readonly items: outputs.organizations.GetSummaryTopSwitchesByEnergyUsageItem[];

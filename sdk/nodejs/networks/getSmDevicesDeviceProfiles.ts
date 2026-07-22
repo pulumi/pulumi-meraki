@@ -51,10 +51,6 @@ export interface GetSmDevicesDeviceProfilesResult {
      */
     readonly deviceId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceDeviceProfiles
      */
     readonly items: outputs.networks.GetSmDevicesDeviceProfilesItem[];

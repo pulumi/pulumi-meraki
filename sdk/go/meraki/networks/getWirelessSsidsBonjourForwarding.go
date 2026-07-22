@@ -58,8 +58,6 @@ type LookupWirelessSsidsBonjourForwardingArgs struct {
 
 // A collection of values returned by getWirelessSsidsBonjourForwarding.
 type LookupWirelessSsidsBonjourForwardingResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
 	Item GetWirelessSsidsBonjourForwardingItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsBonjourForwardingResultOutput) ToLookupWirelessSsidsB
 
 func (o LookupWirelessSsidsBonjourForwardingResultOutput) ToLookupWirelessSsidsBonjourForwardingResultOutputWithContext(ctx context.Context) LookupWirelessSsidsBonjourForwardingResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsBonjourForwardingResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsBonjourForwardingResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsBonjourForwardingResultOutput) Item() GetWirelessSsidsBonjourForwardingItemOutput {

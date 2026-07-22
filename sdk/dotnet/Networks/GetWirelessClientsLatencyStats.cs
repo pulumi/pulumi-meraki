@@ -274,10 +274,6 @@ namespace Pulumi.Meraki.Networks
         /// fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
         /// </summary>
         public readonly string? Fields;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessClientsLatencyStatsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -314,8 +310,6 @@ namespace Pulumi.Meraki.Networks
 
             string? fields,
 
-            string id,
-
             Outputs.GetWirelessClientsLatencyStatsItemResult item,
 
             string networkId,
@@ -334,7 +328,6 @@ namespace Pulumi.Meraki.Networks
             Band = band;
             ClientId = clientId;
             Fields = fields;
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Ssid = ssid;

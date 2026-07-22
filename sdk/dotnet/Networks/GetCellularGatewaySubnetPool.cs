@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetCellularGatewaySubnetPoolResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCellularGatewaySubnetPoolItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetCellularGatewaySubnetPoolResult(
-            string id,
-
             Outputs.GetCellularGatewaySubnetPoolItemResult item,
 
             string networkId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
         }

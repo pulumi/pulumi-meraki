@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWirelessSsidsIdentityPsksResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return identityPskId path parameter. Identity psk ID
      * 
      */
@@ -42,13 +37,6 @@ public final class GetWirelessSsidsIdentityPsksResult {
     private @Nullable String number;
 
     private GetWirelessSsidsIdentityPsksResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return identityPskId path parameter. Identity psk ID
      * 
@@ -90,7 +78,6 @@ public final class GetWirelessSsidsIdentityPsksResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable String identityPskId;
         private GetWirelessSsidsIdentityPsksItem item;
         private List<GetWirelessSsidsIdentityPsksItem> items;
@@ -99,7 +86,6 @@ public final class GetWirelessSsidsIdentityPsksResult {
         public Builder() {}
         public Builder(GetWirelessSsidsIdentityPsksResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.identityPskId = defaults.identityPskId;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
@@ -107,14 +93,6 @@ public final class GetWirelessSsidsIdentityPsksResult {
     	      this.number = defaults.number;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessSsidsIdentityPsksResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder identityPskId(@Nullable String identityPskId) {
 
@@ -154,7 +132,6 @@ public final class GetWirelessSsidsIdentityPsksResult {
         }
         public GetWirelessSsidsIdentityPsksResult build() {
             final var _resultValue = new GetWirelessSsidsIdentityPsksResult();
-            _resultValue.id = id;
             _resultValue.identityPskId = identityPskId;
             _resultValue.item = item;
             _resultValue.items = items;

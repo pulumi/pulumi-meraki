@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetFirmwareUpgradesStagedEventsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetFirmwareUpgradesStagedEventsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetFirmwareUpgradesStagedEventsResult(
-            string id,
-
             Outputs.GetFirmwareUpgradesStagedEventsItemResult item,
 
             string networkId)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
         }

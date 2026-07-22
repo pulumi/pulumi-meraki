@@ -47,10 +47,6 @@ export interface GetSmProfilesArgs {
  */
 export interface GetSmProfilesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmProfiles
      */
     readonly items: outputs.networks.GetSmProfilesItem[];

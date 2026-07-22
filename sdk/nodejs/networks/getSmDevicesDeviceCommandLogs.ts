@@ -73,10 +73,6 @@ export interface GetSmDevicesDeviceCommandLogsResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceDeviceCommandLogs
      */
     readonly items: outputs.networks.GetSmDevicesDeviceCommandLogsItem[];

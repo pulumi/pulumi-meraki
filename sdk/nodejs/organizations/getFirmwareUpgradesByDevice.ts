@@ -97,10 +97,6 @@ export interface GetFirmwareUpgradesByDeviceResult {
      */
     readonly firmwareUpgradeBatchIds?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice
      */
     readonly items: outputs.organizations.GetFirmwareUpgradesByDeviceItem[];

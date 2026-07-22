@@ -64,8 +64,6 @@ type GetClientsBandwidthUsageHistoryArgs struct {
 
 // A collection of values returned by getClientsBandwidthUsageHistory.
 type GetClientsBandwidthUsageHistoryResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationClientsBandwidthUsageHistory
 	Items []GetClientsBandwidthUsageHistoryItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetClientsBandwidthUsageHistoryResultOutput) ToGetClientsBandwidthUsageH
 
 func (o GetClientsBandwidthUsageHistoryResultOutput) ToGetClientsBandwidthUsageHistoryResultOutputWithContext(ctx context.Context) GetClientsBandwidthUsageHistoryResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetClientsBandwidthUsageHistoryResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetClientsBandwidthUsageHistoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationClientsBandwidthUsageHistory

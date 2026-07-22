@@ -305,10 +305,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
         /// </summary>
         public readonly int? Interval;
@@ -353,8 +349,6 @@ namespace Pulumi.Meraki.Organizations
         private GetWirelessDevicesChannelUtilizationByNetworkResult(
             string? endingBefore,
 
-            string id,
-
             int? interval,
 
             ImmutableArray<Outputs.GetWirelessDevicesChannelUtilizationByNetworkItemResult> items,
@@ -376,7 +370,6 @@ namespace Pulumi.Meraki.Organizations
             double? timespan)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Interval = interval;
             Items = items;
             NetworkIds = networkIds;

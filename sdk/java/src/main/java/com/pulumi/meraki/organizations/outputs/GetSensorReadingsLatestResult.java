@@ -21,11 +21,6 @@ public final class GetSensorReadingsLatestResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSensorGetOrganizationSensorReadingsLatest
      * 
      */
@@ -68,13 +63,6 @@ public final class GetSensorReadingsLatestResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSensorGetOrganizationSensorReadingsLatest
@@ -136,7 +124,6 @@ public final class GetSensorReadingsLatestResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSensorReadingsLatestItem> items;
         private @Nullable List<String> metrics;
         private @Nullable List<String> networkIds;
@@ -148,7 +135,6 @@ public final class GetSensorReadingsLatestResult {
         public Builder(GetSensorReadingsLatestResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.metrics = defaults.metrics;
     	      this.networkIds = defaults.networkIds;
@@ -162,14 +148,6 @@ public final class GetSensorReadingsLatestResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSensorReadingsLatestResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -233,7 +211,6 @@ public final class GetSensorReadingsLatestResult {
         public GetSensorReadingsLatestResult build() {
             final var _resultValue = new GetSensorReadingsLatestResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.metrics = metrics;
             _resultValue.networkIds = networkIds;

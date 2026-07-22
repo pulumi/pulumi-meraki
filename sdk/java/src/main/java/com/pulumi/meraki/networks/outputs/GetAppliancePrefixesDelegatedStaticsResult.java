@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAppliancePrefixesDelegatedStaticsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetAppliancePrefixesDelegatedStaticsItem item;
     /**
      * @return Array of ResponseApplianceGetNetworkAppliancePrefixesDelegatedStatics
@@ -37,13 +32,6 @@ public final class GetAppliancePrefixesDelegatedStaticsResult {
     private @Nullable String staticDelegatedPrefixId;
 
     private GetAppliancePrefixesDelegatedStaticsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetAppliancePrefixesDelegatedStaticsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetAppliancePrefixesDelegatedStaticsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetAppliancePrefixesDelegatedStaticsItem item;
         private List<GetAppliancePrefixesDelegatedStaticsItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetAppliancePrefixesDelegatedStaticsResult {
         public Builder() {}
         public Builder(GetAppliancePrefixesDelegatedStaticsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.staticDelegatedPrefixId = defaults.staticDelegatedPrefixId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetAppliancePrefixesDelegatedStaticsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetAppliancePrefixesDelegatedStaticsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetAppliancePrefixesDelegatedStaticsResult {
         }
         public GetAppliancePrefixesDelegatedStaticsResult build() {
             final var _resultValue = new GetAppliancePrefixesDelegatedStaticsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

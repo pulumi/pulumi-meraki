@@ -27,7 +27,7 @@ class GetWirelessClientsLatencyStatsResult:
     """
     A collection of values returned by getWirelessClientsLatencyStats.
     """
-    def __init__(__self__, ap_tag=None, band=None, client_id=None, fields=None, id=None, item=None, network_id=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
+    def __init__(__self__, ap_tag=None, band=None, client_id=None, fields=None, item=None, network_id=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
         if ap_tag and not isinstance(ap_tag, str):
             raise TypeError("Expected argument 'ap_tag' to be a str")
         pulumi.set(__self__, "ap_tag", ap_tag)
@@ -40,9 +40,6 @@ class GetWirelessClientsLatencyStatsResult:
         if fields and not isinstance(fields, str):
             raise TypeError("Expected argument 'fields' to be a str")
         pulumi.set(__self__, "fields", fields)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -96,14 +93,6 @@ class GetWirelessClientsLatencyStatsResult:
         fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
         """
         return pulumi.get(self, "fields")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -169,7 +158,6 @@ class AwaitableGetWirelessClientsLatencyStatsResult(GetWirelessClientsLatencySta
             band=self.band,
             client_id=self.client_id,
             fields=self.fields,
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             ssid=self.ssid,
@@ -241,7 +229,6 @@ def get_wireless_clients_latency_stats(ap_tag: Optional[_builtins.str] = None,
         band=pulumi.get(__ret__, 'band'),
         client_id=pulumi.get(__ret__, 'client_id'),
         fields=pulumi.get(__ret__, 'fields'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         ssid=pulumi.get(__ret__, 'ssid'),
@@ -310,7 +297,6 @@ def get_wireless_clients_latency_stats_output(ap_tag: pulumi.Input[Optional[Opti
         band=pulumi.get(__response__, 'band'),
         client_id=pulumi.get(__response__, 'client_id'),
         fields=pulumi.get(__response__, 'fields'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         ssid=pulumi.get(__response__, 'ssid'),

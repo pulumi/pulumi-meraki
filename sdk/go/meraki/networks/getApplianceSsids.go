@@ -32,8 +32,6 @@ type LookupApplianceSsidsArgs struct {
 
 // A collection of values returned by getApplianceSsids.
 type LookupApplianceSsidsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                `pulumi:"id"`
 	Item GetApplianceSsidsItem `pulumi:"item"`
 	// Array of ResponseApplianceGetNetworkApplianceSsids
 	Items []GetApplianceSsidsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupApplianceSsidsResultOutput) ToLookupApplianceSsidsResultOutput() L
 
 func (o LookupApplianceSsidsResultOutput) ToLookupApplianceSsidsResultOutputWithContext(ctx context.Context) LookupApplianceSsidsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceSsidsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceSsidsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceSsidsResultOutput) Item() GetApplianceSsidsItemOutput {

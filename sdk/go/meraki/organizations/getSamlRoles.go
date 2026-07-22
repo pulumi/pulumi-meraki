@@ -32,8 +32,6 @@ type LookupSamlRolesArgs struct {
 
 // A collection of values returned by getSamlRoles.
 type LookupSamlRolesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string           `pulumi:"id"`
 	Item GetSamlRolesItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationSamlRoles
 	Items []GetSamlRolesItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSamlRolesResultOutput) ToLookupSamlRolesResultOutput() LookupSamlR
 
 func (o LookupSamlRolesResultOutput) ToLookupSamlRolesResultOutputWithContext(ctx context.Context) LookupSamlRolesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSamlRolesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSamlRolesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSamlRolesResultOutput) Item() GetSamlRolesItemOutput {

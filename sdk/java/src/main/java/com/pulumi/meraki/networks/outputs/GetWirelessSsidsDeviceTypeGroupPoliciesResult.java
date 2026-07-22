@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWirelessSsidsDeviceTypeGroupPoliciesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessSsidsDeviceTypeGroupPoliciesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -29,13 +24,6 @@ public final class GetWirelessSsidsDeviceTypeGroupPoliciesResult {
     private String number;
 
     private GetWirelessSsidsDeviceTypeGroupPoliciesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWirelessSsidsDeviceTypeGroupPoliciesItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetWirelessSsidsDeviceTypeGroupPoliciesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWirelessSsidsDeviceTypeGroupPoliciesItem item;
         private String networkId;
         private String number;
         public Builder() {}
         public Builder(GetWirelessSsidsDeviceTypeGroupPoliciesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.number = defaults.number;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessSsidsDeviceTypeGroupPoliciesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWirelessSsidsDeviceTypeGroupPoliciesItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetWirelessSsidsDeviceTypeGroupPoliciesResult {
         }
         public GetWirelessSsidsDeviceTypeGroupPoliciesResult build() {
             final var _resultValue = new GetWirelessSsidsDeviceTypeGroupPoliciesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.number = number;

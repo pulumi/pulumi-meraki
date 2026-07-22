@@ -55,8 +55,6 @@ type GetSensorRelationshipsArgs struct {
 
 // A collection of values returned by getSensorRelationships.
 type GetSensorRelationshipsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSensorGetNetworkSensorRelationships
 	Items []GetSensorRelationshipsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o GetSensorRelationshipsResultOutput) ToGetSensorRelationshipsResultOutput
 
 func (o GetSensorRelationshipsResultOutput) ToGetSensorRelationshipsResultOutputWithContext(ctx context.Context) GetSensorRelationshipsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSensorRelationshipsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSensorRelationshipsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSensorGetNetworkSensorRelationships

@@ -139,10 +139,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSmUsersDeviceProfilesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSmGetNetworkSmUserDeviceProfiles
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSmUsersDeviceProfilesItemResult> Items;
@@ -157,15 +153,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSmUsersDeviceProfilesResult(
-            string id,
-
             ImmutableArray<Outputs.GetSmUsersDeviceProfilesItemResult> items,
 
             string networkId,
 
             string userId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
             UserId = userId;

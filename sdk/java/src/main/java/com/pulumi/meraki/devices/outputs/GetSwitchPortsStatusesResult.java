@@ -16,11 +16,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSwitchPortsStatusesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSwitchGetDeviceSwitchPortsStatuses
      * 
      */
@@ -42,13 +37,6 @@ public final class GetSwitchPortsStatusesResult {
     private @Nullable Double timespan;
 
     private GetSwitchPortsStatusesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseSwitchGetDeviceSwitchPortsStatuses
      * 
@@ -87,7 +75,6 @@ public final class GetSwitchPortsStatusesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSwitchPortsStatusesItem> items;
         private String serial;
         private @Nullable String t0;
@@ -95,21 +82,12 @@ public final class GetSwitchPortsStatusesResult {
         public Builder() {}
         public Builder(GetSwitchPortsStatusesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.serial = defaults.serial;
     	      this.t0 = defaults.t0;
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchPortsStatusesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSwitchPortsStatusesItem> items) {
             if (items == null) {
@@ -143,7 +121,6 @@ public final class GetSwitchPortsStatusesResult {
         }
         public GetSwitchPortsStatusesResult build() {
             final var _resultValue = new GetSwitchPortsStatusesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.serial = serial;
             _resultValue.t0 = t0;

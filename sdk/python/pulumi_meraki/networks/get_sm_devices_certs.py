@@ -27,13 +27,10 @@ class GetSmDevicesCertsResult:
     """
     A collection of values returned by getSmDevicesCerts.
     """
-    def __init__(__self__, device_id=None, id=None, items=None, network_id=None):
+    def __init__(__self__, device_id=None, items=None, network_id=None):
         if device_id and not isinstance(device_id, str):
             raise TypeError("Expected argument 'device_id' to be a str")
         pulumi.set(__self__, "device_id", device_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -48,14 +45,6 @@ class GetSmDevicesCertsResult:
         deviceId path parameter. Device ID
         """
         return pulumi.get(self, "device_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -81,7 +70,6 @@ class AwaitableGetSmDevicesCertsResult(GetSmDevicesCertsResult):
             yield self
         return GetSmDevicesCertsResult(
             device_id=self.device_id,
-            id=self.id,
             items=self.items,
             network_id=self.network_id)
 
@@ -113,7 +101,6 @@ def get_sm_devices_certs(device_id: Optional[_builtins.str] = None,
 
     return AwaitableGetSmDevicesCertsResult(
         device_id=pulumi.get(__ret__, 'device_id'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_devices_certs_output(device_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -142,6 +129,5 @@ def get_sm_devices_certs_output(device_id: pulumi.Input[Optional[_builtins.str]]
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesCerts:getSmDevicesCerts', __args__, opts=opts, typ=GetSmDevicesCertsResult)
     return __ret__.apply(lambda __response__: GetSmDevicesCertsResult(
         device_id=pulumi.get(__response__, 'device_id'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

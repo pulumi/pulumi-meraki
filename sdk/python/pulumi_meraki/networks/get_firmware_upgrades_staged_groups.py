@@ -27,13 +27,10 @@ class GetFirmwareUpgradesStagedGroupsResult:
     """
     A collection of values returned by getFirmwareUpgradesStagedGroups.
     """
-    def __init__(__self__, group_id=None, id=None, item=None, items=None, network_id=None):
+    def __init__(__self__, group_id=None, item=None, items=None, network_id=None):
         if group_id and not isinstance(group_id, str):
             raise TypeError("Expected argument 'group_id' to be a str")
         pulumi.set(__self__, "group_id", group_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetFirmwareUpgradesStagedGroupsResult:
         groupId path parameter. Group ID
         """
         return pulumi.get(self, "group_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetFirmwareUpgradesStagedGroupsResult(GetFirmwareUpgradesStagedGr
             yield self
         return GetFirmwareUpgradesStagedGroupsResult(
             group_id=self.group_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id)
@@ -113,7 +101,6 @@ def get_firmware_upgrades_staged_groups(group_id: Optional[_builtins.str] = None
 
     return AwaitableGetFirmwareUpgradesStagedGroupsResult(
         group_id=pulumi.get(__ret__, 'group_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -134,7 +121,6 @@ def get_firmware_upgrades_staged_groups_output(group_id: pulumi.Input[Optional[O
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups', __args__, opts=opts, typ=GetFirmwareUpgradesStagedGroupsResult)
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesStagedGroupsResult(
         group_id=pulumi.get(__response__, 'group_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

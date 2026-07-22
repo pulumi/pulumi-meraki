@@ -121,10 +121,6 @@ export interface GetWirelessDataRateHistoryResult {
      */
     readonly deviceSerial?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessDataRateHistory
      */
     readonly items: outputs.networks.GetWirelessDataRateHistoryItem[];

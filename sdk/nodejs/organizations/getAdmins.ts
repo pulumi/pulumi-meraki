@@ -41,10 +41,6 @@ export interface GetAdminsArgs {
  */
 export interface GetAdminsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationAdmins
      */
     readonly items: outputs.organizations.GetAdminsItem[];

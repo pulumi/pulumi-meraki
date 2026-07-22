@@ -27,10 +27,7 @@ class GetSmTargetGroupsResult:
     """
     A collection of values returned by getSmTargetGroups.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, target_group_id=None, with_details=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, target_group_id=None, with_details=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -46,14 +43,6 @@ class GetSmTargetGroupsResult:
         if with_details and not isinstance(with_details, bool):
             raise TypeError("Expected argument 'with_details' to be a bool")
         pulumi.set(__self__, "with_details", with_details)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -99,7 +88,6 @@ class AwaitableGetSmTargetGroupsResult(GetSmTargetGroupsResult):
         if False:
             yield self
         return GetSmTargetGroupsResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -127,7 +115,6 @@ def get_sm_target_groups(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSmTargetGroups:getSmTargetGroups', __args__, opts=opts, typ=GetSmTargetGroupsResult).value
 
     return AwaitableGetSmTargetGroupsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -152,7 +139,6 @@ def get_sm_target_groups_output(network_id: pulumi.Input[Optional[Optional[_buil
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmTargetGroups:getSmTargetGroups', __args__, opts=opts, typ=GetSmTargetGroupsResult)
     return __ret__.apply(lambda __response__: GetSmTargetGroupsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

@@ -55,8 +55,6 @@ type LookupApplianceVpnBgpArgs struct {
 
 // A collection of values returned by getApplianceVpnBgp.
 type LookupApplianceVpnBgpResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetApplianceVpnBgpItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceVpnBgpResultOutput) ToLookupApplianceVpnBgpResultOutput()
 
 func (o LookupApplianceVpnBgpResultOutput) ToLookupApplianceVpnBgpResultOutputWithContext(ctx context.Context) LookupApplianceVpnBgpResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceVpnBgpResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceVpnBgpResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceVpnBgpResultOutput) Item() GetApplianceVpnBgpItemOutput {

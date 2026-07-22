@@ -17,11 +17,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSensorAlertsOverviewByMetricResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.
      * 
      */
@@ -53,13 +48,6 @@ public final class GetSensorAlertsOverviewByMetricResult {
     private @Nullable Double timespan;
 
     private GetSensorAlertsOverviewByMetricResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.
      * 
@@ -112,7 +100,6 @@ public final class GetSensorAlertsOverviewByMetricResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable Integer interval;
         private List<GetSensorAlertsOverviewByMetricItem> items;
         private String networkId;
@@ -122,7 +109,6 @@ public final class GetSensorAlertsOverviewByMetricResult {
         public Builder() {}
         public Builder(GetSensorAlertsOverviewByMetricResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.interval = defaults.interval;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -131,14 +117,6 @@ public final class GetSensorAlertsOverviewByMetricResult {
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSensorAlertsOverviewByMetricResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder interval(@Nullable Integer interval) {
 
@@ -184,7 +162,6 @@ public final class GetSensorAlertsOverviewByMetricResult {
         }
         public GetSensorAlertsOverviewByMetricResult build() {
             final var _resultValue = new GetSensorAlertsOverviewByMetricResult();
-            _resultValue.id = id;
             _resultValue.interval = interval;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

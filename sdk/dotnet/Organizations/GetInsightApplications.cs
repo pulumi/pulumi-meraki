@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetInsightApplicationsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseInsightGetOrganizationInsightApplications
         /// </summary>
         public readonly ImmutableArray<Outputs.GetInsightApplicationsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetInsightApplicationsResult(
-            string id,
-
             ImmutableArray<Outputs.GetInsightApplicationsItemResult> items,
 
             string organizationId)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
         }

@@ -272,10 +272,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly ImmutableArray<string> Emails;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// ids query parameter. Filter users by id(s).
         /// </summary>
         public readonly ImmutableArray<string> Ids;
@@ -300,8 +296,6 @@ namespace Pulumi.Meraki.Networks
         private GetSmUsersResult(
             ImmutableArray<string> emails,
 
-            string id,
-
             ImmutableArray<string> ids,
 
             ImmutableArray<Outputs.GetSmUsersItemResult> items,
@@ -313,7 +307,6 @@ namespace Pulumi.Meraki.Networks
             ImmutableArray<string> usernames)
         {
             Emails = emails;
-            Id = id;
             Ids = ids;
             Items = items;
             NetworkId = networkId;

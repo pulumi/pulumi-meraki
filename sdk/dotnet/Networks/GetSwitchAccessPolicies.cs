@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Networks
         /// accessPolicyNumber path parameter. Access policy number
         /// </summary>
         public readonly string? AccessPolicyNumber;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSwitchAccessPoliciesItemResult Item;
         /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchAccessPolicies
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Networks
         private GetSwitchAccessPoliciesResult(
             string? accessPolicyNumber,
 
-            string id,
-
             Outputs.GetSwitchAccessPoliciesItemResult item,
 
             ImmutableArray<Outputs.GetSwitchAccessPoliciesItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Networks
             string? networkId)
         {
             AccessPolicyNumber = accessPolicyNumber;
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

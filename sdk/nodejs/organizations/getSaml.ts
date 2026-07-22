@@ -40,10 +40,6 @@ export interface GetSamlArgs {
  * A collection of values returned by getSaml.
  */
 export interface GetSamlResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetSamlItem;
     /**
      * organizationId path parameter. Organization ID

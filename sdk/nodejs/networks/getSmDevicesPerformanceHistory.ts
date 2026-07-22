@@ -73,10 +73,6 @@ export interface GetSmDevicesPerformanceHistoryResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDevicePerformanceHistory
      */
     readonly items: outputs.networks.GetSmDevicesPerformanceHistoryItem[];

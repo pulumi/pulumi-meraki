@@ -32,8 +32,6 @@ type LookupSamlIdpsArgs struct {
 
 // A collection of values returned by getSamlIdps.
 type LookupSamlIdpsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// idpId path parameter. Idp ID
 	IdpId *string         `pulumi:"idpId"`
 	Item  GetSamlIdpsItem `pulumi:"item"`
@@ -77,11 +75,6 @@ func (o LookupSamlIdpsResultOutput) ToLookupSamlIdpsResultOutput() LookupSamlIdp
 
 func (o LookupSamlIdpsResultOutput) ToLookupSamlIdpsResultOutputWithContext(ctx context.Context) LookupSamlIdpsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSamlIdpsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSamlIdpsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // idpId path parameter. Idp ID

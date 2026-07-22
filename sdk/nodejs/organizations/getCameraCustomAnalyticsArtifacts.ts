@@ -40,10 +40,6 @@ export interface GetCameraCustomAnalyticsArtifactsResult {
      * artifactId path parameter. Artifact ID
      */
     readonly artifactId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetCameraCustomAnalyticsArtifactsItem;
     /**
      * Array of ResponseCameraGetOrganizationCameraCustomAnalyticsArtifacts

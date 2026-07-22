@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetSummaryTopClientsByUsageResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSummaryTopClientsByUsage
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSummaryTopClientsByUsageItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSummaryTopClientsByUsageResult(
-            string id,
-
             ImmutableArray<Outputs.GetSummaryTopClientsByUsageItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

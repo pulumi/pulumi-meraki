@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetEarlyAccessFeaturesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationEarlyAccessFeatures
         /// </summary>
         public readonly ImmutableArray<Outputs.GetEarlyAccessFeaturesItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetEarlyAccessFeaturesResult(
-            string id,
-
             ImmutableArray<Outputs.GetEarlyAccessFeaturesItemResult> items,
 
             string organizationId)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
         }

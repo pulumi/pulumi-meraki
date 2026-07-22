@@ -55,8 +55,6 @@ type LookupCameraVideoSettingsArgs struct {
 
 // A collection of values returned by getCameraVideoSettings.
 type LookupCameraVideoSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetCameraVideoSettingsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCameraVideoSettingsResultOutput) ToLookupCameraVideoSettingsResult
 
 func (o LookupCameraVideoSettingsResultOutput) ToLookupCameraVideoSettingsResultOutputWithContext(ctx context.Context) LookupCameraVideoSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraVideoSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraVideoSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraVideoSettingsResultOutput) Item() GetCameraVideoSettingsItemOutput {

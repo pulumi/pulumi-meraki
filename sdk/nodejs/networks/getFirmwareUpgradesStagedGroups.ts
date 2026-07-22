@@ -40,10 +40,6 @@ export interface GetFirmwareUpgradesStagedGroupsResult {
      * groupId path parameter. Group ID
      */
     readonly groupId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetFirmwareUpgradesStagedGroupsItem;
     /**
      * Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedGroups

@@ -157,10 +157,6 @@ export interface GetEventsResult {
      */
     readonly excludedEventTypes?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
      */
     readonly includedEventTypes?: string[];

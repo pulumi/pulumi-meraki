@@ -27,13 +27,10 @@ class GetAdaptivePolicyAclsResult:
     """
     A collection of values returned by getAdaptivePolicyAcls.
     """
-    def __init__(__self__, acl_id=None, id=None, item=None, items=None, organization_id=None):
+    def __init__(__self__, acl_id=None, item=None, items=None, organization_id=None):
         if acl_id and not isinstance(acl_id, str):
             raise TypeError("Expected argument 'acl_id' to be a str")
         pulumi.set(__self__, "acl_id", acl_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetAdaptivePolicyAclsResult:
         aclId path parameter. Acl ID
         """
         return pulumi.get(self, "acl_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetAdaptivePolicyAclsResult(GetAdaptivePolicyAclsResult):
             yield self
         return GetAdaptivePolicyAclsResult(
             acl_id=self.acl_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id)
@@ -113,7 +101,6 @@ def get_adaptive_policy_acls(acl_id: Optional[_builtins.str] = None,
 
     return AwaitableGetAdaptivePolicyAclsResult(
         acl_id=pulumi.get(__ret__, 'acl_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -134,7 +121,6 @@ def get_adaptive_policy_acls_output(acl_id: pulumi.Input[Optional[Optional[_buil
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAdaptivePolicyAcls:getAdaptivePolicyAcls', __args__, opts=opts, typ=GetAdaptivePolicyAclsResult)
     return __ret__.apply(lambda __response__: GetAdaptivePolicyAclsResult(
         acl_id=pulumi.get(__response__, 'acl_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNetflowResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetNetflowItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetNetflowResult {
     private String networkId;
 
     private GetNetflowResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetNetflowItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetNetflowResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetNetflowItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetNetflowResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetNetflowResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetNetflowItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetNetflowResult {
         }
         public GetNetflowResult build() {
             final var _resultValue = new GetNetflowResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

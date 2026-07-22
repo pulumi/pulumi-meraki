@@ -32,8 +32,6 @@ type LookupSwitchRoutingInterfacesArgs struct {
 
 // A collection of values returned by getSwitchRoutingInterfaces.
 type LookupSwitchRoutingInterfacesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// interfaceId path parameter. Interface ID
 	InterfaceId *string                        `pulumi:"interfaceId"`
 	Item        GetSwitchRoutingInterfacesItem `pulumi:"item"`
@@ -77,11 +75,6 @@ func (o LookupSwitchRoutingInterfacesResultOutput) ToLookupSwitchRoutingInterfac
 
 func (o LookupSwitchRoutingInterfacesResultOutput) ToLookupSwitchRoutingInterfacesResultOutputWithContext(ctx context.Context) LookupSwitchRoutingInterfacesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchRoutingInterfacesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchRoutingInterfacesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // interfaceId path parameter. Interface ID

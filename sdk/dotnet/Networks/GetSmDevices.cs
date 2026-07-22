@@ -447,10 +447,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly ImmutableArray<string> Fields;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// ids query parameter. Filter devices by id(s).
         /// </summary>
         public readonly ImmutableArray<string> Ids;
@@ -497,8 +493,6 @@ namespace Pulumi.Meraki.Networks
 
             ImmutableArray<string> fields,
 
-            string id,
-
             ImmutableArray<string> ids,
 
             ImmutableArray<Outputs.GetSmDevicesItemResult> items,
@@ -521,7 +515,6 @@ namespace Pulumi.Meraki.Networks
         {
             EndingBefore = endingBefore;
             Fields = fields;
-            Id = id;
             Ids = ids;
             Items = items;
             NetworkId = networkId;

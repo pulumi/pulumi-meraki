@@ -19,11 +19,6 @@ public final class GetWebhooksHttpServersResult {
      * 
      */
     private @Nullable String httpServerId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWebhooksHttpServersItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkWebhooksHttpServers
@@ -43,13 +38,6 @@ public final class GetWebhooksHttpServersResult {
      */
     public Optional<String> httpServerId() {
         return Optional.ofNullable(this.httpServerId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetWebhooksHttpServersItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetWebhooksHttpServersResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String httpServerId;
-        private String id;
         private GetWebhooksHttpServersItem item;
         private List<GetWebhooksHttpServersItem> items;
         private @Nullable String networkId;
@@ -87,7 +74,6 @@ public final class GetWebhooksHttpServersResult {
         public Builder(GetWebhooksHttpServersResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.httpServerId = defaults.httpServerId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -97,14 +83,6 @@ public final class GetWebhooksHttpServersResult {
         public Builder httpServerId(@Nullable String httpServerId) {
 
             this.httpServerId = httpServerId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWebhooksHttpServersResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetWebhooksHttpServersResult {
         public GetWebhooksHttpServersResult build() {
             final var _resultValue = new GetWebhooksHttpServersResult();
             _resultValue.httpServerId = httpServerId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

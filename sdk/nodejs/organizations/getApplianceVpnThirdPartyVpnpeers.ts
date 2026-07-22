@@ -40,10 +40,6 @@ export interface GetApplianceVpnThirdPartyVpnpeersArgs {
  * A collection of values returned by getApplianceVpnThirdPartyVpnpeers.
  */
 export interface GetApplianceVpnThirdPartyVpnpeersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetApplianceVpnThirdPartyVpnpeersItem;
     /**
      * organizationId path parameter. Organization ID

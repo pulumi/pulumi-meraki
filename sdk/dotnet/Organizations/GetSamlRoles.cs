@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetSamlRolesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSamlRolesItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSamlRoles
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSamlRolesResult(
-            string id,
-
             Outputs.GetSamlRolesItemResult item,
 
             ImmutableArray<Outputs.GetSamlRolesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? samlRoleId)
         {
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

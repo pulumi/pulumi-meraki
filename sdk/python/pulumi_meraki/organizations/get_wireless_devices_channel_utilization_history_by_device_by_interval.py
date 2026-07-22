@@ -27,13 +27,10 @@ class GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult:
     """
     A collection of values returned by getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval.
     """
-    def __init__(__self__, ending_before=None, id=None, interval=None, items=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None, t0=None, t1=None, timespan=None):
+    def __init__(__self__, ending_before=None, interval=None, items=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None, t0=None, t1=None, timespan=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if interval and not isinstance(interval, int):
             raise TypeError("Expected argument 'interval' to be a int")
         pulumi.set(__self__, "interval", interval)
@@ -72,14 +69,6 @@ class GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -169,7 +158,6 @@ class AwaitableGetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResu
             yield self
         return GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult(
             ending_before=self.ending_before,
-            id=self.id,
             interval=self.interval,
             items=self.items,
             network_ids=self.network_ids,
@@ -241,7 +229,6 @@ def get_wireless_devices_channel_utilization_history_by_device_by_interval(endin
 
     return AwaitableGetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         interval=pulumi.get(__ret__, 'interval'),
         items=pulumi.get(__ret__, 'items'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
@@ -310,7 +297,6 @@ def get_wireless_devices_channel_utilization_history_by_device_by_interval_outpu
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval', __args__, opts=opts, typ=GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult)
     return __ret__.apply(lambda __response__: GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         interval=pulumi.get(__response__, 'interval'),
         items=pulumi.get(__response__, 'items'),
         network_ids=pulumi.get(__response__, 'network_ids'),

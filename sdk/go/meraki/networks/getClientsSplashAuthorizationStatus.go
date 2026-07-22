@@ -59,10 +59,8 @@ type LookupClientsSplashAuthorizationStatusArgs struct {
 // A collection of values returned by getClientsSplashAuthorizationStatus.
 type LookupClientsSplashAuthorizationStatusResult struct {
 	// clientId path parameter. Client ID
-	ClientId string `pulumi:"clientId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                  `pulumi:"id"`
-	Item GetClientsSplashAuthorizationStatusItem `pulumi:"item"`
+	ClientId string                                  `pulumi:"clientId"`
+	Item     GetClientsSplashAuthorizationStatusItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 }
@@ -106,11 +104,6 @@ func (o LookupClientsSplashAuthorizationStatusResultOutput) ToLookupClientsSplas
 // clientId path parameter. Client ID
 func (o LookupClientsSplashAuthorizationStatusResultOutput) ClientId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupClientsSplashAuthorizationStatusResult) string { return v.ClientId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupClientsSplashAuthorizationStatusResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupClientsSplashAuthorizationStatusResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupClientsSplashAuthorizationStatusResultOutput) Item() GetClientsSplashAuthorizationStatusItemOutput {

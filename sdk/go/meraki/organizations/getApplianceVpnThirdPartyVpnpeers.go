@@ -55,8 +55,6 @@ type LookupApplianceVpnThirdPartyVpnpeersArgs struct {
 
 // A collection of values returned by getApplianceVpnThirdPartyVpnpeers.
 type LookupApplianceVpnThirdPartyVpnpeersResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
 	Item GetApplianceVpnThirdPartyVpnpeersItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceVpnThirdPartyVpnpeersResultOutput) ToLookupApplianceVpnTh
 
 func (o LookupApplianceVpnThirdPartyVpnpeersResultOutput) ToLookupApplianceVpnThirdPartyVpnpeersResultOutputWithContext(ctx context.Context) LookupApplianceVpnThirdPartyVpnpeersResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceVpnThirdPartyVpnpeersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceVpnThirdPartyVpnpeersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceVpnThirdPartyVpnpeersResultOutput) Item() GetApplianceVpnThirdPartyVpnpeersItemOutput {

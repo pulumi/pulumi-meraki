@@ -36,10 +36,6 @@ export interface GetInsightMonitoredMediaServersArgs {
  * A collection of values returned by getInsightMonitoredMediaServers.
  */
 export interface GetInsightMonitoredMediaServersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetInsightMonitoredMediaServersItem;
     /**
      * Array of ResponseInsightGetOrganizationInsightMonitoredMediaServers

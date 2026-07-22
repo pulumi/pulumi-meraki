@@ -255,10 +255,6 @@ namespace Pulumi.Meraki.Networks
         /// clientId path parameter. Client ID
         /// </summary>
         public readonly string ClientId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessClientsConnectionStatsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -293,8 +289,6 @@ namespace Pulumi.Meraki.Networks
 
             string clientId,
 
-            string id,
-
             Outputs.GetWirelessClientsConnectionStatsItemResult item,
 
             string networkId,
@@ -312,7 +306,6 @@ namespace Pulumi.Meraki.Networks
             ApTag = apTag;
             Band = band;
             ClientId = clientId;
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Ssid = ssid;

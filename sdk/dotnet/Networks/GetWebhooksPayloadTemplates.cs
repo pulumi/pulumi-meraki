@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWebhooksPayloadTemplatesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWebhooksPayloadTemplatesItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkWebhooksPayloadTemplates
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWebhooksPayloadTemplatesResult(
-            string id,
-
             Outputs.GetWebhooksPayloadTemplatesItemResult item,
 
             ImmutableArray<Outputs.GetWebhooksPayloadTemplatesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? payloadTemplateId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -27,16 +27,13 @@ class GetPiiSmOwnersForKeyResult:
     """
     A collection of values returned by getPiiSmOwnersForKey.
     """
-    def __init__(__self__, bluetooth_mac=None, email=None, id=None, imei=None, item=None, mac=None, network_id=None, serial=None, username=None):
+    def __init__(__self__, bluetooth_mac=None, email=None, imei=None, item=None, mac=None, network_id=None, serial=None, username=None):
         if bluetooth_mac and not isinstance(bluetooth_mac, str):
             raise TypeError("Expected argument 'bluetooth_mac' to be a str")
         pulumi.set(__self__, "bluetooth_mac", bluetooth_mac)
         if email and not isinstance(email, str):
             raise TypeError("Expected argument 'email' to be a str")
         pulumi.set(__self__, "email", email)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if imei and not isinstance(imei, str):
             raise TypeError("Expected argument 'imei' to be a str")
         pulumi.set(__self__, "imei", imei)
@@ -71,14 +68,6 @@ class GetPiiSmOwnersForKeyResult:
         email query parameter. The email of a network user account or a Systems Manager device
         """
         return pulumi.get(self, "email")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -134,7 +123,6 @@ class AwaitableGetPiiSmOwnersForKeyResult(GetPiiSmOwnersForKeyResult):
         return GetPiiSmOwnersForKeyResult(
             bluetooth_mac=self.bluetooth_mac,
             email=self.email,
-            id=self.id,
             imei=self.imei,
             item=self.item,
             mac=self.mac,
@@ -191,7 +179,6 @@ def get_pii_sm_owners_for_key(bluetooth_mac: Optional[_builtins.str] = None,
     return AwaitableGetPiiSmOwnersForKeyResult(
         bluetooth_mac=pulumi.get(__ret__, 'bluetooth_mac'),
         email=pulumi.get(__ret__, 'email'),
-        id=pulumi.get(__ret__, 'id'),
         imei=pulumi.get(__ret__, 'imei'),
         item=pulumi.get(__ret__, 'item'),
         mac=pulumi.get(__ret__, 'mac'),
@@ -245,7 +232,6 @@ def get_pii_sm_owners_for_key_output(bluetooth_mac: pulumi.Input[Optional[Option
     return __ret__.apply(lambda __response__: GetPiiSmOwnersForKeyResult(
         bluetooth_mac=pulumi.get(__response__, 'bluetooth_mac'),
         email=pulumi.get(__response__, 'email'),
-        id=pulumi.get(__response__, 'id'),
         imei=pulumi.get(__response__, 'imei'),
         item=pulumi.get(__response__, 'item'),
         mac=pulumi.get(__response__, 'mac'),

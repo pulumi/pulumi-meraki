@@ -67,8 +67,6 @@ type GetSensorAlertsOverviewByMetricArgs struct {
 
 // A collection of values returned by getSensorAlertsOverviewByMetric.
 type GetSensorAlertsOverviewByMetricResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.
 	Interval *int `pulumi:"interval"`
 	// Array of ResponseSensorGetNetworkSensorAlertsOverviewByMetric
@@ -123,11 +121,6 @@ func (o GetSensorAlertsOverviewByMetricResultOutput) ToGetSensorAlertsOverviewBy
 
 func (o GetSensorAlertsOverviewByMetricResultOutput) ToGetSensorAlertsOverviewByMetricResultOutputWithContext(ctx context.Context) GetSensorAlertsOverviewByMetricResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSensorAlertsOverviewByMetricResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSensorAlertsOverviewByMetricResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.

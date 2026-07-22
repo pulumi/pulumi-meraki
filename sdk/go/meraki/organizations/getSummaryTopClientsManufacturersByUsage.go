@@ -64,8 +64,6 @@ type GetSummaryTopClientsManufacturersByUsageArgs struct {
 
 // A collection of values returned by getSummaryTopClientsManufacturersByUsage.
 type GetSummaryTopClientsManufacturersByUsageResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationSummaryTopClientsManufacturersByUsage
 	Items []GetSummaryTopClientsManufacturersByUsageItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetSummaryTopClientsManufacturersByUsageResultOutput) ToGetSummaryTopCli
 
 func (o GetSummaryTopClientsManufacturersByUsageResultOutput) ToGetSummaryTopClientsManufacturersByUsageResultOutputWithContext(ctx context.Context) GetSummaryTopClientsManufacturersByUsageResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSummaryTopClientsManufacturersByUsageResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSummaryTopClientsManufacturersByUsageResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationSummaryTopClientsManufacturersByUsage

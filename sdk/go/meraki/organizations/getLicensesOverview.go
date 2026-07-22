@@ -55,8 +55,6 @@ type GetLicensesOverviewArgs struct {
 
 // A collection of values returned by getLicensesOverview.
 type GetLicensesOverviewResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                  `pulumi:"id"`
 	Item GetLicensesOverviewItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o GetLicensesOverviewResultOutput) ToGetLicensesOverviewResultOutput() Get
 
 func (o GetLicensesOverviewResultOutput) ToGetLicensesOverviewResultOutputWithContext(ctx context.Context) GetLicensesOverviewResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetLicensesOverviewResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLicensesOverviewResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetLicensesOverviewResultOutput) Item() GetLicensesOverviewItemOutput {

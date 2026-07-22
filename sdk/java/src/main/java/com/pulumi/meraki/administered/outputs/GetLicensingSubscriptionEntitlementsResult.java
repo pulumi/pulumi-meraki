@@ -13,11 +13,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLicensingSubscriptionEntitlementsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetLicensingSubscriptionEntitlementsItem item;
     /**
      * @return skus query parameter. Filter to entitlements with the specified SKUs
@@ -26,13 +21,6 @@ public final class GetLicensingSubscriptionEntitlementsResult {
     private @Nullable List<String> skuses;
 
     private GetLicensingSubscriptionEntitlementsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetLicensingSubscriptionEntitlementsItem item() {
         return this.item;
     }
@@ -53,25 +41,15 @@ public final class GetLicensingSubscriptionEntitlementsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetLicensingSubscriptionEntitlementsItem item;
         private @Nullable List<String> skuses;
         public Builder() {}
         public Builder(GetLicensingSubscriptionEntitlementsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.skuses = defaults.skuses;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLicensingSubscriptionEntitlementsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetLicensingSubscriptionEntitlementsItem item) {
             if (item == null) {
@@ -91,7 +69,6 @@ public final class GetLicensingSubscriptionEntitlementsResult {
         }
         public GetLicensingSubscriptionEntitlementsResult build() {
             final var _resultValue = new GetLicensingSubscriptionEntitlementsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.skuses = skuses;
             return _resultValue;

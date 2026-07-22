@@ -95,8 +95,6 @@ type GetWirelessSignalQualityHistoryResult struct {
 	ClientId *string `pulumi:"clientId"`
 	// deviceSerial query parameter. Filter results by device.
 	DeviceSerial *string `pulumi:"deviceSerial"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseWirelessGetNetworkWirelessSignalQualityHistory
 	Items []GetWirelessSignalQualityHistoryItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -190,11 +188,6 @@ func (o GetWirelessSignalQualityHistoryResultOutput) ClientId() pulumi.StringPtr
 // deviceSerial query parameter. Filter results by device.
 func (o GetWirelessSignalQualityHistoryResultOutput) DeviceSerial() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessSignalQualityHistoryResult) *string { return v.DeviceSerial }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessSignalQualityHistoryResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessSignalQualityHistoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseWirelessGetNetworkWirelessSignalQualityHistory

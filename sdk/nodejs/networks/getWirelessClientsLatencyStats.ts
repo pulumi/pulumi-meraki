@@ -110,10 +110,6 @@ export interface GetWirelessClientsLatencyStatsResult {
      * fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
      */
     readonly fields?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessClientsLatencyStatsItem;
     /**
      * networkId path parameter. Network ID

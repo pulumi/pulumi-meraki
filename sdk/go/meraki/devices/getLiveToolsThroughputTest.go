@@ -58,8 +58,6 @@ type LookupLiveToolsThroughputTestArgs struct {
 
 // A collection of values returned by getLiveToolsThroughputTest.
 type LookupLiveToolsThroughputTestResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                         `pulumi:"id"`
 	Item GetLiveToolsThroughputTestItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -101,11 +99,6 @@ func (o LookupLiveToolsThroughputTestResultOutput) ToLookupLiveToolsThroughputTe
 
 func (o LookupLiveToolsThroughputTestResultOutput) ToLookupLiveToolsThroughputTestResultOutputWithContext(ctx context.Context) LookupLiveToolsThroughputTestResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupLiveToolsThroughputTestResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupLiveToolsThroughputTestResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupLiveToolsThroughputTestResultOutput) Item() GetLiveToolsThroughputTestItemOutput {

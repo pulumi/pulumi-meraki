@@ -75,10 +75,6 @@ export interface GetPoliciesByClientResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkPoliciesByClient
      */
     readonly items: outputs.networks.GetPoliciesByClientItem[];

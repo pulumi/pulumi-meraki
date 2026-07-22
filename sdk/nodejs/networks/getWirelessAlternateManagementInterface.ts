@@ -40,10 +40,6 @@ export interface GetWirelessAlternateManagementInterfaceArgs {
  * A collection of values returned by getWirelessAlternateManagementInterface.
  */
 export interface GetWirelessAlternateManagementInterfaceResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessAlternateManagementInterfaceItem;
     /**
      * networkId path parameter. Network ID

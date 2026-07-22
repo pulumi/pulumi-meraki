@@ -33,10 +33,8 @@ type LookupCameraCustomAnalyticsArtifactsArgs struct {
 // A collection of values returned by getCameraCustomAnalyticsArtifacts.
 type LookupCameraCustomAnalyticsArtifactsResult struct {
 	// artifactId path parameter. Artifact ID
-	ArtifactId *string `pulumi:"artifactId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
-	Item GetCameraCustomAnalyticsArtifactsItem `pulumi:"item"`
+	ArtifactId *string                               `pulumi:"artifactId"`
+	Item       GetCameraCustomAnalyticsArtifactsItem `pulumi:"item"`
 	// Array of ResponseCameraGetOrganizationCameraCustomAnalyticsArtifacts
 	Items []GetCameraCustomAnalyticsArtifactsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -82,11 +80,6 @@ func (o LookupCameraCustomAnalyticsArtifactsResultOutput) ToLookupCameraCustomAn
 // artifactId path parameter. Artifact ID
 func (o LookupCameraCustomAnalyticsArtifactsResultOutput) ArtifactId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupCameraCustomAnalyticsArtifactsResult) *string { return v.ArtifactId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraCustomAnalyticsArtifactsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraCustomAnalyticsArtifactsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraCustomAnalyticsArtifactsResultOutput) Item() GetCameraCustomAnalyticsArtifactsItemOutput {

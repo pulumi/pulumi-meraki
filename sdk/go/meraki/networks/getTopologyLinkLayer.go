@@ -55,8 +55,6 @@ type GetTopologyLinkLayerArgs struct {
 
 // A collection of values returned by getTopologyLinkLayer.
 type GetTopologyLinkLayerResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                   `pulumi:"id"`
 	Item GetTopologyLinkLayerItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o GetTopologyLinkLayerResultOutput) ToGetTopologyLinkLayerResultOutput() G
 
 func (o GetTopologyLinkLayerResultOutput) ToGetTopologyLinkLayerResultOutputWithContext(ctx context.Context) GetTopologyLinkLayerResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetTopologyLinkLayerResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTopologyLinkLayerResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetTopologyLinkLayerResultOutput) Item() GetTopologyLinkLayerItemOutput {

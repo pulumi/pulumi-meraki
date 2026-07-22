@@ -57,8 +57,6 @@ type GetLicensingSubscriptionEntitlementsArgs struct {
 
 // A collection of values returned by getLicensingSubscriptionEntitlements.
 type GetLicensingSubscriptionEntitlementsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                   `pulumi:"id"`
 	Item GetLicensingSubscriptionEntitlementsItem `pulumi:"item"`
 	// skus query parameter. Filter to entitlements with the specified SKUs
 	Skuses []string `pulumi:"skuses"`
@@ -96,11 +94,6 @@ func (o GetLicensingSubscriptionEntitlementsResultOutput) ToGetLicensingSubscrip
 
 func (o GetLicensingSubscriptionEntitlementsResultOutput) ToGetLicensingSubscriptionEntitlementsResultOutputWithContext(ctx context.Context) GetLicensingSubscriptionEntitlementsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetLicensingSubscriptionEntitlementsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLicensingSubscriptionEntitlementsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetLicensingSubscriptionEntitlementsResultOutput) Item() GetLicensingSubscriptionEntitlementsItemOutput {

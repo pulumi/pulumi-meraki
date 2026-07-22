@@ -55,8 +55,6 @@ type LookupCellularGatewaySubnetPoolArgs struct {
 
 // A collection of values returned by getCellularGatewaySubnetPool.
 type LookupCellularGatewaySubnetPoolResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
 	Item GetCellularGatewaySubnetPoolItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewaySubnetPoolResultOutput) ToLookupCellularGatewaySubn
 
 func (o LookupCellularGatewaySubnetPoolResultOutput) ToLookupCellularGatewaySubnetPoolResultOutputWithContext(ctx context.Context) LookupCellularGatewaySubnetPoolResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewaySubnetPoolResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewaySubnetPoolResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewaySubnetPoolResultOutput) Item() GetCellularGatewaySubnetPoolItemOutput {

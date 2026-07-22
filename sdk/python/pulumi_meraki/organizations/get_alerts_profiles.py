@@ -27,24 +27,13 @@ class GetAlertsProfilesResult:
     """
     A collection of values returned by getAlertsProfiles.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -69,7 +58,6 @@ class AwaitableGetAlertsProfilesResult(GetAlertsProfilesResult):
         if False:
             yield self
         return GetAlertsProfilesResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id)
 
@@ -96,7 +84,6 @@ def get_alerts_profiles(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getAlertsProfiles:getAlertsProfiles', __args__, opts=opts, typ=GetAlertsProfilesResult).value
 
     return AwaitableGetAlertsProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_alerts_profiles_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -120,6 +107,5 @@ def get_alerts_profiles_output(organization_id: pulumi.Input[Optional[_builtins.
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAlertsProfiles:getAlertsProfiles', __args__, opts=opts, typ=GetAlertsProfilesResult)
     return __ret__.apply(lambda __response__: GetAlertsProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

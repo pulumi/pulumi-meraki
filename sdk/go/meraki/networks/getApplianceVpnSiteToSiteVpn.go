@@ -55,8 +55,6 @@ type LookupApplianceVpnSiteToSiteVpnArgs struct {
 
 // A collection of values returned by getApplianceVpnSiteToSiteVpn.
 type LookupApplianceVpnSiteToSiteVpnResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
 	Item GetApplianceVpnSiteToSiteVpnItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceVpnSiteToSiteVpnResultOutput) ToLookupApplianceVpnSiteToS
 
 func (o LookupApplianceVpnSiteToSiteVpnResultOutput) ToLookupApplianceVpnSiteToSiteVpnResultOutputWithContext(ctx context.Context) LookupApplianceVpnSiteToSiteVpnResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceVpnSiteToSiteVpnResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceVpnSiteToSiteVpnResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceVpnSiteToSiteVpnResultOutput) Item() GetApplianceVpnSiteToSiteVpnItemOutput {

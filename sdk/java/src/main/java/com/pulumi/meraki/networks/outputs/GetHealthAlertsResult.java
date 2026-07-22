@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetHealthAlertsResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseNetworksGetNetworkHealthAlerts
      * 
      */
@@ -29,13 +24,6 @@ public final class GetHealthAlertsResult {
     private String networkId;
 
     private GetHealthAlertsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseNetworksGetNetworkHealthAlerts
      * 
@@ -60,25 +48,15 @@ public final class GetHealthAlertsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetHealthAlertsItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetHealthAlertsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetHealthAlertsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetHealthAlertsItem> items) {
             if (items == null) {
@@ -100,7 +78,6 @@ public final class GetHealthAlertsResult {
         }
         public GetHealthAlertsResult build() {
             final var _resultValue = new GetHealthAlertsResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

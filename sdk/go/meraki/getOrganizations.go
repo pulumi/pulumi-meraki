@@ -37,10 +37,8 @@ type GetOrganizationsArgs struct {
 // A collection of values returned by getOrganizations.
 type GetOrganizationsResult struct {
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
-	Item GetOrganizationsItem `pulumi:"item"`
+	EndingBefore *string              `pulumi:"endingBefore"`
+	Item         GetOrganizationsItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizations
 	Items []GetOrganizationsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -94,11 +92,6 @@ func (o GetOrganizationsResultOutput) ToGetOrganizationsResultOutputWithContext(
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetOrganizationsResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetOrganizationsResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetOrganizationsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetOrganizationsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetOrganizationsResultOutput) Item() GetOrganizationsItemOutput {

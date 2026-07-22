@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Networks
         /// groupPolicyId path parameter. Group policy ID
         /// </summary>
         public readonly string? GroupPolicyId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetGroupPoliciesItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkGroupPolicies
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Networks
         private GetGroupPoliciesResult(
             string? groupPolicyId,
 
-            string id,
-
             Outputs.GetGroupPoliciesItemResult item,
 
             ImmutableArray<Outputs.GetGroupPoliciesItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Networks
             string? networkId)
         {
             GroupPolicyId = groupPolicyId;
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

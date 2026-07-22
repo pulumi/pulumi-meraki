@@ -16,11 +16,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDevicesUplinksLossAndLatencyResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
      * 
      */
@@ -57,13 +52,6 @@ public final class GetDevicesUplinksLossAndLatencyResult {
     private @Nullable String uplink;
 
     private GetDevicesUplinksLossAndLatencyResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
      * 
@@ -123,7 +111,6 @@ public final class GetDevicesUplinksLossAndLatencyResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable String ip;
         private List<GetDevicesUplinksLossAndLatencyItem> items;
         private String organizationId;
@@ -134,7 +121,6 @@ public final class GetDevicesUplinksLossAndLatencyResult {
         public Builder() {}
         public Builder(GetDevicesUplinksLossAndLatencyResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.ip = defaults.ip;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -144,14 +130,6 @@ public final class GetDevicesUplinksLossAndLatencyResult {
     	      this.uplink = defaults.uplink;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesUplinksLossAndLatencyResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder ip(@Nullable String ip) {
 
@@ -203,7 +181,6 @@ public final class GetDevicesUplinksLossAndLatencyResult {
         }
         public GetDevicesUplinksLossAndLatencyResult build() {
             final var _resultValue = new GetDevicesUplinksLossAndLatencyResult();
-            _resultValue.id = id;
             _resultValue.ip = ip;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

@@ -27,16 +27,13 @@ class GetWirelessDevicesPacketLossByClientResult:
     """
     A collection of values returned by getWirelessDevicesPacketLossByClient.
     """
-    def __init__(__self__, bands=None, ending_before=None, id=None, items=None, macs=None, network_ids=None, organization_id=None, per_page=None, ssids=None, starting_after=None, t0=None, t1=None, timespan=None):
+    def __init__(__self__, bands=None, ending_before=None, items=None, macs=None, network_ids=None, organization_id=None, per_page=None, ssids=None, starting_after=None, t0=None, t1=None, timespan=None):
         if bands and not isinstance(bands, list):
             raise TypeError("Expected argument 'bands' to be a list")
         pulumi.set(__self__, "bands", bands)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -83,14 +80,6 @@ class GetWirelessDevicesPacketLossByClientResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -181,7 +170,6 @@ class AwaitableGetWirelessDevicesPacketLossByClientResult(GetWirelessDevicesPack
         return GetWirelessDevicesPacketLossByClientResult(
             bands=self.bands,
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             macs=self.macs,
             network_ids=self.network_ids,
@@ -258,7 +246,6 @@ def get_wireless_devices_packet_loss_by_client(bands: Optional[Sequence[_builtin
     return AwaitableGetWirelessDevicesPacketLossByClientResult(
         bands=pulumi.get(__ret__, 'bands'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         macs=pulumi.get(__ret__, 'macs'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
@@ -332,7 +319,6 @@ def get_wireless_devices_packet_loss_by_client_output(bands: pulumi.Input[Option
     return __ret__.apply(lambda __response__: GetWirelessDevicesPacketLossByClientResult(
         bands=pulumi.get(__response__, 'bands'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         macs=pulumi.get(__response__, 'macs'),
         network_ids=pulumi.get(__response__, 'network_ids'),

@@ -27,24 +27,13 @@ class GetApplianceRadioSettingsResult:
     """
     A collection of values returned by getApplianceRadioSettings.
     """
-    def __init__(__self__, id=None, item=None, serial=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, serial=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
         if serial and not isinstance(serial, str):
             raise TypeError("Expected argument 'serial' to be a str")
         pulumi.set(__self__, "serial", serial)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -66,7 +55,6 @@ class AwaitableGetApplianceRadioSettingsResult(GetApplianceRadioSettingsResult):
         if False:
             yield self
         return GetApplianceRadioSettingsResult(
-            id=self.id,
             item=self.item,
             serial=self.serial)
 
@@ -93,7 +81,6 @@ def get_appliance_radio_settings(serial: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings', __args__, opts=opts, typ=GetApplianceRadioSettingsResult).value
 
     return AwaitableGetApplianceRadioSettingsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_appliance_radio_settings_output(serial: pulumi.Input[Optional[_builtins.str]] = None,
@@ -117,6 +104,5 @@ def get_appliance_radio_settings_output(serial: pulumi.Input[Optional[_builtins.
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings', __args__, opts=opts, typ=GetApplianceRadioSettingsResult)
     return __ret__.apply(lambda __response__: GetApplianceRadioSettingsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         serial=pulumi.get(__response__, 'serial')))

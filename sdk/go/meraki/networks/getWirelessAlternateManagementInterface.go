@@ -55,8 +55,6 @@ type LookupWirelessAlternateManagementInterfaceArgs struct {
 
 // A collection of values returned by getWirelessAlternateManagementInterface.
 type LookupWirelessAlternateManagementInterfaceResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                      `pulumi:"id"`
 	Item GetWirelessAlternateManagementInterfaceItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupWirelessAlternateManagementInterfaceResultOutput) ToLookupWireless
 
 func (o LookupWirelessAlternateManagementInterfaceResultOutput) ToLookupWirelessAlternateManagementInterfaceResultOutputWithContext(ctx context.Context) LookupWirelessAlternateManagementInterfaceResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessAlternateManagementInterfaceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessAlternateManagementInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessAlternateManagementInterfaceResultOutput) Item() GetWirelessAlternateManagementInterfaceItemOutput {

@@ -69,10 +69,6 @@ export interface GetSmSentryPoliciesAssignmentsByNetworkResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetOrganizationSmSentryPoliciesAssignmentsByNetwork
      */
     readonly items: outputs.organizations.GetSmSentryPoliciesAssignmentsByNetworkItem[];

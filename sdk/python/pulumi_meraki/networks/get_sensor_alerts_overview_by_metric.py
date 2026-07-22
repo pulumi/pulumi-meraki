@@ -27,10 +27,7 @@ class GetSensorAlertsOverviewByMetricResult:
     """
     A collection of values returned by getSensorAlertsOverviewByMetric.
     """
-    def __init__(__self__, id=None, interval=None, items=None, network_id=None, t0=None, t1=None, timespan=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, interval=None, items=None, network_id=None, t0=None, t1=None, timespan=None):
         if interval and not isinstance(interval, int):
             raise TypeError("Expected argument 'interval' to be a int")
         pulumi.set(__self__, "interval", interval)
@@ -49,14 +46,6 @@ class GetSensorAlertsOverviewByMetricResult:
         if timespan and not isinstance(timespan, float):
             raise TypeError("Expected argument 'timespan' to be a float")
         pulumi.set(__self__, "timespan", timespan)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -113,7 +102,6 @@ class AwaitableGetSensorAlertsOverviewByMetricResult(GetSensorAlertsOverviewByMe
         if False:
             yield self
         return GetSensorAlertsOverviewByMetricResult(
-            id=self.id,
             interval=self.interval,
             items=self.items,
             network_id=self.network_id,
@@ -160,7 +148,6 @@ def get_sensor_alerts_overview_by_metric(interval: Optional[_builtins.int] = Non
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric', __args__, opts=opts, typ=GetSensorAlertsOverviewByMetricResult).value
 
     return AwaitableGetSensorAlertsOverviewByMetricResult(
-        id=pulumi.get(__ret__, 'id'),
         interval=pulumi.get(__ret__, 'interval'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -204,7 +191,6 @@ def get_sensor_alerts_overview_by_metric_output(interval: pulumi.Input[Optional[
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric', __args__, opts=opts, typ=GetSensorAlertsOverviewByMetricResult)
     return __ret__.apply(lambda __response__: GetSensorAlertsOverviewByMetricResult(
-        id=pulumi.get(__response__, 'id'),
         interval=pulumi.get(__response__, 'interval'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

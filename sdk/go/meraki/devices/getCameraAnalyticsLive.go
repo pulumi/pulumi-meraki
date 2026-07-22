@@ -55,8 +55,6 @@ type GetCameraAnalyticsLiveArgs struct {
 
 // A collection of values returned by getCameraAnalyticsLive.
 type GetCameraAnalyticsLiveResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetCameraAnalyticsLiveItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o GetCameraAnalyticsLiveResultOutput) ToGetCameraAnalyticsLiveResultOutput
 
 func (o GetCameraAnalyticsLiveResultOutput) ToGetCameraAnalyticsLiveResultOutputWithContext(ctx context.Context) GetCameraAnalyticsLiveResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCameraAnalyticsLiveResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCameraAnalyticsLiveResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetCameraAnalyticsLiveResultOutput) Item() GetCameraAnalyticsLiveItemOutput {

@@ -58,8 +58,6 @@ type LookupLiveToolsWakeOnLanArgs struct {
 
 // A collection of values returned by getLiveToolsWakeOnLan.
 type LookupLiveToolsWakeOnLanResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
 	Item GetLiveToolsWakeOnLanItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -101,11 +99,6 @@ func (o LookupLiveToolsWakeOnLanResultOutput) ToLookupLiveToolsWakeOnLanResultOu
 
 func (o LookupLiveToolsWakeOnLanResultOutput) ToLookupLiveToolsWakeOnLanResultOutputWithContext(ctx context.Context) LookupLiveToolsWakeOnLanResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupLiveToolsWakeOnLanResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupLiveToolsWakeOnLanResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupLiveToolsWakeOnLanResultOutput) Item() GetLiveToolsWakeOnLanItemOutput {

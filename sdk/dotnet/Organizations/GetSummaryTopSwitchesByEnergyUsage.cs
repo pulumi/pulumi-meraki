@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetSummaryTopSwitchesByEnergyUsageResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSummaryTopSwitchesByEnergyUsage
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSummaryTopSwitchesByEnergyUsageItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSummaryTopSwitchesByEnergyUsageResult(
-            string id,
-
             ImmutableArray<Outputs.GetSummaryTopSwitchesByEnergyUsageItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

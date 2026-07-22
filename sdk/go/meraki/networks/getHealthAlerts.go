@@ -55,8 +55,6 @@ type GetHealthAlertsArgs struct {
 
 // A collection of values returned by getHealthAlerts.
 type GetHealthAlertsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseNetworksGetNetworkHealthAlerts
 	Items []GetHealthAlertsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o GetHealthAlertsResultOutput) ToGetHealthAlertsResultOutput() GetHealthAl
 
 func (o GetHealthAlertsResultOutput) ToGetHealthAlertsResultOutputWithContext(ctx context.Context) GetHealthAlertsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetHealthAlertsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetHealthAlertsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseNetworksGetNetworkHealthAlerts

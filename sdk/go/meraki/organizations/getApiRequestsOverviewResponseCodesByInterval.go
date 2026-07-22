@@ -90,8 +90,6 @@ type GetApiRequestsOverviewResponseCodesByIntervalArgs struct {
 type GetApiRequestsOverviewResponseCodesByIntervalResult struct {
 	// adminIds query parameter. Filter by admin ID of user that made the API request
 	AdminIds []string `pulumi:"adminIds"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
 	Interval *int `pulumi:"interval"`
 	// Array of ResponseOrganizationsGetOrganizationApiRequestsOverviewResponseCodesByInterval
@@ -169,11 +167,6 @@ func (o GetApiRequestsOverviewResponseCodesByIntervalResultOutput) ToGetApiReque
 // adminIds query parameter. Filter by admin ID of user that made the API request
 func (o GetApiRequestsOverviewResponseCodesByIntervalResultOutput) AdminIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetApiRequestsOverviewResponseCodesByIntervalResult) []string { return v.AdminIds }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApiRequestsOverviewResponseCodesByIntervalResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApiRequestsOverviewResponseCodesByIntervalResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.

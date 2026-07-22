@@ -26,11 +26,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
      */
     private @Nullable List<String> firmwareUpgradeBatchIds;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice
      * 
      */
@@ -85,13 +80,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
      */
     public List<String> firmwareUpgradeBatchIds() {
         return this.firmwareUpgradeBatchIds == null ? List.of() : this.firmwareUpgradeBatchIds;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice
@@ -161,7 +149,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
     public static final class Builder {
         private @Nullable String endingBefore;
         private @Nullable List<String> firmwareUpgradeBatchIds;
-        private String id;
         private List<GetFirmwareUpgradesByDeviceItem> items;
         private @Nullable List<String> macs;
         private @Nullable List<String> networkIds;
@@ -175,7 +162,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
     	      this.firmwareUpgradeBatchIds = defaults.firmwareUpgradeBatchIds;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.macs = defaults.macs;
     	      this.networkIds = defaults.networkIds;
@@ -200,14 +186,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
         }
         public Builder firmwareUpgradeBatchIds(String... firmwareUpgradeBatchIds) {
             return firmwareUpgradeBatchIds(List.of(firmwareUpgradeBatchIds));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetFirmwareUpgradesByDeviceResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder items(List<GetFirmwareUpgradesByDeviceItem> items) {
@@ -280,7 +258,6 @@ public final class GetFirmwareUpgradesByDeviceResult {
             final var _resultValue = new GetFirmwareUpgradesByDeviceResult();
             _resultValue.endingBefore = endingBefore;
             _resultValue.firmwareUpgradeBatchIds = firmwareUpgradeBatchIds;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.macs = macs;
             _resultValue.networkIds = networkIds;

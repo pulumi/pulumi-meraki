@@ -40,10 +40,6 @@ export interface GetCellularGatewayPortForwardingRulesArgs {
  * A collection of values returned by getCellularGatewayPortForwardingRules.
  */
 export interface GetCellularGatewayPortForwardingRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetCellularGatewayPortForwardingRulesItem;
     /**
      * serial path parameter.

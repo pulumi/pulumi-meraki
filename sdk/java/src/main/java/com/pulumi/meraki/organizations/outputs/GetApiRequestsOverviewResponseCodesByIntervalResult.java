@@ -22,11 +22,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
      */
     private @Nullable List<String> adminIds;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
      * 
      */
@@ -84,13 +79,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
      */
     public List<String> adminIds() {
         return this.adminIds == null ? List.of() : this.adminIds;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
@@ -173,7 +161,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable List<String> adminIds;
-        private String id;
         private @Nullable Integer interval;
         private List<GetApiRequestsOverviewResponseCodesByIntervalItem> items;
         private @Nullable List<String> operationIds;
@@ -188,7 +175,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
         public Builder(GetApiRequestsOverviewResponseCodesByIntervalResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.adminIds = defaults.adminIds;
-    	      this.id = defaults.id;
     	      this.interval = defaults.interval;
     	      this.items = defaults.items;
     	      this.operationIds = defaults.operationIds;
@@ -209,14 +195,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
         }
         public Builder adminIds(String... adminIds) {
             return adminIds(List.of(adminIds));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApiRequestsOverviewResponseCodesByIntervalResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder interval(@Nullable Integer interval) {
@@ -294,7 +272,6 @@ public final class GetApiRequestsOverviewResponseCodesByIntervalResult {
         public GetApiRequestsOverviewResponseCodesByIntervalResult build() {
             final var _resultValue = new GetApiRequestsOverviewResponseCodesByIntervalResult();
             _resultValue.adminIds = adminIds;
-            _resultValue.id = id;
             _resultValue.interval = interval;
             _resultValue.items = items;
             _resultValue.operationIds = operationIds;

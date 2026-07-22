@@ -27,24 +27,13 @@ class GetApplianceContentFilteringCategoriesResult:
     """
     A collection of values returned by getApplianceContentFilteringCategories.
     """
-    def __init__(__self__, id=None, item=None, network_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
         if network_id and not isinstance(network_id, str):
             raise TypeError("Expected argument 'network_id' to be a str")
         pulumi.set(__self__, "network_id", network_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -66,7 +55,6 @@ class AwaitableGetApplianceContentFilteringCategoriesResult(GetApplianceContentF
         if False:
             yield self
         return GetApplianceContentFilteringCategoriesResult(
-            id=self.id,
             item=self.item,
             network_id=self.network_id)
 
@@ -93,7 +81,6 @@ def get_appliance_content_filtering_categories(network_id: Optional[_builtins.st
     __ret__ = pulumi.runtime.invoke('meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories', __args__, opts=opts, typ=GetApplianceContentFilteringCategoriesResult).value
 
     return AwaitableGetApplianceContentFilteringCategoriesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_appliance_content_filtering_categories_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -117,6 +104,5 @@ def get_appliance_content_filtering_categories_output(network_id: pulumi.Input[O
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories', __args__, opts=opts, typ=GetApplianceContentFilteringCategoriesResult)
     return __ret__.apply(lambda __response__: GetApplianceContentFilteringCategoriesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id')))

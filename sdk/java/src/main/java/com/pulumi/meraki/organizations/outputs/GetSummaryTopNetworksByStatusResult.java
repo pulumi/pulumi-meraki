@@ -21,11 +21,6 @@ public final class GetSummaryTopNetworksByStatusResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopNetworksByStatus
      * 
      */
@@ -53,13 +48,6 @@ public final class GetSummaryTopNetworksByStatusResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopNetworksByStatus
@@ -100,7 +88,6 @@ public final class GetSummaryTopNetworksByStatusResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSummaryTopNetworksByStatusItem> items;
         private String organizationId;
         private @Nullable Integer perPage;
@@ -109,7 +96,6 @@ public final class GetSummaryTopNetworksByStatusResult {
         public Builder(GetSummaryTopNetworksByStatusResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.perPage = defaults.perPage;
@@ -120,14 +106,6 @@ public final class GetSummaryTopNetworksByStatusResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSummaryTopNetworksByStatusResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -164,7 +142,6 @@ public final class GetSummaryTopNetworksByStatusResult {
         public GetSummaryTopNetworksByStatusResult build() {
             final var _resultValue = new GetSummaryTopNetworksByStatusResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.perPage = perPage;

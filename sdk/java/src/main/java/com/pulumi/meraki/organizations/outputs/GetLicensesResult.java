@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLicensesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetLicensesItem item;
     /**
      * @return licenseId path parameter. License ID
@@ -29,13 +24,6 @@ public final class GetLicensesResult {
     private String organizationId;
 
     private GetLicensesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetLicensesItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetLicensesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetLicensesItem item;
         private String licenseId;
         private String organizationId;
         public Builder() {}
         public Builder(GetLicensesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.licenseId = defaults.licenseId;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLicensesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetLicensesItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetLicensesResult {
         }
         public GetLicensesResult build() {
             final var _resultValue = new GetLicensesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.licenseId = licenseId;
             _resultValue.organizationId = organizationId;

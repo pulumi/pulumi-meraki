@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSmProfilesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmProfiles
      * 
      */
@@ -35,13 +30,6 @@ public final class GetSmProfilesResult {
     private @Nullable List<String> payloadTypes;
 
     private GetSmProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseSmGetNetworkSmProfiles
      * 
@@ -73,27 +61,17 @@ public final class GetSmProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSmProfilesItem> items;
         private String networkId;
         private @Nullable List<String> payloadTypes;
         public Builder() {}
         public Builder(GetSmProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.payloadTypes = defaults.payloadTypes;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSmProfilesItem> items) {
             if (items == null) {
@@ -124,7 +102,6 @@ public final class GetSmProfilesResult {
         }
         public GetSmProfilesResult build() {
             final var _resultValue = new GetSmProfilesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.payloadTypes = payloadTypes;

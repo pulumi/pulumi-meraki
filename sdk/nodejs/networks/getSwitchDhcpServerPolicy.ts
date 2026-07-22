@@ -40,10 +40,6 @@ export interface GetSwitchDhcpServerPolicyArgs {
  * A collection of values returned by getSwitchDhcpServerPolicy.
  */
 export interface GetSwitchDhcpServerPolicyResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchDhcpServerPolicyItem;
     /**
      * networkId path parameter. Network ID

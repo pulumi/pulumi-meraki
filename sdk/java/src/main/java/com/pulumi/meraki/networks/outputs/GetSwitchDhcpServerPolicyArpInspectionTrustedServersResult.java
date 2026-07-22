@@ -21,11 +21,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSwitchGetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
      * 
      */
@@ -53,13 +48,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
@@ -100,7 +88,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSwitchDhcpServerPolicyArpInspectionTrustedServersItem> items;
         private String networkId;
         private @Nullable Integer perPage;
@@ -109,7 +96,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
         public Builder(GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.perPage = defaults.perPage;
@@ -120,14 +106,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -164,7 +142,6 @@ public final class GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
         public GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult build() {
             final var _resultValue = new GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.perPage = perPage;

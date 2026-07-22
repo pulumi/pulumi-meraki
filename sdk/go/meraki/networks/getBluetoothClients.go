@@ -68,8 +68,6 @@ type GetBluetoothClientsResult struct {
 	BluetoothClientId string `pulumi:"bluetoothClientId"`
 	// connectivityHistoryTimespan query parameter. The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
 	ConnectivityHistoryTimespan *int `pulumi:"connectivityHistoryTimespan"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// includeConnectivityHistory query parameter. Include the connectivity history for this client
 	IncludeConnectivityHistory *bool                   `pulumi:"includeConnectivityHistory"`
 	Item                       GetBluetoothClientsItem `pulumi:"item"`
@@ -125,11 +123,6 @@ func (o GetBluetoothClientsResultOutput) BluetoothClientId() pulumi.StringOutput
 // connectivityHistoryTimespan query parameter. The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
 func (o GetBluetoothClientsResultOutput) ConnectivityHistoryTimespan() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetBluetoothClientsResult) *int { return v.ConnectivityHistoryTimespan }).(pulumi.IntPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetBluetoothClientsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetBluetoothClientsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // includeConnectivityHistory query parameter. Include the connectivity history for this client

@@ -40,10 +40,6 @@ export interface GetApplianceConnectivityMonitoringDestinationsArgs {
  * A collection of values returned by getApplianceConnectivityMonitoringDestinations.
  */
 export interface GetApplianceConnectivityMonitoringDestinationsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceConnectivityMonitoringDestinationsItem;
     /**
      * networkId path parameter. Network ID

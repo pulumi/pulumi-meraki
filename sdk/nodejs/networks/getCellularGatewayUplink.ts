@@ -40,10 +40,6 @@ export interface GetCellularGatewayUplinkArgs {
  * A collection of values returned by getCellularGatewayUplink.
  */
 export interface GetCellularGatewayUplinkResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetCellularGatewayUplinkItem;
     /**
      * networkId path parameter. Network ID

@@ -85,10 +85,6 @@ export interface GetUplinksStatusesResult {
      */
     readonly iccids?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationUplinksStatuses
      */
     readonly items: outputs.organizations.GetUplinksStatusesItem[];

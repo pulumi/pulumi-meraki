@@ -55,8 +55,6 @@ type GetLldpCdpArgs struct {
 
 // A collection of values returned by getLldpCdp.
 type GetLldpCdpResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string         `pulumi:"id"`
 	Item GetLldpCdpItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o GetLldpCdpResultOutput) ToGetLldpCdpResultOutput() GetLldpCdpResultOutpu
 
 func (o GetLldpCdpResultOutput) ToGetLldpCdpResultOutputWithContext(ctx context.Context) GetLldpCdpResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetLldpCdpResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLldpCdpResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetLldpCdpResultOutput) Item() GetLldpCdpItemOutput {

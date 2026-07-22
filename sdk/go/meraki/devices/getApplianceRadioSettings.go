@@ -55,8 +55,6 @@ type LookupApplianceRadioSettingsArgs struct {
 
 // A collection of values returned by getApplianceRadioSettings.
 type LookupApplianceRadioSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetApplianceRadioSettingsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupApplianceRadioSettingsResultOutput) ToLookupApplianceRadioSettings
 
 func (o LookupApplianceRadioSettingsResultOutput) ToLookupApplianceRadioSettingsResultOutputWithContext(ctx context.Context) LookupApplianceRadioSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceRadioSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceRadioSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceRadioSettingsResultOutput) Item() GetApplianceRadioSettingsItemOutput {

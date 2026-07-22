@@ -40,10 +40,6 @@ export interface GetApplianceTrafficShapingUplinkSelectionArgs {
  * A collection of values returned by getApplianceTrafficShapingUplinkSelection.
  */
 export interface GetApplianceTrafficShapingUplinkSelectionResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceTrafficShapingUplinkSelectionItem;
     /**
      * networkId path parameter. Network ID

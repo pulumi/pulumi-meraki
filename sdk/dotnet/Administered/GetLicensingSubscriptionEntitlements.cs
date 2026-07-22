@@ -144,10 +144,6 @@ namespace Pulumi.Meraki.Administered
     [OutputType]
     public sealed class GetLicensingSubscriptionEntitlementsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetLicensingSubscriptionEntitlementsItemResult Item;
         /// <summary>
         /// skus query parameter. Filter to entitlements with the specified SKUs
@@ -156,13 +152,10 @@ namespace Pulumi.Meraki.Administered
 
         [OutputConstructor]
         private GetLicensingSubscriptionEntitlementsResult(
-            string id,
-
             Outputs.GetLicensingSubscriptionEntitlementsItemResult item,
 
             ImmutableArray<string> skuses)
         {
-            Id = id;
             Item = item;
             Skuses = skuses;
         }

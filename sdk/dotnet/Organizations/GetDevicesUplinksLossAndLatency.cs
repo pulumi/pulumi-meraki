@@ -199,10 +199,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetDevicesUplinksLossAndLatencyResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
         /// </summary>
         public readonly string? Ip;
@@ -233,8 +229,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetDevicesUplinksLossAndLatencyResult(
-            string id,
-
             string? ip,
 
             ImmutableArray<Outputs.GetDevicesUplinksLossAndLatencyItemResult> items,
@@ -249,7 +243,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? uplink)
         {
-            Id = id;
             Ip = ip;
             Items = items;
             OrganizationId = organizationId;

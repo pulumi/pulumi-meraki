@@ -19,11 +19,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
      * 
      */
     private @Nullable String groupId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetFirmwareUpgradesStagedGroupsItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedGroups
@@ -43,13 +38,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
      */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetFirmwareUpgradesStagedGroupsItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String groupId;
-        private String id;
         private GetFirmwareUpgradesStagedGroupsItem item;
         private List<GetFirmwareUpgradesStagedGroupsItem> items;
         private @Nullable String networkId;
@@ -87,7 +74,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
         public Builder(GetFirmwareUpgradesStagedGroupsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.groupId = defaults.groupId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -97,14 +83,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
         public Builder groupId(@Nullable String groupId) {
 
             this.groupId = groupId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetFirmwareUpgradesStagedGroupsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetFirmwareUpgradesStagedGroupsResult {
         public GetFirmwareUpgradesStagedGroupsResult build() {
             final var _resultValue = new GetFirmwareUpgradesStagedGroupsResult();
             _resultValue.groupId = groupId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

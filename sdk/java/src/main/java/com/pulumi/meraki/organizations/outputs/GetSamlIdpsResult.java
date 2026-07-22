@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSamlIdpsResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return idpId path parameter. Idp ID
      * 
      */
@@ -37,13 +32,6 @@ public final class GetSamlIdpsResult {
     private @Nullable String organizationId;
 
     private GetSamlIdpsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return idpId path parameter. Idp ID
      * 
@@ -78,7 +66,6 @@ public final class GetSamlIdpsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable String idpId;
         private GetSamlIdpsItem item;
         private List<GetSamlIdpsItem> items;
@@ -86,21 +73,12 @@ public final class GetSamlIdpsResult {
         public Builder() {}
         public Builder(GetSamlIdpsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.idpId = defaults.idpId;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSamlIdpsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder idpId(@Nullable String idpId) {
 
@@ -134,7 +112,6 @@ public final class GetSamlIdpsResult {
         }
         public GetSamlIdpsResult build() {
             final var _resultValue = new GetSamlIdpsResult();
-            _resultValue.id = id;
             _resultValue.idpId = idpId;
             _resultValue.item = item;
             _resultValue.items = items;

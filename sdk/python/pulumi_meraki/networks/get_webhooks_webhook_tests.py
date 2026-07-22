@@ -27,10 +27,7 @@ class GetWebhooksWebhookTestsResult:
     """
     A collection of values returned by getWebhooksWebhookTests.
     """
-    def __init__(__self__, id=None, item=None, network_id=None, webhook_test_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_id=None, webhook_test_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetWebhooksWebhookTestsResult:
         if webhook_test_id and not isinstance(webhook_test_id, str):
             raise TypeError("Expected argument 'webhook_test_id' to be a str")
         pulumi.set(__self__, "webhook_test_id", webhook_test_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetWebhooksWebhookTestsResult(GetWebhooksWebhookTestsResult):
         if False:
             yield self
         return GetWebhooksWebhookTestsResult(
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             webhook_test_id=self.webhook_test_id)
@@ -109,7 +97,6 @@ def get_webhooks_webhook_tests(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests', __args__, opts=opts, typ=GetWebhooksWebhookTestsResult).value
 
     return AwaitableGetWebhooksWebhookTestsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         webhook_test_id=pulumi.get(__ret__, 'webhook_test_id'))
@@ -138,7 +125,6 @@ def get_webhooks_webhook_tests_output(network_id: pulumi.Input[Optional[_builtin
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests', __args__, opts=opts, typ=GetWebhooksWebhookTestsResult)
     return __ret__.apply(lambda __response__: GetWebhooksWebhookTestsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         webhook_test_id=pulumi.get(__response__, 'webhook_test_id')))

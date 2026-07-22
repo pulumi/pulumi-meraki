@@ -55,8 +55,6 @@ type LookupCellularGatewayDhcpArgs struct {
 
 // A collection of values returned by getCellularGatewayDhcp.
 type LookupCellularGatewayDhcpResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetCellularGatewayDhcpItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewayDhcpResultOutput) ToLookupCellularGatewayDhcpResult
 
 func (o LookupCellularGatewayDhcpResultOutput) ToLookupCellularGatewayDhcpResultOutputWithContext(ctx context.Context) LookupCellularGatewayDhcpResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewayDhcpResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewayDhcpResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewayDhcpResultOutput) Item() GetCellularGatewayDhcpItemOutput {

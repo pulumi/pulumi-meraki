@@ -32,8 +32,6 @@ type LookupAppliancePrefixesDelegatedStaticsArgs struct {
 
 // A collection of values returned by getAppliancePrefixesDelegatedStatics.
 type LookupAppliancePrefixesDelegatedStaticsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                   `pulumi:"id"`
 	Item GetAppliancePrefixesDelegatedStaticsItem `pulumi:"item"`
 	// Array of ResponseApplianceGetNetworkAppliancePrefixesDelegatedStatics
 	Items []GetAppliancePrefixesDelegatedStaticsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupAppliancePrefixesDelegatedStaticsResultOutput) ToLookupAppliancePr
 
 func (o LookupAppliancePrefixesDelegatedStaticsResultOutput) ToLookupAppliancePrefixesDelegatedStaticsResultOutputWithContext(ctx context.Context) LookupAppliancePrefixesDelegatedStaticsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAppliancePrefixesDelegatedStaticsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAppliancePrefixesDelegatedStaticsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupAppliancePrefixesDelegatedStaticsResultOutput) Item() GetAppliancePrefixesDelegatedStaticsItemOutput {

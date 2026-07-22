@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetTrafficShapingDscpTaggingOptionsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTrafficShapingDscpTaggingOptionsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetTrafficShapingDscpTaggingOptionsResult(
-            string id,
-
             ImmutableArray<Outputs.GetTrafficShapingDscpTaggingOptionsItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

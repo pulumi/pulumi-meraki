@@ -40,10 +40,6 @@ export interface GetSnmpArgs {
  * A collection of values returned by getSnmp.
  */
 export interface GetSnmpResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetSnmpItem;
     /**
      * organizationId path parameter. Organization ID

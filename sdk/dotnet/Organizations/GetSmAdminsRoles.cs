@@ -184,10 +184,6 @@ namespace Pulumi.Meraki.Organizations
         /// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         /// </summary>
         public readonly string? EndingBefore;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSmAdminsRolesItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -210,8 +206,6 @@ namespace Pulumi.Meraki.Organizations
         private GetSmAdminsRolesResult(
             string? endingBefore,
 
-            string id,
-
             Outputs.GetSmAdminsRolesItemResult item,
 
             string? organizationId,
@@ -223,7 +217,6 @@ namespace Pulumi.Meraki.Organizations
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
             PerPage = perPage;

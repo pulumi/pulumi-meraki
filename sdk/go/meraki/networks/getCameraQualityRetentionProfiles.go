@@ -32,8 +32,6 @@ type LookupCameraQualityRetentionProfilesArgs struct {
 
 // A collection of values returned by getCameraQualityRetentionProfiles.
 type LookupCameraQualityRetentionProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
 	Item GetCameraQualityRetentionProfilesItem `pulumi:"item"`
 	// Array of ResponseCameraGetNetworkCameraQualityRetentionProfiles
 	Items []GetCameraQualityRetentionProfilesItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupCameraQualityRetentionProfilesResultOutput) ToLookupCameraQualityR
 
 func (o LookupCameraQualityRetentionProfilesResultOutput) ToLookupCameraQualityRetentionProfilesResultOutputWithContext(ctx context.Context) LookupCameraQualityRetentionProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraQualityRetentionProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraQualityRetentionProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraQualityRetentionProfilesResultOutput) Item() GetCameraQualityRetentionProfilesItemOutput {

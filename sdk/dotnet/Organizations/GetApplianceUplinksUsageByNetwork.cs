@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetApplianceUplinksUsageByNetworkResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseApplianceGetOrganizationApplianceUplinksUsageByNetwork
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplianceUplinksUsageByNetworkItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetApplianceUplinksUsageByNetworkResult(
-            string id,
-
             ImmutableArray<Outputs.GetApplianceUplinksUsageByNetworkItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

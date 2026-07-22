@@ -160,10 +160,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetInventoryOnboardingCloudMonitoringImportsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// importIds query parameter. import ids from an imports
         /// </summary>
         public readonly ImmutableArray<string> ImportIds;
@@ -178,15 +174,12 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetInventoryOnboardingCloudMonitoringImportsResult(
-            string id,
-
             ImmutableArray<string> importIds,
 
             ImmutableArray<Outputs.GetInventoryOnboardingCloudMonitoringImportsItemResult> items,
 
             string organizationId)
         {
-            Id = id;
             ImportIds = importIds;
             Items = items;
             OrganizationId = organizationId;

@@ -27,13 +27,10 @@ class GetSmDevicesSecurityCentersResult:
     """
     A collection of values returned by getSmDevicesSecurityCenters.
     """
-    def __init__(__self__, device_id=None, id=None, items=None, network_id=None):
+    def __init__(__self__, device_id=None, items=None, network_id=None):
         if device_id and not isinstance(device_id, str):
             raise TypeError("Expected argument 'device_id' to be a str")
         pulumi.set(__self__, "device_id", device_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -48,14 +45,6 @@ class GetSmDevicesSecurityCentersResult:
         deviceId path parameter. Device ID
         """
         return pulumi.get(self, "device_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -81,7 +70,6 @@ class AwaitableGetSmDevicesSecurityCentersResult(GetSmDevicesSecurityCentersResu
             yield self
         return GetSmDevicesSecurityCentersResult(
             device_id=self.device_id,
-            id=self.id,
             items=self.items,
             network_id=self.network_id)
 
@@ -113,7 +101,6 @@ def get_sm_devices_security_centers(device_id: Optional[_builtins.str] = None,
 
     return AwaitableGetSmDevicesSecurityCentersResult(
         device_id=pulumi.get(__ret__, 'device_id'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_devices_security_centers_output(device_id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
@@ -142,6 +129,5 @@ def get_sm_devices_security_centers_output(device_id: pulumi.Input[Optional[Opti
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters', __args__, opts=opts, typ=GetSmDevicesSecurityCentersResult)
     return __ret__.apply(lambda __response__: GetSmDevicesSecurityCentersResult(
         device_id=pulumi.get(__response__, 'device_id'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

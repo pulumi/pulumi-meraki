@@ -36,10 +36,6 @@ export interface GetApplianceSsidsArgs {
  * A collection of values returned by getApplianceSsids.
  */
 export interface GetApplianceSsidsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceSsidsItem;
     /**
      * Array of ResponseApplianceGetNetworkApplianceSsids

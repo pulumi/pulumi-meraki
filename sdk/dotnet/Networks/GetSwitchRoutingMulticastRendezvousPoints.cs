@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetSwitchRoutingMulticastRendezvousPointsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSwitchRoutingMulticastRendezvousPointsItemResult Item;
         /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchRoutingMulticastRendezvousPoints
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSwitchRoutingMulticastRendezvousPointsResult(
-            string id,
-
             Outputs.GetSwitchRoutingMulticastRendezvousPointsItemResult item,
 
             ImmutableArray<Outputs.GetSwitchRoutingMulticastRendezvousPointsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? rendezvousPointId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -357,10 +357,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly ImmutableArray<string> FirmwareUpgradeBatchIds;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice
         /// </summary>
         public readonly ImmutableArray<Outputs.GetFirmwareUpgradesByDeviceItemResult> Items;
@@ -399,8 +395,6 @@ namespace Pulumi.Meraki.Organizations
 
             ImmutableArray<string> firmwareUpgradeBatchIds,
 
-            string id,
-
             ImmutableArray<Outputs.GetFirmwareUpgradesByDeviceItemResult> items,
 
             ImmutableArray<string> macs,
@@ -419,7 +413,6 @@ namespace Pulumi.Meraki.Organizations
         {
             EndingBefore = endingBefore;
             FirmwareUpgradeBatchIds = firmwareUpgradeBatchIds;
-            Id = id;
             Items = items;
             Macs = macs;
             NetworkIds = networkIds;

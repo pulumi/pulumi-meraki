@@ -47,10 +47,6 @@ export interface GetCameraBoundariesAreasByDeviceArgs {
  */
 export interface GetCameraBoundariesAreasByDeviceResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseCameraGetOrganizationCameraBoundariesAreasByDevice
      */
     readonly items: outputs.organizations.GetCameraBoundariesAreasByDeviceItem[];

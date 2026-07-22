@@ -177,10 +177,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly int? ConnectivityHistoryTimespan;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// includeConnectivityHistory query parameter. Include the connectivity history for this client
         /// </summary>
         public readonly bool? IncludeConnectivityHistory;
@@ -196,8 +192,6 @@ namespace Pulumi.Meraki.Networks
 
             int? connectivityHistoryTimespan,
 
-            string id,
-
             bool? includeConnectivityHistory,
 
             Outputs.GetBluetoothClientsItemResult item,
@@ -206,7 +200,6 @@ namespace Pulumi.Meraki.Networks
         {
             BluetoothClientId = bluetoothClientId;
             ConnectivityHistoryTimespan = connectivityHistoryTimespan;
-            Id = id;
             IncludeConnectivityHistory = includeConnectivityHistory;
             Item = item;
             NetworkId = networkId;

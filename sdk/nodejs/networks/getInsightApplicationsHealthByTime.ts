@@ -75,10 +75,6 @@ export interface GetInsightApplicationsHealthByTimeResult {
      */
     readonly applicationId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseInsightGetNetworkInsightApplicationHealthByTime
      */
     readonly items: outputs.networks.GetInsightApplicationsHealthByTimeItem[];

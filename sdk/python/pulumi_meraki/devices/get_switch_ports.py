@@ -27,10 +27,7 @@ class GetSwitchPortsResult:
     """
     A collection of values returned by getSwitchPorts.
     """
-    def __init__(__self__, id=None, item=None, items=None, port_id=None, serial=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, port_id=None, serial=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSwitchPortsResult:
         if serial and not isinstance(serial, str):
             raise TypeError("Expected argument 'serial' to be a str")
         pulumi.set(__self__, "serial", serial)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSwitchPortsResult(GetSwitchPortsResult):
         if False:
             yield self
         return GetSwitchPortsResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             port_id=self.port_id,
@@ -112,7 +100,6 @@ def get_switch_ports(port_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:devices/getSwitchPorts:getSwitchPorts', __args__, opts=opts, typ=GetSwitchPortsResult).value
 
     return AwaitableGetSwitchPortsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         port_id=pulumi.get(__ret__, 'port_id'),
@@ -133,7 +120,6 @@ def get_switch_ports_output(port_id: pulumi.Input[Optional[Optional[_builtins.st
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchPorts:getSwitchPorts', __args__, opts=opts, typ=GetSwitchPortsResult)
     return __ret__.apply(lambda __response__: GetSwitchPortsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         port_id=pulumi.get(__response__, 'port_id'),

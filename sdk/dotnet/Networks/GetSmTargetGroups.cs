@@ -87,10 +87,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetSmTargetGroupsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSmTargetGroupsItemResult Item;
         /// <summary>
         /// Array of ResponseSmGetNetworkSmTargetGroups
@@ -111,8 +107,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSmTargetGroupsResult(
-            string id,
-
             Outputs.GetSmTargetGroupsItemResult item,
 
             ImmutableArray<Outputs.GetSmTargetGroupsItemResult> items,
@@ -123,7 +117,6 @@ namespace Pulumi.Meraki.Networks
 
             bool? withDetails)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -27,13 +27,10 @@ class GetCameraCustomAnalyticsArtifactsResult:
     """
     A collection of values returned by getCameraCustomAnalyticsArtifacts.
     """
-    def __init__(__self__, artifact_id=None, id=None, item=None, items=None, organization_id=None):
+    def __init__(__self__, artifact_id=None, item=None, items=None, organization_id=None):
         if artifact_id and not isinstance(artifact_id, str):
             raise TypeError("Expected argument 'artifact_id' to be a str")
         pulumi.set(__self__, "artifact_id", artifact_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetCameraCustomAnalyticsArtifactsResult:
         artifactId path parameter. Artifact ID
         """
         return pulumi.get(self, "artifact_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetCameraCustomAnalyticsArtifactsResult(GetCameraCustomAnalyticsA
             yield self
         return GetCameraCustomAnalyticsArtifactsResult(
             artifact_id=self.artifact_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id)
@@ -113,7 +101,6 @@ def get_camera_custom_analytics_artifacts(artifact_id: Optional[_builtins.str] =
 
     return AwaitableGetCameraCustomAnalyticsArtifactsResult(
         artifact_id=pulumi.get(__ret__, 'artifact_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -134,7 +121,6 @@ def get_camera_custom_analytics_artifacts_output(artifact_id: pulumi.Input[Optio
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts', __args__, opts=opts, typ=GetCameraCustomAnalyticsArtifactsResult)
     return __ret__.apply(lambda __response__: GetCameraCustomAnalyticsArtifactsResult(
         artifact_id=pulumi.get(__response__, 'artifact_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

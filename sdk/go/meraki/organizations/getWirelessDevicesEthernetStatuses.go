@@ -71,8 +71,6 @@ type GetWirelessDevicesEthernetStatusesArgs struct {
 type GetWirelessDevicesEthernetStatusesResult struct {
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseWirelessGetOrganizationWirelessDevicesEthernetStatuses
 	Items []GetWirelessDevicesEthernetStatusesItem `pulumi:"items"`
 	// networkIds query parameter. A list of Meraki network IDs to filter results to contain only specified networks. E.g.: networkIds[]=N*12345678&networkIds[]=L*3456
@@ -130,11 +128,6 @@ func (o GetWirelessDevicesEthernetStatusesResultOutput) ToGetWirelessDevicesEthe
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetWirelessDevicesEthernetStatusesResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessDevicesEthernetStatusesResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessDevicesEthernetStatusesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessDevicesEthernetStatusesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseWirelessGetOrganizationWirelessDevicesEthernetStatuses

@@ -131,10 +131,6 @@ export interface GetWirelessLatencyHistoryResult {
      */
     readonly deviceSerial?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessLatencyHistory
      */
     readonly items: outputs.networks.GetWirelessLatencyHistoryItem[];

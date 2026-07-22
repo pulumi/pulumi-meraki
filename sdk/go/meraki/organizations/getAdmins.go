@@ -55,8 +55,6 @@ type LookupAdminsArgs struct {
 
 // A collection of values returned by getAdmins.
 type LookupAdminsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationAdmins
 	Items []GetAdminsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -95,11 +93,6 @@ func (o LookupAdminsResultOutput) ToLookupAdminsResultOutput() LookupAdminsResul
 
 func (o LookupAdminsResultOutput) ToLookupAdminsResultOutputWithContext(ctx context.Context) LookupAdminsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAdminsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAdminsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationAdmins

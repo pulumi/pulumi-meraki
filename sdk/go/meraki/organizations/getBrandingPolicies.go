@@ -33,10 +33,8 @@ type LookupBrandingPoliciesArgs struct {
 // A collection of values returned by getBrandingPolicies.
 type LookupBrandingPoliciesResult struct {
 	// brandingPolicyId path parameter. Branding policy ID
-	BrandingPolicyId *string `pulumi:"brandingPolicyId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                  `pulumi:"id"`
-	Item GetBrandingPoliciesItem `pulumi:"item"`
+	BrandingPolicyId *string                 `pulumi:"brandingPolicyId"`
+	Item             GetBrandingPoliciesItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationBrandingPolicies
 	Items []GetBrandingPoliciesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -82,11 +80,6 @@ func (o LookupBrandingPoliciesResultOutput) ToLookupBrandingPoliciesResultOutput
 // brandingPolicyId path parameter. Branding policy ID
 func (o LookupBrandingPoliciesResultOutput) BrandingPolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupBrandingPoliciesResult) *string { return v.BrandingPolicyId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupBrandingPoliciesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupBrandingPoliciesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupBrandingPoliciesResultOutput) Item() GetBrandingPoliciesItemOutput {

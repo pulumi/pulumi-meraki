@@ -32,11 +32,6 @@ public final class GetWirelessFailedConnectionsResult {
      */
     private @Nullable String clientId;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessFailedConnections
      * 
      */
@@ -98,13 +93,6 @@ public final class GetWirelessFailedConnectionsResult {
      */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseWirelessGetNetworkWirelessFailedConnections
@@ -175,7 +163,6 @@ public final class GetWirelessFailedConnectionsResult {
         private @Nullable String apTag;
         private @Nullable String band;
         private @Nullable String clientId;
-        private String id;
         private List<GetWirelessFailedConnectionsItem> items;
         private String networkId;
         private @Nullable String serial;
@@ -190,7 +177,6 @@ public final class GetWirelessFailedConnectionsResult {
     	      this.apTag = defaults.apTag;
     	      this.band = defaults.band;
     	      this.clientId = defaults.clientId;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.serial = defaults.serial;
@@ -217,14 +203,6 @@ public final class GetWirelessFailedConnectionsResult {
         public Builder clientId(@Nullable String clientId) {
 
             this.clientId = clientId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessFailedConnectionsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -287,7 +265,6 @@ public final class GetWirelessFailedConnectionsResult {
             _resultValue.apTag = apTag;
             _resultValue.band = band;
             _resultValue.clientId = clientId;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.serial = serial;

@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetBrandingPoliciesPrioritiesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetBrandingPoliciesPrioritiesItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetBrandingPoliciesPrioritiesResult(
-            string id,
-
             Outputs.GetBrandingPoliciesPrioritiesItemResult item,
 
             string organizationId)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
         }

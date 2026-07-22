@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSmVppAccountsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSmVppAccountsItem item;
     /**
      * @return Array of ResponseSmGetOrganizationSmVppAccounts
@@ -37,13 +32,6 @@ public final class GetSmVppAccountsResult {
     private @Nullable String vppAccountId;
 
     private GetSmVppAccountsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSmVppAccountsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSmVppAccountsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSmVppAccountsItem item;
         private List<GetSmVppAccountsItem> items;
         private @Nullable String organizationId;
@@ -86,21 +73,12 @@ public final class GetSmVppAccountsResult {
         public Builder() {}
         public Builder(GetSmVppAccountsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.vppAccountId = defaults.vppAccountId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmVppAccountsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSmVppAccountsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSmVppAccountsResult {
         }
         public GetSmVppAccountsResult build() {
             final var _resultValue = new GetSmVppAccountsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

@@ -55,8 +55,6 @@ type LookupApplianceVpnVpnFirewallRulesArgs struct {
 
 // A collection of values returned by getApplianceVpnVpnFirewallRules.
 type LookupApplianceVpnVpnFirewallRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                              `pulumi:"id"`
 	Item GetApplianceVpnVpnFirewallRulesItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceVpnVpnFirewallRulesResultOutput) ToLookupApplianceVpnVpnF
 
 func (o LookupApplianceVpnVpnFirewallRulesResultOutput) ToLookupApplianceVpnVpnFirewallRulesResultOutputWithContext(ctx context.Context) LookupApplianceVpnVpnFirewallRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceVpnVpnFirewallRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceVpnVpnFirewallRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceVpnVpnFirewallRulesResultOutput) Item() GetApplianceVpnVpnFirewallRulesItemOutput {

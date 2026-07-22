@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSwitchPortsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchPortsItem item;
     /**
      * @return Array of ResponseSwitchGetDeviceSwitchPorts
@@ -37,13 +32,6 @@ public final class GetSwitchPortsResult {
     private @Nullable String serial;
 
     private GetSwitchPortsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchPortsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSwitchPortsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchPortsItem item;
         private List<GetSwitchPortsItem> items;
         private @Nullable String portId;
@@ -86,21 +73,12 @@ public final class GetSwitchPortsResult {
         public Builder() {}
         public Builder(GetSwitchPortsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.portId = defaults.portId;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchPortsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchPortsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSwitchPortsResult {
         }
         public GetSwitchPortsResult build() {
             final var _resultValue = new GetSwitchPortsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.portId = portId;

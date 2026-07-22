@@ -46,10 +46,6 @@ export interface GetWirelessSsidsSplashSettingsArgs {
  * A collection of values returned by getWirelessSsidsSplashSettings.
  */
 export interface GetWirelessSsidsSplashSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsSplashSettingsItem;
     /**
      * networkId path parameter. Network ID

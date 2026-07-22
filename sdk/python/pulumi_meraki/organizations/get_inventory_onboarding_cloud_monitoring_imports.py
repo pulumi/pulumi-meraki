@@ -27,10 +27,7 @@ class GetInventoryOnboardingCloudMonitoringImportsResult:
     """
     A collection of values returned by getInventoryOnboardingCloudMonitoringImports.
     """
-    def __init__(__self__, id=None, import_ids=None, items=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, import_ids=None, items=None, organization_id=None):
         if import_ids and not isinstance(import_ids, list):
             raise TypeError("Expected argument 'import_ids' to be a list")
         pulumi.set(__self__, "import_ids", import_ids)
@@ -40,14 +37,6 @@ class GetInventoryOnboardingCloudMonitoringImportsResult:
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="importIds")
@@ -80,7 +69,6 @@ class AwaitableGetInventoryOnboardingCloudMonitoringImportsResult(GetInventoryOn
         if False:
             yield self
         return GetInventoryOnboardingCloudMonitoringImportsResult(
-            id=self.id,
             import_ids=self.import_ids,
             items=self.items,
             organization_id=self.organization_id)
@@ -112,7 +100,6 @@ def get_inventory_onboarding_cloud_monitoring_imports(import_ids: Optional[Seque
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports', __args__, opts=opts, typ=GetInventoryOnboardingCloudMonitoringImportsResult).value
 
     return AwaitableGetInventoryOnboardingCloudMonitoringImportsResult(
-        id=pulumi.get(__ret__, 'id'),
         import_ids=pulumi.get(__ret__, 'import_ids'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -141,7 +128,6 @@ def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: pulumi.
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports', __args__, opts=opts, typ=GetInventoryOnboardingCloudMonitoringImportsResult)
     return __ret__.apply(lambda __response__: GetInventoryOnboardingCloudMonitoringImportsResult(
-        id=pulumi.get(__response__, 'id'),
         import_ids=pulumi.get(__response__, 'import_ids'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

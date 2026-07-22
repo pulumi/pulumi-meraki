@@ -60,8 +60,6 @@ type GetConfigTemplatesSwitchProfilesArgs struct {
 type GetConfigTemplatesSwitchProfilesResult struct {
 	// configTemplateId path parameter. Config template ID
 	ConfigTemplateId string `pulumi:"configTemplateId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles
 	Items []GetConfigTemplatesSwitchProfilesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -107,11 +105,6 @@ func (o GetConfigTemplatesSwitchProfilesResultOutput) ToGetConfigTemplatesSwitch
 // configTemplateId path parameter. Config template ID
 func (o GetConfigTemplatesSwitchProfilesResultOutput) ConfigTemplateId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetConfigTemplatesSwitchProfilesResult) string { return v.ConfigTemplateId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetConfigTemplatesSwitchProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetConfigTemplatesSwitchProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles

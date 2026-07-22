@@ -59,10 +59,6 @@ export interface GetSummaryTopSsidsByUsageArgs {
  */
 export interface GetSummaryTopSsidsByUsageResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage
      */
     readonly items: outputs.organizations.GetSummaryTopSsidsByUsageItem[];

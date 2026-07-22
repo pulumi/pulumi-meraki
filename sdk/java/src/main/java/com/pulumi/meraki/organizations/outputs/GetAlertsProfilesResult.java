@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetAlertsProfilesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationAlertsProfiles
      * 
      */
@@ -29,13 +24,6 @@ public final class GetAlertsProfilesResult {
     private String organizationId;
 
     private GetAlertsProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationAlertsProfiles
      * 
@@ -60,25 +48,15 @@ public final class GetAlertsProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetAlertsProfilesItem> items;
         private String organizationId;
         public Builder() {}
         public Builder(GetAlertsProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetAlertsProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetAlertsProfilesItem> items) {
             if (items == null) {
@@ -100,7 +78,6 @@ public final class GetAlertsProfilesResult {
         }
         public GetAlertsProfilesResult build() {
             final var _resultValue = new GetAlertsProfilesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             return _resultValue;

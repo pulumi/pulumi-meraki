@@ -109,10 +109,6 @@ export interface GetWirelessDevicesPacketLossByNetworkResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetOrganizationWirelessDevicesPacketLossByNetwork
      */
     readonly items: outputs.organizations.GetWirelessDevicesPacketLossByNetworkItem[];

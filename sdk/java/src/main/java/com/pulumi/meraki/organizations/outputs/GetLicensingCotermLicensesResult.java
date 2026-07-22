@@ -27,11 +27,6 @@ public final class GetLicensingCotermLicensesResult {
      */
     private @Nullable Boolean expired;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return invalidated query parameter. Filter for licenses that are invalidated
      * 
      */
@@ -71,13 +66,6 @@ public final class GetLicensingCotermLicensesResult {
      */
     public Optional<Boolean> expired() {
         return Optional.ofNullable(this.expired);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return invalidated query parameter. Filter for licenses that are invalidated
@@ -126,7 +114,6 @@ public final class GetLicensingCotermLicensesResult {
     public static final class Builder {
         private @Nullable String endingBefore;
         private @Nullable Boolean expired;
-        private String id;
         private @Nullable Boolean invalidated;
         private List<GetLicensingCotermLicensesItem> items;
         private String organizationId;
@@ -137,7 +124,6 @@ public final class GetLicensingCotermLicensesResult {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
     	      this.expired = defaults.expired;
-    	      this.id = defaults.id;
     	      this.invalidated = defaults.invalidated;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -155,14 +141,6 @@ public final class GetLicensingCotermLicensesResult {
         public Builder expired(@Nullable Boolean expired) {
 
             this.expired = expired;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLicensingCotermLicensesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -206,7 +184,6 @@ public final class GetLicensingCotermLicensesResult {
             final var _resultValue = new GetLicensingCotermLicensesResult();
             _resultValue.endingBefore = endingBefore;
             _resultValue.expired = expired;
-            _resultValue.id = id;
             _resultValue.invalidated = invalidated;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

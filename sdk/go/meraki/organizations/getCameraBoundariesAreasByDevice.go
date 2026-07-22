@@ -60,8 +60,6 @@ type GetCameraBoundariesAreasByDeviceArgs struct {
 
 // A collection of values returned by getCameraBoundariesAreasByDevice.
 type GetCameraBoundariesAreasByDeviceResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseCameraGetOrganizationCameraBoundariesAreasByDevice
 	Items []GetCameraBoundariesAreasByDeviceItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -104,11 +102,6 @@ func (o GetCameraBoundariesAreasByDeviceResultOutput) ToGetCameraBoundariesAreas
 
 func (o GetCameraBoundariesAreasByDeviceResultOutput) ToGetCameraBoundariesAreasByDeviceResultOutputWithContext(ctx context.Context) GetCameraBoundariesAreasByDeviceResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCameraBoundariesAreasByDeviceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCameraBoundariesAreasByDeviceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseCameraGetOrganizationCameraBoundariesAreasByDevice

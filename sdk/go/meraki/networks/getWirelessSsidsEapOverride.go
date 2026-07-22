@@ -58,8 +58,6 @@ type LookupWirelessSsidsEapOverrideArgs struct {
 
 // A collection of values returned by getWirelessSsidsEapOverride.
 type LookupWirelessSsidsEapOverrideResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                          `pulumi:"id"`
 	Item GetWirelessSsidsEapOverrideItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsEapOverrideResultOutput) ToLookupWirelessSsidsEapOver
 
 func (o LookupWirelessSsidsEapOverrideResultOutput) ToLookupWirelessSsidsEapOverrideResultOutputWithContext(ctx context.Context) LookupWirelessSsidsEapOverrideResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsEapOverrideResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsEapOverrideResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsEapOverrideResultOutput) Item() GetWirelessSsidsEapOverrideItemOutput {

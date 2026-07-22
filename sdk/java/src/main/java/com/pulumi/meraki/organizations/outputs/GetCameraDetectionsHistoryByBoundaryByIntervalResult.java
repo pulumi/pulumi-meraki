@@ -31,11 +31,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
      */
     private @Nullable Integer duration;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval
      * 
      */
@@ -79,13 +74,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval
      * 
      */
@@ -126,7 +114,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
         private List<String> boundaryIds;
         private @Nullable List<String> boundaryTypes;
         private @Nullable Integer duration;
-        private String id;
         private List<GetCameraDetectionsHistoryByBoundaryByIntervalItem> items;
         private String organizationId;
         private @Nullable Integer perPage;
@@ -137,7 +124,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
     	      this.boundaryIds = defaults.boundaryIds;
     	      this.boundaryTypes = defaults.boundaryTypes;
     	      this.duration = defaults.duration;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.perPage = defaults.perPage;
@@ -168,14 +154,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
         public Builder duration(@Nullable Integer duration) {
 
             this.duration = duration;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraDetectionsHistoryByBoundaryByIntervalResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -219,7 +197,6 @@ public final class GetCameraDetectionsHistoryByBoundaryByIntervalResult {
             _resultValue.boundaryIds = boundaryIds;
             _resultValue.boundaryTypes = boundaryTypes;
             _resultValue.duration = duration;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.perPage = perPage;

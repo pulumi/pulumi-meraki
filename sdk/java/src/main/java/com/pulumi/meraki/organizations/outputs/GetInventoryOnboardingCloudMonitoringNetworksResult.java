@@ -26,11 +26,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationInventoryOnboardingCloudMonitoringNetworks
      * 
      */
@@ -70,13 +65,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationInventoryOnboardingCloudMonitoringNetworks
@@ -125,7 +113,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
     public static final class Builder {
         private String deviceType;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetInventoryOnboardingCloudMonitoringNetworksItem> items;
         private String organizationId;
         private @Nullable Integer perPage;
@@ -136,7 +123,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
     	      Objects.requireNonNull(defaults);
     	      this.deviceType = defaults.deviceType;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.perPage = defaults.perPage;
@@ -156,14 +142,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetInventoryOnboardingCloudMonitoringNetworksResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -207,7 +185,6 @@ public final class GetInventoryOnboardingCloudMonitoringNetworksResult {
             final var _resultValue = new GetInventoryOnboardingCloudMonitoringNetworksResult();
             _resultValue.deviceType = deviceType;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.perPage = perPage;

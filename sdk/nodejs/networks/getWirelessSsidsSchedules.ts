@@ -46,10 +46,6 @@ export interface GetWirelessSsidsSchedulesArgs {
  * A collection of values returned by getWirelessSsidsSchedules.
  */
 export interface GetWirelessSsidsSchedulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsSchedulesItem;
     /**
      * networkId path parameter. Network ID

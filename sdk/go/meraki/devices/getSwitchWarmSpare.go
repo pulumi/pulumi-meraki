@@ -55,8 +55,6 @@ type LookupSwitchWarmSpareArgs struct {
 
 // A collection of values returned by getSwitchWarmSpare.
 type LookupSwitchWarmSpareResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetSwitchWarmSpareItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupSwitchWarmSpareResultOutput) ToLookupSwitchWarmSpareResultOutput()
 
 func (o LookupSwitchWarmSpareResultOutput) ToLookupSwitchWarmSpareResultOutputWithContext(ctx context.Context) LookupSwitchWarmSpareResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchWarmSpareResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchWarmSpareResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchWarmSpareResultOutput) Item() GetSwitchWarmSpareItemOutput {

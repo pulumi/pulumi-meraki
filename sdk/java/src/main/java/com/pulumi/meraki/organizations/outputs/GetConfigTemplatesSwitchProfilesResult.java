@@ -18,11 +18,6 @@ public final class GetConfigTemplatesSwitchProfilesResult {
      */
     private String configTemplateId;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles
      * 
      */
@@ -40,13 +35,6 @@ public final class GetConfigTemplatesSwitchProfilesResult {
      */
     public String configTemplateId() {
         return this.configTemplateId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles
@@ -73,14 +61,12 @@ public final class GetConfigTemplatesSwitchProfilesResult {
     @CustomType.Builder
     public static final class Builder {
         private String configTemplateId;
-        private String id;
         private List<GetConfigTemplatesSwitchProfilesItem> items;
         private String organizationId;
         public Builder() {}
         public Builder(GetConfigTemplatesSwitchProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.configTemplateId = defaults.configTemplateId;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
         }
@@ -91,14 +77,6 @@ public final class GetConfigTemplatesSwitchProfilesResult {
               throw new MissingRequiredPropertyException("GetConfigTemplatesSwitchProfilesResult", "configTemplateId");
             }
             this.configTemplateId = configTemplateId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetConfigTemplatesSwitchProfilesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -123,7 +101,6 @@ public final class GetConfigTemplatesSwitchProfilesResult {
         public GetConfigTemplatesSwitchProfilesResult build() {
             final var _resultValue = new GetConfigTemplatesSwitchProfilesResult();
             _resultValue.configTemplateId = configTemplateId;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             return _resultValue;

@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetHealthAlertsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseNetworksGetNetworkHealthAlerts
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHealthAlertsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetHealthAlertsResult(
-            string id,
-
             ImmutableArray<Outputs.GetHealthAlertsItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

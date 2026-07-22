@@ -18,11 +18,6 @@ public final class GetSmDevicesWlanListsResult {
      */
     private String deviceId;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmDeviceWlanLists
      * 
      */
@@ -40,13 +35,6 @@ public final class GetSmDevicesWlanListsResult {
      */
     public String deviceId() {
         return this.deviceId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSmGetNetworkSmDeviceWlanLists
@@ -73,14 +61,12 @@ public final class GetSmDevicesWlanListsResult {
     @CustomType.Builder
     public static final class Builder {
         private String deviceId;
-        private String id;
         private List<GetSmDevicesWlanListsItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetSmDevicesWlanListsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.deviceId = defaults.deviceId;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
@@ -91,14 +77,6 @@ public final class GetSmDevicesWlanListsResult {
               throw new MissingRequiredPropertyException("GetSmDevicesWlanListsResult", "deviceId");
             }
             this.deviceId = deviceId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmDevicesWlanListsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -123,7 +101,6 @@ public final class GetSmDevicesWlanListsResult {
         public GetSmDevicesWlanListsResult build() {
             final var _resultValue = new GetSmDevicesWlanListsResult();
             _resultValue.deviceId = deviceId;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

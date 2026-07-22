@@ -99,10 +99,6 @@ export interface GetDevicesProvisioningStatusesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesProvisioningStatuses
      */
     readonly items: outputs.organizations.GetDevicesProvisioningStatusesItem[];

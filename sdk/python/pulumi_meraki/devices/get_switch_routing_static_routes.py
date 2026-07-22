@@ -27,10 +27,7 @@ class GetSwitchRoutingStaticRoutesResult:
     """
     A collection of values returned by getSwitchRoutingStaticRoutes.
     """
-    def __init__(__self__, id=None, item=None, items=None, serial=None, static_route_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, serial=None, static_route_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSwitchRoutingStaticRoutesResult:
         if static_route_id and not isinstance(static_route_id, str):
             raise TypeError("Expected argument 'static_route_id' to be a str")
         pulumi.set(__self__, "static_route_id", static_route_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSwitchRoutingStaticRoutesResult(GetSwitchRoutingStaticRoutesRe
         if False:
             yield self
         return GetSwitchRoutingStaticRoutesResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             serial=self.serial,
@@ -112,7 +100,6 @@ def get_switch_routing_static_routes(serial: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchRoutingStaticRoutesResult).value
 
     return AwaitableGetSwitchRoutingStaticRoutesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         serial=pulumi.get(__ret__, 'serial'),
@@ -133,7 +120,6 @@ def get_switch_routing_static_routes_output(serial: pulumi.Input[Optional[Option
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchRoutingStaticRoutesResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingStaticRoutesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         serial=pulumi.get(__response__, 'serial'),

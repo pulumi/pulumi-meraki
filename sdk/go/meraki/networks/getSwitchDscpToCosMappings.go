@@ -55,8 +55,6 @@ type LookupSwitchDscpToCosMappingsArgs struct {
 
 // A collection of values returned by getSwitchDscpToCosMappings.
 type LookupSwitchDscpToCosMappingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                         `pulumi:"id"`
 	Item GetSwitchDscpToCosMappingsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchDscpToCosMappingsResultOutput) ToLookupSwitchDscpToCosMappin
 
 func (o LookupSwitchDscpToCosMappingsResultOutput) ToLookupSwitchDscpToCosMappingsResultOutputWithContext(ctx context.Context) LookupSwitchDscpToCosMappingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchDscpToCosMappingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchDscpToCosMappingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchDscpToCosMappingsResultOutput) Item() GetSwitchDscpToCosMappingsItemOutput {

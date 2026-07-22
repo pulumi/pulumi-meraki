@@ -27,10 +27,7 @@ class GetDevicesUplinksLossAndLatencyResult:
     """
     A collection of values returned by getDevicesUplinksLossAndLatency.
     """
-    def __init__(__self__, id=None, ip=None, items=None, organization_id=None, t0=None, t1=None, timespan=None, uplink=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, ip=None, items=None, organization_id=None, t0=None, t1=None, timespan=None, uplink=None):
         if ip and not isinstance(ip, str):
             raise TypeError("Expected argument 'ip' to be a str")
         pulumi.set(__self__, "ip", ip)
@@ -52,14 +49,6 @@ class GetDevicesUplinksLossAndLatencyResult:
         if uplink and not isinstance(uplink, str):
             raise TypeError("Expected argument 'uplink' to be a str")
         pulumi.set(__self__, "uplink", uplink)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -124,7 +113,6 @@ class AwaitableGetDevicesUplinksLossAndLatencyResult(GetDevicesUplinksLossAndLat
         if False:
             yield self
         return GetDevicesUplinksLossAndLatencyResult(
-            id=self.id,
             ip=self.ip,
             items=self.items,
             organization_id=self.organization_id,
@@ -176,7 +164,6 @@ def get_devices_uplinks_loss_and_latency(ip: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency', __args__, opts=opts, typ=GetDevicesUplinksLossAndLatencyResult).value
 
     return AwaitableGetDevicesUplinksLossAndLatencyResult(
-        id=pulumi.get(__ret__, 'id'),
         ip=pulumi.get(__ret__, 'ip'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -225,7 +212,6 @@ def get_devices_uplinks_loss_and_latency_output(ip: pulumi.Input[Optional[Option
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency', __args__, opts=opts, typ=GetDevicesUplinksLossAndLatencyResult)
     return __ret__.apply(lambda __response__: GetDevicesUplinksLossAndLatencyResult(
-        id=pulumi.get(__response__, 'id'),
         ip=pulumi.get(__response__, 'ip'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),

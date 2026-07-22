@@ -281,10 +281,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseNetworksGetNetworkVlanProfilesAssignmentsByDevice
         /// </summary>
         public readonly ImmutableArray<Outputs.GetVlanProfilesAssignmentsByDeviceItemResult> Items;
@@ -317,8 +313,6 @@ namespace Pulumi.Meraki.Networks
         private GetVlanProfilesAssignmentsByDeviceResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetVlanProfilesAssignmentsByDeviceItemResult> items,
 
             string networkId,
@@ -334,7 +328,6 @@ namespace Pulumi.Meraki.Networks
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             PerPage = perPage;

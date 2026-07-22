@@ -55,8 +55,6 @@ type LookupWirelessSettingsArgs struct {
 
 // A collection of values returned by getWirelessSettings.
 type LookupWirelessSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                  `pulumi:"id"`
 	Item GetWirelessSettingsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupWirelessSettingsResultOutput) ToLookupWirelessSettingsResultOutput
 
 func (o LookupWirelessSettingsResultOutput) ToLookupWirelessSettingsResultOutputWithContext(ctx context.Context) LookupWirelessSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSettingsResultOutput) Item() GetWirelessSettingsItemOutput {

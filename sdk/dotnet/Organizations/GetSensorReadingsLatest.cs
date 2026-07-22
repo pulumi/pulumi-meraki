@@ -281,10 +281,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSensorGetOrganizationSensorReadingsLatest
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSensorReadingsLatestItemResult> Items;
@@ -317,8 +313,6 @@ namespace Pulumi.Meraki.Organizations
         private GetSensorReadingsLatestResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetSensorReadingsLatestItemResult> items,
 
             ImmutableArray<string> metrics,
@@ -334,7 +328,6 @@ namespace Pulumi.Meraki.Organizations
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             Metrics = metrics;
             NetworkIds = networkIds;

@@ -12,11 +12,6 @@ import java.util.Objects;
 @CustomType
 public final class GetVlanProfilesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return iname path parameter.
      * 
      */
@@ -29,13 +24,6 @@ public final class GetVlanProfilesResult {
     private String networkId;
 
     private GetVlanProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return iname path parameter.
      * 
@@ -63,27 +51,17 @@ public final class GetVlanProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private String iname;
         private GetVlanProfilesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetVlanProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.iname = defaults.iname;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetVlanProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder iname(String iname) {
             if (iname == null) {
@@ -110,7 +88,6 @@ public final class GetVlanProfilesResult {
         }
         public GetVlanProfilesResult build() {
             final var _resultValue = new GetVlanProfilesResult();
-            _resultValue.id = id;
             _resultValue.iname = iname;
             _resultValue.item = item;
             _resultValue.networkId = networkId;

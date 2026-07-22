@@ -27,11 +27,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseWirelessGetOrganizationWirelessDevicesPacketLossByClient
      * 
      */
@@ -96,13 +91,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseWirelessGetOrganizationWirelessDevicesPacketLossByClient
@@ -186,7 +174,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
     public static final class Builder {
         private @Nullable List<String> bands;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetWirelessDevicesPacketLossByClientItem> items;
         private @Nullable List<String> macs;
         private @Nullable List<String> networkIds;
@@ -202,7 +189,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
     	      Objects.requireNonNull(defaults);
     	      this.bands = defaults.bands;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.macs = defaults.macs;
     	      this.networkIds = defaults.networkIds;
@@ -228,14 +214,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessDevicesPacketLossByClientResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -318,7 +296,6 @@ public final class GetWirelessDevicesPacketLossByClientResult {
             final var _resultValue = new GetWirelessDevicesPacketLossByClientResult();
             _resultValue.bands = bands;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.macs = macs;
             _resultValue.networkIds = networkIds;

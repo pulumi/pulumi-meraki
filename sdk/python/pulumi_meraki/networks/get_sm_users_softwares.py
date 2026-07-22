@@ -27,10 +27,7 @@ class GetSmUsersSoftwaresResult:
     """
     A collection of values returned by getSmUsersSoftwares.
     """
-    def __init__(__self__, id=None, items=None, network_id=None, user_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, network_id=None, user_id=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -40,14 +37,6 @@ class GetSmUsersSoftwaresResult:
         if user_id and not isinstance(user_id, str):
             raise TypeError("Expected argument 'user_id' to be a str")
         pulumi.set(__self__, "user_id", user_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -80,7 +69,6 @@ class AwaitableGetSmUsersSoftwaresResult(GetSmUsersSoftwaresResult):
         if False:
             yield self
         return GetSmUsersSoftwaresResult(
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             user_id=self.user_id)
@@ -112,7 +100,6 @@ def get_sm_users_softwares(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares', __args__, opts=opts, typ=GetSmUsersSoftwaresResult).value
 
     return AwaitableGetSmUsersSoftwaresResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         user_id=pulumi.get(__ret__, 'user_id'))
@@ -141,7 +128,6 @@ def get_sm_users_softwares_output(network_id: pulumi.Input[Optional[_builtins.st
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares', __args__, opts=opts, typ=GetSmUsersSoftwaresResult)
     return __ret__.apply(lambda __response__: GetSmUsersSoftwaresResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         user_id=pulumi.get(__response__, 'user_id')))

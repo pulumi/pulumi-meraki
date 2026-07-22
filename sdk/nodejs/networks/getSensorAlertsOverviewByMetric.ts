@@ -65,10 +65,6 @@ export interface GetSensorAlertsOverviewByMetricArgs {
  */
 export interface GetSensorAlertsOverviewByMetricResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * interval query parameter. The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800.
      */
     readonly interval?: number;

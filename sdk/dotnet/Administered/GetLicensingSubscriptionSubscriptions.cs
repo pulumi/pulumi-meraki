@@ -341,10 +341,6 @@ namespace Pulumi.Meraki.Administered
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptions
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLicensingSubscriptionSubscriptionsItemResult> Items;
@@ -384,8 +380,6 @@ namespace Pulumi.Meraki.Administered
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetLicensingSubscriptionSubscriptionsItemResult> items,
 
             ImmutableArray<string> organizationIds,
@@ -404,7 +398,6 @@ namespace Pulumi.Meraki.Administered
         {
             EndDate = endDate;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             OrganizationIds = organizationIds;
             PerPage = perPage;

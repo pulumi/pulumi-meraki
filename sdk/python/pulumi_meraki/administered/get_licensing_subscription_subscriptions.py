@@ -27,16 +27,13 @@ class GetLicensingSubscriptionSubscriptionsResult:
     """
     A collection of values returned by getLicensingSubscriptionSubscriptions.
     """
-    def __init__(__self__, end_date=None, ending_before=None, id=None, items=None, organization_ids=None, per_page=None, product_types=None, start_date=None, starting_after=None, statuses=None, subscription_ids=None):
+    def __init__(__self__, end_date=None, ending_before=None, items=None, organization_ids=None, per_page=None, product_types=None, start_date=None, starting_after=None, statuses=None, subscription_ids=None):
         if end_date and not isinstance(end_date, str):
             raise TypeError("Expected argument 'end_date' to be a str")
         pulumi.set(__self__, "end_date", end_date)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -78,14 +75,6 @@ class GetLicensingSubscriptionSubscriptionsResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -161,7 +150,6 @@ class AwaitableGetLicensingSubscriptionSubscriptionsResult(GetLicensingSubscript
         return GetLicensingSubscriptionSubscriptionsResult(
             end_date=self.end_date,
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             organization_ids=self.organization_ids,
             per_page=self.per_page,
@@ -230,7 +218,6 @@ def get_licensing_subscription_subscriptions(end_date: Optional[_builtins.str] =
     return AwaitableGetLicensingSubscriptionSubscriptionsResult(
         end_date=pulumi.get(__ret__, 'end_date'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_ids=pulumi.get(__ret__, 'organization_ids'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -296,7 +283,6 @@ def get_licensing_subscription_subscriptions_output(end_date: pulumi.Input[Optio
     return __ret__.apply(lambda __response__: GetLicensingSubscriptionSubscriptionsResult(
         end_date=pulumi.get(__response__, 'end_date'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_ids=pulumi.get(__response__, 'organization_ids'),
         per_page=pulumi.get(__response__, 'per_page'),

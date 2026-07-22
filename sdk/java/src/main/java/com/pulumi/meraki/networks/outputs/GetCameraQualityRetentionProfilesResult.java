@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCameraQualityRetentionProfilesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraQualityRetentionProfilesItem item;
     /**
      * @return Array of ResponseCameraGetNetworkCameraQualityRetentionProfiles
@@ -37,13 +32,6 @@ public final class GetCameraQualityRetentionProfilesResult {
     private @Nullable String qualityRetentionProfileId;
 
     private GetCameraQualityRetentionProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCameraQualityRetentionProfilesItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetCameraQualityRetentionProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCameraQualityRetentionProfilesItem item;
         private List<GetCameraQualityRetentionProfilesItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetCameraQualityRetentionProfilesResult {
         public Builder() {}
         public Builder(GetCameraQualityRetentionProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.qualityRetentionProfileId = defaults.qualityRetentionProfileId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraQualityRetentionProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCameraQualityRetentionProfilesItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetCameraQualityRetentionProfilesResult {
         }
         public GetCameraQualityRetentionProfilesResult build() {
             final var _resultValue = new GetCameraQualityRetentionProfilesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

@@ -55,8 +55,6 @@ type GetTrafficShapingDscpTaggingOptionsArgs struct {
 
 // A collection of values returned by getTrafficShapingDscpTaggingOptions.
 type GetTrafficShapingDscpTaggingOptionsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions
 	Items []GetTrafficShapingDscpTaggingOptionsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o GetTrafficShapingDscpTaggingOptionsResultOutput) ToGetTrafficShapingDscp
 
 func (o GetTrafficShapingDscpTaggingOptionsResultOutput) ToGetTrafficShapingDscpTaggingOptionsResultOutputWithContext(ctx context.Context) GetTrafficShapingDscpTaggingOptionsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetTrafficShapingDscpTaggingOptionsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTrafficShapingDscpTaggingOptionsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions

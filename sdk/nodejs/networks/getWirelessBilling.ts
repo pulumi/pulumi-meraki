@@ -40,10 +40,6 @@ export interface GetWirelessBillingArgs {
  * A collection of values returned by getWirelessBilling.
  */
 export interface GetWirelessBillingResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessBillingItem;
     /**
      * networkId path parameter. Network ID

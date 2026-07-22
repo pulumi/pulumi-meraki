@@ -195,10 +195,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetDevicesStatusesOverviewResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetDevicesStatusesOverviewItemResult Item;
         /// <summary>
         /// networkIds query parameter. An optional parameter to filter device statuses by network.
@@ -215,8 +211,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetDevicesStatusesOverviewResult(
-            string id,
-
             Outputs.GetDevicesStatusesOverviewItemResult item,
 
             ImmutableArray<string> networkIds,
@@ -225,7 +219,6 @@ namespace Pulumi.Meraki.Organizations
 
             ImmutableArray<string> productTypes)
         {
-            Id = id;
             Item = item;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

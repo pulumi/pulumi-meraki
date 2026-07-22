@@ -55,8 +55,6 @@ type GetApplianceUplinksStatusesOverviewArgs struct {
 
 // A collection of values returned by getApplianceUplinksStatusesOverview.
 type GetApplianceUplinksStatusesOverviewResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                  `pulumi:"id"`
 	Item GetApplianceUplinksStatusesOverviewItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o GetApplianceUplinksStatusesOverviewResultOutput) ToGetApplianceUplinksSt
 
 func (o GetApplianceUplinksStatusesOverviewResultOutput) ToGetApplianceUplinksStatusesOverviewResultOutputWithContext(ctx context.Context) GetApplianceUplinksStatusesOverviewResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApplianceUplinksStatusesOverviewResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApplianceUplinksStatusesOverviewResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetApplianceUplinksStatusesOverviewResultOutput) Item() GetApplianceUplinksStatusesOverviewItemOutput {

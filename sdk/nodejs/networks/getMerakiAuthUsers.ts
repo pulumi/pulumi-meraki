@@ -36,10 +36,6 @@ export interface GetMerakiAuthUsersArgs {
  * A collection of values returned by getMerakiAuthUsers.
  */
 export interface GetMerakiAuthUsersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetMerakiAuthUsersItem;
     /**
      * Array of ResponseNetworksGetNetworkMerakiAuthUsers

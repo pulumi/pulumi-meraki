@@ -27,16 +27,13 @@ class GetCellularGatewayUplinkStatusesResult:
     """
     A collection of values returned by getCellularGatewayUplinkStatuses.
     """
-    def __init__(__self__, ending_before=None, iccids=None, id=None, items=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None):
+    def __init__(__self__, ending_before=None, iccids=None, items=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
         if iccids and not isinstance(iccids, list):
             raise TypeError("Expected argument 'iccids' to be a list")
         pulumi.set(__self__, "iccids", iccids)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -71,14 +68,6 @@ class GetCellularGatewayUplinkStatusesResult:
         iccids query parameter. A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
         """
         return pulumi.get(self, "iccids")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -137,7 +126,6 @@ class AwaitableGetCellularGatewayUplinkStatusesResult(GetCellularGatewayUplinkSt
         return GetCellularGatewayUplinkStatusesResult(
             ending_before=self.ending_before,
             iccids=self.iccids,
-            id=self.id,
             items=self.items,
             network_ids=self.network_ids,
             organization_id=self.organization_id,
@@ -194,7 +182,6 @@ def get_cellular_gateway_uplink_statuses(ending_before: Optional[_builtins.str] 
     return AwaitableGetCellularGatewayUplinkStatusesResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
         iccids=pulumi.get(__ret__, 'iccids'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -248,7 +235,6 @@ def get_cellular_gateway_uplink_statuses_output(ending_before: pulumi.Input[Opti
     return __ret__.apply(lambda __response__: GetCellularGatewayUplinkStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
         iccids=pulumi.get(__response__, 'iccids'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_ids=pulumi.get(__response__, 'network_ids'),
         organization_id=pulumi.get(__response__, 'organization_id'),

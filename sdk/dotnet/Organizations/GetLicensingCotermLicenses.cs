@@ -207,10 +207,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly bool? Expired;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// invalidated query parameter. Filter for licenses that are invalidated
         /// </summary>
         public readonly bool? Invalidated;
@@ -237,8 +233,6 @@ namespace Pulumi.Meraki.Organizations
 
             bool? expired,
 
-            string id,
-
             bool? invalidated,
 
             ImmutableArray<Outputs.GetLicensingCotermLicensesItemResult> items,
@@ -251,7 +245,6 @@ namespace Pulumi.Meraki.Organizations
         {
             EndingBefore = endingBefore;
             Expired = expired;
-            Id = id;
             Invalidated = invalidated;
             Items = items;
             OrganizationId = organizationId;

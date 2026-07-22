@@ -27,13 +27,10 @@ class GetSensorReadingsLatestResult:
     """
     A collection of values returned by getSensorReadingsLatest.
     """
-    def __init__(__self__, ending_before=None, id=None, items=None, metrics=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None):
+    def __init__(__self__, ending_before=None, items=None, metrics=None, network_ids=None, organization_id=None, per_page=None, serials=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -63,14 +60,6 @@ class GetSensorReadingsLatestResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -136,7 +125,6 @@ class AwaitableGetSensorReadingsLatestResult(GetSensorReadingsLatestResult):
             yield self
         return GetSensorReadingsLatestResult(
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             metrics=self.metrics,
             network_ids=self.network_ids,
@@ -193,7 +181,6 @@ def get_sensor_readings_latest(ending_before: Optional[_builtins.str] = None,
 
     return AwaitableGetSensorReadingsLatestResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         metrics=pulumi.get(__ret__, 'metrics'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
@@ -247,7 +234,6 @@ def get_sensor_readings_latest_output(ending_before: pulumi.Input[Optional[Optio
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest', __args__, opts=opts, typ=GetSensorReadingsLatestResult)
     return __ret__.apply(lambda __response__: GetSensorReadingsLatestResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         metrics=pulumi.get(__response__, 'metrics'),
         network_ids=pulumi.get(__response__, 'network_ids'),

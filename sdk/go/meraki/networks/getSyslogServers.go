@@ -55,8 +55,6 @@ type LookupSyslogServersArgs struct {
 
 // A collection of values returned by getSyslogServers.
 type LookupSyslogServersResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
 	Item GetSyslogServersItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSyslogServersResultOutput) ToLookupSyslogServersResultOutput() Loo
 
 func (o LookupSyslogServersResultOutput) ToLookupSyslogServersResultOutputWithContext(ctx context.Context) LookupSyslogServersResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSyslogServersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSyslogServersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSyslogServersResultOutput) Item() GetSyslogServersItemOutput {

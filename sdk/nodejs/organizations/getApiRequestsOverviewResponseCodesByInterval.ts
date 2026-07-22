@@ -99,10 +99,6 @@ export interface GetApiRequestsOverviewResponseCodesByIntervalResult {
      */
     readonly adminIds?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
      */
     readonly interval?: number;

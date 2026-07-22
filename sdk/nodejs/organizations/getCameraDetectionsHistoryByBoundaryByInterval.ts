@@ -83,10 +83,6 @@ export interface GetCameraDetectionsHistoryByBoundaryByIntervalResult {
      */
     readonly duration?: number;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval
      */
     readonly items: outputs.organizations.GetCameraDetectionsHistoryByBoundaryByIntervalItem[];

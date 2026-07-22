@@ -209,10 +209,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseWirelessGetOrganizationWirelessDevicesEthernetStatuses
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWirelessDevicesEthernetStatusesItemResult> Items;
@@ -237,8 +233,6 @@ namespace Pulumi.Meraki.Organizations
         private GetWirelessDevicesEthernetStatusesResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetWirelessDevicesEthernetStatusesItemResult> items,
 
             ImmutableArray<string> networkIds,
@@ -250,7 +244,6 @@ namespace Pulumi.Meraki.Organizations
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

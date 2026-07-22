@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetSmUsersDeviceProfilesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmUserDeviceProfiles
      * 
      */
@@ -34,13 +29,6 @@ public final class GetSmUsersDeviceProfilesResult {
     private String userId;
 
     private GetSmUsersDeviceProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseSmGetNetworkSmUserDeviceProfiles
      * 
@@ -72,27 +60,17 @@ public final class GetSmUsersDeviceProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSmUsersDeviceProfilesItem> items;
         private String networkId;
         private String userId;
         public Builder() {}
         public Builder(GetSmUsersDeviceProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.userId = defaults.userId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmUsersDeviceProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSmUsersDeviceProfilesItem> items) {
             if (items == null) {
@@ -122,7 +100,6 @@ public final class GetSmUsersDeviceProfilesResult {
         }
         public GetSmUsersDeviceProfilesResult build() {
             final var _resultValue = new GetSmUsersDeviceProfilesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.userId = userId;

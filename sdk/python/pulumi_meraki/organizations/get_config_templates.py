@@ -27,13 +27,10 @@ class GetConfigTemplatesResult:
     """
     A collection of values returned by getConfigTemplates.
     """
-    def __init__(__self__, config_template_id=None, id=None, item=None, items=None, organization_id=None):
+    def __init__(__self__, config_template_id=None, item=None, items=None, organization_id=None):
         if config_template_id and not isinstance(config_template_id, str):
             raise TypeError("Expected argument 'config_template_id' to be a str")
         pulumi.set(__self__, "config_template_id", config_template_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetConfigTemplatesResult:
         configTemplateId path parameter. Config template ID
         """
         return pulumi.get(self, "config_template_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetConfigTemplatesResult(GetConfigTemplatesResult):
             yield self
         return GetConfigTemplatesResult(
             config_template_id=self.config_template_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id)
@@ -113,7 +101,6 @@ def get_config_templates(config_template_id: Optional[_builtins.str] = None,
 
     return AwaitableGetConfigTemplatesResult(
         config_template_id=pulumi.get(__ret__, 'config_template_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -134,7 +121,6 @@ def get_config_templates_output(config_template_id: pulumi.Input[Optional[Option
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getConfigTemplates:getConfigTemplates', __args__, opts=opts, typ=GetConfigTemplatesResult)
     return __ret__.apply(lambda __response__: GetConfigTemplatesResult(
         config_template_id=pulumi.get(__response__, 'config_template_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

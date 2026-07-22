@@ -55,8 +55,6 @@ type LookupFirmwareUpgradesStagedEventsArgs struct {
 
 // A collection of values returned by getFirmwareUpgradesStagedEvents.
 type LookupFirmwareUpgradesStagedEventsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                              `pulumi:"id"`
 	Item GetFirmwareUpgradesStagedEventsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupFirmwareUpgradesStagedEventsResultOutput) ToLookupFirmwareUpgrades
 
 func (o LookupFirmwareUpgradesStagedEventsResultOutput) ToLookupFirmwareUpgradesStagedEventsResultOutputWithContext(ctx context.Context) LookupFirmwareUpgradesStagedEventsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupFirmwareUpgradesStagedEventsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupFirmwareUpgradesStagedEventsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupFirmwareUpgradesStagedEventsResultOutput) Item() GetFirmwareUpgradesStagedEventsItemOutput {

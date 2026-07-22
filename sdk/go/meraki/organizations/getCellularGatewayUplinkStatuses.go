@@ -83,8 +83,6 @@ type GetCellularGatewayUplinkStatusesResult struct {
 	EndingBefore *string `pulumi:"endingBefore"`
 	// iccids query parameter. A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
 	Iccids []string `pulumi:"iccids"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses
 	Items []GetCellularGatewayUplinkStatusesItem `pulumi:"items"`
 	// networkIds query parameter. A list of network IDs. The returned devices will be filtered to only include these networks.
@@ -153,11 +151,6 @@ func (o GetCellularGatewayUplinkStatusesResultOutput) EndingBefore() pulumi.Stri
 // iccids query parameter. A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
 func (o GetCellularGatewayUplinkStatusesResultOutput) Iccids() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetCellularGatewayUplinkStatusesResult) []string { return v.Iccids }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCellularGatewayUplinkStatusesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCellularGatewayUplinkStatusesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses

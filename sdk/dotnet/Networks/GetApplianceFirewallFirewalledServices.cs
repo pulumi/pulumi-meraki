@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetApplianceFirewallFirewalledServicesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceFirewallFirewalledServicesItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetApplianceFirewallFirewalledServicesResult(
-            string id,
-
             Outputs.GetApplianceFirewallFirewalledServicesItemResult item,
 
             string networkId,
 
             string service)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Service = service;

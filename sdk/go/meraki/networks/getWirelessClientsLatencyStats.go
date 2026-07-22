@@ -89,10 +89,8 @@ type GetWirelessClientsLatencyStatsResult struct {
 	// clientId path parameter. Client ID
 	ClientId string `pulumi:"clientId"`
 	// fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
-	Fields *string `pulumi:"fields"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                             `pulumi:"id"`
-	Item GetWirelessClientsLatencyStatsItem `pulumi:"item"`
+	Fields *string                            `pulumi:"fields"`
+	Item   GetWirelessClientsLatencyStatsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 	// ssid query parameter. Filter results by SSID
@@ -177,11 +175,6 @@ func (o GetWirelessClientsLatencyStatsResultOutput) ClientId() pulumi.StringOutp
 // fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
 func (o GetWirelessClientsLatencyStatsResultOutput) Fields() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessClientsLatencyStatsResult) *string { return v.Fields }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessClientsLatencyStatsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessClientsLatencyStatsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWirelessClientsLatencyStatsResultOutput) Item() GetWirelessClientsLatencyStatsItemOutput {

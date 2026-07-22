@@ -77,8 +77,6 @@ type GetPiiSmDevicesForKeyResult struct {
 	BluetoothMac *string `pulumi:"bluetoothMac"`
 	// email query parameter. The email of a network user account or a Systems Manager device
 	Email *string `pulumi:"email"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// imei query parameter. The IMEI of a Systems Manager device
 	Imei *string                   `pulumi:"imei"`
 	Item GetPiiSmDevicesForKeyItem `pulumi:"item"`
@@ -146,11 +144,6 @@ func (o GetPiiSmDevicesForKeyResultOutput) BluetoothMac() pulumi.StringPtrOutput
 // email query parameter. The email of a network user account or a Systems Manager device
 func (o GetPiiSmDevicesForKeyResultOutput) Email() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetPiiSmDevicesForKeyResult) *string { return v.Email }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetPiiSmDevicesForKeyResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetPiiSmDevicesForKeyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // imei query parameter. The IMEI of a Systems Manager device

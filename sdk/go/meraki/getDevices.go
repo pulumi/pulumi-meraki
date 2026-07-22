@@ -67,10 +67,8 @@ type GetDevicesResult struct {
 	// configurationUpdatedAfter query parameter. Filter results by whether or not the device's configuration has been updated after the given timestamp
 	ConfigurationUpdatedAfter *string `pulumi:"configurationUpdatedAfter"`
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string         `pulumi:"id"`
-	Item GetDevicesItem `pulumi:"item"`
+	EndingBefore *string        `pulumi:"endingBefore"`
+	Item         GetDevicesItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationDevices
 	Items []GetDevicesItem `pulumi:"items"`
 	// mac query parameter. Optional parameter to filter devices by MAC address. All returned devices will have a MAC address that contains the search term or is an exact match.
@@ -183,11 +181,6 @@ func (o GetDevicesResultOutput) ConfigurationUpdatedAfter() pulumi.StringPtrOutp
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetDevicesResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDevicesResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetDevicesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDevicesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetDevicesResultOutput) Item() GetDevicesItemOutput {

@@ -27,10 +27,7 @@ class GetApplianceRfProfilesResult:
     """
     A collection of values returned by getApplianceRfProfiles.
     """
-    def __init__(__self__, id=None, item=None, network_id=None, rf_profile_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_id=None, rf_profile_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetApplianceRfProfilesResult:
         if rf_profile_id and not isinstance(rf_profile_id, str):
             raise TypeError("Expected argument 'rf_profile_id' to be a str")
         pulumi.set(__self__, "rf_profile_id", rf_profile_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetApplianceRfProfilesResult(GetApplianceRfProfilesResult):
         if False:
             yield self
         return GetApplianceRfProfilesResult(
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             rf_profile_id=self.rf_profile_id)
@@ -108,7 +96,6 @@ def get_appliance_rf_profiles(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles', __args__, opts=opts, typ=GetApplianceRfProfilesResult).value
 
     return AwaitableGetApplianceRfProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rf_profile_id=pulumi.get(__ret__, 'rf_profile_id'))
@@ -136,7 +123,6 @@ def get_appliance_rf_profiles_output(network_id: pulumi.Input[Optional[Optional[
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles', __args__, opts=opts, typ=GetApplianceRfProfilesResult)
     return __ret__.apply(lambda __response__: GetApplianceRfProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         rf_profile_id=pulumi.get(__response__, 'rf_profile_id')))

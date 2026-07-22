@@ -24,11 +24,6 @@ public final class GetPiiPiiKeysResult {
      */
     private @Nullable String email;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return imei query parameter. The IMEI of a Systems Manager device
      * 
      */
@@ -69,13 +64,6 @@ public final class GetPiiPiiKeysResult {
      */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return imei query parameter. The IMEI of a Systems Manager device
@@ -127,7 +115,6 @@ public final class GetPiiPiiKeysResult {
     public static final class Builder {
         private @Nullable String bluetoothMac;
         private @Nullable String email;
-        private String id;
         private @Nullable String imei;
         private GetPiiPiiKeysItem item;
         private @Nullable String mac;
@@ -139,7 +126,6 @@ public final class GetPiiPiiKeysResult {
     	      Objects.requireNonNull(defaults);
     	      this.bluetoothMac = defaults.bluetoothMac;
     	      this.email = defaults.email;
-    	      this.id = defaults.id;
     	      this.imei = defaults.imei;
     	      this.item = defaults.item;
     	      this.mac = defaults.mac;
@@ -158,14 +144,6 @@ public final class GetPiiPiiKeysResult {
         public Builder email(@Nullable String email) {
 
             this.email = email;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetPiiPiiKeysResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -212,7 +190,6 @@ public final class GetPiiPiiKeysResult {
             final var _resultValue = new GetPiiPiiKeysResult();
             _resultValue.bluetoothMac = bluetoothMac;
             _resultValue.email = email;
-            _resultValue.id = id;
             _resultValue.imei = imei;
             _resultValue.item = item;
             _resultValue.mac = mac;

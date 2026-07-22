@@ -55,8 +55,6 @@ type LookupLoginSecurityArgs struct {
 
 // A collection of values returned by getLoginSecurity.
 type LookupLoginSecurityResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
 	Item GetLoginSecurityItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupLoginSecurityResultOutput) ToLookupLoginSecurityResultOutput() Loo
 
 func (o LookupLoginSecurityResultOutput) ToLookupLoginSecurityResultOutputWithContext(ctx context.Context) LookupLoginSecurityResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupLoginSecurityResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupLoginSecurityResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupLoginSecurityResultOutput) Item() GetLoginSecurityItemOutput {

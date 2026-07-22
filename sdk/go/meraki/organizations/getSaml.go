@@ -55,8 +55,6 @@ type LookupSamlArgs struct {
 
 // A collection of values returned by getSaml.
 type LookupSamlResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string      `pulumi:"id"`
 	Item GetSamlItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupSamlResultOutput) ToLookupSamlResultOutput() LookupSamlResultOutpu
 
 func (o LookupSamlResultOutput) ToLookupSamlResultOutputWithContext(ctx context.Context) LookupSamlResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSamlResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSamlResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSamlResultOutput) Item() GetSamlItemOutput {

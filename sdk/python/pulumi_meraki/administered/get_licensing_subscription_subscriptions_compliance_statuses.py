@@ -27,10 +27,7 @@ class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult:
     """
     A collection of values returned by getLicensingSubscriptionSubscriptionsComplianceStatuses.
     """
-    def __init__(__self__, id=None, items=None, organization_ids=None, subscription_ids=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_ids=None, subscription_ids=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -40,14 +37,6 @@ class GetLicensingSubscriptionSubscriptionsComplianceStatusesResult:
         if subscription_ids and not isinstance(subscription_ids, list):
             raise TypeError("Expected argument 'subscription_ids' to be a list")
         pulumi.set(__self__, "subscription_ids", subscription_ids)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -80,7 +69,6 @@ class AwaitableGetLicensingSubscriptionSubscriptionsComplianceStatusesResult(Get
         if False:
             yield self
         return GetLicensingSubscriptionSubscriptionsComplianceStatusesResult(
-            id=self.id,
             items=self.items,
             organization_ids=self.organization_ids,
             subscription_ids=self.subscription_ids)
@@ -112,7 +100,6 @@ def get_licensing_subscription_subscriptions_compliance_statuses(organization_id
     __ret__ = pulumi.runtime.invoke('meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses', __args__, opts=opts, typ=GetLicensingSubscriptionSubscriptionsComplianceStatusesResult).value
 
     return AwaitableGetLicensingSubscriptionSubscriptionsComplianceStatusesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_ids=pulumi.get(__ret__, 'organization_ids'),
         subscription_ids=pulumi.get(__ret__, 'subscription_ids'))
@@ -141,7 +128,6 @@ def get_licensing_subscription_subscriptions_compliance_statuses_output(organiza
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses', __args__, opts=opts, typ=GetLicensingSubscriptionSubscriptionsComplianceStatusesResult)
     return __ret__.apply(lambda __response__: GetLicensingSubscriptionSubscriptionsComplianceStatusesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_ids=pulumi.get(__response__, 'organization_ids'),
         subscription_ids=pulumi.get(__response__, 'subscription_ids')))

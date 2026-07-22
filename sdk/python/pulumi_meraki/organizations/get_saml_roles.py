@@ -27,10 +27,7 @@ class GetSamlRolesResult:
     """
     A collection of values returned by getSamlRoles.
     """
-    def __init__(__self__, id=None, item=None, items=None, organization_id=None, saml_role_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, organization_id=None, saml_role_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSamlRolesResult:
         if saml_role_id and not isinstance(saml_role_id, str):
             raise TypeError("Expected argument 'saml_role_id' to be a str")
         pulumi.set(__self__, "saml_role_id", saml_role_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSamlRolesResult(GetSamlRolesResult):
         if False:
             yield self
         return GetSamlRolesResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id,
@@ -112,7 +100,6 @@ def get_saml_roles(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getSamlRoles:getSamlRoles', __args__, opts=opts, typ=GetSamlRolesResult).value
 
     return AwaitableGetSamlRolesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -133,7 +120,6 @@ def get_saml_roles_output(organization_id: pulumi.Input[Optional[Optional[_built
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSamlRoles:getSamlRoles', __args__, opts=opts, typ=GetSamlRolesResult)
     return __ret__.apply(lambda __response__: GetSamlRolesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),

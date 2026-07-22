@@ -121,10 +121,6 @@ export interface GetWirelessClientCountHistoryResult {
      */
     readonly deviceSerial?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessClientCountHistory
      */
     readonly items: outputs.networks.GetWirelessClientCountHistoryItem[];

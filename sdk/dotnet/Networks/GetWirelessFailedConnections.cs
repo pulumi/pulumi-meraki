@@ -271,10 +271,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? ClientId;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseWirelessGetNetworkWirelessFailedConnections
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWirelessFailedConnectionsItemResult> Items;
@@ -315,8 +311,6 @@ namespace Pulumi.Meraki.Networks
 
             string? clientId,
 
-            string id,
-
             ImmutableArray<Outputs.GetWirelessFailedConnectionsItemResult> items,
 
             string networkId,
@@ -336,7 +330,6 @@ namespace Pulumi.Meraki.Networks
             ApTag = apTag;
             Band = band;
             ClientId = clientId;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             Serial = serial;

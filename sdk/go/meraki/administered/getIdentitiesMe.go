@@ -47,8 +47,6 @@ func GetIdentitiesMe(ctx *pulumi.Context, opts ...pulumi.InvokeOption) (*GetIden
 
 // A collection of values returned by getIdentitiesMe.
 type GetIdentitiesMeResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string              `pulumi:"id"`
 	Item GetIdentitiesMeItem `pulumi:"item"`
 }
 
@@ -72,11 +70,6 @@ func (o GetIdentitiesMeResultOutput) ToGetIdentitiesMeResultOutput() GetIdentiti
 
 func (o GetIdentitiesMeResultOutput) ToGetIdentitiesMeResultOutputWithContext(ctx context.Context) GetIdentitiesMeResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetIdentitiesMeResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetIdentitiesMeResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetIdentitiesMeResultOutput) Item() GetIdentitiesMeItemOutput {

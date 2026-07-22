@@ -55,8 +55,6 @@ type LookupFirmwareUpgradesArgs struct {
 
 // A collection of values returned by getFirmwareUpgrades.
 type LookupFirmwareUpgradesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                  `pulumi:"id"`
 	Item GetFirmwareUpgradesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupFirmwareUpgradesResultOutput) ToLookupFirmwareUpgradesResultOutput
 
 func (o LookupFirmwareUpgradesResultOutput) ToLookupFirmwareUpgradesResultOutputWithContext(ctx context.Context) LookupFirmwareUpgradesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupFirmwareUpgradesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupFirmwareUpgradesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupFirmwareUpgradesResultOutput) Item() GetFirmwareUpgradesItemOutput {

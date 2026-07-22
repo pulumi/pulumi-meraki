@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSwitchQosRulesOrderResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchQosRulesOrderItem item;
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchQosRules
@@ -37,13 +32,6 @@ public final class GetSwitchQosRulesOrderResult {
     private @Nullable String qosRuleId;
 
     private GetSwitchQosRulesOrderResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchQosRulesOrderItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSwitchQosRulesOrderResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchQosRulesOrderItem item;
         private List<GetSwitchQosRulesOrderItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetSwitchQosRulesOrderResult {
         public Builder() {}
         public Builder(GetSwitchQosRulesOrderResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.qosRuleId = defaults.qosRuleId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchQosRulesOrderResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchQosRulesOrderItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSwitchQosRulesOrderResult {
         }
         public GetSwitchQosRulesOrderResult build() {
             final var _resultValue = new GetSwitchQosRulesOrderResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

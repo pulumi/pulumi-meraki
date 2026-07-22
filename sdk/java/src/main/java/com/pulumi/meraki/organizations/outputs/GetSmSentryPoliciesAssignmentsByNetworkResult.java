@@ -21,11 +21,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetOrganizationSmSentryPoliciesAssignmentsByNetwork
      * 
      */
@@ -58,13 +53,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSmGetOrganizationSmSentryPoliciesAssignmentsByNetwork
@@ -112,7 +100,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSmSentryPoliciesAssignmentsByNetworkItem> items;
         private @Nullable List<String> networkIds;
         private String organizationId;
@@ -122,7 +109,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
         public Builder(GetSmSentryPoliciesAssignmentsByNetworkResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkIds = defaults.networkIds;
     	      this.organizationId = defaults.organizationId;
@@ -134,14 +120,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmSentryPoliciesAssignmentsByNetworkResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -187,7 +165,6 @@ public final class GetSmSentryPoliciesAssignmentsByNetworkResult {
         public GetSmSentryPoliciesAssignmentsByNetworkResult build() {
             final var _resultValue = new GetSmSentryPoliciesAssignmentsByNetworkResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkIds = networkIds;
             _resultValue.organizationId = organizationId;

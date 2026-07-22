@@ -27,10 +27,7 @@ class GetAppliancePrefixesDelegatedStaticsResult:
     """
     A collection of values returned by getAppliancePrefixesDelegatedStatics.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, static_delegated_prefix_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, static_delegated_prefix_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetAppliancePrefixesDelegatedStaticsResult:
         if static_delegated_prefix_id and not isinstance(static_delegated_prefix_id, str):
             raise TypeError("Expected argument 'static_delegated_prefix_id' to be a str")
         pulumi.set(__self__, "static_delegated_prefix_id", static_delegated_prefix_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetAppliancePrefixesDelegatedStaticsResult(GetAppliancePrefixesDe
         if False:
             yield self
         return GetAppliancePrefixesDelegatedStaticsResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -112,7 +100,6 @@ def get_appliance_prefixes_delegated_statics(network_id: Optional[_builtins.str]
     __ret__ = pulumi.runtime.invoke('meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics', __args__, opts=opts, typ=GetAppliancePrefixesDelegatedStaticsResult).value
 
     return AwaitableGetAppliancePrefixesDelegatedStaticsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -133,7 +120,6 @@ def get_appliance_prefixes_delegated_statics_output(network_id: pulumi.Input[Opt
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics', __args__, opts=opts, typ=GetAppliancePrefixesDelegatedStaticsResult)
     return __ret__.apply(lambda __response__: GetAppliancePrefixesDelegatedStaticsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

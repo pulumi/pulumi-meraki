@@ -47,10 +47,6 @@ export interface GetVlanProfilesArgs {
  */
 export interface GetVlanProfilesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * iname path parameter.
      */
     readonly iname: string;

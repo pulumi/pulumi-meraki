@@ -50,10 +50,6 @@ export interface GetSmBypassActivationLockAttemptsResult {
      * attemptId path parameter. Attempt ID
      */
     readonly attemptId: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSmBypassActivationLockAttemptsItem;
     /**
      * networkId path parameter. Network ID

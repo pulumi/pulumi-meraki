@@ -59,10 +59,8 @@ type LookupSmBypassActivationLockAttemptsArgs struct {
 // A collection of values returned by getSmBypassActivationLockAttempts.
 type LookupSmBypassActivationLockAttemptsResult struct {
 	// attemptId path parameter. Attempt ID
-	AttemptId string `pulumi:"attemptId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
-	Item GetSmBypassActivationLockAttemptsItem `pulumi:"item"`
+	AttemptId string                                `pulumi:"attemptId"`
+	Item      GetSmBypassActivationLockAttemptsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 }
@@ -106,11 +104,6 @@ func (o LookupSmBypassActivationLockAttemptsResultOutput) ToLookupSmBypassActiva
 // attemptId path parameter. Attempt ID
 func (o LookupSmBypassActivationLockAttemptsResultOutput) AttemptId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSmBypassActivationLockAttemptsResult) string { return v.AttemptId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSmBypassActivationLockAttemptsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSmBypassActivationLockAttemptsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSmBypassActivationLockAttemptsResultOutput) Item() GetSmBypassActivationLockAttemptsItemOutput {

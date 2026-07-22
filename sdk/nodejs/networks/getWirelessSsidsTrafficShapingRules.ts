@@ -46,10 +46,6 @@ export interface GetWirelessSsidsTrafficShapingRulesArgs {
  * A collection of values returned by getWirelessSsidsTrafficShapingRules.
  */
 export interface GetWirelessSsidsTrafficShapingRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsTrafficShapingRulesItem;
     /**
      * networkId path parameter. Network ID

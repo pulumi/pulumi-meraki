@@ -16,11 +16,6 @@ public final class GetClientsSplashAuthorizationStatusResult {
      * 
      */
     private String clientId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetClientsSplashAuthorizationStatusItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -35,13 +30,6 @@ public final class GetClientsSplashAuthorizationStatusResult {
      */
     public String clientId() {
         return this.clientId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetClientsSplashAuthorizationStatusItem item() {
         return this.item;
@@ -64,14 +52,12 @@ public final class GetClientsSplashAuthorizationStatusResult {
     @CustomType.Builder
     public static final class Builder {
         private String clientId;
-        private String id;
         private GetClientsSplashAuthorizationStatusItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetClientsSplashAuthorizationStatusResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.clientId = defaults.clientId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
@@ -82,14 +68,6 @@ public final class GetClientsSplashAuthorizationStatusResult {
               throw new MissingRequiredPropertyException("GetClientsSplashAuthorizationStatusResult", "clientId");
             }
             this.clientId = clientId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetClientsSplashAuthorizationStatusResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -111,7 +89,6 @@ public final class GetClientsSplashAuthorizationStatusResult {
         public GetClientsSplashAuthorizationStatusResult build() {
             final var _resultValue = new GetClientsSplashAuthorizationStatusResult();
             _resultValue.clientId = clientId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

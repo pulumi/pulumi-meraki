@@ -40,10 +40,6 @@ export interface GetLicensesOverviewArgs {
  * A collection of values returned by getLicensesOverview.
  */
 export interface GetLicensesOverviewResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetLicensesOverviewItem;
     /**
      * organizationId path parameter. Organization ID

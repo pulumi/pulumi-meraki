@@ -180,10 +180,6 @@ namespace Pulumi.Meraki
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// isBoundToConfigTemplate query parameter. An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
         /// </summary>
         public readonly bool? IsBoundToConfigTemplate;
@@ -223,8 +219,6 @@ namespace Pulumi.Meraki
 
             string? endingBefore,
 
-            string id,
-
             bool? isBoundToConfigTemplate,
 
             Outputs.GetNetworksItemResult item,
@@ -245,7 +239,6 @@ namespace Pulumi.Meraki
         {
             ConfigTemplateId = configTemplateId;
             EndingBefore = endingBefore;
-            Id = id;
             IsBoundToConfigTemplate = isBoundToConfigTemplate;
             Item = item;
             Items = items;

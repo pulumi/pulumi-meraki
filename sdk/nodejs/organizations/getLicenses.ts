@@ -46,10 +46,6 @@ export interface GetLicensesArgs {
  * A collection of values returned by getLicenses.
  */
 export interface GetLicensesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetLicensesItem;
     /**
      * licenseId path parameter. License ID

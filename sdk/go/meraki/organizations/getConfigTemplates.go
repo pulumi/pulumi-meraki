@@ -33,10 +33,8 @@ type LookupConfigTemplatesArgs struct {
 // A collection of values returned by getConfigTemplates.
 type LookupConfigTemplatesResult struct {
 	// configTemplateId path parameter. Config template ID
-	ConfigTemplateId *string `pulumi:"configTemplateId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
-	Item GetConfigTemplatesItem `pulumi:"item"`
+	ConfigTemplateId *string                `pulumi:"configTemplateId"`
+	Item             GetConfigTemplatesItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationConfigTemplates
 	Items []GetConfigTemplatesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -82,11 +80,6 @@ func (o LookupConfigTemplatesResultOutput) ToLookupConfigTemplatesResultOutputWi
 // configTemplateId path parameter. Config template ID
 func (o LookupConfigTemplatesResultOutput) ConfigTemplateId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupConfigTemplatesResult) *string { return v.ConfigTemplateId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupConfigTemplatesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupConfigTemplatesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupConfigTemplatesResultOutput) Item() GetConfigTemplatesItemOutput {

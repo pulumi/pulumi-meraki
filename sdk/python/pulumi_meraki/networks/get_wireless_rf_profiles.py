@@ -27,10 +27,7 @@ class GetWirelessRfProfilesResult:
     """
     A collection of values returned by getWirelessRfProfiles.
     """
-    def __init__(__self__, id=None, include_template_profiles=None, item=None, network_id=None, rf_profile_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, include_template_profiles=None, item=None, network_id=None, rf_profile_id=None):
         if include_template_profiles and not isinstance(include_template_profiles, bool):
             raise TypeError("Expected argument 'include_template_profiles' to be a bool")
         pulumi.set(__self__, "include_template_profiles", include_template_profiles)
@@ -43,14 +40,6 @@ class GetWirelessRfProfilesResult:
         if rf_profile_id and not isinstance(rf_profile_id, str):
             raise TypeError("Expected argument 'rf_profile_id' to be a str")
         pulumi.set(__self__, "rf_profile_id", rf_profile_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="includeTemplateProfiles")
@@ -88,7 +77,6 @@ class AwaitableGetWirelessRfProfilesResult(GetWirelessRfProfilesResult):
         if False:
             yield self
         return GetWirelessRfProfilesResult(
-            id=self.id,
             include_template_profiles=self.include_template_profiles,
             item=self.item,
             network_id=self.network_id,
@@ -124,7 +112,6 @@ def get_wireless_rf_profiles(include_template_profiles: Optional[_builtins.bool]
     __ret__ = pulumi.runtime.invoke('meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles', __args__, opts=opts, typ=GetWirelessRfProfilesResult).value
 
     return AwaitableGetWirelessRfProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         include_template_profiles=pulumi.get(__ret__, 'include_template_profiles'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -157,7 +144,6 @@ def get_wireless_rf_profiles_output(include_template_profiles: pulumi.Input[Opti
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles', __args__, opts=opts, typ=GetWirelessRfProfilesResult)
     return __ret__.apply(lambda __response__: GetWirelessRfProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         include_template_profiles=pulumi.get(__response__, 'include_template_profiles'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),

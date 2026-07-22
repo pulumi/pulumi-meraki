@@ -27,7 +27,7 @@ class GetWirelessDataRateHistoryResult:
     """
     A collection of values returned by getWirelessDataRateHistory.
     """
-    def __init__(__self__, ap_tag=None, auto_resolution=None, band=None, client_id=None, device_serial=None, id=None, items=None, network_id=None, resolution=None, ssid=None, t0=None, t1=None, timespan=None):
+    def __init__(__self__, ap_tag=None, auto_resolution=None, band=None, client_id=None, device_serial=None, items=None, network_id=None, resolution=None, ssid=None, t0=None, t1=None, timespan=None):
         if ap_tag and not isinstance(ap_tag, str):
             raise TypeError("Expected argument 'ap_tag' to be a str")
         pulumi.set(__self__, "ap_tag", ap_tag)
@@ -43,9 +43,6 @@ class GetWirelessDataRateHistoryResult:
         if device_serial and not isinstance(device_serial, str):
             raise TypeError("Expected argument 'device_serial' to be a str")
         pulumi.set(__self__, "device_serial", device_serial)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -107,14 +104,6 @@ class GetWirelessDataRateHistoryResult:
         deviceSerial query parameter. Filter results by device.
         """
         return pulumi.get(self, "device_serial")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -184,7 +173,6 @@ class AwaitableGetWirelessDataRateHistoryResult(GetWirelessDataRateHistoryResult
             band=self.band,
             client_id=self.client_id,
             device_serial=self.device_serial,
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             resolution=self.resolution,
@@ -261,7 +249,6 @@ def get_wireless_data_rate_history(ap_tag: Optional[_builtins.str] = None,
         band=pulumi.get(__ret__, 'band'),
         client_id=pulumi.get(__ret__, 'client_id'),
         device_serial=pulumi.get(__ret__, 'device_serial'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         resolution=pulumi.get(__ret__, 'resolution'),
@@ -335,7 +322,6 @@ def get_wireless_data_rate_history_output(ap_tag: pulumi.Input[Optional[Optional
         band=pulumi.get(__response__, 'band'),
         client_id=pulumi.get(__response__, 'client_id'),
         device_serial=pulumi.get(__response__, 'device_serial'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         resolution=pulumi.get(__response__, 'resolution'),

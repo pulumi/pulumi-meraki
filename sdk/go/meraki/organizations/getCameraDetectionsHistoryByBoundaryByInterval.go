@@ -82,8 +82,6 @@ type GetCameraDetectionsHistoryByBoundaryByIntervalResult struct {
 	BoundaryTypes []string `pulumi:"boundaryTypes"`
 	// duration query parameter. The minimum time, in seconds, that the person or car remains in the area to be counted. Defaults to boundary configuration or 60.
 	Duration *int `pulumi:"duration"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval
 	Items []GetCameraDetectionsHistoryByBoundaryByIntervalItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -151,11 +149,6 @@ func (o GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput) BoundaryType
 // duration query parameter. The minimum time, in seconds, that the person or car remains in the area to be counted. Defaults to boundary configuration or 60.
 func (o GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput) Duration() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetCameraDetectionsHistoryByBoundaryByIntervalResult) *int { return v.Duration }).(pulumi.IntPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCameraDetectionsHistoryByBoundaryByIntervalResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval

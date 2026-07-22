@@ -27,10 +27,7 @@ class GetVlanProfilesResult:
     """
     A collection of values returned by getVlanProfiles.
     """
-    def __init__(__self__, id=None, iname=None, item=None, network_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, iname=None, item=None, network_id=None):
         if iname and not isinstance(iname, str):
             raise TypeError("Expected argument 'iname' to be a str")
         pulumi.set(__self__, "iname", iname)
@@ -40,14 +37,6 @@ class GetVlanProfilesResult:
         if network_id and not isinstance(network_id, str):
             raise TypeError("Expected argument 'network_id' to be a str")
         pulumi.set(__self__, "network_id", network_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetVlanProfilesResult(GetVlanProfilesResult):
         if False:
             yield self
         return GetVlanProfilesResult(
-            id=self.id,
             iname=self.iname,
             item=self.item,
             network_id=self.network_id)
@@ -109,7 +97,6 @@ def get_vlan_profiles(iname: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getVlanProfiles:getVlanProfiles', __args__, opts=opts, typ=GetVlanProfilesResult).value
 
     return AwaitableGetVlanProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         iname=pulumi.get(__ret__, 'iname'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -138,7 +125,6 @@ def get_vlan_profiles_output(iname: pulumi.Input[Optional[_builtins.str]] = None
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getVlanProfiles:getVlanProfiles', __args__, opts=opts, typ=GetVlanProfilesResult)
     return __ret__.apply(lambda __response__: GetVlanProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         iname=pulumi.get(__response__, 'iname'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id')))

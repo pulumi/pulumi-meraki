@@ -55,8 +55,6 @@ type LookupAlertsSettingsArgs struct {
 
 // A collection of values returned by getAlertsSettings.
 type LookupAlertsSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                `pulumi:"id"`
 	Item GetAlertsSettingsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupAlertsSettingsResultOutput) ToLookupAlertsSettingsResultOutput() L
 
 func (o LookupAlertsSettingsResultOutput) ToLookupAlertsSettingsResultOutputWithContext(ctx context.Context) LookupAlertsSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAlertsSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAlertsSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupAlertsSettingsResultOutput) Item() GetAlertsSettingsItemOutput {

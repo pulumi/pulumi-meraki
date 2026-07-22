@@ -64,8 +64,6 @@ type GetSummaryTopSwitchesByEnergyUsageArgs struct {
 
 // A collection of values returned by getSummaryTopSwitchesByEnergyUsage.
 type GetSummaryTopSwitchesByEnergyUsageResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationSummaryTopSwitchesByEnergyUsage
 	Items []GetSummaryTopSwitchesByEnergyUsageItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetSummaryTopSwitchesByEnergyUsageResultOutput) ToGetSummaryTopSwitchesB
 
 func (o GetSummaryTopSwitchesByEnergyUsageResultOutput) ToGetSummaryTopSwitchesByEnergyUsageResultOutputWithContext(ctx context.Context) GetSummaryTopSwitchesByEnergyUsageResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSummaryTopSwitchesByEnergyUsageResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSummaryTopSwitchesByEnergyUsageResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationSummaryTopSwitchesByEnergyUsage

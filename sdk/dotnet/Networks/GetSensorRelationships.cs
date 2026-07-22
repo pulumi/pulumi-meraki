@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSensorRelationshipsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSensorGetNetworkSensorRelationships
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSensorRelationshipsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSensorRelationshipsResult(
-            string id,
-
             ImmutableArray<Outputs.GetSensorRelationshipsItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

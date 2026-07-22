@@ -79,10 +79,6 @@ export interface GetLicensingCotermLicensesResult {
      */
     readonly expired?: boolean;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * invalidated query parameter. Filter for licenses that are invalidated
      */
     readonly invalidated?: boolean;

@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSamlResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSamlItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -24,13 +19,6 @@ public final class GetSamlResult {
     private String organizationId;
 
     private GetSamlResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSamlItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetSamlResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSamlItem item;
         private String organizationId;
         public Builder() {}
         public Builder(GetSamlResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSamlResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSamlItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetSamlResult {
         }
         public GetSamlResult build() {
             final var _resultValue = new GetSamlResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             return _resultValue;

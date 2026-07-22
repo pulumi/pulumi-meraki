@@ -168,10 +168,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetClientsOverviewResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetClientsOverviewItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -192,8 +188,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetClientsOverviewResult(
-            string id,
-
             Outputs.GetClientsOverviewItemResult item,
 
             string organizationId,
@@ -204,7 +198,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
             T0 = t0;

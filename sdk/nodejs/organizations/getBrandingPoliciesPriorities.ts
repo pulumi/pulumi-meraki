@@ -40,10 +40,6 @@ export interface GetBrandingPoliciesPrioritiesArgs {
  * A collection of values returned by getBrandingPoliciesPriorities.
  */
 export interface GetBrandingPoliciesPrioritiesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetBrandingPoliciesPrioritiesItem;
     /**
      * organizationId path parameter. Organization ID

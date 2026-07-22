@@ -58,8 +58,6 @@ type GetSmUsersSoftwaresArgs struct {
 
 // A collection of values returned by getSmUsersSoftwares.
 type GetSmUsersSoftwaresResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmUserSoftwares
 	Items []GetSmUsersSoftwaresItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -102,11 +100,6 @@ func (o GetSmUsersSoftwaresResultOutput) ToGetSmUsersSoftwaresResultOutput() Get
 
 func (o GetSmUsersSoftwaresResultOutput) ToGetSmUsersSoftwaresResultOutputWithContext(ctx context.Context) GetSmUsersSoftwaresResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmUsersSoftwaresResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmUsersSoftwaresResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmUserSoftwares
