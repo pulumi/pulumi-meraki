@@ -20,11 +20,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
      * 
      */
     private @Nullable String endingBefore;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceTrafficShapingVpnExclusionsByNetworkItem item;
     /**
      * @return networkIds query parameter. Optional parameter to filter the results by network IDs
@@ -54,13 +49,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetApplianceTrafficShapingVpnExclusionsByNetworkItem item() {
         return this.item;
@@ -104,7 +92,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private GetApplianceTrafficShapingVpnExclusionsByNetworkItem item;
         private @Nullable List<String> networkIds;
         private String organizationId;
@@ -114,7 +101,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
         public Builder(GetApplianceTrafficShapingVpnExclusionsByNetworkResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkIds = defaults.networkIds;
     	      this.organizationId = defaults.organizationId;
@@ -126,14 +112,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceTrafficShapingVpnExclusionsByNetworkResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -176,7 +154,6 @@ public final class GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
         public GetApplianceTrafficShapingVpnExclusionsByNetworkResult build() {
             final var _resultValue = new GetApplianceTrafficShapingVpnExclusionsByNetworkResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkIds = networkIds;
             _resultValue.organizationId = organizationId;

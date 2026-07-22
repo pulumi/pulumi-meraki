@@ -55,8 +55,6 @@ type LookupApplianceTrafficShapingUplinkSelectionArgs struct {
 
 // A collection of values returned by getApplianceTrafficShapingUplinkSelection.
 type LookupApplianceTrafficShapingUplinkSelectionResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                        `pulumi:"id"`
 	Item GetApplianceTrafficShapingUplinkSelectionItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceTrafficShapingUplinkSelectionResultOutput) ToLookupApplia
 
 func (o LookupApplianceTrafficShapingUplinkSelectionResultOutput) ToLookupApplianceTrafficShapingUplinkSelectionResultOutputWithContext(ctx context.Context) LookupApplianceTrafficShapingUplinkSelectionResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceTrafficShapingUplinkSelectionResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceTrafficShapingUplinkSelectionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceTrafficShapingUplinkSelectionResultOutput) Item() GetApplianceTrafficShapingUplinkSelectionItemOutput {

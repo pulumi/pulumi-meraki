@@ -27,10 +27,7 @@ class GetSwitchPortsStatusesResult:
     """
     A collection of values returned by getSwitchPortsStatuses.
     """
-    def __init__(__self__, id=None, items=None, serial=None, t0=None, timespan=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, serial=None, t0=None, timespan=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -43,14 +40,6 @@ class GetSwitchPortsStatusesResult:
         if timespan and not isinstance(timespan, float):
             raise TypeError("Expected argument 'timespan' to be a float")
         pulumi.set(__self__, "timespan", timespan)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -91,7 +80,6 @@ class AwaitableGetSwitchPortsStatusesResult(GetSwitchPortsStatusesResult):
         if False:
             yield self
         return GetSwitchPortsStatusesResult(
-            id=self.id,
             items=self.items,
             serial=self.serial,
             t0=self.t0,
@@ -128,7 +116,6 @@ def get_switch_ports_statuses(serial: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses', __args__, opts=opts, typ=GetSwitchPortsStatusesResult).value
 
     return AwaitableGetSwitchPortsStatusesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         serial=pulumi.get(__ret__, 'serial'),
         t0=pulumi.get(__ret__, 't0'),
@@ -162,7 +149,6 @@ def get_switch_ports_statuses_output(serial: pulumi.Input[Optional[_builtins.str
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses', __args__, opts=opts, typ=GetSwitchPortsStatusesResult)
     return __ret__.apply(lambda __response__: GetSwitchPortsStatusesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         serial=pulumi.get(__response__, 'serial'),
         t0=pulumi.get(__response__, 't0'),

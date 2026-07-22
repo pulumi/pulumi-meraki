@@ -40,10 +40,6 @@ export interface GetApplianceSettingsArgs {
  * A collection of values returned by getApplianceSettings.
  */
 export interface GetApplianceSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceSettingsItem;
     /**
      * networkId path parameter. Network ID

@@ -154,10 +154,6 @@ namespace Pulumi.Meraki.Devices
     public sealed class GetSwitchPortsStatusesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetDeviceSwitchPortsStatuses
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchPortsStatusesItemResult> Items;
@@ -176,8 +172,6 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetSwitchPortsStatusesResult(
-            string id,
-
             ImmutableArray<Outputs.GetSwitchPortsStatusesItemResult> items,
 
             string serial,
@@ -186,7 +180,6 @@ namespace Pulumi.Meraki.Devices
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             Serial = serial;
             T0 = t0;

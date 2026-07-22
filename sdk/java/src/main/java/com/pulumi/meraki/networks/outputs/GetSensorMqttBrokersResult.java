@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSensorMqttBrokersResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSensorMqttBrokersItem item;
     /**
      * @return Array of ResponseSensorGetNetworkSensorMqttBrokers
@@ -37,13 +32,6 @@ public final class GetSensorMqttBrokersResult {
     private @Nullable String networkId;
 
     private GetSensorMqttBrokersResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSensorMqttBrokersItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSensorMqttBrokersResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSensorMqttBrokersItem item;
         private List<GetSensorMqttBrokersItem> items;
         private @Nullable String mqttBrokerId;
@@ -86,21 +73,12 @@ public final class GetSensorMqttBrokersResult {
         public Builder() {}
         public Builder(GetSensorMqttBrokersResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.mqttBrokerId = defaults.mqttBrokerId;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSensorMqttBrokersResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSensorMqttBrokersItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSensorMqttBrokersResult {
         }
         public GetSensorMqttBrokersResult build() {
             final var _resultValue = new GetSensorMqttBrokersResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.mqttBrokerId = mqttBrokerId;

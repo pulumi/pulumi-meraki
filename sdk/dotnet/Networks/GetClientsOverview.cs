@@ -183,10 +183,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetClientsOverviewResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetClientsOverviewItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -211,8 +207,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetClientsOverviewResult(
-            string id,
-
             Outputs.GetClientsOverviewItemResult item,
 
             string networkId,
@@ -225,7 +219,6 @@ namespace Pulumi.Meraki.Networks
 
             double? timespan)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Resolution = resolution;

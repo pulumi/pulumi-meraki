@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Networks
         /// floorPlanId path parameter. Floor plan ID
         /// </summary>
         public readonly string? FloorPlanId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetFloorPlansItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkFloorPlans
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Networks
         private GetFloorPlansResult(
             string? floorPlanId,
 
-            string id,
-
             Outputs.GetFloorPlansItemResult item,
 
             ImmutableArray<Outputs.GetFloorPlansItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Networks
             string? networkId)
         {
             FloorPlanId = floorPlanId;
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

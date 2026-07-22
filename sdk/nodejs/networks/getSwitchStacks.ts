@@ -36,10 +36,6 @@ export interface GetSwitchStacksArgs {
  * A collection of values returned by getSwitchStacks.
  */
 export interface GetSwitchStacksResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchStacksItem;
     /**
      * Array of ResponseSwitchGetNetworkSwitchStacks

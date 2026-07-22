@@ -40,10 +40,6 @@ export interface GetSensorRelationshipsArgs {
  * A collection of values returned by getSensorRelationships.
  */
 export interface GetSensorRelationshipsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetSensorRelationshipsItem;
     /**
      * serial path parameter.

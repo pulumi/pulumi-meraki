@@ -19,11 +19,6 @@ public final class GetActionBatchesResult {
      * 
      */
     private @Nullable String actionBatchId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetActionBatchesItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationActionBatches
@@ -48,13 +43,6 @@ public final class GetActionBatchesResult {
      */
     public Optional<String> actionBatchId() {
         return Optional.ofNullable(this.actionBatchId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetActionBatchesItem item() {
         return this.item;
@@ -91,7 +79,6 @@ public final class GetActionBatchesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String actionBatchId;
-        private String id;
         private GetActionBatchesItem item;
         private List<GetActionBatchesItem> items;
         private @Nullable String organizationId;
@@ -100,7 +87,6 @@ public final class GetActionBatchesResult {
         public Builder(GetActionBatchesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.actionBatchId = defaults.actionBatchId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -111,14 +97,6 @@ public final class GetActionBatchesResult {
         public Builder actionBatchId(@Nullable String actionBatchId) {
 
             this.actionBatchId = actionBatchId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetActionBatchesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -155,7 +133,6 @@ public final class GetActionBatchesResult {
         public GetActionBatchesResult build() {
             final var _resultValue = new GetActionBatchesResult();
             _resultValue.actionBatchId = actionBatchId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

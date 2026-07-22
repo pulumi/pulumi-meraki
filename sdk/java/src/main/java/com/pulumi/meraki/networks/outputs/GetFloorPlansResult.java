@@ -19,11 +19,6 @@ public final class GetFloorPlansResult {
      * 
      */
     private @Nullable String floorPlanId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetFloorPlansItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkFloorPlans
@@ -43,13 +38,6 @@ public final class GetFloorPlansResult {
      */
     public Optional<String> floorPlanId() {
         return Optional.ofNullable(this.floorPlanId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetFloorPlansItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetFloorPlansResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String floorPlanId;
-        private String id;
         private GetFloorPlansItem item;
         private List<GetFloorPlansItem> items;
         private @Nullable String networkId;
@@ -87,7 +74,6 @@ public final class GetFloorPlansResult {
         public Builder(GetFloorPlansResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.floorPlanId = defaults.floorPlanId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -97,14 +83,6 @@ public final class GetFloorPlansResult {
         public Builder floorPlanId(@Nullable String floorPlanId) {
 
             this.floorPlanId = floorPlanId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetFloorPlansResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetFloorPlansResult {
         public GetFloorPlansResult build() {
             final var _resultValue = new GetFloorPlansResult();
             _resultValue.floorPlanId = floorPlanId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

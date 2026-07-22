@@ -40,10 +40,6 @@ export interface GetWirelessStatusArgs {
  * A collection of values returned by getWirelessStatus.
  */
 export interface GetWirelessStatusResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetWirelessStatusItem;
     /**
      * serial path parameter.

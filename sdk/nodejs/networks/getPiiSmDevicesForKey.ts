@@ -85,10 +85,6 @@ export interface GetPiiSmDevicesForKeyResult {
      */
     readonly email?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * imei query parameter. The IMEI of a Systems Manager device
      */
     readonly imei?: string;

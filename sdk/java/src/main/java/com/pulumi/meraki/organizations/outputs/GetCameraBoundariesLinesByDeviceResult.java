@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCameraBoundariesLinesByDeviceResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseCameraGetOrganizationCameraBoundariesLinesByDevice
      * 
      */
@@ -35,13 +30,6 @@ public final class GetCameraBoundariesLinesByDeviceResult {
     private @Nullable List<String> serials;
 
     private GetCameraBoundariesLinesByDeviceResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseCameraGetOrganizationCameraBoundariesLinesByDevice
      * 
@@ -73,27 +61,17 @@ public final class GetCameraBoundariesLinesByDeviceResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetCameraBoundariesLinesByDeviceItem> items;
         private String organizationId;
         private @Nullable List<String> serials;
         public Builder() {}
         public Builder(GetCameraBoundariesLinesByDeviceResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.serials = defaults.serials;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraBoundariesLinesByDeviceResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetCameraBoundariesLinesByDeviceItem> items) {
             if (items == null) {
@@ -124,7 +102,6 @@ public final class GetCameraBoundariesLinesByDeviceResult {
         }
         public GetCameraBoundariesLinesByDeviceResult build() {
             final var _resultValue = new GetCameraBoundariesLinesByDeviceResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.serials = serials;

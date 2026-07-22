@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCellularGatewayLanResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCellularGatewayLanItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetCellularGatewayLanResult {
     private String serial;
 
     private GetCellularGatewayLanResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCellularGatewayLanItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetCellularGatewayLanResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCellularGatewayLanItem item;
         private String serial;
         public Builder() {}
         public Builder(GetCellularGatewayLanResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCellularGatewayLanResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCellularGatewayLanItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetCellularGatewayLanResult {
         }
         public GetCellularGatewayLanResult build() {
             final var _resultValue = new GetCellularGatewayLanResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

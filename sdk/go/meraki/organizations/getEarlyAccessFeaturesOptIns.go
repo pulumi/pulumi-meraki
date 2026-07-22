@@ -57,8 +57,6 @@ type LookupEarlyAccessFeaturesOptInsArgs struct {
 
 // A collection of values returned by getEarlyAccessFeaturesOptIns.
 type LookupEarlyAccessFeaturesOptInsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
 	Item GetEarlyAccessFeaturesOptInsItem `pulumi:"item"`
 	// optInId path parameter. Opt in ID
 	OptInId *string `pulumi:"optInId"`
@@ -100,11 +98,6 @@ func (o LookupEarlyAccessFeaturesOptInsResultOutput) ToLookupEarlyAccessFeatures
 
 func (o LookupEarlyAccessFeaturesOptInsResultOutput) ToLookupEarlyAccessFeaturesOptInsResultOutputWithContext(ctx context.Context) LookupEarlyAccessFeaturesOptInsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupEarlyAccessFeaturesOptInsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupEarlyAccessFeaturesOptInsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupEarlyAccessFeaturesOptInsResultOutput) Item() GetEarlyAccessFeaturesOptInsItemOutput {

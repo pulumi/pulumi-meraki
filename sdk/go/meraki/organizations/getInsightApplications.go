@@ -55,8 +55,6 @@ type GetInsightApplicationsArgs struct {
 
 // A collection of values returned by getInsightApplications.
 type GetInsightApplicationsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseInsightGetOrganizationInsightApplications
 	Items []GetInsightApplicationsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -95,11 +93,6 @@ func (o GetInsightApplicationsResultOutput) ToGetInsightApplicationsResultOutput
 
 func (o GetInsightApplicationsResultOutput) ToGetInsightApplicationsResultOutputWithContext(ctx context.Context) GetInsightApplicationsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetInsightApplicationsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInsightApplicationsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseInsightGetOrganizationInsightApplications

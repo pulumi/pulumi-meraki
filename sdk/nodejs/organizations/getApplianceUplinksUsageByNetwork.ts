@@ -59,10 +59,6 @@ export interface GetApplianceUplinksUsageByNetworkArgs {
  */
 export interface GetApplianceUplinksUsageByNetworkResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseApplianceGetOrganizationApplianceUplinksUsageByNetwork
      */
     readonly items: outputs.organizations.GetApplianceUplinksUsageByNetworkItem[];

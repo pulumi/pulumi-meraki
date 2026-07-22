@@ -22,11 +22,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
      */
     private String applicationId;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseInsightGetNetworkInsightApplicationHealthByTime
      * 
      */
@@ -64,13 +59,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
      */
     public String applicationId() {
         return this.applicationId;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseInsightGetNetworkInsightApplicationHealthByTime
@@ -125,7 +113,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
     @CustomType.Builder
     public static final class Builder {
         private String applicationId;
-        private String id;
         private List<GetInsightApplicationsHealthByTimeItem> items;
         private String networkId;
         private @Nullable Integer resolution;
@@ -136,7 +123,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
         public Builder(GetInsightApplicationsHealthByTimeResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.applicationId = defaults.applicationId;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.resolution = defaults.resolution;
@@ -151,14 +137,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
               throw new MissingRequiredPropertyException("GetInsightApplicationsHealthByTimeResult", "applicationId");
             }
             this.applicationId = applicationId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetInsightApplicationsHealthByTimeResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -207,7 +185,6 @@ public final class GetInsightApplicationsHealthByTimeResult {
         public GetInsightApplicationsHealthByTimeResult build() {
             final var _resultValue = new GetInsightApplicationsHealthByTimeResult();
             _resultValue.applicationId = applicationId;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.resolution = resolution;

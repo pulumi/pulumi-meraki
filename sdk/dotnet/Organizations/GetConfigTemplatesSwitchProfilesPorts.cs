@@ -103,10 +103,6 @@ namespace Pulumi.Meraki.Organizations
         /// configTemplateId path parameter. Config template ID
         /// </summary>
         public readonly string? ConfigTemplateId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetConfigTemplatesSwitchProfilesPortsItemResult Item;
         /// <summary>
         /// Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfilePorts
@@ -129,8 +125,6 @@ namespace Pulumi.Meraki.Organizations
         private GetConfigTemplatesSwitchProfilesPortsResult(
             string? configTemplateId,
 
-            string id,
-
             Outputs.GetConfigTemplatesSwitchProfilesPortsItemResult item,
 
             ImmutableArray<Outputs.GetConfigTemplatesSwitchProfilesPortsItemResult> items,
@@ -142,7 +136,6 @@ namespace Pulumi.Meraki.Organizations
             string? profileId)
         {
             ConfigTemplateId = configTemplateId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

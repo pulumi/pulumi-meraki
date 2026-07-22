@@ -55,8 +55,6 @@ type GetSensorAlertsCurrentOverviewByMetricArgs struct {
 
 // A collection of values returned by getSensorAlertsCurrentOverviewByMetric.
 type GetSensorAlertsCurrentOverviewByMetricResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                     `pulumi:"id"`
 	Item GetSensorAlertsCurrentOverviewByMetricItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o GetSensorAlertsCurrentOverviewByMetricResultOutput) ToGetSensorAlertsCur
 
 func (o GetSensorAlertsCurrentOverviewByMetricResultOutput) ToGetSensorAlertsCurrentOverviewByMetricResultOutputWithContext(ctx context.Context) GetSensorAlertsCurrentOverviewByMetricResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSensorAlertsCurrentOverviewByMetricResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSensorAlertsCurrentOverviewByMetricResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetSensorAlertsCurrentOverviewByMetricResultOutput) Item() GetSensorAlertsCurrentOverviewByMetricItemOutput {

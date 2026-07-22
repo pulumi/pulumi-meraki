@@ -55,8 +55,6 @@ type LookupSwitchDhcpServerPolicyArgs struct {
 
 // A collection of values returned by getSwitchDhcpServerPolicy.
 type LookupSwitchDhcpServerPolicyResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetSwitchDhcpServerPolicyItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchDhcpServerPolicyResultOutput) ToLookupSwitchDhcpServerPolicy
 
 func (o LookupSwitchDhcpServerPolicyResultOutput) ToLookupSwitchDhcpServerPolicyResultOutputWithContext(ctx context.Context) LookupSwitchDhcpServerPolicyResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchDhcpServerPolicyResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchDhcpServerPolicyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchDhcpServerPolicyResultOutput) Item() GetSwitchDhcpServerPolicyItemOutput {

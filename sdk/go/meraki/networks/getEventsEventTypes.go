@@ -55,8 +55,6 @@ type GetEventsEventTypesArgs struct {
 
 // A collection of values returned by getEventsEventTypes.
 type GetEventsEventTypesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseNetworksGetNetworkEventsEventTypes
 	Items []GetEventsEventTypesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o GetEventsEventTypesResultOutput) ToGetEventsEventTypesResultOutput() Get
 
 func (o GetEventsEventTypesResultOutput) ToGetEventsEventTypesResultOutputWithContext(ctx context.Context) GetEventsEventTypesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetEventsEventTypesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEventsEventTypesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseNetworksGetNetworkEventsEventTypes

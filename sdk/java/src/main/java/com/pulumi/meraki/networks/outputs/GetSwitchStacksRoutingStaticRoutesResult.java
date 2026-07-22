@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSwitchStacksRoutingStaticRoutesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchStacksRoutingStaticRoutesItem item;
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchStackRoutingStaticRoutes
@@ -42,13 +37,6 @@ public final class GetSwitchStacksRoutingStaticRoutesResult {
     private @Nullable String switchStackId;
 
     private GetSwitchStacksRoutingStaticRoutesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchStacksRoutingStaticRoutesItem item() {
         return this.item;
     }
@@ -90,7 +78,6 @@ public final class GetSwitchStacksRoutingStaticRoutesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchStacksRoutingStaticRoutesItem item;
         private List<GetSwitchStacksRoutingStaticRoutesItem> items;
         private @Nullable String networkId;
@@ -99,7 +86,6 @@ public final class GetSwitchStacksRoutingStaticRoutesResult {
         public Builder() {}
         public Builder(GetSwitchStacksRoutingStaticRoutesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -107,14 +93,6 @@ public final class GetSwitchStacksRoutingStaticRoutesResult {
     	      this.switchStackId = defaults.switchStackId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchStacksRoutingStaticRoutesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchStacksRoutingStaticRoutesItem item) {
             if (item == null) {
@@ -154,7 +132,6 @@ public final class GetSwitchStacksRoutingStaticRoutesResult {
         }
         public GetSwitchStacksRoutingStaticRoutesResult build() {
             final var _resultValue = new GetSwitchStacksRoutingStaticRoutesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

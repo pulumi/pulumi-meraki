@@ -32,8 +32,6 @@ type GetSmVppAccountsArgs struct {
 
 // A collection of values returned by getSmVppAccounts.
 type GetSmVppAccountsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
 	Item GetSmVppAccountsItem `pulumi:"item"`
 	// Array of ResponseSmGetOrganizationSmVppAccounts
 	Items []GetSmVppAccountsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o GetSmVppAccountsResultOutput) ToGetSmVppAccountsResultOutput() GetSmVppA
 
 func (o GetSmVppAccountsResultOutput) ToGetSmVppAccountsResultOutputWithContext(ctx context.Context) GetSmVppAccountsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmVppAccountsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmVppAccountsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetSmVppAccountsResultOutput) Item() GetSmVppAccountsItemOutput {

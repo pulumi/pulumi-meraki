@@ -76,10 +76,6 @@ namespace Pulumi.Meraki.Devices
     public sealed class GetSwitchRoutingInterfacesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// interfaceId path parameter. Interface ID
         /// </summary>
         public readonly string? InterfaceId;
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetSwitchRoutingInterfacesResult(
-            string id,
-
             string? interfaceId,
 
             Outputs.GetSwitchRoutingInterfacesItemResult item,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Devices
 
             string? serial)
         {
-            Id = id;
             InterfaceId = interfaceId;
             Item = item;
             Items = items;

@@ -40,10 +40,6 @@ export interface GetSmApnsCertArgs {
  * A collection of values returned by getSmApnsCert.
  */
 export interface GetSmApnsCertResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetSmApnsCertItem;
     /**
      * organizationId path parameter. Organization ID

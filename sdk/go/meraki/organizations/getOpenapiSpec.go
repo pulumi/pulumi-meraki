@@ -58,8 +58,6 @@ type GetOpenapiSpecArgs struct {
 
 // A collection of values returned by getOpenapiSpec.
 type GetOpenapiSpecResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string             `pulumi:"id"`
 	Item GetOpenapiSpecItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -101,11 +99,6 @@ func (o GetOpenapiSpecResultOutput) ToGetOpenapiSpecResultOutput() GetOpenapiSpe
 
 func (o GetOpenapiSpecResultOutput) ToGetOpenapiSpecResultOutputWithContext(ctx context.Context) GetOpenapiSpecResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetOpenapiSpecResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetOpenapiSpecResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetOpenapiSpecResultOutput) Item() GetOpenapiSpecItemOutput {

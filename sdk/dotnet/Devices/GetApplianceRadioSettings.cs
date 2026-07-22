@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetApplianceRadioSettingsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceRadioSettingsItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetApplianceRadioSettingsResult(
-            string id,
-
             Outputs.GetApplianceRadioSettingsItemResult item,
 
             string serial)
         {
-            Id = id;
             Item = item;
             Serial = serial;
         }

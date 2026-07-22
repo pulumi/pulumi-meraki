@@ -55,8 +55,6 @@ type LookupApplianceVlansSettingsArgs struct {
 
 // A collection of values returned by getApplianceVlansSettings.
 type LookupApplianceVlansSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetApplianceVlansSettingsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceVlansSettingsResultOutput) ToLookupApplianceVlansSettings
 
 func (o LookupApplianceVlansSettingsResultOutput) ToLookupApplianceVlansSettingsResultOutputWithContext(ctx context.Context) LookupApplianceVlansSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceVlansSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceVlansSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceVlansSettingsResultOutput) Item() GetApplianceVlansSettingsItemOutput {

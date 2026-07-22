@@ -60,8 +60,6 @@ type GetSmDevicesWlanListsArgs struct {
 type GetSmDevicesWlanListsResult struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmDeviceWlanLists
 	Items []GetSmDevicesWlanListsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -107,11 +105,6 @@ func (o GetSmDevicesWlanListsResultOutput) ToGetSmDevicesWlanListsResultOutputWi
 // deviceId path parameter. Device ID
 func (o GetSmDevicesWlanListsResultOutput) DeviceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSmDevicesWlanListsResult) string { return v.DeviceId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmDevicesWlanListsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmDevicesWlanListsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmDeviceWlanLists

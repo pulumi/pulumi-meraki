@@ -40,10 +40,6 @@ export interface GetApplianceSingleLanArgs {
  * A collection of values returned by getApplianceSingleLan.
  */
 export interface GetApplianceSingleLanResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceSingleLanItem;
     /**
      * networkId path parameter. Network ID

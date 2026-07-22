@@ -27,10 +27,7 @@ class GetSwitchRoutingMulticastRendezvousPointsResult:
     """
     A collection of values returned by getSwitchRoutingMulticastRendezvousPoints.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, rendezvous_point_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, rendezvous_point_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSwitchRoutingMulticastRendezvousPointsResult:
         if rendezvous_point_id and not isinstance(rendezvous_point_id, str):
             raise TypeError("Expected argument 'rendezvous_point_id' to be a str")
         pulumi.set(__self__, "rendezvous_point_id", rendezvous_point_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSwitchRoutingMulticastRendezvousPointsResult(GetSwitchRoutingM
         if False:
             yield self
         return GetSwitchRoutingMulticastRendezvousPointsResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -112,7 +100,6 @@ def get_switch_routing_multicast_rendezvous_points(network_id: Optional[_builtin
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints', __args__, opts=opts, typ=GetSwitchRoutingMulticastRendezvousPointsResult).value
 
     return AwaitableGetSwitchRoutingMulticastRendezvousPointsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -133,7 +120,6 @@ def get_switch_routing_multicast_rendezvous_points_output(network_id: pulumi.Inp
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints', __args__, opts=opts, typ=GetSwitchRoutingMulticastRendezvousPointsResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingMulticastRendezvousPointsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

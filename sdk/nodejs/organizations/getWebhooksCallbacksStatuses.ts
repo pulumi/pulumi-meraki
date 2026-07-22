@@ -50,10 +50,6 @@ export interface GetWebhooksCallbacksStatusesResult {
      * callbackId path parameter. Callback ID
      */
     readonly callbackId: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetWebhooksCallbacksStatusesItem;
     /**
      * organizationId path parameter. Organization ID

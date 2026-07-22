@@ -64,10 +64,6 @@ export interface GetClientsOverviewArgs {
  * A collection of values returned by getClientsOverview.
  */
 export interface GetClientsOverviewResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetClientsOverviewItem;
     /**
      * networkId path parameter. Network ID

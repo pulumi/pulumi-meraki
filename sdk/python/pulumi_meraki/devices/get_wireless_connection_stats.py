@@ -27,16 +27,13 @@ class GetWirelessConnectionStatsResult:
     """
     A collection of values returned by getWirelessConnectionStats.
     """
-    def __init__(__self__, ap_tag=None, band=None, id=None, item=None, serial=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
+    def __init__(__self__, ap_tag=None, band=None, item=None, serial=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
         if ap_tag and not isinstance(ap_tag, str):
             raise TypeError("Expected argument 'ap_tag' to be a str")
         pulumi.set(__self__, "ap_tag", ap_tag)
         if band and not isinstance(band, str):
             raise TypeError("Expected argument 'band' to be a str")
         pulumi.set(__self__, "band", band)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -74,14 +71,6 @@ class GetWirelessConnectionStatsResult:
         band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
         """
         return pulumi.get(self, "band")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -145,7 +134,6 @@ class AwaitableGetWirelessConnectionStatsResult(GetWirelessConnectionStatsResult
         return GetWirelessConnectionStatsResult(
             ap_tag=self.ap_tag,
             band=self.band,
-            id=self.id,
             item=self.item,
             serial=self.serial,
             ssid=self.ssid,
@@ -207,7 +195,6 @@ def get_wireless_connection_stats(ap_tag: Optional[_builtins.str] = None,
     return AwaitableGetWirelessConnectionStatsResult(
         ap_tag=pulumi.get(__ret__, 'ap_tag'),
         band=pulumi.get(__ret__, 'band'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         ssid=pulumi.get(__ret__, 'ssid'),
@@ -266,7 +253,6 @@ def get_wireless_connection_stats_output(ap_tag: pulumi.Input[Optional[Optional[
     return __ret__.apply(lambda __response__: GetWirelessConnectionStatsResult(
         ap_tag=pulumi.get(__response__, 'ap_tag'),
         band=pulumi.get(__response__, 'band'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         serial=pulumi.get(__response__, 'serial'),
         ssid=pulumi.get(__response__, 'ssid'),

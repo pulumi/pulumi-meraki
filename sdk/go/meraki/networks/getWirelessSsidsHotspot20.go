@@ -58,8 +58,6 @@ type LookupWirelessSsidsHotspot20Args struct {
 
 // A collection of values returned by getWirelessSsidsHotspot20.
 type LookupWirelessSsidsHotspot20Result struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetWirelessSsidsHotspot20Item `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsHotspot20ResultOutput) ToLookupWirelessSsidsHotspot20
 
 func (o LookupWirelessSsidsHotspot20ResultOutput) ToLookupWirelessSsidsHotspot20ResultOutputWithContext(ctx context.Context) LookupWirelessSsidsHotspot20ResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsHotspot20ResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsHotspot20Result) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsHotspot20ResultOutput) Item() GetWirelessSsidsHotspot20ItemOutput {

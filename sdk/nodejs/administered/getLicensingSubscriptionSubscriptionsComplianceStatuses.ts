@@ -48,10 +48,6 @@ export interface GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs {
  */
 export interface GetLicensingSubscriptionSubscriptionsComplianceStatusesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
      */
     readonly items: outputs.administered.GetLicensingSubscriptionSubscriptionsComplianceStatusesItem[];

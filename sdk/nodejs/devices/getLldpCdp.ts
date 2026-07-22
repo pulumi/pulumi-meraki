@@ -40,10 +40,6 @@ export interface GetLldpCdpArgs {
  * A collection of values returned by getLldpCdp.
  */
 export interface GetLldpCdpResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetLldpCdpItem;
     /**
      * serial path parameter.

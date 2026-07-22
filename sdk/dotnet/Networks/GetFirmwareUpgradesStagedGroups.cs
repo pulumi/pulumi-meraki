@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Networks
         /// groupId path parameter. Group ID
         /// </summary>
         public readonly string? GroupId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetFirmwareUpgradesStagedGroupsItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedGroups
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Networks
         private GetFirmwareUpgradesStagedGroupsResult(
             string? groupId,
 
-            string id,
-
             Outputs.GetFirmwareUpgradesStagedGroupsItemResult item,
 
             ImmutableArray<Outputs.GetFirmwareUpgradesStagedGroupsItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Networks
             string? networkId)
         {
             GroupId = groupId;
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

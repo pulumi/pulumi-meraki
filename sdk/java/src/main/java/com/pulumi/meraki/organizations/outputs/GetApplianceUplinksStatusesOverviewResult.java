@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceUplinksStatusesOverviewResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceUplinksStatusesOverviewItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -24,13 +19,6 @@ public final class GetApplianceUplinksStatusesOverviewResult {
     private String organizationId;
 
     private GetApplianceUplinksStatusesOverviewResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceUplinksStatusesOverviewItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceUplinksStatusesOverviewResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceUplinksStatusesOverviewItem item;
         private String organizationId;
         public Builder() {}
         public Builder(GetApplianceUplinksStatusesOverviewResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceUplinksStatusesOverviewResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceUplinksStatusesOverviewItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceUplinksStatusesOverviewResult {
         }
         public GetApplianceUplinksStatusesOverviewResult build() {
             final var _resultValue = new GetApplianceUplinksStatusesOverviewResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             return _resultValue;

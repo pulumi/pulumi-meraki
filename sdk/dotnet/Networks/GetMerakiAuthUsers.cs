@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetMerakiAuthUsersResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetMerakiAuthUsersItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkMerakiAuthUsers
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetMerakiAuthUsersResult(
-            string id,
-
             Outputs.GetMerakiAuthUsersItemResult item,
 
             ImmutableArray<Outputs.GetMerakiAuthUsersItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? networkId)
         {
-            Id = id;
             Item = item;
             Items = items;
             MerakiAuthUserId = merakiAuthUserId;

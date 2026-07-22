@@ -88,8 +88,6 @@ type GetWirelessFailedConnectionsResult struct {
 	Band *string `pulumi:"band"`
 	// clientId query parameter. Filter by client MAC
 	ClientId *string `pulumi:"clientId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseWirelessGetNetworkWirelessFailedConnections
 	Items []GetWirelessFailedConnectionsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -173,11 +171,6 @@ func (o GetWirelessFailedConnectionsResultOutput) Band() pulumi.StringPtrOutput 
 // clientId query parameter. Filter by client MAC
 func (o GetWirelessFailedConnectionsResultOutput) ClientId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessFailedConnectionsResult) *string { return v.ClientId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessFailedConnectionsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseWirelessGetNetworkWirelessFailedConnections

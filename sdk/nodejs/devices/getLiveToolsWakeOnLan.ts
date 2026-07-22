@@ -46,10 +46,6 @@ export interface GetLiveToolsWakeOnLanArgs {
  * A collection of values returned by getLiveToolsWakeOnLan.
  */
 export interface GetLiveToolsWakeOnLanResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetLiveToolsWakeOnLanItem;
     /**
      * serial path parameter.

@@ -27,10 +27,7 @@ class GetDevicesStatusesOverviewResult:
     """
     A collection of values returned by getDevicesStatusesOverview.
     """
-    def __init__(__self__, id=None, item=None, network_ids=None, organization_id=None, product_types=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_ids=None, organization_id=None, product_types=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetDevicesStatusesOverviewResult:
         if product_types and not isinstance(product_types, list):
             raise TypeError("Expected argument 'product_types' to be a list")
         pulumi.set(__self__, "product_types", product_types)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetDevicesStatusesOverviewResult(GetDevicesStatusesOverviewResult
         if False:
             yield self
         return GetDevicesStatusesOverviewResult(
-            id=self.id,
             item=self.item,
             network_ids=self.network_ids,
             organization_id=self.organization_id,
@@ -125,7 +113,6 @@ def get_devices_statuses_overview(network_ids: Optional[Sequence[_builtins.str]]
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview', __args__, opts=opts, typ=GetDevicesStatusesOverviewResult).value
 
     return AwaitableGetDevicesStatusesOverviewResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -159,7 +146,6 @@ def get_devices_statuses_overview_output(network_ids: pulumi.Input[Optional[Opti
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview', __args__, opts=opts, typ=GetDevicesStatusesOverviewResult)
     return __ret__.apply(lambda __response__: GetDevicesStatusesOverviewResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_ids=pulumi.get(__response__, 'network_ids'),
         organization_id=pulumi.get(__response__, 'organization_id'),

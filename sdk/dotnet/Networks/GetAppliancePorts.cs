@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetAppliancePortsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetAppliancePortsItemResult Item;
         /// <summary>
         /// Array of ResponseApplianceGetNetworkAppliancePorts
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetAppliancePortsResult(
-            string id,
-
             Outputs.GetAppliancePortsItemResult item,
 
             ImmutableArray<Outputs.GetAppliancePortsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? portId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

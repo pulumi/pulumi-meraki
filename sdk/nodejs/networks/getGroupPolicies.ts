@@ -40,10 +40,6 @@ export interface GetGroupPoliciesResult {
      * groupPolicyId path parameter. Group policy ID
      */
     readonly groupPolicyId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetGroupPoliciesItem;
     /**
      * Array of ResponseNetworksGetNetworkGroupPolicies

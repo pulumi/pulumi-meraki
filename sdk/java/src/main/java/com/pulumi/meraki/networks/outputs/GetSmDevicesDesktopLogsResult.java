@@ -26,11 +26,6 @@ public final class GetSmDevicesDesktopLogsResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmDeviceDesktopLogs
      * 
      */
@@ -65,13 +60,6 @@ public final class GetSmDevicesDesktopLogsResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSmGetNetworkSmDeviceDesktopLogs
@@ -113,7 +101,6 @@ public final class GetSmDevicesDesktopLogsResult {
     public static final class Builder {
         private String deviceId;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSmDevicesDesktopLogsItem> items;
         private String networkId;
         private @Nullable Integer perPage;
@@ -123,7 +110,6 @@ public final class GetSmDevicesDesktopLogsResult {
     	      Objects.requireNonNull(defaults);
     	      this.deviceId = defaults.deviceId;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.perPage = defaults.perPage;
@@ -142,14 +128,6 @@ public final class GetSmDevicesDesktopLogsResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmDevicesDesktopLogsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -187,7 +165,6 @@ public final class GetSmDevicesDesktopLogsResult {
             final var _resultValue = new GetSmDevicesDesktopLogsResult();
             _resultValue.deviceId = deviceId;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.perPage = perPage;

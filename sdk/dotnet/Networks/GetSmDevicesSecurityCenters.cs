@@ -143,10 +143,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? DeviceId;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSmGetNetworkSmDeviceSoftwares
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSmDevicesSecurityCentersItemResult> Items;
@@ -159,14 +155,11 @@ namespace Pulumi.Meraki.Networks
         private GetSmDevicesSecurityCentersResult(
             string? deviceId,
 
-            string id,
-
             ImmutableArray<Outputs.GetSmDevicesSecurityCentersItemResult> items,
 
             string? networkId)
         {
             DeviceId = deviceId;
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

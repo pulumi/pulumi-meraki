@@ -20,11 +20,6 @@ public final class GetInventoryDevicesResult {
      * 
      */
     private @Nullable String endingBefore;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetInventoryDevicesItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationInventoryDevices
@@ -109,13 +104,6 @@ public final class GetInventoryDevicesResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetInventoryDevicesItem item() {
         return this.item;
@@ -236,7 +224,6 @@ public final class GetInventoryDevicesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private GetInventoryDevicesItem item;
         private List<GetInventoryDevicesItem> items;
         private @Nullable List<String> macs;
@@ -257,7 +244,6 @@ public final class GetInventoryDevicesResult {
         public Builder(GetInventoryDevicesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.macs = defaults.macs;
@@ -280,14 +266,6 @@ public final class GetInventoryDevicesResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetInventoryDevicesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -417,7 +395,6 @@ public final class GetInventoryDevicesResult {
         public GetInventoryDevicesResult build() {
             final var _resultValue = new GetInventoryDevicesResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.macs = macs;

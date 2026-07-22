@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceUplinksSettingsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceUplinksSettingsItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetApplianceUplinksSettingsResult {
     private String serial;
 
     private GetApplianceUplinksSettingsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceUplinksSettingsItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceUplinksSettingsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceUplinksSettingsItem item;
         private String serial;
         public Builder() {}
         public Builder(GetApplianceUplinksSettingsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceUplinksSettingsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceUplinksSettingsItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceUplinksSettingsResult {
         }
         public GetApplianceUplinksSettingsResult build() {
             final var _resultValue = new GetApplianceUplinksSettingsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

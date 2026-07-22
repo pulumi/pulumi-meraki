@@ -65,8 +65,6 @@ type GetDevicesStatusesOverviewArgs struct {
 
 // A collection of values returned by getDevicesStatusesOverview.
 type GetDevicesStatusesOverviewResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                         `pulumi:"id"`
 	Item GetDevicesStatusesOverviewItem `pulumi:"item"`
 	// networkIds query parameter. An optional parameter to filter device statuses by network.
 	NetworkIds []string `pulumi:"networkIds"`
@@ -112,11 +110,6 @@ func (o GetDevicesStatusesOverviewResultOutput) ToGetDevicesStatusesOverviewResu
 
 func (o GetDevicesStatusesOverviewResultOutput) ToGetDevicesStatusesOverviewResultOutputWithContext(ctx context.Context) GetDevicesStatusesOverviewResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetDevicesStatusesOverviewResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDevicesStatusesOverviewResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetDevicesStatusesOverviewResultOutput) Item() GetDevicesStatusesOverviewItemOutput {

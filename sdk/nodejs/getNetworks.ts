@@ -80,10 +80,6 @@ export interface GetNetworksResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * isBoundToConfigTemplate query parameter. An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false.
      */
     readonly isBoundToConfigTemplate?: boolean;

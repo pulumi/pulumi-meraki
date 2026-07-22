@@ -203,10 +203,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string ApplicationId;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseInsightGetNetworkInsightApplicationHealthByTime
         /// </summary>
         public readonly ImmutableArray<Outputs.GetInsightApplicationsHealthByTimeItemResult> Items;
@@ -235,8 +231,6 @@ namespace Pulumi.Meraki.Networks
         private GetInsightApplicationsHealthByTimeResult(
             string applicationId,
 
-            string id,
-
             ImmutableArray<Outputs.GetInsightApplicationsHealthByTimeItemResult> items,
 
             string networkId,
@@ -250,7 +244,6 @@ namespace Pulumi.Meraki.Networks
             double? timespan)
         {
             ApplicationId = applicationId;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             Resolution = resolution;

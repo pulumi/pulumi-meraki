@@ -55,8 +55,6 @@ type LookupSensorRelationshipsArgs struct {
 
 // A collection of values returned by getSensorRelationships.
 type LookupSensorRelationshipsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetSensorRelationshipsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupSensorRelationshipsResultOutput) ToLookupSensorRelationshipsResult
 
 func (o LookupSensorRelationshipsResultOutput) ToLookupSensorRelationshipsResultOutputWithContext(ctx context.Context) LookupSensorRelationshipsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSensorRelationshipsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSensorRelationshipsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSensorRelationshipsResultOutput) Item() GetSensorRelationshipsItemOutput {

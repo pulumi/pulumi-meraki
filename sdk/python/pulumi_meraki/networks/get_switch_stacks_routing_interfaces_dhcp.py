@@ -27,10 +27,7 @@ class GetSwitchStacksRoutingInterfacesDhcpResult:
     """
     A collection of values returned by getSwitchStacksRoutingInterfacesDhcp.
     """
-    def __init__(__self__, id=None, interface_id=None, item=None, network_id=None, switch_stack_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, interface_id=None, item=None, network_id=None, switch_stack_id=None):
         if interface_id and not isinstance(interface_id, str):
             raise TypeError("Expected argument 'interface_id' to be a str")
         pulumi.set(__self__, "interface_id", interface_id)
@@ -43,14 +40,6 @@ class GetSwitchStacksRoutingInterfacesDhcpResult:
         if switch_stack_id and not isinstance(switch_stack_id, str):
             raise TypeError("Expected argument 'switch_stack_id' to be a str")
         pulumi.set(__self__, "switch_stack_id", switch_stack_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
@@ -88,7 +77,6 @@ class AwaitableGetSwitchStacksRoutingInterfacesDhcpResult(GetSwitchStacksRouting
         if False:
             yield self
         return GetSwitchStacksRoutingInterfacesDhcpResult(
-            id=self.id,
             interface_id=self.interface_id,
             item=self.item,
             network_id=self.network_id,
@@ -125,7 +113,6 @@ def get_switch_stacks_routing_interfaces_dhcp(interface_id: Optional[_builtins.s
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp', __args__, opts=opts, typ=GetSwitchStacksRoutingInterfacesDhcpResult).value
 
     return AwaitableGetSwitchStacksRoutingInterfacesDhcpResult(
-        id=pulumi.get(__ret__, 'id'),
         interface_id=pulumi.get(__ret__, 'interface_id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -159,7 +146,6 @@ def get_switch_stacks_routing_interfaces_dhcp_output(interface_id: pulumi.Input[
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp', __args__, opts=opts, typ=GetSwitchStacksRoutingInterfacesDhcpResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksRoutingInterfacesDhcpResult(
-        id=pulumi.get(__response__, 'id'),
         interface_id=pulumi.get(__response__, 'interface_id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),

@@ -58,8 +58,6 @@ type LookupWirelessEthernetPortsProfilesArgs struct {
 
 // A collection of values returned by getWirelessEthernetPortsProfiles.
 type LookupWirelessEthernetPortsProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                               `pulumi:"id"`
 	Item GetWirelessEthernetPortsProfilesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessEthernetPortsProfilesResultOutput) ToLookupWirelessEtherne
 
 func (o LookupWirelessEthernetPortsProfilesResultOutput) ToLookupWirelessEthernetPortsProfilesResultOutputWithContext(ctx context.Context) LookupWirelessEthernetPortsProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessEthernetPortsProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessEthernetPortsProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessEthernetPortsProfilesResultOutput) Item() GetWirelessEthernetPortsProfilesItemOutput {

@@ -55,8 +55,6 @@ type LookupApplianceSingleLanArgs struct {
 
 // A collection of values returned by getApplianceSingleLan.
 type LookupApplianceSingleLanResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
 	Item GetApplianceSingleLanItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceSingleLanResultOutput) ToLookupApplianceSingleLanResultOu
 
 func (o LookupApplianceSingleLanResultOutput) ToLookupApplianceSingleLanResultOutputWithContext(ctx context.Context) LookupApplianceSingleLanResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceSingleLanResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceSingleLanResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceSingleLanResultOutput) Item() GetApplianceSingleLanItemOutput {

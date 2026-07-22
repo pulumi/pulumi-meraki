@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebhooksPayloadTemplatesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWebhooksPayloadTemplatesItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkWebhooksPayloadTemplates
@@ -37,13 +32,6 @@ public final class GetWebhooksPayloadTemplatesResult {
     private @Nullable String payloadTemplateId;
 
     private GetWebhooksPayloadTemplatesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWebhooksPayloadTemplatesItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetWebhooksPayloadTemplatesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWebhooksPayloadTemplatesItem item;
         private List<GetWebhooksPayloadTemplatesItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetWebhooksPayloadTemplatesResult {
         public Builder() {}
         public Builder(GetWebhooksPayloadTemplatesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.payloadTemplateId = defaults.payloadTemplateId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWebhooksPayloadTemplatesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWebhooksPayloadTemplatesItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetWebhooksPayloadTemplatesResult {
         }
         public GetWebhooksPayloadTemplatesResult build() {
             final var _resultValue = new GetWebhooksPayloadTemplatesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

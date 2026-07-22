@@ -36,10 +36,6 @@ export interface GetAppliancePrefixesDelegatedStaticsArgs {
  * A collection of values returned by getAppliancePrefixesDelegatedStatics.
  */
 export interface GetAppliancePrefixesDelegatedStaticsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetAppliancePrefixesDelegatedStaticsItem;
     /**
      * Array of ResponseApplianceGetNetworkAppliancePrefixesDelegatedStatics

@@ -67,10 +67,6 @@ export interface GetBluetoothClientsResult {
      */
     readonly connectivityHistoryTimespan?: number;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * includeConnectivityHistory query parameter. Include the connectivity history for this client
      */
     readonly includeConnectivityHistory?: boolean;

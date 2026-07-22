@@ -46,10 +46,6 @@ export interface GetWirelessEthernetPortsProfilesArgs {
  * A collection of values returned by getWirelessEthernetPortsProfiles.
  */
 export interface GetWirelessEthernetPortsProfilesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessEthernetPortsProfilesItem;
     /**
      * networkId path parameter. Network ID

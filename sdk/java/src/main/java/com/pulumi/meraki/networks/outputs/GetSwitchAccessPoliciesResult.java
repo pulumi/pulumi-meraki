@@ -19,11 +19,6 @@ public final class GetSwitchAccessPoliciesResult {
      * 
      */
     private @Nullable String accessPolicyNumber;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchAccessPoliciesItem item;
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchAccessPolicies
@@ -43,13 +38,6 @@ public final class GetSwitchAccessPoliciesResult {
      */
     public Optional<String> accessPolicyNumber() {
         return Optional.ofNullable(this.accessPolicyNumber);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetSwitchAccessPoliciesItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetSwitchAccessPoliciesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String accessPolicyNumber;
-        private String id;
         private GetSwitchAccessPoliciesItem item;
         private List<GetSwitchAccessPoliciesItem> items;
         private @Nullable String networkId;
@@ -87,7 +74,6 @@ public final class GetSwitchAccessPoliciesResult {
         public Builder(GetSwitchAccessPoliciesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.accessPolicyNumber = defaults.accessPolicyNumber;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -97,14 +83,6 @@ public final class GetSwitchAccessPoliciesResult {
         public Builder accessPolicyNumber(@Nullable String accessPolicyNumber) {
 
             this.accessPolicyNumber = accessPolicyNumber;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchAccessPoliciesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetSwitchAccessPoliciesResult {
         public GetSwitchAccessPoliciesResult build() {
             final var _resultValue = new GetSwitchAccessPoliciesResult();
             _resultValue.accessPolicyNumber = accessPolicyNumber;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

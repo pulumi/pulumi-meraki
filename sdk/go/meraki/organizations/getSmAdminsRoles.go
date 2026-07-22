@@ -67,10 +67,8 @@ type LookupSmAdminsRolesArgs struct {
 // A collection of values returned by getSmAdminsRoles.
 type LookupSmAdminsRolesResult struct {
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
-	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
-	Item GetSmAdminsRolesItem `pulumi:"item"`
+	EndingBefore *string              `pulumi:"endingBefore"`
+	Item         GetSmAdminsRolesItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId *string `pulumi:"organizationId"`
 	// perPage query parameter. The number of entries per page returned. Acceptable range is 3 1000. Default is 50.
@@ -126,11 +124,6 @@ func (o LookupSmAdminsRolesResultOutput) ToLookupSmAdminsRolesResultOutputWithCo
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o LookupSmAdminsRolesResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupSmAdminsRolesResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSmAdminsRolesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSmAdminsRolesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSmAdminsRolesResultOutput) Item() GetSmAdminsRolesItemOutput {

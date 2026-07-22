@@ -40,10 +40,6 @@ export interface GetApplianceContentFilteringCategoriesArgs {
  * A collection of values returned by getApplianceContentFilteringCategories.
  */
 export interface GetApplianceContentFilteringCategoriesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceContentFilteringCategoriesItem;
     /**
      * networkId path parameter. Network ID

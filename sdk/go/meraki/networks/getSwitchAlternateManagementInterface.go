@@ -55,8 +55,6 @@ type LookupSwitchAlternateManagementInterfaceArgs struct {
 
 // A collection of values returned by getSwitchAlternateManagementInterface.
 type LookupSwitchAlternateManagementInterfaceResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                    `pulumi:"id"`
 	Item GetSwitchAlternateManagementInterfaceItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchAlternateManagementInterfaceResultOutput) ToLookupSwitchAlte
 
 func (o LookupSwitchAlternateManagementInterfaceResultOutput) ToLookupSwitchAlternateManagementInterfaceResultOutputWithContext(ctx context.Context) LookupSwitchAlternateManagementInterfaceResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchAlternateManagementInterfaceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchAlternateManagementInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchAlternateManagementInterfaceResultOutput) Item() GetSwitchAlternateManagementInterfaceItemOutput {

@@ -27,7 +27,7 @@ class GetWirelessLatencyHistoryResult:
     """
     A collection of values returned by getWirelessLatencyHistory.
     """
-    def __init__(__self__, access_category=None, ap_tag=None, auto_resolution=None, band=None, client_id=None, device_serial=None, id=None, items=None, network_id=None, resolution=None, ssid=None, t0=None, t1=None, timespan=None):
+    def __init__(__self__, access_category=None, ap_tag=None, auto_resolution=None, band=None, client_id=None, device_serial=None, items=None, network_id=None, resolution=None, ssid=None, t0=None, t1=None, timespan=None):
         if access_category and not isinstance(access_category, str):
             raise TypeError("Expected argument 'access_category' to be a str")
         pulumi.set(__self__, "access_category", access_category)
@@ -46,9 +46,6 @@ class GetWirelessLatencyHistoryResult:
         if device_serial and not isinstance(device_serial, str):
             raise TypeError("Expected argument 'device_serial' to be a str")
         pulumi.set(__self__, "device_serial", device_serial)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -121,14 +118,6 @@ class GetWirelessLatencyHistoryResult:
 
     @_builtins.property
     @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
-
-    @_builtins.property
-    @pulumi.getter
     def items(self) -> Sequence['outputs.GetWirelessLatencyHistoryItemResult']:
         """
         Array of ResponseWirelessGetNetworkWirelessLatencyHistory
@@ -196,7 +185,6 @@ class AwaitableGetWirelessLatencyHistoryResult(GetWirelessLatencyHistoryResult):
             band=self.band,
             client_id=self.client_id,
             device_serial=self.device_serial,
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             resolution=self.resolution,
@@ -278,7 +266,6 @@ def get_wireless_latency_history(access_category: Optional[_builtins.str] = None
         band=pulumi.get(__ret__, 'band'),
         client_id=pulumi.get(__ret__, 'client_id'),
         device_serial=pulumi.get(__ret__, 'device_serial'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         resolution=pulumi.get(__ret__, 'resolution'),
@@ -357,7 +344,6 @@ def get_wireless_latency_history_output(access_category: pulumi.Input[Optional[O
         band=pulumi.get(__response__, 'band'),
         client_id=pulumi.get(__response__, 'client_id'),
         device_serial=pulumi.get(__response__, 'device_serial'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         resolution=pulumi.get(__response__, 'resolution'),

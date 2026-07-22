@@ -93,10 +93,6 @@ export interface GetDevicesUplinksAddressesByDeviceResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesUplinksAddressesByDevice
      */
     readonly items: outputs.organizations.GetDevicesUplinksAddressesByDeviceItem[];

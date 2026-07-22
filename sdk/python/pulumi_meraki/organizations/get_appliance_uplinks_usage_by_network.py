@@ -27,10 +27,7 @@ class GetApplianceUplinksUsageByNetworkResult:
     """
     A collection of values returned by getApplianceUplinksUsageByNetwork.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None, t0=None, t1=None, timespan=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None, t0=None, t1=None, timespan=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -46,14 +43,6 @@ class GetApplianceUplinksUsageByNetworkResult:
         if timespan and not isinstance(timespan, float):
             raise TypeError("Expected argument 'timespan' to be a float")
         pulumi.set(__self__, "timespan", timespan)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -102,7 +91,6 @@ class AwaitableGetApplianceUplinksUsageByNetworkResult(GetApplianceUplinksUsageB
         if False:
             yield self
         return GetApplianceUplinksUsageByNetworkResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id,
             t0=self.t0,
@@ -144,7 +132,6 @@ def get_appliance_uplinks_usage_by_network(organization_id: Optional[_builtins.s
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork', __args__, opts=opts, typ=GetApplianceUplinksUsageByNetworkResult).value
 
     return AwaitableGetApplianceUplinksUsageByNetworkResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         t0=pulumi.get(__ret__, 't0'),
@@ -183,7 +170,6 @@ def get_appliance_uplinks_usage_by_network_output(organization_id: pulumi.Input[
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork', __args__, opts=opts, typ=GetApplianceUplinksUsageByNetworkResult)
     return __ret__.apply(lambda __response__: GetApplianceUplinksUsageByNetworkResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         t0=pulumi.get(__response__, 't0'),

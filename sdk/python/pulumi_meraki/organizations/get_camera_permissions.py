@@ -27,10 +27,7 @@ class GetCameraPermissionsResult:
     """
     A collection of values returned by getCameraPermissions.
     """
-    def __init__(__self__, id=None, item=None, organization_id=None, permission_scope_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, organization_id=None, permission_scope_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetCameraPermissionsResult:
         if permission_scope_id and not isinstance(permission_scope_id, str):
             raise TypeError("Expected argument 'permission_scope_id' to be a str")
         pulumi.set(__self__, "permission_scope_id", permission_scope_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetCameraPermissionsResult(GetCameraPermissionsResult):
         if False:
             yield self
         return GetCameraPermissionsResult(
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id,
             permission_scope_id=self.permission_scope_id)
@@ -109,7 +97,6 @@ def get_camera_permissions(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getCameraPermissions:getCameraPermissions', __args__, opts=opts, typ=GetCameraPermissionsResult).value
 
     return AwaitableGetCameraPermissionsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         permission_scope_id=pulumi.get(__ret__, 'permission_scope_id'))
@@ -138,7 +125,6 @@ def get_camera_permissions_output(organization_id: pulumi.Input[Optional[_builti
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraPermissions:getCameraPermissions', __args__, opts=opts, typ=GetCameraPermissionsResult)
     return __ret__.apply(lambda __response__: GetCameraPermissionsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         permission_scope_id=pulumi.get(__response__, 'permission_scope_id')))

@@ -32,8 +32,6 @@ type LookupAppliancePortsArgs struct {
 
 // A collection of values returned by getAppliancePorts.
 type LookupAppliancePortsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                `pulumi:"id"`
 	Item GetAppliancePortsItem `pulumi:"item"`
 	// Array of ResponseApplianceGetNetworkAppliancePorts
 	Items []GetAppliancePortsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupAppliancePortsResultOutput) ToLookupAppliancePortsResultOutput() L
 
 func (o LookupAppliancePortsResultOutput) ToLookupAppliancePortsResultOutputWithContext(ctx context.Context) LookupAppliancePortsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAppliancePortsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAppliancePortsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupAppliancePortsResultOutput) Item() GetAppliancePortsItemOutput {

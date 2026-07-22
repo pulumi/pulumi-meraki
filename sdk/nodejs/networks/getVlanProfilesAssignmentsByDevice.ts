@@ -81,10 +81,6 @@ export interface GetVlanProfilesAssignmentsByDeviceResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkVlanProfilesAssignmentsByDevice
      */
     readonly items: outputs.networks.GetVlanProfilesAssignmentsByDeviceItem[];

@@ -32,8 +32,6 @@ type LookupSwitchQosRulesOrderArgs struct {
 
 // A collection of values returned by getSwitchQosRulesOrder.
 type LookupSwitchQosRulesOrderResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetSwitchQosRulesOrderItem `pulumi:"item"`
 	// Array of ResponseSwitchGetNetworkSwitchQosRules
 	Items []GetSwitchQosRulesOrderItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSwitchQosRulesOrderResultOutput) ToLookupSwitchQosRulesOrderResult
 
 func (o LookupSwitchQosRulesOrderResultOutput) ToLookupSwitchQosRulesOrderResultOutputWithContext(ctx context.Context) LookupSwitchQosRulesOrderResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchQosRulesOrderResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchQosRulesOrderResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchQosRulesOrderResultOutput) Item() GetSwitchQosRulesOrderItemOutput {

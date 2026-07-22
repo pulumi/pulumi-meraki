@@ -40,10 +40,6 @@ export interface GetApplianceFirewallPortForwardingRulesArgs {
  * A collection of values returned by getApplianceFirewallPortForwardingRules.
  */
 export interface GetApplianceFirewallPortForwardingRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceFirewallPortForwardingRulesItem;
     /**
      * networkId path parameter. Network ID

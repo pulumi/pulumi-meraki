@@ -36,10 +36,6 @@ export interface GetCameraWirelessProfilesArgs {
  * A collection of values returned by getCameraWirelessProfiles.
  */
 export interface GetCameraWirelessProfilesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetCameraWirelessProfilesItem;
     /**
      * Array of ResponseCameraGetNetworkCameraWirelessProfiles

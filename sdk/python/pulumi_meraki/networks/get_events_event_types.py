@@ -27,24 +27,13 @@ class GetEventsEventTypesResult:
     """
     A collection of values returned by getEventsEventTypes.
     """
-    def __init__(__self__, id=None, items=None, network_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, network_id=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
         if network_id and not isinstance(network_id, str):
             raise TypeError("Expected argument 'network_id' to be a str")
         pulumi.set(__self__, "network_id", network_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -69,7 +58,6 @@ class AwaitableGetEventsEventTypesResult(GetEventsEventTypesResult):
         if False:
             yield self
         return GetEventsEventTypesResult(
-            id=self.id,
             items=self.items,
             network_id=self.network_id)
 
@@ -96,7 +84,6 @@ def get_events_event_types(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getEventsEventTypes:getEventsEventTypes', __args__, opts=opts, typ=GetEventsEventTypesResult).value
 
     return AwaitableGetEventsEventTypesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_events_event_types_output(network_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -120,6 +107,5 @@ def get_events_event_types_output(network_id: pulumi.Input[Optional[_builtins.st
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getEventsEventTypes:getEventsEventTypes', __args__, opts=opts, typ=GetEventsEventTypesResult)
     return __ret__.apply(lambda __response__: GetEventsEventTypesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSwitchRoutingMulticastRendezvousPointsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchRoutingMulticastRendezvousPointsItem item;
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchRoutingMulticastRendezvousPoints
@@ -37,13 +32,6 @@ public final class GetSwitchRoutingMulticastRendezvousPointsResult {
     private @Nullable String rendezvousPointId;
 
     private GetSwitchRoutingMulticastRendezvousPointsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchRoutingMulticastRendezvousPointsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSwitchRoutingMulticastRendezvousPointsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchRoutingMulticastRendezvousPointsItem item;
         private List<GetSwitchRoutingMulticastRendezvousPointsItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetSwitchRoutingMulticastRendezvousPointsResult {
         public Builder() {}
         public Builder(GetSwitchRoutingMulticastRendezvousPointsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.rendezvousPointId = defaults.rendezvousPointId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchRoutingMulticastRendezvousPointsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchRoutingMulticastRendezvousPointsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSwitchRoutingMulticastRendezvousPointsResult {
         }
         public GetSwitchRoutingMulticastRendezvousPointsResult build() {
             final var _resultValue = new GetSwitchRoutingMulticastRendezvousPointsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

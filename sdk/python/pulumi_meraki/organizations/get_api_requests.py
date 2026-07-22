@@ -27,16 +27,13 @@ class GetApiRequestsResult:
     """
     A collection of values returned by getApiRequests.
     """
-    def __init__(__self__, admin_id=None, ending_before=None, id=None, items=None, method=None, operation_ids=None, organization_id=None, path=None, per_page=None, response_code=None, source_ip=None, starting_after=None, t0=None, t1=None, timespan=None, user_agent=None, version=None):
+    def __init__(__self__, admin_id=None, ending_before=None, items=None, method=None, operation_ids=None, organization_id=None, path=None, per_page=None, response_code=None, source_ip=None, starting_after=None, t0=None, t1=None, timespan=None, user_agent=None, version=None):
         if admin_id and not isinstance(admin_id, str):
             raise TypeError("Expected argument 'admin_id' to be a str")
         pulumi.set(__self__, "admin_id", admin_id)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -95,14 +92,6 @@ class GetApiRequestsResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -225,7 +214,6 @@ class AwaitableGetApiRequestsResult(GetApiRequestsResult):
         return GetApiRequestsResult(
             admin_id=self.admin_id,
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             method=self.method,
             operation_ids=self.operation_ids,
@@ -322,7 +310,6 @@ def get_api_requests(admin_id: Optional[_builtins.str] = None,
     return AwaitableGetApiRequestsResult(
         admin_id=pulumi.get(__ret__, 'admin_id'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         method=pulumi.get(__ret__, 'method'),
         operation_ids=pulumi.get(__ret__, 'operation_ids'),
@@ -416,7 +403,6 @@ def get_api_requests_output(admin_id: pulumi.Input[Optional[Optional[_builtins.s
     return __ret__.apply(lambda __response__: GetApiRequestsResult(
         admin_id=pulumi.get(__response__, 'admin_id'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         method=pulumi.get(__response__, 'method'),
         operation_ids=pulumi.get(__response__, 'operation_ids'),

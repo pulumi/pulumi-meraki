@@ -33,10 +33,8 @@ type LookupWebhooksHttpServersArgs struct {
 // A collection of values returned by getWebhooksHttpServers.
 type LookupWebhooksHttpServersResult struct {
 	// httpServerId path parameter. Http server ID
-	HttpServerId *string `pulumi:"httpServerId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
-	Item GetWebhooksHttpServersItem `pulumi:"item"`
+	HttpServerId *string                    `pulumi:"httpServerId"`
+	Item         GetWebhooksHttpServersItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkWebhooksHttpServers
 	Items []GetWebhooksHttpServersItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -82,11 +80,6 @@ func (o LookupWebhooksHttpServersResultOutput) ToLookupWebhooksHttpServersResult
 // httpServerId path parameter. Http server ID
 func (o LookupWebhooksHttpServersResultOutput) HttpServerId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupWebhooksHttpServersResult) *string { return v.HttpServerId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWebhooksHttpServersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWebhooksHttpServersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWebhooksHttpServersResultOutput) Item() GetWebhooksHttpServersItemOutput {

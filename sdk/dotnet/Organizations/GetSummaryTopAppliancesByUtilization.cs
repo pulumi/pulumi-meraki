@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetSummaryTopAppliancesByUtilizationResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSummaryTopAppliancesByUtilization
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSummaryTopAppliancesByUtilizationItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSummaryTopAppliancesByUtilizationResult(
-            string id,
-
             ImmutableArray<Outputs.GetSummaryTopAppliancesByUtilizationItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

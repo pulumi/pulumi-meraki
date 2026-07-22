@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSwitchRoutingInterfacesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interfaceId path parameter. Interface ID
      * 
      */
@@ -37,13 +32,6 @@ public final class GetSwitchRoutingInterfacesResult {
     private @Nullable String serial;
 
     private GetSwitchRoutingInterfacesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return interfaceId path parameter. Interface ID
      * 
@@ -78,7 +66,6 @@ public final class GetSwitchRoutingInterfacesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable String interfaceId;
         private GetSwitchRoutingInterfacesItem item;
         private List<GetSwitchRoutingInterfacesItem> items;
@@ -86,21 +73,12 @@ public final class GetSwitchRoutingInterfacesResult {
         public Builder() {}
         public Builder(GetSwitchRoutingInterfacesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.interfaceId = defaults.interfaceId;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchRoutingInterfacesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaceId(@Nullable String interfaceId) {
 
@@ -134,7 +112,6 @@ public final class GetSwitchRoutingInterfacesResult {
         }
         public GetSwitchRoutingInterfacesResult build() {
             final var _resultValue = new GetSwitchRoutingInterfacesResult();
-            _resultValue.id = id;
             _resultValue.interfaceId = interfaceId;
             _resultValue.item = item;
             _resultValue.items = items;

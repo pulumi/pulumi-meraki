@@ -58,8 +58,6 @@ type LookupWirelessSsidsDeviceTypeGroupPoliciesArgs struct {
 
 // A collection of values returned by getWirelessSsidsDeviceTypeGroupPolicies.
 type LookupWirelessSsidsDeviceTypeGroupPoliciesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                      `pulumi:"id"`
 	Item GetWirelessSsidsDeviceTypeGroupPoliciesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput) ToLookupWireless
 
 func (o LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput) ToLookupWirelessSsidsDeviceTypeGroupPoliciesResultOutputWithContext(ctx context.Context) LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsDeviceTypeGroupPoliciesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput) Item() GetWirelessSsidsDeviceTypeGroupPoliciesItemOutput {

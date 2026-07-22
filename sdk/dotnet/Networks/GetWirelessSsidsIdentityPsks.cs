@@ -88,10 +88,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetWirelessSsidsIdentityPsksResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// identityPskId path parameter. Identity psk ID
         /// </summary>
         public readonly string? IdentityPskId;
@@ -111,8 +107,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessSsidsIdentityPsksResult(
-            string id,
-
             string? identityPskId,
 
             Outputs.GetWirelessSsidsIdentityPsksItemResult item,
@@ -123,7 +117,6 @@ namespace Pulumi.Meraki.Networks
 
             string? number)
         {
-            Id = id;
             IdentityPskId = identityPskId;
             Item = item;
             Items = items;

@@ -32,8 +32,6 @@ type LookupWebhooksPayloadTemplatesArgs struct {
 
 // A collection of values returned by getWebhooksPayloadTemplates.
 type LookupWebhooksPayloadTemplatesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                          `pulumi:"id"`
 	Item GetWebhooksPayloadTemplatesItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkWebhooksPayloadTemplates
 	Items []GetWebhooksPayloadTemplatesItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupWebhooksPayloadTemplatesResultOutput) ToLookupWebhooksPayloadTempl
 
 func (o LookupWebhooksPayloadTemplatesResultOutput) ToLookupWebhooksPayloadTemplatesResultOutputWithContext(ctx context.Context) LookupWebhooksPayloadTemplatesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWebhooksPayloadTemplatesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWebhooksPayloadTemplatesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWebhooksPayloadTemplatesResultOutput) Item() GetWebhooksPayloadTemplatesItemOutput {

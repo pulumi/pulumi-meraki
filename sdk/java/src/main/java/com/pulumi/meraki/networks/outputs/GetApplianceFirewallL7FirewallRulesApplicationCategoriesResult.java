@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceFirewallL7FirewallRulesApplicationCategoriesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetApplianceFirewallL7FirewallRulesApplicationCategoriesResul
     private String networkId;
 
     private GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceFirewallL7FirewallRulesApplicationCategoriesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceFirewallL7FirewallRulesApplicationCategoriesResul
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceFirewallL7FirewallRulesApplicationCategoriesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceFirewallL7FirewallRulesApplicationCategoriesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceFirewallL7FirewallRulesApplicationCategoriesResul
         }
         public GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult build() {
             final var _resultValue = new GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

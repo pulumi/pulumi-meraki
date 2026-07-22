@@ -64,8 +64,6 @@ type GetApiRequestsOverviewArgs struct {
 
 // A collection of values returned by getApiRequestsOverview.
 type GetApiRequestsOverviewResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                     `pulumi:"id"`
 	Item GetApiRequestsOverviewItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -115,11 +113,6 @@ func (o GetApiRequestsOverviewResultOutput) ToGetApiRequestsOverviewResultOutput
 
 func (o GetApiRequestsOverviewResultOutput) ToGetApiRequestsOverviewResultOutputWithContext(ctx context.Context) GetApiRequestsOverviewResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApiRequestsOverviewResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApiRequestsOverviewResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetApiRequestsOverviewResultOutput) Item() GetApiRequestsOverviewItemOutput {

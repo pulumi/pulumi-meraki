@@ -77,8 +77,6 @@ type GetSmUsersArgs struct {
 type GetSmUsersResult struct {
 	// emails query parameter. Filter users by email(s).
 	Emails []string `pulumi:"emails"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// ids query parameter. Filter users by id(s).
 	Ids []string `pulumi:"ids"`
 	// Array of ResponseSmGetNetworkSmUsers
@@ -136,11 +134,6 @@ func (o GetSmUsersResultOutput) ToGetSmUsersResultOutputWithContext(ctx context.
 // emails query parameter. Filter users by email(s).
 func (o GetSmUsersResultOutput) Emails() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSmUsersResult) []string { return v.Emails }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmUsersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmUsersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // ids query parameter. Filter users by id(s).

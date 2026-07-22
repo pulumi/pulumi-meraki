@@ -90,10 +90,6 @@ export interface GetWirelessConnectionStatsResult {
      * band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
      */
     readonly band?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessConnectionStatsItem;
     /**
      * networkId path parameter. Network ID

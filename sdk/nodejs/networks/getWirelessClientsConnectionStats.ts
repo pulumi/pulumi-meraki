@@ -100,10 +100,6 @@ export interface GetWirelessClientsConnectionStatsResult {
      * clientId path parameter. Client ID
      */
     readonly clientId: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessClientsConnectionStatsItem;
     /**
      * networkId path parameter. Network ID

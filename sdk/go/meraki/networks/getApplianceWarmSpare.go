@@ -55,8 +55,6 @@ type LookupApplianceWarmSpareArgs struct {
 
 // A collection of values returned by getApplianceWarmSpare.
 type LookupApplianceWarmSpareResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
 	Item GetApplianceWarmSpareItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceWarmSpareResultOutput) ToLookupApplianceWarmSpareResultOu
 
 func (o LookupApplianceWarmSpareResultOutput) ToLookupApplianceWarmSpareResultOutputWithContext(ctx context.Context) LookupApplianceWarmSpareResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceWarmSpareResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceWarmSpareResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceWarmSpareResultOutput) Item() GetApplianceWarmSpareItemOutput {

@@ -35,11 +35,6 @@ public final class GetWirelessClientsLatencyStatsResult {
      * 
      */
     private @Nullable String fields;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessClientsLatencyStatsItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -101,13 +96,6 @@ public final class GetWirelessClientsLatencyStatsResult {
     public Optional<String> fields() {
         return Optional.ofNullable(this.fields);
     }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWirelessClientsLatencyStatsItem item() {
         return this.item;
     }
@@ -167,7 +155,6 @@ public final class GetWirelessClientsLatencyStatsResult {
         private @Nullable String band;
         private String clientId;
         private @Nullable String fields;
-        private String id;
         private GetWirelessClientsLatencyStatsItem item;
         private String networkId;
         private @Nullable Integer ssid;
@@ -182,7 +169,6 @@ public final class GetWirelessClientsLatencyStatsResult {
     	      this.band = defaults.band;
     	      this.clientId = defaults.clientId;
     	      this.fields = defaults.fields;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.ssid = defaults.ssid;
@@ -216,14 +202,6 @@ public final class GetWirelessClientsLatencyStatsResult {
         public Builder fields(@Nullable String fields) {
 
             this.fields = fields;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessClientsLatencyStatsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -278,7 +256,6 @@ public final class GetWirelessClientsLatencyStatsResult {
             _resultValue.band = band;
             _resultValue.clientId = clientId;
             _resultValue.fields = fields;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.ssid = ssid;

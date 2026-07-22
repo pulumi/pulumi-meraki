@@ -55,8 +55,6 @@ type LookupSwitchStormControlArgs struct {
 
 // A collection of values returned by getSwitchStormControl.
 type LookupSwitchStormControlResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
 	Item GetSwitchStormControlItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchStormControlResultOutput) ToLookupSwitchStormControlResultOu
 
 func (o LookupSwitchStormControlResultOutput) ToLookupSwitchStormControlResultOutputWithContext(ctx context.Context) LookupSwitchStormControlResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchStormControlResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchStormControlResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchStormControlResultOutput) Item() GetSwitchStormControlItemOutput {

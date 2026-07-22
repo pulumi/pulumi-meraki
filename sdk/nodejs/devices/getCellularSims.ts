@@ -40,10 +40,6 @@ export interface GetCellularSimsArgs {
  * A collection of values returned by getCellularSims.
  */
 export interface GetCellularSimsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetCellularSimsItem;
     /**
      * serial path parameter.

@@ -50,10 +50,6 @@ export interface GetOrganizationsResult {
      * endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
      */
     readonly endingBefore?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.GetOrganizationsItem;
     /**
      * Array of ResponseOrganizationsGetOrganizations

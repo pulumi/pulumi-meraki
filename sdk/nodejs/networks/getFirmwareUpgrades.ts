@@ -40,10 +40,6 @@ export interface GetFirmwareUpgradesArgs {
  * A collection of values returned by getFirmwareUpgrades.
  */
 export interface GetFirmwareUpgradesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetFirmwareUpgradesItem;
     /**
      * networkId path parameter. Network ID

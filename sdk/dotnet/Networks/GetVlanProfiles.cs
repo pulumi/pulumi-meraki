@@ -139,10 +139,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetVlanProfilesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// iname path parameter.
         /// </summary>
         public readonly string Iname;
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetVlanProfilesResult(
-            string id,
-
             string iname,
 
             Outputs.GetVlanProfilesItemResult item,
 
             string networkId)
         {
-            Id = id;
             Iname = iname;
             Item = item;
             NetworkId = networkId;

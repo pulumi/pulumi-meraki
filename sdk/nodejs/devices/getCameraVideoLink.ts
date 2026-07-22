@@ -46,10 +46,6 @@ export interface GetCameraVideoLinkArgs {
  * A collection of values returned by getCameraVideoLink.
  */
 export interface GetCameraVideoLinkResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetCameraVideoLinkItem;
     /**
      * serial path parameter.

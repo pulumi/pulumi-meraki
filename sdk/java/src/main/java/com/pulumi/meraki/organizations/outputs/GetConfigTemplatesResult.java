@@ -19,11 +19,6 @@ public final class GetConfigTemplatesResult {
      * 
      */
     private @Nullable String configTemplateId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetConfigTemplatesItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationConfigTemplates
@@ -43,13 +38,6 @@ public final class GetConfigTemplatesResult {
      */
     public Optional<String> configTemplateId() {
         return Optional.ofNullable(this.configTemplateId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetConfigTemplatesItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetConfigTemplatesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String configTemplateId;
-        private String id;
         private GetConfigTemplatesItem item;
         private List<GetConfigTemplatesItem> items;
         private @Nullable String organizationId;
@@ -87,7 +74,6 @@ public final class GetConfigTemplatesResult {
         public Builder(GetConfigTemplatesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.configTemplateId = defaults.configTemplateId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -97,14 +83,6 @@ public final class GetConfigTemplatesResult {
         public Builder configTemplateId(@Nullable String configTemplateId) {
 
             this.configTemplateId = configTemplateId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetConfigTemplatesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetConfigTemplatesResult {
         public GetConfigTemplatesResult build() {
             final var _resultValue = new GetConfigTemplatesResult();
             _resultValue.configTemplateId = configTemplateId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

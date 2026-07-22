@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPiiRequestsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetPiiRequestsItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkPiiRequests
@@ -37,13 +32,6 @@ public final class GetPiiRequestsResult {
     private @Nullable String requestId;
 
     private GetPiiRequestsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetPiiRequestsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetPiiRequestsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetPiiRequestsItem item;
         private List<GetPiiRequestsItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetPiiRequestsResult {
         public Builder() {}
         public Builder(GetPiiRequestsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.requestId = defaults.requestId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetPiiRequestsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetPiiRequestsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetPiiRequestsResult {
         }
         public GetPiiRequestsResult build() {
             final var _resultValue = new GetPiiRequestsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetInsightMonitoredMediaServersResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetInsightMonitoredMediaServersItemResult Item;
         /// <summary>
         /// Array of ResponseInsightGetOrganizationInsightMonitoredMediaServers
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetInsightMonitoredMediaServersResult(
-            string id,
-
             Outputs.GetInsightMonitoredMediaServersItemResult item,
 
             ImmutableArray<Outputs.GetInsightMonitoredMediaServersItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? organizationId)
         {
-            Id = id;
             Item = item;
             Items = items;
             MonitoredMediaServerId = monitoredMediaServerId;

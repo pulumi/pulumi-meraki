@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCameraAnalyticsLiveResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraAnalyticsLiveItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetCameraAnalyticsLiveResult {
     private String serial;
 
     private GetCameraAnalyticsLiveResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCameraAnalyticsLiveItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetCameraAnalyticsLiveResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCameraAnalyticsLiveItem item;
         private String serial;
         public Builder() {}
         public Builder(GetCameraAnalyticsLiveResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraAnalyticsLiveResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCameraAnalyticsLiveItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetCameraAnalyticsLiveResult {
         }
         public GetCameraAnalyticsLiveResult build() {
             final var _resultValue = new GetCameraAnalyticsLiveResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

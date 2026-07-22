@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetLiveToolsWakeOnLanResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetLiveToolsWakeOnLanItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetLiveToolsWakeOnLanResult(
-            string id,
-
             Outputs.GetLiveToolsWakeOnLanItemResult item,
 
             string serial,
 
             string wakeOnLanId)
         {
-            Id = id;
             Item = item;
             Serial = serial;
             WakeOnLanId = wakeOnLanId;

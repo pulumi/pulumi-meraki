@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClientsOverviewResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetClientsOverviewItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -42,13 +37,6 @@ public final class GetClientsOverviewResult {
     private @Nullable Double timespan;
 
     private GetClientsOverviewResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetClientsOverviewItem item() {
         return this.item;
     }
@@ -90,7 +78,6 @@ public final class GetClientsOverviewResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetClientsOverviewItem item;
         private String organizationId;
         private @Nullable String t0;
@@ -99,7 +86,6 @@ public final class GetClientsOverviewResult {
         public Builder() {}
         public Builder(GetClientsOverviewResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
     	      this.t0 = defaults.t0;
@@ -107,14 +93,6 @@ public final class GetClientsOverviewResult {
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetClientsOverviewResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetClientsOverviewItem item) {
             if (item == null) {
@@ -151,7 +129,6 @@ public final class GetClientsOverviewResult {
         }
         public GetClientsOverviewResult build() {
             final var _resultValue = new GetClientsOverviewResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             _resultValue.t0 = t0;

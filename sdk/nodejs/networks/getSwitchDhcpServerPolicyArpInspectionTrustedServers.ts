@@ -63,10 +63,6 @@ export interface GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
      */
     readonly items: outputs.networks.GetSwitchDhcpServerPolicyArpInspectionTrustedServersItem[];

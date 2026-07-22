@@ -34,8 +34,6 @@ type LookupWirelessSsidsIdentityPsksArgs struct {
 
 // A collection of values returned by getWirelessSsidsIdentityPsks.
 type LookupWirelessSsidsIdentityPsksResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// identityPskId path parameter. Identity psk ID
 	IdentityPskId *string                          `pulumi:"identityPskId"`
 	Item          GetWirelessSsidsIdentityPsksItem `pulumi:"item"`
@@ -83,11 +81,6 @@ func (o LookupWirelessSsidsIdentityPsksResultOutput) ToLookupWirelessSsidsIdenti
 
 func (o LookupWirelessSsidsIdentityPsksResultOutput) ToLookupWirelessSsidsIdentityPsksResultOutputWithContext(ctx context.Context) LookupWirelessSsidsIdentityPsksResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsIdentityPsksResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsIdentityPsksResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // identityPskId path parameter. Identity psk ID

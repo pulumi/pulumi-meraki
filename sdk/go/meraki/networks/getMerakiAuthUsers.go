@@ -32,8 +32,6 @@ type LookupMerakiAuthUsersArgs struct {
 
 // A collection of values returned by getMerakiAuthUsers.
 type LookupMerakiAuthUsersResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                 `pulumi:"id"`
 	Item GetMerakiAuthUsersItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkMerakiAuthUsers
 	Items []GetMerakiAuthUsersItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupMerakiAuthUsersResultOutput) ToLookupMerakiAuthUsersResultOutput()
 
 func (o LookupMerakiAuthUsersResultOutput) ToLookupMerakiAuthUsersResultOutputWithContext(ctx context.Context) LookupMerakiAuthUsersResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupMerakiAuthUsersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupMerakiAuthUsersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupMerakiAuthUsersResultOutput) Item() GetMerakiAuthUsersItemOutput {

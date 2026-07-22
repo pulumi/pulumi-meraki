@@ -58,8 +58,6 @@ type LookupWirelessSsidsVpnArgs struct {
 
 // A collection of values returned by getWirelessSsidsVpn.
 type LookupWirelessSsidsVpnResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                  `pulumi:"id"`
 	Item GetWirelessSsidsVpnItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsVpnResultOutput) ToLookupWirelessSsidsVpnResultOutput
 
 func (o LookupWirelessSsidsVpnResultOutput) ToLookupWirelessSsidsVpnResultOutputWithContext(ctx context.Context) LookupWirelessSsidsVpnResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsVpnResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsVpnResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsVpnResultOutput) Item() GetWirelessSsidsVpnItemOutput {

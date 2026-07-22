@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetLiveToolsThroughputTestResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetLiveToolsThroughputTestItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetLiveToolsThroughputTestResult(
-            string id,
-
             Outputs.GetLiveToolsThroughputTestItemResult item,
 
             string serial,
 
             string throughputTestId)
         {
-            Id = id;
             Item = item;
             Serial = serial;
             ThroughputTestId = throughputTestId;

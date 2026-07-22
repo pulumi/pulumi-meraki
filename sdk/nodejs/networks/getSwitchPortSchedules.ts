@@ -41,10 +41,6 @@ export interface GetSwitchPortSchedulesArgs {
  */
 export interface GetSwitchPortSchedulesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetNetworkSwitchPortSchedules
      */
     readonly items: outputs.networks.GetSwitchPortSchedulesItem[];

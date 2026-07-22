@@ -27,10 +27,7 @@ class GetCameraRolesResult:
     """
     A collection of values returned by getCameraRoles.
     """
-    def __init__(__self__, id=None, item=None, items=None, organization_id=None, role_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, organization_id=None, role_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetCameraRolesResult:
         if role_id and not isinstance(role_id, str):
             raise TypeError("Expected argument 'role_id' to be a str")
         pulumi.set(__self__, "role_id", role_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetCameraRolesResult(GetCameraRolesResult):
         if False:
             yield self
         return GetCameraRolesResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id,
@@ -112,7 +100,6 @@ def get_camera_roles(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getCameraRoles:getCameraRoles', __args__, opts=opts, typ=GetCameraRolesResult).value
 
     return AwaitableGetCameraRolesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -133,7 +120,6 @@ def get_camera_roles_output(organization_id: pulumi.Input[Optional[Optional[_bui
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraRoles:getCameraRoles', __args__, opts=opts, typ=GetCameraRolesResult)
     return __ret__.apply(lambda __response__: GetCameraRolesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),

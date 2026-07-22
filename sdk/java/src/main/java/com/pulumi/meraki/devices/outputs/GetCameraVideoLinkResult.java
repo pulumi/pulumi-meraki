@@ -13,11 +13,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCameraVideoLinkResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraVideoLinkItem item;
     /**
      * @return serial path parameter.
@@ -31,13 +26,6 @@ public final class GetCameraVideoLinkResult {
     private @Nullable String timestamp;
 
     private GetCameraVideoLinkResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCameraVideoLinkItem item() {
         return this.item;
     }
@@ -65,27 +53,17 @@ public final class GetCameraVideoLinkResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCameraVideoLinkItem item;
         private String serial;
         private @Nullable String timestamp;
         public Builder() {}
         public Builder(GetCameraVideoLinkResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
     	      this.timestamp = defaults.timestamp;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraVideoLinkResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCameraVideoLinkItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetCameraVideoLinkResult {
         }
         public GetCameraVideoLinkResult build() {
             final var _resultValue = new GetCameraVideoLinkResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             _resultValue.timestamp = timestamp;

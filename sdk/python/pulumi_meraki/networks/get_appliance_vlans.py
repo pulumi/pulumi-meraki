@@ -27,10 +27,7 @@ class GetApplianceVlansResult:
     """
     A collection of values returned by getApplianceVlans.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, vlan_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, vlan_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetApplianceVlansResult:
         if vlan_id and not isinstance(vlan_id, str):
             raise TypeError("Expected argument 'vlan_id' to be a str")
         pulumi.set(__self__, "vlan_id", vlan_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetApplianceVlansResult(GetApplianceVlansResult):
         if False:
             yield self
         return GetApplianceVlansResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -112,7 +100,6 @@ def get_appliance_vlans(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getApplianceVlans:getApplianceVlans', __args__, opts=opts, typ=GetApplianceVlansResult).value
 
     return AwaitableGetApplianceVlansResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -133,7 +120,6 @@ def get_appliance_vlans_output(network_id: pulumi.Input[Optional[Optional[_built
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceVlans:getApplianceVlans', __args__, opts=opts, typ=GetApplianceVlansResult)
     return __ret__.apply(lambda __response__: GetApplianceVlansResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

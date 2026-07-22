@@ -40,10 +40,6 @@ export interface GetAdaptivePolicyOverviewArgs {
  * A collection of values returned by getAdaptivePolicyOverview.
  */
 export interface GetAdaptivePolicyOverviewResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetAdaptivePolicyOverviewItem;
     /**
      * organizationId path parameter. Organization ID

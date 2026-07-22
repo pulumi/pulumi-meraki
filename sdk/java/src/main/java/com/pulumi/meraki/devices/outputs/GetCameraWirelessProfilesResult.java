@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCameraWirelessProfilesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraWirelessProfilesItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetCameraWirelessProfilesResult {
     private String serial;
 
     private GetCameraWirelessProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCameraWirelessProfilesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetCameraWirelessProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCameraWirelessProfilesItem item;
         private String serial;
         public Builder() {}
         public Builder(GetCameraWirelessProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraWirelessProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCameraWirelessProfilesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetCameraWirelessProfilesResult {
         }
         public GetCameraWirelessProfilesResult build() {
             final var _resultValue = new GetCameraWirelessProfilesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

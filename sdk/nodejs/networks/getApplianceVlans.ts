@@ -36,10 +36,6 @@ export interface GetApplianceVlansArgs {
  * A collection of values returned by getApplianceVlans.
  */
 export interface GetApplianceVlansResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceVlansItem;
     /**
      * Array of ResponseApplianceGetNetworkApplianceVlans

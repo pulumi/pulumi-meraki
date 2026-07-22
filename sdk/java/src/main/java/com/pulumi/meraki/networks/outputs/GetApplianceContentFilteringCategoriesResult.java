@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceContentFilteringCategoriesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceContentFilteringCategoriesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetApplianceContentFilteringCategoriesResult {
     private String networkId;
 
     private GetApplianceContentFilteringCategoriesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceContentFilteringCategoriesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceContentFilteringCategoriesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceContentFilteringCategoriesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetApplianceContentFilteringCategoriesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceContentFilteringCategoriesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceContentFilteringCategoriesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceContentFilteringCategoriesResult {
         }
         public GetApplianceContentFilteringCategoriesResult build() {
             final var _resultValue = new GetApplianceContentFilteringCategoriesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

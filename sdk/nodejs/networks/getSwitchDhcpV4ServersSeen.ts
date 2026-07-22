@@ -75,10 +75,6 @@ export interface GetSwitchDhcpV4ServersSeenResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetNetworkSwitchDhcpV4ServersSeen
      */
     readonly items: outputs.networks.GetSwitchDhcpV4ServersSeenItem[];

@@ -99,10 +99,6 @@ export interface GetWirelessDevicesChannelUtilizationByDeviceResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
      */
     readonly interval?: number;

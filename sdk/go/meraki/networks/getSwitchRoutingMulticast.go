@@ -55,8 +55,6 @@ type LookupSwitchRoutingMulticastArgs struct {
 
 // A collection of values returned by getSwitchRoutingMulticast.
 type LookupSwitchRoutingMulticastResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetSwitchRoutingMulticastItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchRoutingMulticastResultOutput) ToLookupSwitchRoutingMulticast
 
 func (o LookupSwitchRoutingMulticastResultOutput) ToLookupSwitchRoutingMulticastResultOutputWithContext(ctx context.Context) LookupSwitchRoutingMulticastResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchRoutingMulticastResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchRoutingMulticastResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchRoutingMulticastResultOutput) Item() GetSwitchRoutingMulticastItemOutput {

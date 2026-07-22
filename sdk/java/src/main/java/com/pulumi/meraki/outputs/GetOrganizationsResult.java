@@ -20,11 +20,6 @@ public final class GetOrganizationsResult {
      * 
      */
     private @Nullable String endingBefore;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetOrganizationsItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizations
@@ -54,13 +49,6 @@ public final class GetOrganizationsResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetOrganizationsItem item() {
         return this.item;
@@ -104,7 +92,6 @@ public final class GetOrganizationsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private GetOrganizationsItem item;
         private List<GetOrganizationsItem> items;
         private @Nullable String organizationId;
@@ -114,7 +101,6 @@ public final class GetOrganizationsResult {
         public Builder(GetOrganizationsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -126,14 +112,6 @@ public final class GetOrganizationsResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetOrganizationsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -176,7 +154,6 @@ public final class GetOrganizationsResult {
         public GetOrganizationsResult build() {
             final var _resultValue = new GetOrganizationsResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

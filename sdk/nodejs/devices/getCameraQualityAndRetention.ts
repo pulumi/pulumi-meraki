@@ -40,10 +40,6 @@ export interface GetCameraQualityAndRetentionArgs {
  * A collection of values returned by getCameraQualityAndRetention.
  */
 export interface GetCameraQualityAndRetentionResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetCameraQualityAndRetentionItem;
     /**
      * serial path parameter.

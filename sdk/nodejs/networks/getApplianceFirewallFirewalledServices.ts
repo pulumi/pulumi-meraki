@@ -46,10 +46,6 @@ export interface GetApplianceFirewallFirewalledServicesArgs {
  * A collection of values returned by getApplianceFirewallFirewalledServices.
  */
 export interface GetApplianceFirewallFirewalledServicesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceFirewallFirewalledServicesItem;
     /**
      * networkId path parameter. Network ID

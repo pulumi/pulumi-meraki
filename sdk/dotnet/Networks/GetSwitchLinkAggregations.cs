@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSwitchLinkAggregationsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetNetworkSwitchLinkAggregations
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchLinkAggregationsItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSwitchLinkAggregationsResult(
-            string id,
-
             ImmutableArray<Outputs.GetSwitchLinkAggregationsItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

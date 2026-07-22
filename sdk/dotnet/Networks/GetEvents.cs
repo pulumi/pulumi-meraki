@@ -408,10 +408,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly ImmutableArray<string> ExcludedEventTypes;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
         /// </summary>
         public readonly ImmutableArray<string> IncludedEventTypes;
@@ -459,8 +455,6 @@ namespace Pulumi.Meraki.Networks
 
             ImmutableArray<string> excludedEventTypes,
 
-            string id,
-
             ImmutableArray<string> includedEventTypes,
 
             Outputs.GetEventsItemResult item,
@@ -485,7 +479,6 @@ namespace Pulumi.Meraki.Networks
             DeviceSerial = deviceSerial;
             EndingBefore = endingBefore;
             ExcludedEventTypes = excludedEventTypes;
-            Id = id;
             IncludedEventTypes = includedEventTypes;
             Item = item;
             NetworkId = networkId;

@@ -46,10 +46,6 @@ export interface GetWirelessSsidsHotspot20Args {
  * A collection of values returned by getWirelessSsidsHotspot20.
  */
 export interface GetWirelessSsidsHotspot20Result {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsHotspot20Item;
     /**
      * networkId path parameter. Network ID

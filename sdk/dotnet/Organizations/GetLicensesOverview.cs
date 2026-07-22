@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetLicensesOverviewResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetLicensesOverviewItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetLicensesOverviewResult(
-            string id,
-
             Outputs.GetLicensesOverviewItemResult item,
 
             string organizationId)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
         }

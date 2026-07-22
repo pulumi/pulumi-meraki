@@ -41,10 +41,6 @@ export interface GetSwitchLinkAggregationsArgs {
  */
 export interface GetSwitchLinkAggregationsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetNetworkSwitchLinkAggregations
      */
     readonly items: outputs.networks.GetSwitchLinkAggregationsItem[];

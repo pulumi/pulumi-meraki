@@ -27,10 +27,7 @@ class GetCameraQualityRetentionProfilesResult:
     """
     A collection of values returned by getCameraQualityRetentionProfiles.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, quality_retention_profile_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, quality_retention_profile_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetCameraQualityRetentionProfilesResult:
         if quality_retention_profile_id and not isinstance(quality_retention_profile_id, str):
             raise TypeError("Expected argument 'quality_retention_profile_id' to be a str")
         pulumi.set(__self__, "quality_retention_profile_id", quality_retention_profile_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetCameraQualityRetentionProfilesResult(GetCameraQualityRetention
         if False:
             yield self
         return GetCameraQualityRetentionProfilesResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -112,7 +100,6 @@ def get_camera_quality_retention_profiles(network_id: Optional[_builtins.str] = 
     __ret__ = pulumi.runtime.invoke('meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles', __args__, opts=opts, typ=GetCameraQualityRetentionProfilesResult).value
 
     return AwaitableGetCameraQualityRetentionProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -133,7 +120,6 @@ def get_camera_quality_retention_profiles_output(network_id: pulumi.Input[Option
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles', __args__, opts=opts, typ=GetCameraQualityRetentionProfilesResult)
     return __ret__.apply(lambda __response__: GetCameraQualityRetentionProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

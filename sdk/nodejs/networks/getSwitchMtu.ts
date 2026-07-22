@@ -40,10 +40,6 @@ export interface GetSwitchMtuArgs {
  * A collection of values returned by getSwitchMtu.
  */
 export interface GetSwitchMtuResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchMtuItem;
     /**
      * networkId path parameter. Network ID

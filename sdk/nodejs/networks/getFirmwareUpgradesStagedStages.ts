@@ -41,10 +41,6 @@ export interface GetFirmwareUpgradesStagedStagesArgs {
  */
 export interface GetFirmwareUpgradesStagedStagesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedStages
      */
     readonly items: outputs.networks.GetFirmwareUpgradesStagedStagesItem[];

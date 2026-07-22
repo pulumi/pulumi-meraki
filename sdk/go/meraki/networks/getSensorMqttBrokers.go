@@ -32,8 +32,6 @@ type LookupSensorMqttBrokersArgs struct {
 
 // A collection of values returned by getSensorMqttBrokers.
 type LookupSensorMqttBrokersResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                   `pulumi:"id"`
 	Item GetSensorMqttBrokersItem `pulumi:"item"`
 	// Array of ResponseSensorGetNetworkSensorMqttBrokers
 	Items []GetSensorMqttBrokersItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSensorMqttBrokersResultOutput) ToLookupSensorMqttBrokersResultOutp
 
 func (o LookupSensorMqttBrokersResultOutput) ToLookupSensorMqttBrokersResultOutputWithContext(ctx context.Context) LookupSensorMqttBrokersResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSensorMqttBrokersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSensorMqttBrokersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSensorMqttBrokersResultOutput) Item() GetSensorMqttBrokersItemOutput {

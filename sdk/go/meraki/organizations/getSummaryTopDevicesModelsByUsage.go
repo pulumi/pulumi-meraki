@@ -64,8 +64,6 @@ type GetSummaryTopDevicesModelsByUsageArgs struct {
 
 // A collection of values returned by getSummaryTopDevicesModelsByUsage.
 type GetSummaryTopDevicesModelsByUsageResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationSummaryTopDevicesModelsByUsage
 	Items []GetSummaryTopDevicesModelsByUsageItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetSummaryTopDevicesModelsByUsageResultOutput) ToGetSummaryTopDevicesMod
 
 func (o GetSummaryTopDevicesModelsByUsageResultOutput) ToGetSummaryTopDevicesModelsByUsageResultOutputWithContext(ctx context.Context) GetSummaryTopDevicesModelsByUsageResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSummaryTopDevicesModelsByUsageResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSummaryTopDevicesModelsByUsageResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationSummaryTopDevicesModelsByUsage

@@ -40,10 +40,6 @@ export interface GetBrandingPoliciesResult {
      * brandingPolicyId path parameter. Branding policy ID
      */
     readonly brandingPolicyId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetBrandingPoliciesItem;
     /**
      * Array of ResponseOrganizationsGetOrganizationBrandingPolicies

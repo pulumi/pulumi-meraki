@@ -133,10 +133,6 @@ export interface GetApiRequestsResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationApiRequests
      */
     readonly items: outputs.organizations.GetApiRequestsItem[];

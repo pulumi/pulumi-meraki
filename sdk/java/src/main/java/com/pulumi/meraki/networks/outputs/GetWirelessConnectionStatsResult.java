@@ -25,11 +25,6 @@ public final class GetWirelessConnectionStatsResult {
      * 
      */
     private @Nullable String band;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessConnectionStatsItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -76,13 +71,6 @@ public final class GetWirelessConnectionStatsResult {
      */
     public Optional<String> band() {
         return Optional.ofNullable(this.band);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetWirelessConnectionStatsItem item() {
         return this.item;
@@ -141,7 +129,6 @@ public final class GetWirelessConnectionStatsResult {
     public static final class Builder {
         private @Nullable String apTag;
         private @Nullable String band;
-        private String id;
         private GetWirelessConnectionStatsItem item;
         private String networkId;
         private @Nullable Integer ssid;
@@ -154,7 +141,6 @@ public final class GetWirelessConnectionStatsResult {
     	      Objects.requireNonNull(defaults);
     	      this.apTag = defaults.apTag;
     	      this.band = defaults.band;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.ssid = defaults.ssid;
@@ -174,14 +160,6 @@ public final class GetWirelessConnectionStatsResult {
         public Builder band(@Nullable String band) {
 
             this.band = band;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessConnectionStatsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -234,7 +212,6 @@ public final class GetWirelessConnectionStatsResult {
             final var _resultValue = new GetWirelessConnectionStatsResult();
             _resultValue.apTag = apTag;
             _resultValue.band = band;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.ssid = ssid;

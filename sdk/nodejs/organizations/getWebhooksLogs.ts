@@ -87,10 +87,6 @@ export interface GetWebhooksLogsResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationWebhooksLogs
      */
     readonly items: outputs.organizations.GetWebhooksLogsItem[];

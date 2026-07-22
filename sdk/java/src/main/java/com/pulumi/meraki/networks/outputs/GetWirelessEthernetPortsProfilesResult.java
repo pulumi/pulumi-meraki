@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWirelessEthernetPortsProfilesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessEthernetPortsProfilesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -29,13 +24,6 @@ public final class GetWirelessEthernetPortsProfilesResult {
     private String profileId;
 
     private GetWirelessEthernetPortsProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWirelessEthernetPortsProfilesItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetWirelessEthernetPortsProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWirelessEthernetPortsProfilesItem item;
         private String networkId;
         private String profileId;
         public Builder() {}
         public Builder(GetWirelessEthernetPortsProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.profileId = defaults.profileId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessEthernetPortsProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWirelessEthernetPortsProfilesItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetWirelessEthernetPortsProfilesResult {
         }
         public GetWirelessEthernetPortsProfilesResult build() {
             final var _resultValue = new GetWirelessEthernetPortsProfilesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.profileId = profileId;

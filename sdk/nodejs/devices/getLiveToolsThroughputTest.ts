@@ -46,10 +46,6 @@ export interface GetLiveToolsThroughputTestArgs {
  * A collection of values returned by getLiveToolsThroughputTest.
  */
 export interface GetLiveToolsThroughputTestResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetLiveToolsThroughputTestItem;
     /**
      * serial path parameter.

@@ -46,10 +46,6 @@ export interface GetOpenapiSpecArgs {
  * A collection of values returned by getOpenapiSpec.
  */
 export interface GetOpenapiSpecResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetOpenapiSpecItem;
     /**
      * organizationId path parameter. Organization ID

@@ -63,10 +63,6 @@ export interface GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSwitchGetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
      */
     readonly items: outputs.networks.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceItem[];

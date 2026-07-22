@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetSummaryTopSsidsByUsageResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSummaryTopSsidsByUsageItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSummaryTopSsidsByUsageResult(
-            string id,
-
             ImmutableArray<Outputs.GetSummaryTopSsidsByUsageItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

@@ -40,10 +40,6 @@ export interface GetWirelessSettingsArgs {
  * A collection of values returned by getWirelessSettings.
  */
 export interface GetWirelessSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSettingsItem;
     /**
      * networkId path parameter. Network ID

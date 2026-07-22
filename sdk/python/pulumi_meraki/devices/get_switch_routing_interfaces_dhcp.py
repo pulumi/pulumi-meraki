@@ -27,10 +27,7 @@ class GetSwitchRoutingInterfacesDhcpResult:
     """
     A collection of values returned by getSwitchRoutingInterfacesDhcp.
     """
-    def __init__(__self__, id=None, interface_id=None, item=None, serial=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, interface_id=None, item=None, serial=None):
         if interface_id and not isinstance(interface_id, str):
             raise TypeError("Expected argument 'interface_id' to be a str")
         pulumi.set(__self__, "interface_id", interface_id)
@@ -40,14 +37,6 @@ class GetSwitchRoutingInterfacesDhcpResult:
         if serial and not isinstance(serial, str):
             raise TypeError("Expected argument 'serial' to be a str")
         pulumi.set(__self__, "serial", serial)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
@@ -77,7 +66,6 @@ class AwaitableGetSwitchRoutingInterfacesDhcpResult(GetSwitchRoutingInterfacesDh
         if False:
             yield self
         return GetSwitchRoutingInterfacesDhcpResult(
-            id=self.id,
             interface_id=self.interface_id,
             item=self.item,
             serial=self.serial)
@@ -109,7 +97,6 @@ def get_switch_routing_interfaces_dhcp(interface_id: Optional[_builtins.str] = N
     __ret__ = pulumi.runtime.invoke('meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp', __args__, opts=opts, typ=GetSwitchRoutingInterfacesDhcpResult).value
 
     return AwaitableGetSwitchRoutingInterfacesDhcpResult(
-        id=pulumi.get(__ret__, 'id'),
         interface_id=pulumi.get(__ret__, 'interface_id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
@@ -138,7 +125,6 @@ def get_switch_routing_interfaces_dhcp_output(interface_id: pulumi.Input[Optiona
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp', __args__, opts=opts, typ=GetSwitchRoutingInterfacesDhcpResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingInterfacesDhcpResult(
-        id=pulumi.get(__response__, 'id'),
         interface_id=pulumi.get(__response__, 'interface_id'),
         item=pulumi.get(__response__, 'item'),
         serial=pulumi.get(__response__, 'serial')))

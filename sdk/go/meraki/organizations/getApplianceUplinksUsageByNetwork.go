@@ -64,8 +64,6 @@ type GetApplianceUplinksUsageByNetworkArgs struct {
 
 // A collection of values returned by getApplianceUplinksUsageByNetwork.
 type GetApplianceUplinksUsageByNetworkResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseApplianceGetOrganizationApplianceUplinksUsageByNetwork
 	Items []GetApplianceUplinksUsageByNetworkItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetApplianceUplinksUsageByNetworkResultOutput) ToGetApplianceUplinksUsag
 
 func (o GetApplianceUplinksUsageByNetworkResultOutput) ToGetApplianceUplinksUsageByNetworkResultOutputWithContext(ctx context.Context) GetApplianceUplinksUsageByNetworkResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApplianceUplinksUsageByNetworkResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApplianceUplinksUsageByNetworkResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseApplianceGetOrganizationApplianceUplinksUsageByNetwork

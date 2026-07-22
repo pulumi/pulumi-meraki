@@ -40,10 +40,6 @@ export interface GetManagementInterfaceArgs {
  * A collection of values returned by getManagementInterface.
  */
 export interface GetManagementInterfaceResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetManagementInterfaceItem;
     /**
      * serial path parameter.

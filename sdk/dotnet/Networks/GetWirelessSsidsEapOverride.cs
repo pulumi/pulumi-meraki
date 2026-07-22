@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWirelessSsidsEapOverrideResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessSsidsEapOverrideItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessSsidsEapOverrideResult(
-            string id,
-
             Outputs.GetWirelessSsidsEapOverrideItemResult item,
 
             string networkId,
 
             string number)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Number = number;

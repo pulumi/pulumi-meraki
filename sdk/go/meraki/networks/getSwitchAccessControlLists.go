@@ -55,8 +55,6 @@ type LookupSwitchAccessControlListsArgs struct {
 
 // A collection of values returned by getSwitchAccessControlLists.
 type LookupSwitchAccessControlListsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                          `pulumi:"id"`
 	Item GetSwitchAccessControlListsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupSwitchAccessControlListsResultOutput) ToLookupSwitchAccessControlL
 
 func (o LookupSwitchAccessControlListsResultOutput) ToLookupSwitchAccessControlListsResultOutputWithContext(ctx context.Context) LookupSwitchAccessControlListsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchAccessControlListsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchAccessControlListsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchAccessControlListsResultOutput) Item() GetSwitchAccessControlListsItemOutput {

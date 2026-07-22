@@ -55,8 +55,6 @@ type LookupApplianceFirewallPortForwardingRulesArgs struct {
 
 // A collection of values returned by getApplianceFirewallPortForwardingRules.
 type LookupApplianceFirewallPortForwardingRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                      `pulumi:"id"`
 	Item GetApplianceFirewallPortForwardingRulesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceFirewallPortForwardingRulesResultOutput) ToLookupApplianc
 
 func (o LookupApplianceFirewallPortForwardingRulesResultOutput) ToLookupApplianceFirewallPortForwardingRulesResultOutputWithContext(ctx context.Context) LookupApplianceFirewallPortForwardingRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceFirewallPortForwardingRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceFirewallPortForwardingRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceFirewallPortForwardingRulesResultOutput) Item() GetApplianceFirewallPortForwardingRulesItemOutput {

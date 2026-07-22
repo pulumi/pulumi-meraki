@@ -58,8 +58,6 @@ type GetCameraPermissionsArgs struct {
 
 // A collection of values returned by getCameraPermissions.
 type GetCameraPermissionsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                   `pulumi:"id"`
 	Item GetCameraPermissionsItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -101,11 +99,6 @@ func (o GetCameraPermissionsResultOutput) ToGetCameraPermissionsResultOutput() G
 
 func (o GetCameraPermissionsResultOutput) ToGetCameraPermissionsResultOutputWithContext(ctx context.Context) GetCameraPermissionsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetCameraPermissionsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetCameraPermissionsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetCameraPermissionsResultOutput) Item() GetCameraPermissionsItemOutput {

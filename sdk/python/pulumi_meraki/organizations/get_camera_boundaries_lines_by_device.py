@@ -27,10 +27,7 @@ class GetCameraBoundariesLinesByDeviceResult:
     """
     A collection of values returned by getCameraBoundariesLinesByDevice.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None, serials=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None, serials=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -40,14 +37,6 @@ class GetCameraBoundariesLinesByDeviceResult:
         if serials and not isinstance(serials, list):
             raise TypeError("Expected argument 'serials' to be a list")
         pulumi.set(__self__, "serials", serials)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -80,7 +69,6 @@ class AwaitableGetCameraBoundariesLinesByDeviceResult(GetCameraBoundariesLinesBy
         if False:
             yield self
         return GetCameraBoundariesLinesByDeviceResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id,
             serials=self.serials)
@@ -112,7 +100,6 @@ def get_camera_boundaries_lines_by_device(organization_id: Optional[_builtins.st
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice', __args__, opts=opts, typ=GetCameraBoundariesLinesByDeviceResult).value
 
     return AwaitableGetCameraBoundariesLinesByDeviceResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         serials=pulumi.get(__ret__, 'serials'))
@@ -141,7 +128,6 @@ def get_camera_boundaries_lines_by_device_output(organization_id: pulumi.Input[O
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice', __args__, opts=opts, typ=GetCameraBoundariesLinesByDeviceResult)
     return __ret__.apply(lambda __response__: GetCameraBoundariesLinesByDeviceResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         serials=pulumi.get(__response__, 'serials')))

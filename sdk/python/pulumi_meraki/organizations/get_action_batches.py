@@ -27,13 +27,10 @@ class GetActionBatchesResult:
     """
     A collection of values returned by getActionBatches.
     """
-    def __init__(__self__, action_batch_id=None, id=None, item=None, items=None, organization_id=None, status=None):
+    def __init__(__self__, action_batch_id=None, item=None, items=None, organization_id=None, status=None):
         if action_batch_id and not isinstance(action_batch_id, str):
             raise TypeError("Expected argument 'action_batch_id' to be a str")
         pulumi.set(__self__, "action_batch_id", action_batch_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -54,14 +51,6 @@ class GetActionBatchesResult:
         actionBatchId path parameter. Action batch ID
         """
         return pulumi.get(self, "action_batch_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -100,7 +89,6 @@ class AwaitableGetActionBatchesResult(GetActionBatchesResult):
             yield self
         return GetActionBatchesResult(
             action_batch_id=self.action_batch_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             organization_id=self.organization_id,
@@ -128,7 +116,6 @@ def get_action_batches(action_batch_id: Optional[_builtins.str] = None,
 
     return AwaitableGetActionBatchesResult(
         action_batch_id=pulumi.get(__ret__, 'action_batch_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -153,7 +140,6 @@ def get_action_batches_output(action_batch_id: pulumi.Input[Optional[Optional[_b
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getActionBatches:getActionBatches', __args__, opts=opts, typ=GetActionBatchesResult)
     return __ret__.apply(lambda __response__: GetActionBatchesResult(
         action_batch_id=pulumi.get(__response__, 'action_batch_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id'),

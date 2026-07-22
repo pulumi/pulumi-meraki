@@ -41,10 +41,6 @@ export interface GetSensorRelationshipsArgs {
  */
 export interface GetSensorRelationshipsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSensorGetNetworkSensorRelationships
      */
     readonly items: outputs.networks.GetSensorRelationshipsItem[];

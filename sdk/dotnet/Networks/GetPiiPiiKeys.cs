@@ -222,10 +222,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? Email;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// imei query parameter. The IMEI of a Systems Manager device
         /// </summary>
         public readonly string? Imei;
@@ -253,8 +249,6 @@ namespace Pulumi.Meraki.Networks
 
             string? email,
 
-            string id,
-
             string? imei,
 
             Outputs.GetPiiPiiKeysItemResult item,
@@ -269,7 +263,6 @@ namespace Pulumi.Meraki.Networks
         {
             BluetoothMac = bluetoothMac;
             Email = email;
-            Id = id;
             Imei = imei;
             Item = item;
             Mac = mac;

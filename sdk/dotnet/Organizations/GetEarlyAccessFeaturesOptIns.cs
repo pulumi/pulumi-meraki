@@ -135,10 +135,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetEarlyAccessFeaturesOptInsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetEarlyAccessFeaturesOptInsItemResult Item;
         /// <summary>
         /// optInId path parameter. Opt in ID
@@ -151,15 +147,12 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetEarlyAccessFeaturesOptInsResult(
-            string id,
-
             Outputs.GetEarlyAccessFeaturesOptInsItemResult item,
 
             string? optInId,
 
             string? organizationId)
         {
-            Id = id;
             Item = item;
             OptInId = optInId;
             OrganizationId = organizationId;

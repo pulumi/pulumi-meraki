@@ -36,10 +36,6 @@ export interface GetPiiRequestsArgs {
  * A collection of values returned by getPiiRequests.
  */
 export interface GetPiiRequestsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetPiiRequestsItem;
     /**
      * Array of ResponseNetworksGetNetworkPiiRequests

@@ -23,11 +23,6 @@ public final class GetDevicesBootsHistoryResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesBootsHistory
      * 
      */
@@ -85,13 +80,6 @@ public final class GetDevicesBootsHistoryResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesBootsHistory
@@ -174,7 +162,6 @@ public final class GetDevicesBootsHistoryResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetDevicesBootsHistoryItem> items;
         private @Nullable Boolean mostRecentPerDevice;
         private String organizationId;
@@ -189,7 +176,6 @@ public final class GetDevicesBootsHistoryResult {
         public Builder(GetDevicesBootsHistoryResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.mostRecentPerDevice = defaults.mostRecentPerDevice;
     	      this.organizationId = defaults.organizationId;
@@ -206,14 +192,6 @@ public final class GetDevicesBootsHistoryResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesBootsHistoryResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -289,7 +267,6 @@ public final class GetDevicesBootsHistoryResult {
         public GetDevicesBootsHistoryResult build() {
             final var _resultValue = new GetDevicesBootsHistoryResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.mostRecentPerDevice = mostRecentPerDevice;
             _resultValue.organizationId = organizationId;

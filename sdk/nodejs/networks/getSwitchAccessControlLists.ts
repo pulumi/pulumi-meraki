@@ -40,10 +40,6 @@ export interface GetSwitchAccessControlListsArgs {
  * A collection of values returned by getSwitchAccessControlLists.
  */
 export interface GetSwitchAccessControlListsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchAccessControlListsItem;
     /**
      * networkId path parameter. Network ID

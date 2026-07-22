@@ -27,10 +27,7 @@ class GetSensorMqttBrokersResult:
     """
     A collection of values returned by getSensorMqttBrokers.
     """
-    def __init__(__self__, id=None, item=None, items=None, mqtt_broker_id=None, network_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, mqtt_broker_id=None, network_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSensorMqttBrokersResult:
         if network_id and not isinstance(network_id, str):
             raise TypeError("Expected argument 'network_id' to be a str")
         pulumi.set(__self__, "network_id", network_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSensorMqttBrokersResult(GetSensorMqttBrokersResult):
         if False:
             yield self
         return GetSensorMqttBrokersResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             mqtt_broker_id=self.mqtt_broker_id,
@@ -112,7 +100,6 @@ def get_sensor_mqtt_brokers(mqtt_broker_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers', __args__, opts=opts, typ=GetSensorMqttBrokersResult).value
 
     return AwaitableGetSensorMqttBrokersResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         mqtt_broker_id=pulumi.get(__ret__, 'mqtt_broker_id'),
@@ -133,7 +120,6 @@ def get_sensor_mqtt_brokers_output(mqtt_broker_id: pulumi.Input[Optional[Optiona
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers', __args__, opts=opts, typ=GetSensorMqttBrokersResult)
     return __ret__.apply(lambda __response__: GetSensorMqttBrokersResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         mqtt_broker_id=pulumi.get(__response__, 'mqtt_broker_id'),

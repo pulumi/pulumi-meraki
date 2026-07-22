@@ -58,8 +58,6 @@ type LookupLicensesArgs struct {
 
 // A collection of values returned by getLicenses.
 type LookupLicensesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string          `pulumi:"id"`
 	Item GetLicensesItem `pulumi:"item"`
 	// licenseId path parameter. License ID
 	LicenseId string `pulumi:"licenseId"`
@@ -101,11 +99,6 @@ func (o LookupLicensesResultOutput) ToLookupLicensesResultOutput() LookupLicense
 
 func (o LookupLicensesResultOutput) ToLookupLicensesResultOutputWithContext(ctx context.Context) LookupLicensesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupLicensesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupLicensesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupLicensesResultOutput) Item() GetLicensesItemOutput {

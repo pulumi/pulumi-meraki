@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetCameraQualityRetentionProfilesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraQualityRetentionProfilesItemResult Item;
         /// <summary>
         /// Array of ResponseCameraGetNetworkCameraQualityRetentionProfiles
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetCameraQualityRetentionProfilesResult(
-            string id,
-
             Outputs.GetCameraQualityRetentionProfilesItemResult item,
 
             ImmutableArray<Outputs.GetCameraQualityRetentionProfilesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? qualityRetentionProfileId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

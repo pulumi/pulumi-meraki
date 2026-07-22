@@ -41,10 +41,6 @@ export interface GetEventsEventTypesArgs {
  */
 export interface GetEventsEventTypesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkEventsEventTypes
      */
     readonly items: outputs.networks.GetEventsEventTypesItem[];

@@ -13,11 +13,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDevicesStatusesOverviewResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetDevicesStatusesOverviewItem item;
     /**
      * @return networkIds query parameter. An optional parameter to filter device statuses by network.
@@ -36,13 +31,6 @@ public final class GetDevicesStatusesOverviewResult {
     private @Nullable List<String> productTypes;
 
     private GetDevicesStatusesOverviewResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetDevicesStatusesOverviewItem item() {
         return this.item;
     }
@@ -77,7 +65,6 @@ public final class GetDevicesStatusesOverviewResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetDevicesStatusesOverviewItem item;
         private @Nullable List<String> networkIds;
         private String organizationId;
@@ -85,21 +72,12 @@ public final class GetDevicesStatusesOverviewResult {
         public Builder() {}
         public Builder(GetDevicesStatusesOverviewResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkIds = defaults.networkIds;
     	      this.organizationId = defaults.organizationId;
     	      this.productTypes = defaults.productTypes;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesStatusesOverviewResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetDevicesStatusesOverviewItem item) {
             if (item == null) {
@@ -136,7 +114,6 @@ public final class GetDevicesStatusesOverviewResult {
         }
         public GetDevicesStatusesOverviewResult build() {
             final var _resultValue = new GetDevicesStatusesOverviewResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkIds = networkIds;
             _resultValue.organizationId = organizationId;

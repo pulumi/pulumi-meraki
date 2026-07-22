@@ -27,16 +27,13 @@ class GetNetworksResult:
     """
     A collection of values returned by getNetworks.
     """
-    def __init__(__self__, config_template_id=None, ending_before=None, id=None, is_bound_to_config_template=None, item=None, items=None, network_id=None, organization_id=None, per_page=None, starting_after=None, tags=None, tags_filter_type=None):
+    def __init__(__self__, config_template_id=None, ending_before=None, is_bound_to_config_template=None, item=None, items=None, network_id=None, organization_id=None, per_page=None, starting_after=None, tags=None, tags_filter_type=None):
         if config_template_id and not isinstance(config_template_id, str):
             raise TypeError("Expected argument 'config_template_id' to be a str")
         pulumi.set(__self__, "config_template_id", config_template_id)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if is_bound_to_config_template and not isinstance(is_bound_to_config_template, bool):
             raise TypeError("Expected argument 'is_bound_to_config_template' to be a bool")
         pulumi.set(__self__, "is_bound_to_config_template", is_bound_to_config_template)
@@ -80,14 +77,6 @@ class GetNetworksResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="isBoundToConfigTemplate")
@@ -167,7 +156,6 @@ class AwaitableGetNetworksResult(GetNetworksResult):
         return GetNetworksResult(
             config_template_id=self.config_template_id,
             ending_before=self.ending_before,
-            id=self.id,
             is_bound_to_config_template=self.is_bound_to_config_template,
             item=self.item,
             items=self.items,
@@ -219,7 +207,6 @@ def get_networks(config_template_id: Optional[_builtins.str] = None,
     return AwaitableGetNetworksResult(
         config_template_id=pulumi.get(__ret__, 'config_template_id'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         is_bound_to_config_template=pulumi.get(__ret__, 'is_bound_to_config_template'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
@@ -268,7 +255,6 @@ def get_networks_output(config_template_id: pulumi.Input[Optional[Optional[_buil
     return __ret__.apply(lambda __response__: GetNetworksResult(
         config_template_id=pulumi.get(__response__, 'config_template_id'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         is_bound_to_config_template=pulumi.get(__response__, 'is_bound_to_config_template'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),

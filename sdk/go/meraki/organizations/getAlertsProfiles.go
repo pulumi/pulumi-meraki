@@ -55,8 +55,6 @@ type LookupAlertsProfilesArgs struct {
 
 // A collection of values returned by getAlertsProfiles.
 type LookupAlertsProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationAlertsProfiles
 	Items []GetAlertsProfilesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -95,11 +93,6 @@ func (o LookupAlertsProfilesResultOutput) ToLookupAlertsProfilesResultOutput() L
 
 func (o LookupAlertsProfilesResultOutput) ToLookupAlertsProfilesResultOutputWithContext(ctx context.Context) LookupAlertsProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAlertsProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAlertsProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationAlertsProfiles

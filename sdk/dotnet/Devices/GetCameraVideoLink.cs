@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetCameraVideoLinkResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraVideoLinkItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetCameraVideoLinkResult(
-            string id,
-
             Outputs.GetCameraVideoLinkItemResult item,
 
             string serial,
 
             string? timestamp)
         {
-            Id = id;
             Item = item;
             Serial = serial;
             Timestamp = timestamp;

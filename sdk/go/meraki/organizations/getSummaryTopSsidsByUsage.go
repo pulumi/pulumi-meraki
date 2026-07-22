@@ -64,8 +64,6 @@ type GetSummaryTopSsidsByUsageArgs struct {
 
 // A collection of values returned by getSummaryTopSsidsByUsage.
 type GetSummaryTopSsidsByUsageResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage
 	Items []GetSummaryTopSsidsByUsageItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -116,11 +114,6 @@ func (o GetSummaryTopSsidsByUsageResultOutput) ToGetSummaryTopSsidsByUsageResult
 
 func (o GetSummaryTopSsidsByUsageResultOutput) ToGetSummaryTopSsidsByUsageResultOutputWithContext(ctx context.Context) GetSummaryTopSsidsByUsageResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSummaryTopSsidsByUsageResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSummaryTopSsidsByUsageResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationSummaryTopSsidsByUsage

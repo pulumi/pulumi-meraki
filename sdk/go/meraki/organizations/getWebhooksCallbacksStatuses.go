@@ -59,10 +59,8 @@ type GetWebhooksCallbacksStatusesArgs struct {
 // A collection of values returned by getWebhooksCallbacksStatuses.
 type GetWebhooksCallbacksStatusesResult struct {
 	// callbackId path parameter. Callback ID
-	CallbackId string `pulumi:"callbackId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
-	Item GetWebhooksCallbacksStatusesItem `pulumi:"item"`
+	CallbackId string                           `pulumi:"callbackId"`
+	Item       GetWebhooksCallbacksStatusesItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
 }
@@ -106,11 +104,6 @@ func (o GetWebhooksCallbacksStatusesResultOutput) ToGetWebhooksCallbacksStatuses
 // callbackId path parameter. Callback ID
 func (o GetWebhooksCallbacksStatusesResultOutput) CallbackId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWebhooksCallbacksStatusesResult) string { return v.CallbackId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWebhooksCallbacksStatusesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWebhooksCallbacksStatusesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWebhooksCallbacksStatusesResultOutput) Item() GetWebhooksCallbacksStatusesItemOutput {

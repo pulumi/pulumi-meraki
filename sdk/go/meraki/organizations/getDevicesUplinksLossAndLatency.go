@@ -70,8 +70,6 @@ type GetDevicesUplinksLossAndLatencyArgs struct {
 
 // A collection of values returned by getDevicesUplinksLossAndLatency.
 type GetDevicesUplinksLossAndLatencyResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
 	Ip *string `pulumi:"ip"`
 	// Array of ResponseOrganizationsGetOrganizationDevicesUplinksLossAndLatency
@@ -130,11 +128,6 @@ func (o GetDevicesUplinksLossAndLatencyResultOutput) ToGetDevicesUplinksLossAndL
 
 func (o GetDevicesUplinksLossAndLatencyResultOutput) ToGetDevicesUplinksLossAndLatencyResultOutputWithContext(ctx context.Context) GetDevicesUplinksLossAndLatencyResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetDevicesUplinksLossAndLatencyResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDevicesUplinksLossAndLatencyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.

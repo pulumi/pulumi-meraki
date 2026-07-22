@@ -92,8 +92,6 @@ type GetWirelessChannelUtilizationHistoryResult struct {
 	ClientId *string `pulumi:"clientId"`
 	// deviceSerial query parameter. Filter results by device to return AP channel utilization metrics for the queried device; either :band or :clientId must be jointly specified.
 	DeviceSerial *string `pulumi:"deviceSerial"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseWirelessGetNetworkWirelessChannelUtilizationHistory
 	Items []GetWirelessChannelUtilizationHistoryItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -183,11 +181,6 @@ func (o GetWirelessChannelUtilizationHistoryResultOutput) ClientId() pulumi.Stri
 // deviceSerial query parameter. Filter results by device to return AP channel utilization metrics for the queried device; either :band or :clientId must be jointly specified.
 func (o GetWirelessChannelUtilizationHistoryResultOutput) DeviceSerial() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessChannelUtilizationHistoryResult) *string { return v.DeviceSerial }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessChannelUtilizationHistoryResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessChannelUtilizationHistoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseWirelessGetNetworkWirelessChannelUtilizationHistory

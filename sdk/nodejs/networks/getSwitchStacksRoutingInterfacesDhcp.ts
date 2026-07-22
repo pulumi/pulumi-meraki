@@ -53,10 +53,6 @@ export interface GetSwitchStacksRoutingInterfacesDhcpArgs {
  */
 export interface GetSwitchStacksRoutingInterfacesDhcpResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * interfaceId path parameter. Interface ID
      */
     readonly interfaceId: string;

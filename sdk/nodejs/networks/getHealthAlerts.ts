@@ -41,10 +41,6 @@ export interface GetHealthAlertsArgs {
  */
 export interface GetHealthAlertsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseNetworksGetNetworkHealthAlerts
      */
     readonly items: outputs.networks.GetHealthAlertsItem[];

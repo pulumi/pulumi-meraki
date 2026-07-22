@@ -55,8 +55,6 @@ type LookupApplianceUplinksSettingsArgs struct {
 
 // A collection of values returned by getApplianceUplinksSettings.
 type LookupApplianceUplinksSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                          `pulumi:"id"`
 	Item GetApplianceUplinksSettingsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupApplianceUplinksSettingsResultOutput) ToLookupApplianceUplinksSett
 
 func (o LookupApplianceUplinksSettingsResultOutput) ToLookupApplianceUplinksSettingsResultOutputWithContext(ctx context.Context) LookupApplianceUplinksSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceUplinksSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceUplinksSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceUplinksSettingsResultOutput) Item() GetApplianceUplinksSettingsItemOutput {

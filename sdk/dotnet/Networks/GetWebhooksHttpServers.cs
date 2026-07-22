@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Networks
         /// httpServerId path parameter. Http server ID
         /// </summary>
         public readonly string? HttpServerId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWebhooksHttpServersItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkWebhooksHttpServers
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Networks
         private GetWebhooksHttpServersResult(
             string? httpServerId,
 
-            string id,
-
             Outputs.GetWebhooksHttpServersItemResult item,
 
             ImmutableArray<Outputs.GetWebhooksHttpServersItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Networks
             string? networkId)
         {
             HttpServerId = httpServerId;
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

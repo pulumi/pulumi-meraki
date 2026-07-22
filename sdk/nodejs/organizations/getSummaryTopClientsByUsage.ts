@@ -59,10 +59,6 @@ export interface GetSummaryTopClientsByUsageArgs {
  */
 export interface GetSummaryTopClientsByUsageResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopClientsByUsage
      */
     readonly items: outputs.organizations.GetSummaryTopClientsByUsageItem[];

@@ -47,10 +47,6 @@ export interface GetSmUsersDeviceProfilesArgs {
  */
 export interface GetSmUsersDeviceProfilesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmUserDeviceProfiles
      */
     readonly items: outputs.networks.GetSmUsersDeviceProfilesItem[];

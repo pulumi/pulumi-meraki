@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Organizations
         /// brandingPolicyId path parameter. Branding policy ID
         /// </summary>
         public readonly string? BrandingPolicyId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetBrandingPoliciesItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationBrandingPolicies
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Organizations
         private GetBrandingPoliciesResult(
             string? brandingPolicyId,
 
-            string id,
-
             Outputs.GetBrandingPoliciesItemResult item,
 
             ImmutableArray<Outputs.GetBrandingPoliciesItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Organizations
             string? organizationId)
         {
             BrandingPolicyId = brandingPolicyId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

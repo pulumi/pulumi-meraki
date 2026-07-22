@@ -32,8 +32,6 @@ type GetPiiRequestsArgs struct {
 
 // A collection of values returned by getPiiRequests.
 type GetPiiRequestsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string             `pulumi:"id"`
 	Item GetPiiRequestsItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkPiiRequests
 	Items []GetPiiRequestsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o GetPiiRequestsResultOutput) ToGetPiiRequestsResultOutput() GetPiiRequest
 
 func (o GetPiiRequestsResultOutput) ToGetPiiRequestsResultOutputWithContext(ctx context.Context) GetPiiRequestsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetPiiRequestsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetPiiRequestsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetPiiRequestsResultOutput) Item() GetPiiRequestsItemOutput {

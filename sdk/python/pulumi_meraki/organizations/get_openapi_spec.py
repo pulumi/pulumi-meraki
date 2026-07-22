@@ -27,10 +27,7 @@ class GetOpenapiSpecResult:
     """
     A collection of values returned by getOpenapiSpec.
     """
-    def __init__(__self__, id=None, item=None, organization_id=None, version=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, organization_id=None, version=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetOpenapiSpecResult:
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetOpenapiSpecResult(GetOpenapiSpecResult):
         if False:
             yield self
         return GetOpenapiSpecResult(
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id,
             version=self.version)
@@ -109,7 +97,6 @@ def get_openapi_spec(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getOpenapiSpec:getOpenapiSpec', __args__, opts=opts, typ=GetOpenapiSpecResult).value
 
     return AwaitableGetOpenapiSpecResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         version=pulumi.get(__ret__, 'version'))
@@ -138,7 +125,6 @@ def get_openapi_spec_output(organization_id: pulumi.Input[Optional[_builtins.str
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getOpenapiSpec:getOpenapiSpec', __args__, opts=opts, typ=GetOpenapiSpecResult)
     return __ret__.apply(lambda __response__: GetOpenapiSpecResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         version=pulumi.get(__response__, 'version')))

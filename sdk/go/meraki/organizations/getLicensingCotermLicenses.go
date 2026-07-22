@@ -74,8 +74,6 @@ type GetLicensingCotermLicensesResult struct {
 	EndingBefore *string `pulumi:"endingBefore"`
 	// expired query parameter. Filter for licenses that are expired
 	Expired *bool `pulumi:"expired"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// invalidated query parameter. Filter for licenses that are invalidated
 	Invalidated *bool `pulumi:"invalidated"`
 	// Array of ResponseLicensingGetOrganizationLicensingCotermLicenses
@@ -140,11 +138,6 @@ func (o GetLicensingCotermLicensesResultOutput) EndingBefore() pulumi.StringPtrO
 // expired query parameter. Filter for licenses that are expired
 func (o GetLicensingCotermLicensesResultOutput) Expired() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v GetLicensingCotermLicensesResult) *bool { return v.Expired }).(pulumi.BoolPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetLicensingCotermLicensesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLicensingCotermLicensesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // invalidated query parameter. Filter for licenses that are invalidated

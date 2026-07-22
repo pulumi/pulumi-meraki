@@ -55,8 +55,6 @@ type LookupSwitchPortSchedulesArgs struct {
 
 // A collection of values returned by getSwitchPortSchedules.
 type LookupSwitchPortSchedulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSwitchGetNetworkSwitchPortSchedules
 	Items []GetSwitchPortSchedulesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o LookupSwitchPortSchedulesResultOutput) ToLookupSwitchPortSchedulesResult
 
 func (o LookupSwitchPortSchedulesResultOutput) ToLookupSwitchPortSchedulesResultOutputWithContext(ctx context.Context) LookupSwitchPortSchedulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchPortSchedulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchPortSchedulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSwitchGetNetworkSwitchPortSchedules

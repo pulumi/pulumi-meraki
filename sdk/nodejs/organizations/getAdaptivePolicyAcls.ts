@@ -40,10 +40,6 @@ export interface GetAdaptivePolicyAclsResult {
      * aclId path parameter. Acl ID
      */
     readonly aclId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetAdaptivePolicyAclsItem;
     /**
      * Array of ResponseOrganizationsGetOrganizationAdaptivePolicyAcls

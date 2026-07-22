@@ -91,10 +91,6 @@ namespace Pulumi.Meraki.Organizations
         /// actionBatchId path parameter. Action batch ID
         /// </summary>
         public readonly string? ActionBatchId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetActionBatchesItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationActionBatches
@@ -113,8 +109,6 @@ namespace Pulumi.Meraki.Organizations
         private GetActionBatchesResult(
             string? actionBatchId,
 
-            string id,
-
             Outputs.GetActionBatchesItemResult item,
 
             ImmutableArray<Outputs.GetActionBatchesItemResult> items,
@@ -124,7 +118,6 @@ namespace Pulumi.Meraki.Organizations
             string? status)
         {
             ActionBatchId = actionBatchId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

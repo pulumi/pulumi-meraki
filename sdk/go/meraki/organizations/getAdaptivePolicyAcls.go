@@ -33,10 +33,8 @@ type LookupAdaptivePolicyAclsArgs struct {
 // A collection of values returned by getAdaptivePolicyAcls.
 type LookupAdaptivePolicyAclsResult struct {
 	// aclId path parameter. Acl ID
-	AclId *string `pulumi:"aclId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
-	Item GetAdaptivePolicyAclsItem `pulumi:"item"`
+	AclId *string                   `pulumi:"aclId"`
+	Item  GetAdaptivePolicyAclsItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationAdaptivePolicyAcls
 	Items []GetAdaptivePolicyAclsItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -82,11 +80,6 @@ func (o LookupAdaptivePolicyAclsResultOutput) ToLookupAdaptivePolicyAclsResultOu
 // aclId path parameter. Acl ID
 func (o LookupAdaptivePolicyAclsResultOutput) AclId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupAdaptivePolicyAclsResult) *string { return v.AclId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupAdaptivePolicyAclsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupAdaptivePolicyAclsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupAdaptivePolicyAclsResultOutput) Item() GetAdaptivePolicyAclsItemOutput {

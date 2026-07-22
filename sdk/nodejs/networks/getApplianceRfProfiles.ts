@@ -46,10 +46,6 @@ export interface GetApplianceRfProfilesArgs {
  * A collection of values returned by getApplianceRfProfiles.
  */
 export interface GetApplianceRfProfilesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceRfProfilesItem;
     /**
      * networkId path parameter. Network ID

@@ -55,8 +55,6 @@ type GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs struct {
 
 // A collection of values returned by getApplianceFirewallL7FirewallRulesApplicationCategories.
 type GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                                       `pulumi:"id"`
 	Item GetApplianceFirewallL7FirewallRulesApplicationCategoriesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput) To
 
 func (o GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput) ToGetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutputWithContext(ctx context.Context) GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput) Item() GetApplianceFirewallL7FirewallRulesApplicationCategoriesItemOutput {

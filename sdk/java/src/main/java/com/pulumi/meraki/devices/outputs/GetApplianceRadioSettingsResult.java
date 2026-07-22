@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceRadioSettingsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceRadioSettingsItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetApplianceRadioSettingsResult {
     private String serial;
 
     private GetApplianceRadioSettingsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceRadioSettingsItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceRadioSettingsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceRadioSettingsItem item;
         private String serial;
         public Builder() {}
         public Builder(GetApplianceRadioSettingsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceRadioSettingsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceRadioSettingsItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceRadioSettingsResult {
         }
         public GetApplianceRadioSettingsResult build() {
             final var _resultValue = new GetApplianceRadioSettingsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

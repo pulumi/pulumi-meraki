@@ -60,8 +60,6 @@ type GetSmProfilesArgs struct {
 
 // A collection of values returned by getSmProfiles.
 type GetSmProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmProfiles
 	Items []GetSmProfilesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -104,11 +102,6 @@ func (o GetSmProfilesResultOutput) ToGetSmProfilesResultOutput() GetSmProfilesRe
 
 func (o GetSmProfilesResultOutput) ToGetSmProfilesResultOutputWithContext(ctx context.Context) GetSmProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmProfiles

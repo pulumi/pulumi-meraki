@@ -55,8 +55,6 @@ type LookupApplianceConnectivityMonitoringDestinationsArgs struct {
 
 // A collection of values returned by getApplianceConnectivityMonitoringDestinations.
 type LookupApplianceConnectivityMonitoringDestinationsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                             `pulumi:"id"`
 	Item GetApplianceConnectivityMonitoringDestinationsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceConnectivityMonitoringDestinationsResultOutput) ToLookupA
 
 func (o LookupApplianceConnectivityMonitoringDestinationsResultOutput) ToLookupApplianceConnectivityMonitoringDestinationsResultOutputWithContext(ctx context.Context) LookupApplianceConnectivityMonitoringDestinationsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceConnectivityMonitoringDestinationsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceConnectivityMonitoringDestinationsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceConnectivityMonitoringDestinationsResultOutput) Item() GetApplianceConnectivityMonitoringDestinationsItemOutput {

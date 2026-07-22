@@ -60,8 +60,6 @@ type GetSmDevicesCellularUsageHistoryArgs struct {
 type GetSmDevicesCellularUsageHistoryResult struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmDeviceCellularUsageHistory
 	Items []GetSmDevicesCellularUsageHistoryItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -107,11 +105,6 @@ func (o GetSmDevicesCellularUsageHistoryResultOutput) ToGetSmDevicesCellularUsag
 // deviceId path parameter. Device ID
 func (o GetSmDevicesCellularUsageHistoryResultOutput) DeviceId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSmDevicesCellularUsageHistoryResult) string { return v.DeviceId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmDevicesCellularUsageHistoryResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmDevicesCellularUsageHistoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmDeviceCellularUsageHistory

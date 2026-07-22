@@ -19,11 +19,6 @@ public final class GetBrandingPoliciesResult {
      * 
      */
     private @Nullable String brandingPolicyId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetBrandingPoliciesItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationBrandingPolicies
@@ -43,13 +38,6 @@ public final class GetBrandingPoliciesResult {
      */
     public Optional<String> brandingPolicyId() {
         return Optional.ofNullable(this.brandingPolicyId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetBrandingPoliciesItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetBrandingPoliciesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String brandingPolicyId;
-        private String id;
         private GetBrandingPoliciesItem item;
         private List<GetBrandingPoliciesItem> items;
         private @Nullable String organizationId;
@@ -87,7 +74,6 @@ public final class GetBrandingPoliciesResult {
         public Builder(GetBrandingPoliciesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.brandingPolicyId = defaults.brandingPolicyId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -97,14 +83,6 @@ public final class GetBrandingPoliciesResult {
         public Builder brandingPolicyId(@Nullable String brandingPolicyId) {
 
             this.brandingPolicyId = brandingPolicyId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetBrandingPoliciesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetBrandingPoliciesResult {
         public GetBrandingPoliciesResult build() {
             final var _resultValue = new GetBrandingPoliciesResult();
             _resultValue.brandingPolicyId = brandingPolicyId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

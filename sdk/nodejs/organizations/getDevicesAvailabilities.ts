@@ -93,10 +93,6 @@ export interface GetDevicesAvailabilitiesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesAvailabilities
      */
     readonly items: outputs.organizations.GetDevicesAvailabilitiesItem[];

@@ -93,10 +93,6 @@ export interface GetDevicesPowerModulesStatusesByDeviceResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesPowerModulesStatusesByDevice
      */
     readonly items: outputs.organizations.GetDevicesPowerModulesStatusesByDeviceItem[];

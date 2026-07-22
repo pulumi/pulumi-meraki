@@ -207,10 +207,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationInventoryOnboardingCloudMonitoringNetworks
         /// </summary>
         public readonly ImmutableArray<Outputs.GetInventoryOnboardingCloudMonitoringNetworksItemResult> Items;
@@ -237,8 +233,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetInventoryOnboardingCloudMonitoringNetworksItemResult> items,
 
             string organizationId,
@@ -251,7 +245,6 @@ namespace Pulumi.Meraki.Organizations
         {
             DeviceType = deviceType;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             PerPage = perPage;

@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetSwitchPortSchedulesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSwitchGetNetworkSwitchPortSchedules
      * 
      */
@@ -29,13 +24,6 @@ public final class GetSwitchPortSchedulesResult {
     private String networkId;
 
     private GetSwitchPortSchedulesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseSwitchGetNetworkSwitchPortSchedules
      * 
@@ -60,25 +48,15 @@ public final class GetSwitchPortSchedulesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSwitchPortSchedulesItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetSwitchPortSchedulesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchPortSchedulesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSwitchPortSchedulesItem> items) {
             if (items == null) {
@@ -100,7 +78,6 @@ public final class GetSwitchPortSchedulesResult {
         }
         public GetSwitchPortSchedulesResult build() {
             final var _resultValue = new GetSwitchPortSchedulesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

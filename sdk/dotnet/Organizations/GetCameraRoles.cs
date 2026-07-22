@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetCameraRolesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraRolesItemResult Item;
         /// <summary>
         /// Array of ResponseCameraGetOrganizationCameraRoles
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetCameraRolesResult(
-            string id,
-
             Outputs.GetCameraRolesItemResult item,
 
             ImmutableArray<Outputs.GetCameraRolesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? roleId)
         {
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

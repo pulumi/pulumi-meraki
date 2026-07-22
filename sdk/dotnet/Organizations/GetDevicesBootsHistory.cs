@@ -284,10 +284,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationDevicesBootsHistory
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDevicesBootsHistoryItemResult> Items;
@@ -332,8 +328,6 @@ namespace Pulumi.Meraki.Organizations
         private GetDevicesBootsHistoryResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetDevicesBootsHistoryItemResult> items,
 
             bool? mostRecentPerDevice,
@@ -355,7 +349,6 @@ namespace Pulumi.Meraki.Organizations
             double? timespan)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             MostRecentPerDevice = mostRecentPerDevice;
             OrganizationId = organizationId;

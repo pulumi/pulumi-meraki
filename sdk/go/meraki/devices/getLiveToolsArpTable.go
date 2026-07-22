@@ -59,10 +59,8 @@ type LookupLiveToolsArpTableArgs struct {
 // A collection of values returned by getLiveToolsArpTable.
 type LookupLiveToolsArpTableResult struct {
 	// arpTableId path parameter. Arp table ID
-	ArpTableId string `pulumi:"arpTableId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                   `pulumi:"id"`
-	Item GetLiveToolsArpTableItem `pulumi:"item"`
+	ArpTableId string                   `pulumi:"arpTableId"`
+	Item       GetLiveToolsArpTableItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
 }
@@ -106,11 +104,6 @@ func (o LookupLiveToolsArpTableResultOutput) ToLookupLiveToolsArpTableResultOutp
 // arpTableId path parameter. Arp table ID
 func (o LookupLiveToolsArpTableResultOutput) ArpTableId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLiveToolsArpTableResult) string { return v.ArpTableId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupLiveToolsArpTableResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupLiveToolsArpTableResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupLiveToolsArpTableResultOutput) Item() GetLiveToolsArpTableItemOutput {

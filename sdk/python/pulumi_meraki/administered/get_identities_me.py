@@ -27,21 +27,10 @@ class GetIdentitiesMeResult:
     """
     A collection of values returned by getIdentitiesMe.
     """
-    def __init__(__self__, id=None, item=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -55,7 +44,6 @@ class AwaitableGetIdentitiesMeResult(GetIdentitiesMeResult):
         if False:
             yield self
         return GetIdentitiesMeResult(
-            id=self.id,
             item=self.item)
 
 
@@ -76,7 +64,6 @@ def get_identities_me(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableG
     __ret__ = pulumi.runtime.invoke('meraki:administered/getIdentitiesMe:getIdentitiesMe', __args__, opts=opts, typ=GetIdentitiesMeResult).value
 
     return AwaitableGetIdentitiesMeResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'))
 def get_identities_me_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIdentitiesMeResult]:
     """
@@ -94,5 +81,4 @@ def get_identities_me_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.I
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getIdentitiesMe:getIdentitiesMe', __args__, opts=opts, typ=GetIdentitiesMeResult)
     return __ret__.apply(lambda __response__: GetIdentitiesMeResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item')))

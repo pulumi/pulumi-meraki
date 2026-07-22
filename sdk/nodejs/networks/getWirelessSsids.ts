@@ -36,10 +36,6 @@ export interface GetWirelessSsidsArgs {
  * A collection of values returned by getWirelessSsids.
  */
 export interface GetWirelessSsidsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsItem;
     /**
      * Array of ResponseWirelessGetNetworkWirelessSsids

@@ -47,10 +47,6 @@ export interface GetSmUsersSoftwaresArgs {
  */
 export interface GetSmUsersSoftwaresResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmUserSoftwares
      */
     readonly items: outputs.networks.GetSmUsersSoftwaresItem[];

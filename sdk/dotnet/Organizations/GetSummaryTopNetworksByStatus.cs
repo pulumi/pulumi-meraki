@@ -173,10 +173,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationSummaryTopNetworksByStatus
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSummaryTopNetworksByStatusItemResult> Items;
@@ -197,8 +193,6 @@ namespace Pulumi.Meraki.Organizations
         private GetSummaryTopNetworksByStatusResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetSummaryTopNetworksByStatusItemResult> items,
 
             string organizationId,
@@ -208,7 +202,6 @@ namespace Pulumi.Meraki.Organizations
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             PerPage = perPage;

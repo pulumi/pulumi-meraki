@@ -55,8 +55,6 @@ type LookupSnmpArgs struct {
 
 // A collection of values returned by getSnmp.
 type LookupSnmpResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string      `pulumi:"id"`
 	Item GetSnmpItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupSnmpResultOutput) ToLookupSnmpResultOutput() LookupSnmpResultOutpu
 
 func (o LookupSnmpResultOutput) ToLookupSnmpResultOutputWithContext(ctx context.Context) LookupSnmpResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSnmpResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSnmpResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSnmpResultOutput) Item() GetSnmpItemOutput {

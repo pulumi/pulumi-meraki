@@ -69,10 +69,6 @@ export interface GetWirelessDevicesEthernetStatusesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetOrganizationWirelessDevicesEthernetStatuses
      */
     readonly items: outputs.organizations.GetWirelessDevicesEthernetStatusesItem[];

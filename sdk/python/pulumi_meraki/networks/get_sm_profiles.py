@@ -27,10 +27,7 @@ class GetSmProfilesResult:
     """
     A collection of values returned by getSmProfiles.
     """
-    def __init__(__self__, id=None, items=None, network_id=None, payload_types=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, network_id=None, payload_types=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -40,14 +37,6 @@ class GetSmProfilesResult:
         if payload_types and not isinstance(payload_types, list):
             raise TypeError("Expected argument 'payload_types' to be a list")
         pulumi.set(__self__, "payload_types", payload_types)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -80,7 +69,6 @@ class AwaitableGetSmProfilesResult(GetSmProfilesResult):
         if False:
             yield self
         return GetSmProfilesResult(
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             payload_types=self.payload_types)
@@ -112,7 +100,6 @@ def get_sm_profiles(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSmProfiles:getSmProfiles', __args__, opts=opts, typ=GetSmProfilesResult).value
 
     return AwaitableGetSmProfilesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         payload_types=pulumi.get(__ret__, 'payload_types'))
@@ -141,7 +128,6 @@ def get_sm_profiles_output(network_id: pulumi.Input[Optional[_builtins.str]] = N
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmProfiles:getSmProfiles', __args__, opts=opts, typ=GetSmProfilesResult)
     return __ret__.apply(lambda __response__: GetSmProfilesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         payload_types=pulumi.get(__response__, 'payload_types')))

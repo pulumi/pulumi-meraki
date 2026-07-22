@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWirelessRfProfilesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
      * 
      */
@@ -37,13 +32,6 @@ public final class GetWirelessRfProfilesResult {
     private @Nullable String rfProfileId;
 
     private GetWirelessRfProfilesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
      * 
@@ -78,7 +66,6 @@ public final class GetWirelessRfProfilesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable Boolean includeTemplateProfiles;
         private GetWirelessRfProfilesItem item;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetWirelessRfProfilesResult {
         public Builder() {}
         public Builder(GetWirelessRfProfilesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.includeTemplateProfiles = defaults.includeTemplateProfiles;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.rfProfileId = defaults.rfProfileId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessRfProfilesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder includeTemplateProfiles(@Nullable Boolean includeTemplateProfiles) {
 
@@ -129,7 +107,6 @@ public final class GetWirelessRfProfilesResult {
         }
         public GetWirelessRfProfilesResult build() {
             final var _resultValue = new GetWirelessRfProfilesResult();
-            _resultValue.id = id;
             _resultValue.includeTemplateProfiles = includeTemplateProfiles;
             _resultValue.item = item;
             _resultValue.networkId = networkId;

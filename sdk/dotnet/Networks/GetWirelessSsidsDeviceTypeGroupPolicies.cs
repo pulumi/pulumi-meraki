@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWirelessSsidsDeviceTypeGroupPoliciesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessSsidsDeviceTypeGroupPoliciesItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessSsidsDeviceTypeGroupPoliciesResult(
-            string id,
-
             Outputs.GetWirelessSsidsDeviceTypeGroupPoliciesItemResult item,
 
             string networkId,
 
             string number)
         {
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Number = number;

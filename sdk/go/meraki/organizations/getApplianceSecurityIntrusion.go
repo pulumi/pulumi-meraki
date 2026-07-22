@@ -55,8 +55,6 @@ type LookupApplianceSecurityIntrusionArgs struct {
 
 // A collection of values returned by getApplianceSecurityIntrusion.
 type LookupApplianceSecurityIntrusionResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                            `pulumi:"id"`
 	Item GetApplianceSecurityIntrusionItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupApplianceSecurityIntrusionResultOutput) ToLookupApplianceSecurityI
 
 func (o LookupApplianceSecurityIntrusionResultOutput) ToLookupApplianceSecurityIntrusionResultOutputWithContext(ctx context.Context) LookupApplianceSecurityIntrusionResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupApplianceSecurityIntrusionResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplianceSecurityIntrusionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupApplianceSecurityIntrusionResultOutput) Item() GetApplianceSecurityIntrusionItemOutput {

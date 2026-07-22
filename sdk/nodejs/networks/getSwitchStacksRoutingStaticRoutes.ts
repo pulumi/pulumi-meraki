@@ -41,10 +41,6 @@ export interface GetSwitchStacksRoutingStaticRoutesArgs {
  * A collection of values returned by getSwitchStacksRoutingStaticRoutes.
  */
 export interface GetSwitchStacksRoutingStaticRoutesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetSwitchStacksRoutingStaticRoutesItem;
     /**
      * Array of ResponseSwitchGetNetworkSwitchStackRoutingStaticRoutes

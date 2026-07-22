@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWirelessSsidsFirewallL7FirewallRulesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessSsidsFirewallL7FirewallRulesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -29,13 +24,6 @@ public final class GetWirelessSsidsFirewallL7FirewallRulesResult {
     private String number;
 
     private GetWirelessSsidsFirewallL7FirewallRulesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWirelessSsidsFirewallL7FirewallRulesItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetWirelessSsidsFirewallL7FirewallRulesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWirelessSsidsFirewallL7FirewallRulesItem item;
         private String networkId;
         private String number;
         public Builder() {}
         public Builder(GetWirelessSsidsFirewallL7FirewallRulesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.number = defaults.number;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessSsidsFirewallL7FirewallRulesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWirelessSsidsFirewallL7FirewallRulesItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetWirelessSsidsFirewallL7FirewallRulesResult {
         }
         public GetWirelessSsidsFirewallL7FirewallRulesResult build() {
             final var _resultValue = new GetWirelessSsidsFirewallL7FirewallRulesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.number = number;

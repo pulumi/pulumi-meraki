@@ -27,13 +27,10 @@ class GetDevicesStatusesResult:
     """
     A collection of values returned by getDevicesStatuses.
     """
-    def __init__(__self__, ending_before=None, id=None, items=None, models=None, network_ids=None, organization_id=None, per_page=None, product_types=None, serials=None, starting_after=None, statuses=None, tags=None, tags_filter_type=None):
+    def __init__(__self__, ending_before=None, items=None, models=None, network_ids=None, organization_id=None, per_page=None, product_types=None, serials=None, starting_after=None, statuses=None, tags=None, tags_filter_type=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -75,14 +72,6 @@ class GetDevicesStatusesResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -180,7 +169,6 @@ class AwaitableGetDevicesStatusesResult(GetDevicesStatusesResult):
             yield self
         return GetDevicesStatusesResult(
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             models=self.models,
             network_ids=self.network_ids,
@@ -257,7 +245,6 @@ def get_devices_statuses(ending_before: Optional[_builtins.str] = None,
 
     return AwaitableGetDevicesStatusesResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         models=pulumi.get(__ret__, 'models'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
@@ -331,7 +318,6 @@ def get_devices_statuses_output(ending_before: pulumi.Input[Optional[Optional[_b
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesStatuses:getDevicesStatuses', __args__, opts=opts, typ=GetDevicesStatusesResult)
     return __ret__.apply(lambda __response__: GetDevicesStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         models=pulumi.get(__response__, 'models'),
         network_ids=pulumi.get(__response__, 'network_ids'),

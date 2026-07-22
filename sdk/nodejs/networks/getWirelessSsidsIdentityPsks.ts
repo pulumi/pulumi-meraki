@@ -42,10 +42,6 @@ export interface GetWirelessSsidsIdentityPsksArgs {
  */
 export interface GetWirelessSsidsIdentityPsksResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * identityPskId path parameter. Identity psk ID
      */
     readonly identityPskId?: string;

@@ -27,10 +27,7 @@ class GetSwitchStacksResult:
     """
     A collection of values returned by getSwitchStacks.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, switch_stack_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, switch_stack_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetSwitchStacksResult:
         if switch_stack_id and not isinstance(switch_stack_id, str):
             raise TypeError("Expected argument 'switch_stack_id' to be a str")
         pulumi.set(__self__, "switch_stack_id", switch_stack_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetSwitchStacksResult(GetSwitchStacksResult):
         if False:
             yield self
         return GetSwitchStacksResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -112,7 +100,6 @@ def get_switch_stacks(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSwitchStacks:getSwitchStacks', __args__, opts=opts, typ=GetSwitchStacksResult).value
 
     return AwaitableGetSwitchStacksResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -133,7 +120,6 @@ def get_switch_stacks_output(network_id: pulumi.Input[Optional[Optional[_builtin
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacks:getSwitchStacks', __args__, opts=opts, typ=GetSwitchStacksResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

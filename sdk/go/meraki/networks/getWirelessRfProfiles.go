@@ -60,8 +60,6 @@ type LookupWirelessRfProfilesArgs struct {
 
 // A collection of values returned by getWirelessRfProfiles.
 type LookupWirelessRfProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
 	IncludeTemplateProfiles *bool                     `pulumi:"includeTemplateProfiles"`
 	Item                    GetWirelessRfProfilesItem `pulumi:"item"`
@@ -107,11 +105,6 @@ func (o LookupWirelessRfProfilesResultOutput) ToLookupWirelessRfProfilesResultOu
 
 func (o LookupWirelessRfProfilesResultOutput) ToLookupWirelessRfProfilesResultOutputWithContext(ctx context.Context) LookupWirelessRfProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessRfProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessRfProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.

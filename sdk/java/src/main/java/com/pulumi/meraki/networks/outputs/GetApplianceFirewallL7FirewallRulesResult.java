@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceFirewallL7FirewallRulesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceFirewallL7FirewallRulesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetApplianceFirewallL7FirewallRulesResult {
     private String networkId;
 
     private GetApplianceFirewallL7FirewallRulesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceFirewallL7FirewallRulesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceFirewallL7FirewallRulesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceFirewallL7FirewallRulesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetApplianceFirewallL7FirewallRulesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceFirewallL7FirewallRulesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceFirewallL7FirewallRulesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceFirewallL7FirewallRulesResult {
         }
         public GetApplianceFirewallL7FirewallRulesResult build() {
             final var _resultValue = new GetApplianceFirewallL7FirewallRulesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

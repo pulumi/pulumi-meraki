@@ -27,16 +27,13 @@ class GetBluetoothClientsResult:
     """
     A collection of values returned by getBluetoothClients.
     """
-    def __init__(__self__, bluetooth_client_id=None, connectivity_history_timespan=None, id=None, include_connectivity_history=None, item=None, network_id=None):
+    def __init__(__self__, bluetooth_client_id=None, connectivity_history_timespan=None, include_connectivity_history=None, item=None, network_id=None):
         if bluetooth_client_id and not isinstance(bluetooth_client_id, str):
             raise TypeError("Expected argument 'bluetooth_client_id' to be a str")
         pulumi.set(__self__, "bluetooth_client_id", bluetooth_client_id)
         if connectivity_history_timespan and not isinstance(connectivity_history_timespan, int):
             raise TypeError("Expected argument 'connectivity_history_timespan' to be a int")
         pulumi.set(__self__, "connectivity_history_timespan", connectivity_history_timespan)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if include_connectivity_history and not isinstance(include_connectivity_history, bool):
             raise TypeError("Expected argument 'include_connectivity_history' to be a bool")
         pulumi.set(__self__, "include_connectivity_history", include_connectivity_history)
@@ -62,14 +59,6 @@ class GetBluetoothClientsResult:
         connectivityHistoryTimespan query parameter. The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
         """
         return pulumi.get(self, "connectivity_history_timespan")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="includeConnectivityHistory")
@@ -101,7 +90,6 @@ class AwaitableGetBluetoothClientsResult(GetBluetoothClientsResult):
         return GetBluetoothClientsResult(
             bluetooth_client_id=self.bluetooth_client_id,
             connectivity_history_timespan=self.connectivity_history_timespan,
-            id=self.id,
             include_connectivity_history=self.include_connectivity_history,
             item=self.item,
             network_id=self.network_id)
@@ -143,7 +131,6 @@ def get_bluetooth_clients(bluetooth_client_id: Optional[_builtins.str] = None,
     return AwaitableGetBluetoothClientsResult(
         bluetooth_client_id=pulumi.get(__ret__, 'bluetooth_client_id'),
         connectivity_history_timespan=pulumi.get(__ret__, 'connectivity_history_timespan'),
-        id=pulumi.get(__ret__, 'id'),
         include_connectivity_history=pulumi.get(__ret__, 'include_connectivity_history'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -182,7 +169,6 @@ def get_bluetooth_clients_output(bluetooth_client_id: pulumi.Input[Optional[_bui
     return __ret__.apply(lambda __response__: GetBluetoothClientsResult(
         bluetooth_client_id=pulumi.get(__response__, 'bluetooth_client_id'),
         connectivity_history_timespan=pulumi.get(__response__, 'connectivity_history_timespan'),
-        id=pulumi.get(__response__, 'id'),
         include_connectivity_history=pulumi.get(__response__, 'include_connectivity_history'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id')))

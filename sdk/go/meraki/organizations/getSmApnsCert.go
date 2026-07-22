@@ -55,8 +55,6 @@ type GetSmApnsCertArgs struct {
 
 // A collection of values returned by getSmApnsCert.
 type GetSmApnsCertResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string            `pulumi:"id"`
 	Item GetSmApnsCertItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o GetSmApnsCertResultOutput) ToGetSmApnsCertResultOutput() GetSmApnsCertRe
 
 func (o GetSmApnsCertResultOutput) ToGetSmApnsCertResultOutputWithContext(ctx context.Context) GetSmApnsCertResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmApnsCertResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmApnsCertResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetSmApnsCertResultOutput) Item() GetSmApnsCertItemOutput {

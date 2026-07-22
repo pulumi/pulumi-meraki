@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetEventsEventTypesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseNetworksGetNetworkEventsEventTypes
      * 
      */
@@ -29,13 +24,6 @@ public final class GetEventsEventTypesResult {
     private String networkId;
 
     private GetEventsEventTypesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseNetworksGetNetworkEventsEventTypes
      * 
@@ -60,25 +48,15 @@ public final class GetEventsEventTypesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetEventsEventTypesItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetEventsEventTypesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetEventsEventTypesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetEventsEventTypesItem> items) {
             if (items == null) {
@@ -100,7 +78,6 @@ public final class GetEventsEventTypesResult {
         }
         public GetEventsEventTypesResult build() {
             final var _resultValue = new GetEventsEventTypesResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

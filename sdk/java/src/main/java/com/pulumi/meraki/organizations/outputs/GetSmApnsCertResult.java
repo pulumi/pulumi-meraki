@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSmApnsCertResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSmApnsCertItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -24,13 +19,6 @@ public final class GetSmApnsCertResult {
     private String organizationId;
 
     private GetSmApnsCertResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSmApnsCertItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetSmApnsCertResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSmApnsCertItem item;
         private String organizationId;
         public Builder() {}
         public Builder(GetSmApnsCertResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmApnsCertResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSmApnsCertItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetSmApnsCertResult {
         }
         public GetSmApnsCertResult build() {
             final var _resultValue = new GetSmApnsCertResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             return _resultValue;

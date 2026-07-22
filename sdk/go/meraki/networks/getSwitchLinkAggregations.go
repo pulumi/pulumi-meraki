@@ -55,8 +55,6 @@ type LookupSwitchLinkAggregationsArgs struct {
 
 // A collection of values returned by getSwitchLinkAggregations.
 type LookupSwitchLinkAggregationsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSwitchGetNetworkSwitchLinkAggregations
 	Items []GetSwitchLinkAggregationsItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -95,11 +93,6 @@ func (o LookupSwitchLinkAggregationsResultOutput) ToLookupSwitchLinkAggregations
 
 func (o LookupSwitchLinkAggregationsResultOutput) ToLookupSwitchLinkAggregationsResultOutputWithContext(ctx context.Context) LookupSwitchLinkAggregationsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchLinkAggregationsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchLinkAggregationsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSwitchGetNetworkSwitchLinkAggregations

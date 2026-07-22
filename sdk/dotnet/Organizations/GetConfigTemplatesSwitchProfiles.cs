@@ -143,10 +143,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string ConfigTemplateId;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfiles
         /// </summary>
         public readonly ImmutableArray<Outputs.GetConfigTemplatesSwitchProfilesItemResult> Items;
@@ -159,14 +155,11 @@ namespace Pulumi.Meraki.Organizations
         private GetConfigTemplatesSwitchProfilesResult(
             string configTemplateId,
 
-            string id,
-
             ImmutableArray<Outputs.GetConfigTemplatesSwitchProfilesItemResult> items,
 
             string organizationId)
         {
             ConfigTemplateId = configTemplateId;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
         }

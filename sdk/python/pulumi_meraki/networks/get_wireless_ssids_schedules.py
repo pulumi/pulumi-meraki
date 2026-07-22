@@ -27,10 +27,7 @@ class GetWirelessSsidsSchedulesResult:
     """
     A collection of values returned by getWirelessSsidsSchedules.
     """
-    def __init__(__self__, id=None, item=None, network_id=None, number=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, network_id=None, number=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetWirelessSsidsSchedulesResult:
         if number and not isinstance(number, str):
             raise TypeError("Expected argument 'number' to be a str")
         pulumi.set(__self__, "number", number)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetWirelessSsidsSchedulesResult(GetWirelessSsidsSchedulesResult):
         if False:
             yield self
         return GetWirelessSsidsSchedulesResult(
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             number=self.number)
@@ -109,7 +97,6 @@ def get_wireless_ssids_schedules(network_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules', __args__, opts=opts, typ=GetWirelessSsidsSchedulesResult).value
 
     return AwaitableGetWirelessSsidsSchedulesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         number=pulumi.get(__ret__, 'number'))
@@ -138,7 +125,6 @@ def get_wireless_ssids_schedules_output(network_id: pulumi.Input[Optional[_built
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules', __args__, opts=opts, typ=GetWirelessSsidsSchedulesResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsSchedulesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         number=pulumi.get(__response__, 'number')))

@@ -58,8 +58,6 @@ type GetSmUsersDeviceProfilesArgs struct {
 
 // A collection of values returned by getSmUsersDeviceProfiles.
 type GetSmUsersDeviceProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmUserDeviceProfiles
 	Items []GetSmUsersDeviceProfilesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -102,11 +100,6 @@ func (o GetSmUsersDeviceProfilesResultOutput) ToGetSmUsersDeviceProfilesResultOu
 
 func (o GetSmUsersDeviceProfilesResultOutput) ToGetSmUsersDeviceProfilesResultOutputWithContext(ctx context.Context) GetSmUsersDeviceProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmUsersDeviceProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmUsersDeviceProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmUserDeviceProfiles

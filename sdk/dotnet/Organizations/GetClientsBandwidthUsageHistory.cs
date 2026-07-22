@@ -169,10 +169,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetClientsBandwidthUsageHistoryResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationClientsBandwidthUsageHistory
         /// </summary>
         public readonly ImmutableArray<Outputs.GetClientsBandwidthUsageHistoryItemResult> Items;
@@ -195,8 +191,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetClientsBandwidthUsageHistoryResult(
-            string id,
-
             ImmutableArray<Outputs.GetClientsBandwidthUsageHistoryItemResult> items,
 
             string organizationId,
@@ -207,7 +201,6 @@ namespace Pulumi.Meraki.Organizations
 
             double? timespan)
         {
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             T0 = t0;

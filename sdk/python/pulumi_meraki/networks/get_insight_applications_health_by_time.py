@@ -27,13 +27,10 @@ class GetInsightApplicationsHealthByTimeResult:
     """
     A collection of values returned by getInsightApplicationsHealthByTime.
     """
-    def __init__(__self__, application_id=None, id=None, items=None, network_id=None, resolution=None, t0=None, t1=None, timespan=None):
+    def __init__(__self__, application_id=None, items=None, network_id=None, resolution=None, t0=None, t1=None, timespan=None):
         if application_id and not isinstance(application_id, str):
             raise TypeError("Expected argument 'application_id' to be a str")
         pulumi.set(__self__, "application_id", application_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -60,14 +57,6 @@ class GetInsightApplicationsHealthByTimeResult:
         applicationId path parameter. Application ID
         """
         return pulumi.get(self, "application_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -125,7 +114,6 @@ class AwaitableGetInsightApplicationsHealthByTimeResult(GetInsightApplicationsHe
             yield self
         return GetInsightApplicationsHealthByTimeResult(
             application_id=self.application_id,
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             resolution=self.resolution,
@@ -177,7 +165,6 @@ def get_insight_applications_health_by_time(application_id: Optional[_builtins.s
 
     return AwaitableGetInsightApplicationsHealthByTimeResult(
         application_id=pulumi.get(__ret__, 'application_id'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         resolution=pulumi.get(__ret__, 'resolution'),
@@ -226,7 +213,6 @@ def get_insight_applications_health_by_time_output(application_id: pulumi.Input[
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime', __args__, opts=opts, typ=GetInsightApplicationsHealthByTimeResult)
     return __ret__.apply(lambda __response__: GetInsightApplicationsHealthByTimeResult(
         application_id=pulumi.get(__response__, 'application_id'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         resolution=pulumi.get(__response__, 'resolution'),

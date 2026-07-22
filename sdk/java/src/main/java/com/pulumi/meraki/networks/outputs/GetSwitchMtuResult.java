@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSwitchMtuResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchMtuItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetSwitchMtuResult {
     private String networkId;
 
     private GetSwitchMtuResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchMtuItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetSwitchMtuResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchMtuItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetSwitchMtuResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchMtuResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchMtuItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetSwitchMtuResult {
         }
         public GetSwitchMtuResult build() {
             final var _resultValue = new GetSwitchMtuResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

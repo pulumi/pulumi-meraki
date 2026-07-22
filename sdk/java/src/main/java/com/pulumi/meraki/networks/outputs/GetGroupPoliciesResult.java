@@ -19,11 +19,6 @@ public final class GetGroupPoliciesResult {
      * 
      */
     private @Nullable String groupPolicyId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetGroupPoliciesItem item;
     /**
      * @return Array of ResponseNetworksGetNetworkGroupPolicies
@@ -43,13 +38,6 @@ public final class GetGroupPoliciesResult {
      */
     public Optional<String> groupPolicyId() {
         return Optional.ofNullable(this.groupPolicyId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetGroupPoliciesItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetGroupPoliciesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String groupPolicyId;
-        private String id;
         private GetGroupPoliciesItem item;
         private List<GetGroupPoliciesItem> items;
         private @Nullable String networkId;
@@ -87,7 +74,6 @@ public final class GetGroupPoliciesResult {
         public Builder(GetGroupPoliciesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.groupPolicyId = defaults.groupPolicyId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -97,14 +83,6 @@ public final class GetGroupPoliciesResult {
         public Builder groupPolicyId(@Nullable String groupPolicyId) {
 
             this.groupPolicyId = groupPolicyId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetGroupPoliciesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetGroupPoliciesResult {
         public GetGroupPoliciesResult build() {
             final var _resultValue = new GetGroupPoliciesResult();
             _resultValue.groupPolicyId = groupPolicyId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

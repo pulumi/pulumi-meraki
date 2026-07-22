@@ -139,10 +139,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetSmUsersSoftwaresResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseSmGetNetworkSmUserSoftwares
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSmUsersSoftwaresItemResult> Items;
@@ -157,15 +153,12 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetSmUsersSoftwaresResult(
-            string id,
-
             ImmutableArray<Outputs.GetSmUsersSoftwaresItemResult> items,
 
             string networkId,
 
             string userId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
             UserId = userId;

@@ -47,10 +47,6 @@ export interface GetCameraBoundariesLinesByDeviceArgs {
  */
 export interface GetCameraBoundariesLinesByDeviceResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseCameraGetOrganizationCameraBoundariesLinesByDevice
      */
     readonly items: outputs.organizations.GetCameraBoundariesLinesByDeviceItem[];

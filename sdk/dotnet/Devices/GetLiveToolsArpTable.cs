@@ -142,10 +142,6 @@ namespace Pulumi.Meraki.Devices
         /// arpTableId path parameter. Arp table ID
         /// </summary>
         public readonly string ArpTableId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetLiveToolsArpTableItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -156,14 +152,11 @@ namespace Pulumi.Meraki.Devices
         private GetLiveToolsArpTableResult(
             string arpTableId,
 
-            string id,
-
             Outputs.GetLiveToolsArpTableItemResult item,
 
             string serial)
         {
             ArpTableId = arpTableId;
-            Id = id;
             Item = item;
             Serial = serial;
         }

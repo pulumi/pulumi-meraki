@@ -123,10 +123,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetSmApnsCertResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSmApnsCertItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -135,13 +131,10 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSmApnsCertResult(
-            string id,
-
             Outputs.GetSmApnsCertItemResult item,
 
             string organizationId)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
         }

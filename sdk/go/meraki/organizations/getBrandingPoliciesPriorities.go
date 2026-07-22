@@ -55,8 +55,6 @@ type LookupBrandingPoliciesPrioritiesArgs struct {
 
 // A collection of values returned by getBrandingPoliciesPriorities.
 type LookupBrandingPoliciesPrioritiesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                            `pulumi:"id"`
 	Item GetBrandingPoliciesPrioritiesItem `pulumi:"item"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
@@ -94,11 +92,6 @@ func (o LookupBrandingPoliciesPrioritiesResultOutput) ToLookupBrandingPoliciesPr
 
 func (o LookupBrandingPoliciesPrioritiesResultOutput) ToLookupBrandingPoliciesPrioritiesResultOutputWithContext(ctx context.Context) LookupBrandingPoliciesPrioritiesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupBrandingPoliciesPrioritiesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupBrandingPoliciesPrioritiesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupBrandingPoliciesPrioritiesResultOutput) Item() GetBrandingPoliciesPrioritiesItemOutput {

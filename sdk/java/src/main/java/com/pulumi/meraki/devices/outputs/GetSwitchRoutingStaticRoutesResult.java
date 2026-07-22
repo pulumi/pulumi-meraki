@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSwitchRoutingStaticRoutesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSwitchRoutingStaticRoutesItem item;
     /**
      * @return Array of ResponseSwitchGetDeviceSwitchRoutingStaticRoutes
@@ -37,13 +32,6 @@ public final class GetSwitchRoutingStaticRoutesResult {
     private @Nullable String staticRouteId;
 
     private GetSwitchRoutingStaticRoutesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSwitchRoutingStaticRoutesItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSwitchRoutingStaticRoutesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSwitchRoutingStaticRoutesItem item;
         private List<GetSwitchRoutingStaticRoutesItem> items;
         private @Nullable String serial;
@@ -86,21 +73,12 @@ public final class GetSwitchRoutingStaticRoutesResult {
         public Builder() {}
         public Builder(GetSwitchRoutingStaticRoutesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.serial = defaults.serial;
     	      this.staticRouteId = defaults.staticRouteId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchRoutingStaticRoutesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSwitchRoutingStaticRoutesItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSwitchRoutingStaticRoutesResult {
         }
         public GetSwitchRoutingStaticRoutesResult build() {
             final var _resultValue = new GetSwitchRoutingStaticRoutesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.serial = serial;

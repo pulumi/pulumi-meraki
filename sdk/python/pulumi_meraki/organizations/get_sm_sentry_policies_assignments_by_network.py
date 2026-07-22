@@ -27,13 +27,10 @@ class GetSmSentryPoliciesAssignmentsByNetworkResult:
     """
     A collection of values returned by getSmSentryPoliciesAssignmentsByNetwork.
     """
-    def __init__(__self__, ending_before=None, id=None, items=None, network_ids=None, organization_id=None, per_page=None, starting_after=None):
+    def __init__(__self__, ending_before=None, items=None, network_ids=None, organization_id=None, per_page=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -57,14 +54,6 @@ class GetSmSentryPoliciesAssignmentsByNetworkResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -114,7 +103,6 @@ class AwaitableGetSmSentryPoliciesAssignmentsByNetworkResult(GetSmSentryPolicies
             yield self
         return GetSmSentryPoliciesAssignmentsByNetworkResult(
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             network_ids=self.network_ids,
             organization_id=self.organization_id,
@@ -161,7 +149,6 @@ def get_sm_sentry_policies_assignments_by_network(ending_before: Optional[_built
 
     return AwaitableGetSmSentryPoliciesAssignmentsByNetworkResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_ids=pulumi.get(__ret__, 'network_ids'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
@@ -205,7 +192,6 @@ def get_sm_sentry_policies_assignments_by_network_output(ending_before: pulumi.I
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork', __args__, opts=opts, typ=GetSmSentryPoliciesAssignmentsByNetworkResult)
     return __ret__.apply(lambda __response__: GetSmSentryPoliciesAssignmentsByNetworkResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_ids=pulumi.get(__response__, 'network_ids'),
         organization_id=pulumi.get(__response__, 'organization_id'),

@@ -27,10 +27,7 @@ class GetLiveToolsWakeOnLanResult:
     """
     A collection of values returned by getLiveToolsWakeOnLan.
     """
-    def __init__(__self__, id=None, item=None, serial=None, wake_on_lan_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, serial=None, wake_on_lan_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetLiveToolsWakeOnLanResult:
         if wake_on_lan_id and not isinstance(wake_on_lan_id, str):
             raise TypeError("Expected argument 'wake_on_lan_id' to be a str")
         pulumi.set(__self__, "wake_on_lan_id", wake_on_lan_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetLiveToolsWakeOnLanResult(GetLiveToolsWakeOnLanResult):
         if False:
             yield self
         return GetLiveToolsWakeOnLanResult(
-            id=self.id,
             item=self.item,
             serial=self.serial,
             wake_on_lan_id=self.wake_on_lan_id)
@@ -109,7 +97,6 @@ def get_live_tools_wake_on_lan(serial: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan', __args__, opts=opts, typ=GetLiveToolsWakeOnLanResult).value
 
     return AwaitableGetLiveToolsWakeOnLanResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         wake_on_lan_id=pulumi.get(__ret__, 'wake_on_lan_id'))
@@ -138,7 +125,6 @@ def get_live_tools_wake_on_lan_output(serial: pulumi.Input[Optional[_builtins.st
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan', __args__, opts=opts, typ=GetLiveToolsWakeOnLanResult)
     return __ret__.apply(lambda __response__: GetLiveToolsWakeOnLanResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         serial=pulumi.get(__response__, 'serial'),
         wake_on_lan_id=pulumi.get(__response__, 'wake_on_lan_id')))

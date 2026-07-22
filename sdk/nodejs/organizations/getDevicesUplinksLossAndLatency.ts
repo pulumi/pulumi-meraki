@@ -71,10 +71,6 @@ export interface GetDevicesUplinksLossAndLatencyArgs {
  */
 export interface GetDevicesUplinksLossAndLatencyResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * ip query parameter. Optional filter for a specific destination IP. Default will return all destination IPs.
      */
     readonly ip?: string;

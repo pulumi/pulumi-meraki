@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSensorRelationshipsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSensorRelationshipsItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetSensorRelationshipsResult {
     private String serial;
 
     private GetSensorRelationshipsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSensorRelationshipsItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetSensorRelationshipsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSensorRelationshipsItem item;
         private String serial;
         public Builder() {}
         public Builder(GetSensorRelationshipsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSensorRelationshipsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSensorRelationshipsItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetSensorRelationshipsResult {
         }
         public GetSensorRelationshipsResult build() {
             final var _resultValue = new GetSensorRelationshipsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

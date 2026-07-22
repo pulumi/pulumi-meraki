@@ -55,8 +55,6 @@ type LookupNetflowArgs struct {
 
 // A collection of values returned by getNetflow.
 type LookupNetflowResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string         `pulumi:"id"`
 	Item GetNetflowItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupNetflowResultOutput) ToLookupNetflowResultOutput() LookupNetflowRe
 
 func (o LookupNetflowResultOutput) ToLookupNetflowResultOutputWithContext(ctx context.Context) LookupNetflowResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupNetflowResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupNetflowResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupNetflowResultOutput) Item() GetNetflowItemOutput {

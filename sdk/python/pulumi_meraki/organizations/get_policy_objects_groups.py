@@ -27,13 +27,10 @@ class GetPolicyObjectsGroupsResult:
     """
     A collection of values returned by getPolicyObjectsGroups.
     """
-    def __init__(__self__, ending_before=None, id=None, item=None, organization_id=None, per_page=None, policy_object_group_id=None, starting_after=None):
+    def __init__(__self__, ending_before=None, item=None, organization_id=None, per_page=None, policy_object_group_id=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -57,14 +54,6 @@ class GetPolicyObjectsGroupsResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -111,7 +100,6 @@ class AwaitableGetPolicyObjectsGroupsResult(GetPolicyObjectsGroupsResult):
             yield self
         return GetPolicyObjectsGroupsResult(
             ending_before=self.ending_before,
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id,
             per_page=self.per_page,
@@ -157,7 +145,6 @@ def get_policy_objects_groups(ending_before: Optional[_builtins.str] = None,
 
     return AwaitableGetPolicyObjectsGroupsResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -200,7 +187,6 @@ def get_policy_objects_groups_output(ending_before: pulumi.Input[Optional[Option
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups', __args__, opts=opts, typ=GetPolicyObjectsGroupsResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectsGroupsResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id'),
         per_page=pulumi.get(__response__, 'per_page'),

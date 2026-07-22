@@ -26,11 +26,6 @@ public final class GetSwitchPortsBySwitchResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSwitchGetOrganizationSwitchPortsBySwitch
      * 
      */
@@ -100,13 +95,6 @@ public final class GetSwitchPortsBySwitchResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseSwitchGetOrganizationSwitchPortsBySwitch
@@ -197,7 +185,6 @@ public final class GetSwitchPortsBySwitchResult {
     public static final class Builder {
         private @Nullable String configurationUpdatedAfter;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetSwitchPortsBySwitchItem> items;
         private @Nullable String mac;
         private @Nullable List<String> macs;
@@ -214,7 +201,6 @@ public final class GetSwitchPortsBySwitchResult {
     	      Objects.requireNonNull(defaults);
     	      this.configurationUpdatedAfter = defaults.configurationUpdatedAfter;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.mac = defaults.mac;
     	      this.macs = defaults.macs;
@@ -238,14 +224,6 @@ public final class GetSwitchPortsBySwitchResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchPortsBySwitchResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -337,7 +315,6 @@ public final class GetSwitchPortsBySwitchResult {
             final var _resultValue = new GetSwitchPortsBySwitchResult();
             _resultValue.configurationUpdatedAfter = configurationUpdatedAfter;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.mac = mac;
             _resultValue.macs = macs;

@@ -55,8 +55,6 @@ type GetEarlyAccessFeaturesArgs struct {
 
 // A collection of values returned by getEarlyAccessFeatures.
 type GetEarlyAccessFeaturesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationEarlyAccessFeatures
 	Items []GetEarlyAccessFeaturesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -95,11 +93,6 @@ func (o GetEarlyAccessFeaturesResultOutput) ToGetEarlyAccessFeaturesResultOutput
 
 func (o GetEarlyAccessFeaturesResultOutput) ToGetEarlyAccessFeaturesResultOutputWithContext(ctx context.Context) GetEarlyAccessFeaturesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetEarlyAccessFeaturesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEarlyAccessFeaturesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationEarlyAccessFeatures

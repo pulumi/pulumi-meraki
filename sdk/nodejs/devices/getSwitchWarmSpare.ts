@@ -40,10 +40,6 @@ export interface GetSwitchWarmSpareArgs {
  * A collection of values returned by getSwitchWarmSpare.
  */
 export interface GetSwitchWarmSpareResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetSwitchWarmSpareItem;
     /**
      * serial path parameter.

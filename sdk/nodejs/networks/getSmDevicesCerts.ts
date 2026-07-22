@@ -51,10 +51,6 @@ export interface GetSmDevicesCertsResult {
      */
     readonly deviceId: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceCerts
      */
     readonly items: outputs.networks.GetSmDevicesCertsItem[];

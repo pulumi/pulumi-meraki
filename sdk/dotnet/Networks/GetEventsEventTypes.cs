@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetEventsEventTypesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseNetworksGetNetworkEventsEventTypes
         /// </summary>
         public readonly ImmutableArray<Outputs.GetEventsEventTypesItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetEventsEventTypesResult(
-            string id,
-
             ImmutableArray<Outputs.GetEventsEventTypesItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

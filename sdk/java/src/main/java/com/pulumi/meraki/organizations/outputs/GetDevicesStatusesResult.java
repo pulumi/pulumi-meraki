@@ -21,11 +21,6 @@ public final class GetDevicesStatusesResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesStatuses
      * 
      */
@@ -88,13 +83,6 @@ public final class GetDevicesStatusesResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesStatuses
@@ -184,7 +172,6 @@ public final class GetDevicesStatusesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetDevicesStatusesItem> items;
         private @Nullable List<String> models;
         private @Nullable List<String> networkIds;
@@ -200,7 +187,6 @@ public final class GetDevicesStatusesResult {
         public Builder(GetDevicesStatusesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.models = defaults.models;
     	      this.networkIds = defaults.networkIds;
@@ -218,14 +204,6 @@ public final class GetDevicesStatusesResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesStatusesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -322,7 +300,6 @@ public final class GetDevicesStatusesResult {
         public GetDevicesStatusesResult build() {
             final var _resultValue = new GetDevicesStatusesResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.models = models;
             _resultValue.networkIds = networkIds;

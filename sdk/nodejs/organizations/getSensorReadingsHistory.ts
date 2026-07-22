@@ -99,10 +99,6 @@ export interface GetSensorReadingsHistoryResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSensorGetOrganizationSensorReadingsHistory
      */
     readonly items: outputs.organizations.GetSensorReadingsHistoryItem[];

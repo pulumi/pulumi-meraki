@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApplianceSsidsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceSsidsItem item;
     /**
      * @return Array of ResponseApplianceGetNetworkApplianceSsids
@@ -37,13 +32,6 @@ public final class GetApplianceSsidsResult {
     private @Nullable String number;
 
     private GetApplianceSsidsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceSsidsItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetApplianceSsidsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceSsidsItem item;
         private List<GetApplianceSsidsItem> items;
         private @Nullable String networkId;
@@ -86,21 +73,12 @@ public final class GetApplianceSsidsResult {
         public Builder() {}
         public Builder(GetApplianceSsidsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.number = defaults.number;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceSsidsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceSsidsItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetApplianceSsidsResult {
         }
         public GetApplianceSsidsResult build() {
             final var _resultValue = new GetApplianceSsidsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

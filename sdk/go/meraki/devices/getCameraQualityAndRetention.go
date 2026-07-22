@@ -55,8 +55,6 @@ type LookupCameraQualityAndRetentionArgs struct {
 
 // A collection of values returned by getCameraQualityAndRetention.
 type LookupCameraQualityAndRetentionResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
 	Item GetCameraQualityAndRetentionItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCameraQualityAndRetentionResultOutput) ToLookupCameraQualityAndRet
 
 func (o LookupCameraQualityAndRetentionResultOutput) ToLookupCameraQualityAndRetentionResultOutputWithContext(ctx context.Context) LookupCameraQualityAndRetentionResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraQualityAndRetentionResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraQualityAndRetentionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraQualityAndRetentionResultOutput) Item() GetCameraQualityAndRetentionItemOutput {

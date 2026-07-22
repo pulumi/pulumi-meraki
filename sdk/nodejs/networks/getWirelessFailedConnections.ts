@@ -107,10 +107,6 @@ export interface GetWirelessFailedConnectionsResult {
      */
     readonly clientId?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessFailedConnections
      */
     readonly items: outputs.networks.GetWirelessFailedConnectionsItem[];

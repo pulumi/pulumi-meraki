@@ -555,10 +555,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationDevices
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDevicesItemResult> Items;
@@ -633,8 +629,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetDevicesItemResult> items,
 
             string? mac,
@@ -671,7 +665,6 @@ namespace Pulumi.Meraki.Organizations
         {
             ConfigurationUpdatedAfter = configurationUpdatedAfter;
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             Mac = mac;
             Macs = macs;

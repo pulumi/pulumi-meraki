@@ -27,11 +27,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
      */
     private @Nullable String band;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessDevicesConnectionStats
      * 
      */
@@ -81,13 +76,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
      */
     public Optional<String> band() {
         return Optional.ofNullable(this.band);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseWirelessGetNetworkWirelessDevicesConnectionStats
@@ -150,7 +138,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
     public static final class Builder {
         private @Nullable String apTag;
         private @Nullable String band;
-        private String id;
         private List<GetWirelessDevicesConnectionStatsItem> items;
         private String networkId;
         private @Nullable Integer ssid;
@@ -163,7 +150,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
     	      Objects.requireNonNull(defaults);
     	      this.apTag = defaults.apTag;
     	      this.band = defaults.band;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.ssid = defaults.ssid;
@@ -183,14 +169,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
         public Builder band(@Nullable String band) {
 
             this.band = band;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessDevicesConnectionStatsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -246,7 +224,6 @@ public final class GetWirelessDevicesConnectionStatsResult {
             final var _resultValue = new GetWirelessDevicesConnectionStatsResult();
             _resultValue.apTag = apTag;
             _resultValue.band = band;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.ssid = ssid;

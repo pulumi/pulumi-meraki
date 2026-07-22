@@ -27,13 +27,10 @@ class GetSwitchAccessPoliciesResult:
     """
     A collection of values returned by getSwitchAccessPolicies.
     """
-    def __init__(__self__, access_policy_number=None, id=None, item=None, items=None, network_id=None):
+    def __init__(__self__, access_policy_number=None, item=None, items=None, network_id=None):
         if access_policy_number and not isinstance(access_policy_number, str):
             raise TypeError("Expected argument 'access_policy_number' to be a str")
         pulumi.set(__self__, "access_policy_number", access_policy_number)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetSwitchAccessPoliciesResult:
         accessPolicyNumber path parameter. Access policy number
         """
         return pulumi.get(self, "access_policy_number")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetSwitchAccessPoliciesResult(GetSwitchAccessPoliciesResult):
             yield self
         return GetSwitchAccessPoliciesResult(
             access_policy_number=self.access_policy_number,
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id)
@@ -113,7 +101,6 @@ def get_switch_access_policies(access_policy_number: Optional[_builtins.str] = N
 
     return AwaitableGetSwitchAccessPoliciesResult(
         access_policy_number=pulumi.get(__ret__, 'access_policy_number'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -134,7 +121,6 @@ def get_switch_access_policies_output(access_policy_number: pulumi.Input[Optiona
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies', __args__, opts=opts, typ=GetSwitchAccessPoliciesResult)
     return __ret__.apply(lambda __response__: GetSwitchAccessPoliciesResult(
         access_policy_number=pulumi.get(__response__, 'access_policy_number'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

@@ -79,10 +79,6 @@ namespace Pulumi.Meraki.Organizations
         /// aclId path parameter. Acl ID
         /// </summary>
         public readonly string? AclId;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetAdaptivePolicyAclsItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationAdaptivePolicyAcls
@@ -97,8 +93,6 @@ namespace Pulumi.Meraki.Organizations
         private GetAdaptivePolicyAclsResult(
             string? aclId,
 
-            string id,
-
             Outputs.GetAdaptivePolicyAclsItemResult item,
 
             ImmutableArray<Outputs.GetAdaptivePolicyAclsItemResult> items,
@@ -106,7 +100,6 @@ namespace Pulumi.Meraki.Organizations
             string? organizationId)
         {
             AclId = aclId;
-            Id = id;
             Item = item;
             Items = items;
             OrganizationId = organizationId;

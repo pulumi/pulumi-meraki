@@ -274,10 +274,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly int? Duration;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseCameraGetOrganizationCameraDetectionsHistoryByBoundaryByInterval
         /// </summary>
         public readonly ImmutableArray<Outputs.GetCameraDetectionsHistoryByBoundaryByIntervalItemResult> Items;
@@ -302,8 +298,6 @@ namespace Pulumi.Meraki.Organizations
 
             int? duration,
 
-            string id,
-
             ImmutableArray<Outputs.GetCameraDetectionsHistoryByBoundaryByIntervalItemResult> items,
 
             string organizationId,
@@ -315,7 +309,6 @@ namespace Pulumi.Meraki.Organizations
             BoundaryIds = boundaryIds;
             BoundaryTypes = boundaryTypes;
             Duration = duration;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             PerPage = perPage;

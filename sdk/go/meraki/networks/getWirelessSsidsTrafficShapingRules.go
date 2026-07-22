@@ -58,8 +58,6 @@ type LookupWirelessSsidsTrafficShapingRulesArgs struct {
 
 // A collection of values returned by getWirelessSsidsTrafficShapingRules.
 type LookupWirelessSsidsTrafficShapingRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                  `pulumi:"id"`
 	Item GetWirelessSsidsTrafficShapingRulesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsTrafficShapingRulesResultOutput) ToLookupWirelessSsid
 
 func (o LookupWirelessSsidsTrafficShapingRulesResultOutput) ToLookupWirelessSsidsTrafficShapingRulesResultOutputWithContext(ctx context.Context) LookupWirelessSsidsTrafficShapingRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsTrafficShapingRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsTrafficShapingRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsTrafficShapingRulesResultOutput) Item() GetWirelessSsidsTrafficShapingRulesItemOutput {

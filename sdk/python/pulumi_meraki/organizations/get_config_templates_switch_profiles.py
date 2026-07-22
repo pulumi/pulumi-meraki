@@ -27,13 +27,10 @@ class GetConfigTemplatesSwitchProfilesResult:
     """
     A collection of values returned by getConfigTemplatesSwitchProfiles.
     """
-    def __init__(__self__, config_template_id=None, id=None, items=None, organization_id=None):
+    def __init__(__self__, config_template_id=None, items=None, organization_id=None):
         if config_template_id and not isinstance(config_template_id, str):
             raise TypeError("Expected argument 'config_template_id' to be a str")
         pulumi.set(__self__, "config_template_id", config_template_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -48,14 +45,6 @@ class GetConfigTemplatesSwitchProfilesResult:
         configTemplateId path parameter. Config template ID
         """
         return pulumi.get(self, "config_template_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -81,7 +70,6 @@ class AwaitableGetConfigTemplatesSwitchProfilesResult(GetConfigTemplatesSwitchPr
             yield self
         return GetConfigTemplatesSwitchProfilesResult(
             config_template_id=self.config_template_id,
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id)
 
@@ -113,7 +101,6 @@ def get_config_templates_switch_profiles(config_template_id: Optional[_builtins.
 
     return AwaitableGetConfigTemplatesSwitchProfilesResult(
         config_template_id=pulumi.get(__ret__, 'config_template_id'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_config_templates_switch_profiles_output(config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -142,6 +129,5 @@ def get_config_templates_switch_profiles_output(config_template_id: pulumi.Input
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles', __args__, opts=opts, typ=GetConfigTemplatesSwitchProfilesResult)
     return __ret__.apply(lambda __response__: GetConfigTemplatesSwitchProfilesResult(
         config_template_id=pulumi.get(__response__, 'config_template_id'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

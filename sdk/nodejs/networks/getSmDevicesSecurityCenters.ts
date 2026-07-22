@@ -52,10 +52,6 @@ export interface GetSmDevicesSecurityCentersResult {
      */
     readonly deviceId?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseSmGetNetworkSmDeviceSoftwares
      */
     readonly items: outputs.networks.GetSmDevicesSecurityCentersItem[];

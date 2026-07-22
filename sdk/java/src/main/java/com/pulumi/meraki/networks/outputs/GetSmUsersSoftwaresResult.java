@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetSmUsersSoftwaresResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseSmGetNetworkSmUserSoftwares
      * 
      */
@@ -34,13 +29,6 @@ public final class GetSmUsersSoftwaresResult {
     private String userId;
 
     private GetSmUsersSoftwaresResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseSmGetNetworkSmUserSoftwares
      * 
@@ -72,27 +60,17 @@ public final class GetSmUsersSoftwaresResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSmUsersSoftwaresItem> items;
         private String networkId;
         private String userId;
         public Builder() {}
         public Builder(GetSmUsersSoftwaresResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.userId = defaults.userId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmUsersSoftwaresResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSmUsersSoftwaresItem> items) {
             if (items == null) {
@@ -122,7 +100,6 @@ public final class GetSmUsersSoftwaresResult {
         }
         public GetSmUsersSoftwaresResult build() {
             final var _resultValue = new GetSmUsersSoftwaresResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.userId = userId;

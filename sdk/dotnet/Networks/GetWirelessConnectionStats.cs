@@ -236,10 +236,6 @@ namespace Pulumi.Meraki.Networks
         /// band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
         /// </summary>
         public readonly string? Band;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessConnectionStatsItemResult Item;
         /// <summary>
         /// networkId path parameter. Network ID
@@ -272,8 +268,6 @@ namespace Pulumi.Meraki.Networks
 
             string? band,
 
-            string id,
-
             Outputs.GetWirelessConnectionStatsItemResult item,
 
             string networkId,
@@ -290,7 +284,6 @@ namespace Pulumi.Meraki.Networks
         {
             ApTag = apTag;
             Band = band;
-            Id = id;
             Item = item;
             NetworkId = networkId;
             Ssid = ssid;

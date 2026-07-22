@@ -34,8 +34,6 @@ type LookupSmTargetGroupsArgs struct {
 
 // A collection of values returned by getSmTargetGroups.
 type LookupSmTargetGroupsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                `pulumi:"id"`
 	Item GetSmTargetGroupsItem `pulumi:"item"`
 	// Array of ResponseSmGetNetworkSmTargetGroups
 	Items []GetSmTargetGroupsItem `pulumi:"items"`
@@ -83,11 +81,6 @@ func (o LookupSmTargetGroupsResultOutput) ToLookupSmTargetGroupsResultOutput() L
 
 func (o LookupSmTargetGroupsResultOutput) ToLookupSmTargetGroupsResultOutputWithContext(ctx context.Context) LookupSmTargetGroupsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSmTargetGroupsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSmTargetGroupsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSmTargetGroupsResultOutput) Item() GetSmTargetGroupsItemOutput {

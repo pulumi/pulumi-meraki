@@ -41,10 +41,6 @@ export interface GetAlertsProfilesArgs {
  */
 export interface GetAlertsProfilesResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationAlertsProfiles
      */
     readonly items: outputs.organizations.GetAlertsProfilesItem[];

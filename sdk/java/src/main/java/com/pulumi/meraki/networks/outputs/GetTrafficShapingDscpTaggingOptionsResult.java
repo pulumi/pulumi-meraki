@@ -13,11 +13,6 @@ import java.util.Objects;
 @CustomType
 public final class GetTrafficShapingDscpTaggingOptionsResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions
      * 
      */
@@ -29,13 +24,6 @@ public final class GetTrafficShapingDscpTaggingOptionsResult {
     private String networkId;
 
     private GetTrafficShapingDscpTaggingOptionsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseNetworksGetNetworkTrafficShapingDscpTaggingOptions
      * 
@@ -60,25 +48,15 @@ public final class GetTrafficShapingDscpTaggingOptionsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetTrafficShapingDscpTaggingOptionsItem> items;
         private String networkId;
         public Builder() {}
         public Builder(GetTrafficShapingDscpTaggingOptionsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetTrafficShapingDscpTaggingOptionsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetTrafficShapingDscpTaggingOptionsItem> items) {
             if (items == null) {
@@ -100,7 +78,6 @@ public final class GetTrafficShapingDscpTaggingOptionsResult {
         }
         public GetTrafficShapingDscpTaggingOptionsResult build() {
             final var _resultValue = new GetTrafficShapingDscpTaggingOptionsResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             return _resultValue;

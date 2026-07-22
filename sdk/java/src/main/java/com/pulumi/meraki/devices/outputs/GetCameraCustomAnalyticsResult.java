@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCameraCustomAnalyticsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraCustomAnalyticsItem item;
     /**
      * @return serial path parameter.
@@ -24,13 +19,6 @@ public final class GetCameraCustomAnalyticsResult {
     private String serial;
 
     private GetCameraCustomAnalyticsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetCameraCustomAnalyticsItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetCameraCustomAnalyticsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetCameraCustomAnalyticsItem item;
         private String serial;
         public Builder() {}
         public Builder(GetCameraCustomAnalyticsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraCustomAnalyticsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetCameraCustomAnalyticsItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetCameraCustomAnalyticsResult {
         }
         public GetCameraCustomAnalyticsResult build() {
             final var _resultValue = new GetCameraCustomAnalyticsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             return _resultValue;

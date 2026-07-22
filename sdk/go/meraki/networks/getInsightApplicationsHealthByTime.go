@@ -72,8 +72,6 @@ type GetInsightApplicationsHealthByTimeArgs struct {
 type GetInsightApplicationsHealthByTimeResult struct {
 	// applicationId path parameter. Application ID
 	ApplicationId string `pulumi:"applicationId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseInsightGetNetworkInsightApplicationHealthByTime
 	Items []GetInsightApplicationsHealthByTimeItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -135,11 +133,6 @@ func (o GetInsightApplicationsHealthByTimeResultOutput) ToGetInsightApplications
 // applicationId path parameter. Application ID
 func (o GetInsightApplicationsHealthByTimeResultOutput) ApplicationId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetInsightApplicationsHealthByTimeResult) string { return v.ApplicationId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetInsightApplicationsHealthByTimeResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetInsightApplicationsHealthByTimeResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseInsightGetNetworkInsightApplicationHealthByTime

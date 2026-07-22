@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceTrafficShapingRulesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceTrafficShapingRulesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetApplianceTrafficShapingRulesResult {
     private String networkId;
 
     private GetApplianceTrafficShapingRulesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceTrafficShapingRulesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceTrafficShapingRulesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceTrafficShapingRulesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetApplianceTrafficShapingRulesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceTrafficShapingRulesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceTrafficShapingRulesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceTrafficShapingRulesResult {
         }
         public GetApplianceTrafficShapingRulesResult build() {
             final var _resultValue = new GetApplianceTrafficShapingRulesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

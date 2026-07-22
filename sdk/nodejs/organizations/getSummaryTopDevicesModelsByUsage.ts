@@ -59,10 +59,6 @@ export interface GetSummaryTopDevicesModelsByUsageArgs {
  */
 export interface GetSummaryTopDevicesModelsByUsageResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationSummaryTopDevicesModelsByUsage
      */
     readonly items: outputs.organizations.GetSummaryTopDevicesModelsByUsageItem[];

@@ -105,10 +105,6 @@ export interface GetDevicesStatusesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationDevicesStatuses
      */
     readonly items: outputs.organizations.GetDevicesStatusesItem[];

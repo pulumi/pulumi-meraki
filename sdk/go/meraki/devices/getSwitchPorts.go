@@ -32,8 +32,6 @@ type LookupSwitchPortsArgs struct {
 
 // A collection of values returned by getSwitchPorts.
 type LookupSwitchPortsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string             `pulumi:"id"`
 	Item GetSwitchPortsItem `pulumi:"item"`
 	// Array of ResponseSwitchGetDeviceSwitchPorts
 	Items []GetSwitchPortsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSwitchPortsResultOutput) ToLookupSwitchPortsResultOutput() LookupS
 
 func (o LookupSwitchPortsResultOutput) ToLookupSwitchPortsResultOutputWithContext(ctx context.Context) LookupSwitchPortsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchPortsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchPortsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchPortsResultOutput) Item() GetSwitchPortsItemOutput {

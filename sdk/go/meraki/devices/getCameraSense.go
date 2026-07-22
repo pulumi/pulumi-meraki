@@ -55,8 +55,6 @@ type LookupCameraSenseArgs struct {
 
 // A collection of values returned by getCameraSense.
 type LookupCameraSenseResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string             `pulumi:"id"`
 	Item GetCameraSenseItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCameraSenseResultOutput) ToLookupCameraSenseResultOutput() LookupC
 
 func (o LookupCameraSenseResultOutput) ToLookupCameraSenseResultOutputWithContext(ctx context.Context) LookupCameraSenseResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraSenseResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraSenseResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraSenseResultOutput) Item() GetCameraSenseItemOutput {

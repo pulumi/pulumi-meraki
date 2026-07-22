@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSwitchStacksRoutingInterfacesResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interfaceId path parameter. Interface ID
      * 
      */
@@ -42,13 +37,6 @@ public final class GetSwitchStacksRoutingInterfacesResult {
     private @Nullable String switchStackId;
 
     private GetSwitchStacksRoutingInterfacesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return interfaceId path parameter. Interface ID
      * 
@@ -90,7 +78,6 @@ public final class GetSwitchStacksRoutingInterfacesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private @Nullable String interfaceId;
         private GetSwitchStacksRoutingInterfacesItem item;
         private List<GetSwitchStacksRoutingInterfacesItem> items;
@@ -99,7 +86,6 @@ public final class GetSwitchStacksRoutingInterfacesResult {
         public Builder() {}
         public Builder(GetSwitchStacksRoutingInterfacesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.interfaceId = defaults.interfaceId;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
@@ -107,14 +93,6 @@ public final class GetSwitchStacksRoutingInterfacesResult {
     	      this.switchStackId = defaults.switchStackId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchStacksRoutingInterfacesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaceId(@Nullable String interfaceId) {
 
@@ -154,7 +132,6 @@ public final class GetSwitchStacksRoutingInterfacesResult {
         }
         public GetSwitchStacksRoutingInterfacesResult build() {
             final var _resultValue = new GetSwitchStacksRoutingInterfacesResult();
-            _resultValue.id = id;
             _resultValue.interfaceId = interfaceId;
             _resultValue.item = item;
             _resultValue.items = items;

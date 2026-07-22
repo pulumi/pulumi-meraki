@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetCameraPermissionsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetCameraPermissionsItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetCameraPermissionsResult(
-            string id,
-
             Outputs.GetCameraPermissionsItemResult item,
 
             string organizationId,
 
             string permissionScopeId)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
             PermissionScopeId = permissionScopeId;

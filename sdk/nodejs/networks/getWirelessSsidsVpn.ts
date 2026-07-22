@@ -46,10 +46,6 @@ export interface GetWirelessSsidsVpnArgs {
  * A collection of values returned by getWirelessSsidsVpn.
  */
 export interface GetWirelessSsidsVpnResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsVpnItem;
     /**
      * networkId path parameter. Network ID

@@ -40,10 +40,6 @@ export interface GetCellularGatewayDhcpArgs {
  * A collection of values returned by getCellularGatewayDhcp.
  */
 export interface GetCellularGatewayDhcpResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetCellularGatewayDhcpItem;
     /**
      * networkId path parameter. Network ID

@@ -27,13 +27,10 @@ class GetAlertsHistoryResult:
     """
     A collection of values returned by getAlertsHistory.
     """
-    def __init__(__self__, ending_before=None, id=None, items=None, network_id=None, per_page=None, starting_after=None):
+    def __init__(__self__, ending_before=None, items=None, network_id=None, per_page=None, starting_after=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -54,14 +51,6 @@ class GetAlertsHistoryResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -103,7 +92,6 @@ class AwaitableGetAlertsHistoryResult(GetAlertsHistoryResult):
             yield self
         return GetAlertsHistoryResult(
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             per_page=self.per_page,
@@ -145,7 +133,6 @@ def get_alerts_history(ending_before: Optional[_builtins.str] = None,
 
     return AwaitableGetAlertsHistoryResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -184,7 +171,6 @@ def get_alerts_history_output(ending_before: pulumi.Input[Optional[Optional[_bui
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getAlertsHistory:getAlertsHistory', __args__, opts=opts, typ=GetAlertsHistoryResult)
     return __ret__.apply(lambda __response__: GetAlertsHistoryResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         per_page=pulumi.get(__response__, 'per_page'),

@@ -255,10 +255,6 @@ namespace Pulumi.Meraki.Devices
         /// fields query parameter. Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
         /// </summary>
         public readonly string? Fields;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessLatencyStatsItemResult Item;
         /// <summary>
         /// serial path parameter.
@@ -293,8 +289,6 @@ namespace Pulumi.Meraki.Devices
 
             string? fields,
 
-            string id,
-
             Outputs.GetWirelessLatencyStatsItemResult item,
 
             string serial,
@@ -312,7 +306,6 @@ namespace Pulumi.Meraki.Devices
             ApTag = apTag;
             Band = band;
             Fields = fields;
-            Id = id;
             Item = item;
             Serial = serial;
             Ssid = ssid;

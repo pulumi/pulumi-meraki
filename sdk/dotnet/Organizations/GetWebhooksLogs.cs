@@ -233,10 +233,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly string? EndingBefore;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationWebhooksLogs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWebhooksLogsItemResult> Items;
@@ -273,8 +269,6 @@ namespace Pulumi.Meraki.Organizations
         private GetWebhooksLogsResult(
             string? endingBefore,
 
-            string id,
-
             ImmutableArray<Outputs.GetWebhooksLogsItemResult> items,
 
             string organizationId,
@@ -292,7 +286,6 @@ namespace Pulumi.Meraki.Organizations
             string? url)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Items = items;
             OrganizationId = organizationId;
             PerPage = perPage;

@@ -16,11 +16,6 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSummaryTopDevicesModelsByUsageResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopDevicesModelsByUsage
      * 
      */
@@ -47,13 +42,6 @@ public final class GetSummaryTopDevicesModelsByUsageResult {
     private @Nullable Double timespan;
 
     private GetSummaryTopDevicesModelsByUsageResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationSummaryTopDevicesModelsByUsage
      * 
@@ -99,7 +87,6 @@ public final class GetSummaryTopDevicesModelsByUsageResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private List<GetSummaryTopDevicesModelsByUsageItem> items;
         private String organizationId;
         private @Nullable String t0;
@@ -108,7 +95,6 @@ public final class GetSummaryTopDevicesModelsByUsageResult {
         public Builder() {}
         public Builder(GetSummaryTopDevicesModelsByUsageResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.t0 = defaults.t0;
@@ -116,14 +102,6 @@ public final class GetSummaryTopDevicesModelsByUsageResult {
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSummaryTopDevicesModelsByUsageResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder items(List<GetSummaryTopDevicesModelsByUsageItem> items) {
             if (items == null) {
@@ -163,7 +141,6 @@ public final class GetSummaryTopDevicesModelsByUsageResult {
         }
         public GetSummaryTopDevicesModelsByUsageResult build() {
             final var _resultValue = new GetSummaryTopDevicesModelsByUsageResult();
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;
             _resultValue.t0 = t0;

@@ -55,8 +55,6 @@ type LookupCellularGatewayLanArgs struct {
 
 // A collection of values returned by getCellularGatewayLan.
 type LookupCellularGatewayLanResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                    `pulumi:"id"`
 	Item GetCellularGatewayLanItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewayLanResultOutput) ToLookupCellularGatewayLanResultOu
 
 func (o LookupCellularGatewayLanResultOutput) ToLookupCellularGatewayLanResultOutputWithContext(ctx context.Context) LookupCellularGatewayLanResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewayLanResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewayLanResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewayLanResultOutput) Item() GetCellularGatewayLanItemOutput {

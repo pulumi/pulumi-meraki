@@ -27,13 +27,10 @@ class GetSmBypassActivationLockAttemptsResult:
     """
     A collection of values returned by getSmBypassActivationLockAttempts.
     """
-    def __init__(__self__, attempt_id=None, id=None, item=None, network_id=None):
+    def __init__(__self__, attempt_id=None, item=None, network_id=None):
         if attempt_id and not isinstance(attempt_id, str):
             raise TypeError("Expected argument 'attempt_id' to be a str")
         pulumi.set(__self__, "attempt_id", attempt_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -48,14 +45,6 @@ class GetSmBypassActivationLockAttemptsResult:
         attemptId path parameter. Attempt ID
         """
         return pulumi.get(self, "attempt_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -78,7 +67,6 @@ class AwaitableGetSmBypassActivationLockAttemptsResult(GetSmBypassActivationLock
             yield self
         return GetSmBypassActivationLockAttemptsResult(
             attempt_id=self.attempt_id,
-            id=self.id,
             item=self.item,
             network_id=self.network_id)
 
@@ -110,7 +98,6 @@ def get_sm_bypass_activation_lock_attempts(attempt_id: Optional[_builtins.str] =
 
     return AwaitableGetSmBypassActivationLockAttemptsResult(
         attempt_id=pulumi.get(__ret__, 'attempt_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_bypass_activation_lock_attempts_output(attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -139,6 +126,5 @@ def get_sm_bypass_activation_lock_attempts_output(attempt_id: pulumi.Input[Optio
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts', __args__, opts=opts, typ=GetSmBypassActivationLockAttemptsResult)
     return __ret__.apply(lambda __response__: GetSmBypassActivationLockAttemptsResult(
         attempt_id=pulumi.get(__response__, 'attempt_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id')))

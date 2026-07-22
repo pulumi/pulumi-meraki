@@ -27,24 +27,13 @@ class GetInsightApplicationsResult:
     """
     A collection of values returned by getInsightApplications.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -69,7 +58,6 @@ class AwaitableGetInsightApplicationsResult(GetInsightApplicationsResult):
         if False:
             yield self
         return GetInsightApplicationsResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id)
 
@@ -96,7 +84,6 @@ def get_insight_applications(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getInsightApplications:getInsightApplications', __args__, opts=opts, typ=GetInsightApplicationsResult).value
 
     return AwaitableGetInsightApplicationsResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_insight_applications_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -120,6 +107,5 @@ def get_insight_applications_output(organization_id: pulumi.Input[Optional[_buil
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInsightApplications:getInsightApplications', __args__, opts=opts, typ=GetInsightApplicationsResult)
     return __ret__.apply(lambda __response__: GetInsightApplicationsResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

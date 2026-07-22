@@ -36,10 +36,6 @@ export interface GetAppliancePortsArgs {
  * A collection of values returned by getAppliancePorts.
  */
 export interface GetAppliancePortsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetAppliancePortsItem;
     /**
      * Array of ResponseApplianceGetNetworkAppliancePorts

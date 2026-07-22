@@ -19,11 +19,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
      * 
      */
     private @Nullable String artifactId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetCameraCustomAnalyticsArtifactsItem item;
     /**
      * @return Array of ResponseCameraGetOrganizationCameraCustomAnalyticsArtifacts
@@ -43,13 +38,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
      */
     public Optional<String> artifactId() {
         return Optional.ofNullable(this.artifactId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetCameraCustomAnalyticsArtifactsItem item() {
         return this.item;
@@ -79,7 +67,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String artifactId;
-        private String id;
         private GetCameraCustomAnalyticsArtifactsItem item;
         private List<GetCameraCustomAnalyticsArtifactsItem> items;
         private @Nullable String organizationId;
@@ -87,7 +74,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
         public Builder(GetCameraCustomAnalyticsArtifactsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.artifactId = defaults.artifactId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -97,14 +83,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
         public Builder artifactId(@Nullable String artifactId) {
 
             this.artifactId = artifactId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCameraCustomAnalyticsArtifactsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -135,7 +113,6 @@ public final class GetCameraCustomAnalyticsArtifactsResult {
         public GetCameraCustomAnalyticsArtifactsResult build() {
             final var _resultValue = new GetCameraCustomAnalyticsArtifactsResult();
             _resultValue.artifactId = artifactId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

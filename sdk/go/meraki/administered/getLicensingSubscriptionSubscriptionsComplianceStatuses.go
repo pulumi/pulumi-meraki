@@ -62,8 +62,6 @@ type GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs struct {
 
 // A collection of values returned by getLicensingSubscriptionSubscriptionsComplianceStatuses.
 type GetLicensingSubscriptionSubscriptionsComplianceStatusesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
 	Items []GetLicensingSubscriptionSubscriptionsComplianceStatusesItem `pulumi:"items"`
 	// organizationIds query parameter. Organizations to get subscription compliance information for
@@ -106,11 +104,6 @@ func (o GetLicensingSubscriptionSubscriptionsComplianceStatusesResultOutput) ToG
 
 func (o GetLicensingSubscriptionSubscriptionsComplianceStatusesResultOutput) ToGetLicensingSubscriptionSubscriptionsComplianceStatusesResultOutputWithContext(ctx context.Context) GetLicensingSubscriptionSubscriptionsComplianceStatusesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetLicensingSubscriptionSubscriptionsComplianceStatusesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetLicensingSubscriptionSubscriptionsComplianceStatusesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseLicensingGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses

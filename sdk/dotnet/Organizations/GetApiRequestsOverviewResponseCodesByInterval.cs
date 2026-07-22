@@ -326,10 +326,6 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public readonly ImmutableArray<string> AdminIds;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 120, 3600, 14400, 21600. The default is 21600. Interval is calculated if time params are provided.
         /// </summary>
         public readonly int? Interval;
@@ -374,8 +370,6 @@ namespace Pulumi.Meraki.Organizations
         private GetApiRequestsOverviewResponseCodesByIntervalResult(
             ImmutableArray<string> adminIds,
 
-            string id,
-
             int? interval,
 
             ImmutableArray<Outputs.GetApiRequestsOverviewResponseCodesByIntervalItemResult> items,
@@ -397,7 +391,6 @@ namespace Pulumi.Meraki.Organizations
             int? version)
         {
             AdminIds = adminIds;
-            Id = id;
             Interval = interval;
             Items = items;
             OperationIds = operationIds;

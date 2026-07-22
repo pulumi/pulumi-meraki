@@ -88,8 +88,6 @@ type GetWirelessDevicesChannelUtilizationByDeviceArgs struct {
 type GetWirelessDevicesChannelUtilizationByDeviceResult struct {
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.
 	Interval *int `pulumi:"interval"`
 	// Array of ResponseWirelessGetOrganizationWirelessDevicesChannelUtilizationByDevice
@@ -167,11 +165,6 @@ func (o GetWirelessDevicesChannelUtilizationByDeviceResultOutput) ToGetWirelessD
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetWirelessDevicesChannelUtilizationByDeviceResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessDevicesChannelUtilizationByDeviceResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessDevicesChannelUtilizationByDeviceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessDevicesChannelUtilizationByDeviceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // interval query parameter. The time interval in seconds for returned data. The valid intervals are: 300, 600, 3600, 7200, 14400, 21600. The default is 3600.

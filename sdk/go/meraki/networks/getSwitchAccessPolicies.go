@@ -33,10 +33,8 @@ type LookupSwitchAccessPoliciesArgs struct {
 // A collection of values returned by getSwitchAccessPolicies.
 type LookupSwitchAccessPoliciesResult struct {
 	// accessPolicyNumber path parameter. Access policy number
-	AccessPolicyNumber *string `pulumi:"accessPolicyNumber"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                      `pulumi:"id"`
-	Item GetSwitchAccessPoliciesItem `pulumi:"item"`
+	AccessPolicyNumber *string                     `pulumi:"accessPolicyNumber"`
+	Item               GetSwitchAccessPoliciesItem `pulumi:"item"`
 	// Array of ResponseSwitchGetNetworkSwitchAccessPolicies
 	Items []GetSwitchAccessPoliciesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -82,11 +80,6 @@ func (o LookupSwitchAccessPoliciesResultOutput) ToLookupSwitchAccessPoliciesResu
 // accessPolicyNumber path parameter. Access policy number
 func (o LookupSwitchAccessPoliciesResultOutput) AccessPolicyNumber() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupSwitchAccessPoliciesResult) *string { return v.AccessPolicyNumber }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchAccessPoliciesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchAccessPoliciesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchAccessPoliciesResultOutput) Item() GetSwitchAccessPoliciesItemOutput {

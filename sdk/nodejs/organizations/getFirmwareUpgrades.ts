@@ -75,10 +75,6 @@ export interface GetFirmwareUpgradesResult {
      */
     readonly endingBefore?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseOrganizationsGetOrganizationFirmwareUpgrades
      */
     readonly items: outputs.organizations.GetFirmwareUpgradesItem[];

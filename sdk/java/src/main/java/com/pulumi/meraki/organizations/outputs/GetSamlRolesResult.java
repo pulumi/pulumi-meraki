@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSamlRolesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSamlRolesItem item;
     /**
      * @return Array of ResponseOrganizationsGetOrganizationSamlRoles
@@ -37,13 +32,6 @@ public final class GetSamlRolesResult {
     private @Nullable String samlRoleId;
 
     private GetSamlRolesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSamlRolesItem item() {
         return this.item;
     }
@@ -78,7 +66,6 @@ public final class GetSamlRolesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSamlRolesItem item;
         private List<GetSamlRolesItem> items;
         private @Nullable String organizationId;
@@ -86,21 +73,12 @@ public final class GetSamlRolesResult {
         public Builder() {}
         public Builder(GetSamlRolesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
     	      this.samlRoleId = defaults.samlRoleId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSamlRolesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSamlRolesItem item) {
             if (item == null) {
@@ -134,7 +112,6 @@ public final class GetSamlRolesResult {
         }
         public GetSamlRolesResult build() {
             final var _resultValue = new GetSamlRolesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

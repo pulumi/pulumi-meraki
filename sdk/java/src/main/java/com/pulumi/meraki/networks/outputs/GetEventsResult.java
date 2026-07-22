@@ -56,11 +56,6 @@ public final class GetEventsResult {
      */
     private @Nullable List<String> excludedEventTypes;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
      * 
      */
@@ -155,13 +150,6 @@ public final class GetEventsResult {
         return this.excludedEventTypes == null ? List.of() : this.excludedEventTypes;
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
      * 
      */
@@ -231,7 +219,6 @@ public final class GetEventsResult {
         private @Nullable String deviceSerial;
         private @Nullable String endingBefore;
         private @Nullable List<String> excludedEventTypes;
-        private String id;
         private @Nullable List<String> includedEventTypes;
         private GetEventsItem item;
         private String networkId;
@@ -251,7 +238,6 @@ public final class GetEventsResult {
     	      this.deviceSerial = defaults.deviceSerial;
     	      this.endingBefore = defaults.endingBefore;
     	      this.excludedEventTypes = defaults.excludedEventTypes;
-    	      this.id = defaults.id;
     	      this.includedEventTypes = defaults.includedEventTypes;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
@@ -312,14 +298,6 @@ public final class GetEventsResult {
         }
         public Builder excludedEventTypes(String... excludedEventTypes) {
             return excludedEventTypes(List.of(excludedEventTypes));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetEventsResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
@@ -386,7 +364,6 @@ public final class GetEventsResult {
             _resultValue.deviceSerial = deviceSerial;
             _resultValue.endingBefore = endingBefore;
             _resultValue.excludedEventTypes = excludedEventTypes;
-            _resultValue.id = id;
             _resultValue.includedEventTypes = includedEventTypes;
             _resultValue.item = item;
             _resultValue.networkId = networkId;

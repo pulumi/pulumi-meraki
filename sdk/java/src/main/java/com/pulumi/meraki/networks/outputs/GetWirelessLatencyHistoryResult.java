@@ -48,11 +48,6 @@ public final class GetWirelessLatencyHistoryResult {
      */
     private @Nullable String deviceSerial;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessLatencyHistory
      * 
      */
@@ -132,13 +127,6 @@ public final class GetWirelessLatencyHistoryResult {
         return Optional.ofNullable(this.deviceSerial);
     }
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
-    /**
      * @return Array of ResponseWirelessGetNetworkWirelessLatencyHistory
      * 
      */
@@ -203,7 +191,6 @@ public final class GetWirelessLatencyHistoryResult {
         private @Nullable String band;
         private @Nullable String clientId;
         private @Nullable String deviceSerial;
-        private String id;
         private List<GetWirelessLatencyHistoryItem> items;
         private String networkId;
         private @Nullable Integer resolution;
@@ -220,7 +207,6 @@ public final class GetWirelessLatencyHistoryResult {
     	      this.band = defaults.band;
     	      this.clientId = defaults.clientId;
     	      this.deviceSerial = defaults.deviceSerial;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
     	      this.resolution = defaults.resolution;
@@ -264,14 +250,6 @@ public final class GetWirelessLatencyHistoryResult {
         public Builder deviceSerial(@Nullable String deviceSerial) {
 
             this.deviceSerial = deviceSerial;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessLatencyHistoryResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -331,7 +309,6 @@ public final class GetWirelessLatencyHistoryResult {
             _resultValue.band = band;
             _resultValue.clientId = clientId;
             _resultValue.deviceSerial = deviceSerial;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkId = networkId;
             _resultValue.resolution = resolution;

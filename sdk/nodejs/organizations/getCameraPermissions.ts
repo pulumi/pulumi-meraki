@@ -46,10 +46,6 @@ export interface GetCameraPermissionsArgs {
  * A collection of values returned by getCameraPermissions.
  */
 export interface GetCameraPermissionsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetCameraPermissionsItem;
     /**
      * organizationId path parameter. Organization ID

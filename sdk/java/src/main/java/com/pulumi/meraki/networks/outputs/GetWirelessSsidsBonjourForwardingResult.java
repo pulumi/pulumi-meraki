@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWirelessSsidsBonjourForwardingResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetWirelessSsidsBonjourForwardingItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -29,13 +24,6 @@ public final class GetWirelessSsidsBonjourForwardingResult {
     private String number;
 
     private GetWirelessSsidsBonjourForwardingResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetWirelessSsidsBonjourForwardingItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetWirelessSsidsBonjourForwardingResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetWirelessSsidsBonjourForwardingItem item;
         private String networkId;
         private String number;
         public Builder() {}
         public Builder(GetWirelessSsidsBonjourForwardingResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
     	      this.number = defaults.number;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetWirelessSsidsBonjourForwardingResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetWirelessSsidsBonjourForwardingItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetWirelessSsidsBonjourForwardingResult {
         }
         public GetWirelessSsidsBonjourForwardingResult build() {
             final var _resultValue = new GetWirelessSsidsBonjourForwardingResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             _resultValue.number = number;

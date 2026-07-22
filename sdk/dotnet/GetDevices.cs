@@ -371,10 +371,6 @@ namespace Pulumi.Meraki
         /// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         /// </summary>
         public readonly string? EndingBefore;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetDevicesItemResult Item;
         /// <summary>
         /// Array of ResponseOrganizationsGetOrganizationDevices
@@ -451,8 +447,6 @@ namespace Pulumi.Meraki
 
             string? endingBefore,
 
-            string id,
-
             Outputs.GetDevicesItemResult item,
 
             ImmutableArray<Outputs.GetDevicesItemResult> items,
@@ -491,7 +485,6 @@ namespace Pulumi.Meraki
         {
             ConfigurationUpdatedAfter = configurationUpdatedAfter;
             EndingBefore = endingBefore;
-            Id = id;
             Item = item;
             Items = items;
             Mac = mac;

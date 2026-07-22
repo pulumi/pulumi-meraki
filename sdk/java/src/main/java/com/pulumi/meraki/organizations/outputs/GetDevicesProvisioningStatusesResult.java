@@ -21,11 +21,6 @@ public final class GetDevicesProvisioningStatusesResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesProvisioningStatuses
      * 
      */
@@ -83,13 +78,6 @@ public final class GetDevicesProvisioningStatusesResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationDevicesProvisioningStatuses
@@ -172,7 +160,6 @@ public final class GetDevicesProvisioningStatusesResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String endingBefore;
-        private String id;
         private List<GetDevicesProvisioningStatusesItem> items;
         private @Nullable List<String> networkIds;
         private String organizationId;
@@ -187,7 +174,6 @@ public final class GetDevicesProvisioningStatusesResult {
         public Builder(GetDevicesProvisioningStatusesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkIds = defaults.networkIds;
     	      this.organizationId = defaults.organizationId;
@@ -204,14 +190,6 @@ public final class GetDevicesProvisioningStatusesResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetDevicesProvisioningStatusesResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -296,7 +274,6 @@ public final class GetDevicesProvisioningStatusesResult {
         public GetDevicesProvisioningStatusesResult build() {
             final var _resultValue = new GetDevicesProvisioningStatusesResult();
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkIds = networkIds;
             _resultValue.organizationId = organizationId;

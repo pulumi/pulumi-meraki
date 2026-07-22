@@ -40,10 +40,6 @@ export interface GetApplianceSecurityIntrusionArgs {
  * A collection of values returned by getApplianceSecurityIntrusion.
  */
 export interface GetApplianceSecurityIntrusionResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetApplianceSecurityIntrusionItem;
     /**
      * organizationId path parameter. Organization ID

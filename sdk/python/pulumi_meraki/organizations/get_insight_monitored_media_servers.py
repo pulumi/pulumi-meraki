@@ -27,10 +27,7 @@ class GetInsightMonitoredMediaServersResult:
     """
     A collection of values returned by getInsightMonitoredMediaServers.
     """
-    def __init__(__self__, id=None, item=None, items=None, monitored_media_server_id=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, monitored_media_server_id=None, organization_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -43,14 +40,6 @@ class GetInsightMonitoredMediaServersResult:
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +77,6 @@ class AwaitableGetInsightMonitoredMediaServersResult(GetInsightMonitoredMediaSer
         if False:
             yield self
         return GetInsightMonitoredMediaServersResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             monitored_media_server_id=self.monitored_media_server_id,
@@ -112,7 +100,6 @@ def get_insight_monitored_media_servers(monitored_media_server_id: Optional[_bui
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers', __args__, opts=opts, typ=GetInsightMonitoredMediaServersResult).value
 
     return AwaitableGetInsightMonitoredMediaServersResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         monitored_media_server_id=pulumi.get(__ret__, 'monitored_media_server_id'),
@@ -133,7 +120,6 @@ def get_insight_monitored_media_servers_output(monitored_media_server_id: pulumi
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers', __args__, opts=opts, typ=GetInsightMonitoredMediaServersResult)
     return __ret__.apply(lambda __response__: GetInsightMonitoredMediaServersResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         monitored_media_server_id=pulumi.get(__response__, 'monitored_media_server_id'),

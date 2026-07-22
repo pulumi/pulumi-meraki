@@ -55,8 +55,6 @@ type LookupCellularGatewayUplinkArgs struct {
 
 // A collection of values returned by getCellularGatewayUplink.
 type LookupCellularGatewayUplinkResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                       `pulumi:"id"`
 	Item GetCellularGatewayUplinkItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o LookupCellularGatewayUplinkResultOutput) ToLookupCellularGatewayUplinkRe
 
 func (o LookupCellularGatewayUplinkResultOutput) ToLookupCellularGatewayUplinkResultOutputWithContext(ctx context.Context) LookupCellularGatewayUplinkResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularGatewayUplinkResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularGatewayUplinkResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularGatewayUplinkResultOutput) Item() GetCellularGatewayUplinkItemOutput {

@@ -27,13 +27,10 @@ class GetGroupPoliciesResult:
     """
     A collection of values returned by getGroupPolicies.
     """
-    def __init__(__self__, group_policy_id=None, id=None, item=None, items=None, network_id=None):
+    def __init__(__self__, group_policy_id=None, item=None, items=None, network_id=None):
         if group_policy_id and not isinstance(group_policy_id, str):
             raise TypeError("Expected argument 'group_policy_id' to be a str")
         pulumi.set(__self__, "group_policy_id", group_policy_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -51,14 +48,6 @@ class GetGroupPoliciesResult:
         groupPolicyId path parameter. Group policy ID
         """
         return pulumi.get(self, "group_policy_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -89,7 +78,6 @@ class AwaitableGetGroupPoliciesResult(GetGroupPoliciesResult):
             yield self
         return GetGroupPoliciesResult(
             group_policy_id=self.group_policy_id,
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id)
@@ -113,7 +101,6 @@ def get_group_policies(group_policy_id: Optional[_builtins.str] = None,
 
     return AwaitableGetGroupPoliciesResult(
         group_policy_id=pulumi.get(__ret__, 'group_policy_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
@@ -134,7 +121,6 @@ def get_group_policies_output(group_policy_id: pulumi.Input[Optional[Optional[_b
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getGroupPolicies:getGroupPolicies', __args__, opts=opts, typ=GetGroupPoliciesResult)
     return __ret__.apply(lambda __response__: GetGroupPoliciesResult(
         group_policy_id=pulumi.get(__response__, 'group_policy_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id')))

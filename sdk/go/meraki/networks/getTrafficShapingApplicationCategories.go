@@ -55,8 +55,6 @@ type GetTrafficShapingApplicationCategoriesArgs struct {
 
 // A collection of values returned by getTrafficShapingApplicationCategories.
 type GetTrafficShapingApplicationCategoriesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                     `pulumi:"id"`
 	Item GetTrafficShapingApplicationCategoriesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -94,11 +92,6 @@ func (o GetTrafficShapingApplicationCategoriesResultOutput) ToGetTrafficShapingA
 
 func (o GetTrafficShapingApplicationCategoriesResultOutput) ToGetTrafficShapingApplicationCategoriesResultOutputWithContext(ctx context.Context) GetTrafficShapingApplicationCategoriesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetTrafficShapingApplicationCategoriesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTrafficShapingApplicationCategoriesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetTrafficShapingApplicationCategoriesResultOutput) Item() GetTrafficShapingApplicationCategoriesItemOutput {

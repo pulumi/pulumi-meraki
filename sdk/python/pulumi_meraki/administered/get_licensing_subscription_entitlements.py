@@ -27,24 +27,13 @@ class GetLicensingSubscriptionEntitlementsResult:
     """
     A collection of values returned by getLicensingSubscriptionEntitlements.
     """
-    def __init__(__self__, id=None, item=None, skuses=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, skuses=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
         if skuses and not isinstance(skuses, list):
             raise TypeError("Expected argument 'skuses' to be a list")
         pulumi.set(__self__, "skuses", skuses)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -66,7 +55,6 @@ class AwaitableGetLicensingSubscriptionEntitlementsResult(GetLicensingSubscripti
         if False:
             yield self
         return GetLicensingSubscriptionEntitlementsResult(
-            id=self.id,
             item=self.item,
             skuses=self.skuses)
 
@@ -93,7 +81,6 @@ def get_licensing_subscription_entitlements(skuses: Optional[Sequence[_builtins.
     __ret__ = pulumi.runtime.invoke('meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements', __args__, opts=opts, typ=GetLicensingSubscriptionEntitlementsResult).value
 
     return AwaitableGetLicensingSubscriptionEntitlementsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         skuses=pulumi.get(__ret__, 'skuses'))
 def get_licensing_subscription_entitlements_output(skuses: pulumi.Input[Optional[Optional[Sequence[_builtins.str]]]] = None,
@@ -117,6 +104,5 @@ def get_licensing_subscription_entitlements_output(skuses: pulumi.Input[Optional
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements', __args__, opts=opts, typ=GetLicensingSubscriptionEntitlementsResult)
     return __ret__.apply(lambda __response__: GetLicensingSubscriptionEntitlementsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         skuses=pulumi.get(__response__, 'skuses')))

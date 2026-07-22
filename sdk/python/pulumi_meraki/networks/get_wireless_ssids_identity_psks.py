@@ -27,10 +27,7 @@ class GetWirelessSsidsIdentityPsksResult:
     """
     A collection of values returned by getWirelessSsidsIdentityPsks.
     """
-    def __init__(__self__, id=None, identity_psk_id=None, item=None, items=None, network_id=None, number=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, identity_psk_id=None, item=None, items=None, network_id=None, number=None):
         if identity_psk_id and not isinstance(identity_psk_id, str):
             raise TypeError("Expected argument 'identity_psk_id' to be a str")
         pulumi.set(__self__, "identity_psk_id", identity_psk_id)
@@ -46,14 +43,6 @@ class GetWirelessSsidsIdentityPsksResult:
         if number and not isinstance(number, str):
             raise TypeError("Expected argument 'number' to be a str")
         pulumi.set(__self__, "number", number)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter(name="identityPskId")
@@ -99,7 +88,6 @@ class AwaitableGetWirelessSsidsIdentityPsksResult(GetWirelessSsidsIdentityPsksRe
         if False:
             yield self
         return GetWirelessSsidsIdentityPsksResult(
-            id=self.id,
             identity_psk_id=self.identity_psk_id,
             item=self.item,
             items=self.items,
@@ -127,7 +115,6 @@ def get_wireless_ssids_identity_psks(identity_psk_id: Optional[_builtins.str] = 
     __ret__ = pulumi.runtime.invoke('meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks', __args__, opts=opts, typ=GetWirelessSsidsIdentityPsksResult).value
 
     return AwaitableGetWirelessSsidsIdentityPsksResult(
-        id=pulumi.get(__ret__, 'id'),
         identity_psk_id=pulumi.get(__ret__, 'identity_psk_id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
@@ -152,7 +139,6 @@ def get_wireless_ssids_identity_psks_output(identity_psk_id: pulumi.Input[Option
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks', __args__, opts=opts, typ=GetWirelessSsidsIdentityPsksResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsIdentityPsksResult(
-        id=pulumi.get(__response__, 'id'),
         identity_psk_id=pulumi.get(__response__, 'identity_psk_id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),

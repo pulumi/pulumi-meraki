@@ -27,10 +27,7 @@ class GetEarlyAccessFeaturesOptInsResult:
     """
     A collection of values returned by getEarlyAccessFeaturesOptIns.
     """
-    def __init__(__self__, id=None, item=None, opt_in_id=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, opt_in_id=None, organization_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -40,14 +37,6 @@ class GetEarlyAccessFeaturesOptInsResult:
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -77,7 +66,6 @@ class AwaitableGetEarlyAccessFeaturesOptInsResult(GetEarlyAccessFeaturesOptInsRe
         if False:
             yield self
         return GetEarlyAccessFeaturesOptInsResult(
-            id=self.id,
             item=self.item,
             opt_in_id=self.opt_in_id,
             organization_id=self.organization_id)
@@ -108,7 +96,6 @@ def get_early_access_features_opt_ins(opt_in_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns', __args__, opts=opts, typ=GetEarlyAccessFeaturesOptInsResult).value
 
     return AwaitableGetEarlyAccessFeaturesOptInsResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         opt_in_id=pulumi.get(__ret__, 'opt_in_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
@@ -136,7 +123,6 @@ def get_early_access_features_opt_ins_output(opt_in_id: pulumi.Input[Optional[Op
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns', __args__, opts=opts, typ=GetEarlyAccessFeaturesOptInsResult)
     return __ret__.apply(lambda __response__: GetEarlyAccessFeaturesOptInsResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         opt_in_id=pulumi.get(__response__, 'opt_in_id'),
         organization_id=pulumi.get(__response__, 'organization_id')))

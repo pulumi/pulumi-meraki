@@ -32,8 +32,6 @@ type LookupSwitchRoutingMulticastRendezvousPointsArgs struct {
 
 // A collection of values returned by getSwitchRoutingMulticastRendezvousPoints.
 type LookupSwitchRoutingMulticastRendezvousPointsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                        `pulumi:"id"`
 	Item GetSwitchRoutingMulticastRendezvousPointsItem `pulumi:"item"`
 	// Array of ResponseSwitchGetNetworkSwitchRoutingMulticastRendezvousPoints
 	Items []GetSwitchRoutingMulticastRendezvousPointsItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSwitchRoutingMulticastRendezvousPointsResultOutput) ToLookupSwitch
 
 func (o LookupSwitchRoutingMulticastRendezvousPointsResultOutput) ToLookupSwitchRoutingMulticastRendezvousPointsResultOutputWithContext(ctx context.Context) LookupSwitchRoutingMulticastRendezvousPointsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchRoutingMulticastRendezvousPointsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchRoutingMulticastRendezvousPointsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchRoutingMulticastRendezvousPointsResultOutput) Item() GetSwitchRoutingMulticastRendezvousPointsItemOutput {

@@ -27,13 +27,10 @@ class GetSmUsersResult:
     """
     A collection of values returned by getSmUsers.
     """
-    def __init__(__self__, emails=None, id=None, ids=None, items=None, network_id=None, scopes=None, usernames=None):
+    def __init__(__self__, emails=None, ids=None, items=None, network_id=None, scopes=None, usernames=None):
         if emails and not isinstance(emails, list):
             raise TypeError("Expected argument 'emails' to be a list")
         pulumi.set(__self__, "emails", emails)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if ids and not isinstance(ids, list):
             raise TypeError("Expected argument 'ids' to be a list")
         pulumi.set(__self__, "ids", ids)
@@ -57,14 +54,6 @@ class GetSmUsersResult:
         emails query parameter. Filter users by email(s).
         """
         return pulumi.get(self, "emails")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -114,7 +103,6 @@ class AwaitableGetSmUsersResult(GetSmUsersResult):
             yield self
         return GetSmUsersResult(
             emails=self.emails,
-            id=self.id,
             ids=self.ids,
             items=self.items,
             network_id=self.network_id,
@@ -161,7 +149,6 @@ def get_sm_users(emails: Optional[Sequence[_builtins.str]] = None,
 
     return AwaitableGetSmUsersResult(
         emails=pulumi.get(__ret__, 'emails'),
-        id=pulumi.get(__ret__, 'id'),
         ids=pulumi.get(__ret__, 'ids'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -205,7 +192,6 @@ def get_sm_users_output(emails: pulumi.Input[Optional[Optional[Sequence[_builtin
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmUsers:getSmUsers', __args__, opts=opts, typ=GetSmUsersResult)
     return __ret__.apply(lambda __response__: GetSmUsersResult(
         emails=pulumi.get(__response__, 'emails'),
-        id=pulumi.get(__response__, 'id'),
         ids=pulumi.get(__response__, 'ids'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

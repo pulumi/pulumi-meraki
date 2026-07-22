@@ -60,8 +60,6 @@ type GetSmDevicesSecurityCentersArgs struct {
 type GetSmDevicesSecurityCentersResult struct {
 	// deviceId path parameter. Device ID
 	DeviceId *string `pulumi:"deviceId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSmGetNetworkSmDeviceSoftwares
 	Items []GetSmDevicesSecurityCentersItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -107,11 +105,6 @@ func (o GetSmDevicesSecurityCentersResultOutput) ToGetSmDevicesSecurityCentersRe
 // deviceId path parameter. Device ID
 func (o GetSmDevicesSecurityCentersResultOutput) DeviceId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetSmDevicesSecurityCentersResult) *string { return v.DeviceId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSmDevicesSecurityCentersResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSmDevicesSecurityCentersResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSmGetNetworkSmDeviceSoftwares

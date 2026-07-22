@@ -13,11 +13,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEarlyAccessFeaturesOptInsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetEarlyAccessFeaturesOptInsItem item;
     /**
      * @return optInId path parameter. Opt in ID
@@ -31,13 +26,6 @@ public final class GetEarlyAccessFeaturesOptInsResult {
     private @Nullable String organizationId;
 
     private GetEarlyAccessFeaturesOptInsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetEarlyAccessFeaturesOptInsItem item() {
         return this.item;
     }
@@ -65,27 +53,17 @@ public final class GetEarlyAccessFeaturesOptInsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetEarlyAccessFeaturesOptInsItem item;
         private @Nullable String optInId;
         private @Nullable String organizationId;
         public Builder() {}
         public Builder(GetEarlyAccessFeaturesOptInsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.optInId = defaults.optInId;
     	      this.organizationId = defaults.organizationId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetEarlyAccessFeaturesOptInsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetEarlyAccessFeaturesOptInsItem item) {
             if (item == null) {
@@ -108,7 +86,6 @@ public final class GetEarlyAccessFeaturesOptInsResult {
         }
         public GetEarlyAccessFeaturesOptInsResult build() {
             final var _resultValue = new GetEarlyAccessFeaturesOptInsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.optInId = optInId;
             _resultValue.organizationId = organizationId;

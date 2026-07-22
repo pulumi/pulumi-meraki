@@ -138,10 +138,6 @@ namespace Pulumi.Meraki.Organizations
     [OutputType]
     public sealed class GetOpenapiSpecResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetOpenapiSpecItemResult Item;
         /// <summary>
         /// organizationId path parameter. Organization ID
@@ -154,15 +150,12 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetOpenapiSpecResult(
-            string id,
-
             Outputs.GetOpenapiSpecItemResult item,
 
             string organizationId,
 
             int? version)
         {
-            Id = id;
             Item = item;
             OrganizationId = organizationId;
             Version = version;

@@ -76,10 +76,6 @@ namespace Pulumi.Meraki.Organizations
     public sealed class GetSamlIdpsResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// idpId path parameter. Idp ID
         /// </summary>
         public readonly string? IdpId;
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Organizations
 
         [OutputConstructor]
         private GetSamlIdpsResult(
-            string id,
-
             string? idpId,
 
             Outputs.GetSamlIdpsItemResult item,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Organizations
 
             string? organizationId)
         {
-            Id = id;
             IdpId = idpId;
             Item = item;
             Items = items;

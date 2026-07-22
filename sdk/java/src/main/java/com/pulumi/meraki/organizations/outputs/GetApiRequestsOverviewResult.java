@@ -14,11 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiRequestsOverviewResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApiRequestsOverviewItem item;
     /**
      * @return organizationId path parameter. Organization ID
@@ -42,13 +37,6 @@ public final class GetApiRequestsOverviewResult {
     private @Nullable Double timespan;
 
     private GetApiRequestsOverviewResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApiRequestsOverviewItem item() {
         return this.item;
     }
@@ -90,7 +78,6 @@ public final class GetApiRequestsOverviewResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApiRequestsOverviewItem item;
         private String organizationId;
         private @Nullable String t0;
@@ -99,7 +86,6 @@ public final class GetApiRequestsOverviewResult {
         public Builder() {}
         public Builder(GetApiRequestsOverviewResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.organizationId = defaults.organizationId;
     	      this.t0 = defaults.t0;
@@ -107,14 +93,6 @@ public final class GetApiRequestsOverviewResult {
     	      this.timespan = defaults.timespan;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApiRequestsOverviewResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApiRequestsOverviewItem item) {
             if (item == null) {
@@ -151,7 +129,6 @@ public final class GetApiRequestsOverviewResult {
         }
         public GetApiRequestsOverviewResult build() {
             final var _resultValue = new GetApiRequestsOverviewResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.organizationId = organizationId;
             _resultValue.t0 = t0;

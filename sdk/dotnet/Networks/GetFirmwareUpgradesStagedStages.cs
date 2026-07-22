@@ -124,10 +124,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetFirmwareUpgradesStagedStagesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseNetworksGetNetworkFirmwareUpgradesStagedStages
         /// </summary>
         public readonly ImmutableArray<Outputs.GetFirmwareUpgradesStagedStagesItemResult> Items;
@@ -138,13 +134,10 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetFirmwareUpgradesStagedStagesResult(
-            string id,
-
             ImmutableArray<Outputs.GetFirmwareUpgradesStagedStagesItemResult> items,
 
             string networkId)
         {
-            Id = id;
             Items = items;
             NetworkId = networkId;
         }

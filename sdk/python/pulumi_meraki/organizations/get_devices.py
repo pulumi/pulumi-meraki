@@ -27,16 +27,13 @@ class GetDevicesResult:
     """
     A collection of values returned by getDevices.
     """
-    def __init__(__self__, configuration_updated_after=None, ending_before=None, id=None, items=None, mac=None, macs=None, model=None, models=None, name=None, network_ids=None, organization_id=None, per_page=None, product_types=None, sensor_alert_profile_ids=None, sensor_metrics=None, serial=None, serials=None, starting_after=None, tags=None, tags_filter_type=None):
+    def __init__(__self__, configuration_updated_after=None, ending_before=None, items=None, mac=None, macs=None, model=None, models=None, name=None, network_ids=None, organization_id=None, per_page=None, product_types=None, sensor_alert_profile_ids=None, sensor_metrics=None, serial=None, serials=None, starting_after=None, tags=None, tags_filter_type=None):
         if configuration_updated_after and not isinstance(configuration_updated_after, str):
             raise TypeError("Expected argument 'configuration_updated_after' to be a str")
         pulumi.set(__self__, "configuration_updated_after", configuration_updated_after)
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -104,14 +101,6 @@ class GetDevicesResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -258,7 +247,6 @@ class AwaitableGetDevicesResult(GetDevicesResult):
         return GetDevicesResult(
             configuration_updated_after=self.configuration_updated_after,
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             mac=self.mac,
             macs=self.macs,
@@ -370,7 +358,6 @@ def get_devices(configuration_updated_after: Optional[_builtins.str] = None,
     return AwaitableGetDevicesResult(
         configuration_updated_after=pulumi.get(__ret__, 'configuration_updated_after'),
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         mac=pulumi.get(__ret__, 'mac'),
         macs=pulumi.get(__ret__, 'macs'),
@@ -479,7 +466,6 @@ def get_devices_output(configuration_updated_after: pulumi.Input[Optional[Option
     return __ret__.apply(lambda __response__: GetDevicesResult(
         configuration_updated_after=pulumi.get(__response__, 'configuration_updated_after'),
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         mac=pulumi.get(__response__, 'mac'),
         macs=pulumi.get(__response__, 'macs'),

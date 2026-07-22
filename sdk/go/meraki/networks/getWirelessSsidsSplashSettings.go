@@ -58,8 +58,6 @@ type LookupWirelessSsidsSplashSettingsArgs struct {
 
 // A collection of values returned by getWirelessSsidsSplashSettings.
 type LookupWirelessSsidsSplashSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                             `pulumi:"id"`
 	Item GetWirelessSsidsSplashSettingsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsSplashSettingsResultOutput) ToLookupWirelessSsidsSpla
 
 func (o LookupWirelessSsidsSplashSettingsResultOutput) ToLookupWirelessSsidsSplashSettingsResultOutputWithContext(ctx context.Context) LookupWirelessSsidsSplashSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsSplashSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsSplashSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsSplashSettingsResultOutput) Item() GetWirelessSsidsSplashSettingsItemOutput {

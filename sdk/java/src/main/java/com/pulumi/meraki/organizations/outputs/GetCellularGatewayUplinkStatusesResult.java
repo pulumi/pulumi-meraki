@@ -26,11 +26,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
      */
     private @Nullable List<String> iccids;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses
      * 
      */
@@ -75,13 +70,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
      */
     public List<String> iccids() {
         return this.iccids == null ? List.of() : this.iccids;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseCellularGatewayGetOrganizationCellularGatewayUplinkStatuses
@@ -137,7 +125,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
     public static final class Builder {
         private @Nullable String endingBefore;
         private @Nullable List<String> iccids;
-        private String id;
         private List<GetCellularGatewayUplinkStatusesItem> items;
         private @Nullable List<String> networkIds;
         private String organizationId;
@@ -149,7 +136,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
     	      this.iccids = defaults.iccids;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.networkIds = defaults.networkIds;
     	      this.organizationId = defaults.organizationId;
@@ -172,14 +158,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
         }
         public Builder iccids(String... iccids) {
             return iccids(List.of(iccids));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetCellularGatewayUplinkStatusesResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder items(List<GetCellularGatewayUplinkStatusesItem> items) {
@@ -234,7 +212,6 @@ public final class GetCellularGatewayUplinkStatusesResult {
             final var _resultValue = new GetCellularGatewayUplinkStatusesResult();
             _resultValue.endingBefore = endingBefore;
             _resultValue.iccids = iccids;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.networkIds = networkIds;
             _resultValue.organizationId = organizationId;

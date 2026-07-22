@@ -35,10 +35,8 @@ type LookupActionBatchesArgs struct {
 // A collection of values returned by getActionBatches.
 type LookupActionBatchesResult struct {
 	// actionBatchId path parameter. Action batch ID
-	ActionBatchId *string `pulumi:"actionBatchId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
-	Item GetActionBatchesItem `pulumi:"item"`
+	ActionBatchId *string              `pulumi:"actionBatchId"`
+	Item          GetActionBatchesItem `pulumi:"item"`
 	// Array of ResponseOrganizationsGetOrganizationActionBatches
 	Items []GetActionBatchesItem `pulumi:"items"`
 	// organizationId path parameter. Organization ID
@@ -88,11 +86,6 @@ func (o LookupActionBatchesResultOutput) ToLookupActionBatchesResultOutputWithCo
 // actionBatchId path parameter. Action batch ID
 func (o LookupActionBatchesResultOutput) ActionBatchId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupActionBatchesResult) *string { return v.ActionBatchId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupActionBatchesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupActionBatchesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupActionBatchesResultOutput) Item() GetActionBatchesItemOutput {

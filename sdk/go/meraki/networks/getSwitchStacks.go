@@ -32,8 +32,6 @@ type LookupSwitchStacksArgs struct {
 
 // A collection of values returned by getSwitchStacks.
 type LookupSwitchStacksResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string              `pulumi:"id"`
 	Item GetSwitchStacksItem `pulumi:"item"`
 	// Array of ResponseSwitchGetNetworkSwitchStacks
 	Items []GetSwitchStacksItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupSwitchStacksResultOutput) ToLookupSwitchStacksResultOutput() Looku
 
 func (o LookupSwitchStacksResultOutput) ToLookupSwitchStacksResultOutputWithContext(ctx context.Context) LookupSwitchStacksResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupSwitchStacksResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSwitchStacksResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupSwitchStacksResultOutput) Item() GetSwitchStacksItemOutput {

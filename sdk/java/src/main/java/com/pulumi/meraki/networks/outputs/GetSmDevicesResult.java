@@ -32,11 +32,6 @@ public final class GetSmDevicesResult {
      */
     private @Nullable List<String> fields;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return ids query parameter. Filter devices by id(s).
      * 
      */
@@ -107,13 +102,6 @@ public final class GetSmDevicesResult {
      */
     public List<String> fields() {
         return this.fields == null ? List.of() : this.fields;
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return ids query parameter. Filter devices by id(s).
@@ -197,7 +185,6 @@ public final class GetSmDevicesResult {
     public static final class Builder {
         private @Nullable String endingBefore;
         private @Nullable List<String> fields;
-        private String id;
         private @Nullable List<String> ids;
         private List<GetSmDevicesItem> items;
         private String networkId;
@@ -213,7 +200,6 @@ public final class GetSmDevicesResult {
     	      Objects.requireNonNull(defaults);
     	      this.endingBefore = defaults.endingBefore;
     	      this.fields = defaults.fields;
-    	      this.id = defaults.id;
     	      this.ids = defaults.ids;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -240,14 +226,6 @@ public final class GetSmDevicesResult {
         }
         public Builder fields(String... fields) {
             return fields(List.of(fields));
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmDevicesResult", "id");
-            }
-            this.id = id;
-            return this;
         }
         @CustomType.Setter
         public Builder ids(@Nullable List<String> ids) {
@@ -338,7 +316,6 @@ public final class GetSmDevicesResult {
             final var _resultValue = new GetSmDevicesResult();
             _resultValue.endingBefore = endingBefore;
             _resultValue.fields = fields;
-            _resultValue.id = id;
             _resultValue.ids = ids;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

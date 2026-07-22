@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Devices
     [OutputType]
     public sealed class GetSwitchRoutingStaticRoutesResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetSwitchRoutingStaticRoutesItemResult Item;
         /// <summary>
         /// Array of ResponseSwitchGetDeviceSwitchRoutingStaticRoutes
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Devices
 
         [OutputConstructor]
         private GetSwitchRoutingStaticRoutesResult(
-            string id,
-
             Outputs.GetSwitchRoutingStaticRoutesItemResult item,
 
             ImmutableArray<Outputs.GetSwitchRoutingStaticRoutesItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Devices
 
             string? staticRouteId)
         {
-            Id = id;
             Item = item;
             Items = items;
             Serial = serial;

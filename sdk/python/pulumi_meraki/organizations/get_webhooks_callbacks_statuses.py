@@ -27,13 +27,10 @@ class GetWebhooksCallbacksStatusesResult:
     """
     A collection of values returned by getWebhooksCallbacksStatuses.
     """
-    def __init__(__self__, callback_id=None, id=None, item=None, organization_id=None):
+    def __init__(__self__, callback_id=None, item=None, organization_id=None):
         if callback_id and not isinstance(callback_id, str):
             raise TypeError("Expected argument 'callback_id' to be a str")
         pulumi.set(__self__, "callback_id", callback_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -48,14 +45,6 @@ class GetWebhooksCallbacksStatusesResult:
         callbackId path parameter. Callback ID
         """
         return pulumi.get(self, "callback_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -78,7 +67,6 @@ class AwaitableGetWebhooksCallbacksStatusesResult(GetWebhooksCallbacksStatusesRe
             yield self
         return GetWebhooksCallbacksStatusesResult(
             callback_id=self.callback_id,
-            id=self.id,
             item=self.item,
             organization_id=self.organization_id)
 
@@ -110,7 +98,6 @@ def get_webhooks_callbacks_statuses(callback_id: Optional[_builtins.str] = None,
 
     return AwaitableGetWebhooksCallbacksStatusesResult(
         callback_id=pulumi.get(__ret__, 'callback_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_webhooks_callbacks_statuses_output(callback_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -139,6 +126,5 @@ def get_webhooks_callbacks_statuses_output(callback_id: pulumi.Input[Optional[_b
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses', __args__, opts=opts, typ=GetWebhooksCallbacksStatusesResult)
     return __ret__.apply(lambda __response__: GetWebhooksCallbacksStatusesResult(
         callback_id=pulumi.get(__response__, 'callback_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         organization_id=pulumi.get(__response__, 'organization_id')))

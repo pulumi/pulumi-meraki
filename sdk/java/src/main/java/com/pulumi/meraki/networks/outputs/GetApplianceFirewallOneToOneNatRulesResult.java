@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApplianceFirewallOneToOneNatRulesResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetApplianceFirewallOneToOneNatRulesItem item;
     /**
      * @return networkId path parameter. Network ID
@@ -24,13 +19,6 @@ public final class GetApplianceFirewallOneToOneNatRulesResult {
     private String networkId;
 
     private GetApplianceFirewallOneToOneNatRulesResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetApplianceFirewallOneToOneNatRulesItem item() {
         return this.item;
     }
@@ -51,25 +39,15 @@ public final class GetApplianceFirewallOneToOneNatRulesResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetApplianceFirewallOneToOneNatRulesItem item;
         private String networkId;
         public Builder() {}
         public Builder(GetApplianceFirewallOneToOneNatRulesResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.networkId = defaults.networkId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApplianceFirewallOneToOneNatRulesResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetApplianceFirewallOneToOneNatRulesItem item) {
             if (item == null) {
@@ -88,7 +66,6 @@ public final class GetApplianceFirewallOneToOneNatRulesResult {
         }
         public GetApplianceFirewallOneToOneNatRulesResult build() {
             final var _resultValue = new GetApplianceFirewallOneToOneNatRulesResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.networkId = networkId;
             return _resultValue;

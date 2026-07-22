@@ -32,8 +32,6 @@ type LookupCameraRolesArgs struct {
 
 // A collection of values returned by getCameraRoles.
 type LookupCameraRolesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string             `pulumi:"id"`
 	Item GetCameraRolesItem `pulumi:"item"`
 	// Array of ResponseCameraGetOrganizationCameraRoles
 	Items []GetCameraRolesItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupCameraRolesResultOutput) ToLookupCameraRolesResultOutput() LookupC
 
 func (o LookupCameraRolesResultOutput) ToLookupCameraRolesResultOutputWithContext(ctx context.Context) LookupCameraRolesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraRolesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraRolesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraRolesResultOutput) Item() GetCameraRolesItemOutput {

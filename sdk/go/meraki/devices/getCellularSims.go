@@ -55,8 +55,6 @@ type LookupCellularSimsArgs struct {
 
 // A collection of values returned by getCellularSims.
 type LookupCellularSimsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string              `pulumi:"id"`
 	Item GetCellularSimsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupCellularSimsResultOutput) ToLookupCellularSimsResultOutput() Looku
 
 func (o LookupCellularSimsResultOutput) ToLookupCellularSimsResultOutputWithContext(ctx context.Context) LookupCellularSimsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCellularSimsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCellularSimsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCellularSimsResultOutput) Item() GetCellularSimsItemOutput {

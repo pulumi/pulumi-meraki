@@ -27,13 +27,10 @@ class GetClientsResult:
     """
     A collection of values returned by getClients.
     """
-    def __init__(__self__, client_id=None, id=None, item=None, network_id=None):
+    def __init__(__self__, client_id=None, item=None, network_id=None):
         if client_id and not isinstance(client_id, str):
             raise TypeError("Expected argument 'client_id' to be a str")
         pulumi.set(__self__, "client_id", client_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -48,14 +45,6 @@ class GetClientsResult:
         clientId path parameter. Client ID
         """
         return pulumi.get(self, "client_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -78,7 +67,6 @@ class AwaitableGetClientsResult(GetClientsResult):
             yield self
         return GetClientsResult(
             client_id=self.client_id,
-            id=self.id,
             item=self.item,
             network_id=self.network_id)
 
@@ -110,7 +98,6 @@ def get_clients(client_id: Optional[_builtins.str] = None,
 
     return AwaitableGetClientsResult(
         client_id=pulumi.get(__ret__, 'client_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_clients_output(client_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -139,6 +126,5 @@ def get_clients_output(client_id: pulumi.Input[Optional[_builtins.str]] = None,
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getClients:getClients', __args__, opts=opts, typ=GetClientsResult)
     return __ret__.apply(lambda __response__: GetClientsResult(
         client_id=pulumi.get(__response__, 'client_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id')))

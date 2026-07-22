@@ -33,10 +33,8 @@ type LookupGroupPoliciesArgs struct {
 // A collection of values returned by getGroupPolicies.
 type LookupGroupPoliciesResult struct {
 	// groupPolicyId path parameter. Group policy ID
-	GroupPolicyId *string `pulumi:"groupPolicyId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string               `pulumi:"id"`
-	Item GetGroupPoliciesItem `pulumi:"item"`
+	GroupPolicyId *string              `pulumi:"groupPolicyId"`
+	Item          GetGroupPoliciesItem `pulumi:"item"`
 	// Array of ResponseNetworksGetNetworkGroupPolicies
 	Items []GetGroupPoliciesItem `pulumi:"items"`
 	// networkId path parameter. Network ID
@@ -82,11 +80,6 @@ func (o LookupGroupPoliciesResultOutput) ToLookupGroupPoliciesResultOutputWithCo
 // groupPolicyId path parameter. Group policy ID
 func (o LookupGroupPoliciesResultOutput) GroupPolicyId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LookupGroupPoliciesResult) *string { return v.GroupPolicyId }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupGroupPoliciesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupGroupPoliciesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupGroupPoliciesResultOutput) Item() GetGroupPoliciesItemOutput {

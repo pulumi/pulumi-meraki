@@ -117,8 +117,6 @@ type GetEventsResult struct {
 	EndingBefore *string `pulumi:"endingBefore"`
 	// excludedEventTypes query parameter. A list of event types. The returned events will be filtered to exclude events with these types.
 	ExcludedEventTypes []string `pulumi:"excludedEventTypes"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.
 	IncludedEventTypes []string      `pulumi:"includedEventTypes"`
 	Item               GetEventsItem `pulumi:"item"`
@@ -236,11 +234,6 @@ func (o GetEventsResultOutput) EndingBefore() pulumi.StringPtrOutput {
 // excludedEventTypes query parameter. A list of event types. The returned events will be filtered to exclude events with these types.
 func (o GetEventsResultOutput) ExcludedEventTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetEventsResult) []string { return v.ExcludedEventTypes }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetEventsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetEventsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // includedEventTypes query parameter. A list of event types. The returned events will be filtered to only include events with these types.

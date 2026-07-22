@@ -121,10 +121,6 @@ export interface GetWirelessSignalQualityHistoryResult {
      */
     readonly deviceSerial?: string;
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * Array of ResponseWirelessGetNetworkWirelessSignalQualityHistory
      */
     readonly items: outputs.networks.GetWirelessSignalQualityHistoryItem[];

@@ -69,10 +69,6 @@ export interface GetSmUsersResult {
      */
     readonly emails?: string[];
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * ids query parameter. Filter users by id(s).
      */
     readonly ids?: string[];

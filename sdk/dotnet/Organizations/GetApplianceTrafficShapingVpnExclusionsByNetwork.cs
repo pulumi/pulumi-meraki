@@ -208,10 +208,6 @@ namespace Pulumi.Meraki.Organizations
         /// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         /// </summary>
         public readonly string? EndingBefore;
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetApplianceTrafficShapingVpnExclusionsByNetworkItemResult Item;
         /// <summary>
         /// networkIds query parameter. Optional parameter to filter the results by network IDs
@@ -234,8 +230,6 @@ namespace Pulumi.Meraki.Organizations
         private GetApplianceTrafficShapingVpnExclusionsByNetworkResult(
             string? endingBefore,
 
-            string id,
-
             Outputs.GetApplianceTrafficShapingVpnExclusionsByNetworkItemResult item,
 
             ImmutableArray<string> networkIds,
@@ -247,7 +241,6 @@ namespace Pulumi.Meraki.Organizations
             string? startingAfter)
         {
             EndingBefore = endingBefore;
-            Id = id;
             Item = item;
             NetworkIds = networkIds;
             OrganizationId = organizationId;

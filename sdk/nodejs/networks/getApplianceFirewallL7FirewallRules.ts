@@ -40,10 +40,6 @@ export interface GetApplianceFirewallL7FirewallRulesArgs {
  * A collection of values returned by getApplianceFirewallL7FirewallRules.
  */
 export interface GetApplianceFirewallL7FirewallRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetApplianceFirewallL7FirewallRulesItem;
     /**
      * networkId path parameter. Network ID

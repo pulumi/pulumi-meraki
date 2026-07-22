@@ -32,8 +32,6 @@ type LookupCameraWirelessProfilesArgs struct {
 
 // A collection of values returned by getCameraWirelessProfiles.
 type LookupCameraWirelessProfilesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                        `pulumi:"id"`
 	Item GetCameraWirelessProfilesItem `pulumi:"item"`
 	// Array of ResponseCameraGetNetworkCameraWirelessProfiles
 	Items []GetCameraWirelessProfilesItem `pulumi:"items"`
@@ -77,11 +75,6 @@ func (o LookupCameraWirelessProfilesResultOutput) ToLookupCameraWirelessProfiles
 
 func (o LookupCameraWirelessProfilesResultOutput) ToLookupCameraWirelessProfilesResultOutputWithContext(ctx context.Context) LookupCameraWirelessProfilesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupCameraWirelessProfilesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupCameraWirelessProfilesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupCameraWirelessProfilesResultOutput) Item() GetCameraWirelessProfilesItemOutput {

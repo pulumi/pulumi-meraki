@@ -27,11 +27,6 @@ public final class GetApiRequestsResult {
      */
     private @Nullable String endingBefore;
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return Array of ResponseOrganizationsGetOrganizationApiRequests
      * 
      */
@@ -116,13 +111,6 @@ public final class GetApiRequestsResult {
      */
     public Optional<String> endingBefore() {
         return Optional.ofNullable(this.endingBefore);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     /**
      * @return Array of ResponseOrganizationsGetOrganizationApiRequests
@@ -234,7 +222,6 @@ public final class GetApiRequestsResult {
     public static final class Builder {
         private @Nullable String adminId;
         private @Nullable String endingBefore;
-        private String id;
         private List<GetApiRequestsItem> items;
         private @Nullable String method;
         private @Nullable List<String> operationIds;
@@ -254,7 +241,6 @@ public final class GetApiRequestsResult {
     	      Objects.requireNonNull(defaults);
     	      this.adminId = defaults.adminId;
     	      this.endingBefore = defaults.endingBefore;
-    	      this.id = defaults.id;
     	      this.items = defaults.items;
     	      this.method = defaults.method;
     	      this.operationIds = defaults.operationIds;
@@ -281,14 +267,6 @@ public final class GetApiRequestsResult {
         public Builder endingBefore(@Nullable String endingBefore) {
 
             this.endingBefore = endingBefore;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetApiRequestsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -389,7 +367,6 @@ public final class GetApiRequestsResult {
             final var _resultValue = new GetApiRequestsResult();
             _resultValue.adminId = adminId;
             _resultValue.endingBefore = endingBefore;
-            _resultValue.id = id;
             _resultValue.items = items;
             _resultValue.method = method;
             _resultValue.operationIds = operationIds;

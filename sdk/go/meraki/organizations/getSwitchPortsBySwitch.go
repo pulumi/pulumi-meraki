@@ -100,8 +100,6 @@ type GetSwitchPortsBySwitchResult struct {
 	ConfigurationUpdatedAfter *string `pulumi:"configurationUpdatedAfter"`
 	// endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 	EndingBefore *string `pulumi:"endingBefore"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseSwitchGetOrganizationSwitchPortsBySwitch
 	Items []GetSwitchPortsBySwitchItem `pulumi:"items"`
 	// mac query parameter. Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match.
@@ -190,11 +188,6 @@ func (o GetSwitchPortsBySwitchResultOutput) ConfigurationUpdatedAfter() pulumi.S
 // endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
 func (o GetSwitchPortsBySwitchResultOutput) EndingBefore() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetSwitchPortsBySwitchResult) *string { return v.EndingBefore }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetSwitchPortsBySwitchResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSwitchPortsBySwitchResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseSwitchGetOrganizationSwitchPortsBySwitch

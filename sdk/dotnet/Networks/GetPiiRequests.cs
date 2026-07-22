@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetPiiRequestsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetPiiRequestsItemResult Item;
         /// <summary>
         /// Array of ResponseNetworksGetNetworkPiiRequests
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetPiiRequestsResult(
-            string id,
-
             Outputs.GetPiiRequestsItemResult item,
 
             ImmutableArray<Outputs.GetPiiRequestsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? requestId)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

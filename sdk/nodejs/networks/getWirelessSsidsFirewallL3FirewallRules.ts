@@ -46,10 +46,6 @@ export interface GetWirelessSsidsFirewallL3FirewallRulesArgs {
  * A collection of values returned by getWirelessSsidsFirewallL3FirewallRules.
  */
 export interface GetWirelessSsidsFirewallL3FirewallRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWirelessSsidsFirewallL3FirewallRulesItem;
     /**
      * networkId path parameter. Network ID

@@ -45,10 +45,6 @@ export interface GetActionBatchesResult {
      * actionBatchId path parameter. Action batch ID
      */
     readonly actionBatchId?: string;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.organizations.GetActionBatchesItem;
     /**
      * Array of ResponseOrganizationsGetOrganizationActionBatches

@@ -11,11 +11,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLiveToolsThroughputTestResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetLiveToolsThroughputTestItem item;
     /**
      * @return serial path parameter.
@@ -29,13 +24,6 @@ public final class GetLiveToolsThroughputTestResult {
     private String throughputTestId;
 
     private GetLiveToolsThroughputTestResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetLiveToolsThroughputTestItem item() {
         return this.item;
     }
@@ -63,27 +51,17 @@ public final class GetLiveToolsThroughputTestResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetLiveToolsThroughputTestItem item;
         private String serial;
         private String throughputTestId;
         public Builder() {}
         public Builder(GetLiveToolsThroughputTestResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
     	      this.throughputTestId = defaults.throughputTestId;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetLiveToolsThroughputTestResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetLiveToolsThroughputTestItem item) {
             if (item == null) {
@@ -110,7 +88,6 @@ public final class GetLiveToolsThroughputTestResult {
         }
         public GetLiveToolsThroughputTestResult build() {
             final var _resultValue = new GetLiveToolsThroughputTestResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.serial = serial;
             _resultValue.throughputTestId = throughputTestId;

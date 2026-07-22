@@ -27,7 +27,7 @@ class GetWirelessClientsConnectionStatsResult:
     """
     A collection of values returned by getWirelessClientsConnectionStats.
     """
-    def __init__(__self__, ap_tag=None, band=None, client_id=None, id=None, item=None, network_id=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
+    def __init__(__self__, ap_tag=None, band=None, client_id=None, item=None, network_id=None, ssid=None, t0=None, t1=None, timespan=None, vlan=None):
         if ap_tag and not isinstance(ap_tag, str):
             raise TypeError("Expected argument 'ap_tag' to be a str")
         pulumi.set(__self__, "ap_tag", ap_tag)
@@ -37,9 +37,6 @@ class GetWirelessClientsConnectionStatsResult:
         if client_id and not isinstance(client_id, str):
             raise TypeError("Expected argument 'client_id' to be a str")
         pulumi.set(__self__, "client_id", client_id)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -85,14 +82,6 @@ class GetWirelessClientsConnectionStatsResult:
         clientId path parameter. Client ID
         """
         return pulumi.get(self, "client_id")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -157,7 +146,6 @@ class AwaitableGetWirelessClientsConnectionStatsResult(GetWirelessClientsConnect
             ap_tag=self.ap_tag,
             band=self.band,
             client_id=self.client_id,
-            id=self.id,
             item=self.item,
             network_id=self.network_id,
             ssid=self.ssid,
@@ -224,7 +212,6 @@ def get_wireless_clients_connection_stats(ap_tag: Optional[_builtins.str] = None
         ap_tag=pulumi.get(__ret__, 'ap_tag'),
         band=pulumi.get(__ret__, 'band'),
         client_id=pulumi.get(__ret__, 'client_id'),
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         ssid=pulumi.get(__ret__, 'ssid'),
@@ -288,7 +275,6 @@ def get_wireless_clients_connection_stats_output(ap_tag: pulumi.Input[Optional[O
         ap_tag=pulumi.get(__response__, 'ap_tag'),
         band=pulumi.get(__response__, 'band'),
         client_id=pulumi.get(__response__, 'client_id'),
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         network_id=pulumi.get(__response__, 'network_id'),
         ssid=pulumi.get(__response__, 'ssid'),

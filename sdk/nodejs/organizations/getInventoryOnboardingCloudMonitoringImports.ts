@@ -47,10 +47,6 @@ export interface GetInventoryOnboardingCloudMonitoringImportsArgs {
  */
 export interface GetInventoryOnboardingCloudMonitoringImportsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
-    /**
      * importIds query parameter. import ids from an imports
      */
     readonly importIds: string[];

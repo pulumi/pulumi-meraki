@@ -93,8 +93,6 @@ type GetFirmwareUpgradesByDeviceResult struct {
 	EndingBefore *string `pulumi:"endingBefore"`
 	// firmwareUpgradeBatchIds query parameter. Optional parameter to filter by firmware upgrade batch ids.
 	FirmwareUpgradeBatchIds []string `pulumi:"firmwareUpgradeBatchIds"`
-	// The provider-assigned unique ID for this managed resource.
-	Id string `pulumi:"id"`
 	// Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice
 	Items []GetFirmwareUpgradesByDeviceItem `pulumi:"items"`
 	// macs query parameter. Optional parameter to filter by one or more MAC addresses belonging to devices. All devices returned belong to MAC addresses that are an exact match.
@@ -171,11 +169,6 @@ func (o GetFirmwareUpgradesByDeviceResultOutput) EndingBefore() pulumi.StringPtr
 // firmwareUpgradeBatchIds query parameter. Optional parameter to filter by firmware upgrade batch ids.
 func (o GetFirmwareUpgradesByDeviceResultOutput) FirmwareUpgradeBatchIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetFirmwareUpgradesByDeviceResult) []string { return v.FirmwareUpgradeBatchIds }).(pulumi.StringArrayOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetFirmwareUpgradesByDeviceResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetFirmwareUpgradesByDeviceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // Array of ResponseOrganizationsGetOrganizationFirmwareUpgradesByDevice

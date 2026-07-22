@@ -27,13 +27,10 @@ class GetApiRequestsOverviewResponseCodesByIntervalResult:
     """
     A collection of values returned by getApiRequestsOverviewResponseCodesByInterval.
     """
-    def __init__(__self__, admin_ids=None, id=None, interval=None, items=None, operation_ids=None, organization_id=None, source_ips=None, t0=None, t1=None, timespan=None, user_agent=None, version=None):
+    def __init__(__self__, admin_ids=None, interval=None, items=None, operation_ids=None, organization_id=None, source_ips=None, t0=None, t1=None, timespan=None, user_agent=None, version=None):
         if admin_ids and not isinstance(admin_ids, list):
             raise TypeError("Expected argument 'admin_ids' to be a list")
         pulumi.set(__self__, "admin_ids", admin_ids)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if interval and not isinstance(interval, int):
             raise TypeError("Expected argument 'interval' to be a int")
         pulumi.set(__self__, "interval", interval)
@@ -72,14 +69,6 @@ class GetApiRequestsOverviewResponseCodesByIntervalResult:
         adminIds query parameter. Filter by admin ID of user that made the API request
         """
         return pulumi.get(self, "admin_ids")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -169,7 +158,6 @@ class AwaitableGetApiRequestsOverviewResponseCodesByIntervalResult(GetApiRequest
             yield self
         return GetApiRequestsOverviewResponseCodesByIntervalResult(
             admin_ids=self.admin_ids,
-            id=self.id,
             interval=self.interval,
             items=self.items,
             operation_ids=self.operation_ids,
@@ -241,7 +229,6 @@ def get_api_requests_overview_response_codes_by_interval(admin_ids: Optional[Seq
 
     return AwaitableGetApiRequestsOverviewResponseCodesByIntervalResult(
         admin_ids=pulumi.get(__ret__, 'admin_ids'),
-        id=pulumi.get(__ret__, 'id'),
         interval=pulumi.get(__ret__, 'interval'),
         items=pulumi.get(__ret__, 'items'),
         operation_ids=pulumi.get(__ret__, 'operation_ids'),
@@ -310,7 +297,6 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: pulum
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval', __args__, opts=opts, typ=GetApiRequestsOverviewResponseCodesByIntervalResult)
     return __ret__.apply(lambda __response__: GetApiRequestsOverviewResponseCodesByIntervalResult(
         admin_ids=pulumi.get(__response__, 'admin_ids'),
-        id=pulumi.get(__response__, 'id'),
         interval=pulumi.get(__response__, 'interval'),
         items=pulumi.get(__response__, 'items'),
         operation_ids=pulumi.get(__response__, 'operation_ids'),

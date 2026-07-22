@@ -58,8 +58,6 @@ type LookupWirelessSsidsFirewallL3FirewallRulesArgs struct {
 
 // A collection of values returned by getWirelessSsidsFirewallL3FirewallRules.
 type LookupWirelessSsidsFirewallL3FirewallRulesResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                      `pulumi:"id"`
 	Item GetWirelessSsidsFirewallL3FirewallRulesItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -101,11 +99,6 @@ func (o LookupWirelessSsidsFirewallL3FirewallRulesResultOutput) ToLookupWireless
 
 func (o LookupWirelessSsidsFirewallL3FirewallRulesResultOutput) ToLookupWirelessSsidsFirewallL3FirewallRulesResultOutputWithContext(ctx context.Context) LookupWirelessSsidsFirewallL3FirewallRulesResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessSsidsFirewallL3FirewallRulesResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessSsidsFirewallL3FirewallRulesResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessSsidsFirewallL3FirewallRulesResultOutput) Item() GetWirelessSsidsFirewallL3FirewallRulesItemOutput {

@@ -84,10 +84,8 @@ type GetWirelessClientsConnectionStatsResult struct {
 	// band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
 	Band *string `pulumi:"band"`
 	// clientId path parameter. Client ID
-	ClientId string `pulumi:"clientId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                                `pulumi:"id"`
-	Item GetWirelessClientsConnectionStatsItem `pulumi:"item"`
+	ClientId string                                `pulumi:"clientId"`
+	Item     GetWirelessClientsConnectionStatsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 	// ssid query parameter. Filter results by SSID
@@ -165,11 +163,6 @@ func (o GetWirelessClientsConnectionStatsResultOutput) Band() pulumi.StringPtrOu
 // clientId path parameter. Client ID
 func (o GetWirelessClientsConnectionStatsResultOutput) ClientId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWirelessClientsConnectionStatsResult) string { return v.ClientId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessClientsConnectionStatsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessClientsConnectionStatsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWirelessClientsConnectionStatsResultOutput) Item() GetWirelessClientsConnectionStatsItemOutput {

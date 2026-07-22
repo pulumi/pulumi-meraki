@@ -15,11 +15,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSmTargetGroupsResult {
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetSmTargetGroupsItem item;
     /**
      * @return Array of ResponseSmGetNetworkSmTargetGroups
@@ -43,13 +38,6 @@ public final class GetSmTargetGroupsResult {
     private @Nullable Boolean withDetails;
 
     private GetSmTargetGroupsResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     public GetSmTargetGroupsItem item() {
         return this.item;
     }
@@ -91,7 +79,6 @@ public final class GetSmTargetGroupsResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private GetSmTargetGroupsItem item;
         private List<GetSmTargetGroupsItem> items;
         private @Nullable String networkId;
@@ -100,7 +87,6 @@ public final class GetSmTargetGroupsResult {
         public Builder() {}
         public Builder(GetSmTargetGroupsResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.networkId = defaults.networkId;
@@ -108,14 +94,6 @@ public final class GetSmTargetGroupsResult {
     	      this.withDetails = defaults.withDetails;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSmTargetGroupsResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder item(GetSmTargetGroupsItem item) {
             if (item == null) {
@@ -155,7 +133,6 @@ public final class GetSmTargetGroupsResult {
         }
         public GetSmTargetGroupsResult build() {
             final var _resultValue = new GetSmTargetGroupsResult();
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.networkId = networkId;

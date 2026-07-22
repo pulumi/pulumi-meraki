@@ -19,11 +19,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
      * 
      */
     private @Nullable String configTemplateId;
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
     private GetConfigTemplatesSwitchProfilesPortsItem item;
     /**
      * @return Array of ResponseSwitchGetOrganizationConfigTemplateSwitchProfilePorts
@@ -53,13 +48,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
      */
     public Optional<String> configTemplateId() {
         return Optional.ofNullable(this.configTemplateId);
-    }
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
     }
     public GetConfigTemplatesSwitchProfilesPortsItem item() {
         return this.item;
@@ -103,7 +91,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String configTemplateId;
-        private String id;
         private GetConfigTemplatesSwitchProfilesPortsItem item;
         private List<GetConfigTemplatesSwitchProfilesPortsItem> items;
         private @Nullable String organizationId;
@@ -113,7 +100,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
         public Builder(GetConfigTemplatesSwitchProfilesPortsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.configTemplateId = defaults.configTemplateId;
-    	      this.id = defaults.id;
     	      this.item = defaults.item;
     	      this.items = defaults.items;
     	      this.organizationId = defaults.organizationId;
@@ -125,14 +111,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
         public Builder configTemplateId(@Nullable String configTemplateId) {
 
             this.configTemplateId = configTemplateId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetConfigTemplatesSwitchProfilesPortsResult", "id");
-            }
-            this.id = id;
             return this;
         }
         @CustomType.Setter
@@ -175,7 +153,6 @@ public final class GetConfigTemplatesSwitchProfilesPortsResult {
         public GetConfigTemplatesSwitchProfilesPortsResult build() {
             final var _resultValue = new GetConfigTemplatesSwitchProfilesPortsResult();
             _resultValue.configTemplateId = configTemplateId;
-            _resultValue.id = id;
             _resultValue.item = item;
             _resultValue.items = items;
             _resultValue.organizationId = organizationId;

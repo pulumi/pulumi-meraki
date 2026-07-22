@@ -294,10 +294,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public readonly string? DeviceSerial;
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// Array of ResponseWirelessGetNetworkWirelessDataRateHistory
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWirelessDataRateHistoryItemResult> Items;
@@ -338,8 +334,6 @@ namespace Pulumi.Meraki.Networks
 
             string? deviceSerial,
 
-            string id,
-
             ImmutableArray<Outputs.GetWirelessDataRateHistoryItemResult> items,
 
             string networkId,
@@ -359,7 +353,6 @@ namespace Pulumi.Meraki.Networks
             Band = band;
             ClientId = clientId;
             DeviceSerial = deviceSerial;
-            Id = id;
             Items = items;
             NetworkId = networkId;
             Resolution = resolution;

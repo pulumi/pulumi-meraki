@@ -12,11 +12,6 @@ import java.util.Objects;
 @CustomType
 public final class GetSwitchRoutingInterfacesDhcpResult {
     /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    private String id;
-    /**
      * @return interfaceId path parameter. Interface ID
      * 
      */
@@ -29,13 +24,6 @@ public final class GetSwitchRoutingInterfacesDhcpResult {
     private String serial;
 
     private GetSwitchRoutingInterfacesDhcpResult() {}
-    /**
-     * @return The provider-assigned unique ID for this managed resource.
-     * 
-     */
-    public String id() {
-        return this.id;
-    }
     /**
      * @return interfaceId path parameter. Interface ID
      * 
@@ -63,27 +51,17 @@ public final class GetSwitchRoutingInterfacesDhcpResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String id;
         private String interfaceId;
         private GetSwitchRoutingInterfacesDhcpItem item;
         private String serial;
         public Builder() {}
         public Builder(GetSwitchRoutingInterfacesDhcpResult defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
     	      this.interfaceId = defaults.interfaceId;
     	      this.item = defaults.item;
     	      this.serial = defaults.serial;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
-            if (id == null) {
-              throw new MissingRequiredPropertyException("GetSwitchRoutingInterfacesDhcpResult", "id");
-            }
-            this.id = id;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaceId(String interfaceId) {
             if (interfaceId == null) {
@@ -110,7 +88,6 @@ public final class GetSwitchRoutingInterfacesDhcpResult {
         }
         public GetSwitchRoutingInterfacesDhcpResult build() {
             final var _resultValue = new GetSwitchRoutingInterfacesDhcpResult();
-            _resultValue.id = id;
             _resultValue.interfaceId = interfaceId;
             _resultValue.item = item;
             _resultValue.serial = serial;

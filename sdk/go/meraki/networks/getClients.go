@@ -59,10 +59,8 @@ type GetClientsArgs struct {
 // A collection of values returned by getClients.
 type GetClientsResult struct {
 	// clientId path parameter. Client ID
-	ClientId string `pulumi:"clientId"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string         `pulumi:"id"`
-	Item GetClientsItem `pulumi:"item"`
+	ClientId string         `pulumi:"clientId"`
+	Item     GetClientsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 }
@@ -106,11 +104,6 @@ func (o GetClientsResultOutput) ToGetClientsResultOutputWithContext(ctx context.
 // clientId path parameter. Client ID
 func (o GetClientsResultOutput) ClientId() pulumi.StringOutput {
 	return o.ApplyT(func(v GetClientsResult) string { return v.ClientId }).(pulumi.StringOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetClientsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetClientsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetClientsResultOutput) Item() GetClientsItemOutput {

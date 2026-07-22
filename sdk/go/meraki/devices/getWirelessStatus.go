@@ -55,8 +55,6 @@ type GetWirelessStatusArgs struct {
 
 // A collection of values returned by getWirelessStatus.
 type GetWirelessStatusResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                `pulumi:"id"`
 	Item GetWirelessStatusItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o GetWirelessStatusResultOutput) ToGetWirelessStatusResultOutput() GetWire
 
 func (o GetWirelessStatusResultOutput) ToGetWirelessStatusResultOutputWithContext(ctx context.Context) GetWirelessStatusResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessStatusResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessStatusResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWirelessStatusResultOutput) Item() GetWirelessStatusItemOutput {

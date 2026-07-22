@@ -27,10 +27,7 @@ class GetSwitchStacksRoutingStaticRoutesResult:
     """
     A collection of values returned by getSwitchStacksRoutingStaticRoutes.
     """
-    def __init__(__self__, id=None, item=None, items=None, network_id=None, static_route_id=None, switch_stack_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, item=None, items=None, network_id=None, static_route_id=None, switch_stack_id=None):
         if item and not isinstance(item, dict):
             raise TypeError("Expected argument 'item' to be a dict")
         pulumi.set(__self__, "item", item)
@@ -46,14 +43,6 @@ class GetSwitchStacksRoutingStaticRoutesResult:
         if switch_stack_id and not isinstance(switch_stack_id, str):
             raise TypeError("Expected argument 'switch_stack_id' to be a str")
         pulumi.set(__self__, "switch_stack_id", switch_stack_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -99,7 +88,6 @@ class AwaitableGetSwitchStacksRoutingStaticRoutesResult(GetSwitchStacksRoutingSt
         if False:
             yield self
         return GetSwitchStacksRoutingStaticRoutesResult(
-            id=self.id,
             item=self.item,
             items=self.items,
             network_id=self.network_id,
@@ -127,7 +115,6 @@ def get_switch_stacks_routing_static_routes(network_id: Optional[_builtins.str] 
     __ret__ = pulumi.runtime.invoke('meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchStacksRoutingStaticRoutesResult).value
 
     return AwaitableGetSwitchStacksRoutingStaticRoutesResult(
-        id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
@@ -152,7 +139,6 @@ def get_switch_stacks_routing_static_routes_output(network_id: pulumi.Input[Opti
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchStacksRoutingStaticRoutesResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksRoutingStaticRoutesResult(
-        id=pulumi.get(__response__, 'id'),
         item=pulumi.get(__response__, 'item'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),

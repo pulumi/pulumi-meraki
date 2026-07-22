@@ -151,10 +151,6 @@ namespace Pulumi.Meraki.Networks
     public sealed class GetWirelessRfProfilesResult
     {
         /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
-        /// <summary>
         /// includeTemplateProfiles query parameter. If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
         /// </summary>
         public readonly bool? IncludeTemplateProfiles;
@@ -170,8 +166,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessRfProfilesResult(
-            string id,
-
             bool? includeTemplateProfiles,
 
             Outputs.GetWirelessRfProfilesItemResult item,
@@ -180,7 +174,6 @@ namespace Pulumi.Meraki.Networks
 
             string? rfProfileId)
         {
-            Id = id;
             IncludeTemplateProfiles = includeTemplateProfiles;
             Item = item;
             NetworkId = networkId;

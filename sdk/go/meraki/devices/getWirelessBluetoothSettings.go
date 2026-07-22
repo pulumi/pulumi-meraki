@@ -55,8 +55,6 @@ type LookupWirelessBluetoothSettingsArgs struct {
 
 // A collection of values returned by getWirelessBluetoothSettings.
 type LookupWirelessBluetoothSettingsResult struct {
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                           `pulumi:"id"`
 	Item GetWirelessBluetoothSettingsItem `pulumi:"item"`
 	// serial path parameter.
 	Serial string `pulumi:"serial"`
@@ -94,11 +92,6 @@ func (o LookupWirelessBluetoothSettingsResultOutput) ToLookupWirelessBluetoothSe
 
 func (o LookupWirelessBluetoothSettingsResultOutput) ToLookupWirelessBluetoothSettingsResultOutputWithContext(ctx context.Context) LookupWirelessBluetoothSettingsResultOutput {
 	return o
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o LookupWirelessBluetoothSettingsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupWirelessBluetoothSettingsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o LookupWirelessBluetoothSettingsResultOutput) Item() GetWirelessBluetoothSettingsItemOutput {

@@ -46,10 +46,6 @@ export interface GetWebhooksWebhookTestsArgs {
  * A collection of values returned by getWebhooksWebhookTests.
  */
 export interface GetWebhooksWebhookTestsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetWebhooksWebhookTestsItem;
     /**
      * networkId path parameter. Network ID

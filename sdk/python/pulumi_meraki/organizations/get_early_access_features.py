@@ -27,24 +27,13 @@ class GetEarlyAccessFeaturesResult:
     """
     A collection of values returned by getEarlyAccessFeatures.
     """
-    def __init__(__self__, id=None, items=None, organization_id=None):
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
+    def __init__(__self__, items=None, organization_id=None):
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
         if organization_id and not isinstance(organization_id, str):
             raise TypeError("Expected argument 'organization_id' to be a str")
         pulumi.set(__self__, "organization_id", organization_id)
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -69,7 +58,6 @@ class AwaitableGetEarlyAccessFeaturesResult(GetEarlyAccessFeaturesResult):
         if False:
             yield self
         return GetEarlyAccessFeaturesResult(
-            id=self.id,
             items=self.items,
             organization_id=self.organization_id)
 
@@ -96,7 +84,6 @@ def get_early_access_features(organization_id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures', __args__, opts=opts, typ=GetEarlyAccessFeaturesResult).value
 
     return AwaitableGetEarlyAccessFeaturesResult(
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_early_access_features_output(organization_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -120,6 +107,5 @@ def get_early_access_features_output(organization_id: pulumi.Input[Optional[_bui
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures', __args__, opts=opts, typ=GetEarlyAccessFeaturesResult)
     return __ret__.apply(lambda __response__: GetEarlyAccessFeaturesResult(
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         organization_id=pulumi.get(__response__, 'organization_id')))

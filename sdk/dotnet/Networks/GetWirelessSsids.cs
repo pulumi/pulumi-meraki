@@ -75,10 +75,6 @@ namespace Pulumi.Meraki.Networks
     [OutputType]
     public sealed class GetWirelessSsidsResult
     {
-        /// <summary>
-        /// The provider-assigned unique ID for this managed resource.
-        /// </summary>
-        public readonly string Id;
         public readonly Outputs.GetWirelessSsidsItemResult Item;
         /// <summary>
         /// Array of ResponseWirelessGetNetworkWirelessSsids
@@ -95,8 +91,6 @@ namespace Pulumi.Meraki.Networks
 
         [OutputConstructor]
         private GetWirelessSsidsResult(
-            string id,
-
             Outputs.GetWirelessSsidsItemResult item,
 
             ImmutableArray<Outputs.GetWirelessSsidsItemResult> items,
@@ -105,7 +99,6 @@ namespace Pulumi.Meraki.Networks
 
             string? number)
         {
-            Id = id;
             Item = item;
             Items = items;
             NetworkId = networkId;

@@ -27,13 +27,10 @@ class GetSwitchDhcpV4ServersSeenResult:
     """
     A collection of values returned by getSwitchDhcpV4ServersSeen.
     """
-    def __init__(__self__, ending_before=None, id=None, items=None, network_id=None, per_page=None, starting_after=None, t0=None, timespan=None):
+    def __init__(__self__, ending_before=None, items=None, network_id=None, per_page=None, starting_after=None, t0=None, timespan=None):
         if ending_before and not isinstance(ending_before, str):
             raise TypeError("Expected argument 'ending_before' to be a str")
         pulumi.set(__self__, "ending_before", ending_before)
-        if id and not isinstance(id, str):
-            raise TypeError("Expected argument 'id' to be a str")
-        pulumi.set(__self__, "id", id)
         if items and not isinstance(items, list):
             raise TypeError("Expected argument 'items' to be a list")
         pulumi.set(__self__, "items", items)
@@ -60,14 +57,6 @@ class GetSwitchDhcpV4ServersSeenResult:
         endingBefore query parameter. A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
         """
         return pulumi.get(self, "ending_before")
-
-    @_builtins.property
-    @pulumi.getter
-    def id(self) -> _builtins.str:
-        """
-        The provider-assigned unique ID for this managed resource.
-        """
-        return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
@@ -125,7 +114,6 @@ class AwaitableGetSwitchDhcpV4ServersSeenResult(GetSwitchDhcpV4ServersSeenResult
             yield self
         return GetSwitchDhcpV4ServersSeenResult(
             ending_before=self.ending_before,
-            id=self.id,
             items=self.items,
             network_id=self.network_id,
             per_page=self.per_page,
@@ -177,7 +165,6 @@ def get_switch_dhcp_v4_servers_seen(ending_before: Optional[_builtins.str] = Non
 
     return AwaitableGetSwitchDhcpV4ServersSeenResult(
         ending_before=pulumi.get(__ret__, 'ending_before'),
-        id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
@@ -226,7 +213,6 @@ def get_switch_dhcp_v4_servers_seen_output(ending_before: pulumi.Input[Optional[
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen', __args__, opts=opts, typ=GetSwitchDhcpV4ServersSeenResult)
     return __ret__.apply(lambda __response__: GetSwitchDhcpV4ServersSeenResult(
         ending_before=pulumi.get(__response__, 'ending_before'),
-        id=pulumi.get(__response__, 'id'),
         items=pulumi.get(__response__, 'items'),
         network_id=pulumi.get(__response__, 'network_id'),
         per_page=pulumi.get(__response__, 'per_page'),

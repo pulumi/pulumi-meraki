@@ -40,10 +40,6 @@ export interface GetTrafficAnalysisArgs {
  * A collection of values returned by getTrafficAnalysis.
  */
 export interface GetTrafficAnalysisResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.networks.GetTrafficAnalysisItem;
     /**
      * networkId path parameter. Network ID

@@ -79,9 +79,7 @@ type GetWirelessConnectionStatsResult struct {
 	// apTag query parameter. Filter results by AP Tag
 	ApTag *string `pulumi:"apTag"`
 	// band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
-	Band *string `pulumi:"band"`
-	// The provider-assigned unique ID for this managed resource.
-	Id   string                         `pulumi:"id"`
+	Band *string                        `pulumi:"band"`
 	Item GetWirelessConnectionStatsItem `pulumi:"item"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
@@ -153,11 +151,6 @@ func (o GetWirelessConnectionStatsResultOutput) ApTag() pulumi.StringPtrOutput {
 // band query parameter. Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
 func (o GetWirelessConnectionStatsResultOutput) Band() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWirelessConnectionStatsResult) *string { return v.Band }).(pulumi.StringPtrOutput)
-}
-
-// The provider-assigned unique ID for this managed resource.
-func (o GetWirelessConnectionStatsResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessConnectionStatsResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 func (o GetWirelessConnectionStatsResultOutput) Item() GetWirelessConnectionStatsItemOutput {

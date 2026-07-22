@@ -40,10 +40,6 @@ export interface GetApplianceRadioSettingsArgs {
  * A collection of values returned by getApplianceRadioSettings.
  */
 export interface GetApplianceRadioSettingsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
     readonly item: outputs.devices.GetApplianceRadioSettingsItem;
     /**
      * serial path parameter.
