@@ -91,12 +91,8 @@ type GetPiiPiiKeysResult struct {
 }
 
 func GetPiiPiiKeysOutput(ctx *pulumi.Context, args GetPiiPiiKeysOutputArgs, opts ...pulumi.InvokeOption) GetPiiPiiKeysResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetPiiPiiKeysResultOutput, error) {
-			args := v.(GetPiiPiiKeysArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", args, GetPiiPiiKeysResultOutput{}, options).(GetPiiPiiKeysResultOutput), nil
-		}).(GetPiiPiiKeysResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", args, GetPiiPiiKeysResultOutput{}, options).(GetPiiPiiKeysResultOutput)
 }
 
 // A collection of arguments for invoking getPiiPiiKeys.

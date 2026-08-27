@@ -61,12 +61,8 @@ type LookupCellularSimsResult struct {
 }
 
 func LookupCellularSimsOutput(ctx *pulumi.Context, args LookupCellularSimsOutputArgs, opts ...pulumi.InvokeOption) LookupCellularSimsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularSimsResultOutput, error) {
-			args := v.(LookupCellularSimsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getCellularSims:getCellularSims", args, LookupCellularSimsResultOutput{}, options).(LookupCellularSimsResultOutput), nil
-		}).(LookupCellularSimsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getCellularSims:getCellularSims", args, LookupCellularSimsResultOutput{}, options).(LookupCellularSimsResultOutput)
 }
 
 // A collection of arguments for invoking getCellularSims.

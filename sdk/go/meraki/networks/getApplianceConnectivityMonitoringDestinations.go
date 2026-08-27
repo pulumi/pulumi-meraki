@@ -61,12 +61,8 @@ type LookupApplianceConnectivityMonitoringDestinationsResult struct {
 }
 
 func LookupApplianceConnectivityMonitoringDestinationsOutput(ctx *pulumi.Context, args LookupApplianceConnectivityMonitoringDestinationsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceConnectivityMonitoringDestinationsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceConnectivityMonitoringDestinationsResultOutput, error) {
-			args := v.(LookupApplianceConnectivityMonitoringDestinationsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", args, LookupApplianceConnectivityMonitoringDestinationsResultOutput{}, options).(LookupApplianceConnectivityMonitoringDestinationsResultOutput), nil
-		}).(LookupApplianceConnectivityMonitoringDestinationsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", args, LookupApplianceConnectivityMonitoringDestinationsResultOutput{}, options).(LookupApplianceConnectivityMonitoringDestinationsResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceConnectivityMonitoringDestinations.

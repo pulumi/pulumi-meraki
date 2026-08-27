@@ -69,12 +69,8 @@ type GetSmProfilesResult struct {
 }
 
 func GetSmProfilesOutput(ctx *pulumi.Context, args GetSmProfilesOutputArgs, opts ...pulumi.InvokeOption) GetSmProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmProfilesResultOutput, error) {
-			args := v.(GetSmProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmProfiles:getSmProfiles", args, GetSmProfilesResultOutput{}, options).(GetSmProfilesResultOutput), nil
-		}).(GetSmProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmProfiles:getSmProfiles", args, GetSmProfilesResultOutput{}, options).(GetSmProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getSmProfiles.

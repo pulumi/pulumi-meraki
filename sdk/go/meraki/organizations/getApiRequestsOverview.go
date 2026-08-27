@@ -76,12 +76,8 @@ type GetApiRequestsOverviewResult struct {
 }
 
 func GetApiRequestsOverviewOutput(ctx *pulumi.Context, args GetApiRequestsOverviewOutputArgs, opts ...pulumi.InvokeOption) GetApiRequestsOverviewResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApiRequestsOverviewResultOutput, error) {
-			args := v.(GetApiRequestsOverviewArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", args, GetApiRequestsOverviewResultOutput{}, options).(GetApiRequestsOverviewResultOutput), nil
-		}).(GetApiRequestsOverviewResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", args, GetApiRequestsOverviewResultOutput{}, options).(GetApiRequestsOverviewResultOutput)
 }
 
 // A collection of arguments for invoking getApiRequestsOverview.

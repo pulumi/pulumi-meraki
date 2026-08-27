@@ -61,12 +61,8 @@ type LookupCameraSenseResult struct {
 }
 
 func LookupCameraSenseOutput(ctx *pulumi.Context, args LookupCameraSenseOutputArgs, opts ...pulumi.InvokeOption) LookupCameraSenseResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraSenseResultOutput, error) {
-			args := v.(LookupCameraSenseArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getCameraSense:getCameraSense", args, LookupCameraSenseResultOutput{}, options).(LookupCameraSenseResultOutput), nil
-		}).(LookupCameraSenseResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getCameraSense:getCameraSense", args, LookupCameraSenseResultOutput{}, options).(LookupCameraSenseResultOutput)
 }
 
 // A collection of arguments for invoking getCameraSense.

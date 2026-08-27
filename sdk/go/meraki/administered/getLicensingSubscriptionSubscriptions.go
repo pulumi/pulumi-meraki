@@ -114,12 +114,8 @@ type GetLicensingSubscriptionSubscriptionsResult struct {
 }
 
 func GetLicensingSubscriptionSubscriptionsOutput(ctx *pulumi.Context, args GetLicensingSubscriptionSubscriptionsOutputArgs, opts ...pulumi.InvokeOption) GetLicensingSubscriptionSubscriptionsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLicensingSubscriptionSubscriptionsResultOutput, error) {
-			args := v.(GetLicensingSubscriptionSubscriptionsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args, GetLicensingSubscriptionSubscriptionsResultOutput{}, options).(GetLicensingSubscriptionSubscriptionsResultOutput), nil
-		}).(GetLicensingSubscriptionSubscriptionsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args, GetLicensingSubscriptionSubscriptionsResultOutput{}, options).(GetLicensingSubscriptionSubscriptionsResultOutput)
 }
 
 // A collection of arguments for invoking getLicensingSubscriptionSubscriptions.

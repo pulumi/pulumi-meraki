@@ -61,12 +61,8 @@ type GetApplianceUplinksStatusesOverviewResult struct {
 }
 
 func GetApplianceUplinksStatusesOverviewOutput(ctx *pulumi.Context, args GetApplianceUplinksStatusesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetApplianceUplinksStatusesOverviewResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplianceUplinksStatusesOverviewResultOutput, error) {
-			args := v.(GetApplianceUplinksStatusesOverviewArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args, GetApplianceUplinksStatusesOverviewResultOutput{}, options).(GetApplianceUplinksStatusesOverviewResultOutput), nil
-		}).(GetApplianceUplinksStatusesOverviewResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args, GetApplianceUplinksStatusesOverviewResultOutput{}, options).(GetApplianceUplinksStatusesOverviewResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceUplinksStatusesOverview.

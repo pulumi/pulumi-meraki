@@ -62,12 +62,8 @@ type GetInsightApplicationsResult struct {
 }
 
 func GetInsightApplicationsOutput(ctx *pulumi.Context, args GetInsightApplicationsOutputArgs, opts ...pulumi.InvokeOption) GetInsightApplicationsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetInsightApplicationsResultOutput, error) {
-			args := v.(GetInsightApplicationsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getInsightApplications:getInsightApplications", args, GetInsightApplicationsResultOutput{}, options).(GetInsightApplicationsResultOutput), nil
-		}).(GetInsightApplicationsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getInsightApplications:getInsightApplications", args, GetInsightApplicationsResultOutput{}, options).(GetInsightApplicationsResultOutput)
 }
 
 // A collection of arguments for invoking getInsightApplications.

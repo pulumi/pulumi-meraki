@@ -61,12 +61,8 @@ type LookupCellularGatewaySubnetPoolResult struct {
 }
 
 func LookupCellularGatewaySubnetPoolOutput(ctx *pulumi.Context, args LookupCellularGatewaySubnetPoolOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewaySubnetPoolResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewaySubnetPoolResultOutput, error) {
-			args := v.(LookupCellularGatewaySubnetPoolArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", args, LookupCellularGatewaySubnetPoolResultOutput{}, options).(LookupCellularGatewaySubnetPoolResultOutput), nil
-		}).(LookupCellularGatewaySubnetPoolResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", args, LookupCellularGatewaySubnetPoolResultOutput{}, options).(LookupCellularGatewaySubnetPoolResultOutput)
 }
 
 // A collection of arguments for invoking getCellularGatewaySubnetPool.

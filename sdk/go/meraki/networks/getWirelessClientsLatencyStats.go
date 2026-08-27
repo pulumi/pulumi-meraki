@@ -106,12 +106,8 @@ type GetWirelessClientsLatencyStatsResult struct {
 }
 
 func GetWirelessClientsLatencyStatsOutput(ctx *pulumi.Context, args GetWirelessClientsLatencyStatsOutputArgs, opts ...pulumi.InvokeOption) GetWirelessClientsLatencyStatsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessClientsLatencyStatsResultOutput, error) {
-			args := v.(GetWirelessClientsLatencyStatsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args, GetWirelessClientsLatencyStatsResultOutput{}, options).(GetWirelessClientsLatencyStatsResultOutput), nil
-		}).(GetWirelessClientsLatencyStatsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args, GetWirelessClientsLatencyStatsResultOutput{}, options).(GetWirelessClientsLatencyStatsResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessClientsLatencyStats.

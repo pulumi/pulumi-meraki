@@ -42,12 +42,8 @@ type GetPiiRequestsResult struct {
 }
 
 func GetPiiRequestsOutput(ctx *pulumi.Context, args GetPiiRequestsOutputArgs, opts ...pulumi.InvokeOption) GetPiiRequestsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetPiiRequestsResultOutput, error) {
-			args := v.(GetPiiRequestsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getPiiRequests:getPiiRequests", args, GetPiiRequestsResultOutput{}, options).(GetPiiRequestsResultOutput), nil
-		}).(GetPiiRequestsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getPiiRequests:getPiiRequests", args, GetPiiRequestsResultOutput{}, options).(GetPiiRequestsResultOutput)
 }
 
 // A collection of arguments for invoking getPiiRequests.

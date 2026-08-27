@@ -42,12 +42,8 @@ type LookupSamlRolesResult struct {
 }
 
 func LookupSamlRolesOutput(ctx *pulumi.Context, args LookupSamlRolesOutputArgs, opts ...pulumi.InvokeOption) LookupSamlRolesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSamlRolesResultOutput, error) {
-			args := v.(LookupSamlRolesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSamlRoles:getSamlRoles", args, LookupSamlRolesResultOutput{}, options).(LookupSamlRolesResultOutput), nil
-		}).(LookupSamlRolesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSamlRoles:getSamlRoles", args, LookupSamlRolesResultOutput{}, options).(LookupSamlRolesResultOutput)
 }
 
 // A collection of arguments for invoking getSamlRoles.

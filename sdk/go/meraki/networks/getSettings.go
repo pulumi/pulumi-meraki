@@ -61,12 +61,8 @@ type LookupSettingsResult struct {
 }
 
 func LookupSettingsOutput(ctx *pulumi.Context, args LookupSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSettingsResultOutput, error) {
-			args := v.(LookupSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSettings:getSettings", args, LookupSettingsResultOutput{}, options).(LookupSettingsResultOutput), nil
-		}).(LookupSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSettings:getSettings", args, LookupSettingsResultOutput{}, options).(LookupSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getSettings.

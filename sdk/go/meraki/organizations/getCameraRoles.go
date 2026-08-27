@@ -42,12 +42,8 @@ type LookupCameraRolesResult struct {
 }
 
 func LookupCameraRolesOutput(ctx *pulumi.Context, args LookupCameraRolesOutputArgs, opts ...pulumi.InvokeOption) LookupCameraRolesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraRolesResultOutput, error) {
-			args := v.(LookupCameraRolesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getCameraRoles:getCameraRoles", args, LookupCameraRolesResultOutput{}, options).(LookupCameraRolesResultOutput), nil
-		}).(LookupCameraRolesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getCameraRoles:getCameraRoles", args, LookupCameraRolesResultOutput{}, options).(LookupCameraRolesResultOutput)
 }
 
 // A collection of arguments for invoking getCameraRoles.

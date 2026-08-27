@@ -67,12 +67,8 @@ type GetSmDevicesSecurityCentersResult struct {
 }
 
 func GetSmDevicesSecurityCentersOutput(ctx *pulumi.Context, args GetSmDevicesSecurityCentersOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesSecurityCentersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesSecurityCentersResultOutput, error) {
-			args := v.(GetSmDevicesSecurityCentersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", args, GetSmDevicesSecurityCentersResultOutput{}, options).(GetSmDevicesSecurityCentersResultOutput), nil
-		}).(GetSmDevicesSecurityCentersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", args, GetSmDevicesSecurityCentersResultOutput{}, options).(GetSmDevicesSecurityCentersResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesSecurityCenters.

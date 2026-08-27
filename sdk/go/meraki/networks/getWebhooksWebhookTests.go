@@ -66,12 +66,8 @@ type GetWebhooksWebhookTestsResult struct {
 }
 
 func GetWebhooksWebhookTestsOutput(ctx *pulumi.Context, args GetWebhooksWebhookTestsOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksWebhookTestsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWebhooksWebhookTestsResultOutput, error) {
-			args := v.(GetWebhooksWebhookTestsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", args, GetWebhooksWebhookTestsResultOutput{}, options).(GetWebhooksWebhookTestsResultOutput), nil
-		}).(GetWebhooksWebhookTestsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", args, GetWebhooksWebhookTestsResultOutput{}, options).(GetWebhooksWebhookTestsResultOutput)
 }
 
 // A collection of arguments for invoking getWebhooksWebhookTests.

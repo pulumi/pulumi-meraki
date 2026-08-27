@@ -67,12 +67,8 @@ type GetSmUsersDeviceProfilesResult struct {
 }
 
 func GetSmUsersDeviceProfilesOutput(ctx *pulumi.Context, args GetSmUsersDeviceProfilesOutputArgs, opts ...pulumi.InvokeOption) GetSmUsersDeviceProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmUsersDeviceProfilesResultOutput, error) {
-			args := v.(GetSmUsersDeviceProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", args, GetSmUsersDeviceProfilesResultOutput{}, options).(GetSmUsersDeviceProfilesResultOutput), nil
-		}).(GetSmUsersDeviceProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", args, GetSmUsersDeviceProfilesResultOutput{}, options).(GetSmUsersDeviceProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getSmUsersDeviceProfiles.

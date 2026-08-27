@@ -110,12 +110,8 @@ type GetDevicesPowerModulesStatusesByDeviceResult struct {
 }
 
 func GetDevicesPowerModulesStatusesByDeviceOutput(ctx *pulumi.Context, args GetDevicesPowerModulesStatusesByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetDevicesPowerModulesStatusesByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDevicesPowerModulesStatusesByDeviceResultOutput, error) {
-			args := v.(GetDevicesPowerModulesStatusesByDeviceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args, GetDevicesPowerModulesStatusesByDeviceResultOutput{}, options).(GetDevicesPowerModulesStatusesByDeviceResultOutput), nil
-		}).(GetDevicesPowerModulesStatusesByDeviceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args, GetDevicesPowerModulesStatusesByDeviceResultOutput{}, options).(GetDevicesPowerModulesStatusesByDeviceResultOutput)
 }
 
 // A collection of arguments for invoking getDevicesPowerModulesStatusesByDevice.

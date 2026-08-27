@@ -70,12 +70,8 @@ type LookupWirelessRfProfilesResult struct {
 }
 
 func LookupWirelessRfProfilesOutput(ctx *pulumi.Context, args LookupWirelessRfProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessRfProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessRfProfilesResultOutput, error) {
-			args := v.(LookupWirelessRfProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", args, LookupWirelessRfProfilesResultOutput{}, options).(LookupWirelessRfProfilesResultOutput), nil
-		}).(LookupWirelessRfProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", args, LookupWirelessRfProfilesResultOutput{}, options).(LookupWirelessRfProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessRfProfiles.

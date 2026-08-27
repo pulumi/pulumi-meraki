@@ -69,12 +69,8 @@ type LookupInventoryOnboardingCloudMonitoringImportsResult struct {
 }
 
 func LookupInventoryOnboardingCloudMonitoringImportsOutput(ctx *pulumi.Context, args LookupInventoryOnboardingCloudMonitoringImportsOutputArgs, opts ...pulumi.InvokeOption) LookupInventoryOnboardingCloudMonitoringImportsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupInventoryOnboardingCloudMonitoringImportsResultOutput, error) {
-			args := v.(LookupInventoryOnboardingCloudMonitoringImportsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args, LookupInventoryOnboardingCloudMonitoringImportsResultOutput{}, options).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput), nil
-		}).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args, LookupInventoryOnboardingCloudMonitoringImportsResultOutput{}, options).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput)
 }
 
 // A collection of arguments for invoking getInventoryOnboardingCloudMonitoringImports.

@@ -66,12 +66,8 @@ type LookupClientsPolicyResult struct {
 }
 
 func LookupClientsPolicyOutput(ctx *pulumi.Context, args LookupClientsPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupClientsPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupClientsPolicyResultOutput, error) {
-			args := v.(LookupClientsPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getClientsPolicy:getClientsPolicy", args, LookupClientsPolicyResultOutput{}, options).(LookupClientsPolicyResultOutput), nil
-		}).(LookupClientsPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getClientsPolicy:getClientsPolicy", args, LookupClientsPolicyResultOutput{}, options).(LookupClientsPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getClientsPolicy.

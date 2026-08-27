@@ -61,12 +61,8 @@ type GetAppliancePerformanceResult struct {
 }
 
 func GetAppliancePerformanceOutput(ctx *pulumi.Context, args GetAppliancePerformanceOutputArgs, opts ...pulumi.InvokeOption) GetAppliancePerformanceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAppliancePerformanceResultOutput, error) {
-			args := v.(GetAppliancePerformanceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getAppliancePerformance:getAppliancePerformance", args, GetAppliancePerformanceResultOutput{}, options).(GetAppliancePerformanceResultOutput), nil
-		}).(GetAppliancePerformanceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getAppliancePerformance:getAppliancePerformance", args, GetAppliancePerformanceResultOutput{}, options).(GetAppliancePerformanceResultOutput)
 }
 
 // A collection of arguments for invoking getAppliancePerformance.

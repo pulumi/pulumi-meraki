@@ -67,12 +67,8 @@ type GetSmDevicesNetworkAdaptersResult struct {
 }
 
 func GetSmDevicesNetworkAdaptersOutput(ctx *pulumi.Context, args GetSmDevicesNetworkAdaptersOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesNetworkAdaptersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesNetworkAdaptersResultOutput, error) {
-			args := v.(GetSmDevicesNetworkAdaptersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", args, GetSmDevicesNetworkAdaptersResultOutput{}, options).(GetSmDevicesNetworkAdaptersResultOutput), nil
-		}).(GetSmDevicesNetworkAdaptersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", args, GetSmDevicesNetworkAdaptersResultOutput{}, options).(GetSmDevicesNetworkAdaptersResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesNetworkAdapters.

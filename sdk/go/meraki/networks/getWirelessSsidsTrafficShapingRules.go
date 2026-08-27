@@ -66,12 +66,8 @@ type LookupWirelessSsidsTrafficShapingRulesResult struct {
 }
 
 func LookupWirelessSsidsTrafficShapingRulesOutput(ctx *pulumi.Context, args LookupWirelessSsidsTrafficShapingRulesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsTrafficShapingRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsTrafficShapingRulesResultOutput, error) {
-			args := v.(LookupWirelessSsidsTrafficShapingRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", args, LookupWirelessSsidsTrafficShapingRulesResultOutput{}, options).(LookupWirelessSsidsTrafficShapingRulesResultOutput), nil
-		}).(LookupWirelessSsidsTrafficShapingRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", args, LookupWirelessSsidsTrafficShapingRulesResultOutput{}, options).(LookupWirelessSsidsTrafficShapingRulesResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsTrafficShapingRules.

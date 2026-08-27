@@ -46,12 +46,8 @@ type LookupWirelessSsidsIdentityPsksResult struct {
 }
 
 func LookupWirelessSsidsIdentityPsksOutput(ctx *pulumi.Context, args LookupWirelessSsidsIdentityPsksOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsIdentityPsksResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsIdentityPsksResultOutput, error) {
-			args := v.(LookupWirelessSsidsIdentityPsksArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", args, LookupWirelessSsidsIdentityPsksResultOutput{}, options).(LookupWirelessSsidsIdentityPsksResultOutput), nil
-		}).(LookupWirelessSsidsIdentityPsksResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", args, LookupWirelessSsidsIdentityPsksResultOutput{}, options).(LookupWirelessSsidsIdentityPsksResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsIdentityPsks.

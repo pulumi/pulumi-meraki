@@ -67,12 +67,8 @@ type GetConfigTemplatesSwitchProfilesResult struct {
 }
 
 func GetConfigTemplatesSwitchProfilesOutput(ctx *pulumi.Context, args GetConfigTemplatesSwitchProfilesOutputArgs, opts ...pulumi.InvokeOption) GetConfigTemplatesSwitchProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetConfigTemplatesSwitchProfilesResultOutput, error) {
-			args := v.(GetConfigTemplatesSwitchProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args, GetConfigTemplatesSwitchProfilesResultOutput{}, options).(GetConfigTemplatesSwitchProfilesResultOutput), nil
-		}).(GetConfigTemplatesSwitchProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args, GetConfigTemplatesSwitchProfilesResultOutput{}, options).(GetConfigTemplatesSwitchProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getConfigTemplatesSwitchProfiles.

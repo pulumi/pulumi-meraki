@@ -98,12 +98,8 @@ type GetCellularGatewayUplinkStatusesResult struct {
 }
 
 func GetCellularGatewayUplinkStatusesOutput(ctx *pulumi.Context, args GetCellularGatewayUplinkStatusesOutputArgs, opts ...pulumi.InvokeOption) GetCellularGatewayUplinkStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetCellularGatewayUplinkStatusesResultOutput, error) {
-			args := v.(GetCellularGatewayUplinkStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args, GetCellularGatewayUplinkStatusesResultOutput{}, options).(GetCellularGatewayUplinkStatusesResultOutput), nil
-		}).(GetCellularGatewayUplinkStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args, GetCellularGatewayUplinkStatusesResultOutput{}, options).(GetCellularGatewayUplinkStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getCellularGatewayUplinkStatuses.

@@ -50,12 +50,8 @@ type LookupConfigTemplatesSwitchProfilesPortsResult struct {
 }
 
 func LookupConfigTemplatesSwitchProfilesPortsOutput(ctx *pulumi.Context, args LookupConfigTemplatesSwitchProfilesPortsOutputArgs, opts ...pulumi.InvokeOption) LookupConfigTemplatesSwitchProfilesPortsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupConfigTemplatesSwitchProfilesPortsResultOutput, error) {
-			args := v.(LookupConfigTemplatesSwitchProfilesPortsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", args, LookupConfigTemplatesSwitchProfilesPortsResultOutput{}, options).(LookupConfigTemplatesSwitchProfilesPortsResultOutput), nil
-		}).(LookupConfigTemplatesSwitchProfilesPortsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", args, LookupConfigTemplatesSwitchProfilesPortsResultOutput{}, options).(LookupConfigTemplatesSwitchProfilesPortsResultOutput)
 }
 
 // A collection of arguments for invoking getConfigTemplatesSwitchProfilesPorts.

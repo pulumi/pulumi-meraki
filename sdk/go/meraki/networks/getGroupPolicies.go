@@ -42,12 +42,8 @@ type LookupGroupPoliciesResult struct {
 }
 
 func LookupGroupPoliciesOutput(ctx *pulumi.Context, args LookupGroupPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupGroupPoliciesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupGroupPoliciesResultOutput, error) {
-			args := v.(LookupGroupPoliciesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getGroupPolicies:getGroupPolicies", args, LookupGroupPoliciesResultOutput{}, options).(LookupGroupPoliciesResultOutput), nil
-		}).(LookupGroupPoliciesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getGroupPolicies:getGroupPolicies", args, LookupGroupPoliciesResultOutput{}, options).(LookupGroupPoliciesResultOutput)
 }
 
 // A collection of arguments for invoking getGroupPolicies.

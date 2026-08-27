@@ -62,12 +62,8 @@ type GetSensorRelationshipsResult struct {
 }
 
 func GetSensorRelationshipsOutput(ctx *pulumi.Context, args GetSensorRelationshipsOutputArgs, opts ...pulumi.InvokeOption) GetSensorRelationshipsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSensorRelationshipsResultOutput, error) {
-			args := v.(GetSensorRelationshipsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSensorRelationships:getSensorRelationships", args, GetSensorRelationshipsResultOutput{}, options).(GetSensorRelationshipsResultOutput), nil
-		}).(GetSensorRelationshipsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSensorRelationships:getSensorRelationships", args, GetSensorRelationshipsResultOutput{}, options).(GetSensorRelationshipsResultOutput)
 }
 
 // A collection of arguments for invoking getSensorRelationships.

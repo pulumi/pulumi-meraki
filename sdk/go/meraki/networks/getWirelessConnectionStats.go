@@ -96,12 +96,8 @@ type GetWirelessConnectionStatsResult struct {
 }
 
 func GetWirelessConnectionStatsOutput(ctx *pulumi.Context, args GetWirelessConnectionStatsOutputArgs, opts ...pulumi.InvokeOption) GetWirelessConnectionStatsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessConnectionStatsResultOutput, error) {
-			args := v.(GetWirelessConnectionStatsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", args, GetWirelessConnectionStatsResultOutput{}, options).(GetWirelessConnectionStatsResultOutput), nil
-		}).(GetWirelessConnectionStatsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", args, GetWirelessConnectionStatsResultOutput{}, options).(GetWirelessConnectionStatsResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessConnectionStats.

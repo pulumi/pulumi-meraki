@@ -66,12 +66,8 @@ type LookupWirelessSsidsFirewallL7FirewallRulesResult struct {
 }
 
 func LookupWirelessSsidsFirewallL7FirewallRulesOutput(ctx *pulumi.Context, args LookupWirelessSsidsFirewallL7FirewallRulesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsFirewallL7FirewallRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsFirewallL7FirewallRulesResultOutput, error) {
-			args := v.(LookupWirelessSsidsFirewallL7FirewallRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", args, LookupWirelessSsidsFirewallL7FirewallRulesResultOutput{}, options).(LookupWirelessSsidsFirewallL7FirewallRulesResultOutput), nil
-		}).(LookupWirelessSsidsFirewallL7FirewallRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", args, LookupWirelessSsidsFirewallL7FirewallRulesResultOutput{}, options).(LookupWirelessSsidsFirewallL7FirewallRulesResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsFirewallL7FirewallRules.

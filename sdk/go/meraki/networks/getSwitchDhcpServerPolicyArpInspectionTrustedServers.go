@@ -77,12 +77,8 @@ type LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResult struct {
 }
 
 func LookupSwitchDhcpServerPolicyArpInspectionTrustedServersOutput(ctx *pulumi.Context, args LookupSwitchDhcpServerPolicyArpInspectionTrustedServersOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput, error) {
-			args := v.(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", args, LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput{}, options).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput), nil
-		}).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", args, LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput{}, options).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchDhcpServerPolicyArpInspectionTrustedServers.

@@ -76,12 +76,8 @@ type GetClientsOverviewResult struct {
 }
 
 func GetClientsOverviewOutput(ctx *pulumi.Context, args GetClientsOverviewOutputArgs, opts ...pulumi.InvokeOption) GetClientsOverviewResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetClientsOverviewResultOutput, error) {
-			args := v.(GetClientsOverviewArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getClientsOverview:getClientsOverview", args, GetClientsOverviewResultOutput{}, options).(GetClientsOverviewResultOutput), nil
-		}).(GetClientsOverviewResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getClientsOverview:getClientsOverview", args, GetClientsOverviewResultOutput{}, options).(GetClientsOverviewResultOutput)
 }
 
 // A collection of arguments for invoking getClientsOverview.

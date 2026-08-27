@@ -61,12 +61,8 @@ type LookupWirelessRadioSettingsResult struct {
 }
 
 func LookupWirelessRadioSettingsOutput(ctx *pulumi.Context, args LookupWirelessRadioSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessRadioSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessRadioSettingsResultOutput, error) {
-			args := v.(LookupWirelessRadioSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", args, LookupWirelessRadioSettingsResultOutput{}, options).(LookupWirelessRadioSettingsResultOutput), nil
-		}).(LookupWirelessRadioSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", args, LookupWirelessRadioSettingsResultOutput{}, options).(LookupWirelessRadioSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessRadioSettings.

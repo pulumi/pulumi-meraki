@@ -61,12 +61,8 @@ type LookupApplianceFirewallPortForwardingRulesResult struct {
 }
 
 func LookupApplianceFirewallPortForwardingRulesOutput(ctx *pulumi.Context, args LookupApplianceFirewallPortForwardingRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceFirewallPortForwardingRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceFirewallPortForwardingRulesResultOutput, error) {
-			args := v.(LookupApplianceFirewallPortForwardingRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", args, LookupApplianceFirewallPortForwardingRulesResultOutput{}, options).(LookupApplianceFirewallPortForwardingRulesResultOutput), nil
-		}).(LookupApplianceFirewallPortForwardingRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", args, LookupApplianceFirewallPortForwardingRulesResultOutput{}, options).(LookupApplianceFirewallPortForwardingRulesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceFirewallPortForwardingRules.

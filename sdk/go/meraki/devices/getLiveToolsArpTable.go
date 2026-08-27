@@ -66,12 +66,8 @@ type LookupLiveToolsArpTableResult struct {
 }
 
 func LookupLiveToolsArpTableOutput(ctx *pulumi.Context, args LookupLiveToolsArpTableOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsArpTableResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLiveToolsArpTableResultOutput, error) {
-			args := v.(LookupLiveToolsArpTableArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", args, LookupLiveToolsArpTableResultOutput{}, options).(LookupLiveToolsArpTableResultOutput), nil
-		}).(LookupLiveToolsArpTableResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", args, LookupLiveToolsArpTableResultOutput{}, options).(LookupLiveToolsArpTableResultOutput)
 }
 
 // A collection of arguments for invoking getLiveToolsArpTable.

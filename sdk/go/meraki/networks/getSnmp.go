@@ -61,12 +61,8 @@ type LookupSnmpResult struct {
 }
 
 func LookupSnmpOutput(ctx *pulumi.Context, args LookupSnmpOutputArgs, opts ...pulumi.InvokeOption) LookupSnmpResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSnmpResultOutput, error) {
-			args := v.(LookupSnmpArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSnmp:getSnmp", args, LookupSnmpResultOutput{}, options).(LookupSnmpResultOutput), nil
-		}).(LookupSnmpResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSnmp:getSnmp", args, LookupSnmpResultOutput{}, options).(LookupSnmpResultOutput)
 }
 
 // A collection of arguments for invoking getSnmp.

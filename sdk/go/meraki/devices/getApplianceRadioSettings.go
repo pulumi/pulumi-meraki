@@ -61,12 +61,8 @@ type LookupApplianceRadioSettingsResult struct {
 }
 
 func LookupApplianceRadioSettingsOutput(ctx *pulumi.Context, args LookupApplianceRadioSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceRadioSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceRadioSettingsResultOutput, error) {
-			args := v.(LookupApplianceRadioSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", args, LookupApplianceRadioSettingsResultOutput{}, options).(LookupApplianceRadioSettingsResultOutput), nil
-		}).(LookupApplianceRadioSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", args, LookupApplianceRadioSettingsResultOutput{}, options).(LookupApplianceRadioSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceRadioSettings.

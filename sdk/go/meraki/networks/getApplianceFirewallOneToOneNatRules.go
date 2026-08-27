@@ -61,12 +61,8 @@ type LookupApplianceFirewallOneToOneNatRulesResult struct {
 }
 
 func LookupApplianceFirewallOneToOneNatRulesOutput(ctx *pulumi.Context, args LookupApplianceFirewallOneToOneNatRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceFirewallOneToOneNatRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceFirewallOneToOneNatRulesResultOutput, error) {
-			args := v.(LookupApplianceFirewallOneToOneNatRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules", args, LookupApplianceFirewallOneToOneNatRulesResultOutput{}, options).(LookupApplianceFirewallOneToOneNatRulesResultOutput), nil
-		}).(LookupApplianceFirewallOneToOneNatRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules", args, LookupApplianceFirewallOneToOneNatRulesResultOutput{}, options).(LookupApplianceFirewallOneToOneNatRulesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceFirewallOneToOneNatRules.

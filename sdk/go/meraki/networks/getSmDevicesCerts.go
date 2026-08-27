@@ -67,12 +67,8 @@ type GetSmDevicesCertsResult struct {
 }
 
 func GetSmDevicesCertsOutput(ctx *pulumi.Context, args GetSmDevicesCertsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesCertsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesCertsResultOutput, error) {
-			args := v.(GetSmDevicesCertsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args, GetSmDevicesCertsResultOutput{}, options).(GetSmDevicesCertsResultOutput), nil
-		}).(GetSmDevicesCertsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args, GetSmDevicesCertsResultOutput{}, options).(GetSmDevicesCertsResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesCerts.

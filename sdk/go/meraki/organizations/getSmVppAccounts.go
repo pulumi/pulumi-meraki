@@ -42,12 +42,8 @@ type GetSmVppAccountsResult struct {
 }
 
 func GetSmVppAccountsOutput(ctx *pulumi.Context, args GetSmVppAccountsOutputArgs, opts ...pulumi.InvokeOption) GetSmVppAccountsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmVppAccountsResultOutput, error) {
-			args := v.(GetSmVppAccountsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSmVppAccounts:getSmVppAccounts", args, GetSmVppAccountsResultOutput{}, options).(GetSmVppAccountsResultOutput), nil
-		}).(GetSmVppAccountsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSmVppAccounts:getSmVppAccounts", args, GetSmVppAccountsResultOutput{}, options).(GetSmVppAccountsResultOutput)
 }
 
 // A collection of arguments for invoking getSmVppAccounts.

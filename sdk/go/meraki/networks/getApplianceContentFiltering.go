@@ -61,12 +61,8 @@ type LookupApplianceContentFilteringResult struct {
 }
 
 func LookupApplianceContentFilteringOutput(ctx *pulumi.Context, args LookupApplianceContentFilteringOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceContentFilteringResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceContentFilteringResultOutput, error) {
-			args := v.(LookupApplianceContentFilteringArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args, LookupApplianceContentFilteringResultOutput{}, options).(LookupApplianceContentFilteringResultOutput), nil
-		}).(LookupApplianceContentFilteringResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args, LookupApplianceContentFilteringResultOutput{}, options).(LookupApplianceContentFilteringResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceContentFiltering.

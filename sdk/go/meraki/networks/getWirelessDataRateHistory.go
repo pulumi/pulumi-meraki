@@ -112,12 +112,8 @@ type GetWirelessDataRateHistoryResult struct {
 }
 
 func GetWirelessDataRateHistoryOutput(ctx *pulumi.Context, args GetWirelessDataRateHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDataRateHistoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessDataRateHistoryResultOutput, error) {
-			args := v.(GetWirelessDataRateHistoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessDataRateHistory:getWirelessDataRateHistory", args, GetWirelessDataRateHistoryResultOutput{}, options).(GetWirelessDataRateHistoryResultOutput), nil
-		}).(GetWirelessDataRateHistoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessDataRateHistory:getWirelessDataRateHistory", args, GetWirelessDataRateHistoryResultOutput{}, options).(GetWirelessDataRateHistoryResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessDataRateHistory.

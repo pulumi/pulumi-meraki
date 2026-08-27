@@ -61,12 +61,8 @@ type LookupCameraVideoSettingsResult struct {
 }
 
 func LookupCameraVideoSettingsOutput(ctx *pulumi.Context, args LookupCameraVideoSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupCameraVideoSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraVideoSettingsResultOutput, error) {
-			args := v.(LookupCameraVideoSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", args, LookupCameraVideoSettingsResultOutput{}, options).(LookupCameraVideoSettingsResultOutput), nil
-		}).(LookupCameraVideoSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", args, LookupCameraVideoSettingsResultOutput{}, options).(LookupCameraVideoSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getCameraVideoSettings.

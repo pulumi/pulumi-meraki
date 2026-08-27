@@ -66,12 +66,8 @@ type LookupWirelessSsidsHotspot20Result struct {
 }
 
 func LookupWirelessSsidsHotspot20Output(ctx *pulumi.Context, args LookupWirelessSsidsHotspot20OutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsHotspot20ResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsHotspot20ResultOutput, error) {
-			args := v.(LookupWirelessSsidsHotspot20Args)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", args, LookupWirelessSsidsHotspot20ResultOutput{}, options).(LookupWirelessSsidsHotspot20ResultOutput), nil
-		}).(LookupWirelessSsidsHotspot20ResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", args, LookupWirelessSsidsHotspot20ResultOutput{}, options).(LookupWirelessSsidsHotspot20ResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsHotspot20.

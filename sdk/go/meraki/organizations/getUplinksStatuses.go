@@ -98,12 +98,8 @@ type GetUplinksStatusesResult struct {
 }
 
 func GetUplinksStatusesOutput(ctx *pulumi.Context, args GetUplinksStatusesOutputArgs, opts ...pulumi.InvokeOption) GetUplinksStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetUplinksStatusesResultOutput, error) {
-			args := v.(GetUplinksStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getUplinksStatuses:getUplinksStatuses", args, GetUplinksStatusesResultOutput{}, options).(GetUplinksStatusesResultOutput), nil
-		}).(GetUplinksStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getUplinksStatuses:getUplinksStatuses", args, GetUplinksStatusesResultOutput{}, options).(GetUplinksStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getUplinksStatuses.

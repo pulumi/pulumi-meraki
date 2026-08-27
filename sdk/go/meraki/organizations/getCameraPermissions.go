@@ -66,12 +66,8 @@ type GetCameraPermissionsResult struct {
 }
 
 func GetCameraPermissionsOutput(ctx *pulumi.Context, args GetCameraPermissionsOutputArgs, opts ...pulumi.InvokeOption) GetCameraPermissionsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetCameraPermissionsResultOutput, error) {
-			args := v.(GetCameraPermissionsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getCameraPermissions:getCameraPermissions", args, GetCameraPermissionsResultOutput{}, options).(GetCameraPermissionsResultOutput), nil
-		}).(GetCameraPermissionsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getCameraPermissions:getCameraPermissions", args, GetCameraPermissionsResultOutput{}, options).(GetCameraPermissionsResultOutput)
 }
 
 // A collection of arguments for invoking getCameraPermissions.

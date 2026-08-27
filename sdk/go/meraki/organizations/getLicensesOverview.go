@@ -61,12 +61,8 @@ type GetLicensesOverviewResult struct {
 }
 
 func GetLicensesOverviewOutput(ctx *pulumi.Context, args GetLicensesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetLicensesOverviewResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLicensesOverviewResultOutput, error) {
-			args := v.(GetLicensesOverviewArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getLicensesOverview:getLicensesOverview", args, GetLicensesOverviewResultOutput{}, options).(GetLicensesOverviewResultOutput), nil
-		}).(GetLicensesOverviewResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getLicensesOverview:getLicensesOverview", args, GetLicensesOverviewResultOutput{}, options).(GetLicensesOverviewResultOutput)
 }
 
 // A collection of arguments for invoking getLicensesOverview.

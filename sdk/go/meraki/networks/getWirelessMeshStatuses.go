@@ -77,12 +77,8 @@ type GetWirelessMeshStatusesResult struct {
 }
 
 func GetWirelessMeshStatusesOutput(ctx *pulumi.Context, args GetWirelessMeshStatusesOutputArgs, opts ...pulumi.InvokeOption) GetWirelessMeshStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessMeshStatusesResultOutput, error) {
-			args := v.(GetWirelessMeshStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", args, GetWirelessMeshStatusesResultOutput{}, options).(GetWirelessMeshStatusesResultOutput), nil
-		}).(GetWirelessMeshStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", args, GetWirelessMeshStatusesResultOutput{}, options).(GetWirelessMeshStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessMeshStatuses.

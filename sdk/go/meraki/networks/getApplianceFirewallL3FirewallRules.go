@@ -61,12 +61,8 @@ type LookupApplianceFirewallL3FirewallRulesResult struct {
 }
 
 func LookupApplianceFirewallL3FirewallRulesOutput(ctx *pulumi.Context, args LookupApplianceFirewallL3FirewallRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceFirewallL3FirewallRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceFirewallL3FirewallRulesResultOutput, error) {
-			args := v.(LookupApplianceFirewallL3FirewallRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", args, LookupApplianceFirewallL3FirewallRulesResultOutput{}, options).(LookupApplianceFirewallL3FirewallRulesResultOutput), nil
-		}).(LookupApplianceFirewallL3FirewallRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", args, LookupApplianceFirewallL3FirewallRulesResultOutput{}, options).(LookupApplianceFirewallL3FirewallRulesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceFirewallL3FirewallRules.

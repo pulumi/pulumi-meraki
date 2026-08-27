@@ -91,12 +91,8 @@ type GetPiiSmOwnersForKeyResult struct {
 }
 
 func GetPiiSmOwnersForKeyOutput(ctx *pulumi.Context, args GetPiiSmOwnersForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmOwnersForKeyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetPiiSmOwnersForKeyResultOutput, error) {
-			args := v.(GetPiiSmOwnersForKeyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args, GetPiiSmOwnersForKeyResultOutput{}, options).(GetPiiSmOwnersForKeyResultOutput), nil
-		}).(GetPiiSmOwnersForKeyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args, GetPiiSmOwnersForKeyResultOutput{}, options).(GetPiiSmOwnersForKeyResultOutput)
 }
 
 // A collection of arguments for invoking getPiiSmOwnersForKey.

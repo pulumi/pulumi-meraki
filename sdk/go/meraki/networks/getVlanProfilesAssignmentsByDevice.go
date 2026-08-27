@@ -98,12 +98,8 @@ type GetVlanProfilesAssignmentsByDeviceResult struct {
 }
 
 func GetVlanProfilesAssignmentsByDeviceOutput(ctx *pulumi.Context, args GetVlanProfilesAssignmentsByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetVlanProfilesAssignmentsByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetVlanProfilesAssignmentsByDeviceResultOutput, error) {
-			args := v.(GetVlanProfilesAssignmentsByDeviceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args, GetVlanProfilesAssignmentsByDeviceResultOutput{}, options).(GetVlanProfilesAssignmentsByDeviceResultOutput), nil
-		}).(GetVlanProfilesAssignmentsByDeviceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args, GetVlanProfilesAssignmentsByDeviceResultOutput{}, options).(GetVlanProfilesAssignmentsByDeviceResultOutput)
 }
 
 // A collection of arguments for invoking getVlanProfilesAssignmentsByDevice.

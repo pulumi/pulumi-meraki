@@ -61,12 +61,8 @@ type LookupCameraCustomAnalyticsResult struct {
 }
 
 func LookupCameraCustomAnalyticsOutput(ctx *pulumi.Context, args LookupCameraCustomAnalyticsOutputArgs, opts ...pulumi.InvokeOption) LookupCameraCustomAnalyticsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraCustomAnalyticsResultOutput, error) {
-			args := v.(LookupCameraCustomAnalyticsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", args, LookupCameraCustomAnalyticsResultOutput{}, options).(LookupCameraCustomAnalyticsResultOutput), nil
-		}).(LookupCameraCustomAnalyticsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", args, LookupCameraCustomAnalyticsResultOutput{}, options).(LookupCameraCustomAnalyticsResultOutput)
 }
 
 // A collection of arguments for invoking getCameraCustomAnalytics.

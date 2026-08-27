@@ -61,12 +61,8 @@ type GetApplianceContentFilteringCategoriesResult struct {
 }
 
 func GetApplianceContentFilteringCategoriesOutput(ctx *pulumi.Context, args GetApplianceContentFilteringCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetApplianceContentFilteringCategoriesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplianceContentFilteringCategoriesResultOutput, error) {
-			args := v.(GetApplianceContentFilteringCategoriesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", args, GetApplianceContentFilteringCategoriesResultOutput{}, options).(GetApplianceContentFilteringCategoriesResultOutput), nil
-		}).(GetApplianceContentFilteringCategoriesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", args, GetApplianceContentFilteringCategoriesResultOutput{}, options).(GetApplianceContentFilteringCategoriesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceContentFilteringCategories.

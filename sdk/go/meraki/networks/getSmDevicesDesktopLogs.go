@@ -82,12 +82,8 @@ type GetSmDevicesDesktopLogsResult struct {
 }
 
 func GetSmDevicesDesktopLogsOutput(ctx *pulumi.Context, args GetSmDevicesDesktopLogsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesDesktopLogsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesDesktopLogsResultOutput, error) {
-			args := v.(GetSmDevicesDesktopLogsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args, GetSmDevicesDesktopLogsResultOutput{}, options).(GetSmDevicesDesktopLogsResultOutput), nil
-		}).(GetSmDevicesDesktopLogsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args, GetSmDevicesDesktopLogsResultOutput{}, options).(GetSmDevicesDesktopLogsResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesDesktopLogs.

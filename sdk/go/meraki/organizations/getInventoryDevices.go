@@ -94,12 +94,8 @@ type GetInventoryDevicesResult struct {
 }
 
 func GetInventoryDevicesOutput(ctx *pulumi.Context, args GetInventoryDevicesOutputArgs, opts ...pulumi.InvokeOption) GetInventoryDevicesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetInventoryDevicesResultOutput, error) {
-			args := v.(GetInventoryDevicesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getInventoryDevices:getInventoryDevices", args, GetInventoryDevicesResultOutput{}, options).(GetInventoryDevicesResultOutput), nil
-		}).(GetInventoryDevicesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getInventoryDevices:getInventoryDevices", args, GetInventoryDevicesResultOutput{}, options).(GetInventoryDevicesResultOutput)
 }
 
 // A collection of arguments for invoking getInventoryDevices.

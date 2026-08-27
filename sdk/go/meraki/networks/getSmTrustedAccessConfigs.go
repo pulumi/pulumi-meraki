@@ -77,12 +77,8 @@ type GetSmTrustedAccessConfigsResult struct {
 }
 
 func GetSmTrustedAccessConfigsOutput(ctx *pulumi.Context, args GetSmTrustedAccessConfigsOutputArgs, opts ...pulumi.InvokeOption) GetSmTrustedAccessConfigsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmTrustedAccessConfigsResultOutput, error) {
-			args := v.(GetSmTrustedAccessConfigsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args, GetSmTrustedAccessConfigsResultOutput{}, options).(GetSmTrustedAccessConfigsResultOutput), nil
-		}).(GetSmTrustedAccessConfigsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args, GetSmTrustedAccessConfigsResultOutput{}, options).(GetSmTrustedAccessConfigsResultOutput)
 }
 
 // A collection of arguments for invoking getSmTrustedAccessConfigs.

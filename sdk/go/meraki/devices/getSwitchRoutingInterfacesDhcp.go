@@ -66,12 +66,8 @@ type LookupSwitchRoutingInterfacesDhcpResult struct {
 }
 
 func LookupSwitchRoutingInterfacesDhcpOutput(ctx *pulumi.Context, args LookupSwitchRoutingInterfacesDhcpOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchRoutingInterfacesDhcpResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchRoutingInterfacesDhcpResultOutput, error) {
-			args := v.(LookupSwitchRoutingInterfacesDhcpArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", args, LookupSwitchRoutingInterfacesDhcpResultOutput{}, options).(LookupSwitchRoutingInterfacesDhcpResultOutput), nil
-		}).(LookupSwitchRoutingInterfacesDhcpResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", args, LookupSwitchRoutingInterfacesDhcpResultOutput{}, options).(LookupSwitchRoutingInterfacesDhcpResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchRoutingInterfacesDhcp.

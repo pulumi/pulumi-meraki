@@ -115,12 +115,8 @@ type GetDevicesProvisioningStatusesResult struct {
 }
 
 func GetDevicesProvisioningStatusesOutput(ctx *pulumi.Context, args GetDevicesProvisioningStatusesOutputArgs, opts ...pulumi.InvokeOption) GetDevicesProvisioningStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDevicesProvisioningStatusesResultOutput, error) {
-			args := v.(GetDevicesProvisioningStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", args, GetDevicesProvisioningStatusesResultOutput{}, options).(GetDevicesProvisioningStatusesResultOutput), nil
-		}).(GetDevicesProvisioningStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", args, GetDevicesProvisioningStatusesResultOutput{}, options).(GetDevicesProvisioningStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getDevicesProvisioningStatuses.
