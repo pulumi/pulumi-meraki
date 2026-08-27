@@ -42,12 +42,8 @@ type LookupConfigTemplatesResult struct {
 }
 
 func LookupConfigTemplatesOutput(ctx *pulumi.Context, args LookupConfigTemplatesOutputArgs, opts ...pulumi.InvokeOption) LookupConfigTemplatesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupConfigTemplatesResultOutput, error) {
-			args := v.(LookupConfigTemplatesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getConfigTemplates:getConfigTemplates", args, LookupConfigTemplatesResultOutput{}, options).(LookupConfigTemplatesResultOutput), nil
-		}).(LookupConfigTemplatesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getConfigTemplates:getConfigTemplates", args, LookupConfigTemplatesResultOutput{}, options).(LookupConfigTemplatesResultOutput)
 }
 
 // A collection of arguments for invoking getConfigTemplates.

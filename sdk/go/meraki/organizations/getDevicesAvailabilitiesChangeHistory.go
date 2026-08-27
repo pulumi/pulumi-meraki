@@ -120,12 +120,8 @@ type GetDevicesAvailabilitiesChangeHistoryResult struct {
 }
 
 func GetDevicesAvailabilitiesChangeHistoryOutput(ctx *pulumi.Context, args GetDevicesAvailabilitiesChangeHistoryOutputArgs, opts ...pulumi.InvokeOption) GetDevicesAvailabilitiesChangeHistoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDevicesAvailabilitiesChangeHistoryResultOutput, error) {
-			args := v.(GetDevicesAvailabilitiesChangeHistoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args, GetDevicesAvailabilitiesChangeHistoryResultOutput{}, options).(GetDevicesAvailabilitiesChangeHistoryResultOutput), nil
-		}).(GetDevicesAvailabilitiesChangeHistoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args, GetDevicesAvailabilitiesChangeHistoryResultOutput{}, options).(GetDevicesAvailabilitiesChangeHistoryResultOutput)
 }
 
 // A collection of arguments for invoking getDevicesAvailabilitiesChangeHistory.

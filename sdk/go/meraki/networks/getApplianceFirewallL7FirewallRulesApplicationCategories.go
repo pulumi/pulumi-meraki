@@ -61,12 +61,8 @@ type GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult struct {
 }
 
 func GetApplianceFirewallL7FirewallRulesApplicationCategoriesOutput(ctx *pulumi.Context, args GetApplianceFirewallL7FirewallRulesApplicationCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput, error) {
-			args := v.(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", args, GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput{}, options).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput), nil
-		}).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", args, GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput{}, options).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceFirewallL7FirewallRulesApplicationCategories.

@@ -66,12 +66,8 @@ type GetLiveToolsCableTestResult struct {
 }
 
 func GetLiveToolsCableTestOutput(ctx *pulumi.Context, args GetLiveToolsCableTestOutputArgs, opts ...pulumi.InvokeOption) GetLiveToolsCableTestResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLiveToolsCableTestResultOutput, error) {
-			args := v.(GetLiveToolsCableTestArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", args, GetLiveToolsCableTestResultOutput{}, options).(GetLiveToolsCableTestResultOutput), nil
-		}).(GetLiveToolsCableTestResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", args, GetLiveToolsCableTestResultOutput{}, options).(GetLiveToolsCableTestResultOutput)
 }
 
 // A collection of arguments for invoking getLiveToolsCableTest.

@@ -61,12 +61,8 @@ type LookupCameraWirelessProfilesResult struct {
 }
 
 func LookupCameraWirelessProfilesOutput(ctx *pulumi.Context, args LookupCameraWirelessProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupCameraWirelessProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraWirelessProfilesResultOutput, error) {
-			args := v.(LookupCameraWirelessProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", args, LookupCameraWirelessProfilesResultOutput{}, options).(LookupCameraWirelessProfilesResultOutput), nil
-		}).(LookupCameraWirelessProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", args, LookupCameraWirelessProfilesResultOutput{}, options).(LookupCameraWirelessProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getCameraWirelessProfiles.

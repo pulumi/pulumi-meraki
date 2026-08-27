@@ -66,12 +66,8 @@ type LookupVlanProfilesResult struct {
 }
 
 func LookupVlanProfilesOutput(ctx *pulumi.Context, args LookupVlanProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupVlanProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupVlanProfilesResultOutput, error) {
-			args := v.(LookupVlanProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getVlanProfiles:getVlanProfiles", args, LookupVlanProfilesResultOutput{}, options).(LookupVlanProfilesResultOutput), nil
-		}).(LookupVlanProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getVlanProfiles:getVlanProfiles", args, LookupVlanProfilesResultOutput{}, options).(LookupVlanProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getVlanProfiles.

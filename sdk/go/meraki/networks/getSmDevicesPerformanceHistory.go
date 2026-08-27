@@ -82,12 +82,8 @@ type GetSmDevicesPerformanceHistoryResult struct {
 }
 
 func GetSmDevicesPerformanceHistoryOutput(ctx *pulumi.Context, args GetSmDevicesPerformanceHistoryOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesPerformanceHistoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesPerformanceHistoryResultOutput, error) {
-			args := v.(GetSmDevicesPerformanceHistoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", args, GetSmDevicesPerformanceHistoryResultOutput{}, options).(GetSmDevicesPerformanceHistoryResultOutput), nil
-		}).(GetSmDevicesPerformanceHistoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", args, GetSmDevicesPerformanceHistoryResultOutput{}, options).(GetSmDevicesPerformanceHistoryResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesPerformanceHistory.

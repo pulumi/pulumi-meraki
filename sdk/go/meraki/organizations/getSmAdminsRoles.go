@@ -80,12 +80,8 @@ type LookupSmAdminsRolesResult struct {
 }
 
 func LookupSmAdminsRolesOutput(ctx *pulumi.Context, args LookupSmAdminsRolesOutputArgs, opts ...pulumi.InvokeOption) LookupSmAdminsRolesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSmAdminsRolesResultOutput, error) {
-			args := v.(LookupSmAdminsRolesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", args, LookupSmAdminsRolesResultOutput{}, options).(LookupSmAdminsRolesResultOutput), nil
-		}).(LookupSmAdminsRolesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", args, LookupSmAdminsRolesResultOutput{}, options).(LookupSmAdminsRolesResultOutput)
 }
 
 // A collection of arguments for invoking getSmAdminsRoles.

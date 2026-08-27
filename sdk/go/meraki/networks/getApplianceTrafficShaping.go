@@ -61,12 +61,8 @@ type LookupApplianceTrafficShapingResult struct {
 }
 
 func LookupApplianceTrafficShapingOutput(ctx *pulumi.Context, args LookupApplianceTrafficShapingOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceTrafficShapingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceTrafficShapingResultOutput, error) {
-			args := v.(LookupApplianceTrafficShapingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceTrafficShaping:getApplianceTrafficShaping", args, LookupApplianceTrafficShapingResultOutput{}, options).(LookupApplianceTrafficShapingResultOutput), nil
-		}).(LookupApplianceTrafficShapingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceTrafficShaping:getApplianceTrafficShaping", args, LookupApplianceTrafficShapingResultOutput{}, options).(LookupApplianceTrafficShapingResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceTrafficShaping.

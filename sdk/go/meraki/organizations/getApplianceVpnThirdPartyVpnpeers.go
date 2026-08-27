@@ -61,12 +61,8 @@ type LookupApplianceVpnThirdPartyVpnpeersResult struct {
 }
 
 func LookupApplianceVpnThirdPartyVpnpeersOutput(ctx *pulumi.Context, args LookupApplianceVpnThirdPartyVpnpeersOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnThirdPartyVpnpeersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceVpnThirdPartyVpnpeersResultOutput, error) {
-			args := v.(LookupApplianceVpnThirdPartyVpnpeersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args, LookupApplianceVpnThirdPartyVpnpeersResultOutput{}, options).(LookupApplianceVpnThirdPartyVpnpeersResultOutput), nil
-		}).(LookupApplianceVpnThirdPartyVpnpeersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args, LookupApplianceVpnThirdPartyVpnpeersResultOutput{}, options).(LookupApplianceVpnThirdPartyVpnpeersResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceVpnThirdPartyVpnpeers.

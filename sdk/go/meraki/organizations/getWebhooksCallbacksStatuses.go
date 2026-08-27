@@ -66,12 +66,8 @@ type GetWebhooksCallbacksStatusesResult struct {
 }
 
 func GetWebhooksCallbacksStatusesOutput(ctx *pulumi.Context, args GetWebhooksCallbacksStatusesOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksCallbacksStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWebhooksCallbacksStatusesResultOutput, error) {
-			args := v.(GetWebhooksCallbacksStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args, GetWebhooksCallbacksStatusesResultOutput{}, options).(GetWebhooksCallbacksStatusesResultOutput), nil
-		}).(GetWebhooksCallbacksStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args, GetWebhooksCallbacksStatusesResultOutput{}, options).(GetWebhooksCallbacksStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getWebhooksCallbacksStatuses.

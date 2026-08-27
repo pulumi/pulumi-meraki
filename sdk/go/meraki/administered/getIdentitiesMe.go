@@ -51,10 +51,8 @@ type GetIdentitiesMeResult struct {
 }
 
 func GetIdentitiesMeOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) GetIdentitiesMeResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (GetIdentitiesMeResultOutput, error) {
-		options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-		return ctx.InvokeOutput("meraki:administered/getIdentitiesMe:getIdentitiesMe", nil, GetIdentitiesMeResultOutput{}, options).(GetIdentitiesMeResultOutput), nil
-	}).(GetIdentitiesMeResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:administered/getIdentitiesMe:getIdentitiesMe", nil, GetIdentitiesMeResultOutput{}, options).(GetIdentitiesMeResultOutput)
 }
 
 // A collection of values returned by getIdentitiesMe.

@@ -111,12 +111,8 @@ type GetWirelessDevicesChannelUtilizationByNetworkResult struct {
 }
 
 func GetWirelessDevicesChannelUtilizationByNetworkOutput(ctx *pulumi.Context, args GetWirelessDevicesChannelUtilizationByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesChannelUtilizationByNetworkResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessDevicesChannelUtilizationByNetworkResultOutput, error) {
-			args := v.(GetWirelessDevicesChannelUtilizationByNetworkArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", args, GetWirelessDevicesChannelUtilizationByNetworkResultOutput{}, options).(GetWirelessDevicesChannelUtilizationByNetworkResultOutput), nil
-		}).(GetWirelessDevicesChannelUtilizationByNetworkResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", args, GetWirelessDevicesChannelUtilizationByNetworkResultOutput{}, options).(GetWirelessDevicesChannelUtilizationByNetworkResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessDevicesChannelUtilizationByNetwork.

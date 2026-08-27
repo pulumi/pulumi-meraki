@@ -77,12 +77,8 @@ type GetSummaryTopClientsManufacturersByUsageResult struct {
 }
 
 func GetSummaryTopClientsManufacturersByUsageOutput(ctx *pulumi.Context, args GetSummaryTopClientsManufacturersByUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopClientsManufacturersByUsageResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopClientsManufacturersByUsageResultOutput, error) {
-			args := v.(GetSummaryTopClientsManufacturersByUsageArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", args, GetSummaryTopClientsManufacturersByUsageResultOutput{}, options).(GetSummaryTopClientsManufacturersByUsageResultOutput), nil
-		}).(GetSummaryTopClientsManufacturersByUsageResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", args, GetSummaryTopClientsManufacturersByUsageResultOutput{}, options).(GetSummaryTopClientsManufacturersByUsageResultOutput)
 }
 
 // A collection of arguments for invoking getSummaryTopClientsManufacturersByUsage.

@@ -42,12 +42,8 @@ type LookupSensorAlertsProfilesResult struct {
 }
 
 func LookupSensorAlertsProfilesOutput(ctx *pulumi.Context, args LookupSensorAlertsProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupSensorAlertsProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSensorAlertsProfilesResultOutput, error) {
-			args := v.(LookupSensorAlertsProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args, LookupSensorAlertsProfilesResultOutput{}, options).(LookupSensorAlertsProfilesResultOutput), nil
-		}).(LookupSensorAlertsProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args, LookupSensorAlertsProfilesResultOutput{}, options).(LookupSensorAlertsProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getSensorAlertsProfiles.

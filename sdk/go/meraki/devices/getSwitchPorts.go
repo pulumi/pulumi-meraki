@@ -42,12 +42,8 @@ type LookupSwitchPortsResult struct {
 }
 
 func LookupSwitchPortsOutput(ctx *pulumi.Context, args LookupSwitchPortsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchPortsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchPortsResultOutput, error) {
-			args := v.(LookupSwitchPortsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getSwitchPorts:getSwitchPorts", args, LookupSwitchPortsResultOutput{}, options).(LookupSwitchPortsResultOutput), nil
-		}).(LookupSwitchPortsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getSwitchPorts:getSwitchPorts", args, LookupSwitchPortsResultOutput{}, options).(LookupSwitchPortsResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchPorts.

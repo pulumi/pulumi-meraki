@@ -42,12 +42,8 @@ type LookupSwitchStacksResult struct {
 }
 
 func LookupSwitchStacksOutput(ctx *pulumi.Context, args LookupSwitchStacksOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchStacksResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchStacksResultOutput, error) {
-			args := v.(LookupSwitchStacksArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchStacks:getSwitchStacks", args, LookupSwitchStacksResultOutput{}, options).(LookupSwitchStacksResultOutput), nil
-		}).(LookupSwitchStacksResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchStacks:getSwitchStacks", args, LookupSwitchStacksResultOutput{}, options).(LookupSwitchStacksResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchStacks.

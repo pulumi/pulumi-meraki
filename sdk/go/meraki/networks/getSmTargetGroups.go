@@ -46,12 +46,8 @@ type LookupSmTargetGroupsResult struct {
 }
 
 func LookupSmTargetGroupsOutput(ctx *pulumi.Context, args LookupSmTargetGroupsOutputArgs, opts ...pulumi.InvokeOption) LookupSmTargetGroupsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSmTargetGroupsResultOutput, error) {
-			args := v.(LookupSmTargetGroupsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmTargetGroups:getSmTargetGroups", args, LookupSmTargetGroupsResultOutput{}, options).(LookupSmTargetGroupsResultOutput), nil
-		}).(LookupSmTargetGroupsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmTargetGroups:getSmTargetGroups", args, LookupSmTargetGroupsResultOutput{}, options).(LookupSmTargetGroupsResultOutput)
 }
 
 // A collection of arguments for invoking getSmTargetGroups.

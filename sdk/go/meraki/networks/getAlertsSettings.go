@@ -61,12 +61,8 @@ type LookupAlertsSettingsResult struct {
 }
 
 func LookupAlertsSettingsOutput(ctx *pulumi.Context, args LookupAlertsSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupAlertsSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAlertsSettingsResultOutput, error) {
-			args := v.(LookupAlertsSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getAlertsSettings:getAlertsSettings", args, LookupAlertsSettingsResultOutput{}, options).(LookupAlertsSettingsResultOutput), nil
-		}).(LookupAlertsSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getAlertsSettings:getAlertsSettings", args, LookupAlertsSettingsResultOutput{}, options).(LookupAlertsSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getAlertsSettings.

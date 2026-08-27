@@ -67,12 +67,8 @@ type GetSmUsersSoftwaresResult struct {
 }
 
 func GetSmUsersSoftwaresOutput(ctx *pulumi.Context, args GetSmUsersSoftwaresOutputArgs, opts ...pulumi.InvokeOption) GetSmUsersSoftwaresResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmUsersSoftwaresResultOutput, error) {
-			args := v.(GetSmUsersSoftwaresArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", args, GetSmUsersSoftwaresResultOutput{}, options).(GetSmUsersSoftwaresResultOutput), nil
-		}).(GetSmUsersSoftwaresResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", args, GetSmUsersSoftwaresResultOutput{}, options).(GetSmUsersSoftwaresResultOutput)
 }
 
 // A collection of arguments for invoking getSmUsersSoftwares.

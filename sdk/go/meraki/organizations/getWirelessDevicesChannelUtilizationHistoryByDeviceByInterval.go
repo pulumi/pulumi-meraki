@@ -111,12 +111,8 @@ type GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult struct 
 }
 
 func GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutput(ctx *pulumi.Context, args GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput, error) {
-			args := v.(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", args, GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput{}, options).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput), nil
-		}).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", args, GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput{}, options).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval.

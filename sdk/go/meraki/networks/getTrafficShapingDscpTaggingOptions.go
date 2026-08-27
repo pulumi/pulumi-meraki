@@ -62,12 +62,8 @@ type GetTrafficShapingDscpTaggingOptionsResult struct {
 }
 
 func GetTrafficShapingDscpTaggingOptionsOutput(ctx *pulumi.Context, args GetTrafficShapingDscpTaggingOptionsOutputArgs, opts ...pulumi.InvokeOption) GetTrafficShapingDscpTaggingOptionsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetTrafficShapingDscpTaggingOptionsResultOutput, error) {
-			args := v.(GetTrafficShapingDscpTaggingOptionsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args, GetTrafficShapingDscpTaggingOptionsResultOutput{}, options).(GetTrafficShapingDscpTaggingOptionsResultOutput), nil
-		}).(GetTrafficShapingDscpTaggingOptionsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args, GetTrafficShapingDscpTaggingOptionsResultOutput{}, options).(GetTrafficShapingDscpTaggingOptionsResultOutput)
 }
 
 // A collection of arguments for invoking getTrafficShapingDscpTaggingOptions.

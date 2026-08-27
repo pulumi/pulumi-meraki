@@ -80,12 +80,8 @@ type LookupPolicyObjectsResult struct {
 }
 
 func LookupPolicyObjectsOutput(ctx *pulumi.Context, args LookupPolicyObjectsOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectsResultOutput, error) {
-			args := v.(LookupPolicyObjectsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getPolicyObjects:getPolicyObjects", args, LookupPolicyObjectsResultOutput{}, options).(LookupPolicyObjectsResultOutput), nil
-		}).(LookupPolicyObjectsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getPolicyObjects:getPolicyObjects", args, LookupPolicyObjectsResultOutput{}, options).(LookupPolicyObjectsResultOutput)
 }
 
 // A collection of arguments for invoking getPolicyObjects.

@@ -72,12 +72,8 @@ type GetSwitchPortsStatusesResult struct {
 }
 
 func GetSwitchPortsStatusesOutput(ctx *pulumi.Context, args GetSwitchPortsStatusesOutputArgs, opts ...pulumi.InvokeOption) GetSwitchPortsStatusesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSwitchPortsStatusesResultOutput, error) {
-			args := v.(GetSwitchPortsStatusesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", args, GetSwitchPortsStatusesResultOutput{}, options).(GetSwitchPortsStatusesResultOutput), nil
-		}).(GetSwitchPortsStatusesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", args, GetSwitchPortsStatusesResultOutput{}, options).(GetSwitchPortsStatusesResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchPortsStatuses.

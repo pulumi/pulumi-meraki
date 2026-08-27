@@ -109,12 +109,8 @@ type GetDevicesBootsHistoryResult struct {
 }
 
 func GetDevicesBootsHistoryOutput(ctx *pulumi.Context, args GetDevicesBootsHistoryOutputArgs, opts ...pulumi.InvokeOption) GetDevicesBootsHistoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDevicesBootsHistoryResultOutput, error) {
-			args := v.(GetDevicesBootsHistoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", args, GetDevicesBootsHistoryResultOutput{}, options).(GetDevicesBootsHistoryResultOutput), nil
-		}).(GetDevicesBootsHistoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", args, GetDevicesBootsHistoryResultOutput{}, options).(GetDevicesBootsHistoryResultOutput)
 }
 
 // A collection of arguments for invoking getDevicesBootsHistory.

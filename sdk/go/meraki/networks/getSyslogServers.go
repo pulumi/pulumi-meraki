@@ -61,12 +61,8 @@ type LookupSyslogServersResult struct {
 }
 
 func LookupSyslogServersOutput(ctx *pulumi.Context, args LookupSyslogServersOutputArgs, opts ...pulumi.InvokeOption) LookupSyslogServersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSyslogServersResultOutput, error) {
-			args := v.(LookupSyslogServersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSyslogServers:getSyslogServers", args, LookupSyslogServersResultOutput{}, options).(LookupSyslogServersResultOutput), nil
-		}).(LookupSyslogServersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSyslogServers:getSyslogServers", args, LookupSyslogServersResultOutput{}, options).(LookupSyslogServersResultOutput)
 }
 
 // A collection of arguments for invoking getSyslogServers.

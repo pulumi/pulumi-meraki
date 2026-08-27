@@ -91,12 +91,8 @@ type GetFirmwareUpgradesResult struct {
 }
 
 func GetFirmwareUpgradesOutput(ctx *pulumi.Context, args GetFirmwareUpgradesOutputArgs, opts ...pulumi.InvokeOption) GetFirmwareUpgradesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetFirmwareUpgradesResultOutput, error) {
-			args := v.(GetFirmwareUpgradesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", args, GetFirmwareUpgradesResultOutput{}, options).(GetFirmwareUpgradesResultOutput), nil
-		}).(GetFirmwareUpgradesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", args, GetFirmwareUpgradesResultOutput{}, options).(GetFirmwareUpgradesResultOutput)
 }
 
 // A collection of arguments for invoking getFirmwareUpgrades.

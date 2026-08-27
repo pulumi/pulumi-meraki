@@ -61,12 +61,8 @@ type LookupApplianceVpnVpnFirewallRulesResult struct {
 }
 
 func LookupApplianceVpnVpnFirewallRulesOutput(ctx *pulumi.Context, args LookupApplianceVpnVpnFirewallRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnVpnFirewallRulesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceVpnVpnFirewallRulesResultOutput, error) {
-			args := v.(LookupApplianceVpnVpnFirewallRulesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", args, LookupApplianceVpnVpnFirewallRulesResultOutput{}, options).(LookupApplianceVpnVpnFirewallRulesResultOutput), nil
-		}).(LookupApplianceVpnVpnFirewallRulesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", args, LookupApplianceVpnVpnFirewallRulesResultOutput{}, options).(LookupApplianceVpnVpnFirewallRulesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceVpnVpnFirewallRules.

@@ -77,12 +77,8 @@ type GetSummaryTopClientsByUsageResult struct {
 }
 
 func GetSummaryTopClientsByUsageOutput(ctx *pulumi.Context, args GetSummaryTopClientsByUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopClientsByUsageResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopClientsByUsageResultOutput, error) {
-			args := v.(GetSummaryTopClientsByUsageArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSummaryTopClientsByUsage:getSummaryTopClientsByUsage", args, GetSummaryTopClientsByUsageResultOutput{}, options).(GetSummaryTopClientsByUsageResultOutput), nil
-		}).(GetSummaryTopClientsByUsageResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSummaryTopClientsByUsage:getSummaryTopClientsByUsage", args, GetSummaryTopClientsByUsageResultOutput{}, options).(GetSummaryTopClientsByUsageResultOutput)
 }
 
 // A collection of arguments for invoking getSummaryTopClientsByUsage.

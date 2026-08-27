@@ -61,12 +61,8 @@ type LookupApplianceTrafficShapingUplinkSelectionResult struct {
 }
 
 func LookupApplianceTrafficShapingUplinkSelectionOutput(ctx *pulumi.Context, args LookupApplianceTrafficShapingUplinkSelectionOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceTrafficShapingUplinkSelectionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceTrafficShapingUplinkSelectionResultOutput, error) {
-			args := v.(LookupApplianceTrafficShapingUplinkSelectionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", args, LookupApplianceTrafficShapingUplinkSelectionResultOutput{}, options).(LookupApplianceTrafficShapingUplinkSelectionResultOutput), nil
-		}).(LookupApplianceTrafficShapingUplinkSelectionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", args, LookupApplianceTrafficShapingUplinkSelectionResultOutput{}, options).(LookupApplianceTrafficShapingUplinkSelectionResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceTrafficShapingUplinkSelection.

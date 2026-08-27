@@ -97,12 +97,8 @@ type GetWebhooksLogsResult struct {
 }
 
 func GetWebhooksLogsOutput(ctx *pulumi.Context, args GetWebhooksLogsOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksLogsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWebhooksLogsResultOutput, error) {
-			args := v.(GetWebhooksLogsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getWebhooksLogs:getWebhooksLogs", args, GetWebhooksLogsResultOutput{}, options).(GetWebhooksLogsResultOutput), nil
-		}).(GetWebhooksLogsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getWebhooksLogs:getWebhooksLogs", args, GetWebhooksLogsResultOutput{}, options).(GetWebhooksLogsResultOutput)
 }
 
 // A collection of arguments for invoking getWebhooksLogs.

@@ -42,12 +42,8 @@ type LookupSwitchAccessPoliciesResult struct {
 }
 
 func LookupSwitchAccessPoliciesOutput(ctx *pulumi.Context, args LookupSwitchAccessPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAccessPoliciesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchAccessPoliciesResultOutput, error) {
-			args := v.(LookupSwitchAccessPoliciesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", args, LookupSwitchAccessPoliciesResultOutput{}, options).(LookupSwitchAccessPoliciesResultOutput), nil
-		}).(LookupSwitchAccessPoliciesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", args, LookupSwitchAccessPoliciesResultOutput{}, options).(LookupSwitchAccessPoliciesResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchAccessPolicies.

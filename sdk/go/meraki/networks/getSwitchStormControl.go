@@ -61,12 +61,8 @@ type LookupSwitchStormControlResult struct {
 }
 
 func LookupSwitchStormControlOutput(ctx *pulumi.Context, args LookupSwitchStormControlOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchStormControlResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchStormControlResultOutput, error) {
-			args := v.(LookupSwitchStormControlArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchStormControl:getSwitchStormControl", args, LookupSwitchStormControlResultOutput{}, options).(LookupSwitchStormControlResultOutput), nil
-		}).(LookupSwitchStormControlResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchStormControl:getSwitchStormControl", args, LookupSwitchStormControlResultOutput{}, options).(LookupSwitchStormControlResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchStormControl.

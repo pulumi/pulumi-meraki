@@ -42,12 +42,8 @@ type LookupSamlIdpsResult struct {
 }
 
 func LookupSamlIdpsOutput(ctx *pulumi.Context, args LookupSamlIdpsOutputArgs, opts ...pulumi.InvokeOption) LookupSamlIdpsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSamlIdpsResultOutput, error) {
-			args := v.(LookupSamlIdpsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSamlIdps:getSamlIdps", args, LookupSamlIdpsResultOutput{}, options).(LookupSamlIdpsResultOutput), nil
-		}).(LookupSamlIdpsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSamlIdps:getSamlIdps", args, LookupSamlIdpsResultOutput{}, options).(LookupSamlIdpsResultOutput)
 }
 
 // A collection of arguments for invoking getSamlIdps.

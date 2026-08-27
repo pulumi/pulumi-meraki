@@ -66,12 +66,8 @@ type LookupLiveToolsPingResult struct {
 }
 
 func LookupLiveToolsPingOutput(ctx *pulumi.Context, args LookupLiveToolsPingOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsPingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLiveToolsPingResultOutput, error) {
-			args := v.(LookupLiveToolsPingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getLiveToolsPing:getLiveToolsPing", args, LookupLiveToolsPingResultOutput{}, options).(LookupLiveToolsPingResultOutput), nil
-		}).(LookupLiveToolsPingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getLiveToolsPing:getLiveToolsPing", args, LookupLiveToolsPingResultOutput{}, options).(LookupLiveToolsPingResultOutput)
 }
 
 // A collection of arguments for invoking getLiveToolsPing.

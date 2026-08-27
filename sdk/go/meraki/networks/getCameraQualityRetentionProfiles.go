@@ -42,12 +42,8 @@ type LookupCameraQualityRetentionProfilesResult struct {
 }
 
 func LookupCameraQualityRetentionProfilesOutput(ctx *pulumi.Context, args LookupCameraQualityRetentionProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupCameraQualityRetentionProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCameraQualityRetentionProfilesResultOutput, error) {
-			args := v.(LookupCameraQualityRetentionProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args, LookupCameraQualityRetentionProfilesResultOutput{}, options).(LookupCameraQualityRetentionProfilesResultOutput), nil
-		}).(LookupCameraQualityRetentionProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args, LookupCameraQualityRetentionProfilesResultOutput{}, options).(LookupCameraQualityRetentionProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getCameraQualityRetentionProfiles.

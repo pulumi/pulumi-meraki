@@ -61,12 +61,8 @@ type LookupSwitchRoutingMulticastResult struct {
 }
 
 func LookupSwitchRoutingMulticastOutput(ctx *pulumi.Context, args LookupSwitchRoutingMulticastOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchRoutingMulticastResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchRoutingMulticastResultOutput, error) {
-			args := v.(LookupSwitchRoutingMulticastArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", args, LookupSwitchRoutingMulticastResultOutput{}, options).(LookupSwitchRoutingMulticastResultOutput), nil
-		}).(LookupSwitchRoutingMulticastResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", args, LookupSwitchRoutingMulticastResultOutput{}, options).(LookupSwitchRoutingMulticastResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchRoutingMulticast.

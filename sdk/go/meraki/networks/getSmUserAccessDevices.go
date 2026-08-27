@@ -77,12 +77,8 @@ type GetSmUserAccessDevicesResult struct {
 }
 
 func GetSmUserAccessDevicesOutput(ctx *pulumi.Context, args GetSmUserAccessDevicesOutputArgs, opts ...pulumi.InvokeOption) GetSmUserAccessDevicesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmUserAccessDevicesResultOutput, error) {
-			args := v.(GetSmUserAccessDevicesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", args, GetSmUserAccessDevicesResultOutput{}, options).(GetSmUserAccessDevicesResultOutput), nil
-		}).(GetSmUserAccessDevicesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", args, GetSmUserAccessDevicesResultOutput{}, options).(GetSmUserAccessDevicesResultOutput)
 }
 
 // A collection of arguments for invoking getSmUserAccessDevices.

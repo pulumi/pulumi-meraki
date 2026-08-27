@@ -66,12 +66,8 @@ type LookupWirelessSsidsDeviceTypeGroupPoliciesResult struct {
 }
 
 func LookupWirelessSsidsDeviceTypeGroupPoliciesOutput(ctx *pulumi.Context, args LookupWirelessSsidsDeviceTypeGroupPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput, error) {
-			args := v.(LookupWirelessSsidsDeviceTypeGroupPoliciesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args, LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput{}, options).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput), nil
-		}).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args, LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput{}, options).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsDeviceTypeGroupPolicies.

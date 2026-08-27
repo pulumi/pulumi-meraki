@@ -42,12 +42,8 @@ type LookupMerakiAuthUsersResult struct {
 }
 
 func LookupMerakiAuthUsersOutput(ctx *pulumi.Context, args LookupMerakiAuthUsersOutputArgs, opts ...pulumi.InvokeOption) LookupMerakiAuthUsersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupMerakiAuthUsersResultOutput, error) {
-			args := v.(LookupMerakiAuthUsersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args, LookupMerakiAuthUsersResultOutput{}, options).(LookupMerakiAuthUsersResultOutput), nil
-		}).(LookupMerakiAuthUsersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args, LookupMerakiAuthUsersResultOutput{}, options).(LookupMerakiAuthUsersResultOutput)
 }
 
 // A collection of arguments for invoking getMerakiAuthUsers.

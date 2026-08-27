@@ -62,12 +62,8 @@ type LookupAlertsProfilesResult struct {
 }
 
 func LookupAlertsProfilesOutput(ctx *pulumi.Context, args LookupAlertsProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupAlertsProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupAlertsProfilesResultOutput, error) {
-			args := v.(LookupAlertsProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getAlertsProfiles:getAlertsProfiles", args, LookupAlertsProfilesResultOutput{}, options).(LookupAlertsProfilesResultOutput), nil
-		}).(LookupAlertsProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getAlertsProfiles:getAlertsProfiles", args, LookupAlertsProfilesResultOutput{}, options).(LookupAlertsProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getAlertsProfiles.

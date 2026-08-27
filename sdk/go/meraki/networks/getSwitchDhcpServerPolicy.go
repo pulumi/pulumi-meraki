@@ -61,12 +61,8 @@ type LookupSwitchDhcpServerPolicyResult struct {
 }
 
 func LookupSwitchDhcpServerPolicyOutput(ctx *pulumi.Context, args LookupSwitchDhcpServerPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchDhcpServerPolicyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchDhcpServerPolicyResultOutput, error) {
-			args := v.(LookupSwitchDhcpServerPolicyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", args, LookupSwitchDhcpServerPolicyResultOutput{}, options).(LookupSwitchDhcpServerPolicyResultOutput), nil
-		}).(LookupSwitchDhcpServerPolicyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", args, LookupSwitchDhcpServerPolicyResultOutput{}, options).(LookupSwitchDhcpServerPolicyResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchDhcpServerPolicy.

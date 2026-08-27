@@ -61,12 +61,8 @@ type LookupTrafficAnalysisResult struct {
 }
 
 func LookupTrafficAnalysisOutput(ctx *pulumi.Context, args LookupTrafficAnalysisOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficAnalysisResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupTrafficAnalysisResultOutput, error) {
-			args := v.(LookupTrafficAnalysisArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", args, LookupTrafficAnalysisResultOutput{}, options).(LookupTrafficAnalysisResultOutput), nil
-		}).(LookupTrafficAnalysisResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", args, LookupTrafficAnalysisResultOutput{}, options).(LookupTrafficAnalysisResultOutput)
 }
 
 // A collection of arguments for invoking getTrafficAnalysis.

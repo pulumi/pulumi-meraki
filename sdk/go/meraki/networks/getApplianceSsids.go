@@ -42,12 +42,8 @@ type LookupApplianceSsidsResult struct {
 }
 
 func LookupApplianceSsidsOutput(ctx *pulumi.Context, args LookupApplianceSsidsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSsidsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceSsidsResultOutput, error) {
-			args := v.(LookupApplianceSsidsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceSsids:getApplianceSsids", args, LookupApplianceSsidsResultOutput{}, options).(LookupApplianceSsidsResultOutput), nil
-		}).(LookupApplianceSsidsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceSsids:getApplianceSsids", args, LookupApplianceSsidsResultOutput{}, options).(LookupApplianceSsidsResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceSsids.

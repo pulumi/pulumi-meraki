@@ -120,12 +120,8 @@ type GetWirelessDevicesPacketLossByDeviceResult struct {
 }
 
 func GetWirelessDevicesPacketLossByDeviceOutput(ctx *pulumi.Context, args GetWirelessDevicesPacketLossByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesPacketLossByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetWirelessDevicesPacketLossByDeviceResultOutput, error) {
-			args := v.(GetWirelessDevicesPacketLossByDeviceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", args, GetWirelessDevicesPacketLossByDeviceResultOutput{}, options).(GetWirelessDevicesPacketLossByDeviceResultOutput), nil
-		}).(GetWirelessDevicesPacketLossByDeviceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", args, GetWirelessDevicesPacketLossByDeviceResultOutput{}, options).(GetWirelessDevicesPacketLossByDeviceResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessDevicesPacketLossByDevice.

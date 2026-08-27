@@ -61,12 +61,8 @@ type LookupApplianceVlansSettingsResult struct {
 }
 
 func LookupApplianceVlansSettingsOutput(ctx *pulumi.Context, args LookupApplianceVlansSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVlansSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceVlansSettingsResultOutput, error) {
-			args := v.(LookupApplianceVlansSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", args, LookupApplianceVlansSettingsResultOutput{}, options).(LookupApplianceVlansSettingsResultOutput), nil
-		}).(LookupApplianceVlansSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", args, LookupApplianceVlansSettingsResultOutput{}, options).(LookupApplianceVlansSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceVlansSettings.

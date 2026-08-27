@@ -91,12 +91,8 @@ type GetPiiSmDevicesForKeyResult struct {
 }
 
 func GetPiiSmDevicesForKeyOutput(ctx *pulumi.Context, args GetPiiSmDevicesForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmDevicesForKeyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetPiiSmDevicesForKeyResultOutput, error) {
-			args := v.(GetPiiSmDevicesForKeyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args, GetPiiSmDevicesForKeyResultOutput{}, options).(GetPiiSmDevicesForKeyResultOutput), nil
-		}).(GetPiiSmDevicesForKeyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args, GetPiiSmDevicesForKeyResultOutput{}, options).(GetPiiSmDevicesForKeyResultOutput)
 }
 
 // A collection of arguments for invoking getPiiSmDevicesForKey.

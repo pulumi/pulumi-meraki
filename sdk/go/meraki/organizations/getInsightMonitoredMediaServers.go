@@ -42,12 +42,8 @@ type LookupInsightMonitoredMediaServersResult struct {
 }
 
 func LookupInsightMonitoredMediaServersOutput(ctx *pulumi.Context, args LookupInsightMonitoredMediaServersOutputArgs, opts ...pulumi.InvokeOption) LookupInsightMonitoredMediaServersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupInsightMonitoredMediaServersResultOutput, error) {
-			args := v.(LookupInsightMonitoredMediaServersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args, LookupInsightMonitoredMediaServersResultOutput{}, options).(LookupInsightMonitoredMediaServersResultOutput), nil
-		}).(LookupInsightMonitoredMediaServersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args, LookupInsightMonitoredMediaServersResultOutput{}, options).(LookupInsightMonitoredMediaServersResultOutput)
 }
 
 // A collection of arguments for invoking getInsightMonitoredMediaServers.

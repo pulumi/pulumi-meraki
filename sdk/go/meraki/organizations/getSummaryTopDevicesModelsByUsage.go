@@ -77,12 +77,8 @@ type GetSummaryTopDevicesModelsByUsageResult struct {
 }
 
 func GetSummaryTopDevicesModelsByUsageOutput(ctx *pulumi.Context, args GetSummaryTopDevicesModelsByUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopDevicesModelsByUsageResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopDevicesModelsByUsageResultOutput, error) {
-			args := v.(GetSummaryTopDevicesModelsByUsageArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", args, GetSummaryTopDevicesModelsByUsageResultOutput{}, options).(GetSummaryTopDevicesModelsByUsageResultOutput), nil
-		}).(GetSummaryTopDevicesModelsByUsageResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", args, GetSummaryTopDevicesModelsByUsageResultOutput{}, options).(GetSummaryTopDevicesModelsByUsageResultOutput)
 }
 
 // A collection of arguments for invoking getSummaryTopDevicesModelsByUsage.

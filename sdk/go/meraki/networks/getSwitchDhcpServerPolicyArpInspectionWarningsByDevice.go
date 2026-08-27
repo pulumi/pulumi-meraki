@@ -77,12 +77,8 @@ type GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult struct {
 }
 
 func GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutput(ctx *pulumi.Context, args GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput, error) {
-			args := v.(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", args, GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput{}, options).(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput), nil
-		}).(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", args, GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput{}, options).(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchDhcpServerPolicyArpInspectionWarningsByDevice.

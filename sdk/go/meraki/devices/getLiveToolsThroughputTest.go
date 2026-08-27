@@ -66,12 +66,8 @@ type LookupLiveToolsThroughputTestResult struct {
 }
 
 func LookupLiveToolsThroughputTestOutput(ctx *pulumi.Context, args LookupLiveToolsThroughputTestOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsThroughputTestResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLiveToolsThroughputTestResultOutput, error) {
-			args := v.(LookupLiveToolsThroughputTestArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args, LookupLiveToolsThroughputTestResultOutput{}, options).(LookupLiveToolsThroughputTestResultOutput), nil
-		}).(LookupLiveToolsThroughputTestResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args, LookupLiveToolsThroughputTestResultOutput{}, options).(LookupLiveToolsThroughputTestResultOutput)
 }
 
 // A collection of arguments for invoking getLiveToolsThroughputTest.

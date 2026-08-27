@@ -61,12 +61,8 @@ type LookupWirelessBillingResult struct {
 }
 
 func LookupWirelessBillingOutput(ctx *pulumi.Context, args LookupWirelessBillingOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessBillingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessBillingResultOutput, error) {
-			args := v.(LookupWirelessBillingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessBilling:getWirelessBilling", args, LookupWirelessBillingResultOutput{}, options).(LookupWirelessBillingResultOutput), nil
-		}).(LookupWirelessBillingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessBilling:getWirelessBilling", args, LookupWirelessBillingResultOutput{}, options).(LookupWirelessBillingResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessBilling.

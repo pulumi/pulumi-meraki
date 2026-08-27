@@ -66,12 +66,8 @@ type LookupSmBypassActivationLockAttemptsResult struct {
 }
 
 func LookupSmBypassActivationLockAttemptsOutput(ctx *pulumi.Context, args LookupSmBypassActivationLockAttemptsOutputArgs, opts ...pulumi.InvokeOption) LookupSmBypassActivationLockAttemptsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSmBypassActivationLockAttemptsResultOutput, error) {
-			args := v.(LookupSmBypassActivationLockAttemptsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", args, LookupSmBypassActivationLockAttemptsResultOutput{}, options).(LookupSmBypassActivationLockAttemptsResultOutput), nil
-		}).(LookupSmBypassActivationLockAttemptsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", args, LookupSmBypassActivationLockAttemptsResultOutput{}, options).(LookupSmBypassActivationLockAttemptsResultOutput)
 }
 
 // A collection of arguments for invoking getSmBypassActivationLockAttempts.

@@ -67,12 +67,8 @@ type GetSmDevicesCellularUsageHistoryResult struct {
 }
 
 func GetSmDevicesCellularUsageHistoryOutput(ctx *pulumi.Context, args GetSmDevicesCellularUsageHistoryOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesCellularUsageHistoryResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesCellularUsageHistoryResultOutput, error) {
-			args := v.(GetSmDevicesCellularUsageHistoryArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args, GetSmDevicesCellularUsageHistoryResultOutput{}, options).(GetSmDevicesCellularUsageHistoryResultOutput), nil
-		}).(GetSmDevicesCellularUsageHistoryResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args, GetSmDevicesCellularUsageHistoryResultOutput{}, options).(GetSmDevicesCellularUsageHistoryResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesCellularUsageHistory.

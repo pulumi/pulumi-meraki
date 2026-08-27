@@ -61,12 +61,8 @@ type LookupApplianceVpnSiteToSiteVpnResult struct {
 }
 
 func LookupApplianceVpnSiteToSiteVpnOutput(ctx *pulumi.Context, args LookupApplianceVpnSiteToSiteVpnOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnSiteToSiteVpnResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceVpnSiteToSiteVpnResultOutput, error) {
-			args := v.(LookupApplianceVpnSiteToSiteVpnArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", args, LookupApplianceVpnSiteToSiteVpnResultOutput{}, options).(LookupApplianceVpnSiteToSiteVpnResultOutput), nil
-		}).(LookupApplianceVpnSiteToSiteVpnResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", args, LookupApplianceVpnSiteToSiteVpnResultOutput{}, options).(LookupApplianceVpnSiteToSiteVpnResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceVpnSiteToSiteVpn.

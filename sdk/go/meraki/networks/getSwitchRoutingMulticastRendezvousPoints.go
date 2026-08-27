@@ -42,12 +42,8 @@ type LookupSwitchRoutingMulticastRendezvousPointsResult struct {
 }
 
 func LookupSwitchRoutingMulticastRendezvousPointsOutput(ctx *pulumi.Context, args LookupSwitchRoutingMulticastRendezvousPointsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchRoutingMulticastRendezvousPointsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchRoutingMulticastRendezvousPointsResultOutput, error) {
-			args := v.(LookupSwitchRoutingMulticastRendezvousPointsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", args, LookupSwitchRoutingMulticastRendezvousPointsResultOutput{}, options).(LookupSwitchRoutingMulticastRendezvousPointsResultOutput), nil
-		}).(LookupSwitchRoutingMulticastRendezvousPointsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", args, LookupSwitchRoutingMulticastRendezvousPointsResultOutput{}, options).(LookupSwitchRoutingMulticastRendezvousPointsResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchRoutingMulticastRendezvousPoints.

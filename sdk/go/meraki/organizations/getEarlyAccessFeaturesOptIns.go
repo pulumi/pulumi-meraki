@@ -65,12 +65,8 @@ type LookupEarlyAccessFeaturesOptInsResult struct {
 }
 
 func LookupEarlyAccessFeaturesOptInsOutput(ctx *pulumi.Context, args LookupEarlyAccessFeaturesOptInsOutputArgs, opts ...pulumi.InvokeOption) LookupEarlyAccessFeaturesOptInsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupEarlyAccessFeaturesOptInsResultOutput, error) {
-			args := v.(LookupEarlyAccessFeaturesOptInsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", args, LookupEarlyAccessFeaturesOptInsResultOutput{}, options).(LookupEarlyAccessFeaturesOptInsResultOutput), nil
-		}).(LookupEarlyAccessFeaturesOptInsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", args, LookupEarlyAccessFeaturesOptInsResultOutput{}, options).(LookupEarlyAccessFeaturesOptInsResultOutput)
 }
 
 // A collection of arguments for invoking getEarlyAccessFeaturesOptIns.

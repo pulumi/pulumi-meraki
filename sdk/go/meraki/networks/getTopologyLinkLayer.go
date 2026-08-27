@@ -61,12 +61,8 @@ type GetTopologyLinkLayerResult struct {
 }
 
 func GetTopologyLinkLayerOutput(ctx *pulumi.Context, args GetTopologyLinkLayerOutputArgs, opts ...pulumi.InvokeOption) GetTopologyLinkLayerResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetTopologyLinkLayerResultOutput, error) {
-			args := v.(GetTopologyLinkLayerArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", args, GetTopologyLinkLayerResultOutput{}, options).(GetTopologyLinkLayerResultOutput), nil
-		}).(GetTopologyLinkLayerResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", args, GetTopologyLinkLayerResultOutput{}, options).(GetTopologyLinkLayerResultOutput)
 }
 
 // A collection of arguments for invoking getTopologyLinkLayer.

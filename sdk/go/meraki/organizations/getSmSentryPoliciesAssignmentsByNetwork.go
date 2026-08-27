@@ -84,12 +84,8 @@ type GetSmSentryPoliciesAssignmentsByNetworkResult struct {
 }
 
 func GetSmSentryPoliciesAssignmentsByNetworkOutput(ctx *pulumi.Context, args GetSmSentryPoliciesAssignmentsByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetSmSentryPoliciesAssignmentsByNetworkResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmSentryPoliciesAssignmentsByNetworkResultOutput, error) {
-			args := v.(GetSmSentryPoliciesAssignmentsByNetworkArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args, GetSmSentryPoliciesAssignmentsByNetworkResultOutput{}, options).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput), nil
-		}).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args, GetSmSentryPoliciesAssignmentsByNetworkResultOutput{}, options).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput)
 }
 
 // A collection of arguments for invoking getSmSentryPoliciesAssignmentsByNetwork.

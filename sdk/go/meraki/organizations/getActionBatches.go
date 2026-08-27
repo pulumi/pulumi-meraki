@@ -46,12 +46,8 @@ type LookupActionBatchesResult struct {
 }
 
 func LookupActionBatchesOutput(ctx *pulumi.Context, args LookupActionBatchesOutputArgs, opts ...pulumi.InvokeOption) LookupActionBatchesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupActionBatchesResultOutput, error) {
-			args := v.(LookupActionBatchesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getActionBatches:getActionBatches", args, LookupActionBatchesResultOutput{}, options).(LookupActionBatchesResultOutput), nil
-		}).(LookupActionBatchesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getActionBatches:getActionBatches", args, LookupActionBatchesResultOutput{}, options).(LookupActionBatchesResultOutput)
 }
 
 // A collection of arguments for invoking getActionBatches.

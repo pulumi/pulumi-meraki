@@ -42,12 +42,8 @@ type LookupWebhooksHttpServersResult struct {
 }
 
 func LookupWebhooksHttpServersOutput(ctx *pulumi.Context, args LookupWebhooksHttpServersOutputArgs, opts ...pulumi.InvokeOption) LookupWebhooksHttpServersResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWebhooksHttpServersResultOutput, error) {
-			args := v.(LookupWebhooksHttpServersArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", args, LookupWebhooksHttpServersResultOutput{}, options).(LookupWebhooksHttpServersResultOutput), nil
-		}).(LookupWebhooksHttpServersResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", args, LookupWebhooksHttpServersResultOutput{}, options).(LookupWebhooksHttpServersResultOutput)
 }
 
 // A collection of arguments for invoking getWebhooksHttpServers.

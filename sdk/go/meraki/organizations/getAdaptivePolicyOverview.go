@@ -61,12 +61,8 @@ type GetAdaptivePolicyOverviewResult struct {
 }
 
 func GetAdaptivePolicyOverviewOutput(ctx *pulumi.Context, args GetAdaptivePolicyOverviewOutputArgs, opts ...pulumi.InvokeOption) GetAdaptivePolicyOverviewResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetAdaptivePolicyOverviewResultOutput, error) {
-			args := v.(GetAdaptivePolicyOverviewArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", args, GetAdaptivePolicyOverviewResultOutput{}, options).(GetAdaptivePolicyOverviewResultOutput), nil
-		}).(GetAdaptivePolicyOverviewResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", args, GetAdaptivePolicyOverviewResultOutput{}, options).(GetAdaptivePolicyOverviewResultOutput)
 }
 
 // A collection of arguments for invoking getAdaptivePolicyOverview.

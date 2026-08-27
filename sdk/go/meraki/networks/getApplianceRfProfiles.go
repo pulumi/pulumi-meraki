@@ -65,12 +65,8 @@ type LookupApplianceRfProfilesResult struct {
 }
 
 func LookupApplianceRfProfilesOutput(ctx *pulumi.Context, args LookupApplianceRfProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceRfProfilesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceRfProfilesResultOutput, error) {
-			args := v.(LookupApplianceRfProfilesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", args, LookupApplianceRfProfilesResultOutput{}, options).(LookupApplianceRfProfilesResultOutput), nil
-		}).(LookupApplianceRfProfilesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", args, LookupApplianceRfProfilesResultOutput{}, options).(LookupApplianceRfProfilesResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceRfProfiles.

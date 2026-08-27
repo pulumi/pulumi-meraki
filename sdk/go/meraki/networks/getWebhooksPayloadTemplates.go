@@ -42,12 +42,8 @@ type LookupWebhooksPayloadTemplatesResult struct {
 }
 
 func LookupWebhooksPayloadTemplatesOutput(ctx *pulumi.Context, args LookupWebhooksPayloadTemplatesOutputArgs, opts ...pulumi.InvokeOption) LookupWebhooksPayloadTemplatesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWebhooksPayloadTemplatesResultOutput, error) {
-			args := v.(LookupWebhooksPayloadTemplatesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", args, LookupWebhooksPayloadTemplatesResultOutput{}, options).(LookupWebhooksPayloadTemplatesResultOutput), nil
-		}).(LookupWebhooksPayloadTemplatesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", args, LookupWebhooksPayloadTemplatesResultOutput{}, options).(LookupWebhooksPayloadTemplatesResultOutput)
 }
 
 // A collection of arguments for invoking getWebhooksPayloadTemplates.

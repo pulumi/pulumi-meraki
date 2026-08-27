@@ -67,12 +67,8 @@ type GetSmDevicesWlanListsResult struct {
 }
 
 func GetSmDevicesWlanListsOutput(ctx *pulumi.Context, args GetSmDevicesWlanListsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesWlanListsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesWlanListsResultOutput, error) {
-			args := v.(GetSmDevicesWlanListsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", args, GetSmDevicesWlanListsResultOutput{}, options).(GetSmDevicesWlanListsResultOutput), nil
-		}).(GetSmDevicesWlanListsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", args, GetSmDevicesWlanListsResultOutput{}, options).(GetSmDevicesWlanListsResultOutput)
 }
 
 // A collection of arguments for invoking getSmDevicesWlanLists.

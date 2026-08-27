@@ -87,12 +87,8 @@ type GetLicensingCotermLicensesResult struct {
 }
 
 func GetLicensingCotermLicensesOutput(ctx *pulumi.Context, args GetLicensingCotermLicensesOutputArgs, opts ...pulumi.InvokeOption) GetLicensingCotermLicensesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetLicensingCotermLicensesResultOutput, error) {
-			args := v.(GetLicensingCotermLicensesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args, GetLicensingCotermLicensesResultOutput{}, options).(GetLicensingCotermLicensesResultOutput), nil
-		}).(GetLicensingCotermLicensesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args, GetLicensingCotermLicensesResultOutput{}, options).(GetLicensingCotermLicensesResultOutput)
 }
 
 // A collection of arguments for invoking getLicensingCotermLicenses.

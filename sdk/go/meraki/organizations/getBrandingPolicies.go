@@ -42,12 +42,8 @@ type LookupBrandingPoliciesResult struct {
 }
 
 func LookupBrandingPoliciesOutput(ctx *pulumi.Context, args LookupBrandingPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupBrandingPoliciesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupBrandingPoliciesResultOutput, error) {
-			args := v.(LookupBrandingPoliciesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getBrandingPolicies:getBrandingPolicies", args, LookupBrandingPoliciesResultOutput{}, options).(LookupBrandingPoliciesResultOutput), nil
-		}).(LookupBrandingPoliciesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getBrandingPolicies:getBrandingPolicies", args, LookupBrandingPoliciesResultOutput{}, options).(LookupBrandingPoliciesResultOutput)
 }
 
 // A collection of arguments for invoking getBrandingPolicies.

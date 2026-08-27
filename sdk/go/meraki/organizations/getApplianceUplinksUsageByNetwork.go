@@ -77,12 +77,8 @@ type GetApplianceUplinksUsageByNetworkResult struct {
 }
 
 func GetApplianceUplinksUsageByNetworkOutput(ctx *pulumi.Context, args GetApplianceUplinksUsageByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetApplianceUplinksUsageByNetworkResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetApplianceUplinksUsageByNetworkResultOutput, error) {
-			args := v.(GetApplianceUplinksUsageByNetworkArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", args, GetApplianceUplinksUsageByNetworkResultOutput{}, options).(GetApplianceUplinksUsageByNetworkResultOutput), nil
-		}).(GetApplianceUplinksUsageByNetworkResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", args, GetApplianceUplinksUsageByNetworkResultOutput{}, options).(GetApplianceUplinksUsageByNetworkResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceUplinksUsageByNetwork.

@@ -62,12 +62,8 @@ type LookupSwitchLinkAggregationsResult struct {
 }
 
 func LookupSwitchLinkAggregationsOutput(ctx *pulumi.Context, args LookupSwitchLinkAggregationsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchLinkAggregationsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchLinkAggregationsResultOutput, error) {
-			args := v.(LookupSwitchLinkAggregationsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args, LookupSwitchLinkAggregationsResultOutput{}, options).(LookupSwitchLinkAggregationsResultOutput), nil
-		}).(LookupSwitchLinkAggregationsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args, LookupSwitchLinkAggregationsResultOutput{}, options).(LookupSwitchLinkAggregationsResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchLinkAggregations.

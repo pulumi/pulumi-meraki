@@ -42,12 +42,8 @@ type LookupWirelessSsidsResult struct {
 }
 
 func LookupWirelessSsidsOutput(ctx *pulumi.Context, args LookupWirelessSsidsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsResultOutput, error) {
-			args := v.(LookupWirelessSsidsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsids:getWirelessSsids", args, LookupWirelessSsidsResultOutput{}, options).(LookupWirelessSsidsResultOutput), nil
-		}).(LookupWirelessSsidsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsids:getWirelessSsids", args, LookupWirelessSsidsResultOutput{}, options).(LookupWirelessSsidsResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsids.

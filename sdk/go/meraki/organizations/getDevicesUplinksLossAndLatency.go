@@ -87,12 +87,8 @@ type GetDevicesUplinksLossAndLatencyResult struct {
 }
 
 func GetDevicesUplinksLossAndLatencyOutput(ctx *pulumi.Context, args GetDevicesUplinksLossAndLatencyOutputArgs, opts ...pulumi.InvokeOption) GetDevicesUplinksLossAndLatencyResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetDevicesUplinksLossAndLatencyResultOutput, error) {
-			args := v.(GetDevicesUplinksLossAndLatencyArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args, GetDevicesUplinksLossAndLatencyResultOutput{}, options).(GetDevicesUplinksLossAndLatencyResultOutput), nil
-		}).(GetDevicesUplinksLossAndLatencyResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args, GetDevicesUplinksLossAndLatencyResultOutput{}, options).(GetDevicesUplinksLossAndLatencyResultOutput)
 }
 
 // A collection of arguments for invoking getDevicesUplinksLossAndLatency.

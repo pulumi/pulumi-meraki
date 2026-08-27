@@ -61,12 +61,8 @@ type LookupApplianceUplinksSettingsResult struct {
 }
 
 func LookupApplianceUplinksSettingsOutput(ctx *pulumi.Context, args LookupApplianceUplinksSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceUplinksSettingsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceUplinksSettingsResultOutput, error) {
-			args := v.(LookupApplianceUplinksSettingsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args, LookupApplianceUplinksSettingsResultOutput{}, options).(LookupApplianceUplinksSettingsResultOutput), nil
-		}).(LookupApplianceUplinksSettingsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args, LookupApplianceUplinksSettingsResultOutput{}, options).(LookupApplianceUplinksSettingsResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceUplinksSettings.

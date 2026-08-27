@@ -61,12 +61,8 @@ type LookupSwitchAlternateManagementInterfaceResult struct {
 }
 
 func LookupSwitchAlternateManagementInterfaceOutput(ctx *pulumi.Context, args LookupSwitchAlternateManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAlternateManagementInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchAlternateManagementInterfaceResultOutput, error) {
-			args := v.(LookupSwitchAlternateManagementInterfaceArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args, LookupSwitchAlternateManagementInterfaceResultOutput{}, options).(LookupSwitchAlternateManagementInterfaceResultOutput), nil
-		}).(LookupSwitchAlternateManagementInterfaceResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args, LookupSwitchAlternateManagementInterfaceResultOutput{}, options).(LookupSwitchAlternateManagementInterfaceResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchAlternateManagementInterface.

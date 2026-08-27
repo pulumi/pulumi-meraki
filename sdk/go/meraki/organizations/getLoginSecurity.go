@@ -61,12 +61,8 @@ type LookupLoginSecurityResult struct {
 }
 
 func LookupLoginSecurityOutput(ctx *pulumi.Context, args LookupLoginSecurityOutputArgs, opts ...pulumi.InvokeOption) LookupLoginSecurityResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupLoginSecurityResultOutput, error) {
-			args := v.(LookupLoginSecurityArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getLoginSecurity:getLoginSecurity", args, LookupLoginSecurityResultOutput{}, options).(LookupLoginSecurityResultOutput), nil
-		}).(LookupLoginSecurityResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getLoginSecurity:getLoginSecurity", args, LookupLoginSecurityResultOutput{}, options).(LookupLoginSecurityResultOutput)
 }
 
 // A collection of arguments for invoking getLoginSecurity.

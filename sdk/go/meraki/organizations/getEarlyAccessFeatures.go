@@ -62,12 +62,8 @@ type GetEarlyAccessFeaturesResult struct {
 }
 
 func GetEarlyAccessFeaturesOutput(ctx *pulumi.Context, args GetEarlyAccessFeaturesOutputArgs, opts ...pulumi.InvokeOption) GetEarlyAccessFeaturesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetEarlyAccessFeaturesResultOutput, error) {
-			args := v.(GetEarlyAccessFeaturesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", args, GetEarlyAccessFeaturesResultOutput{}, options).(GetEarlyAccessFeaturesResultOutput), nil
-		}).(GetEarlyAccessFeaturesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", args, GetEarlyAccessFeaturesResultOutput{}, options).(GetEarlyAccessFeaturesResultOutput)
 }
 
 // A collection of arguments for invoking getEarlyAccessFeatures.

@@ -62,12 +62,8 @@ type GetEventsEventTypesResult struct {
 }
 
 func GetEventsEventTypesOutput(ctx *pulumi.Context, args GetEventsEventTypesOutputArgs, opts ...pulumi.InvokeOption) GetEventsEventTypesResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetEventsEventTypesResultOutput, error) {
-			args := v.(GetEventsEventTypesArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getEventsEventTypes:getEventsEventTypes", args, GetEventsEventTypesResultOutput{}, options).(GetEventsEventTypesResultOutput), nil
-		}).(GetEventsEventTypesResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getEventsEventTypes:getEventsEventTypes", args, GetEventsEventTypesResultOutput{}, options).(GetEventsEventTypesResultOutput)
 }
 
 // A collection of arguments for invoking getEventsEventTypes.

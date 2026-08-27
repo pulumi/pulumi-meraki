@@ -87,12 +87,8 @@ type GetInventoryOnboardingCloudMonitoringNetworksResult struct {
 }
 
 func GetInventoryOnboardingCloudMonitoringNetworksOutput(ctx *pulumi.Context, args GetInventoryOnboardingCloudMonitoringNetworksOutputArgs, opts ...pulumi.InvokeOption) GetInventoryOnboardingCloudMonitoringNetworksResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetInventoryOnboardingCloudMonitoringNetworksResultOutput, error) {
-			args := v.(GetInventoryOnboardingCloudMonitoringNetworksArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", args, GetInventoryOnboardingCloudMonitoringNetworksResultOutput{}, options).(GetInventoryOnboardingCloudMonitoringNetworksResultOutput), nil
-		}).(GetInventoryOnboardingCloudMonitoringNetworksResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", args, GetInventoryOnboardingCloudMonitoringNetworksResultOutput{}, options).(GetInventoryOnboardingCloudMonitoringNetworksResultOutput)
 }
 
 // A collection of arguments for invoking getInventoryOnboardingCloudMonitoringNetworks.

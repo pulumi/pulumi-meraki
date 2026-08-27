@@ -61,12 +61,8 @@ type LookupCellularGatewayConnectivityMonitoringDestinationsResult struct {
 }
 
 func LookupCellularGatewayConnectivityMonitoringDestinationsOutput(ctx *pulumi.Context, args LookupCellularGatewayConnectivityMonitoringDestinationsOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput, error) {
-			args := v.(LookupCellularGatewayConnectivityMonitoringDestinationsArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", args, LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput{}, options).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput), nil
-		}).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", args, LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput{}, options).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput)
 }
 
 // A collection of arguments for invoking getCellularGatewayConnectivityMonitoringDestinations.

@@ -87,12 +87,8 @@ type GetSwitchDhcpV4ServersSeenResult struct {
 }
 
 func GetSwitchDhcpV4ServersSeenOutput(ctx *pulumi.Context, args GetSwitchDhcpV4ServersSeenOutputArgs, opts ...pulumi.InvokeOption) GetSwitchDhcpV4ServersSeenResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSwitchDhcpV4ServersSeenResultOutput, error) {
-			args := v.(GetSwitchDhcpV4ServersSeenArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", args, GetSwitchDhcpV4ServersSeenResultOutput{}, options).(GetSwitchDhcpV4ServersSeenResultOutput), nil
-		}).(GetSwitchDhcpV4ServersSeenResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", args, GetSwitchDhcpV4ServersSeenResultOutput{}, options).(GetSwitchDhcpV4ServersSeenResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchDhcpV4ServersSeen.

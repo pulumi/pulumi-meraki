@@ -61,12 +61,8 @@ type LookupSwitchRoutingOspfResult struct {
 }
 
 func LookupSwitchRoutingOspfOutput(ctx *pulumi.Context, args LookupSwitchRoutingOspfOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchRoutingOspfResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupSwitchRoutingOspfResultOutput, error) {
-			args := v.(LookupSwitchRoutingOspfArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", args, LookupSwitchRoutingOspfResultOutput{}, options).(LookupSwitchRoutingOspfResultOutput), nil
-		}).(LookupSwitchRoutingOspfResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", args, LookupSwitchRoutingOspfResultOutput{}, options).(LookupSwitchRoutingOspfResultOutput)
 }
 
 // A collection of arguments for invoking getSwitchRoutingOspf.

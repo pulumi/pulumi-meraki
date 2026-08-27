@@ -77,12 +77,8 @@ type GetSummaryTopSwitchesByEnergyUsageResult struct {
 }
 
 func GetSummaryTopSwitchesByEnergyUsageOutput(ctx *pulumi.Context, args GetSummaryTopSwitchesByEnergyUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopSwitchesByEnergyUsageResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopSwitchesByEnergyUsageResultOutput, error) {
-			args := v.(GetSummaryTopSwitchesByEnergyUsageArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", args, GetSummaryTopSwitchesByEnergyUsageResultOutput{}, options).(GetSummaryTopSwitchesByEnergyUsageResultOutput), nil
-		}).(GetSummaryTopSwitchesByEnergyUsageResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", args, GetSummaryTopSwitchesByEnergyUsageResultOutput{}, options).(GetSummaryTopSwitchesByEnergyUsageResultOutput)
 }
 
 // A collection of arguments for invoking getSummaryTopSwitchesByEnergyUsage.

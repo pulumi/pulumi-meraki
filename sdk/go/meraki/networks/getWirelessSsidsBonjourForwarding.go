@@ -66,12 +66,8 @@ type LookupWirelessSsidsBonjourForwardingResult struct {
 }
 
 func LookupWirelessSsidsBonjourForwardingOutput(ctx *pulumi.Context, args LookupWirelessSsidsBonjourForwardingOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsBonjourForwardingResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsBonjourForwardingResultOutput, error) {
-			args := v.(LookupWirelessSsidsBonjourForwardingArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", args, LookupWirelessSsidsBonjourForwardingResultOutput{}, options).(LookupWirelessSsidsBonjourForwardingResultOutput), nil
-		}).(LookupWirelessSsidsBonjourForwardingResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", args, LookupWirelessSsidsBonjourForwardingResultOutput{}, options).(LookupWirelessSsidsBonjourForwardingResultOutput)
 }
 
 // A collection of arguments for invoking getWirelessSsidsBonjourForwarding.

@@ -61,12 +61,8 @@ type LookupApplianceSecurityIntrusionResult struct {
 }
 
 func LookupApplianceSecurityIntrusionOutput(ctx *pulumi.Context, args LookupApplianceSecurityIntrusionOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSecurityIntrusionResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupApplianceSecurityIntrusionResultOutput, error) {
-			args := v.(LookupApplianceSecurityIntrusionArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", args, LookupApplianceSecurityIntrusionResultOutput{}, options).(LookupApplianceSecurityIntrusionResultOutput), nil
-		}).(LookupApplianceSecurityIntrusionResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", args, LookupApplianceSecurityIntrusionResultOutput{}, options).(LookupApplianceSecurityIntrusionResultOutput)
 }
 
 // A collection of arguments for invoking getApplianceSecurityIntrusion.

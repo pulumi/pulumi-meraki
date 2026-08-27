@@ -42,12 +42,8 @@ type LookupFloorPlansResult struct {
 }
 
 func LookupFloorPlansOutput(ctx *pulumi.Context, args LookupFloorPlansOutputArgs, opts ...pulumi.InvokeOption) LookupFloorPlansResultOutput {
-	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (LookupFloorPlansResultOutput, error) {
-			args := v.(LookupFloorPlansArgs)
-			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("meraki:networks/getFloorPlans:getFloorPlans", args, LookupFloorPlansResultOutput{}, options).(LookupFloorPlansResultOutput), nil
-		}).(LookupFloorPlansResultOutput)
+	options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+	return ctx.InvokeOutput("meraki:networks/getFloorPlans:getFloorPlans", args, LookupFloorPlansResultOutput{}, options).(LookupFloorPlansResultOutput)
 }
 
 // A collection of arguments for invoking getFloorPlans.
