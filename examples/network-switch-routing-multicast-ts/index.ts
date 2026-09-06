@@ -16,25 +16,11 @@ export = async () => {
     tags: ["US-Env01-0001", "US-Env01-0002"],
   });
 
-  const webhookPayloadTemplate = new meraki.networks.WebhooksPayloadTemplates(
-    "webhook-template",
-    {
-      networkId: network.id,
-      name: "Test Template",
-      body: '{"some_variable":"{{alertType}}}',
-    }
-  );
-
-  const webhookServers = new meraki.networks.WebhooksHttpServers(
-    "webhook-http-servers",
-    {
-      networkId: network.id,
-      name: "Test Server",
-      url: "https://pulumi.com/meraki_webhook",
-      sharedSecret: "supersecret",
-      payloadTemplate: {
-        payloadTemplateId: webhookPayloadTemplate.payloadTemplateId,
-      },
-    }
-  );
+  new meraki.networks.SwitchRoutingMulticast("switch-routing-multicast", {
+    networkId: network.id,
+    defaultSettings: {
+      floodUnknownMulticastTrafficEnabled: true,
+      igmpSnoopingEnabled: false,
+    },
+  });
 };
