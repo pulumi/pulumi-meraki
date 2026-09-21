@@ -299,7 +299,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  body: pulumi.Input[Optional[_builtins.str]] = None,
                  body_file: pulumi.Input[Optional[_builtins.str]] = None,
-                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict', 'outputs.WebhooksPayloadTemplatesHeader']]]]] = None,
                  headers_file: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -336,7 +336,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] body: The body of the payload template, in liquid template
         :param pulumi.Input[_builtins.str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict', 'outputs.WebhooksPayloadTemplatesHeader']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
         :param pulumi.Input[_builtins.str] headers_file: A file containing the liquid template used with the webhook headers.
         :param pulumi.Input[_builtins.str] name: The name of the payload template
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -392,7 +392,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  body: pulumi.Input[Optional[_builtins.str]] = None,
                  body_file: pulumi.Input[Optional[_builtins.str]] = None,
-                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+                 headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict', 'outputs.WebhooksPayloadTemplatesHeader']]]]] = None,
                  headers_file: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -429,12 +429,12 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             body: pulumi.Input[Optional[_builtins.str]] = None,
             body_file: pulumi.Input[Optional[_builtins.str]] = None,
-            headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
+            headers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict', 'outputs.WebhooksPayloadTemplatesHeader']]]]] = None,
             headers_file: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             payload_template_id: pulumi.Input[Optional[_builtins.str]] = None,
-            sharing: pulumi.Input[Optional[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']]] = None,
+            sharing: pulumi.Input[Optional[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict', 'outputs.WebhooksPayloadTemplatesSharing']]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None) -> 'WebhooksPayloadTemplates':
         """
         Get an existing WebhooksPayloadTemplates resource's state with the given name, id, and optional extra
@@ -445,12 +445,12 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] body: The body of the payload template, in liquid template
         :param pulumi.Input[_builtins.str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict', 'outputs.WebhooksPayloadTemplatesHeader']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
         :param pulumi.Input[_builtins.str] headers_file: A file containing the liquid template used with the webhook headers.
         :param pulumi.Input[_builtins.str] name: The name of the payload template
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] payload_template_id: Webhook payload template Id
-        :param pulumi.Input[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']] sharing: Information on which entities have access to the template
+        :param pulumi.Input[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict', 'outputs.WebhooksPayloadTemplatesSharing']] sharing: Information on which entities have access to the template
         :param pulumi.Input[_builtins.str] type: The type of the payload template
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -2068,9 +2068,9 @@ class WirelessSsids(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']]] = None,
+                 active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict', 'outputs.WirelessSsidsActiveDirectory']]] = None,
                  adult_content_filtering_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict']]]]] = None,
+                 ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict', 'outputs.WirelessSsidsApTagsAndVlanId']]]]] = None,
                  auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  availability_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  available_on_all_aps: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2078,24 +2078,24 @@ class WirelessSsids(pulumi.CustomResource):
                  concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  disassociate_clients_on_vpn_failover: pulumi.Input[Optional[_builtins.bool]] = None,
-                 dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict']]] = None,
-                 dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict']]] = None,
-                 dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict']]] = None,
+                 dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict', 'outputs.WirelessSsidsDnsRewrite']]] = None,
+                 dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict', 'outputs.WirelessSsidsDot11r']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict', 'outputs.WirelessSsidsDot11w']]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  enterprise_admin_access: pulumi.Input[Optional[_builtins.str]] = None,
-                 gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict']]] = None,
+                 gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict', 'outputs.WirelessSsidsGre']]] = None,
                  ip_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  lan_isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict']]] = None,
-                 local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict']]] = None,
+                 ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict', 'outputs.WirelessSsidsLdap']]] = None,
+                 local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict', 'outputs.WirelessSsidsLocalRadius']]] = None,
                  mandatory_dhcp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  min_bitrate: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict']]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict', 'outputs.WirelessSsidsNamedVlans']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.int]] = None,
-                 oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict']]] = None,
+                 oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict', 'outputs.WirelessSsidsOauth']]] = None,
                  per_client_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
                  per_client_bandwidth_limit_up: pulumi.Input[Optional[_builtins.int]] = None,
                  per_ssid_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2103,7 +2103,7 @@ class WirelessSsids(pulumi.CustomResource):
                  psk: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_accounting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  radius_accounting_interim_interval: pulumi.Input[Optional[_builtins.int]] = None,
-                 radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict']]]]] = None,
+                 radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict', 'outputs.WirelessSsidsRadiusAccountingServer']]]]] = None,
                  radius_attribute_for_group_policies: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_authentication_nas_id: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_called_station_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2117,10 +2117,10 @@ class WirelessSsids(pulumi.CustomResource):
                  radius_proxy_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  radius_server_attempts_limit: pulumi.Input[Optional[_builtins.int]] = None,
                  radius_server_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict']]]]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict', 'outputs.WirelessSsidsRadiusServer']]]]] = None,
                  radius_testing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  secondary_concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict']]] = None,
+                 speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict', 'outputs.WirelessSsidsSpeedBurst']]] = None,
                  splash_guest_sponsor_domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  splash_page: pulumi.Input[Optional[_builtins.str]] = None,
                  use_vlan_tagging: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2407,9 +2407,9 @@ class WirelessSsids(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
+        :param pulumi.Input[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict', 'outputs.WirelessSsidsActiveDirectory']] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
         :param pulumi.Input[_builtins.bool] adult_content_filtering_enabled: Boolean indicating whether or not adult content will be blocked
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict']]]] ap_tags_and_vlan_ids: The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict', 'outputs.WirelessSsidsApTagsAndVlanId']]]] ap_tags_and_vlan_ids: The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] availability_tags: List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
         :param pulumi.Input[_builtins.bool] available_on_all_aps: Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
@@ -2417,24 +2417,24 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] concentrator_network_id: The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
         :param pulumi.Input[_builtins.int] default_vlan_id: The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         :param pulumi.Input[_builtins.bool] disassociate_clients_on_vpn_failover: Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
-        :param pulumi.Input[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict']] dns_rewrite: DNS servers rewrite settings
-        :param pulumi.Input[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict']] dot11r: The current setting for 802.11r
-        :param pulumi.Input[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict']] dot11w: The current setting for Protected Management Frames (802.11w).
+        :param pulumi.Input[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict', 'outputs.WirelessSsidsDnsRewrite']] dns_rewrite: DNS servers rewrite settings
+        :param pulumi.Input[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict', 'outputs.WirelessSsidsDot11r']] dot11r: The current setting for 802.11r
+        :param pulumi.Input[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict', 'outputs.WirelessSsidsDot11w']] dot11w: The current setting for Protected Management Frames (802.11w).
         :param pulumi.Input[_builtins.bool] enabled: Whether or not the SSID is enabled
         :param pulumi.Input[_builtins.str] encryption_mode: The psk encryption mode for the SSID
         :param pulumi.Input[_builtins.str] enterprise_admin_access: Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
-        :param pulumi.Input[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict']] gre: Ethernet over GRE settings
+        :param pulumi.Input[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict', 'outputs.WirelessSsidsGre']] gre: Ethernet over GRE settings
         :param pulumi.Input[_builtins.str] ip_assignment_mode: The client IP assignment mode
         :param pulumi.Input[_builtins.bool] lan_isolation_enabled: Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
-        :param pulumi.Input[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict']] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-        :param pulumi.Input[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict']] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
+        :param pulumi.Input[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict', 'outputs.WirelessSsidsLdap']] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
+        :param pulumi.Input[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict', 'outputs.WirelessSsidsLocalRadius']] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         :param pulumi.Input[_builtins.bool] mandatory_dhcp_enabled: Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
         :param pulumi.Input[_builtins.int] min_bitrate: The minimum bitrate in Mbps of this SSID in the default indoor RF profile
         :param pulumi.Input[_builtins.str] name: The name of the SSID
-        :param pulumi.Input[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict']] named_vlans: Named VLAN settings.
+        :param pulumi.Input[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict', 'outputs.WirelessSsidsNamedVlans']] named_vlans: Named VLAN settings.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: Unique identifier of the SSID
-        :param pulumi.Input[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict']] oauth: The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
+        :param pulumi.Input[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict', 'outputs.WirelessSsidsOauth']] oauth: The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
         :param pulumi.Input[_builtins.int] per_client_bandwidth_limit_down: The download bandwidth limit in Kbps. (0 represents no limit.)
         :param pulumi.Input[_builtins.int] per_client_bandwidth_limit_up: The upload bandwidth limit in Kbps. (0 represents no limit.)
         :param pulumi.Input[_builtins.int] per_ssid_bandwidth_limit_down: The total download bandwidth limit in Kbps (0 represents no limit)
@@ -2442,7 +2442,7 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] psk: The passkey for the SSID. This param is only valid if the authMode is 'psk'
         :param pulumi.Input[_builtins.bool] radius_accounting_enabled: Whether or not RADIUS accounting is enabled
         :param pulumi.Input[_builtins.int] radius_accounting_interim_interval: The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict']]]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict', 'outputs.WirelessSsidsRadiusAccountingServer']]]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
         :param pulumi.Input[_builtins.str] radius_attribute_for_group_policies: RADIUS attribute used to look up group policies
         :param pulumi.Input[_builtins.str] radius_authentication_nas_id: The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[_builtins.str] radius_called_station_id: The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
@@ -2456,10 +2456,10 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] radius_proxy_enabled: If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
         :param pulumi.Input[_builtins.int] radius_server_attempts_limit: The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
         :param pulumi.Input[_builtins.int] radius_server_timeout: The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict']]]] radius_servers: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict', 'outputs.WirelessSsidsRadiusServer']]]] radius_servers: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
         :param pulumi.Input[_builtins.bool] radius_testing_enabled: If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
         :param pulumi.Input[_builtins.str] secondary_concentrator_network_id: The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
-        :param pulumi.Input[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict']] speed_burst: The SpeedBurst setting for this SSID'
+        :param pulumi.Input[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict', 'outputs.WirelessSsidsSpeedBurst']] speed_burst: The SpeedBurst setting for this SSID'
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] splash_guest_sponsor_domains: Array of valid sponsor email domains for sponsored guest splash type.
         :param pulumi.Input[_builtins.str] splash_page: The type of splash page for the SSID
         :param pulumi.Input[_builtins.bool] use_vlan_tagging: Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -2765,9 +2765,9 @@ class WirelessSsids(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']]] = None,
+                 active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict', 'outputs.WirelessSsidsActiveDirectory']]] = None,
                  adult_content_filtering_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict']]]]] = None,
+                 ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict', 'outputs.WirelessSsidsApTagsAndVlanId']]]]] = None,
                  auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  availability_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  available_on_all_aps: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2775,24 +2775,24 @@ class WirelessSsids(pulumi.CustomResource):
                  concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  disassociate_clients_on_vpn_failover: pulumi.Input[Optional[_builtins.bool]] = None,
-                 dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict']]] = None,
-                 dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict']]] = None,
-                 dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict']]] = None,
+                 dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict', 'outputs.WirelessSsidsDnsRewrite']]] = None,
+                 dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict', 'outputs.WirelessSsidsDot11r']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict', 'outputs.WirelessSsidsDot11w']]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  enterprise_admin_access: pulumi.Input[Optional[_builtins.str]] = None,
-                 gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict']]] = None,
+                 gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict', 'outputs.WirelessSsidsGre']]] = None,
                  ip_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  lan_isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict']]] = None,
-                 local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict']]] = None,
+                 ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict', 'outputs.WirelessSsidsLdap']]] = None,
+                 local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict', 'outputs.WirelessSsidsLocalRadius']]] = None,
                  mandatory_dhcp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  min_bitrate: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict']]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict', 'outputs.WirelessSsidsNamedVlans']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.int]] = None,
-                 oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict']]] = None,
+                 oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict', 'outputs.WirelessSsidsOauth']]] = None,
                  per_client_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
                  per_client_bandwidth_limit_up: pulumi.Input[Optional[_builtins.int]] = None,
                  per_ssid_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2800,7 +2800,7 @@ class WirelessSsids(pulumi.CustomResource):
                  psk: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_accounting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  radius_accounting_interim_interval: pulumi.Input[Optional[_builtins.int]] = None,
-                 radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict']]]]] = None,
+                 radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict', 'outputs.WirelessSsidsRadiusAccountingServer']]]]] = None,
                  radius_attribute_for_group_policies: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_authentication_nas_id: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_called_station_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2814,10 +2814,10 @@ class WirelessSsids(pulumi.CustomResource):
                  radius_proxy_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  radius_server_attempts_limit: pulumi.Input[Optional[_builtins.int]] = None,
                  radius_server_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict']]]]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict', 'outputs.WirelessSsidsRadiusServer']]]]] = None,
                  radius_testing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  secondary_concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict']]] = None,
+                 speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict', 'outputs.WirelessSsidsSpeedBurst']]] = None,
                  splash_guest_sponsor_domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  splash_page: pulumi.Input[Optional[_builtins.str]] = None,
                  use_vlan_tagging: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2915,10 +2915,10 @@ class WirelessSsids(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']]] = None,
+            active_directory: pulumi.Input[Optional[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict', 'outputs.WirelessSsidsActiveDirectory']]] = None,
             admin_splash_url: pulumi.Input[Optional[_builtins.str]] = None,
             adult_content_filtering_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict']]]]] = None,
+            ap_tags_and_vlan_ids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict', 'outputs.WirelessSsidsApTagsAndVlanId']]]]] = None,
             auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
             availability_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             available_on_all_aps: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -2926,24 +2926,24 @@ class WirelessSsids(pulumi.CustomResource):
             concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
             default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
             disassociate_clients_on_vpn_failover: pulumi.Input[Optional[_builtins.bool]] = None,
-            dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict']]] = None,
-            dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict']]] = None,
-            dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict']]] = None,
+            dns_rewrite: pulumi.Input[Optional[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict', 'outputs.WirelessSsidsDnsRewrite']]] = None,
+            dot11r: pulumi.Input[Optional[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict', 'outputs.WirelessSsidsDot11r']]] = None,
+            dot11w: pulumi.Input[Optional[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict', 'outputs.WirelessSsidsDot11w']]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
             enterprise_admin_access: pulumi.Input[Optional[_builtins.str]] = None,
-            gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict']]] = None,
+            gre: pulumi.Input[Optional[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict', 'outputs.WirelessSsidsGre']]] = None,
             ip_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
             lan_isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict']]] = None,
-            local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict']]] = None,
+            ldap: pulumi.Input[Optional[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict', 'outputs.WirelessSsidsLdap']]] = None,
+            local_radius: pulumi.Input[Optional[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict', 'outputs.WirelessSsidsLocalRadius']]] = None,
             mandatory_dhcp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             min_bitrate: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict']]] = None,
+            named_vlans: pulumi.Input[Optional[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict', 'outputs.WirelessSsidsNamedVlans']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.int]] = None,
-            oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict']]] = None,
+            oauth: pulumi.Input[Optional[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict', 'outputs.WirelessSsidsOauth']]] = None,
             per_client_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
             per_client_bandwidth_limit_up: pulumi.Input[Optional[_builtins.int]] = None,
             per_ssid_bandwidth_limit_down: pulumi.Input[Optional[_builtins.int]] = None,
@@ -2951,8 +2951,8 @@ class WirelessSsids(pulumi.CustomResource):
             psk: pulumi.Input[Optional[_builtins.str]] = None,
             radius_accounting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             radius_accounting_interim_interval: pulumi.Input[Optional[_builtins.int]] = None,
-            radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict']]]]] = None,
-            radius_accounting_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServersResponseArgs', 'WirelessSsidsRadiusAccountingServersResponseArgsDict']]]]] = None,
+            radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict', 'outputs.WirelessSsidsRadiusAccountingServer']]]]] = None,
+            radius_accounting_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServersResponseArgs', 'WirelessSsidsRadiusAccountingServersResponseArgsDict', 'outputs.WirelessSsidsRadiusAccountingServersResponse']]]]] = None,
             radius_attribute_for_group_policies: pulumi.Input[Optional[_builtins.str]] = None,
             radius_authentication_nas_id: pulumi.Input[Optional[_builtins.str]] = None,
             radius_called_station_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2966,11 +2966,11 @@ class WirelessSsids(pulumi.CustomResource):
             radius_proxy_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             radius_server_attempts_limit: pulumi.Input[Optional[_builtins.int]] = None,
             radius_server_timeout: pulumi.Input[Optional[_builtins.int]] = None,
-            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict']]]]] = None,
-            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServersResponseArgs', 'WirelessSsidsRadiusServersResponseArgsDict']]]]] = None,
+            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict', 'outputs.WirelessSsidsRadiusServer']]]]] = None,
+            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServersResponseArgs', 'WirelessSsidsRadiusServersResponseArgsDict', 'outputs.WirelessSsidsRadiusServersResponse']]]]] = None,
             radius_testing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             secondary_concentrator_network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict']]] = None,
+            speed_burst: pulumi.Input[Optional[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict', 'outputs.WirelessSsidsSpeedBurst']]] = None,
             splash_guest_sponsor_domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             splash_page: pulumi.Input[Optional[_builtins.str]] = None,
             splash_timeout: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2988,9 +2988,9 @@ class WirelessSsids(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
+        :param pulumi.Input[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict', 'outputs.WirelessSsidsActiveDirectory']] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
         :param pulumi.Input[_builtins.bool] adult_content_filtering_enabled: Boolean indicating whether or not adult content will be blocked
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict']]]] ap_tags_and_vlan_ids: The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsApTagsAndVlanIdArgs', 'WirelessSsidsApTagsAndVlanIdArgsDict', 'outputs.WirelessSsidsApTagsAndVlanId']]]] ap_tags_and_vlan_ids: The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] availability_tags: List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
         :param pulumi.Input[_builtins.bool] available_on_all_aps: Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
@@ -2998,24 +2998,24 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] concentrator_network_id: The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
         :param pulumi.Input[_builtins.int] default_vlan_id: The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         :param pulumi.Input[_builtins.bool] disassociate_clients_on_vpn_failover: Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
-        :param pulumi.Input[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict']] dns_rewrite: DNS servers rewrite settings
-        :param pulumi.Input[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict']] dot11r: The current setting for 802.11r
-        :param pulumi.Input[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict']] dot11w: The current setting for Protected Management Frames (802.11w).
+        :param pulumi.Input[Union['WirelessSsidsDnsRewriteArgs', 'WirelessSsidsDnsRewriteArgsDict', 'outputs.WirelessSsidsDnsRewrite']] dns_rewrite: DNS servers rewrite settings
+        :param pulumi.Input[Union['WirelessSsidsDot11rArgs', 'WirelessSsidsDot11rArgsDict', 'outputs.WirelessSsidsDot11r']] dot11r: The current setting for 802.11r
+        :param pulumi.Input[Union['WirelessSsidsDot11wArgs', 'WirelessSsidsDot11wArgsDict', 'outputs.WirelessSsidsDot11w']] dot11w: The current setting for Protected Management Frames (802.11w).
         :param pulumi.Input[_builtins.bool] enabled: Whether or not the SSID is enabled
         :param pulumi.Input[_builtins.str] encryption_mode: The psk encryption mode for the SSID
         :param pulumi.Input[_builtins.str] enterprise_admin_access: Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
-        :param pulumi.Input[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict']] gre: Ethernet over GRE settings
+        :param pulumi.Input[Union['WirelessSsidsGreArgs', 'WirelessSsidsGreArgsDict', 'outputs.WirelessSsidsGre']] gre: Ethernet over GRE settings
         :param pulumi.Input[_builtins.str] ip_assignment_mode: The client IP assignment mode
         :param pulumi.Input[_builtins.bool] lan_isolation_enabled: Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
-        :param pulumi.Input[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict']] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-        :param pulumi.Input[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict']] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
+        :param pulumi.Input[Union['WirelessSsidsLdapArgs', 'WirelessSsidsLdapArgsDict', 'outputs.WirelessSsidsLdap']] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
+        :param pulumi.Input[Union['WirelessSsidsLocalRadiusArgs', 'WirelessSsidsLocalRadiusArgsDict', 'outputs.WirelessSsidsLocalRadius']] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         :param pulumi.Input[_builtins.bool] mandatory_dhcp_enabled: Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
         :param pulumi.Input[_builtins.int] min_bitrate: The minimum bitrate in Mbps of this SSID in the default indoor RF profile
         :param pulumi.Input[_builtins.str] name: The name of the SSID
-        :param pulumi.Input[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict']] named_vlans: Named VLAN settings.
+        :param pulumi.Input[Union['WirelessSsidsNamedVlansArgs', 'WirelessSsidsNamedVlansArgsDict', 'outputs.WirelessSsidsNamedVlans']] named_vlans: Named VLAN settings.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: Unique identifier of the SSID
-        :param pulumi.Input[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict']] oauth: The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
+        :param pulumi.Input[Union['WirelessSsidsOauthArgs', 'WirelessSsidsOauthArgsDict', 'outputs.WirelessSsidsOauth']] oauth: The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
         :param pulumi.Input[_builtins.int] per_client_bandwidth_limit_down: The download bandwidth limit in Kbps. (0 represents no limit.)
         :param pulumi.Input[_builtins.int] per_client_bandwidth_limit_up: The upload bandwidth limit in Kbps. (0 represents no limit.)
         :param pulumi.Input[_builtins.int] per_ssid_bandwidth_limit_down: The total download bandwidth limit in Kbps (0 represents no limit)
@@ -3023,8 +3023,8 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] psk: The passkey for the SSID. This param is only valid if the authMode is 'psk'
         :param pulumi.Input[_builtins.bool] radius_accounting_enabled: Whether or not RADIUS accounting is enabled
         :param pulumi.Input[_builtins.int] radius_accounting_interim_interval: The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict']]]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServersResponseArgs', 'WirelessSsidsRadiusAccountingServersResponseArgsDict']]]] radius_accounting_servers_responses: List of RADIUS accounting 802.1X servers to be used for authentication
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServerArgs', 'WirelessSsidsRadiusAccountingServerArgsDict', 'outputs.WirelessSsidsRadiusAccountingServer']]]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusAccountingServersResponseArgs', 'WirelessSsidsRadiusAccountingServersResponseArgsDict', 'outputs.WirelessSsidsRadiusAccountingServersResponse']]]] radius_accounting_servers_responses: List of RADIUS accounting 802.1X servers to be used for authentication
         :param pulumi.Input[_builtins.str] radius_attribute_for_group_policies: RADIUS attribute used to look up group policies
         :param pulumi.Input[_builtins.str] radius_authentication_nas_id: The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[_builtins.str] radius_called_station_id: The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
@@ -3038,11 +3038,11 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] radius_proxy_enabled: If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
         :param pulumi.Input[_builtins.int] radius_server_attempts_limit: The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
         :param pulumi.Input[_builtins.int] radius_server_timeout: The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict']]]] radius_servers: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServersResponseArgs', 'WirelessSsidsRadiusServersResponseArgsDict']]]] radius_servers_responses: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServerArgs', 'WirelessSsidsRadiusServerArgsDict', 'outputs.WirelessSsidsRadiusServer']]]] radius_servers: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsRadiusServersResponseArgs', 'WirelessSsidsRadiusServersResponseArgsDict', 'outputs.WirelessSsidsRadiusServersResponse']]]] radius_servers_responses: The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
         :param pulumi.Input[_builtins.bool] radius_testing_enabled: If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
         :param pulumi.Input[_builtins.str] secondary_concentrator_network_id: The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
-        :param pulumi.Input[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict']] speed_burst: The SpeedBurst setting for this SSID'
+        :param pulumi.Input[Union['WirelessSsidsSpeedBurstArgs', 'WirelessSsidsSpeedBurstArgsDict', 'outputs.WirelessSsidsSpeedBurst']] speed_burst: The SpeedBurst setting for this SSID'
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] splash_guest_sponsor_domains: Array of valid sponsor email domains for sponsored guest splash type.
         :param pulumi.Input[_builtins.str] splash_page: The type of splash page for the SSID
         :param pulumi.Input[_builtins.str] splash_timeout: Splash page timeout

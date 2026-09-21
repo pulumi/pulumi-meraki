@@ -967,7 +967,7 @@ class SwitchPorts(pulumi.CustomResource):
                  poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_id: pulumi.Input[Optional[_builtins.str]] = None,
                  port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
+                 profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict', 'outputs.SwitchPortsProfile']]] = None,
                  rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1055,7 +1055,7 @@ class SwitchPorts(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] poe_enabled: The PoE status of the switch port.
         :param pulumi.Input[_builtins.str] port_id: The identifier of the switch port.
         :param pulumi.Input[_builtins.str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']] profile: Profile attributes
+        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict', 'outputs.SwitchPortsProfile']] profile: Profile attributes
         :param pulumi.Input[_builtins.bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
@@ -1162,7 +1162,7 @@ class SwitchPorts(pulumi.CustomResource):
                  poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  port_id: pulumi.Input[Optional[_builtins.str]] = None,
                  port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
+                 profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict', 'outputs.SwitchPortsProfile']]] = None,
                  rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1238,14 +1238,14 @@ class SwitchPorts(pulumi.CustomResource):
             link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
             link_negotiation_capabilities: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            mirror: pulumi.Input[Optional[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict']]] = None,
-            module: pulumi.Input[Optional[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict']]] = None,
+            mirror: pulumi.Input[Optional[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict', 'outputs.SwitchPortsMirror']]] = None,
+            module: pulumi.Input[Optional[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict', 'outputs.SwitchPortsModule']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             peer_sgt_capable: pulumi.Input[Optional[_builtins.bool]] = None,
             poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             port_id: pulumi.Input[Optional[_builtins.str]] = None,
             port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-            profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
+            profile: pulumi.Input[Optional[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict', 'outputs.SwitchPortsProfile']]] = None,
             rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None,
             sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
@@ -1275,14 +1275,14 @@ class SwitchPorts(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] link_negotiation: The link speed for the switch port.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] link_negotiation_capabilities: Available link speeds for the switch port.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mac_allow_lists: Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
-        :param pulumi.Input[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict']] mirror: Port mirror
-        :param pulumi.Input[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict']] module: Expansion module
+        :param pulumi.Input[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict', 'outputs.SwitchPortsMirror']] mirror: Port mirror
+        :param pulumi.Input[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict', 'outputs.SwitchPortsModule']] module: Expansion module
         :param pulumi.Input[_builtins.str] name: The name of the switch port.
         :param pulumi.Input[_builtins.bool] peer_sgt_capable: If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port. Cannot be applied to a port on a switch bound to profile.
         :param pulumi.Input[_builtins.bool] poe_enabled: The PoE status of the switch port.
         :param pulumi.Input[_builtins.str] port_id: The identifier of the switch port.
         :param pulumi.Input[_builtins.str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']] profile: Profile attributes
+        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict', 'outputs.SwitchPortsProfile']] profile: Profile attributes
         :param pulumi.Input[_builtins.bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.

@@ -171,7 +171,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -203,7 +203,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[_builtins.bool] enabled: Whether custom analytics is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]] parameters: Parameters for the custom analytics workload
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]] parameters: Parameters for the custom analytics workload
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         ...
@@ -254,7 +254,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+                 parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -283,7 +283,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
+            parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraCustomAnalytics':
         """
         Get an existing CameraCustomAnalytics resource's state with the given name, id, and optional extra
@@ -294,7 +294,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[_builtins.bool] enabled: Whether custom analytics is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]] parameters: Parameters for the custom analytics workload
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]] parameters: Parameters for the custom analytics workload
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

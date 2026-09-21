@@ -140,7 +140,7 @@ class SwitchStacksRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict', 'outputs.SwitchStacksRemoveParameters']]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -210,7 +210,7 @@ class SwitchStacksRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict', 'outputs.SwitchStacksRemoveParameters']]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -241,9 +241,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict', 'outputs.SwitchStacksRemoveItem']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict', 'outputs.SwitchStacksRemoveParameters']]] = None,
             switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchStacksRemove':
         """
         Get an existing SwitchStacksRemove resource's state with the given name, id, and optional extra

@@ -154,7 +154,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRule']]]]] = None,
                  syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
@@ -190,7 +190,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRule']]]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         ...
@@ -245,7 +245,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRule']]]]] = None,
                  syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -273,8 +273,8 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict']]]]] = None,
-            rules_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRulesResponseArgs', 'ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRule']]]]] = None,
+            rules_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRulesResponseArgs', 'ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRulesResponse']]]]] = None,
             syslog_default_rule: pulumi.Input[Optional[_builtins.bool]] = None) -> 'ApplianceFirewallInboundFirewallRules':
         """
         Get an existing ApplianceFirewallInboundFirewallRules resource's state with the given name, id, and optional extra
@@ -284,8 +284,8 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules (not including the default rule)
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRulesResponseArgs', 'ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict']]]] rules_responses: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRuleArgs', 'ApplianceFirewallInboundFirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRule']]]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallInboundFirewallRulesRulesResponseArgs', 'ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict', 'outputs.ApplianceFirewallInboundFirewallRulesRulesResponse']]]] rules_responses: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

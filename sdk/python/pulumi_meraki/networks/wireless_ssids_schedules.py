@@ -203,8 +203,8 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -238,8 +238,8 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID outage schedule is enabled.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]] ranges: List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]] ranges_in_seconds: List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]] ranges: List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]] ranges_in_seconds: List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
         """
         ...
     @overload
@@ -292,8 +292,8 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None,
+                 ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]]] = None,
+                 ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -325,8 +325,8 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.str]] = None,
-            ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]]] = None,
-            ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]]] = None) -> 'WirelessSsidsSchedules':
+            ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]]] = None,
+            ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]]] = None) -> 'WirelessSsidsSchedules':
         """
         Get an existing WirelessSsidsSchedules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -337,8 +337,8 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID outage schedule is enabled.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict']]]] ranges: List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict']]]] ranges_in_seconds: List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]] ranges: List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]] ranges_in_seconds: List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

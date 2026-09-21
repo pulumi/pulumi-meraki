@@ -172,7 +172,7 @@ class Snmp(pulumi.CustomResource):
                  access: pulumi.Input[Optional[_builtins.str]] = None,
                  community_string: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -204,7 +204,7 @@ class Snmp(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] access: The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
         :param pulumi.Input[_builtins.str] community_string: SNMP community string if access is 'community'.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]] users: SNMP settings if access is 'users'.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]] users: SNMP settings if access is 'users'.
         """
         ...
     @overload
@@ -255,7 +255,7 @@ class Snmp(pulumi.CustomResource):
                  access: pulumi.Input[Optional[_builtins.str]] = None,
                  community_string: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -284,7 +284,7 @@ class Snmp(pulumi.CustomResource):
             access: pulumi.Input[Optional[_builtins.str]] = None,
             community_string: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]]] = None) -> 'Snmp':
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]]] = None) -> 'Snmp':
         """
         Get an existing Snmp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -295,7 +295,7 @@ class Snmp(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] access: The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
         :param pulumi.Input[_builtins.str] community_string: SNMP community string if access is 'community'.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict']]]] users: SNMP settings if access is 'users'.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]] users: SNMP settings if access is 'users'.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

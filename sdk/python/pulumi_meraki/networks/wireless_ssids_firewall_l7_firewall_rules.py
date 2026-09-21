@@ -138,7 +138,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL7FirewallRulesRule']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -169,7 +169,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL7FirewallRulesRule']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         ...
     @overload
@@ -219,7 +219,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL7FirewallRulesRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -248,7 +248,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict']]]]] = None) -> 'WirelessSsidsFirewallL7FirewallRules':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL7FirewallRulesRule']]]]] = None) -> 'WirelessSsidsFirewallL7FirewallRules':
         """
         Get an existing WirelessSsidsFirewallL7FirewallRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -258,7 +258,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL7FirewallRulesRuleArgs', 'WirelessSsidsFirewallL7FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL7FirewallRulesRule']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

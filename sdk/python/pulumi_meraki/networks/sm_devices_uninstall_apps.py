@@ -129,7 +129,7 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict', 'outputs.SmDevicesUninstallAppsParameters']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -205,7 +205,7 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device_id: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict', 'outputs.SmDevicesUninstallAppsParameters']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -236,7 +236,7 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device_id: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict']]] = None) -> 'SmDevicesUninstallApps':
+            parameters: pulumi.Input[Optional[Union['SmDevicesUninstallAppsParametersArgs', 'SmDevicesUninstallAppsParametersArgsDict', 'outputs.SmDevicesUninstallAppsParameters']]] = None) -> 'SmDevicesUninstallApps':
         """
         Get an existing SmDevicesUninstallApps resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

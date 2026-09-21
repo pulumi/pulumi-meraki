@@ -160,7 +160,7 @@ class Split(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['SplitItemArgs', 'SplitItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['SplitItemArgs', 'SplitItemArgsDict', 'outputs.SplitItem']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'Split':
         """
         Get an existing Split resource's state with the given name, id, and optional extra

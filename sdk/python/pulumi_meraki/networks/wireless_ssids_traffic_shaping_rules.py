@@ -211,7 +211,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
                  default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]]] = None,
                  traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
@@ -256,7 +256,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
                they are specified in. An empty list (or null) means no rules. Note that
                you are allowed a maximum of 8 rules.
         :param pulumi.Input[_builtins.bool] traffic_shaping_enabled: Whether traffic shaping rules are applied to clients on your SSID.
@@ -322,7 +322,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
                  default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]]] = None,
                  traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -355,7 +355,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
             default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]]] = None,
             traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'WirelessSsidsTrafficShapingRules':
         """
         Get an existing WirelessSsidsTrafficShapingRules resource's state with the given name, id, and optional extra
@@ -367,7 +367,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
                they are specified in. An empty list (or null) means no rules. Note that
                you are allowed a maximum of 8 rules.
         :param pulumi.Input[_builtins.bool] traffic_shaping_enabled: Whether traffic shaping rules are applied to clients on your SSID.

@@ -185,8 +185,8 @@ class CellularGatewayLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -220,8 +220,8 @@ class CellularGatewayLan(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         ...
@@ -274,8 +274,8 @@ class CellularGatewayLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -307,8 +307,8 @@ class CellularGatewayLan(pulumi.CustomResource):
             device_lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
             device_name: pulumi.Input[Optional[_builtins.str]] = None,
             device_subnet: pulumi.Input[Optional[_builtins.str]] = None,
-            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
-            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CellularGatewayLan':
         """
         Get an existing CellularGatewayLan resource's state with the given name, id, and optional extra
@@ -320,8 +320,8 @@ class CellularGatewayLan(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device_lan_ip: Lan IP of the MG
         :param pulumi.Input[_builtins.str] device_name: Name of the MG.
         :param pulumi.Input[_builtins.str] device_subnet: Subnet configuration of the MG.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

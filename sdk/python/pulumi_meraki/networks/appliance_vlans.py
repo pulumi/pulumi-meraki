@@ -735,16 +735,16 @@ class ApplianceVlans(pulumi.CustomResource):
                  dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
                  dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]]] = None,
                  dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
                  group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']]] = None,
                  mask: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]]] = None,
                  subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
                  vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -801,16 +801,16 @@ class ApplianceVlans(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] dhcp_boot_options_enabled: Use DHCP boot options specified in other properties
         :param pulumi.Input[_builtins.str] dhcp_handling: The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
         :param pulumi.Input[_builtins.str] dhcp_lease_time: The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]] dhcp_options: The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]] dhcp_options: The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dhcp_relay_server_ips: The IPs of the DHCP servers that DHCP requests should be relayed to
         :param pulumi.Input[_builtins.str] dns_nameservers: The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
         :param pulumi.Input[_builtins.str] group_policy_id: The id of the desired group policy to apply to the VLAN
-        :param pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']] ipv6: IPv6 configuration on the VLAN
-        :param pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
+        :param pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']] ipv6: IPv6 configuration on the VLAN
+        :param pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         :param pulumi.Input[_builtins.int] mask: Mask used for the subnet of all bound to the template networks. Applicable only for template network.
         :param pulumi.Input[_builtins.str] name: The name of the VLAN
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
         :param pulumi.Input[_builtins.str] subnet: The subnet of the VLAN
         :param pulumi.Input[_builtins.str] template_vlan_type: Type of subnetting of the VLAN. Applicable only for template network.
         :param pulumi.Input[_builtins.str] vlan_id: The VLAN ID of the VLAN
@@ -886,16 +886,16 @@ class ApplianceVlans(pulumi.CustomResource):
                  dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
                  dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]]] = None,
                  dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
                  group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+                 ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']]] = None,
+                 mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']]] = None,
                  mask: pulumi.Input[Optional[_builtins.int]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]]] = None,
                  subnet: pulumi.Input[Optional[_builtins.str]] = None,
                  template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
                  vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -952,17 +952,17 @@ class ApplianceVlans(pulumi.CustomResource):
             dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
             dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
-            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]]] = None,
             dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
             group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
             interface_id: pulumi.Input[Optional[_builtins.str]] = None,
-            ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']]] = None,
-            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']]] = None,
+            ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']]] = None,
+            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']]] = None,
             mask: pulumi.Input[Optional[_builtins.int]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]]] = None,
             subnet: pulumi.Input[Optional[_builtins.str]] = None,
             template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
             vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -981,17 +981,17 @@ class ApplianceVlans(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] dhcp_boot_options_enabled: Use DHCP boot options specified in other properties
         :param pulumi.Input[_builtins.str] dhcp_handling: The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
         :param pulumi.Input[_builtins.str] dhcp_lease_time: The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict']]]] dhcp_options: The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]] dhcp_options: The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dhcp_relay_server_ips: The IPs of the DHCP servers that DHCP requests should be relayed to
         :param pulumi.Input[_builtins.str] dns_nameservers: The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
         :param pulumi.Input[_builtins.str] group_policy_id: The id of the desired group policy to apply to the VLAN
         :param pulumi.Input[_builtins.str] interface_id: The interface ID of the VLAN
-        :param pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict']] ipv6: IPv6 configuration on the VLAN
-        :param pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
+        :param pulumi.Input[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']] ipv6: IPv6 configuration on the VLAN
+        :param pulumi.Input[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         :param pulumi.Input[_builtins.int] mask: Mask used for the subnet of all bound to the template networks. Applicable only for template network.
         :param pulumi.Input[_builtins.str] name: The name of the VLAN
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
         :param pulumi.Input[_builtins.str] subnet: The subnet of the VLAN
         :param pulumi.Input[_builtins.str] template_vlan_type: Type of subnetting of the VLAN. Applicable only for template network.
         :param pulumi.Input[_builtins.str] vlan_id: The VLAN ID of the VLAN

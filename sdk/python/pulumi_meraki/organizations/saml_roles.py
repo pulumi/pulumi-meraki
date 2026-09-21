@@ -249,12 +249,12 @@ class SamlRoles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]]] = None,
                  org_access: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  role: pulumi.Input[Optional[_builtins.str]] = None,
                  saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -287,12 +287,12 @@ class SamlRoles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]] networks: The list of networks that the SAML administrator has privileges on
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]] networks: The list of networks that the SAML administrator has privileges on
         :param pulumi.Input[_builtins.str] org_access: The privilege of the SAML administrator on the organization
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] role: The role of the SAML administrator
         :param pulumi.Input[_builtins.str] saml_role_id: samlRoleId path parameter. Saml role ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]] tags: The list of tags that the SAML administrator has privleges on
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]] tags: The list of tags that the SAML administrator has privleges on
         """
         ...
     @overload
@@ -344,12 +344,12 @@ class SamlRoles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]]] = None,
                  org_access: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  role: pulumi.Input[Optional[_builtins.str]] = None,
                  saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -378,13 +378,13 @@ class SamlRoles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cameras: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict']]]]] = None,
-            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]]] = None,
+            cameras: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict', 'outputs.SamlRolesCamera']]]]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]]] = None,
             org_access: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
             role: pulumi.Input[Optional[_builtins.str]] = None,
             saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
-            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]]] = None) -> 'SamlRoles':
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]]] = None) -> 'SamlRoles':
         """
         Get an existing SamlRoles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -392,13 +392,13 @@ class SamlRoles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict']]]] cameras: The list of camera access privileges for SAML administrator
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]] networks: The list of networks that the SAML administrator has privileges on
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict', 'outputs.SamlRolesCamera']]]] cameras: The list of camera access privileges for SAML administrator
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]] networks: The list of networks that the SAML administrator has privileges on
         :param pulumi.Input[_builtins.str] org_access: The privilege of the SAML administrator on the organization
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] role: The role of the SAML administrator
         :param pulumi.Input[_builtins.str] saml_role_id: samlRoleId path parameter. Saml role ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict']]]] tags: The list of tags that the SAML administrator has privleges on
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]] tags: The list of tags that the SAML administrator has privleges on
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

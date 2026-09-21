@@ -219,8 +219,8 @@ class VlanProfiles(pulumi.CustomResource):
                  iname: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -259,8 +259,8 @@ class VlanProfiles(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] iname: IName of the VLAN profile
         :param pulumi.Input[_builtins.str] name: Name of the profile, string length must be from 1 to 255 characters
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]] vlan_groups: An array of named VLANs
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]] vlan_names: An array of named VLANs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]] vlan_groups: An array of named VLANs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]] vlan_names: An array of named VLANs
         """
         ...
     @overload
@@ -318,8 +318,8 @@ class VlanProfiles(pulumi.CustomResource):
                  iname: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None,
+                 vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]]] = None,
+                 vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -353,8 +353,8 @@ class VlanProfiles(pulumi.CustomResource):
             is_default: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]]] = None,
-            vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]]] = None) -> 'VlanProfiles':
+            vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]]] = None,
+            vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]]] = None) -> 'VlanProfiles':
         """
         Get an existing VlanProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -366,8 +366,8 @@ class VlanProfiles(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] is_default: Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned
         :param pulumi.Input[_builtins.str] name: Name of the profile, string length must be from 1 to 255 characters
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict']]]] vlan_groups: An array of named VLANs
-        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict']]]] vlan_names: An array of named VLANs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]] vlan_groups: An array of named VLANs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]] vlan_names: An array of named VLANs
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -109,7 +109,7 @@ class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimParameters']]] = None,
                  validate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
@@ -181,7 +181,7 @@ class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimParameters']]] = None,
                  validate: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -207,8 +207,8 @@ class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimItemArgs', 'LicensingSubscriptionSubscriptionsClaimItemArgsDict']]] = None,
-            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimItemArgs', 'LicensingSubscriptionSubscriptionsClaimItemArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimParametersArgs', 'LicensingSubscriptionSubscriptionsClaimParametersArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimParameters']]] = None,
             validate: pulumi.Input[Optional[_builtins.bool]] = None) -> 'LicensingSubscriptionSubscriptionsClaim':
         """
         Get an existing LicensingSubscriptionSubscriptionsClaim resource's state with the given name, id, and optional extra

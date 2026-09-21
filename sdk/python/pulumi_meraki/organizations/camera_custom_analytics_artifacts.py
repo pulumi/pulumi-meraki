@@ -255,7 +255,7 @@ class CameraCustomAnalyticsArtifacts(pulumi.CustomResource):
             artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            status: pulumi.Input[Optional[Union['CameraCustomAnalyticsArtifactsStatusArgs', 'CameraCustomAnalyticsArtifactsStatusArgsDict']]] = None) -> 'CameraCustomAnalyticsArtifacts':
+            status: pulumi.Input[Optional[Union['CameraCustomAnalyticsArtifactsStatusArgs', 'CameraCustomAnalyticsArtifactsStatusArgsDict', 'outputs.CameraCustomAnalyticsArtifactsStatus']]] = None) -> 'CameraCustomAnalyticsArtifacts':
         """
         Get an existing CameraCustomAnalyticsArtifacts resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -266,7 +266,7 @@ class CameraCustomAnalyticsArtifacts(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[_builtins.str] name: Custom analytics artifact name
         :param pulumi.Input[_builtins.str] organization_id: Organization ID
-        :param pulumi.Input[Union['CameraCustomAnalyticsArtifactsStatusArgs', 'CameraCustomAnalyticsArtifactsStatusArgsDict']] status: Custom analytics artifact status
+        :param pulumi.Input[Union['CameraCustomAnalyticsArtifactsStatusArgs', 'CameraCustomAnalyticsArtifactsStatusArgsDict', 'outputs.CameraCustomAnalyticsArtifactsStatus']] status: Custom analytics artifact status
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

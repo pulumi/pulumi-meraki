@@ -297,14 +297,14 @@ class SwitchRoutingOspf(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]]] = None,
                  dead_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  hello_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  md5_authentication_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict']]] = None,
+                 md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict']]] = None,
+                 v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -350,14 +350,14 @@ class SwitchRoutingOspf(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]] areas: OSPF areas
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]] areas: OSPF areas
         :param pulumi.Input[_builtins.int] dead_timer_in_seconds: Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
         :param pulumi.Input[_builtins.int] hello_timer_in_seconds: Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
         :param pulumi.Input[_builtins.bool] md5_authentication_enabled: Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
-        :param pulumi.Input[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict']] md5_authentication_key: MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
+        :param pulumi.Input[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']] md5_authentication_key: MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict']] v3: OSPF v3 configuration
+        :param pulumi.Input[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']] v3: OSPF v3 configuration
         """
         ...
     @overload
@@ -422,14 +422,14 @@ class SwitchRoutingOspf(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]]] = None,
                  dead_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  hello_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
                  md5_authentication_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict']]] = None,
+                 md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict']]] = None,
+                 v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -459,14 +459,14 @@ class SwitchRoutingOspf(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]]] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]]] = None,
             dead_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             hello_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
             md5_authentication_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict']]] = None,
+            md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict']]] = None) -> 'SwitchRoutingOspf':
+            v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']]] = None) -> 'SwitchRoutingOspf':
         """
         Get an existing SwitchRoutingOspf resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -474,14 +474,14 @@ class SwitchRoutingOspf(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]] areas: OSPF areas
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]] areas: OSPF areas
         :param pulumi.Input[_builtins.int] dead_timer_in_seconds: Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
         :param pulumi.Input[_builtins.int] hello_timer_in_seconds: Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
         :param pulumi.Input[_builtins.bool] md5_authentication_enabled: Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
-        :param pulumi.Input[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict']] md5_authentication_key: MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
+        :param pulumi.Input[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']] md5_authentication_key: MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict']] v3: OSPF v3 configuration
+        :param pulumi.Input[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']] v3: OSPF v3 configuration
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

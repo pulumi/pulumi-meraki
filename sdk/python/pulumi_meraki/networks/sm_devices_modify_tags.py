@@ -113,7 +113,7 @@ class SmDevicesModifyTags(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict', 'outputs.SmDevicesModifyTagsParameters']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -209,7 +209,7 @@ class SmDevicesModifyTags(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict', 'outputs.SmDevicesModifyTagsParameters']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -236,9 +236,9 @@ class SmDevicesModifyTags(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SmDevicesModifyTagsItemArgs', 'SmDevicesModifyTagsItemArgsDict']]]]] = None,
+            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SmDevicesModifyTagsItemArgs', 'SmDevicesModifyTagsItemArgsDict', 'outputs.SmDevicesModifyTagsItem']]]]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict']]] = None) -> 'SmDevicesModifyTags':
+            parameters: pulumi.Input[Optional[Union['SmDevicesModifyTagsParametersArgs', 'SmDevicesModifyTagsParametersArgsDict', 'outputs.SmDevicesModifyTagsParameters']]] = None) -> 'SmDevicesModifyTags':
         """
         Get an existing SmDevicesModifyTags resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -246,7 +246,7 @@ class SmDevicesModifyTags(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SmDevicesModifyTagsItemArgs', 'SmDevicesModifyTagsItemArgsDict']]]] items: Array of ResponseSmModifyNetworkSmDevicesTags
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SmDevicesModifyTagsItemArgs', 'SmDevicesModifyTagsItemArgsDict', 'outputs.SmDevicesModifyTagsItem']]]] items: Array of ResponseSmModifyNetworkSmDevicesTags
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

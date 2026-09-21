@@ -108,7 +108,7 @@ class BlinkLeds(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict', 'outputs.BlinkLedsParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -178,7 +178,7 @@ class BlinkLeds(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict', 'outputs.BlinkLedsParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -206,8 +206,8 @@ class BlinkLeds(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['BlinkLedsItemArgs', 'BlinkLedsItemArgsDict']]] = None,
-            parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['BlinkLedsItemArgs', 'BlinkLedsItemArgsDict', 'outputs.BlinkLedsItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict', 'outputs.BlinkLedsParameters']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'BlinkLeds':
         """
         Get an existing BlinkLeds resource's state with the given name, id, and optional extra

@@ -235,7 +235,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']]] = None,
                  prefix: pulumi.Input[Optional[_builtins.str]] = None,
                  static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -268,7 +268,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Identifying description for the prefix.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']] origin: WAN1/WAN2/Independent prefix.
+        :param pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']] origin: WAN1/WAN2/Independent prefix.
         :param pulumi.Input[_builtins.str] prefix: IPv6 prefix/prefix length.
         :param pulumi.Input[_builtins.str] static_delegated_prefix_id: Static delegated prefix id.
         """
@@ -320,7 +320,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+                 origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']]] = None,
                  prefix: pulumi.Input[Optional[_builtins.str]] = None,
                  static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -354,7 +354,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
             created_at: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']]] = None,
+            origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']]] = None,
             prefix: pulumi.Input[Optional[_builtins.str]] = None,
             static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
             updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> 'AppliancePrefixesDelegatedStatics':
@@ -368,7 +368,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] created_at: Prefix creation time.
         :param pulumi.Input[_builtins.str] description: Identifying description for the prefix.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict']] origin: WAN1/WAN2/Independent prefix.
+        :param pulumi.Input[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']] origin: WAN1/WAN2/Independent prefix.
         :param pulumi.Input[_builtins.str] prefix: IPv6 prefix/prefix length.
         :param pulumi.Input[_builtins.str] static_delegated_prefix_id: Static delegated prefix id.
         :param pulumi.Input[_builtins.str] updated_at: Prefix Updated time.

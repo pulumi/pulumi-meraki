@@ -109,7 +109,7 @@ class NetworksCombine(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict', 'outputs.NetworksCombineParameters']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -185,7 +185,7 @@ class NetworksCombine(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict', 'outputs.NetworksCombineParameters']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -212,9 +212,9 @@ class NetworksCombine(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['NetworksCombineItemArgs', 'NetworksCombineItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['NetworksCombineItemArgs', 'NetworksCombineItemArgsDict', 'outputs.NetworksCombineItem']]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict']]] = None) -> 'NetworksCombine':
+            parameters: pulumi.Input[Optional[Union['NetworksCombineParametersArgs', 'NetworksCombineParametersArgsDict', 'outputs.NetworksCombineParameters']]] = None) -> 'NetworksCombine':
         """
         Get an existing NetworksCombine resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -109,7 +109,7 @@ class InventoryRelease(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict', 'outputs.InventoryReleaseParameters']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -175,7 +175,7 @@ class InventoryRelease(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict', 'outputs.InventoryReleaseParameters']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -202,9 +202,9 @@ class InventoryRelease(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['InventoryReleaseItemArgs', 'InventoryReleaseItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['InventoryReleaseItemArgs', 'InventoryReleaseItemArgsDict', 'outputs.InventoryReleaseItem']]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict']]] = None) -> 'InventoryRelease':
+            parameters: pulumi.Input[Optional[Union['InventoryReleaseParametersArgs', 'InventoryReleaseParametersArgsDict', 'outputs.InventoryReleaseParameters']]] = None) -> 'InventoryRelease':
         """
         Get an existing InventoryRelease resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -441,15 +441,15 @@ class FloorPlans(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
+                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']]] = None,
+                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']]] = None,
+                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']]] = None,
                  floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
                  image_contents: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']]] = None,
+                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -494,15 +494,15 @@ class FloorPlans(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']] center: The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
+        :param pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']] center: The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
         :param pulumi.Input[_builtins.str] floor_plan_id: Floor plan ID
         :param pulumi.Input[_builtins.str] image_contents: The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
         :param pulumi.Input[_builtins.str] name: The name of your floor plan.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']] top_left_corner: The longitude and latitude of the top left corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']] top_right_corner: The longitude and latitude of the top right corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']] top_left_corner: The longitude and latitude of the top left corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']] top_right_corner: The longitude and latitude of the top right corner of your floor plan.
         """
         ...
     @overload
@@ -566,15 +566,15 @@ class FloorPlans(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
+                 bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']]] = None,
+                 bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']]] = None,
+                 center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']]] = None,
                  floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
                  image_contents: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+                 top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']]] = None,
+                 top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -612,10 +612,10 @@ class FloorPlans(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']]] = None,
-            bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']]] = None,
-            center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']]] = None,
-            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict']]]]] = None,
+            bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']]] = None,
+            bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']]] = None,
+            center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict', 'outputs.FloorPlansDevice']]]]] = None,
             floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
             height: pulumi.Input[Optional[_builtins.float]] = None,
             image_contents: pulumi.Input[Optional[_builtins.str]] = None,
@@ -625,8 +625,8 @@ class FloorPlans(pulumi.CustomResource):
             image_url_expires_at: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']]] = None,
-            top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']]] = None,
+            top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']]] = None,
+            top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']]] = None,
             width: pulumi.Input[Optional[_builtins.float]] = None) -> 'FloorPlans':
         """
         Get an existing FloorPlans resource's state with the given name, id, and optional extra
@@ -635,10 +635,10 @@ class FloorPlans(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict']] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict']] center: The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict']]]] devices: List of devices for the floorplan
+        :param pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']] center: The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict', 'outputs.FloorPlansDevice']]]] devices: List of devices for the floorplan
         :param pulumi.Input[_builtins.str] floor_plan_id: Floor plan ID
         :param pulumi.Input[_builtins.float] height: The height of your floor plan.
         :param pulumi.Input[_builtins.str] image_contents: The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
@@ -648,8 +648,8 @@ class FloorPlans(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] image_url_expires_at: The time the image url link will expire.
         :param pulumi.Input[_builtins.str] name: The name of your floor plan.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict']] top_left_corner: The longitude and latitude of the top left corner of your floor plan.
-        :param pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict']] top_right_corner: The longitude and latitude of the top right corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']] top_left_corner: The longitude and latitude of the top left corner of your floor plan.
+        :param pulumi.Input[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']] top_right_corner: The longitude and latitude of the top right corner of your floor plan.
         :param pulumi.Input[_builtins.float] width: The width of your floor plan.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

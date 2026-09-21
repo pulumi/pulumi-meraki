@@ -285,7 +285,7 @@ class WirelessSettings(pulumi.CustomResource):
                  led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
                  location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -325,7 +325,7 @@ class WirelessSettings(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] led_lights_on: Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
         :param pulumi.Input[_builtins.bool] location_analytics_enabled: Toggle for enabling or disabling location analytics for your network
         :param pulumi.Input[_builtins.bool] meshing_enabled: Toggle for enabling or disabling meshing in a network
-        :param pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']] named_vlans: Named VLAN settings for wireless networks.
+        :param pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']] named_vlans: Named VLAN settings for wireless networks.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] upgradestrategy: The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
         """
@@ -384,7 +384,7 @@ class WirelessSettings(pulumi.CustomResource):
                  led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
                  location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+                 named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -420,9 +420,9 @@ class WirelessSettings(pulumi.CustomResource):
             led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
             location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']]] = None,
+            named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            regulatory_domain: pulumi.Input[Optional[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict']]] = None,
+            regulatory_domain: pulumi.Input[Optional[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict', 'outputs.WirelessSettingsRegulatoryDomain']]] = None,
             upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSettings':
         """
         Get an existing WirelessSettings resource's state with the given name, id, and optional extra
@@ -435,9 +435,9 @@ class WirelessSettings(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] led_lights_on: Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
         :param pulumi.Input[_builtins.bool] location_analytics_enabled: Toggle for enabling or disabling location analytics for your network
         :param pulumi.Input[_builtins.bool] meshing_enabled: Toggle for enabling or disabling meshing in a network
-        :param pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict']] named_vlans: Named VLAN settings for wireless networks.
+        :param pulumi.Input[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']] named_vlans: Named VLAN settings for wireless networks.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict']] regulatory_domain: Regulatory domain information for this network.
+        :param pulumi.Input[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict', 'outputs.WirelessSettingsRegulatoryDomain']] regulatory_domain: Regulatory domain information for this network.
         :param pulumi.Input[_builtins.str] upgradestrategy: The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

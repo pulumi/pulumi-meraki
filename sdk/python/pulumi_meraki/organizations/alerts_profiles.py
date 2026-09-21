@@ -297,13 +297,13 @@ class AlertsProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']]] = None,
+                 alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']]] = None,
                  alert_config_id: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict']]] = None,
+                 recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -347,13 +347,13 @@ class AlertsProfiles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']] alert_condition: The conditions that determine if the alert triggers
+        :param pulumi.Input[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']] alert_condition: The conditions that determine if the alert triggers
         :param pulumi.Input[_builtins.str] alert_config_id: alertConfigId path parameter. Alert config ID
         :param pulumi.Input[_builtins.str] description: User supplied description of the alert
         :param pulumi.Input[_builtins.bool] enabled: Is the alert config enabled
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_tags: Networks with these tags will be monitored for the alert
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will recieve the alert.
+        :param pulumi.Input[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']] recipients: List of recipients that will recieve the alert.
         :param pulumi.Input[_builtins.str] type: The alert type
         """
         ...
@@ -416,13 +416,13 @@ class AlertsProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']]] = None,
+                 alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']]] = None,
                  alert_config_id: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict']]] = None,
+                 recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']]] = None,
                  type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -453,13 +453,13 @@ class AlertsProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']]] = None,
+            alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']]] = None,
             alert_config_id: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict']]] = None,
+            recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']]] = None,
             type: pulumi.Input[Optional[_builtins.str]] = None) -> 'AlertsProfiles':
         """
         Get an existing AlertsProfiles resource's state with the given name, id, and optional extra
@@ -468,13 +468,13 @@ class AlertsProfiles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']] alert_condition: The conditions that determine if the alert triggers
+        :param pulumi.Input[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']] alert_condition: The conditions that determine if the alert triggers
         :param pulumi.Input[_builtins.str] alert_config_id: alertConfigId path parameter. Alert config ID
         :param pulumi.Input[_builtins.str] description: User supplied description of the alert
         :param pulumi.Input[_builtins.bool] enabled: Is the alert config enabled
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] network_tags: Networks with these tags will be monitored for the alert
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will recieve the alert.
+        :param pulumi.Input[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']] recipients: List of recipients that will recieve the alert.
         :param pulumi.Input[_builtins.str] type: The alert type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

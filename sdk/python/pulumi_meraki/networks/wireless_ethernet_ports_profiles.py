@@ -218,9 +218,9 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]]] = None,
                  profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -258,9 +258,9 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: AP port profile name
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]] ports: Ports config
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]] ports: Ports config
         :param pulumi.Input[_builtins.str] profile_id: AP port profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]] usb_ports: Usb ports config
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]] usb_ports: Usb ports config
         """
         ...
     @overload
@@ -317,9 +317,9 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+                 ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]]] = None,
                  profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None,
+                 usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -352,9 +352,9 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
             is_default: pulumi.Input[Optional[_builtins.bool]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]]] = None,
+            ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]]] = None,
             profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]]] = None) -> 'WirelessEthernetPortsProfiles':
+            usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]]] = None) -> 'WirelessEthernetPortsProfiles':
         """
         Get an existing WirelessEthernetPortsProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -365,9 +365,9 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] is_default: Is default profile
         :param pulumi.Input[_builtins.str] name: AP port profile name
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict']]]] ports: Ports config
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]] ports: Ports config
         :param pulumi.Input[_builtins.str] profile_id: AP port profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict']]]] usb_ports: Usb ports config
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]] usb_ports: Usb ports config
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

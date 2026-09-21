@@ -170,9 +170,9 @@ class FirmwareUpgrades(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']]] = None,
                  timezone: pulumi.Input[Optional[_builtins.str]] = None,
-                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
+                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -266,9 +266,9 @@ class FirmwareUpgrades(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']] products: The network devices to be updated
+        :param pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']] products: The network devices to be updated
         :param pulumi.Input[_builtins.str] timezone: The timezone for the network
-        :param pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']] upgrade_window: Upgrade window for devices in network
+        :param pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']] upgrade_window: Upgrade window for devices in network
         """
         ...
     @overload
@@ -381,9 +381,9 @@ class FirmwareUpgrades(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']]] = None,
                  timezone: pulumi.Input[Optional[_builtins.str]] = None,
-                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None,
+                 upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -410,9 +410,9 @@ class FirmwareUpgrades(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']]] = None,
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']]] = None,
             timezone: pulumi.Input[Optional[_builtins.str]] = None,
-            upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']]] = None) -> 'FirmwareUpgrades':
+            upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']]] = None) -> 'FirmwareUpgrades':
         """
         Get an existing FirmwareUpgrades resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -421,9 +421,9 @@ class FirmwareUpgrades(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict']] products: The network devices to be updated
+        :param pulumi.Input[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']] products: The network devices to be updated
         :param pulumi.Input[_builtins.str] timezone: The timezone for the network
-        :param pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict']] upgrade_window: Upgrade window for devices in network
+        :param pulumi.Input[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']] upgrade_window: Upgrade window for devices in network
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

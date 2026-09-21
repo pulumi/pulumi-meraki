@@ -365,10 +365,10 @@ class Admins(pulumi.CustomResource):
                  authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]]] = None,
                  org_access: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -407,10 +407,10 @@ class Admins(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_method: Admin's authentication method
         :param pulumi.Input[_builtins.str] email: Admin's email address
         :param pulumi.Input[_builtins.str] name: Admin's username
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]] networks: Admin network access information
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]] networks: Admin network access information
         :param pulumi.Input[_builtins.str] org_access: Admin's level of access to the organization
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]] tags: Admin tag information
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]] tags: Admin tag information
         """
         ...
     @overload
@@ -468,10 +468,10 @@ class Admins(pulumi.CustomResource):
                  authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
                  email: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
-                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]]] = None,
                  org_access: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+                 tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -512,10 +512,10 @@ class Admins(pulumi.CustomResource):
             has_api_key: pulumi.Input[Optional[_builtins.bool]] = None,
             last_active: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
-            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]]] = None,
             org_access: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]]] = None,
             two_factor_auth_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> 'Admins':
         """
         Get an existing Admins resource's state with the given name, id, and optional extra
@@ -531,10 +531,10 @@ class Admins(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] has_api_key: Indicates whether the admin has an API key
         :param pulumi.Input[_builtins.str] last_active: Time when the admin was last active
         :param pulumi.Input[_builtins.str] name: Admin's username
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict']]]] networks: Admin network access information
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]] networks: Admin network access information
         :param pulumi.Input[_builtins.str] org_access: Admin's level of access to the organization
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict']]]] tags: Admin tag information
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]] tags: Admin tag information
         :param pulumi.Input[_builtins.bool] two_factor_auth_enabled: Indicates whether two-factor authentication is enabled
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
