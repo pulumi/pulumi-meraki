@@ -140,7 +140,7 @@ class SwitchStacksAdd(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict', 'outputs.SwitchStacksAddParameters']]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -210,7 +210,7 @@ class SwitchStacksAdd(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict', 'outputs.SwitchStacksAddParameters']]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -241,9 +241,9 @@ class SwitchStacksAdd(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['SwitchStacksAddItemArgs', 'SwitchStacksAddItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['SwitchStacksAddItemArgs', 'SwitchStacksAddItemArgsDict', 'outputs.SwitchStacksAddItem']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict', 'outputs.SwitchStacksAddParameters']]] = None,
             switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchStacksAdd':
         """
         Get an existing SwitchStacksAdd resource's state with the given name, id, and optional extra

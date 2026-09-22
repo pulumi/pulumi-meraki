@@ -208,7 +208,7 @@ class SmDevicesUnenroll(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             device_id: pulumi.Input[Optional[_builtins.str]] = None,
-            item: pulumi.Input[Optional[Union['SmDevicesUnenrollItemArgs', 'SmDevicesUnenrollItemArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['SmDevicesUnenrollItemArgs', 'SmDevicesUnenrollItemArgsDict', 'outputs.SmDevicesUnenrollItem']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SmDevicesUnenroll':
         """
         Get an existing SmDevicesUnenroll resource's state with the given name, id, and optional extra

@@ -492,14 +492,14 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
                  boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
                  dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpDhcpOption']]]]] = None,
                  dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
-                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment']]]]] = None,
                  interface_id: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpReservedIpRange']]]]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -553,14 +553,14 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] boot_options_enabled: Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
         :param pulumi.Input[_builtins.str] dhcp_lease_time: The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
         :param pulumi.Input[_builtins.str] dhcp_mode: The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict']]]] dhcp_options: Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpDhcpOption']]]] dhcp_options: Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dhcp_relay_server_ips: The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_custom_nameservers: The DHCP name server IPs when DHCP name server option is 'custom'
         :param pulumi.Input[_builtins.str] dns_nameservers_option: The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment']]]] fixed_ip_assignments: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.str] interface_id: interfaceId path parameter. Interface ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict']]]] reserved_ip_ranges: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpReservedIpRange']]]] reserved_ip_ranges: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.str] switch_stack_id: switchStackId path parameter. Switch stack ID
         """
         ...
@@ -633,14 +633,14 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
                  boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
                  dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
-                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+                 dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpDhcpOption']]]]] = None,
                  dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
-                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+                 fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment']]]]] = None,
                  interface_id: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+                 reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpReservedIpRange']]]]] = None,
                  switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -686,14 +686,14 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
             boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
             dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
-            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict']]]]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpDhcpOption']]]]] = None,
             dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
-            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment']]]]] = None,
             interface_id: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict']]]]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpReservedIpRange']]]]] = None,
             switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchStacksRoutingInterfacesDhcp':
         """
         Get an existing SwitchStacksRoutingInterfacesDhcp resource's state with the given name, id, and optional extra
@@ -707,14 +707,14 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] boot_options_enabled: Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
         :param pulumi.Input[_builtins.str] dhcp_lease_time: The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
         :param pulumi.Input[_builtins.str] dhcp_mode: The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict']]]] dhcp_options: Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpDhcpOption']]]] dhcp_options: Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dhcp_relay_server_ips: The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_custom_nameservers: The DHCP name server IPs when DHCP name server option is 'custom'
         :param pulumi.Input[_builtins.str] dns_nameservers_option: The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment']]]] fixed_ip_assignments: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.str] interface_id: interfaceId path parameter. Interface ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict']]]] reserved_ip_ranges: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchStacksRoutingInterfacesDhcpReservedIpRange']]]] reserved_ip_ranges: Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.str] switch_stack_id: switchStackId path parameter. Switch stack ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

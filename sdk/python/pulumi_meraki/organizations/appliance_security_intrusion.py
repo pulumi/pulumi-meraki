@@ -105,7 +105,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict', 'outputs.ApplianceSecurityIntrusionAllowedRule']]]]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -133,7 +133,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]] allowed_rules: Sets a list of specific SNORT signatures to allow
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict', 'outputs.ApplianceSecurityIntrusionAllowedRule']]]] allowed_rules: Sets a list of specific SNORT signatures to allow
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         ...
@@ -180,7 +180,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+                 allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict', 'outputs.ApplianceSecurityIntrusionAllowedRule']]]]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -205,7 +205,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]]] = None,
+            allowed_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict', 'outputs.ApplianceSecurityIntrusionAllowedRule']]]]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSecurityIntrusion':
         """
         Get an existing ApplianceSecurityIntrusion resource's state with the given name, id, and optional extra
@@ -214,7 +214,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]] allowed_rules: Sets a list of specific SNORT signatures to allow
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict', 'outputs.ApplianceSecurityIntrusionAllowedRule']]]] allowed_rules: Sets a list of specific SNORT signatures to allow
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -474,15 +474,15 @@ class ApplianceSsids(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.int]] = None,
                  psk: pulumi.Input[Optional[_builtins.str]] = None,
-                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]]] = None,
                  visible: pulumi.Input[Optional[_builtins.bool]] = None,
                  wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -530,15 +530,15 @@ class ApplianceSsids(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID.
         :param pulumi.Input[_builtins.int] default_vlan_id: The VLAN ID of the VLAN associated to this SSID.
-        :param pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']] dhcp_enforced_deauthentication: DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
-        :param pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']] dot11w: The current setting for Protected Management Frames (802.11w).
+        :param pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']] dhcp_enforced_deauthentication: DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
+        :param pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']] dot11w: The current setting for Protected Management Frames (802.11w).
         :param pulumi.Input[_builtins.bool] enabled: Whether or not the SSID is enabled.
         :param pulumi.Input[_builtins.str] encryption_mode: The psk encryption mode for the SSID.
         :param pulumi.Input[_builtins.str] name: The name of the SSID.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: The number of the SSID.
         :param pulumi.Input[_builtins.str] psk: The passkey for the SSID. This param is only valid if the authMode is 'psk'.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]] radius_servers: The RADIUS 802.1x servers to be used for authentication.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]] radius_servers: The RADIUS 802.1x servers to be used for authentication.
         :param pulumi.Input[_builtins.bool] visible: Boolean indicating whether the MX should advertise or hide this SSID.
         :param pulumi.Input[_builtins.str] wpa_encryption_mode: WPA encryption mode for the SSID.
         """
@@ -605,15 +605,15 @@ class ApplianceSsids(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
-                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+                 dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']]] = None,
+                 dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.int]] = None,
                  psk: pulumi.Input[Optional[_builtins.str]] = None,
-                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
+                 radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]]] = None,
                  visible: pulumi.Input[Optional[_builtins.bool]] = None,
                  wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -655,16 +655,16 @@ class ApplianceSsids(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
             default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
-            dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']]] = None,
-            dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']]] = None,
+            dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']]] = None,
+            dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.int]] = None,
             psk: pulumi.Input[Optional[_builtins.str]] = None,
-            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]]] = None,
-            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict']]]]] = None,
+            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]]] = None,
+            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict', 'outputs.ApplianceSsidsRadiusServersResponse']]]]] = None,
             visible: pulumi.Input[Optional[_builtins.bool]] = None,
             wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceSsids':
         """
@@ -676,16 +676,16 @@ class ApplianceSsids(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID.
         :param pulumi.Input[_builtins.int] default_vlan_id: The VLAN ID of the VLAN associated to this SSID.
-        :param pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict']] dhcp_enforced_deauthentication: DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
-        :param pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict']] dot11w: The current setting for Protected Management Frames (802.11w).
+        :param pulumi.Input[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']] dhcp_enforced_deauthentication: DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
+        :param pulumi.Input[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']] dot11w: The current setting for Protected Management Frames (802.11w).
         :param pulumi.Input[_builtins.bool] enabled: Whether or not the SSID is enabled.
         :param pulumi.Input[_builtins.str] encryption_mode: The psk encryption mode for the SSID.
         :param pulumi.Input[_builtins.str] name: The name of the SSID.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: The number of the SSID.
         :param pulumi.Input[_builtins.str] psk: The passkey for the SSID. This param is only valid if the authMode is 'psk'.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict']]]] radius_servers: The RADIUS 802.1x servers to be used for authentication.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict']]]] radius_servers_responses: The RADIUS 802.1x servers to be used for authentication.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]] radius_servers: The RADIUS 802.1x servers to be used for authentication.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict', 'outputs.ApplianceSsidsRadiusServersResponse']]]] radius_servers_responses: The RADIUS 802.1x servers to be used for authentication.
         :param pulumi.Input[_builtins.bool] visible: Boolean indicating whether the MX should advertise or hide this SSID.
         :param pulumi.Input[_builtins.str] wpa_encryption_mode: WPA encryption mode for the SSID.
         """

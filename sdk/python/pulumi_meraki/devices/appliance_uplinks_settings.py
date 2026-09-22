@@ -105,7 +105,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -203,7 +203,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']] interfaces: Interface settings.
+        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']] interfaces: Interface settings.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         ...
@@ -320,7 +320,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+                 interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -345,7 +345,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
+            interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'ApplianceUplinksSettings':
         """
         Get an existing ApplianceUplinksSettings resource's state with the given name, id, and optional extra
@@ -354,7 +354,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']] interfaces: Interface settings.
+        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']] interfaces: Interface settings.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

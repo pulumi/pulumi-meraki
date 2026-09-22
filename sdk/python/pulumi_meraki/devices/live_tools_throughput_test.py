@@ -217,7 +217,7 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -252,7 +252,7 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.str] throughput_test_id: ID of throughput test job
         """
@@ -306,7 +306,7 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+                 callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -338,10 +338,10 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']]] = None,
+            callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']]] = None,
             error: pulumi.Input[Optional[_builtins.str]] = None,
-            request: pulumi.Input[Optional[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict']]] = None,
-            result: pulumi.Input[Optional[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict']]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict', 'outputs.LiveToolsThroughputTestRequest']]] = None,
+            result: pulumi.Input[Optional[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict', 'outputs.LiveToolsThroughputTestResult']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None,
             status: pulumi.Input[Optional[_builtins.str]] = None,
             throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -353,10 +353,10 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] error: Description of the error.
-        :param pulumi.Input[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict']] request: The parameters of the throughput test request
-        :param pulumi.Input[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict']] result: Result of the throughput test request
+        :param pulumi.Input[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict', 'outputs.LiveToolsThroughputTestRequest']] request: The parameters of the throughput test request
+        :param pulumi.Input[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict', 'outputs.LiveToolsThroughputTestResult']] result: Result of the throughput test request
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.str] status: Status of the throughput test request
         :param pulumi.Input[_builtins.str] throughput_test_id: ID of throughput test job

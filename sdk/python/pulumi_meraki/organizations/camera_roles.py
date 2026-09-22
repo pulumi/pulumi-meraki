@@ -233,9 +233,9 @@ class CameraRoles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]]] = None,
-                 applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict']]]]] = None,
-                 applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict']]]]] = None,
+                 applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]]] = None,
+                 applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]]] = None,
+                 applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  role_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -275,9 +275,9 @@ class CameraRoles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]] applied_on_devices: Device tag on which this specified permission is applied.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict']]]] applied_on_networks: Network tag on which this specified permission is applied.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict']]]] applied_org_wides: Permissions to be applied org wide.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]] applied_on_devices: Device tag on which this specified permission is applied.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]] applied_on_networks: Network tag on which this specified permission is applied.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]] applied_org_wides: Permissions to be applied org wide.
         :param pulumi.Input[_builtins.str] name: The name of the new role. Must be unique. This parameter is required.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] role_id: roleId path parameter. Role ID
@@ -336,9 +336,9 @@ class CameraRoles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]]] = None,
-                 applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict']]]]] = None,
-                 applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict']]]]] = None,
+                 applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]]] = None,
+                 applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]]] = None,
+                 applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  role_id: pulumi.Input[Optional[_builtins.str]] = None,
@@ -369,9 +369,9 @@ class CameraRoles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]]] = None,
-            applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict']]]]] = None,
-            applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict']]]]] = None,
+            applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]]] = None,
+            applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]]] = None,
+            applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
             role_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraRoles':
@@ -382,9 +382,9 @@ class CameraRoles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]] applied_on_devices: Device tag on which this specified permission is applied.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict']]]] applied_on_networks: Network tag on which this specified permission is applied.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict']]]] applied_org_wides: Permissions to be applied org wide.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]] applied_on_devices: Device tag on which this specified permission is applied.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]] applied_on_networks: Network tag on which this specified permission is applied.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]] applied_org_wides: Permissions to be applied org wide.
         :param pulumi.Input[_builtins.str] name: The name of the new role. Must be unique. This parameter is required.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] role_id: roleId path parameter. Role ID

@@ -213,7 +213,7 @@ class CameraSense(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']]] = None,
                  detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
                  mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
                  sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -245,7 +245,7 @@ class CameraSense(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']] audio_detection: The details of the audio detection config.
+        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']] audio_detection: The details of the audio detection config.
         :param pulumi.Input[_builtins.str] detection_model_id: The ID of the object detection model
         :param pulumi.Input[_builtins.str] mqtt_broker_id: The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         :param pulumi.Input[_builtins.bool] sense_enabled: Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
@@ -296,7 +296,7 @@ class CameraSense(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+                 audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']]] = None,
                  detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
                  mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
                  sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
@@ -328,7 +328,7 @@ class CameraSense(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
+            audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']]] = None,
             detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
             mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
             mqtt_topics: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -341,7 +341,7 @@ class CameraSense(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']] audio_detection: The details of the audio detection config.
+        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']] audio_detection: The details of the audio detection config.
         :param pulumi.Input[_builtins.str] detection_model_id: The ID of the object detection model
         :param pulumi.Input[_builtins.str] mqtt_broker_id: The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         :param pulumi.Input[_builtins.bool] sense_enabled: Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera

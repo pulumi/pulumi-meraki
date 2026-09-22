@@ -233,10 +233,10 @@ class SwitchSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict']]] = None,
+                 mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict']]]]] = None,
-                 uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict']]] = None,
+                 power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]]] = None,
+                 uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']]] = None,
                  use_combined_power: pulumi.Input[Optional[_builtins.bool]] = None,
                  vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -273,10 +273,10 @@ class SwitchSettings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict']] mac_blocklist: MAC blocklist
+        :param pulumi.Input[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']] mac_blocklist: MAC blocklist
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict']]]] power_exceptions: Exceptions on a per switch basis to "useCombinedPower"
-        :param pulumi.Input[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict']] uplink_client_sampling: Uplink client sampling
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]] power_exceptions: Exceptions on a per switch basis to "useCombinedPower"
+        :param pulumi.Input[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']] uplink_client_sampling: Uplink client sampling
         :param pulumi.Input[_builtins.bool] use_combined_power: The use Combined Power as the default behavior of secondary power supplies on supported devices.
         :param pulumi.Input[_builtins.int] vlan: Management VLAN
         """
@@ -332,10 +332,10 @@ class SwitchSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict']]] = None,
+                 mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict']]]]] = None,
-                 uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict']]] = None,
+                 power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]]] = None,
+                 uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']]] = None,
                  use_combined_power: pulumi.Input[Optional[_builtins.bool]] = None,
                  vlan: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
@@ -365,10 +365,10 @@ class SwitchSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict']]] = None,
+            mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict']]]]] = None,
-            uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict']]] = None,
+            power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]]] = None,
+            uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']]] = None,
             use_combined_power: pulumi.Input[Optional[_builtins.bool]] = None,
             vlan: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchSettings':
         """
@@ -378,10 +378,10 @@ class SwitchSettings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict']] mac_blocklist: MAC blocklist
+        :param pulumi.Input[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']] mac_blocklist: MAC blocklist
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict']]]] power_exceptions: Exceptions on a per switch basis to "useCombinedPower"
-        :param pulumi.Input[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict']] uplink_client_sampling: Uplink client sampling
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]] power_exceptions: Exceptions on a per switch basis to "useCombinedPower"
+        :param pulumi.Input[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']] uplink_client_sampling: Uplink client sampling
         :param pulumi.Input[_builtins.bool] use_combined_power: The use Combined Power as the default behavior of secondary power supplies on supported devices.
         :param pulumi.Input[_builtins.int] vlan: Management VLAN
         """

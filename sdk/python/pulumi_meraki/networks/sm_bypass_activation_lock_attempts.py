@@ -268,7 +268,7 @@ class SmBypassActivationLockAttempts(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
-            data: pulumi.Input[Optional[Union['SmBypassActivationLockAttemptsDataArgs', 'SmBypassActivationLockAttemptsDataArgsDict']]] = None,
+            data: pulumi.Input[Optional[Union['SmBypassActivationLockAttemptsDataArgs', 'SmBypassActivationLockAttemptsDataArgsDict', 'outputs.SmBypassActivationLockAttemptsData']]] = None,
             ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             status: pulumi.Input[Optional[_builtins.str]] = None) -> 'SmBypassActivationLockAttempts':

@@ -137,8 +137,8 @@ class SensorRelationships(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict', 'outputs.SensorRelationshipsLivestream']]] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict', 'outputs.SensorRelationshipsLivestreamRequest']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -167,8 +167,8 @@ class SensorRelationships(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
+        :param pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict', 'outputs.SensorRelationshipsLivestream']] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict', 'outputs.SensorRelationshipsLivestreamRequest']]]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         ...
@@ -216,8 +216,8 @@ class SensorRelationships(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+                 livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict', 'outputs.SensorRelationshipsLivestream']]] = None,
+                 livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict', 'outputs.SensorRelationshipsLivestreamRequest']]]]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -243,8 +243,8 @@ class SensorRelationships(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']]] = None,
-            livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]]] = None,
+            livestream: pulumi.Input[Optional[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict', 'outputs.SensorRelationshipsLivestream']]] = None,
+            livestream_requests: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict', 'outputs.SensorRelationshipsLivestreamRequest']]]]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SensorRelationships':
         """
         Get an existing SensorRelationships resource's state with the given name, id, and optional extra
@@ -253,8 +253,8 @@ class SensorRelationships(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict']]]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
+        :param pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict', 'outputs.SensorRelationshipsLivestream']] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorRelationshipsLivestreamRequestArgs', 'SensorRelationshipsLivestreamRequestArgsDict', 'outputs.SensorRelationshipsLivestreamRequest']]]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

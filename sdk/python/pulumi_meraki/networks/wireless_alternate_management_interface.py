@@ -201,7 +201,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -244,7 +244,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable alternate management interface
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
@@ -306,7 +306,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+                 access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -337,7 +337,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]]] = None,
+            access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -349,7 +349,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable alternate management interface
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'

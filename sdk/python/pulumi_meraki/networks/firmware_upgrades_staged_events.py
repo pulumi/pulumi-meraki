@@ -154,8 +154,8 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']]] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -203,8 +203,8 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']] products: The network devices to be updated
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]] stages: The ordered stages in the network
+        :param pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']] products: The network devices to be updated
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]] stages: The ordered stages in the network
         """
         ...
     @overload
@@ -271,8 +271,8 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None,
+                 products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']]] = None,
+                 stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -299,9 +299,9 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']]] = None,
-            reasons: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict']]]]] = None,
-            stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]]] = None) -> 'FirmwareUpgradesStagedEvents':
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']]] = None,
+            reasons: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict', 'outputs.FirmwareUpgradesStagedEventsReason']]]]] = None,
+            stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]]] = None) -> 'FirmwareUpgradesStagedEvents':
         """
         Get an existing FirmwareUpgradesStagedEvents resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -310,9 +310,9 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict']] products: The network devices to be updated
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict']]]] reasons: Reasons for the rollback
-        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict']]]] stages: The ordered stages in the network
+        :param pulumi.Input[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']] products: The network devices to be updated
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict', 'outputs.FirmwareUpgradesStagedEventsReason']]]] reasons: Reasons for the rollback
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]] stages: The ordered stages in the network
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

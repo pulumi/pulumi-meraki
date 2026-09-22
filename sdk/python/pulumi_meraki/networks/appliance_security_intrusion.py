@@ -172,7 +172,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
                  ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
+                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -213,7 +213,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ids_rulesets: Intrusion detection ruleset
         :param pulumi.Input[_builtins.str] mode: Intrusion detection mode
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']] protected_networks: Networks included in and excluded from the detection engine
+        :param pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']] protected_networks: Networks included in and excluded from the detection engine
         """
         ...
     @overload
@@ -273,7 +273,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
                  ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None,
+                 protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -302,7 +302,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
             ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
             mode: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']]] = None) -> 'ApplianceSecurityIntrusion':
+            protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']]] = None) -> 'ApplianceSecurityIntrusion':
         """
         Get an existing ApplianceSecurityIntrusion resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -313,7 +313,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ids_rulesets: Intrusion detection ruleset
         :param pulumi.Input[_builtins.str] mode: Intrusion detection mode
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict']] protected_networks: Networks included in and excluded from the detection engine
+        :param pulumi.Input[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']] protected_networks: Networks included in and excluded from the detection engine
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

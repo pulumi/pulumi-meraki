@@ -113,7 +113,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict', 'outputs.InventoryOnboardingCloudMonitoringPrepareParameters']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -295,7 +295,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict', 'outputs.InventoryOnboardingCloudMonitoringPrepareParameters']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -322,9 +322,9 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]]] = None,
+            items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict', 'outputs.InventoryOnboardingCloudMonitoringPrepareItem']]]]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
+            parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict', 'outputs.InventoryOnboardingCloudMonitoringPrepareParameters']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
         """
         Get an existing InventoryOnboardingCloudMonitoringPrepare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -332,7 +332,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
+        :param pulumi.Input[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict', 'outputs.InventoryOnboardingCloudMonitoringPrepareItem']]]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

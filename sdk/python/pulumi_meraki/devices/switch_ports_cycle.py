@@ -108,7 +108,7 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict', 'outputs.SwitchPortsCycleParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -184,7 +184,7 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict', 'outputs.SwitchPortsCycleParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -212,8 +212,8 @@ class SwitchPortsCycle(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['SwitchPortsCycleItemArgs', 'SwitchPortsCycleItemArgsDict']]] = None,
-            parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['SwitchPortsCycleItemArgs', 'SwitchPortsCycleItemArgsDict', 'outputs.SwitchPortsCycleItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict', 'outputs.SwitchPortsCycleParameters']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchPortsCycle':
         """
         Get an existing SwitchPortsCycle resource's state with the given name, id, and optional extra

@@ -122,7 +122,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRule']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -189,7 +189,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict']]]] rules: An ordered array of the MX L7 firewall rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRule']]]] rules: An ordered array of the MX L7 firewall rules
         """
         ...
     @overload
@@ -275,7 +275,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -301,8 +301,8 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict']]]]] = None,
-            rules_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRulesResponseArgs', 'ApplianceFirewallL7FirewallRulesRulesResponseArgsDict']]]]] = None) -> 'ApplianceFirewallL7FirewallRules':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRule']]]]] = None,
+            rules_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRulesResponseArgs', 'ApplianceFirewallL7FirewallRulesRulesResponseArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRulesResponse']]]]] = None) -> 'ApplianceFirewallL7FirewallRules':
         """
         Get an existing ApplianceFirewallL7FirewallRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -311,8 +311,8 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict']]]] rules: An ordered array of the MX L7 firewall rules
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRulesResponseArgs', 'ApplianceFirewallL7FirewallRulesRulesResponseArgsDict']]]] rules_responses: An ordered array of the MX L7 firewall rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRuleArgs', 'ApplianceFirewallL7FirewallRulesRuleArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRule']]]] rules: An ordered array of the MX L7 firewall rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallL7FirewallRulesRulesResponseArgs', 'ApplianceFirewallL7FirewallRulesRulesResponseArgsDict', 'outputs.ApplianceFirewallL7FirewallRulesRulesResponse']]]] rules_responses: An ordered array of the MX L7 firewall rules
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

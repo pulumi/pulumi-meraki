@@ -96,7 +96,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict', 'outputs.CameraGenerateSnapshotParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -164,7 +164,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict', 'outputs.CameraGenerateSnapshotParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -191,7 +191,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
+            parameters: pulumi.Input[Optional[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict', 'outputs.CameraGenerateSnapshotParameters']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraGenerateSnapshot':
         """
         Get an existing CameraGenerateSnapshot resource's state with the given name, id, and optional extra

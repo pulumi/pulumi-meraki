@@ -168,7 +168,7 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict', 'outputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
@@ -200,7 +200,7 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]] device_type_policies: List of device type policies.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict', 'outputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy']]]] device_type_policies: List of device type policies.
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID device type group policies are enabled.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
@@ -251,7 +251,7 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+                 device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict', 'outputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy']]]]] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
@@ -282,7 +282,7 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]]] = None,
+            device_type_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict', 'outputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy']]]]] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.str]] = None) -> 'WirelessSsidsDeviceTypeGroupPolicies':
@@ -293,7 +293,7 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict']]]] device_type_policies: List of device type policies.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs', 'WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict', 'outputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy']]]] device_type_policies: List of device type policies.
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID device type group policies are enabled.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.

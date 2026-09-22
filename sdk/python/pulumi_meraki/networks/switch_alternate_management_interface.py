@@ -204,7 +204,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]]] = None,
                  vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
@@ -244,7 +244,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]] switches: Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]] switches: Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
         :param pulumi.Input[_builtins.int] vlan_id: Alternate management VLAN, must be between 1 and 4094
         """
         ...
@@ -303,7 +303,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+                 switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]]] = None,
                  vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -334,7 +334,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]]] = None,
+            switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]]] = None,
             vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> 'SwitchAlternateManagementInterface':
         """
         Get an existing SwitchAlternateManagementInterface resource's state with the given name, id, and optional extra
@@ -346,7 +346,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict']]]] switches: Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]] switches: Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
         :param pulumi.Input[_builtins.int] vlan_id: Alternate management VLAN, must be between 1 and 4094
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

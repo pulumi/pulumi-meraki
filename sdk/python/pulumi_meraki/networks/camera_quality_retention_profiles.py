@@ -403,7 +403,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
                  quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
+                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -437,7 +437,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] quality_retention_profile_id: qualityRetentionProfileId path parameter. Quality retention profile ID
         :param pulumi.Input[_builtins.bool] restricted_bandwidth_mode_enabled: Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         :param pulumi.Input[_builtins.str] schedule_id: Schedule for which this camera will record video, or 'null' to always record.
-        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']] video_settings: Video quality and resolution settings for all the camera models.
+        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']] video_settings: Video quality and resolution settings for all the camera models.
         """
         ...
     @overload
@@ -490,7 +490,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
                  quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
                  schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
+                 video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -533,7 +533,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
             quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
             restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
             schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
-            video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None) -> 'CameraQualityRetentionProfiles':
+            video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']]] = None) -> 'CameraQualityRetentionProfiles':
         """
         Get an existing CameraQualityRetentionProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -551,7 +551,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] quality_retention_profile_id: qualityRetentionProfileId path parameter. Quality retention profile ID
         :param pulumi.Input[_builtins.bool] restricted_bandwidth_mode_enabled: Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         :param pulumi.Input[_builtins.str] schedule_id: Schedule for which this camera will record video, or 'null' to always record.
-        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']] video_settings: Video quality and resolution settings for all the camera models.
+        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']] video_settings: Video quality and resolution settings for all the camera models.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

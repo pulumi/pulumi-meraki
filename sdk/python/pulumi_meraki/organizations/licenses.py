@@ -471,7 +471,7 @@ class Licenses(pulumi.CustomResource):
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             order_number: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
-            permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict']]]]] = None,
+            permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict', 'outputs.LicensesPermanentlyQueuedLicense']]]]] = None,
             seat_count: pulumi.Input[Optional[_builtins.int]] = None,
             state: pulumi.Input[Optional[_builtins.str]] = None,
             total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None) -> 'Licenses':
@@ -494,7 +494,7 @@ class Licenses(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] network_id: ID of the network the license is assigned to
         :param pulumi.Input[_builtins.str] order_number: Order number
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict']]]] permanently_queued_licenses: DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict', 'outputs.LicensesPermanentlyQueuedLicense']]]] permanently_queued_licenses: DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
         :param pulumi.Input[_builtins.int] seat_count: The number of seats of the license. Only applicable to SM licenses.
         :param pulumi.Input[_builtins.str] state: The state of the license. All queued licenses have a status of *recentlyQueued*.
         :param pulumi.Input[_builtins.int] total_duration_in_days: The duration of the license plus all permanently queued licenses associated with it

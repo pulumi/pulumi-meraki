@@ -201,10 +201,10 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -238,10 +238,10 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: If true, Bonjour forwarding is enabled on the SSID.
-        :param pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']] exception: Bonjour forwarding exception
+        :param pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']] exception: Bonjour forwarding exception
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]] rules: Bonjour forwarding rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]] rules: Bonjour forwarding rules
         """
         ...
     @overload
@@ -294,10 +294,10 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+                 exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  number: pulumi.Input[Optional[_builtins.str]] = None,
-                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None,
+                 rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -327,10 +327,10 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']]] = None,
+            exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
             number: pulumi.Input[Optional[_builtins.str]] = None,
-            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]]] = None) -> 'WirelessSsidsBonjourForwarding':
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]]] = None) -> 'WirelessSsidsBonjourForwarding':
         """
         Get an existing WirelessSsidsBonjourForwarding resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -339,10 +339,10 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: If true, Bonjour forwarding is enabled on the SSID.
-        :param pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict']] exception: Bonjour forwarding exception
+        :param pulumi.Input[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']] exception: Bonjour forwarding exception
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict']]]] rules: Bonjour forwarding rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]] rules: Bonjour forwarding rules
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

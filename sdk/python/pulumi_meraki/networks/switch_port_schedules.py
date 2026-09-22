@@ -179,7 +179,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']]] = None,
                  port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -243,7 +243,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name for your port schedule. Required
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
+        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
                When it's empty, default schedule with all days of a week are configured.
                Any unspecified day in the schedule is added as a default schedule configuration of the day.
         :param pulumi.Input[_builtins.str] port_schedule_id: portScheduleId path parameter. Port schedule ID
@@ -328,7 +328,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+                 port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']]] = None,
                  port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -357,7 +357,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
+            port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']]] = None,
             port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'SwitchPortSchedules':
         """
         Get an existing SwitchPortSchedules resource's state with the given name, id, and optional extra
@@ -368,7 +368,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name for your port schedule. Required
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
+        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
                When it's empty, default schedule with all days of a week are configured.
                Any unspecified day in the schedule is added as a default schedule configuration of the day.
         :param pulumi.Input[_builtins.str] port_schedule_id: portScheduleId path parameter. Port schedule ID

@@ -457,19 +457,19 @@ class WirelessRfProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']]] = None,
+                 ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']]] = None,
                  band_selection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  client_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict']]] = None,
-                 flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']]] = None,
+                 flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']]] = None,
                  min_bitrate_type: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict']]] = None,
+                 per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']]] = None,
                  rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict']]] = None,
-                 transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict']]] = None,
-                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
+                 six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']]] = None,
+                 transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -796,19 +796,19 @@ class WirelessRfProfiles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
+        :param pulumi.Input[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
         :param pulumi.Input[_builtins.str] band_selection_type: Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
         :param pulumi.Input[_builtins.bool] client_balancing_enabled: Steers client to best available access point. Can be either true or false. Defaults to true.
-        :param pulumi.Input[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict']] five_ghz_settings: Settings related to 5Ghz band
-        :param pulumi.Input[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict']] flex_radios: Flex radio settings.
+        :param pulumi.Input[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']] five_ghz_settings: Settings related to 5Ghz band
+        :param pulumi.Input[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']] flex_radios: Flex radio settings.
         :param pulumi.Input[_builtins.str] min_bitrate_type: Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
         :param pulumi.Input[_builtins.str] name: The name of the new profile. Must be unique. This param is required on creation.
         :param pulumi.Input[_builtins.str] network_id: The network ID of the RF Profile
-        :param pulumi.Input[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict']] per_ssid_settings: Per-SSID radio settings by number.
+        :param pulumi.Input[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']] per_ssid_settings: Per-SSID radio settings by number.
         :param pulumi.Input[_builtins.str] rf_profile_id: rfProfileId path parameter. Rf profile ID
-        :param pulumi.Input[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict']] six_ghz_settings: Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
-        :param pulumi.Input[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict']] transmission: Settings related to radio transmission.
-        :param pulumi.Input[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict']] two_four_ghz_settings: Settings related to 2.4Ghz band
+        :param pulumi.Input[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']] six_ghz_settings: Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
+        :param pulumi.Input[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']] transmission: Settings related to radio transmission.
+        :param pulumi.Input[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']] two_four_ghz_settings: Settings related to 2.4Ghz band
         """
         ...
     @overload
@@ -1154,19 +1154,19 @@ class WirelessRfProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']]] = None,
+                 ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']]] = None,
                  band_selection_type: pulumi.Input[Optional[_builtins.str]] = None,
                  client_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict']]] = None,
-                 flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict']]] = None,
+                 five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']]] = None,
+                 flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']]] = None,
                  min_bitrate_type: pulumi.Input[Optional[_builtins.str]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict']]] = None,
+                 per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']]] = None,
                  rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict']]] = None,
-                 transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict']]] = None,
-                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict']]] = None,
+                 six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']]] = None,
+                 transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']]] = None,
+                 two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1201,19 +1201,19 @@ class WirelessRfProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']]] = None,
+            ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']]] = None,
             band_selection_type: pulumi.Input[Optional[_builtins.str]] = None,
             client_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
-            five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict']]] = None,
-            flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict']]] = None,
+            five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']]] = None,
+            flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']]] = None,
             min_bitrate_type: pulumi.Input[Optional[_builtins.str]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict']]] = None,
+            per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']]] = None,
             rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-            six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict']]] = None,
-            transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict']]] = None,
-            two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict']]] = None) -> 'WirelessRfProfiles':
+            six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']]] = None,
+            transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']]] = None) -> 'WirelessRfProfiles':
         """
         Get an existing WirelessRfProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -1221,19 +1221,19 @@ class WirelessRfProfiles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
+        :param pulumi.Input[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
         :param pulumi.Input[_builtins.str] band_selection_type: Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
         :param pulumi.Input[_builtins.bool] client_balancing_enabled: Steers client to best available access point. Can be either true or false. Defaults to true.
-        :param pulumi.Input[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict']] five_ghz_settings: Settings related to 5Ghz band
-        :param pulumi.Input[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict']] flex_radios: Flex radio settings.
+        :param pulumi.Input[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']] five_ghz_settings: Settings related to 5Ghz band
+        :param pulumi.Input[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']] flex_radios: Flex radio settings.
         :param pulumi.Input[_builtins.str] min_bitrate_type: Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
         :param pulumi.Input[_builtins.str] name: The name of the new profile. Must be unique. This param is required on creation.
         :param pulumi.Input[_builtins.str] network_id: The network ID of the RF Profile
-        :param pulumi.Input[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict']] per_ssid_settings: Per-SSID radio settings by number.
+        :param pulumi.Input[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']] per_ssid_settings: Per-SSID radio settings by number.
         :param pulumi.Input[_builtins.str] rf_profile_id: rfProfileId path parameter. Rf profile ID
-        :param pulumi.Input[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict']] six_ghz_settings: Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
-        :param pulumi.Input[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict']] transmission: Settings related to radio transmission.
-        :param pulumi.Input[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict']] two_four_ghz_settings: Settings related to 2.4Ghz band
+        :param pulumi.Input[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']] six_ghz_settings: Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
+        :param pulumi.Input[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']] transmission: Settings related to radio transmission.
+        :param pulumi.Input[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']] two_four_ghz_settings: Settings related to 2.4Ghz band
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -141,7 +141,7 @@ class TrafficAnalysis(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -172,7 +172,7 @@ class TrafficAnalysis(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
         :param pulumi.Input[_builtins.str] mode: The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
                'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -223,7 +223,7 @@ class TrafficAnalysis(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+                 custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]]] = None,
                  mode: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -250,7 +250,7 @@ class TrafficAnalysis(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]]] = None,
+            custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]]] = None,
             mode: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'TrafficAnalysis':
         """
@@ -260,7 +260,7 @@ class TrafficAnalysis(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
         :param pulumi.Input[_builtins.str] mode: The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
                'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID

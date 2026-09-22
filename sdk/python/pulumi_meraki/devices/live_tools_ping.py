@@ -108,7 +108,7 @@ class LiveToolsPing(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict', 'outputs.LiveToolsPingParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -208,7 +208,7 @@ class LiveToolsPing(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
+                 parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict', 'outputs.LiveToolsPingParameters']]] = None,
                  serial: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -236,8 +236,8 @@ class LiveToolsPing(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: pulumi.Input[Optional[Union['LiveToolsPingItemArgs', 'LiveToolsPingItemArgsDict']]] = None,
-            parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
+            item: pulumi.Input[Optional[Union['LiveToolsPingItemArgs', 'LiveToolsPingItemArgsDict', 'outputs.LiveToolsPingItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict', 'outputs.LiveToolsPingParameters']]] = None,
             serial: pulumi.Input[Optional[_builtins.str]] = None) -> 'LiveToolsPing':
         """
         Get an existing LiveToolsPing resource's state with the given name, id, and optional extra

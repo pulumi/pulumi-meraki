@@ -218,8 +218,8 @@ class Base(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']]] = None,
+                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -250,8 +250,8 @@ class Base(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']] api: API related settings
-        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']] management: Information about the organization's management system
+        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']] api: API related settings
+        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']] management: Information about the organization's management system
         :param pulumi.Input[_builtins.str] name: Organization name
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -301,8 +301,8 @@ class Base(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+                 api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']]] = None,
+                 management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  organization_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -331,10 +331,10 @@ class Base(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
-            cloud: pulumi.Input[Optional[Union['BaseCloudArgs', 'BaseCloudArgsDict']]] = None,
-            licensing: pulumi.Input[Optional[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']]] = None,
-            management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
+            api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']]] = None,
+            cloud: pulumi.Input[Optional[Union['BaseCloudArgs', 'BaseCloudArgsDict', 'outputs.BaseCloud']]] = None,
+            licensing: pulumi.Input[Optional[Union['BaseLicensingArgs', 'BaseLicensingArgsDict', 'outputs.BaseLicensing']]] = None,
+            management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             organization_id: pulumi.Input[Optional[_builtins.str]] = None,
             url: pulumi.Input[Optional[_builtins.str]] = None) -> 'Base':
@@ -345,10 +345,10 @@ class Base(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']] api: API related settings
-        :param pulumi.Input[Union['BaseCloudArgs', 'BaseCloudArgsDict']] cloud: Data for this organization
-        :param pulumi.Input[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']] licensing: Licensing related settings
-        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']] management: Information about the organization's management system
+        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']] api: API related settings
+        :param pulumi.Input[Union['BaseCloudArgs', 'BaseCloudArgsDict', 'outputs.BaseCloud']] cloud: Data for this organization
+        :param pulumi.Input[Union['BaseLicensingArgs', 'BaseLicensingArgsDict', 'outputs.BaseLicensing']] licensing: Licensing related settings
+        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']] management: Information about the organization's management system
         :param pulumi.Input[_builtins.str] name: Organization name
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] url: Organization URL

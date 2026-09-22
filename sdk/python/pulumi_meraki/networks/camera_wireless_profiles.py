@@ -213,10 +213,10 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']]] = None,
                  wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
@@ -246,10 +246,10 @@ class CameraWirelessProfiles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
+        :param pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         :param pulumi.Input[_builtins.str] name: The name of the camera wireless profile. This parameter is required.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']] ssid: The details of the SSID config.
+        :param pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']] ssid: The details of the SSID config.
         :param pulumi.Input[_builtins.str] wireless_profile_id: wirelessProfileId path parameter. Wireless profile ID
         """
         ...
@@ -298,10 +298,10 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+                 identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  network_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+                 ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']]] = None,
                  wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -331,10 +331,10 @@ class CameraWirelessProfiles(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             applied_device_count: pulumi.Input[Optional[_builtins.int]] = None,
-            identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']]] = None,
+            identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             network_id: pulumi.Input[Optional[_builtins.str]] = None,
-            ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']]] = None,
+            ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']]] = None,
             wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None) -> 'CameraWirelessProfiles':
         """
         Get an existing CameraWirelessProfiles resource's state with the given name, id, and optional extra
@@ -343,10 +343,10 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
+        :param pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         :param pulumi.Input[_builtins.str] name: The name of the camera wireless profile. This parameter is required.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict']] ssid: The details of the SSID config.
+        :param pulumi.Input[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']] ssid: The details of the SSID config.
         :param pulumi.Input[_builtins.str] wireless_profile_id: wirelessProfileId path parameter. Wireless profile ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
