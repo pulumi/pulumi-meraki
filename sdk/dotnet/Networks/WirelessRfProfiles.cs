@@ -381,7 +381,7 @@ namespace Pulumi.Meraki.Networks
     ///         {
     ///             AxEnabled = true,
     ///             MaxPower = 30,
-    ///             MinBitrate = 11,
+    ///             MinBitrate = 11.0,
     ///             MinPower = 5,
     ///             Rxsop = -95,
     ///             ValidAutoChannels = new[]

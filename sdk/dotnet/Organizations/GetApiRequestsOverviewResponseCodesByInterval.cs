@@ -40,7 +40,7 @@ namespace Pulumi.Meraki.Organizations
         ///         },
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         UserAgent = "string",
         ///         Version = 1,
         ///     });
@@ -84,7 +84,7 @@ namespace Pulumi.Meraki.Organizations
         ///         },
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         UserAgent = "string",
         ///         Version = 1,
         ///     });
@@ -128,7 +128,7 @@ namespace Pulumi.Meraki.Organizations
         ///         },
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         UserAgent = "string",
         ///         Version = 1,
         ///     });

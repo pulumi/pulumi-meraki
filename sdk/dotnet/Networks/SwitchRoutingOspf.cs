@@ -26,7 +26,7 @@ namespace Pulumi.Meraki.Networks
     ///         {
     ///             new Meraki.Networks.Inputs.SwitchRoutingOspfAreaArgs
     ///             {
-    ///                 AreaId = 1284392014819,
+    ///                 AreaId = (int)1284392014819,
     ///                 AreaName = "Backbone",
     ///                 AreaType = "normal",
     ///             },
@@ -47,7 +47,7 @@ namespace Pulumi.Meraki.Networks
     ///             {
     ///                 new Meraki.Networks.Inputs.SwitchRoutingOspfV3AreaArgs
     ///                 {
-    ///                     AreaId = 1284392014819,
+    ///                     AreaId = (int)1284392014819,
     ///                     AreaName = "V3 Backbone",
     ///                     AreaType = "normal",
     ///                 },

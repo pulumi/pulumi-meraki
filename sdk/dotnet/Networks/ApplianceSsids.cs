@@ -37,7 +37,7 @@ namespace Pulumi.Meraki.Networks
     ///         EncryptionMode = "wpa",
     ///         Name = "My SSID",
     ///         NetworkId = "string",
-    ///         Number = "string",
+    ///         Number = int.Parse("string", System.Globalization.CultureInfo.InvariantCulture),
     ///         Psk = "psk",
     ///         RadiusServers = new[]
     ///         {

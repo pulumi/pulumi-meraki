@@ -55,7 +55,7 @@ namespace Pulumi.Meraki.Networks
     ///         TwoFourGhzSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesTwoFourGhzSettingsArgs
     ///         {
     ///             AxEnabled = true,
-    ///             MinBitrate = 12,
+    ///             MinBitrate = 12.0,
     ///         },
     ///     });
     /// 

@@ -28,7 +28,7 @@ namespace Pulumi.Meraki.Organizations
         ///         OrganizationId = "string",
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Uplink = "string",
         ///     });
         /// 
@@ -59,7 +59,7 @@ namespace Pulumi.Meraki.Organizations
         ///         OrganizationId = "string",
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Uplink = "string",
         ///     });
         /// 
@@ -90,7 +90,7 @@ namespace Pulumi.Meraki.Organizations
         ///         OrganizationId = "string",
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Uplink = "string",
         ///     });
         /// 
