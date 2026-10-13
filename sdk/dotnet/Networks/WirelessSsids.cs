@@ -183,7 +183,7 @@ namespace Pulumi.Meraki.Networks
     ///             },
     ///         },
     ///         MandatoryDhcpEnabled = false,
-    ///         MinBitrate = 5.5,
+    ///         MinBitrate = (int)5.5,
     ///         Name = "My SSID",
     ///         NamedVlans = new Meraki.Networks.Inputs.WirelessSsidsNamedVlansArgs
     ///         {
@@ -214,7 +214,7 @@ namespace Pulumi.Meraki.Networks
     ///             },
     ///         },
     ///         NetworkId = "string",
-    ///         Number = "string",
+    ///         Number = int.Parse("string", System.Globalization.CultureInfo.InvariantCulture),
     ///         Oauth = new Meraki.Networks.Inputs.WirelessSsidsOauthArgs
     ///         {
     ///             AllowedDomains = new[]

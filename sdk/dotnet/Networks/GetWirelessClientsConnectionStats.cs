@@ -31,7 +31,7 @@ namespace Pulumi.Meraki.Networks
         ///         Ssid = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Vlan = 1,
         ///     });
         /// 
@@ -65,7 +65,7 @@ namespace Pulumi.Meraki.Networks
         ///         Ssid = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Vlan = 1,
         ///     });
         /// 
@@ -99,7 +99,7 @@ namespace Pulumi.Meraki.Networks
         ///         Ssid = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///         Vlan = 1,
         ///     });
         /// 

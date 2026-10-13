@@ -26,7 +26,7 @@ namespace Pulumi.Meraki.Devices
         ///     {
         ///         Serial = "string",
         ///         T0 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -54,7 +54,7 @@ namespace Pulumi.Meraki.Devices
         ///     {
         ///         Serial = "string",
         ///         T0 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -82,7 +82,7 @@ namespace Pulumi.Meraki.Devices
         ///     {
         ///         Serial = "string",
         ///         T0 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

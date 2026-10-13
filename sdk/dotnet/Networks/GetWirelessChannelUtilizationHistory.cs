@@ -33,7 +33,7 @@ namespace Pulumi.Meraki.Networks
         ///         Resolution = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -68,7 +68,7 @@ namespace Pulumi.Meraki.Networks
         ///         Resolution = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -103,7 +103,7 @@ namespace Pulumi.Meraki.Networks
         ///         Resolution = 1,
         ///         T0 = "string",
         ///         T1 = "string",
-        ///         Timespan = 1,
+        ///         Timespan = 1.0,
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

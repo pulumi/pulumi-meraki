@@ -81,7 +81,7 @@ namespace Pulumi.Meraki.Networks
     ///                     Temperature = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdTemperatureArgs
     ///                     {
     ///                         Celsius = 20.5,
-    ///                         Fahrenheit = 70,
+    ///                         Fahrenheit = 70.0,
     ///                         Quality = "good",
     ///                     },
     ///                     Tvoc = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdTvocArgs

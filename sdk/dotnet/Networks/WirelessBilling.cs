@@ -34,7 +34,7 @@ namespace Pulumi.Meraki.Networks
     ///                     LimitUp = 1000000,
     ///                 },
     ///                 Id = "1",
-    ///                 Price = 5,
+    ///                 Price = 5.0,
     ///                 TimeLimit = "1 hour",
     ///             },
     ///         },
