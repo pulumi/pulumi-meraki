@@ -139,6 +139,12 @@ func (ManagementInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*managementInterfaceState)(nil)).Elem()
 }
 
+// ManagementInterfaceExists checks whether an existing ManagementInterface resource with the given ID exists.
+func ManagementInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ManagementInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/managementInterface:ManagementInterface", id, state, "", opts...)
+}
+
 type managementInterfaceArgs struct {
 	// serial path parameter.
 	Serial string `pulumi:"serial"`

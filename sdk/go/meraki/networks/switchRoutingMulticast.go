@@ -139,6 +139,12 @@ func (SwitchRoutingMulticastState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchRoutingMulticastState)(nil)).Elem()
 }
 
+// SwitchRoutingMulticastExists checks whether an existing SwitchRoutingMulticast resource with the given ID exists.
+func SwitchRoutingMulticastExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchRoutingMulticastState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchRoutingMulticast:SwitchRoutingMulticast", id, state, "", opts...)
+}
+
 type switchRoutingMulticastArgs struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
 	//   multicast traffic settings are enabled by default.

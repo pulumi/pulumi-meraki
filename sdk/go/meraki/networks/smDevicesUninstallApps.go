@@ -116,6 +116,12 @@ func (SmDevicesUninstallAppsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesUninstallAppsState)(nil)).Elem()
 }
 
+// SmDevicesUninstallAppsExists checks whether an existing SmDevicesUninstallApps resource with the given ID exists.
+func SmDevicesUninstallAppsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesUninstallAppsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", id, state, "", opts...)
+}
+
 type smDevicesUninstallAppsArgs struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`

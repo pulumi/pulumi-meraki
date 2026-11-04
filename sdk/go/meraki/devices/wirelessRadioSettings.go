@@ -125,6 +125,12 @@ func (WirelessRadioSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessRadioSettingsState)(nil)).Elem()
 }
 
+// WirelessRadioSettingsExists checks whether an existing WirelessRadioSettings resource with the given ID exists.
+func WirelessRadioSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessRadioSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/wirelessRadioSettings:WirelessRadioSettings", id, state, "", opts...)
+}
+
 type wirelessRadioSettingsArgs struct {
 	// Manual radio settings for 5 GHz.
 	FiveGhzSettings *WirelessRadioSettingsFiveGhzSettings `pulumi:"fiveGhzSettings"`

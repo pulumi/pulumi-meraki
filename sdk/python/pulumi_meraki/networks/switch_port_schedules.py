@@ -383,6 +383,20 @@ class SwitchPortSchedules(pulumi.CustomResource):
         __props__.__dict__["port_schedule_id"] = port_schedule_id
         return SwitchPortSchedules(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_schedule: pulumi.Input[Optional[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict', 'outputs.SwitchPortSchedulesPortSchedule']]] = None,
+            port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["portSchedule"] = port_schedule
+        __props__["portScheduleId"] = port_schedule_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchPortSchedules:SwitchPortSchedules', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:

@@ -150,6 +150,12 @@ func (AlertsSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*alertsSettingsState)(nil)).Elem()
 }
 
+// AlertsSettingsExists checks whether an existing AlertsSettings resource with the given ID exists.
+func AlertsSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AlertsSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/alertsSettings:AlertsSettings", id, state, "", opts...)
+}
+
 type alertsSettingsArgs struct {
 	// Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
 	Alerts []AlertsSettingsAlert `pulumi:"alerts"`

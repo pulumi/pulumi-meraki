@@ -733,6 +733,40 @@ class LoginSecurity(pulumi.CustomResource):
         __props__.__dict__["password_expiration_days"] = password_expiration_days
         return LoginSecurity(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            account_lockout_attempts: pulumi.Input[Optional[_builtins.int]] = None,
+            api_authentication: pulumi.Input[Optional[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict', 'outputs.LoginSecurityApiAuthentication']]] = None,
+            enforce_account_lockout: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_different_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_idle_timeout: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_login_ip_ranges: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_password_expiration: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_strong_passwords: pulumi.Input[Optional[_builtins.bool]] = None,
+            enforce_two_factor_auth: pulumi.Input[Optional[_builtins.bool]] = None,
+            idle_timeout_minutes: pulumi.Input[Optional[_builtins.int]] = None,
+            login_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            num_different_passwords: pulumi.Input[Optional[_builtins.int]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            password_expiration_days: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountLockoutAttempts"] = account_lockout_attempts
+        __props__["apiAuthentication"] = api_authentication
+        __props__["enforceAccountLockout"] = enforce_account_lockout
+        __props__["enforceDifferentPasswords"] = enforce_different_passwords
+        __props__["enforceIdleTimeout"] = enforce_idle_timeout
+        __props__["enforceLoginIpRanges"] = enforce_login_ip_ranges
+        __props__["enforcePasswordExpiration"] = enforce_password_expiration
+        __props__["enforceStrongPasswords"] = enforce_strong_passwords
+        __props__["enforceTwoFactorAuth"] = enforce_two_factor_auth
+        __props__["idleTimeoutMinutes"] = idle_timeout_minutes
+        __props__["loginIpRanges"] = login_ip_ranges
+        __props__["numDifferentPasswords"] = num_different_passwords
+        __props__["organizationId"] = organization_id
+        __props__["passwordExpirationDays"] = password_expiration_days
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/loginSecurity:LoginSecurity', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountLockoutAttempts")
     def account_lockout_attempts(self) -> pulumi.Output[_builtins.int]:

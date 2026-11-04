@@ -206,6 +206,12 @@ func (SwitchRoutingInterfacesDhcpState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchRoutingInterfacesDhcpState)(nil)).Elem()
 }
 
+// SwitchRoutingInterfacesDhcpExists checks whether an existing SwitchRoutingInterfacesDhcp resource with the given ID exists.
+func SwitchRoutingInterfacesDhcpExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchRoutingInterfacesDhcpState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp", id, state, "", opts...)
+}
+
 type switchRoutingInterfacesDhcpArgs struct {
 	// The PXE boot server file name for the DHCP server running on the switch stack interface
 	BootFileName *string `pulumi:"bootFileName"`

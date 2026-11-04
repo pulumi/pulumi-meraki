@@ -383,6 +383,28 @@ class PolicyObjectsGroups(pulumi.CustomResource):
         __props__.__dict__["updated_at"] = updated_at
         return PolicyObjectsGroups(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            category: pulumi.Input[Optional[_builtins.str]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            object_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_object_group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["category"] = category
+        __props__["createdAt"] = created_at
+        __props__["name"] = name
+        __props__["networkIds"] = network_ids
+        __props__["objectIds"] = object_ids
+        __props__["organizationId"] = organization_id
+        __props__["policyObjectGroupId"] = policy_object_group_id
+        __props__["updatedAt"] = updated_at
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/policyObjectsGroups:PolicyObjectsGroups', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def category(self) -> pulumi.Output[_builtins.str]:

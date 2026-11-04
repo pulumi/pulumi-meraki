@@ -104,6 +104,12 @@ func (UsersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*usersState)(nil)).Elem()
 }
 
+// UsersExists checks whether an existing Users resource with the given ID exists.
+func UsersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UsersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/users:Users", id, state, "", opts...)
+}
+
 type usersArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`

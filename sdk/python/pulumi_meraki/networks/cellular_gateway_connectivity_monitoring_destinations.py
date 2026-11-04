@@ -227,6 +227,16 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return CellularGatewayConnectivityMonitoringDestinations(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            destinations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict', 'outputs.CellularGatewayConnectivityMonitoringDestinationsDestination']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["destinations"] = destinations
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> pulumi.Output[Sequence['outputs.CellularGatewayConnectivityMonitoringDestinationsDestination']]:

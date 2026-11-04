@@ -155,6 +155,12 @@ func (AppliancePortsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*appliancePortsState)(nil)).Elem()
 }
 
+// AppliancePortsExists checks whether an existing AppliancePorts resource with the given ID exists.
+func AppliancePortsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AppliancePortsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/appliancePorts:AppliancePorts", id, state, "", opts...)
+}
+
 type appliancePortsArgs struct {
 	// The name of the policy. Only applicable to Access ports.
 	AccessPolicy *string `pulumi:"accessPolicy"`

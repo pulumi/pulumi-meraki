@@ -327,6 +327,24 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return SwitchRoutingMulticastRendezvousPoints(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            multicast_group: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rendezvous_point_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["interfaceIp"] = interface_ip
+        __props__["interfaceName"] = interface_name
+        __props__["multicastGroup"] = multicast_group
+        __props__["networkId"] = network_id
+        __props__["rendezvousPointId"] = rendezvous_point_id
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="interfaceIp")
     def interface_ip(self) -> pulumi.Output[_builtins.str]:

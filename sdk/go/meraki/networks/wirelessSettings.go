@@ -150,6 +150,12 @@ func (WirelessSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSettingsState)(nil)).Elem()
 }
 
+// WirelessSettingsExists checks whether an existing WirelessSettings resource with the given ID exists.
+func WirelessSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSettings:WirelessSettings", id, state, "", opts...)
+}
+
 type wirelessSettingsArgs struct {
 	// Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
 	Ipv6BridgeEnabled *bool `pulumi:"ipv6BridgeEnabled"`

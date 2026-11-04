@@ -199,6 +199,12 @@ func (ApplianceTrafficShapingUplinkSelectionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceTrafficShapingUplinkSelectionState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingUplinkSelectionExists checks whether an existing ApplianceTrafficShapingUplinkSelection resource with the given ID exists.
+func ApplianceTrafficShapingUplinkSelectionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingUplinkSelectionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", id, state, "", opts...)
+}
+
 type applianceTrafficShapingUplinkSelectionArgs struct {
 	// Whether active-active AutoVPN is enabled
 	ActiveActiveAutoVpnEnabled *bool `pulumi:"activeActiveAutoVpnEnabled"`

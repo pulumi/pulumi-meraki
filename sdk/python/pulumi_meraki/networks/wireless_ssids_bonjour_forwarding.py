@@ -355,6 +355,22 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         __props__.__dict__["rules"] = rules
         return WirelessSsidsBonjourForwarding(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            exception: pulumi.Input[Optional[Union['WirelessSsidsBonjourForwardingExceptionArgs', 'WirelessSsidsBonjourForwardingExceptionArgsDict', 'outputs.WirelessSsidsBonjourForwardingException']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsBonjourForwardingRuleArgs', 'WirelessSsidsBonjourForwardingRuleArgsDict', 'outputs.WirelessSsidsBonjourForwardingRule']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["exception"] = exception
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["rules"] = rules
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

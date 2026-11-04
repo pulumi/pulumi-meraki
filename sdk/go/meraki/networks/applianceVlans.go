@@ -253,6 +253,12 @@ func (ApplianceVlansState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVlansState)(nil)).Elem()
 }
 
+// ApplianceVlansExists checks whether an existing ApplianceVlans resource with the given ID exists.
+func ApplianceVlansExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVlansState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceVlans:ApplianceVlans", id, state, "", opts...)
+}
+
 type applianceVlansArgs struct {
 	// The local IP of the appliance on the VLAN
 	ApplianceIp *string `pulumi:"applianceIp"`

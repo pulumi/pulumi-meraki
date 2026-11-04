@@ -104,6 +104,12 @@ func (SmDevicesRefreshDetailsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesRefreshDetailsState)(nil)).Elem()
 }
 
+// SmDevicesRefreshDetailsExists checks whether an existing SmDevicesRefreshDetails resource with the given ID exists.
+func SmDevicesRefreshDetailsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesRefreshDetailsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails", id, state, "", opts...)
+}
+
 type smDevicesRefreshDetailsArgs struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`

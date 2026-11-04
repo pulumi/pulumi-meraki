@@ -163,6 +163,12 @@ func (BaseState) ElementType() reflect.Type {
 	return reflect.TypeOf((*baseState)(nil)).Elem()
 }
 
+// BaseExists checks whether an existing Base resource with the given ID exists.
+func BaseExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BaseState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/base:base", id, state, "", opts...)
+}
+
 type baseArgs struct {
 	// Enrollment string for the network
 	EnrollmentString *string `pulumi:"enrollmentString"`

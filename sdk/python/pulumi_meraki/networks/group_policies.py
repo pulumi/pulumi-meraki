@@ -728,6 +728,32 @@ class GroupPolicies(pulumi.CustomResource):
         __props__.__dict__["vlan_tagging"] = vlan_tagging
         return GroupPolicies(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            bandwidth: pulumi.Input[Optional[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict', 'outputs.GroupPoliciesBandwidth']]] = None,
+            bonjour_forwarding: pulumi.Input[Optional[Union['GroupPoliciesBonjourForwardingArgs', 'GroupPoliciesBonjourForwardingArgsDict', 'outputs.GroupPoliciesBonjourForwarding']]] = None,
+            content_filtering: pulumi.Input[Optional[Union['GroupPoliciesContentFilteringArgs', 'GroupPoliciesContentFilteringArgsDict', 'outputs.GroupPoliciesContentFiltering']]] = None,
+            firewall_and_traffic_shaping: pulumi.Input[Optional[Union['GroupPoliciesFirewallAndTrafficShapingArgs', 'GroupPoliciesFirewallAndTrafficShapingArgsDict', 'outputs.GroupPoliciesFirewallAndTrafficShaping']]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            scheduling: pulumi.Input[Optional[Union['GroupPoliciesSchedulingArgs', 'GroupPoliciesSchedulingArgsDict', 'outputs.GroupPoliciesScheduling']]] = None,
+            splash_auth_settings: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_tagging: pulumi.Input[Optional[Union['GroupPoliciesVlanTaggingArgs', 'GroupPoliciesVlanTaggingArgsDict', 'outputs.GroupPoliciesVlanTagging']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bandwidth"] = bandwidth
+        __props__["bonjourForwarding"] = bonjour_forwarding
+        __props__["contentFiltering"] = content_filtering
+        __props__["firewallAndTrafficShaping"] = firewall_and_traffic_shaping
+        __props__["groupPolicyId"] = group_policy_id
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["scheduling"] = scheduling
+        __props__["splashAuthSettings"] = splash_auth_settings
+        __props__["vlanTagging"] = vlan_tagging
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/groupPolicies:GroupPolicies', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def bandwidth(self) -> pulumi.Output['outputs.GroupPoliciesBandwidth']:

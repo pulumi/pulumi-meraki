@@ -111,6 +111,12 @@ func (NetworksCombineState) ElementType() reflect.Type {
 	return reflect.TypeOf((*networksCombineState)(nil)).Elem()
 }
 
+// NetworksCombineExists checks whether an existing NetworksCombine resource with the given ID exists.
+func NetworksCombineExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NetworksCombineState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/networksCombine:NetworksCombine", id, state, "", opts...)
+}
+
 type networksCombineArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                    `pulumi:"organizationId"`

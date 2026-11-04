@@ -294,6 +294,20 @@ class SwitchStp(pulumi.CustomResource):
         __props__.__dict__["stp_bridge_priority_responses"] = stp_bridge_priority_responses
         return SwitchStp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            stp_bridge_priorities: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict', 'outputs.SwitchStpStpBridgePriority']]]]] = None,
+            stp_bridge_priority_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityResponseArgs', 'SwitchStpStpBridgePriorityResponseArgsDict', 'outputs.SwitchStpStpBridgePriorityResponse']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["networkId"] = network_id
+        __props__["rstpEnabled"] = rstp_enabled
+        __props__["stpBridgePriorities"] = stp_bridge_priorities
+        __props__["stpBridgePriorityResponses"] = stp_bridge_priority_responses
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchStp:SwitchStp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="networkId")
     def network_id(self) -> pulumi.Output[_builtins.str]:

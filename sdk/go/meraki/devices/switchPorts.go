@@ -313,6 +313,12 @@ func (SwitchPortsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchPortsState)(nil)).Elem()
 }
 
+// SwitchPortsExists checks whether an existing SwitchPorts resource with the given ID exists.
+func SwitchPortsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchPortsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/switchPorts:SwitchPorts", id, state, "", opts...)
+}
+
 type switchPortsArgs struct {
 	// The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
 	AccessPolicyNumber *int `pulumi:"accessPolicyNumber"`

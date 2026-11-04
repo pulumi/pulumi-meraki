@@ -366,6 +366,26 @@ class Base(pulumi.CustomResource):
         __props__.__dict__["url"] = url
         return Base(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            api: pulumi.Input[Optional[Union['BaseApiArgs', 'BaseApiArgsDict', 'outputs.BaseApi']]] = None,
+            cloud: pulumi.Input[Optional[Union['BaseCloudArgs', 'BaseCloudArgsDict', 'outputs.BaseCloud']]] = None,
+            licensing: pulumi.Input[Optional[Union['BaseLicensingArgs', 'BaseLicensingArgsDict', 'outputs.BaseLicensing']]] = None,
+            management: pulumi.Input[Optional[Union['BaseManagementArgs', 'BaseManagementArgsDict', 'outputs.BaseManagement']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["api"] = api
+        __props__["cloud"] = cloud
+        __props__["licensing"] = licensing
+        __props__["management"] = management
+        __props__["name"] = name
+        __props__["organizationId"] = organization_id
+        __props__["url"] = url
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/base:base', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def api(self) -> pulumi.Output['outputs.BaseApi']:

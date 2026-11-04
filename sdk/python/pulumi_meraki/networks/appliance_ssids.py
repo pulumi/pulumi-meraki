@@ -709,6 +709,40 @@ class ApplianceSsids(pulumi.CustomResource):
         __props__.__dict__["wpa_encryption_mode"] = wpa_encryption_mode
         return ApplianceSsids(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            default_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            dhcp_enforced_deauthentication: pulumi.Input[Optional[Union['ApplianceSsidsDhcpEnforcedDeauthenticationArgs', 'ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict', 'outputs.ApplianceSsidsDhcpEnforcedDeauthentication']]] = None,
+            dot11w: pulumi.Input[Optional[Union['ApplianceSsidsDot11wArgs', 'ApplianceSsidsDot11wArgsDict', 'outputs.ApplianceSsidsDot11w']]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            encryption_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.int]] = None,
+            psk: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServerArgs', 'ApplianceSsidsRadiusServerArgsDict', 'outputs.ApplianceSsidsRadiusServer']]]]] = None,
+            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceSsidsRadiusServersResponseArgs', 'ApplianceSsidsRadiusServersResponseArgsDict', 'outputs.ApplianceSsidsRadiusServersResponse']]]]] = None,
+            visible: pulumi.Input[Optional[_builtins.bool]] = None,
+            wpa_encryption_mode: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["authMode"] = auth_mode
+        __props__["defaultVlanId"] = default_vlan_id
+        __props__["dhcpEnforcedDeauthentication"] = dhcp_enforced_deauthentication
+        __props__["dot11w"] = dot11w
+        __props__["enabled"] = enabled
+        __props__["encryptionMode"] = encryption_mode
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["psk"] = psk
+        __props__["radiusServers"] = radius_servers
+        __props__["radiusServersResponses"] = radius_servers_responses
+        __props__["visible"] = visible
+        __props__["wpaEncryptionMode"] = wpa_encryption_mode
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceSsids:ApplianceSsids', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="authMode")
     def auth_mode(self) -> pulumi.Output[_builtins.str]:

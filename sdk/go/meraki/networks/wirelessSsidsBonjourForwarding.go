@@ -138,6 +138,12 @@ func (WirelessSsidsBonjourForwardingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsBonjourForwardingState)(nil)).Elem()
 }
 
+// WirelessSsidsBonjourForwardingExists checks whether an existing WirelessSsidsBonjourForwarding resource with the given ID exists.
+func WirelessSsidsBonjourForwardingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsBonjourForwardingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", id, state, "", opts...)
+}
+
 type wirelessSsidsBonjourForwardingArgs struct {
 	// If true, Bonjour forwarding is enabled on the SSID.
 	Enabled *bool `pulumi:"enabled"`

@@ -320,6 +320,22 @@ class ClientsPolicy(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return ClientsPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            client_id: pulumi.Input[Optional[_builtins.str]] = None,
+            device_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["clientId"] = client_id
+        __props__["devicePolicy"] = device_policy
+        __props__["groupPolicyId"] = group_policy_id
+        __props__["mac"] = mac
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/clientsPolicy:ClientsPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="clientId")
     def client_id(self) -> pulumi.Output[_builtins.str]:

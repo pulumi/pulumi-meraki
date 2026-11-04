@@ -126,6 +126,12 @@ func (WirelessSsidsDeviceTypeGroupPoliciesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsDeviceTypeGroupPoliciesState)(nil)).Elem()
 }
 
+// WirelessSsidsDeviceTypeGroupPoliciesExists checks whether an existing WirelessSsidsDeviceTypeGroupPolicies resource with the given ID exists.
+func WirelessSsidsDeviceTypeGroupPoliciesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsDeviceTypeGroupPoliciesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies", id, state, "", opts...)
+}
+
 type wirelessSsidsDeviceTypeGroupPoliciesArgs struct {
 	// List of device type policies.
 	DeviceTypePolicies []WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy `pulumi:"deviceTypePolicies"`

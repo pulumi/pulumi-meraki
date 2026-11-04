@@ -179,6 +179,12 @@ func (SwitchRoutingInterfacesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchRoutingInterfacesState)(nil)).Elem()
 }
 
+// SwitchRoutingInterfacesExists checks whether an existing SwitchRoutingInterfaces resource with the given ID exists.
+func SwitchRoutingInterfacesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchRoutingInterfacesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/switchRoutingInterfaces:SwitchRoutingInterfaces", id, state, "", opts...)
+}
+
 type switchRoutingInterfacesArgs struct {
 	// IPv4 default gateway
 	DefaultGateway *string `pulumi:"defaultGateway"`

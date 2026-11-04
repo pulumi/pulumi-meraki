@@ -137,6 +137,12 @@ func (ApplianceContentFilteringState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceContentFilteringState)(nil)).Elem()
 }
 
+// ApplianceContentFilteringExists checks whether an existing ApplianceContentFiltering resource with the given ID exists.
+func ApplianceContentFilteringExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceContentFilteringState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceContentFiltering:ApplianceContentFiltering", id, state, "", opts...)
+}
+
 type applianceContentFilteringArgs struct {
 	// A list of URL patterns that are allowed
 	AllowedUrlPatterns []string `pulumi:"allowedUrlPatterns"`

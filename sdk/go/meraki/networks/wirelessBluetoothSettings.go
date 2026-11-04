@@ -145,6 +145,12 @@ func (WirelessBluetoothSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessBluetoothSettingsState)(nil)).Elem()
 }
 
+// WirelessBluetoothSettingsExists checks whether an existing WirelessBluetoothSettings resource with the given ID exists.
+func WirelessBluetoothSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessBluetoothSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", id, state, "", opts...)
+}
+
 type wirelessBluetoothSettingsArgs struct {
 	// Whether APs will advertise beacons.
 	AdvertisingEnabled *bool `pulumi:"advertisingEnabled"`

@@ -123,6 +123,12 @@ func (CameraCustomAnalyticsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraCustomAnalyticsState)(nil)).Elem()
 }
 
+// CameraCustomAnalyticsExists checks whether an existing CameraCustomAnalytics resource with the given ID exists.
+func CameraCustomAnalyticsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraCustomAnalyticsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", id, state, "", opts...)
+}
+
 type cameraCustomAnalyticsArgs struct {
 	// Custom analytics artifact ID
 	ArtifactId *string `pulumi:"artifactId"`

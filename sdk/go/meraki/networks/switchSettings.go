@@ -141,6 +141,12 @@ func (SwitchSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchSettingsState)(nil)).Elem()
 }
 
+// SwitchSettingsExists checks whether an existing SwitchSettings resource with the given ID exists.
+func SwitchSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchSettings:SwitchSettings", id, state, "", opts...)
+}
+
 type switchSettingsArgs struct {
 	// MAC blocklist
 	MacBlocklist *SwitchSettingsMacBlocklist `pulumi:"macBlocklist"`

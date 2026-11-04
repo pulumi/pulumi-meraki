@@ -122,6 +122,12 @@ func (LiveToolsPingDeviceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*liveToolsPingDeviceState)(nil)).Elem()
 }
 
+// LiveToolsPingDeviceExists checks whether an existing LiveToolsPingDevice resource with the given ID exists.
+func LiveToolsPingDeviceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LiveToolsPingDeviceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/liveToolsPingDevice:LiveToolsPingDevice", id, state, "", opts...)
+}
+
 type liveToolsPingDeviceArgs struct {
 	Parameters LiveToolsPingDeviceParameters `pulumi:"parameters"`
 	// serial path parameter.

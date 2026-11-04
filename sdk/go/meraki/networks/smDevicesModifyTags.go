@@ -128,6 +128,12 @@ func (SmDevicesModifyTagsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesModifyTagsState)(nil)).Elem()
 }
 
+// SmDevicesModifyTagsExists checks whether an existing SmDevicesModifyTags resource with the given ID exists.
+func SmDevicesModifyTagsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesModifyTagsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags", id, state, "", opts...)
+}
+
 type smDevicesModifyTagsArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                        `pulumi:"networkId"`

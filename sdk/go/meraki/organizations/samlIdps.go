@@ -123,6 +123,12 @@ func (SamlIdpsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*samlIdpsState)(nil)).Elem()
 }
 
+// SamlIdpsExists checks whether an existing SamlIdps resource with the given ID exists.
+func SamlIdpsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SamlIdpsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/samlIdps:SamlIdps", id, state, "", opts...)
+}
+
 type samlIdpsArgs struct {
 	// ID associated with the SAML Identity Provider (IdP)
 	IdpId *string `pulumi:"idpId"`

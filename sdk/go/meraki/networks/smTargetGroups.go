@@ -123,6 +123,12 @@ func (SmTargetGroupsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smTargetGroupsState)(nil)).Elem()
 }
 
+// SmTargetGroupsExists checks whether an existing SmTargetGroups resource with the given ID exists.
+func SmTargetGroupsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmTargetGroupsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smTargetGroups:SmTargetGroups", id, state, "", opts...)
+}
+
 type smTargetGroupsArgs struct {
 	// The name of this target group.
 	Name *string `pulumi:"name"`

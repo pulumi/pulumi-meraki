@@ -106,6 +106,12 @@ func (UnbindState) ElementType() reflect.Type {
 	return reflect.TypeOf((*unbindState)(nil)).Elem()
 }
 
+// UnbindExists checks whether an existing Unbind resource with the given ID exists.
+func UnbindExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *UnbindState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/unbind:Unbind", id, state, "", opts...)
+}
+
 type unbindArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string           `pulumi:"networkId"`

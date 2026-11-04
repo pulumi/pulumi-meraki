@@ -107,6 +107,12 @@ func (CellularGatewayUplinkState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularGatewayUplinkState)(nil)).Elem()
 }
 
+// CellularGatewayUplinkExists checks whether an existing CellularGatewayUplink resource with the given ID exists.
+func CellularGatewayUplinkExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewayUplinkState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/cellularGatewayUplink:CellularGatewayUplink", id, state, "", opts...)
+}
+
 type cellularGatewayUplinkArgs struct {
 	// The bandwidth settings for the 'cellular' uplink
 	BandwidthLimits *CellularGatewayUplinkBandwidthLimits `pulumi:"bandwidthLimits"`

@@ -123,6 +123,12 @@ func (SwitchRoutingMulticastRendezvousPointsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchRoutingMulticastRendezvousPointsState)(nil)).Elem()
 }
 
+// SwitchRoutingMulticastRendezvousPointsExists checks whether an existing SwitchRoutingMulticastRendezvousPoints resource with the given ID exists.
+func SwitchRoutingMulticastRendezvousPointsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchRoutingMulticastRendezvousPointsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints", id, state, "", opts...)
+}
+
 type switchRoutingMulticastRendezvousPointsArgs struct {
 	// The IP address of the interface where the RP needs to be created.
 	InterfaceIp *string `pulumi:"interfaceIp"`

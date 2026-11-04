@@ -401,6 +401,24 @@ class CameraRoles(pulumi.CustomResource):
         __props__.__dict__["role_id"] = role_id
         return CameraRoles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            applied_on_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict', 'outputs.CameraRolesAppliedOnDevice']]]]] = None,
+            applied_on_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOnNetworkArgs', 'CameraRolesAppliedOnNetworkArgsDict', 'outputs.CameraRolesAppliedOnNetwork']]]]] = None,
+            applied_org_wides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraRolesAppliedOrgWideArgs', 'CameraRolesAppliedOrgWideArgsDict', 'outputs.CameraRolesAppliedOrgWide']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            role_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["appliedOnDevices"] = applied_on_devices
+        __props__["appliedOnNetworks"] = applied_on_networks
+        __props__["appliedOrgWides"] = applied_org_wides
+        __props__["name"] = name
+        __props__["organizationId"] = organization_id
+        __props__["roleId"] = role_id
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/cameraRoles:CameraRoles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="appliedOnDevices")
     def applied_on_devices(self) -> pulumi.Output[Sequence['outputs.CameraRolesAppliedOnDevice']]:

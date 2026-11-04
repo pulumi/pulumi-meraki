@@ -265,6 +265,20 @@ class SwitchStacksRemove(pulumi.CustomResource):
         __props__.__dict__["switch_stack_id"] = switch_stack_id
         return SwitchStacksRemove(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict', 'outputs.SwitchStacksRemoveItem']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict', 'outputs.SwitchStacksRemoveParameters']]] = None,
+            switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["networkId"] = network_id
+        __props__["parameters"] = parameters
+        __props__["switchStackId"] = switch_stack_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchStacksRemove:SwitchStacksRemove', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.SwitchStacksRemoveItem']:

@@ -152,6 +152,12 @@ func (WirelessSsidsTrafficShapingRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsTrafficShapingRulesState)(nil)).Elem()
 }
 
+// WirelessSsidsTrafficShapingRulesExists checks whether an existing WirelessSsidsTrafficShapingRules resource with the given ID exists.
+func WirelessSsidsTrafficShapingRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsTrafficShapingRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules", id, state, "", opts...)
+}
+
 type wirelessSsidsTrafficShapingRulesArgs struct {
 	// Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
 	DefaultRulesEnabled *bool `pulumi:"defaultRulesEnabled"`

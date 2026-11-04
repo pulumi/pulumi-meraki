@@ -108,6 +108,12 @@ func (BrandingPoliciesPrioritiesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*brandingPoliciesPrioritiesState)(nil)).Elem()
 }
 
+// BrandingPoliciesPrioritiesExists checks whether an existing BrandingPoliciesPriorities resource with the given ID exists.
+func BrandingPoliciesPrioritiesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BrandingPoliciesPrioritiesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities", id, state, "", opts...)
+}
+
 type brandingPoliciesPrioritiesArgs struct {
 	// An ordered list of branding policy IDs that determines the priority order of how to apply the policies
 	BrandingPolicyIds []string `pulumi:"brandingPolicyIds"`

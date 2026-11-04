@@ -196,6 +196,12 @@ func (WirelessSsidsHotspot20State) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsHotspot20State)(nil)).Elem()
 }
 
+// WirelessSsidsHotspot20Exists checks whether an existing WirelessSsidsHotspot20 resource with the given ID exists.
+func WirelessSsidsHotspot20Exists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsHotspot20State, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20", id, state, "", opts...)
+}
+
 type wirelessSsidsHotspot20Args struct {
 	// An array of domain names
 	Domains []string `pulumi:"domains"`

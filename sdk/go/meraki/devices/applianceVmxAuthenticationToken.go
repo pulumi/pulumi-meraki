@@ -97,6 +97,12 @@ func (ApplianceVmxAuthenticationTokenState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVmxAuthenticationTokenState)(nil)).Elem()
 }
 
+// ApplianceVmxAuthenticationTokenExists checks whether an existing ApplianceVmxAuthenticationToken resource with the given ID exists.
+func ApplianceVmxAuthenticationTokenExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVmxAuthenticationTokenState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/applianceVmxAuthenticationToken:ApplianceVmxAuthenticationToken", id, state, "", opts...)
+}
+
 type applianceVmxAuthenticationTokenArgs struct {
 	// serial path parameter.
 	Serial string `pulumi:"serial"`

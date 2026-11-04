@@ -149,6 +149,12 @@ func (LiveToolsArpTableState) ElementType() reflect.Type {
 	return reflect.TypeOf((*liveToolsArpTableState)(nil)).Elem()
 }
 
+// LiveToolsArpTableExists checks whether an existing LiveToolsArpTable resource with the given ID exists.
+func LiveToolsArpTableExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LiveToolsArpTableState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/liveToolsArpTable:LiveToolsArpTable", id, state, "", opts...)
+}
+
 type liveToolsArpTableArgs struct {
 	// Id of the ARP table request. Used to check the status of the request.
 	ArpTableId *string `pulumi:"arpTableId"`

@@ -116,6 +116,12 @@ func (ApplianceFirewallPortForwardingRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceFirewallPortForwardingRulesState)(nil)).Elem()
 }
 
+// ApplianceFirewallPortForwardingRulesExists checks whether an existing ApplianceFirewallPortForwardingRules resource with the given ID exists.
+func ApplianceFirewallPortForwardingRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceFirewallPortForwardingRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", id, state, "", opts...)
+}
+
 type applianceFirewallPortForwardingRulesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

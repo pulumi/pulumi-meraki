@@ -128,6 +128,12 @@ func (ApplianceVpnSiteToSiteVpnState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVpnSiteToSiteVpnState)(nil)).Elem()
 }
 
+// ApplianceVpnSiteToSiteVpnExists checks whether an existing ApplianceVpnSiteToSiteVpn resource with the given ID exists.
+func ApplianceVpnSiteToSiteVpnExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVpnSiteToSiteVpnState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceVpnSiteToSiteVpn:ApplianceVpnSiteToSiteVpn", id, state, "", opts...)
+}
+
 type applianceVpnSiteToSiteVpnArgs struct {
 	// The list of VPN hubs, in order of preference.
 	Hubs []ApplianceVpnSiteToSiteVpnHub `pulumi:"hubs"`

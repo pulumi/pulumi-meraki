@@ -602,6 +602,30 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         __props__.__dict__["serials"] = serials
         return SensorAlertsProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            conditions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict', 'outputs.SensorAlertsProfilesCondition']]]]] = None,
+            conditions_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionsResponseArgs', 'SensorAlertsProfilesConditionsResponseArgsDict', 'outputs.SensorAlertsProfilesConditionsResponse']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            networks_sensor_alerts_profiles_id: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            recipients: pulumi.Input[Optional[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict', 'outputs.SensorAlertsProfilesRecipients']]] = None,
+            schedule: pulumi.Input[Optional[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict', 'outputs.SensorAlertsProfilesSchedule']]] = None,
+            serials: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["conditions"] = conditions
+        __props__["conditionsResponses"] = conditions_responses
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["networksSensorAlertsProfilesId"] = networks_sensor_alerts_profiles_id
+        __props__["profileId"] = profile_id
+        __props__["recipients"] = recipients
+        __props__["schedule"] = schedule
+        __props__["serials"] = serials
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def conditions(self) -> pulumi.Output[Optional[Sequence['outputs.SensorAlertsProfilesCondition']]]:

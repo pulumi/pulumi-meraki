@@ -110,6 +110,12 @@ func (SwitchDscpToCosMappingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchDscpToCosMappingsState)(nil)).Elem()
 }
 
+// SwitchDscpToCosMappingsExists checks whether an existing SwitchDscpToCosMappings resource with the given ID exists.
+func SwitchDscpToCosMappingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchDscpToCosMappingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings", id, state, "", opts...)
+}
+
 type switchDscpToCosMappingsArgs struct {
 	// An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
 	Mappings []SwitchDscpToCosMappingsMapping `pulumi:"mappings"`

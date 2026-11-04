@@ -150,6 +150,12 @@ func (SwitchDhcpServerPolicyState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchDhcpServerPolicyState)(nil)).Elem()
 }
 
+// SwitchDhcpServerPolicyExists checks whether an existing SwitchDhcpServerPolicy resource with the given ID exists.
+func SwitchDhcpServerPolicyExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchDhcpServerPolicyState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy", id, state, "", opts...)
+}
+
 type switchDhcpServerPolicyArgs struct {
 	// Email alert settings for DHCP servers
 	Alerts *SwitchDhcpServerPolicyAlerts `pulumi:"alerts"`

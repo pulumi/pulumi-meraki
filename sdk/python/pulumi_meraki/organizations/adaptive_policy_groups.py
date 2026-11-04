@@ -462,6 +462,34 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         __props__.__dict__["updated_at"] = updated_at
         return AdaptivePolicyGroups(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            is_default_group: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            organizations_adaptive_policy_groups_id: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_objects: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict', 'outputs.AdaptivePolicyGroupsPolicyObject']]]]] = None,
+            required_ip_mappings: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sgt: pulumi.Input[Optional[_builtins.int]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["createdAt"] = created_at
+        __props__["description"] = description
+        __props__["groupId"] = group_id
+        __props__["isDefaultGroup"] = is_default_group
+        __props__["name"] = name
+        __props__["organizationId"] = organization_id
+        __props__["organizationsAdaptivePolicyGroupsId"] = organizations_adaptive_policy_groups_id
+        __props__["policyObjects"] = policy_objects
+        __props__["requiredIpMappings"] = required_ip_mappings
+        __props__["sgt"] = sgt
+        __props__["updatedAt"] = updated_at
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/adaptivePolicyGroups:AdaptivePolicyGroups', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="createdAt")
     def created_at(self) -> pulumi.Output[_builtins.str]:

@@ -153,6 +153,12 @@ func (WirelessSsidsIdentityPsksState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsIdentityPsksState)(nil)).Elem()
 }
 
+// WirelessSsidsIdentityPsksExists checks whether an existing WirelessSsidsIdentityPsks resource with the given ID exists.
+func WirelessSsidsIdentityPsksExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsIdentityPsksState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks", id, state, "", opts...)
+}
+
 type wirelessSsidsIdentityPsksArgs struct {
 	// Timestamp for when the Identity PSK expires, or 'null' to never expire
 	ExpiresAt *string `pulumi:"expiresAt"`

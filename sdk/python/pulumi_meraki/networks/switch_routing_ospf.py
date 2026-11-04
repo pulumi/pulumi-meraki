@@ -497,6 +497,28 @@ class SwitchRoutingOspf(pulumi.CustomResource):
         __props__.__dict__["v3"] = v3
         return SwitchRoutingOspf(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict', 'outputs.SwitchRoutingOspfArea']]]]] = None,
+            dead_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            hello_timer_in_seconds: pulumi.Input[Optional[_builtins.int]] = None,
+            md5_authentication_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            md5_authentication_key: pulumi.Input[Optional[Union['SwitchRoutingOspfMd5AuthenticationKeyArgs', 'SwitchRoutingOspfMd5AuthenticationKeyArgsDict', 'outputs.SwitchRoutingOspfMd5AuthenticationKey']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            v3: pulumi.Input[Optional[Union['SwitchRoutingOspfV3Args', 'SwitchRoutingOspfV3ArgsDict', 'outputs.SwitchRoutingOspfV3']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["areas"] = areas
+        __props__["deadTimerInSeconds"] = dead_timer_in_seconds
+        __props__["enabled"] = enabled
+        __props__["helloTimerInSeconds"] = hello_timer_in_seconds
+        __props__["md5AuthenticationEnabled"] = md5_authentication_enabled
+        __props__["md5AuthenticationKey"] = md5_authentication_key
+        __props__["networkId"] = network_id
+        __props__["v3"] = v3
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchRoutingOspf:SwitchRoutingOspf', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def areas(self) -> pulumi.Output[Sequence['outputs.SwitchRoutingOspfArea']]:

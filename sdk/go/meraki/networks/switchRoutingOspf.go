@@ -166,6 +166,12 @@ func (SwitchRoutingOspfState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchRoutingOspfState)(nil)).Elem()
 }
 
+// SwitchRoutingOspfExists checks whether an existing SwitchRoutingOspf resource with the given ID exists.
+func SwitchRoutingOspfExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchRoutingOspfState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchRoutingOspf:SwitchRoutingOspf", id, state, "", opts...)
+}
+
 type switchRoutingOspfArgs struct {
 	// OSPF areas
 	Areas []SwitchRoutingOspfArea `pulumi:"areas"`

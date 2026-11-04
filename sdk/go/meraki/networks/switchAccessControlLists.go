@@ -122,6 +122,12 @@ func (SwitchAccessControlListsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchAccessControlListsState)(nil)).Elem()
 }
 
+// SwitchAccessControlListsExists checks whether an existing SwitchAccessControlLists resource with the given ID exists.
+func SwitchAccessControlListsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchAccessControlListsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchAccessControlLists:SwitchAccessControlLists", id, state, "", opts...)
+}
+
 type switchAccessControlListsArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

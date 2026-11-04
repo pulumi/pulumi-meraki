@@ -307,6 +307,20 @@ class Snmp(pulumi.CustomResource):
         __props__.__dict__["users"] = users
         return Snmp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access: pulumi.Input[Optional[_builtins.str]] = None,
+            community_string: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SnmpUserArgs', 'SnmpUserArgsDict', 'outputs.SnmpUser']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["access"] = access
+        __props__["communityString"] = community_string
+        __props__["networkId"] = network_id
+        __props__["users"] = users
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/snmp:Snmp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def access(self) -> pulumi.Output[_builtins.str]:

@@ -130,6 +130,12 @@ func (ApplianceSecurityIntrusionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceSecurityIntrusionState)(nil)).Elem()
 }
 
+// ApplianceSecurityIntrusionExists checks whether an existing ApplianceSecurityIntrusion resource with the given ID exists.
+func ApplianceSecurityIntrusionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceSecurityIntrusionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion", id, state, "", opts...)
+}
+
 type applianceSecurityIntrusionArgs struct {
 	// Intrusion detection ruleset
 	IdsRulesets *string `pulumi:"idsRulesets"`

@@ -1025,6 +1025,56 @@ class ApplianceVlans(pulumi.CustomResource):
         __props__.__dict__["vpn_nat_subnet"] = vpn_nat_subnet
         return ApplianceVlans(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            cidr: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_filename: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_handling: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansDhcpOptionArgs', 'ApplianceVlansDhcpOptionArgsDict', 'outputs.ApplianceVlansDhcpOption']]]]] = None,
+            dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['ApplianceVlansIpv6Args', 'ApplianceVlansIpv6ArgsDict', 'outputs.ApplianceVlansIpv6']]] = None,
+            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceVlansMandatoryDhcpArgs', 'ApplianceVlansMandatoryDhcpArgsDict', 'outputs.ApplianceVlansMandatoryDhcp']]] = None,
+            mask: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVlansReservedIpRangeArgs', 'ApplianceVlansReservedIpRangeArgsDict', 'outputs.ApplianceVlansReservedIpRange']]]]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            template_vlan_type: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_nat_subnet: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["applianceIp"] = appliance_ip
+        __props__["cidr"] = cidr
+        __props__["dhcpBootFilename"] = dhcp_boot_filename
+        __props__["dhcpBootNextServer"] = dhcp_boot_next_server
+        __props__["dhcpBootOptionsEnabled"] = dhcp_boot_options_enabled
+        __props__["dhcpHandling"] = dhcp_handling
+        __props__["dhcpLeaseTime"] = dhcp_lease_time
+        __props__["dhcpOptions"] = dhcp_options
+        __props__["dhcpRelayServerIps"] = dhcp_relay_server_ips
+        __props__["dnsNameservers"] = dns_nameservers
+        __props__["groupPolicyId"] = group_policy_id
+        __props__["interfaceId"] = interface_id
+        __props__["ipv6"] = ipv6
+        __props__["mandatoryDhcp"] = mandatory_dhcp
+        __props__["mask"] = mask
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["reservedIpRanges"] = reserved_ip_ranges
+        __props__["subnet"] = subnet
+        __props__["templateVlanType"] = template_vlan_type
+        __props__["vlanId"] = vlan_id
+        __props__["vpnNatSubnet"] = vpn_nat_subnet
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceVlans:ApplianceVlans', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="applianceIp")
     def appliance_ip(self) -> pulumi.Output[_builtins.str]:

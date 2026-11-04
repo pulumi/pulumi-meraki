@@ -231,6 +231,18 @@ class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
         __props__.__dict__["parameters"] = parameters
         return VlanProfilesAssignmentsReassign(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['VlanProfilesAssignmentsReassignItemArgs', 'VlanProfilesAssignmentsReassignItemArgsDict', 'outputs.VlanProfilesAssignmentsReassignItem']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['VlanProfilesAssignmentsReassignParametersArgs', 'VlanProfilesAssignmentsReassignParametersArgsDict', 'outputs.VlanProfilesAssignmentsReassignParameters']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["networkId"] = network_id
+        __props__["parameters"] = parameters
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.VlanProfilesAssignmentsReassignItem']:

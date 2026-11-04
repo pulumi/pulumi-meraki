@@ -134,6 +134,12 @@ func (ApplianceVpnBgpState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVpnBgpState)(nil)).Elem()
 }
 
+// ApplianceVpnBgpExists checks whether an existing ApplianceVpnBgp resource with the given ID exists.
+func ApplianceVpnBgpExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVpnBgpState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceVpnBgp:ApplianceVpnBgp", id, state, "", opts...)
+}
+
 type applianceVpnBgpArgs struct {
 	// An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
 	AsNumber *int `pulumi:"asNumber"`

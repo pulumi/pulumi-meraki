@@ -121,6 +121,12 @@ func (ClientsSplashAuthorizationStatusState) ElementType() reflect.Type {
 	return reflect.TypeOf((*clientsSplashAuthorizationStatusState)(nil)).Elem()
 }
 
+// ClientsSplashAuthorizationStatusExists checks whether an existing ClientsSplashAuthorizationStatus resource with the given ID exists.
+func ClientsSplashAuthorizationStatusExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ClientsSplashAuthorizationStatusState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus", id, state, "", opts...)
+}
+
 type clientsSplashAuthorizationStatusArgs struct {
 	// clientId path parameter. Client ID
 	ClientId string `pulumi:"clientId"`

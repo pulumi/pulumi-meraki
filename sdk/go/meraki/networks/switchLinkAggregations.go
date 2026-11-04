@@ -121,6 +121,12 @@ func (SwitchLinkAggregationsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchLinkAggregationsState)(nil)).Elem()
 }
 
+// SwitchLinkAggregationsExists checks whether an existing SwitchLinkAggregations resource with the given ID exists.
+func SwitchLinkAggregationsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchLinkAggregationsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchLinkAggregations:SwitchLinkAggregations", id, state, "", opts...)
+}
+
 type switchLinkAggregationsArgs struct {
 	// linkAggregationId path parameter. Link aggregation ID
 	LinkAggregationId *string `pulumi:"linkAggregationId"`

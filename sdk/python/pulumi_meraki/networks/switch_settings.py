@@ -397,6 +397,24 @@ class SwitchSettings(pulumi.CustomResource):
         __props__.__dict__["vlan"] = vlan
         return SwitchSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            mac_blocklist: pulumi.Input[Optional[Union['SwitchSettingsMacBlocklistArgs', 'SwitchSettingsMacBlocklistArgsDict', 'outputs.SwitchSettingsMacBlocklist']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            power_exceptions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchSettingsPowerExceptionArgs', 'SwitchSettingsPowerExceptionArgsDict', 'outputs.SwitchSettingsPowerException']]]]] = None,
+            uplink_client_sampling: pulumi.Input[Optional[Union['SwitchSettingsUplinkClientSamplingArgs', 'SwitchSettingsUplinkClientSamplingArgsDict', 'outputs.SwitchSettingsUplinkClientSampling']]] = None,
+            use_combined_power: pulumi.Input[Optional[_builtins.bool]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["macBlocklist"] = mac_blocklist
+        __props__["networkId"] = network_id
+        __props__["powerExceptions"] = power_exceptions
+        __props__["uplinkClientSampling"] = uplink_client_sampling
+        __props__["useCombinedPower"] = use_combined_power
+        __props__["vlan"] = vlan
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchSettings:SwitchSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="macBlocklist")
     def mac_blocklist(self) -> pulumi.Output['outputs.SwitchSettingsMacBlocklist']:

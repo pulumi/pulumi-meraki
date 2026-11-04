@@ -157,6 +157,12 @@ func (LiveToolsWakeOnLanState) ElementType() reflect.Type {
 	return reflect.TypeOf((*liveToolsWakeOnLanState)(nil)).Elem()
 }
 
+// LiveToolsWakeOnLanExists checks whether an existing LiveToolsWakeOnLan resource with the given ID exists.
+func LiveToolsWakeOnLanExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LiveToolsWakeOnLanState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", id, state, "", opts...)
+}
+
 type liveToolsWakeOnLanArgs struct {
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback *LiveToolsWakeOnLanCallback `pulumi:"callback"`

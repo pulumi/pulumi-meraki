@@ -109,6 +109,12 @@ func (AdaptivePolicySettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*adaptivePolicySettingsState)(nil)).Elem()
 }
 
+// AdaptivePolicySettingsExists checks whether an existing AdaptivePolicySettings resource with the given ID exists.
+func AdaptivePolicySettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AdaptivePolicySettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/adaptivePolicySettings:AdaptivePolicySettings", id, state, "", opts...)
+}
+
 type adaptivePolicySettingsArgs struct {
 	// List of network IDs with adaptive policy enabled
 	EnabledNetworks []string `pulumi:"enabledNetworks"`

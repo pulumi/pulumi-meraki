@@ -121,6 +121,12 @@ func (WirelessBillingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessBillingState)(nil)).Elem()
 }
 
+// WirelessBillingExists checks whether an existing WirelessBilling resource with the given ID exists.
+func WirelessBillingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessBillingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessBilling:WirelessBilling", id, state, "", opts...)
+}
+
 type wirelessBillingArgs struct {
 	// The currency code of this node group's billing plans
 	Currency *string `pulumi:"currency"`

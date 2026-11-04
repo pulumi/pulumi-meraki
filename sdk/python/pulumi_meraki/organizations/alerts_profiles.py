@@ -491,6 +491,28 @@ class AlertsProfiles(pulumi.CustomResource):
         __props__.__dict__["type"] = type
         return AlertsProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            alert_condition: pulumi.Input[Optional[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict', 'outputs.AlertsProfilesAlertCondition']]] = None,
+            alert_config_id: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            recipients: pulumi.Input[Optional[Union['AlertsProfilesRecipientsArgs', 'AlertsProfilesRecipientsArgsDict', 'outputs.AlertsProfilesRecipients']]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["alertCondition"] = alert_condition
+        __props__["alertConfigId"] = alert_config_id
+        __props__["description"] = description
+        __props__["enabled"] = enabled
+        __props__["networkTags"] = network_tags
+        __props__["organizationId"] = organization_id
+        __props__["recipients"] = recipients
+        __props__["type"] = type
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/alertsProfiles:AlertsProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="alertCondition")
     def alert_condition(self) -> pulumi.Output['outputs.AlertsProfilesAlertCondition']:

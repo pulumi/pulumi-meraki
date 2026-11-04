@@ -181,6 +181,12 @@ func (ApplianceUplinksSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceUplinksSettingsState)(nil)).Elem()
 }
 
+// ApplianceUplinksSettingsExists checks whether an existing ApplianceUplinksSettings resource with the given ID exists.
+func ApplianceUplinksSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceUplinksSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings", id, state, "", opts...)
+}
+
 type applianceUplinksSettingsArgs struct {
 	// Interface settings.
 	Interfaces *ApplianceUplinksSettingsInterfaces `pulumi:"interfaces"`

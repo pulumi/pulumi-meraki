@@ -120,6 +120,12 @@ func (LicensingCotermLicensesMoveState) ElementType() reflect.Type {
 	return reflect.TypeOf((*licensingCotermLicensesMoveState)(nil)).Elem()
 }
 
+// LicensingCotermLicensesMoveExists checks whether an existing LicensingCotermLicensesMove resource with the given ID exists.
+func LicensingCotermLicensesMoveExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicensingCotermLicensesMoveState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", id, state, "", opts...)
+}
+
 type licensingCotermLicensesMoveArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                                `pulumi:"organizationId"`

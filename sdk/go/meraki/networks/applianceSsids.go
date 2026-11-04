@@ -201,6 +201,12 @@ func (ApplianceSsidsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceSsidsState)(nil)).Elem()
 }
 
+// ApplianceSsidsExists checks whether an existing ApplianceSsids resource with the given ID exists.
+func ApplianceSsidsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceSsidsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceSsids:ApplianceSsids", id, state, "", opts...)
+}
+
 type applianceSsidsArgs struct {
 	// The association control method for the SSID.
 	AuthMode *string `pulumi:"authMode"`

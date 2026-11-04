@@ -122,6 +122,12 @@ func (ApplianceVpnVpnFirewallRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVpnVpnFirewallRulesState)(nil)).Elem()
 }
 
+// ApplianceVpnVpnFirewallRulesExists checks whether an existing ApplianceVpnVpnFirewallRules resource with the given ID exists.
+func ApplianceVpnVpnFirewallRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVpnVpnFirewallRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules", id, state, "", opts...)
+}
+
 type applianceVpnVpnFirewallRulesArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`

@@ -50,18 +50,18 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new InventoryOnboardingCloudMonitoringPrepare("example", InventoryOnboardingCloudMonitoringPrepareArgs.builder()
  *             .organizationId("string")
  *             .parameters(InventoryOnboardingCloudMonitoringPrepareParametersArgs.builder()
  *                 .devices(InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs.builder()
  *                     .sudi("""
- *           \"-----BEGIN CERTIFICATE-----
+ *           }&#92;{@code "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -84,7 +84,7 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         \"
+ *         }&#92;{@code "
  *                     """)
  *                     .tunnel(InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs.builder()
  *                         .certificateName("DeviceSUDI")
@@ -123,8 +123,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

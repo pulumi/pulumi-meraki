@@ -270,6 +270,20 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
         __props__.__dict__["validate"] = validate
         return LicensingSubscriptionSubscriptionsBind(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindItemArgs', 'LicensingSubscriptionSubscriptionsBindItemArgsDict', 'outputs.LicensingSubscriptionSubscriptionsBindItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict', 'outputs.LicensingSubscriptionSubscriptionsBindParameters']]] = None,
+            subscription_id: pulumi.Input[Optional[_builtins.str]] = None,
+            validate: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["parameters"] = parameters
+        __props__["subscriptionId"] = subscription_id
+        __props__["validate"] = validate
+        return pulumi.runtime.exists_resource(None, 'meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.LicensingSubscriptionSubscriptionsBindItem']:

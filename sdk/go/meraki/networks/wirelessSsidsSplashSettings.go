@@ -276,6 +276,12 @@ func (WirelessSsidsSplashSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsSplashSettingsState)(nil)).Elem()
 }
 
+// WirelessSsidsSplashSettingsExists checks whether an existing WirelessSsidsSplashSettings resource with the given ID exists.
+func WirelessSsidsSplashSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsSplashSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", id, state, "", opts...)
+}
+
 type wirelessSsidsSplashSettingsArgs struct {
 	// Whether or not to allow simultaneous logins from different devices.
 	AllowSimultaneousLogins *bool `pulumi:"allowSimultaneousLogins"`

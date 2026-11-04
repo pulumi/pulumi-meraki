@@ -228,6 +228,12 @@ func (SensorAlertsProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sensorAlertsProfilesState)(nil)).Elem()
 }
 
+// SensorAlertsProfilesExists checks whether an existing SensorAlertsProfiles resource with the given ID exists.
+func SensorAlertsProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SensorAlertsProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", id, state, "", opts...)
+}
+
 type sensorAlertsProfilesArgs struct {
 	// List of conditions that will cause the profile to send an alert.
 	Conditions []SensorAlertsProfilesCondition `pulumi:"conditions"`

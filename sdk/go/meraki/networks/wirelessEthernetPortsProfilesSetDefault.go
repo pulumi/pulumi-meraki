@@ -106,6 +106,12 @@ func (WirelessEthernetPortsProfilesSetDefaultState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessEthernetPortsProfilesSetDefaultState)(nil)).Elem()
 }
 
+// WirelessEthernetPortsProfilesSetDefaultExists checks whether an existing WirelessEthernetPortsProfilesSetDefault resource with the given ID exists.
+func WirelessEthernetPortsProfilesSetDefaultExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessEthernetPortsProfilesSetDefaultState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessEthernetPortsProfilesSetDefault:WirelessEthernetPortsProfilesSetDefault", id, state, "", opts...)
+}
+
 type wirelessEthernetPortsProfilesSetDefaultArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                                            `pulumi:"networkId"`

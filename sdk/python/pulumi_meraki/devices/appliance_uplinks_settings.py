@@ -365,6 +365,16 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return ApplianceUplinksSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            interfaces: pulumi.Input[Optional[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict', 'outputs.ApplianceUplinksSettingsInterfaces']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["interfaces"] = interfaces
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def interfaces(self) -> pulumi.Output['outputs.ApplianceUplinksSettingsInterfaces']:

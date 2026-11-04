@@ -428,6 +428,30 @@ class ApplianceWarmSpare(pulumi.CustomResource):
         __props__.__dict__["wan2"] = wan2
         return ApplianceWarmSpare(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            spare_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            uplink_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            virtual_ip1: pulumi.Input[Optional[_builtins.str]] = None,
+            virtual_ip2: pulumi.Input[Optional[_builtins.str]] = None,
+            wan1: pulumi.Input[Optional[Union['ApplianceWarmSpareWan1Args', 'ApplianceWarmSpareWan1ArgsDict', 'outputs.ApplianceWarmSpareWan1']]] = None,
+            wan2: pulumi.Input[Optional[Union['ApplianceWarmSpareWan2Args', 'ApplianceWarmSpareWan2ArgsDict', 'outputs.ApplianceWarmSpareWan2']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["networkId"] = network_id
+        __props__["primarySerial"] = primary_serial
+        __props__["spareSerial"] = spare_serial
+        __props__["uplinkMode"] = uplink_mode
+        __props__["virtualIp1"] = virtual_ip1
+        __props__["virtualIp2"] = virtual_ip2
+        __props__["wan1"] = wan1
+        __props__["wan2"] = wan2
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceWarmSpare:ApplianceWarmSpare', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

@@ -1333,6 +1333,72 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
         __props__.__dict__["voice_vlan"] = voice_vlan
         return ConfigTemplatesSwitchProfilesPorts(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_policy_number: pulumi.Input[Optional[_builtins.int]] = None,
+            access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+            config_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            dai_trusted: pulumi.Input[Optional[_builtins.bool]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            flexible_stacking_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            isolation_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            link_negotiation: pulumi.Input[Optional[_builtins.str]] = None,
+            link_negotiation_capabilities: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mirror: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsMirrorArgs', 'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict', 'outputs.ConfigTemplatesSwitchProfilesPortsMirror']]] = None,
+            module: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsModuleArgs', 'ConfigTemplatesSwitchProfilesPortsModuleArgsDict', 'outputs.ConfigTemplatesSwitchProfilesPortsModule']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            poe_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            port_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            profile: pulumi.Input[Optional[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict', 'outputs.ConfigTemplatesSwitchProfilesPortsProfile']]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            rstp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            sticky_mac_allow_list_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            sticky_mac_allow_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            storm_control_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            stp_guard: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            udld: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None,
+            voice_vlan: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPolicyNumber"] = access_policy_number
+        __props__["accessPolicyType"] = access_policy_type
+        __props__["allowedVlans"] = allowed_vlans
+        __props__["configTemplateId"] = config_template_id
+        __props__["daiTrusted"] = dai_trusted
+        __props__["enabled"] = enabled
+        __props__["flexibleStackingEnabled"] = flexible_stacking_enabled
+        __props__["isolationEnabled"] = isolation_enabled
+        __props__["linkNegotiation"] = link_negotiation
+        __props__["linkNegotiationCapabilities"] = link_negotiation_capabilities
+        __props__["macAllowLists"] = mac_allow_lists
+        __props__["mirror"] = mirror
+        __props__["module"] = module
+        __props__["name"] = name
+        __props__["organizationId"] = organization_id
+        __props__["poeEnabled"] = poe_enabled
+        __props__["portId"] = port_id
+        __props__["portScheduleId"] = port_schedule_id
+        __props__["profile"] = profile
+        __props__["profileId"] = profile_id
+        __props__["rstpEnabled"] = rstp_enabled
+        __props__["stickyMacAllowListLimit"] = sticky_mac_allow_list_limit
+        __props__["stickyMacAllowLists"] = sticky_mac_allow_lists
+        __props__["stormControlEnabled"] = storm_control_enabled
+        __props__["stpGuard"] = stp_guard
+        __props__["tags"] = tags
+        __props__["type"] = type
+        __props__["udld"] = udld
+        __props__["vlan"] = vlan
+        __props__["voiceVlan"] = voice_vlan
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPolicyNumber")
     def access_policy_number(self) -> pulumi.Output[_builtins.int]:

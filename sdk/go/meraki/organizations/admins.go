@@ -179,6 +179,12 @@ func (AdminsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*adminsState)(nil)).Elem()
 }
 
+// AdminsExists checks whether an existing Admins resource with the given ID exists.
+func AdminsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AdminsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/admins:Admins", id, state, "", opts...)
+}
+
 type adminsArgs struct {
 	// adminId path parameter. Admin ID
 	AdminId *string `pulumi:"adminId"`

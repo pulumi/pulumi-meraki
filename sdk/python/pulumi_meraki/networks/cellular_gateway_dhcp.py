@@ -305,6 +305,20 @@ class CellularGatewayDhcp(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return CellularGatewayDhcp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["dhcpLeaseTime"] = dhcp_lease_time
+        __props__["dnsCustomNameservers"] = dns_custom_nameservers
+        __props__["dnsNameservers"] = dns_nameservers
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="dhcpLeaseTime")
     def dhcp_lease_time(self) -> pulumi.Output[_builtins.str]:

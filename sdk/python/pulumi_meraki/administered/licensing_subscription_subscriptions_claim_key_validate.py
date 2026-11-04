@@ -177,6 +177,16 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
         __props__.__dict__["parameters"] = parameters
         return LicensingSubscriptionSubscriptionsClaimKeyValidate(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimKeyValidateItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs', 'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict', 'outputs.LicensingSubscriptionSubscriptionsClaimKeyValidateParameters']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["parameters"] = parameters
+        return pulumi.runtime.exists_resource(None, 'meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.LicensingSubscriptionSubscriptionsClaimKeyValidateItem']:

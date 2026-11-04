@@ -147,6 +147,12 @@ func (SamlRolesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*samlRolesState)(nil)).Elem()
 }
 
+// SamlRolesExists checks whether an existing SamlRoles resource with the given ID exists.
+func SamlRolesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SamlRolesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/samlRoles:SamlRoles", id, state, "", opts...)
+}
+
 type samlRolesArgs struct {
 	// The list of networks that the SAML administrator has privileges on
 	Networks []SamlRolesNetwork `pulumi:"networks"`

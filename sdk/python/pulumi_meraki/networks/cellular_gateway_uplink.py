@@ -225,6 +225,16 @@ class CellularGatewayUplink(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return CellularGatewayUplink(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            bandwidth_limits: pulumi.Input[Optional[Union['CellularGatewayUplinkBandwidthLimitsArgs', 'CellularGatewayUplinkBandwidthLimitsArgsDict', 'outputs.CellularGatewayUplinkBandwidthLimits']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bandwidthLimits"] = bandwidth_limits
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/cellularGatewayUplink:CellularGatewayUplink', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="bandwidthLimits")
     def bandwidth_limits(self) -> pulumi.Output['outputs.CellularGatewayUplinkBandwidthLimits']:

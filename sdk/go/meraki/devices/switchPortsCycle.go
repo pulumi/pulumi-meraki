@@ -111,6 +111,12 @@ func (SwitchPortsCycleState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchPortsCycleState)(nil)).Elem()
 }
 
+// SwitchPortsCycleExists checks whether an existing SwitchPortsCycle resource with the given ID exists.
+func SwitchPortsCycleExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchPortsCycleState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/switchPortsCycle:SwitchPortsCycle", id, state, "", opts...)
+}
+
 type switchPortsCycleArgs struct {
 	Parameters SwitchPortsCycleParameters `pulumi:"parameters"`
 	// serial path parameter.

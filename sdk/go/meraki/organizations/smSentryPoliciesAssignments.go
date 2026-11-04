@@ -122,6 +122,12 @@ func (SmSentryPoliciesAssignmentsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smSentryPoliciesAssignmentsState)(nil)).Elem()
 }
 
+// SmSentryPoliciesAssignmentsExists checks whether an existing SmSentryPoliciesAssignments resource with the given ID exists.
+func SmSentryPoliciesAssignmentsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmSentryPoliciesAssignmentsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments", id, state, "", opts...)
+}
+
 type smSentryPoliciesAssignmentsArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                                `pulumi:"organizationId"`

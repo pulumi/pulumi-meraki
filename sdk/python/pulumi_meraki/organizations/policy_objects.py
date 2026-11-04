@@ -588,6 +588,38 @@ class PolicyObjects(pulumi.CustomResource):
         __props__.__dict__["updated_at"] = updated_at
         return PolicyObjects(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            category: pulumi.Input[Optional[_builtins.str]] = None,
+            cidr: pulumi.Input[Optional[_builtins.str]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+            group_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ip: pulumi.Input[Optional[_builtins.str]] = None,
+            mask: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_object_id: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["category"] = category
+        __props__["cidr"] = cidr
+        __props__["createdAt"] = created_at
+        __props__["fqdn"] = fqdn
+        __props__["groupIds"] = group_ids
+        __props__["ip"] = ip
+        __props__["mask"] = mask
+        __props__["name"] = name
+        __props__["networkIds"] = network_ids
+        __props__["organizationId"] = organization_id
+        __props__["policyObjectId"] = policy_object_id
+        __props__["type"] = type
+        __props__["updatedAt"] = updated_at
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/policyObjects:PolicyObjects', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def category(self) -> pulumi.Output[_builtins.str]:

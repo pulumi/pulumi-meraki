@@ -233,6 +233,16 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CellularGatewayPortForwardingRules(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict', 'outputs.CellularGatewayPortForwardingRulesRule']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["rules"] = rules
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cellularGatewayPortForwardingRules:CellularGatewayPortForwardingRules', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def rules(self) -> pulumi.Output[Sequence['outputs.CellularGatewayPortForwardingRulesRule']]:

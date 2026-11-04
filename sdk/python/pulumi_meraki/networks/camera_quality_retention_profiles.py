@@ -570,6 +570,34 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         __props__.__dict__["video_settings"] = video_settings
         return CameraQualityRetentionProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_archive_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            max_retention_days: pulumi.Input[Optional[_builtins.int]] = None,
+            motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            quality_retention_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            schedule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            video_settings: pulumi.Input[Optional[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict', 'outputs.CameraQualityRetentionProfilesVideoSettings']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["audioRecordingEnabled"] = audio_recording_enabled
+        __props__["cloudArchiveEnabled"] = cloud_archive_enabled
+        __props__["maxRetentionDays"] = max_retention_days
+        __props__["motionBasedRetentionEnabled"] = motion_based_retention_enabled
+        __props__["motionDetectorVersion"] = motion_detector_version
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["qualityRetentionProfileId"] = quality_retention_profile_id
+        __props__["restrictedBandwidthModeEnabled"] = restricted_bandwidth_mode_enabled
+        __props__["scheduleId"] = schedule_id
+        __props__["videoSettings"] = video_settings
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
     def audio_recording_enabled(self) -> pulumi.Output[_builtins.bool]:

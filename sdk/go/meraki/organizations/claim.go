@@ -117,6 +117,12 @@ func (ClaimState) ElementType() reflect.Type {
 	return reflect.TypeOf((*claimState)(nil)).Elem()
 }
 
+// ClaimExists checks whether an existing Claim resource with the given ID exists.
+func ClaimExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ClaimState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/claim:Claim", id, state, "", opts...)
+}
+
 type claimArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string          `pulumi:"organizationId"`

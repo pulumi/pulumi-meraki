@@ -104,6 +104,12 @@ func (CameraGenerateSnapshotState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraGenerateSnapshotState)(nil)).Elem()
 }
 
+// CameraGenerateSnapshotExists checks whether an existing CameraGenerateSnapshot resource with the given ID exists.
+func CameraGenerateSnapshotExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraGenerateSnapshotState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot", id, state, "", opts...)
+}
+
 type cameraGenerateSnapshotArgs struct {
 	Parameters CameraGenerateSnapshotParameters `pulumi:"parameters"`
 	// serial path parameter.

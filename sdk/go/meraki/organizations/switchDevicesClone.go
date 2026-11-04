@@ -108,6 +108,12 @@ func (SwitchDevicesCloneState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchDevicesCloneState)(nil)).Elem()
 }
 
+// SwitchDevicesCloneExists checks whether an existing SwitchDevicesClone resource with the given ID exists.
+func SwitchDevicesCloneExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchDevicesCloneState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/switchDevicesClone:SwitchDevicesClone", id, state, "", opts...)
+}
+
 type switchDevicesCloneArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                       `pulumi:"organizationId"`

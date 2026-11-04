@@ -114,6 +114,12 @@ func (VlanProfilesAssignmentsReassignState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vlanProfilesAssignmentsReassignState)(nil)).Elem()
 }
 
+// VlanProfilesAssignmentsReassignExists checks whether an existing VlanProfilesAssignmentsReassign resource with the given ID exists.
+func VlanProfilesAssignmentsReassignExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VlanProfilesAssignmentsReassignState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign", id, state, "", opts...)
+}
+
 type vlanProfilesAssignmentsReassignArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                                    `pulumi:"networkId"`

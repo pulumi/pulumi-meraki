@@ -425,6 +425,26 @@ class ActionBatches(pulumi.CustomResource):
         __props__.__dict__["synchronous"] = synchronous
         return ActionBatches(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            action_batch_id: pulumi.Input[Optional[_builtins.str]] = None,
+            actions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict', 'outputs.ActionBatchesAction']]]]] = None,
+            callback: pulumi.Input[Optional[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict', 'outputs.ActionBatchesCallback']]] = None,
+            confirmed: pulumi.Input[Optional[_builtins.bool]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[Union['ActionBatchesStatusArgs', 'ActionBatchesStatusArgsDict', 'outputs.ActionBatchesStatus']]] = None,
+            synchronous: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["actionBatchId"] = action_batch_id
+        __props__["actions"] = actions
+        __props__["callback"] = callback
+        __props__["confirmed"] = confirmed
+        __props__["organizationId"] = organization_id
+        __props__["status"] = status
+        __props__["synchronous"] = synchronous
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/actionBatches:ActionBatches', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="actionBatchId")
     def action_batch_id(self) -> pulumi.Output[_builtins.str]:

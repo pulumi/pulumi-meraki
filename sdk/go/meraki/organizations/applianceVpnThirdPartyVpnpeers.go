@@ -152,6 +152,12 @@ func (ApplianceVpnThirdPartyVpnpeersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVpnThirdPartyVpnpeersState)(nil)).Elem()
 }
 
+// ApplianceVpnThirdPartyVpnpeersExists checks whether an existing ApplianceVpnThirdPartyVpnpeers resource with the given ID exists.
+func ApplianceVpnThirdPartyVpnpeersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVpnThirdPartyVpnpeersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", id, state, "", opts...)
+}
+
 type applianceVpnThirdPartyVpnpeersArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`

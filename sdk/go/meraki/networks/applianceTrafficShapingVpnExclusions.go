@@ -118,6 +118,12 @@ func (ApplianceTrafficShapingVpnExclusionsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceTrafficShapingVpnExclusionsState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingVpnExclusionsExists checks whether an existing ApplianceTrafficShapingVpnExclusions resource with the given ID exists.
+func ApplianceTrafficShapingVpnExclusionsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingVpnExclusionsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions", id, state, "", opts...)
+}
+
 type applianceTrafficShapingVpnExclusionsArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                                         `pulumi:"networkId"`

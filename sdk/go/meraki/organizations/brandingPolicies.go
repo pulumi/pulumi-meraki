@@ -175,6 +175,12 @@ func (BrandingPoliciesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*brandingPoliciesState)(nil)).Elem()
 }
 
+// BrandingPoliciesExists checks whether an existing BrandingPolicies resource with the given ID exists.
+func BrandingPoliciesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BrandingPoliciesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/brandingPolicies:BrandingPolicies", id, state, "", opts...)
+}
+
 type brandingPoliciesArgs struct {
 	// Settings for describing which kinds of admins this policy applies to.
 	AdminSettings *BrandingPoliciesAdminSettings `pulumi:"adminSettings"`

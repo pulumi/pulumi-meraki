@@ -368,6 +368,22 @@ class ApplianceSingleLan(pulumi.CustomResource):
         __props__.__dict__["subnet"] = subnet
         return ApplianceSingleLan(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            appliance_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict', 'outputs.ApplianceSingleLanIpv6']]] = None,
+            mandatory_dhcp: pulumi.Input[Optional[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict', 'outputs.ApplianceSingleLanMandatoryDhcp']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["applianceIp"] = appliance_ip
+        __props__["ipv6"] = ipv6
+        __props__["mandatoryDhcp"] = mandatory_dhcp
+        __props__["networkId"] = network_id
+        __props__["subnet"] = subnet
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceSingleLan:ApplianceSingleLan', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="applianceIp")
     def appliance_ip(self) -> pulumi.Output[_builtins.str]:

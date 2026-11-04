@@ -128,6 +128,12 @@ func (ApplianceFirewallInboundFirewallRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceFirewallInboundFirewallRulesState)(nil)).Elem()
 }
 
+// ApplianceFirewallInboundFirewallRulesExists checks whether an existing ApplianceFirewallInboundFirewallRules resource with the given ID exists.
+func ApplianceFirewallInboundFirewallRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceFirewallInboundFirewallRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules", id, state, "", opts...)
+}
+
 type applianceFirewallInboundFirewallRulesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

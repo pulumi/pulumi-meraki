@@ -376,6 +376,28 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
         __props__.__dict__["url"] = url
         return LiveToolsThroughputTest(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            callback: pulumi.Input[Optional[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict', 'outputs.LiveToolsThroughputTestCallback']]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsThroughputTestRequestArgs', 'LiveToolsThroughputTestRequestArgsDict', 'outputs.LiveToolsThroughputTestRequest']]] = None,
+            result: pulumi.Input[Optional[Union['LiveToolsThroughputTestResultArgs', 'LiveToolsThroughputTestResultArgsDict', 'outputs.LiveToolsThroughputTestResult']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            throughput_test_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["callback"] = callback
+        __props__["error"] = error
+        __props__["request"] = request
+        __props__["result"] = result
+        __props__["serial"] = serial
+        __props__["status"] = status
+        __props__["throughputTestId"] = throughput_test_id
+        __props__["url"] = url
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def callback(self) -> pulumi.Output['outputs.LiveToolsThroughputTestCallback']:

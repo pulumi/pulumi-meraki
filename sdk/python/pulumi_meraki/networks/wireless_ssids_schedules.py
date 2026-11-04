@@ -351,6 +351,22 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         __props__.__dict__["ranges_in_seconds"] = ranges_in_seconds
         return WirelessSsidsSchedules(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangeArgs', 'WirelessSsidsSchedulesRangeArgsDict', 'outputs.WirelessSsidsSchedulesRange']]]]] = None,
+            ranges_in_seconds: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsSchedulesRangesInSecondArgs', 'WirelessSsidsSchedulesRangesInSecondArgsDict', 'outputs.WirelessSsidsSchedulesRangesInSecond']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["ranges"] = ranges
+        __props__["rangesInSeconds"] = ranges_in_seconds
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

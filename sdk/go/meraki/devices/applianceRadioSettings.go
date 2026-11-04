@@ -128,6 +128,12 @@ func (ApplianceRadioSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceRadioSettingsState)(nil)).Elem()
 }
 
+// ApplianceRadioSettingsExists checks whether an existing ApplianceRadioSettings resource with the given ID exists.
+func ApplianceRadioSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceRadioSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", id, state, "", opts...)
+}
+
 type applianceRadioSettingsArgs struct {
 	// Manual radio settings for 5 GHz
 	FiveGhzSettings *ApplianceRadioSettingsFiveGhzSettings `pulumi:"fiveGhzSettings"`

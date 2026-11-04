@@ -532,6 +532,32 @@ class MerakiAuthUsers(pulumi.CustomResource):
         __props__.__dict__["password"] = password
         return MerakiAuthUsers(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            account_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authorizations: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict', 'outputs.MerakiAuthUsersAuthorization']]]]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            email_password_to_user: pulumi.Input[Optional[_builtins.bool]] = None,
+            is_admin: pulumi.Input[Optional[_builtins.bool]] = None,
+            meraki_auth_user_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountType"] = account_type
+        __props__["authorizations"] = authorizations
+        __props__["createdAt"] = created_at
+        __props__["email"] = email
+        __props__["emailPasswordToUser"] = email_password_to_user
+        __props__["isAdmin"] = is_admin
+        __props__["merakiAuthUserId"] = meraki_auth_user_id
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["password"] = password
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/merakiAuthUsers:MerakiAuthUsers', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountType")
     def account_type(self) -> pulumi.Output[_builtins.str]:

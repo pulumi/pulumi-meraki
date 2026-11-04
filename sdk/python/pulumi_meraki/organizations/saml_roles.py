@@ -413,6 +413,26 @@ class SamlRoles(pulumi.CustomResource):
         __props__.__dict__["tags"] = tags
         return SamlRoles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            cameras: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesCameraArgs', 'SamlRolesCameraArgsDict', 'outputs.SamlRolesCamera']]]]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict', 'outputs.SamlRolesNetwork']]]]] = None,
+            org_access: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            role: pulumi.Input[Optional[_builtins.str]] = None,
+            saml_role_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SamlRolesTagArgs', 'SamlRolesTagArgsDict', 'outputs.SamlRolesTag']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["cameras"] = cameras
+        __props__["networks"] = networks
+        __props__["orgAccess"] = org_access
+        __props__["organizationId"] = organization_id
+        __props__["role"] = role
+        __props__["samlRoleId"] = saml_role_id
+        __props__["tags"] = tags
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/samlRoles:SamlRoles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def cameras(self) -> pulumi.Output[Sequence['outputs.SamlRolesCamera']]:

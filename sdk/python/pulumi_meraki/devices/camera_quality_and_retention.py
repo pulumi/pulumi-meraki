@@ -463,6 +463,28 @@ class CameraQualityAndRetention(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CameraQualityAndRetention(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            audio_recording_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_based_retention_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            motion_detector_version: pulumi.Input[Optional[_builtins.int]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            quality: pulumi.Input[Optional[_builtins.str]] = None,
+            resolution: pulumi.Input[Optional[_builtins.str]] = None,
+            restricted_bandwidth_mode_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["audioRecordingEnabled"] = audio_recording_enabled
+        __props__["motionBasedRetentionEnabled"] = motion_based_retention_enabled
+        __props__["motionDetectorVersion"] = motion_detector_version
+        __props__["profileId"] = profile_id
+        __props__["quality"] = quality
+        __props__["resolution"] = resolution
+        __props__["restrictedBandwidthModeEnabled"] = restricted_bandwidth_mode_enabled
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="audioRecordingEnabled")
     def audio_recording_enabled(self) -> pulumi.Output[_builtins.bool]:

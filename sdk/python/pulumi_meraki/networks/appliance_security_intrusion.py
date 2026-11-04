@@ -325,6 +325,20 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         __props__.__dict__["protected_networks"] = protected_networks
         return ApplianceSecurityIntrusion(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ids_rulesets: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protected_networks: pulumi.Input[Optional[Union['ApplianceSecurityIntrusionProtectedNetworksArgs', 'ApplianceSecurityIntrusionProtectedNetworksArgsDict', 'outputs.ApplianceSecurityIntrusionProtectedNetworks']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["idsRulesets"] = ids_rulesets
+        __props__["mode"] = mode
+        __props__["networkId"] = network_id
+        __props__["protectedNetworks"] = protected_networks
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="idsRulesets")
     def ids_rulesets(self) -> pulumi.Output[_builtins.str]:

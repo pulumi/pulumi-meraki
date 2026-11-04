@@ -264,6 +264,12 @@ func (SwitchAccessPoliciesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchAccessPoliciesState)(nil)).Elem()
 }
 
+// SwitchAccessPoliciesExists checks whether an existing SwitchAccessPolicies resource with the given ID exists.
+func SwitchAccessPoliciesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchAccessPoliciesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchAccessPolicies:SwitchAccessPolicies", id, state, "", opts...)
+}
+
 type switchAccessPoliciesArgs struct {
 	// accessPolicyNumber path parameter. Access policy number
 	AccessPolicyNumber *string `pulumi:"accessPolicyNumber"`

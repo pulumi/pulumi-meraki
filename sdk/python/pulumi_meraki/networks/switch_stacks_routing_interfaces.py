@@ -645,6 +645,38 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         __props__.__dict__["vlan_id"] = vlan_id
         return SwitchStacksRoutingInterfaces(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_response: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict', 'outputs.SwitchStacksRoutingInterfacesIpv6']]] = None,
+            multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ospf_settings: pulumi.Input[Optional[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict', 'outputs.SwitchStacksRoutingInterfacesOspfSettings']]] = None,
+            ospf_v3: pulumi.Input[Optional[Union['SwitchStacksRoutingInterfacesOspfV3Args', 'SwitchStacksRoutingInterfacesOspfV3ArgsDict', 'outputs.SwitchStacksRoutingInterfacesOspfV3']]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            switch_stack_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultGateway"] = default_gateway
+        __props__["defaultGatewayResponse"] = default_gateway_response
+        __props__["interfaceId"] = interface_id
+        __props__["interfaceIp"] = interface_ip
+        __props__["ipv6"] = ipv6
+        __props__["multicastRouting"] = multicast_routing
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["ospfSettings"] = ospf_settings
+        __props__["ospfV3"] = ospf_v3
+        __props__["subnet"] = subnet
+        __props__["switchStackId"] = switch_stack_id
+        __props__["vlanId"] = vlan_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
     def default_gateway(self) -> pulumi.Output[_builtins.str]:

@@ -141,6 +141,12 @@ func (ApplianceWarmSpareState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceWarmSpareState)(nil)).Elem()
 }
 
+// ApplianceWarmSpareExists checks whether an existing ApplianceWarmSpare resource with the given ID exists.
+func ApplianceWarmSpareExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceWarmSpareState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceWarmSpare:ApplianceWarmSpare", id, state, "", opts...)
+}
+
 type applianceWarmSpareArgs struct {
 	// Enable warm spare
 	Enabled *bool `pulumi:"enabled"`

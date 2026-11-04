@@ -225,6 +225,16 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return ApplianceTrafficShaping(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            global_bandwidth_limits: pulumi.Input[Optional[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict', 'outputs.ApplianceTrafficShapingGlobalBandwidthLimits']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["globalBandwidthLimits"] = global_bandwidth_limits
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceTrafficShaping:ApplianceTrafficShaping', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="globalBandwidthLimits")
     def global_bandwidth_limits(self) -> pulumi.Output['outputs.ApplianceTrafficShapingGlobalBandwidthLimits']:

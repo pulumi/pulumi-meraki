@@ -136,6 +136,12 @@ func (SwitchAlternateManagementInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchAlternateManagementInterfaceState)(nil)).Elem()
 }
 
+// SwitchAlternateManagementInterfaceExists checks whether an existing SwitchAlternateManagementInterface resource with the given ID exists.
+func SwitchAlternateManagementInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchAlternateManagementInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface", id, state, "", opts...)
+}
+
 type switchAlternateManagementInterfaceArgs struct {
 	// Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
 	Enabled *bool `pulumi:"enabled"`

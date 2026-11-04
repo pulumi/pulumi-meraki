@@ -123,6 +123,12 @@ func (SwitchMtuState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchMtuState)(nil)).Elem()
 }
 
+// SwitchMtuExists checks whether an existing SwitchMtu resource with the given ID exists.
+func SwitchMtuExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchMtuState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchMtu:SwitchMtu", id, state, "", opts...)
+}
+
 type switchMtuArgs struct {
 	// MTU size for the entire network. Default value is 9578.
 	DefaultMtuSize *int `pulumi:"defaultMtuSize"`

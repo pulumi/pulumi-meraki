@@ -108,6 +108,12 @@ func (LicensesMoveSeatsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*licensesMoveSeatsState)(nil)).Elem()
 }
 
+// LicensesMoveSeatsExists checks whether an existing LicensesMoveSeats resource with the given ID exists.
+func LicensesMoveSeatsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicensesMoveSeatsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/licensesMoveSeats:LicensesMoveSeats", id, state, "", opts...)
+}
+
 type licensesMoveSeatsArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                      `pulumi:"organizationId"`

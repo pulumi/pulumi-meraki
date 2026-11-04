@@ -294,6 +294,22 @@ class SmBypassActivationLockAttempts(pulumi.CustomResource):
         __props__.__dict__["status"] = status
         return SmBypassActivationLockAttempts(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            attempt_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data: pulumi.Input[Optional[Union['SmBypassActivationLockAttemptsDataArgs', 'SmBypassActivationLockAttemptsDataArgsDict', 'outputs.SmBypassActivationLockAttemptsData']]] = None,
+            ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["attemptId"] = attempt_id
+        __props__["data"] = data
+        __props__["ids"] = ids
+        __props__["networkId"] = network_id
+        __props__["status"] = status
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="attemptId")
     def attempt_id(self) -> pulumi.Output[Optional[_builtins.str]]:

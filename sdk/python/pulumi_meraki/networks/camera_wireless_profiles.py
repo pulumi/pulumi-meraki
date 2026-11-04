@@ -361,6 +361,24 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         __props__.__dict__["wireless_profile_id"] = wireless_profile_id
         return CameraWirelessProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            applied_device_count: pulumi.Input[Optional[_builtins.int]] = None,
+            identity: pulumi.Input[Optional[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict', 'outputs.CameraWirelessProfilesIdentity']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ssid: pulumi.Input[Optional[Union['CameraWirelessProfilesSsidArgs', 'CameraWirelessProfilesSsidArgsDict', 'outputs.CameraWirelessProfilesSsid']]] = None,
+            wireless_profile_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["appliedDeviceCount"] = applied_device_count
+        __props__["identity"] = identity
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["ssid"] = ssid
+        __props__["wirelessProfileId"] = wireless_profile_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="appliedDeviceCount")
     def applied_device_count(self) -> pulumi.Output[_builtins.int]:

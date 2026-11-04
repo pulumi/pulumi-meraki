@@ -214,6 +214,16 @@ class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
         __props__.__dict__["parameters"] = parameters
         return InventoryOnboardingCloudMonitoringExportEvents(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            parameters: pulumi.Input[Optional[Union['InventoryOnboardingCloudMonitoringExportEventsParametersArgs', 'InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict', 'outputs.InventoryOnboardingCloudMonitoringExportEventsParameters']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["organizationId"] = organization_id
+        __props__["parameters"] = parameters
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="organizationId")
     def organization_id(self) -> pulumi.Output[_builtins.str]:

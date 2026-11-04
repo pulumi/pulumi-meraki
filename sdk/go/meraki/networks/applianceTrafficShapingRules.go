@@ -135,6 +135,12 @@ func (ApplianceTrafficShapingRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceTrafficShapingRulesState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingRulesExists checks whether an existing ApplianceTrafficShapingRules resource with the given ID exists.
+func ApplianceTrafficShapingRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules", id, state, "", opts...)
+}
+
 type applianceTrafficShapingRulesArgs struct {
 	// Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
 	DefaultRulesEnabled *bool `pulumi:"defaultRulesEnabled"`

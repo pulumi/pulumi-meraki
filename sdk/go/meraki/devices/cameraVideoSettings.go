@@ -110,6 +110,12 @@ func (CameraVideoSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraVideoSettingsState)(nil)).Elem()
 }
 
+// CameraVideoSettingsExists checks whether an existing CameraVideoSettings resource with the given ID exists.
+func CameraVideoSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraVideoSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraVideoSettings:CameraVideoSettings", id, state, "", opts...)
+}
+
 type cameraVideoSettingsArgs struct {
 	// Boolean indicating if external rtsp stream is exposed
 	ExternalRtspEnabled *bool `pulumi:"externalRtspEnabled"`

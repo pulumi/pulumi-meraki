@@ -315,6 +315,20 @@ class WirelessRadioSettings(pulumi.CustomResource):
         __props__.__dict__["two_four_ghz_settings"] = two_four_ghz_settings
         return WirelessRadioSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            five_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict', 'outputs.WirelessRadioSettingsFiveGhzSettings']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRadioSettingsTwoFourGhzSettingsArgs', 'WirelessRadioSettingsTwoFourGhzSettingsArgsDict', 'outputs.WirelessRadioSettingsTwoFourGhzSettings']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["fiveGhzSettings"] = five_ghz_settings
+        __props__["rfProfileId"] = rf_profile_id
+        __props__["serial"] = serial
+        __props__["twoFourGhzSettings"] = two_four_ghz_settings
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/wirelessRadioSettings:WirelessRadioSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
     def five_ghz_settings(self) -> pulumi.Output['outputs.WirelessRadioSettingsFiveGhzSettings']:

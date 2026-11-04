@@ -124,6 +124,12 @@ func (InsightMonitoredMediaServersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*insightMonitoredMediaServersState)(nil)).Elem()
 }
 
+// InsightMonitoredMediaServersExists checks whether an existing InsightMonitoredMediaServers resource with the given ID exists.
+func InsightMonitoredMediaServersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InsightMonitoredMediaServersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/insightMonitoredMediaServers:InsightMonitoredMediaServers", id, state, "", opts...)
+}
+
 type insightMonitoredMediaServersArgs struct {
 	// The IP address (IPv4 only) or hostname of the media server to monitor
 	Address *string `pulumi:"address"`

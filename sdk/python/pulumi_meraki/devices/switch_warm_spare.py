@@ -278,6 +278,20 @@ class SwitchWarmSpare(pulumi.CustomResource):
         __props__.__dict__["spare_serial"] = spare_serial
         return SwitchWarmSpare(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            primary_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            spare_serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["primarySerial"] = primary_serial
+        __props__["serial"] = serial
+        __props__["spareSerial"] = spare_serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/switchWarmSpare:SwitchWarmSpare', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

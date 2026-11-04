@@ -110,6 +110,12 @@ func (CellularGatewayConnectivityMonitoringDestinationsState) ElementType() refl
 	return reflect.TypeOf((*cellularGatewayConnectivityMonitoringDestinationsState)(nil)).Elem()
 }
 
+// CellularGatewayConnectivityMonitoringDestinationsExists checks whether an existing CellularGatewayConnectivityMonitoringDestinations resource with the given ID exists.
+func CellularGatewayConnectivityMonitoringDestinationsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewayConnectivityMonitoringDestinationsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations", id, state, "", opts...)
+}
+
 type cellularGatewayConnectivityMonitoringDestinationsArgs struct {
 	// The list of connectivity monitoring destinations
 	Destinations []CellularGatewayConnectivityMonitoringDestinationsDestination `pulumi:"destinations"`

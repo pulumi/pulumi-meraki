@@ -359,6 +359,24 @@ class CameraSense(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CameraSense(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            audio_detection: pulumi.Input[Optional[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict', 'outputs.CameraSenseAudioDetection']]] = None,
+            detection_model_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mqtt_broker_id: pulumi.Input[Optional[_builtins.str]] = None,
+            mqtt_topics: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            sense_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["audioDetection"] = audio_detection
+        __props__["detectionModelId"] = detection_model_id
+        __props__["mqttBrokerId"] = mqtt_broker_id
+        __props__["mqttTopics"] = mqtt_topics
+        __props__["senseEnabled"] = sense_enabled
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cameraSense:CameraSense', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="audioDetection")
     def audio_detection(self) -> pulumi.Output['outputs.CameraSenseAudioDetection']:

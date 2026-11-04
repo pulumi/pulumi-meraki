@@ -97,6 +97,12 @@ func (FirmwareUpgradesStagedEventsDeferState) ElementType() reflect.Type {
 	return reflect.TypeOf((*firmwareUpgradesStagedEventsDeferState)(nil)).Elem()
 }
 
+// FirmwareUpgradesStagedEventsDeferExists checks whether an existing FirmwareUpgradesStagedEventsDefer resource with the given ID exists.
+func FirmwareUpgradesStagedEventsDeferExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FirmwareUpgradesStagedEventsDeferState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer", id, state, "", opts...)
+}
+
 type firmwareUpgradesStagedEventsDeferArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

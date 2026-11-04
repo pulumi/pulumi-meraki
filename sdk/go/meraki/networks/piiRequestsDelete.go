@@ -104,6 +104,12 @@ func (PiiRequestsDeleteState) ElementType() reflect.Type {
 	return reflect.TypeOf((*piiRequestsDeleteState)(nil)).Elem()
 }
 
+// PiiRequestsDeleteExists checks whether an existing PiiRequestsDelete resource with the given ID exists.
+func PiiRequestsDeleteExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PiiRequestsDeleteState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/piiRequestsDelete:PiiRequestsDelete", id, state, "", opts...)
+}
+
 type piiRequestsDeleteArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

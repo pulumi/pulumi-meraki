@@ -697,6 +697,48 @@ class Base(pulumi.CustomResource):
         __props__.__dict__["tags"] = tags
         return Base(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            address: pulumi.Input[Optional[_builtins.str]] = None,
+            details: pulumi.Input[Optional[Sequence[pulumi.Input[Union['BaseDetailArgs', 'BaseDetailArgsDict', 'outputs.BaseDetail']]]]] = None,
+            firmware: pulumi.Input[Optional[_builtins.str]] = None,
+            floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            imei: pulumi.Input[Optional[_builtins.str]] = None,
+            lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            lat: pulumi.Input[Optional[_builtins.float]] = None,
+            lng: pulumi.Input[Optional[_builtins.float]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            model: pulumi.Input[Optional[_builtins.str]] = None,
+            move_map_marker: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            notes: pulumi.Input[Optional[_builtins.str]] = None,
+            product_type: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            switch_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["address"] = address
+        __props__["details"] = details
+        __props__["firmware"] = firmware
+        __props__["floorPlanId"] = floor_plan_id
+        __props__["imei"] = imei
+        __props__["lanIp"] = lan_ip
+        __props__["lat"] = lat
+        __props__["lng"] = lng
+        __props__["mac"] = mac
+        __props__["model"] = model
+        __props__["moveMapMarker"] = move_map_marker
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["notes"] = notes
+        __props__["productType"] = product_type
+        __props__["serial"] = serial
+        __props__["switchProfileId"] = switch_profile_id
+        __props__["tags"] = tags
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/base:base', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def address(self) -> pulumi.Output[_builtins.str]:

@@ -111,6 +111,12 @@ func (WirelessEthernetPortsProfilesAssignState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessEthernetPortsProfilesAssignState)(nil)).Elem()
 }
 
+// WirelessEthernetPortsProfilesAssignExists checks whether an existing WirelessEthernetPortsProfilesAssign resource with the given ID exists.
+func WirelessEthernetPortsProfilesAssignExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessEthernetPortsProfilesAssignState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessEthernetPortsProfilesAssign:WirelessEthernetPortsProfilesAssign", id, state, "", opts...)
+}
+
 type wirelessEthernetPortsProfilesAssignArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                                        `pulumi:"networkId"`

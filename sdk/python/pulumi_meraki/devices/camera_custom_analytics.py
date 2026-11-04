@@ -307,6 +307,20 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CameraCustomAnalytics(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            artifact_id: pulumi.Input[Optional[_builtins.str]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            parameters: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict', 'outputs.CameraCustomAnalyticsParameter']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["artifactId"] = artifact_id
+        __props__["enabled"] = enabled
+        __props__["parameters"] = parameters
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="artifactId")
     def artifact_id(self) -> pulumi.Output[_builtins.str]:

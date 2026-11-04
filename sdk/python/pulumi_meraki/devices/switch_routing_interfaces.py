@@ -612,6 +612,34 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
         __props__.__dict__["vlan_id"] = vlan_id
         return SwitchRoutingInterfaces(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6: pulumi.Input[Optional[Union['SwitchRoutingInterfacesIpv6Args', 'SwitchRoutingInterfacesIpv6ArgsDict', 'outputs.SwitchRoutingInterfacesIpv6']]] = None,
+            multicast_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            ospf_settings: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfSettingsArgs', 'SwitchRoutingInterfacesOspfSettingsArgsDict', 'outputs.SwitchRoutingInterfacesOspfSettings']]] = None,
+            ospf_v3: pulumi.Input[Optional[Union['SwitchRoutingInterfacesOspfV3Args', 'SwitchRoutingInterfacesOspfV3ArgsDict', 'outputs.SwitchRoutingInterfacesOspfV3']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultGateway"] = default_gateway
+        __props__["interfaceId"] = interface_id
+        __props__["interfaceIp"] = interface_ip
+        __props__["ipv6"] = ipv6
+        __props__["multicastRouting"] = multicast_routing
+        __props__["name"] = name
+        __props__["ospfSettings"] = ospf_settings
+        __props__["ospfV3"] = ospf_v3
+        __props__["serial"] = serial
+        __props__["subnet"] = subnet
+        __props__["vlanId"] = vlan_id
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/switchRoutingInterfaces:SwitchRoutingInterfaces', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
     def default_gateway(self) -> pulumi.Output[_builtins.str]:

@@ -419,6 +419,24 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return SwitchDhcpServerPolicy(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            alerts: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict', 'outputs.SwitchDhcpServerPolicyAlerts']]] = None,
+            allowed_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            arp_inspection: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict', 'outputs.SwitchDhcpServerPolicyArpInspection']]] = None,
+            blocked_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["alerts"] = alerts
+        __props__["allowedServers"] = allowed_servers
+        __props__["arpInspection"] = arp_inspection
+        __props__["blockedServers"] = blocked_servers
+        __props__["defaultPolicy"] = default_policy
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def alerts(self) -> pulumi.Output['outputs.SwitchDhcpServerPolicyAlerts']:

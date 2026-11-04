@@ -106,6 +106,12 @@ func (ApplianceTrafficShapingCustomPerformanceClassesState) ElementType() reflec
 	return reflect.TypeOf((*applianceTrafficShapingCustomPerformanceClassesState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingCustomPerformanceClassesExists checks whether an existing ApplianceTrafficShapingCustomPerformanceClasses resource with the given ID exists.
+func ApplianceTrafficShapingCustomPerformanceClassesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingCustomPerformanceClassesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShapingCustomPerformanceClasses:ApplianceTrafficShapingCustomPerformanceClasses", id, state, "", opts...)
+}
+
 type applianceTrafficShapingCustomPerformanceClassesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                                                    `pulumi:"networkId"`

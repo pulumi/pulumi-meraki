@@ -336,6 +336,24 @@ class CellularGatewayLan(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CellularGatewayLan(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            device_lan_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            device_name: pulumi.Input[Optional[_builtins.str]] = None,
+            device_subnet: pulumi.Input[Optional[_builtins.str]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict', 'outputs.CellularGatewayLanFixedIpAssignment']]]]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict', 'outputs.CellularGatewayLanReservedIpRange']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["deviceLanIp"] = device_lan_ip
+        __props__["deviceName"] = device_name
+        __props__["deviceSubnet"] = device_subnet
+        __props__["fixedIpAssignments"] = fixed_ip_assignments
+        __props__["reservedIpRanges"] = reserved_ip_ranges
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cellularGatewayLan:CellularGatewayLan', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="deviceLanIp")
     def device_lan_ip(self) -> pulumi.Output[_builtins.str]:

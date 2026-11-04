@@ -119,6 +119,12 @@ func (SmBypassActivationLockAttemptsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smBypassActivationLockAttemptsState)(nil)).Elem()
 }
 
+// SmBypassActivationLockAttemptsExists checks whether an existing SmBypassActivationLockAttempts resource with the given ID exists.
+func SmBypassActivationLockAttemptsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmBypassActivationLockAttemptsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts", id, state, "", opts...)
+}
+
 type smBypassActivationLockAttemptsArgs struct {
 	// attemptId path parameter. Attempt ID
 	AttemptId *string `pulumi:"attemptId"`

@@ -97,14 +97,14 @@ public class ActionBatches extends com.pulumi.resources.CustomResource {
         return this.actionBatchId;
     }
     /**
-     * A set of changes made as part of this action (\n\nmore details\n\n)
+     * A set of changes made as part of this action (&#92;n&#92;nmore details&#92;n&#92;n)
      * 
      */
     @Export(name="actions", refs={List.class,ActionBatchesAction.class}, tree="[0,1]")
     private Output<List<ActionBatchesAction>> actions;
 
     /**
-     * @return A set of changes made as part of this action (\n\nmore details\n\n)
+     * @return A set of changes made as part of this action (&#92;n&#92;nmore details&#92;n&#92;n)
      * 
      */
     public Output<List<ActionBatchesAction>> actions() {

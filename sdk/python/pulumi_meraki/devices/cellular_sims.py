@@ -254,6 +254,18 @@ class CellularSims(pulumi.CustomResource):
         __props__.__dict__["sims"] = sims
         return CellularSims(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover: pulumi.Input[Optional[Union['CellularSimsSimFailoverArgs', 'CellularSimsSimFailoverArgsDict', 'outputs.CellularSimsSimFailover']]] = None,
+            sims: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularSimsSimArgs', 'CellularSimsSimArgsDict', 'outputs.CellularSimsSim']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["serial"] = serial
+        __props__["simFailover"] = sim_failover
+        __props__["sims"] = sims
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cellularSims:CellularSims', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def serial(self) -> pulumi.Output[_builtins.str]:

@@ -454,6 +454,28 @@ class WirelessSettings(pulumi.CustomResource):
         __props__.__dict__["upgradestrategy"] = upgradestrategy
         return WirelessSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ipv6_bridge_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            led_lights_on: pulumi.Input[Optional[_builtins.bool]] = None,
+            location_analytics_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            meshing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            named_vlans: pulumi.Input[Optional[Union['WirelessSettingsNamedVlansArgs', 'WirelessSettingsNamedVlansArgsDict', 'outputs.WirelessSettingsNamedVlans']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            regulatory_domain: pulumi.Input[Optional[Union['WirelessSettingsRegulatoryDomainArgs', 'WirelessSettingsRegulatoryDomainArgsDict', 'outputs.WirelessSettingsRegulatoryDomain']]] = None,
+            upgradestrategy: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ipv6BridgeEnabled"] = ipv6_bridge_enabled
+        __props__["ledLightsOn"] = led_lights_on
+        __props__["locationAnalyticsEnabled"] = location_analytics_enabled
+        __props__["meshingEnabled"] = meshing_enabled
+        __props__["namedVlans"] = named_vlans
+        __props__["networkId"] = network_id
+        __props__["regulatoryDomain"] = regulatory_domain
+        __props__["upgradestrategy"] = upgradestrategy
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSettings:WirelessSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ipv6BridgeEnabled")
     def ipv6_bridge_enabled(self) -> pulumi.Output[_builtins.bool]:

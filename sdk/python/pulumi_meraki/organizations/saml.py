@@ -217,6 +217,16 @@ class Saml(pulumi.CustomResource):
         __props__.__dict__["organization_id"] = organization_id
         return Saml(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["organizationId"] = organization_id
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/saml:Saml', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

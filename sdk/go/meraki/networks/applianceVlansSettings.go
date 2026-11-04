@@ -104,6 +104,12 @@ func (ApplianceVlansSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceVlansSettingsState)(nil)).Elem()
 }
 
+// ApplianceVlansSettingsExists checks whether an existing ApplianceVlansSettings resource with the given ID exists.
+func ApplianceVlansSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceVlansSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceVlansSettings:ApplianceVlansSettings", id, state, "", opts...)
+}
+
 type applianceVlansSettingsArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

@@ -185,6 +185,12 @@ func (FirmwareUpgradesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*firmwareUpgradesState)(nil)).Elem()
 }
 
+// FirmwareUpgradesExists checks whether an existing FirmwareUpgrades resource with the given ID exists.
+func FirmwareUpgradesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FirmwareUpgradesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/firmwareUpgrades:FirmwareUpgrades", id, state, "", opts...)
+}
+
 type firmwareUpgradesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

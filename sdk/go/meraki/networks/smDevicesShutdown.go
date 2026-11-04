@@ -122,6 +122,12 @@ func (SmDevicesShutdownState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesShutdownState)(nil)).Elem()
 }
 
+// SmDevicesShutdownExists checks whether an existing SmDevicesShutdown resource with the given ID exists.
+func SmDevicesShutdownExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesShutdownState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesShutdown:SmDevicesShutdown", id, state, "", opts...)
+}
+
 type smDevicesShutdownArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                      `pulumi:"networkId"`

@@ -461,6 +461,30 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
         __props__.__dict__["wifi_personal_network_id"] = wifi_personal_network_id
         return WirelessSsidsIdentityPsks(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+            group_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            identity_psk_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            passphrase: pulumi.Input[Optional[_builtins.str]] = None,
+            wifi_personal_network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["email"] = email
+        __props__["expiresAt"] = expires_at
+        __props__["groupPolicyId"] = group_policy_id
+        __props__["identityPskId"] = identity_psk_id
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["passphrase"] = passphrase
+        __props__["wifiPersonalNetworkId"] = wifi_personal_network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def email(self) -> pulumi.Output[_builtins.str]:

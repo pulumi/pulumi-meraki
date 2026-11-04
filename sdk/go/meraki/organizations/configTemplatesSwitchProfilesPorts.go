@@ -319,6 +319,12 @@ func (ConfigTemplatesSwitchProfilesPortsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*configTemplatesSwitchProfilesPortsState)(nil)).Elem()
 }
 
+// ConfigTemplatesSwitchProfilesPortsExists checks whether an existing ConfigTemplatesSwitchProfilesPorts resource with the given ID exists.
+func ConfigTemplatesSwitchProfilesPortsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ConfigTemplatesSwitchProfilesPortsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts", id, state, "", opts...)
+}
+
 type configTemplatesSwitchProfilesPortsArgs struct {
 	// The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
 	AccessPolicyNumber *int `pulumi:"accessPolicyNumber"`

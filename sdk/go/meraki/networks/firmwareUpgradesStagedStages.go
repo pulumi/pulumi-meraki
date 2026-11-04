@@ -116,6 +116,12 @@ func (FirmwareUpgradesStagedStagesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*firmwareUpgradesStagedStagesState)(nil)).Elem()
 }
 
+// FirmwareUpgradesStagedStagesExists checks whether an existing FirmwareUpgradesStagedStages resource with the given ID exists.
+func FirmwareUpgradesStagedStagesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FirmwareUpgradesStagedStagesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/firmwareUpgradesStagedStages:FirmwareUpgradesStagedStages", id, state, "", opts...)
+}
+
 type firmwareUpgradesStagedStagesArgs struct {
 	// Array of Staged Upgrade Groups
 	Jsons []FirmwareUpgradesStagedStagesJson `pulumi:"jsons"`

@@ -121,6 +121,12 @@ func (CellularGatewayDhcpState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularGatewayDhcpState)(nil)).Elem()
 }
 
+// CellularGatewayDhcpExists checks whether an existing CellularGatewayDhcp resource with the given ID exists.
+func CellularGatewayDhcpExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewayDhcpState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp", id, state, "", opts...)
+}
+
 type cellularGatewayDhcpArgs struct {
 	// DHCP Lease time for all MG in the network.
 	DhcpLeaseTime *string `pulumi:"dhcpLeaseTime"`
