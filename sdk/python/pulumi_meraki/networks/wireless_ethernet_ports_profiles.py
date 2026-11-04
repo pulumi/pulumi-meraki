@@ -381,6 +381,24 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         __props__.__dict__["usb_ports"] = usb_ports
         return WirelessEthernetPortsProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesPortArgs', 'WirelessEthernetPortsProfilesPortArgsDict', 'outputs.WirelessEthernetPortsProfilesPort']]]]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            usb_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessEthernetPortsProfilesUsbPortArgs', 'WirelessEthernetPortsProfilesUsbPortArgsDict', 'outputs.WirelessEthernetPortsProfilesUsbPort']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["isDefault"] = is_default
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["ports"] = ports
+        __props__["profileId"] = profile_id
+        __props__["usbPorts"] = usb_ports
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="isDefault")
     def is_default(self) -> pulumi.Output[_builtins.bool]:

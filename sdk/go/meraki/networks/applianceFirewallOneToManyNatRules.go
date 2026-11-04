@@ -121,6 +121,12 @@ func (ApplianceFirewallOneToManyNatRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceFirewallOneToManyNatRulesState)(nil)).Elem()
 }
 
+// ApplianceFirewallOneToManyNatRulesExists checks whether an existing ApplianceFirewallOneToManyNatRules resource with the given ID exists.
+func ApplianceFirewallOneToManyNatRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceFirewallOneToManyNatRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceFirewallOneToManyNatRules:ApplianceFirewallOneToManyNatRules", id, state, "", opts...)
+}
+
 type applianceFirewallOneToManyNatRulesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

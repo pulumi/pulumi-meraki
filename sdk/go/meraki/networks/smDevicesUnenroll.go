@@ -107,6 +107,12 @@ func (SmDevicesUnenrollState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesUnenrollState)(nil)).Elem()
 }
 
+// SmDevicesUnenrollExists checks whether an existing SmDevicesUnenroll resource with the given ID exists.
+func SmDevicesUnenrollExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesUnenrollState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll", id, state, "", opts...)
+}
+
 type smDevicesUnenrollArgs struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`

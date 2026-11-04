@@ -51,14 +51,14 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
+     * Enables / disables the local device status pages (&#92;n&#92;nmy.meraki.com, &#92;n&#92;n&#92;n&#92;nap.meraki.com, &#92;n&#92;n&#92;n&#92;nswitch.meraki.com, &#92;n&#92;n&#92;n&#92;nwired.meraki.com&#92;n&#92;n). Optional (defaults to false)
      * 
      */
     @Import(name="localStatusPageEnabled")
     private @Nullable Output<Boolean> localStatusPageEnabled;
 
     /**
-     * @return Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
+     * @return Enables / disables the local device status pages (&#92;n&#92;nmy.meraki.com, &#92;n&#92;n&#92;n&#92;nap.meraki.com, &#92;n&#92;n&#92;n&#92;nswitch.meraki.com, &#92;n&#92;n&#92;n&#92;nwired.meraki.com&#92;n&#92;n). Optional (defaults to false)
      * 
      */
     public Optional<Output<Boolean>> localStatusPageEnabled() {
@@ -96,14 +96,14 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enables / disables access to the device status page (\n\nhttp://[device&#39;s LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
+     * Enables / disables access to the device status page (&#92;n&#92;nhttp://[device&#39;s LAN IP])&#92;n&#92;n. Optional. Can only be set if localStatusPageEnabled is set to true
      * 
      */
     @Import(name="remoteStatusPageEnabled")
     private @Nullable Output<Boolean> remoteStatusPageEnabled;
 
     /**
-     * @return Enables / disables access to the device status page (\n\nhttp://[device&#39;s LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
+     * @return Enables / disables access to the device status page (&#92;n&#92;nhttp://[device&#39;s LAN IP])&#92;n&#92;n. Optional. Can only be set if localStatusPageEnabled is set to true
      * 
      */
     public Optional<Output<Boolean>> remoteStatusPageEnabled() {
@@ -198,7 +198,7 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param localStatusPageEnabled Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
+         * @param localStatusPageEnabled Enables / disables the local device status pages (&#92;n&#92;nmy.meraki.com, &#92;n&#92;n&#92;n&#92;nap.meraki.com, &#92;n&#92;n&#92;n&#92;nswitch.meraki.com, &#92;n&#92;n&#92;n&#92;nwired.meraki.com&#92;n&#92;n). Optional (defaults to false)
          * 
          * @return builder
          * 
@@ -209,7 +209,7 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param localStatusPageEnabled Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
+         * @param localStatusPageEnabled Enables / disables the local device status pages (&#92;n&#92;nmy.meraki.com, &#92;n&#92;n&#92;n&#92;nap.meraki.com, &#92;n&#92;n&#92;n&#92;nswitch.meraki.com, &#92;n&#92;n&#92;n&#92;nwired.meraki.com&#92;n&#92;n). Optional (defaults to false)
          * 
          * @return builder
          * 
@@ -261,7 +261,7 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param remoteStatusPageEnabled Enables / disables access to the device status page (\n\nhttp://[device&#39;s LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
+         * @param remoteStatusPageEnabled Enables / disables access to the device status page (&#92;n&#92;nhttp://[device&#39;s LAN IP])&#92;n&#92;n. Optional. Can only be set if localStatusPageEnabled is set to true
          * 
          * @return builder
          * 
@@ -272,7 +272,7 @@ public final class SettingsState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param remoteStatusPageEnabled Enables / disables access to the device status page (\n\nhttp://[device&#39;s LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
+         * @param remoteStatusPageEnabled Enables / disables access to the device status page (&#92;n&#92;nhttp://[device&#39;s LAN IP])&#92;n&#92;n. Optional. Can only be set if localStatusPageEnabled is set to true
          * 
          * @return builder
          * 

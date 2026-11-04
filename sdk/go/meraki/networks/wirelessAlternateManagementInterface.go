@@ -139,6 +139,12 @@ func (WirelessAlternateManagementInterfaceState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessAlternateManagementInterfaceState)(nil)).Elem()
 }
 
+// WirelessAlternateManagementInterfaceExists checks whether an existing WirelessAlternateManagementInterface resource with the given ID exists.
+func WirelessAlternateManagementInterfaceExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessAlternateManagementInterfaceState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface", id, state, "", opts...)
+}
+
 type wirelessAlternateManagementInterfaceArgs struct {
 	// Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
 	AccessPoints []WirelessAlternateManagementInterfaceAccessPoint `pulumi:"accessPoints"`

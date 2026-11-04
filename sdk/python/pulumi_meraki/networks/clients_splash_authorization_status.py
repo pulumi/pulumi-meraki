@@ -275,6 +275,18 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         __props__.__dict__["ssids"] = ssids
         return ClientsSplashAuthorizationStatus(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            client_id: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ssids: pulumi.Input[Optional[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict', 'outputs.ClientsSplashAuthorizationStatusSsids']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["clientId"] = client_id
+        __props__["networkId"] = network_id
+        __props__["ssids"] = ssids
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="clientId")
     def client_id(self) -> pulumi.Output[_builtins.str]:

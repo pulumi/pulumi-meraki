@@ -113,6 +113,12 @@ func (CellularGatewayPortForwardingRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularGatewayPortForwardingRulesState)(nil)).Elem()
 }
 
+// CellularGatewayPortForwardingRulesExists checks whether an existing CellularGatewayPortForwardingRules resource with the given ID exists.
+func CellularGatewayPortForwardingRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewayPortForwardingRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cellularGatewayPortForwardingRules:CellularGatewayPortForwardingRules", id, state, "", opts...)
+}
+
 type cellularGatewayPortForwardingRulesArgs struct {
 	// An array of port forwarding params
 	Rules []CellularGatewayPortForwardingRulesRule `pulumi:"rules"`

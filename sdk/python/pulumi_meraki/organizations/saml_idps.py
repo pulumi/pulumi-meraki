@@ -317,6 +317,22 @@ class SamlIdps(pulumi.CustomResource):
         __props__.__dict__["x509cert_sha1_fingerprint"] = x509cert_sha1_fingerprint
         return SamlIdps(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            consumer_url: pulumi.Input[Optional[_builtins.str]] = None,
+            idp_id: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            slo_logout_url: pulumi.Input[Optional[_builtins.str]] = None,
+            x509cert_sha1_fingerprint: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["consumerUrl"] = consumer_url
+        __props__["idpId"] = idp_id
+        __props__["organizationId"] = organization_id
+        __props__["sloLogoutUrl"] = slo_logout_url
+        __props__["x509certSha1Fingerprint"] = x509cert_sha1_fingerprint
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/samlIdps:SamlIdps', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="consumerUrl")
     def consumer_url(self) -> pulumi.Output[_builtins.str]:

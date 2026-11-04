@@ -116,6 +116,12 @@ func (FirmwareUpgradesRollbacksState) ElementType() reflect.Type {
 	return reflect.TypeOf((*firmwareUpgradesRollbacksState)(nil)).Elem()
 }
 
+// FirmwareUpgradesRollbacksExists checks whether an existing FirmwareUpgradesRollbacks resource with the given ID exists.
+func FirmwareUpgradesRollbacksExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FirmwareUpgradesRollbacksState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", id, state, "", opts...)
+}
+
 type firmwareUpgradesRollbacksArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                              `pulumi:"networkId"`

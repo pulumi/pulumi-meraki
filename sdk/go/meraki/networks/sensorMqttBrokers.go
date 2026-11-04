@@ -114,6 +114,12 @@ func (SensorMqttBrokersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sensorMqttBrokersState)(nil)).Elem()
 }
 
+// SensorMqttBrokersExists checks whether an existing SensorMqttBrokers resource with the given ID exists.
+func SensorMqttBrokersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SensorMqttBrokersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/sensorMqttBrokers:SensorMqttBrokers", id, state, "", opts...)
+}
+
 type sensorMqttBrokersArgs struct {
 	// Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
 	Enabled *bool `pulumi:"enabled"`

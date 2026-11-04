@@ -150,6 +150,12 @@ func (AdaptivePolicyAclsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*adaptivePolicyAclsState)(nil)).Elem()
 }
 
+// AdaptivePolicyAclsExists checks whether an existing AdaptivePolicyAcls resource with the given ID exists.
+func AdaptivePolicyAclsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AdaptivePolicyAclsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls", id, state, "", opts...)
+}
+
 type adaptivePolicyAclsArgs struct {
 	// ID of the adaptive policy ACL
 	AclId *string `pulumi:"aclId"`

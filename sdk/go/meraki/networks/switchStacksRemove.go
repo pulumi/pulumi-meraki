@@ -116,6 +116,12 @@ func (SwitchStacksRemoveState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchStacksRemoveState)(nil)).Elem()
 }
 
+// SwitchStacksRemoveExists checks whether an existing SwitchStacksRemove resource with the given ID exists.
+func SwitchStacksRemoveExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchStacksRemoveState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchStacksRemove:SwitchStacksRemove", id, state, "", opts...)
+}
+
 type switchStacksRemoveArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                       `pulumi:"networkId"`

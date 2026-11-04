@@ -116,6 +116,12 @@ func (SensorRelationshipsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*sensorRelationshipsState)(nil)).Elem()
 }
 
+// SensorRelationshipsExists checks whether an existing SensorRelationships resource with the given ID exists.
+func SensorRelationshipsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SensorRelationshipsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/sensorRelationships:SensorRelationships", id, state, "", opts...)
+}
+
 type sensorRelationshipsArgs struct {
 	// A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
 	Livestream *SensorRelationshipsLivestream `pulumi:"livestream"`

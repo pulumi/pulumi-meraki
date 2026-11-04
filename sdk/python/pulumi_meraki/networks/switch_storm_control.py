@@ -299,6 +299,20 @@ class SwitchStormControl(pulumi.CustomResource):
         __props__.__dict__["unknown_unicast_threshold"] = unknown_unicast_threshold
         return SwitchStormControl(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            broadcast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            multicast_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            unknown_unicast_threshold: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["broadcastThreshold"] = broadcast_threshold
+        __props__["multicastThreshold"] = multicast_threshold
+        __props__["networkId"] = network_id
+        __props__["unknownUnicastThreshold"] = unknown_unicast_threshold
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchStormControl:SwitchStormControl', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="broadcastThreshold")
     def broadcast_threshold(self) -> pulumi.Output[_builtins.int]:

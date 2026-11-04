@@ -122,6 +122,12 @@ func (SmDevicesCheckinState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesCheckinState)(nil)).Elem()
 }
 
+// SmDevicesCheckinExists checks whether an existing SmDevicesCheckin resource with the given ID exists.
+func SmDevicesCheckinExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesCheckinState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesCheckin:SmDevicesCheckin", id, state, "", opts...)
+}
+
 type smDevicesCheckinArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                     `pulumi:"networkId"`

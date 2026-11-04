@@ -120,6 +120,12 @@ func (SwitchStacksState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchStacksState)(nil)).Elem()
 }
 
+// SwitchStacksExists checks whether an existing SwitchStacks resource with the given ID exists.
+func SwitchStacksExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchStacksState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchStacks:SwitchStacks", id, state, "", opts...)
+}
+
 type switchStacksArgs struct {
 	// Name of the Switch stack
 	Name *string `pulumi:"name"`

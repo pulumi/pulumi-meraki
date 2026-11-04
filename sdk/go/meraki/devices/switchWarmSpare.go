@@ -117,6 +117,12 @@ func (SwitchWarmSpareState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchWarmSpareState)(nil)).Elem()
 }
 
+// SwitchWarmSpareExists checks whether an existing SwitchWarmSpare resource with the given ID exists.
+func SwitchWarmSpareExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchWarmSpareState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/switchWarmSpare:SwitchWarmSpare", id, state, "", opts...)
+}
+
 type switchWarmSpareArgs struct {
 	// Enable or disable warm spare for a switch
 	Enabled *bool `pulumi:"enabled"`

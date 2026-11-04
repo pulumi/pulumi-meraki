@@ -272,6 +272,12 @@ func (GroupPoliciesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*groupPoliciesState)(nil)).Elem()
 }
 
+// GroupPoliciesExists checks whether an existing GroupPolicies resource with the given ID exists.
+func GroupPoliciesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *GroupPoliciesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/groupPolicies:GroupPolicies", id, state, "", opts...)
+}
+
 type groupPoliciesArgs struct {
 	// The bandwidth settings for clients bound to your group policy.
 	Bandwidth *GroupPoliciesBandwidth `pulumi:"bandwidth"`

@@ -129,6 +129,12 @@ func (CameraSenseState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraSenseState)(nil)).Elem()
 }
 
+// CameraSenseExists checks whether an existing CameraSense resource with the given ID exists.
+func CameraSenseExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraSenseState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraSense:CameraSense", id, state, "", opts...)
+}
+
 type cameraSenseArgs struct {
 	// The details of the audio detection config.
 	AudioDetection *CameraSenseAudioDetection `pulumi:"audioDetection"`

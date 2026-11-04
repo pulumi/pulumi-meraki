@@ -141,6 +141,12 @@ func (CellularGatewayLanState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularGatewayLanState)(nil)).Elem()
 }
 
+// CellularGatewayLanExists checks whether an existing CellularGatewayLan resource with the given ID exists.
+func CellularGatewayLanExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewayLanState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cellularGatewayLan:CellularGatewayLan", id, state, "", opts...)
+}
+
 type cellularGatewayLanArgs struct {
 	// list of all fixed IP assignments for a single MG
 	FixedIpAssignments []CellularGatewayLanFixedIpAssignment `pulumi:"fixedIpAssignments"`

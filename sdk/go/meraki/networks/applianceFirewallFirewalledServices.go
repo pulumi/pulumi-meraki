@@ -123,6 +123,12 @@ func (ApplianceFirewallFirewalledServicesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceFirewallFirewalledServicesState)(nil)).Elem()
 }
 
+// ApplianceFirewallFirewalledServicesExists checks whether an existing ApplianceFirewallFirewalledServices resource with the given ID exists.
+func ApplianceFirewallFirewalledServicesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceFirewallFirewalledServicesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceFirewallFirewalledServices:ApplianceFirewallFirewalledServices", id, state, "", opts...)
+}
+
 type applianceFirewallFirewalledServicesArgs struct {
 	// A string indicating the rule for which IPs are allowed to use the specified service
 	Access *string `pulumi:"access"`

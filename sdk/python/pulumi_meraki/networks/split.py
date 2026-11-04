@@ -179,6 +179,16 @@ class Split(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return Split(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['SplitItemArgs', 'SplitItemArgsDict', 'outputs.SplitItem']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/split:Split', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.SplitItem']:

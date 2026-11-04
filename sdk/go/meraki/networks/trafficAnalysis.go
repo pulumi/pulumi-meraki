@@ -120,6 +120,12 @@ func (TrafficAnalysisState) ElementType() reflect.Type {
 	return reflect.TypeOf((*trafficAnalysisState)(nil)).Elem()
 }
 
+// TrafficAnalysisExists checks whether an existing TrafficAnalysis resource with the given ID exists.
+func TrafficAnalysisExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *TrafficAnalysisState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/trafficAnalysis:TrafficAnalysis", id, state, "", opts...)
+}
+
 type trafficAnalysisArgs struct {
 	// The list of items that make up the custom pie chart for traffic reporting.
 	CustomPieChartItems []TrafficAnalysisCustomPieChartItem `pulumi:"customPieChartItems"`

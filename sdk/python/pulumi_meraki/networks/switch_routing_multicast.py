@@ -312,6 +312,18 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
         __props__.__dict__["overrides"] = overrides
         return SwitchRoutingMulticast(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_settings: pulumi.Input[Optional[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict', 'outputs.SwitchRoutingMulticastDefaultSettings']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            overrides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict', 'outputs.SwitchRoutingMulticastOverride']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultSettings"] = default_settings
+        __props__["networkId"] = network_id
+        __props__["overrides"] = overrides
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchRoutingMulticast:SwitchRoutingMulticast', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultSettings")
     def default_settings(self) -> pulumi.Output['outputs.SwitchRoutingMulticastDefaultSettings']:

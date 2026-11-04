@@ -147,6 +147,12 @@ func (WirelessEthernetPortsProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessEthernetPortsProfilesState)(nil)).Elem()
 }
 
+// WirelessEthernetPortsProfilesExists checks whether an existing WirelessEthernetPortsProfiles resource with the given ID exists.
+func WirelessEthernetPortsProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessEthernetPortsProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles", id, state, "", opts...)
+}
+
 type wirelessEthernetPortsProfilesArgs struct {
 	// AP port profile name
 	Name *string `pulumi:"name"`

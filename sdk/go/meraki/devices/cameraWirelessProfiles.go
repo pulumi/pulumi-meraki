@@ -108,6 +108,12 @@ func (CameraWirelessProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraWirelessProfilesState)(nil)).Elem()
 }
 
+// CameraWirelessProfilesExists checks whether an existing CameraWirelessProfiles resource with the given ID exists.
+func CameraWirelessProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraWirelessProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles", id, state, "", opts...)
+}
+
 type cameraWirelessProfilesArgs struct {
 	// The ids of the wireless profile to assign to the given camera
 	Ids *CameraWirelessProfilesIds `pulumi:"ids"`

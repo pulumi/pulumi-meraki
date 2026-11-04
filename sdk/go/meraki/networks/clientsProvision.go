@@ -178,6 +178,12 @@ func (ClientsProvisionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*clientsProvisionState)(nil)).Elem()
 }
 
+// ClientsProvisionExists checks whether an existing ClientsProvision resource with the given ID exists.
+func ClientsProvisionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ClientsProvisionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/clientsProvision:ClientsProvision", id, state, "", opts...)
+}
+
 type clientsProvisionArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                     `pulumi:"networkId"`

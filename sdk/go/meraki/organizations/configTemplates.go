@@ -123,6 +123,12 @@ func (ConfigTemplatesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*configTemplatesState)(nil)).Elem()
 }
 
+// ConfigTemplatesExists checks whether an existing ConfigTemplates resource with the given ID exists.
+func ConfigTemplatesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ConfigTemplatesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/configTemplates:ConfigTemplates", id, state, "", opts...)
+}
+
 type configTemplatesArgs struct {
 	// configTemplateId path parameter. Config template ID
 	ConfigTemplateId *string `pulumi:"configTemplateId"`

@@ -27,7 +27,7 @@ public final class GetConfigTemplatesItem {
      */
     private List<String> productTypes;
     /**
-     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
      * 
      */
     private String timeZone;
@@ -55,7 +55,7 @@ public final class GetConfigTemplatesItem {
         return this.productTypes;
     }
     /**
-     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
      * 
      */
     public String timeZone() {

@@ -126,6 +126,12 @@ func (SwitchStpState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchStpState)(nil)).Elem()
 }
 
+// SwitchStpExists checks whether an existing SwitchStp resource with the given ID exists.
+func SwitchStpExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchStpState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchStp:SwitchStp", id, state, "", opts...)
+}
+
 type switchStpArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

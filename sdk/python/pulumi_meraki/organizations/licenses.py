@@ -521,6 +521,44 @@ class Licenses(pulumi.CustomResource):
         __props__.__dict__["total_duration_in_days"] = total_duration_in_days
         return Licenses(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            activation_date: pulumi.Input[Optional[_builtins.str]] = None,
+            claim_date: pulumi.Input[Optional[_builtins.str]] = None,
+            device_serial: pulumi.Input[Optional[_builtins.str]] = None,
+            duration_in_days: pulumi.Input[Optional[_builtins.int]] = None,
+            expiration_date: pulumi.Input[Optional[_builtins.str]] = None,
+            head_license_id: pulumi.Input[Optional[_builtins.str]] = None,
+            license_id: pulumi.Input[Optional[_builtins.str]] = None,
+            license_key: pulumi.Input[Optional[_builtins.str]] = None,
+            license_type: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            order_number: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            permanently_queued_licenses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LicensesPermanentlyQueuedLicenseArgs', 'LicensesPermanentlyQueuedLicenseArgsDict', 'outputs.LicensesPermanentlyQueuedLicense']]]]] = None,
+            seat_count: pulumi.Input[Optional[_builtins.int]] = None,
+            state: pulumi.Input[Optional[_builtins.str]] = None,
+            total_duration_in_days: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["activationDate"] = activation_date
+        __props__["claimDate"] = claim_date
+        __props__["deviceSerial"] = device_serial
+        __props__["durationInDays"] = duration_in_days
+        __props__["expirationDate"] = expiration_date
+        __props__["headLicenseId"] = head_license_id
+        __props__["licenseId"] = license_id
+        __props__["licenseKey"] = license_key
+        __props__["licenseType"] = license_type
+        __props__["networkId"] = network_id
+        __props__["orderNumber"] = order_number
+        __props__["organizationId"] = organization_id
+        __props__["permanentlyQueuedLicenses"] = permanently_queued_licenses
+        __props__["seatCount"] = seat_count
+        __props__["state"] = state
+        __props__["totalDurationInDays"] = total_duration_in_days
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/licenses:Licenses', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="activationDate")
     def activation_date(self) -> pulumi.Output[_builtins.str]:

@@ -1254,6 +1254,38 @@ class WirelessRfProfiles(pulumi.CustomResource):
         __props__.__dict__["two_four_ghz_settings"] = two_four_ghz_settings
         return WirelessRfProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ap_band_settings: pulumi.Input[Optional[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict', 'outputs.WirelessRfProfilesApBandSettings']]] = None,
+            band_selection_type: pulumi.Input[Optional[_builtins.str]] = None,
+            client_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            five_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesFiveGhzSettingsArgs', 'WirelessRfProfilesFiveGhzSettingsArgsDict', 'outputs.WirelessRfProfilesFiveGhzSettings']]] = None,
+            flex_radios: pulumi.Input[Optional[Union['WirelessRfProfilesFlexRadiosArgs', 'WirelessRfProfilesFlexRadiosArgsDict', 'outputs.WirelessRfProfilesFlexRadios']]] = None,
+            min_bitrate_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            per_ssid_settings: pulumi.Input[Optional[Union['WirelessRfProfilesPerSsidSettingsArgs', 'WirelessRfProfilesPerSsidSettingsArgsDict', 'outputs.WirelessRfProfilesPerSsidSettings']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            six_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesSixGhzSettingsArgs', 'WirelessRfProfilesSixGhzSettingsArgsDict', 'outputs.WirelessRfProfilesSixGhzSettings']]] = None,
+            transmission: pulumi.Input[Optional[Union['WirelessRfProfilesTransmissionArgs', 'WirelessRfProfilesTransmissionArgsDict', 'outputs.WirelessRfProfilesTransmission']]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['WirelessRfProfilesTwoFourGhzSettingsArgs', 'WirelessRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.WirelessRfProfilesTwoFourGhzSettings']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["apBandSettings"] = ap_band_settings
+        __props__["bandSelectionType"] = band_selection_type
+        __props__["clientBalancingEnabled"] = client_balancing_enabled
+        __props__["fiveGhzSettings"] = five_ghz_settings
+        __props__["flexRadios"] = flex_radios
+        __props__["minBitrateType"] = min_bitrate_type
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["perSsidSettings"] = per_ssid_settings
+        __props__["rfProfileId"] = rf_profile_id
+        __props__["sixGhzSettings"] = six_ghz_settings
+        __props__["transmission"] = transmission
+        __props__["twoFourGhzSettings"] = two_four_ghz_settings
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessRfProfiles:WirelessRfProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="apBandSettings")
     def ap_band_settings(self) -> pulumi.Output['outputs.WirelessRfProfilesApBandSettings']:

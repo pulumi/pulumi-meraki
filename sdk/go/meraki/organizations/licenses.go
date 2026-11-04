@@ -192,6 +192,12 @@ func (LicensesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*licensesState)(nil)).Elem()
 }
 
+// LicensesExists checks whether an existing Licenses resource with the given ID exists.
+func LicensesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicensesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/licenses:Licenses", id, state, "", opts...)
+}
+
 type licensesArgs struct {
 	// Serial number of the device the license is assigned to
 	DeviceSerial *string `pulumi:"deviceSerial"`

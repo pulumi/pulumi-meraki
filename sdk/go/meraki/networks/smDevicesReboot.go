@@ -128,6 +128,12 @@ func (SmDevicesRebootState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesRebootState)(nil)).Elem()
 }
 
+// SmDevicesRebootExists checks whether an existing SmDevicesReboot resource with the given ID exists.
+func SmDevicesRebootExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesRebootState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesReboot:SmDevicesReboot", id, state, "", opts...)
+}
+
 type smDevicesRebootArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                    `pulumi:"networkId"`

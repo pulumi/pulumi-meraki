@@ -767,6 +767,12 @@ func (WirelessSsidsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsState)(nil)).Elem()
 }
 
+// WirelessSsidsExists checks whether an existing WirelessSsids resource with the given ID exists.
+func WirelessSsidsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsids:WirelessSsids", id, state, "", opts...)
+}
+
 type wirelessSsidsArgs struct {
 	// The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
 	ActiveDirectory *WirelessSsidsActiveDirectory `pulumi:"activeDirectory"`

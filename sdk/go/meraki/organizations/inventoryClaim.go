@@ -117,6 +117,12 @@ func (InventoryClaimState) ElementType() reflect.Type {
 	return reflect.TypeOf((*inventoryClaimState)(nil)).Elem()
 }
 
+// InventoryClaimExists checks whether an existing InventoryClaim resource with the given ID exists.
+func InventoryClaimExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InventoryClaimState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/inventoryClaim:InventoryClaim", id, state, "", opts...)
+}
+
 type inventoryClaimArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                   `pulumi:"organizationId"`

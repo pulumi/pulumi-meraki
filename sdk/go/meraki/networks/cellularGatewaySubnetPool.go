@@ -117,6 +117,12 @@ func (CellularGatewaySubnetPoolState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularGatewaySubnetPoolState)(nil)).Elem()
 }
 
+// CellularGatewaySubnetPoolExists checks whether an existing CellularGatewaySubnetPool resource with the given ID exists.
+func CellularGatewaySubnetPoolExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularGatewaySubnetPoolState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/cellularGatewaySubnetPool:CellularGatewaySubnetPool", id, state, "", opts...)
+}
+
 type cellularGatewaySubnetPoolArgs struct {
 	// CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
 	Cidr *string `pulumi:"cidr"`

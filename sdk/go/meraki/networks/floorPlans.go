@@ -209,6 +209,12 @@ func (FloorPlansState) ElementType() reflect.Type {
 	return reflect.TypeOf((*floorPlansState)(nil)).Elem()
 }
 
+// FloorPlansExists checks whether an existing FloorPlans resource with the given ID exists.
+func FloorPlansExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *FloorPlansState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/floorPlans:FloorPlans", id, state, "", opts...)
+}
+
 type floorPlansArgs struct {
 	// The longitude and latitude of the bottom left corner of your floor plan.
 	BottomLeftCorner *FloorPlansBottomLeftCorner `pulumi:"bottomLeftCorner"`

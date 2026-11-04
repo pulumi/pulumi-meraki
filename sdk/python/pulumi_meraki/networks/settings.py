@@ -421,6 +421,26 @@ class Settings(pulumi.CustomResource):
         __props__.__dict__["secure_port"] = secure_port
         return Settings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            fips: pulumi.Input[Optional[Union['SettingsFipsArgs', 'SettingsFipsArgsDict', 'outputs.SettingsFips']]] = None,
+            local_status_page: pulumi.Input[Optional[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict', 'outputs.SettingsLocalStatusPage']]] = None,
+            local_status_page_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            named_vlans: pulumi.Input[Optional[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict', 'outputs.SettingsNamedVlans']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            remote_status_page_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            secure_port: pulumi.Input[Optional[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict', 'outputs.SettingsSecurePort']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["fips"] = fips
+        __props__["localStatusPage"] = local_status_page
+        __props__["localStatusPageEnabled"] = local_status_page_enabled
+        __props__["namedVlans"] = named_vlans
+        __props__["networkId"] = network_id
+        __props__["remoteStatusPageEnabled"] = remote_status_page_enabled
+        __props__["securePort"] = secure_port
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/settings:Settings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def fips(self) -> pulumi.Output['outputs.SettingsFips']:

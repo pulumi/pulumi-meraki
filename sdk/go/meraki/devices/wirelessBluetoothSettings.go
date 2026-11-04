@@ -118,6 +118,12 @@ func (WirelessBluetoothSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessBluetoothSettingsState)(nil)).Elem()
 }
 
+// WirelessBluetoothSettingsExists checks whether an existing WirelessBluetoothSettings resource with the given ID exists.
+func WirelessBluetoothSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessBluetoothSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/wirelessBluetoothSettings:WirelessBluetoothSettings", id, state, "", opts...)
+}
+
 type wirelessBluetoothSettingsArgs struct {
 	// Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
 	Major *int `pulumi:"major"`

@@ -366,6 +366,22 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
         __props__.__dict__["vlan_id"] = vlan_id
         return WirelessAlternateManagementInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_points: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict', 'outputs.WirelessAlternateManagementInterfaceAccessPoint']]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPoints"] = access_points
+        __props__["enabled"] = enabled
+        __props__["networkId"] = network_id
+        __props__["protocols"] = protocols
+        __props__["vlanId"] = vlan_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPoints")
     def access_points(self) -> pulumi.Output[Sequence['outputs.WirelessAlternateManagementInterfaceAccessPoint']]:

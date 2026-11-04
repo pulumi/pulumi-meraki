@@ -199,6 +199,12 @@ func (LoginSecurityState) ElementType() reflect.Type {
 	return reflect.TypeOf((*loginSecurityState)(nil)).Elem()
 }
 
+// LoginSecurityExists checks whether an existing LoginSecurity resource with the given ID exists.
+func LoginSecurityExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LoginSecurityState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/loginSecurity:LoginSecurity", id, state, "", opts...)
+}
+
 type loginSecurityArgs struct {
 	// Number of consecutive failed login attempts after which users' accounts will be locked.
 	AccountLockoutAttempts *int `pulumi:"accountLockoutAttempts"`

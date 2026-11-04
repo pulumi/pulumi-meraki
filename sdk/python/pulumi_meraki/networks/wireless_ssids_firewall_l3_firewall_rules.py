@@ -353,6 +353,22 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         __props__.__dict__["rules_responses"] = rules_responses
         return WirelessSsidsFirewallL3FirewallRules(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allow_lan_access: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL3FirewallRulesRuleArgs', 'WirelessSsidsFirewallL3FirewallRulesRuleArgsDict', 'outputs.WirelessSsidsFirewallL3FirewallRulesRule']]]]] = None,
+            rules_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs', 'WirelessSsidsFirewallL3FirewallRulesRulesResponseArgsDict', 'outputs.WirelessSsidsFirewallL3FirewallRulesRulesResponse']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowLanAccess"] = allow_lan_access
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["rules"] = rules
+        __props__["rulesResponses"] = rules_responses
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowLanAccess")
     def allow_lan_access(self) -> pulumi.Output[Optional[_builtins.bool]]:

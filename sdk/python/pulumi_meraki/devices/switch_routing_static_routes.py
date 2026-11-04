@@ -420,6 +420,26 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
         __props__.__dict__["subnet"] = subnet
         return SwitchRoutingStaticRoutes(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            advertise_via_ospf_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            next_hop_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            prefer_over_ospf_routes_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            static_route_id: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["advertiseViaOspfEnabled"] = advertise_via_ospf_enabled
+        __props__["name"] = name
+        __props__["nextHopIp"] = next_hop_ip
+        __props__["preferOverOspfRoutesEnabled"] = prefer_over_ospf_routes_enabled
+        __props__["serial"] = serial
+        __props__["staticRouteId"] = static_route_id
+        __props__["subnet"] = subnet
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/switchRoutingStaticRoutes:SwitchRoutingStaticRoutes', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="advertiseViaOspfEnabled")
     def advertise_via_ospf_enabled(self) -> pulumi.Output[_builtins.bool]:

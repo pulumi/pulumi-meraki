@@ -106,6 +106,12 @@ func (CloneState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cloneState)(nil)).Elem()
 }
 
+// CloneExists checks whether an existing Clone resource with the given ID exists.
+func CloneExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CloneState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/clone:Clone", id, state, "", opts...)
+}
+
 type cloneArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string          `pulumi:"organizationId"`

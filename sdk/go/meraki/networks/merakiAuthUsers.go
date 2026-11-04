@@ -170,6 +170,12 @@ func (MerakiAuthUsersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*merakiAuthUsersState)(nil)).Elem()
 }
 
+// MerakiAuthUsersExists checks whether an existing MerakiAuthUsers resource with the given ID exists.
+func MerakiAuthUsersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MerakiAuthUsersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/merakiAuthUsers:MerakiAuthUsers", id, state, "", opts...)
+}
+
 type merakiAuthUsersArgs struct {
 	// Authorization type for user.
 	AccountType *string `pulumi:"accountType"`

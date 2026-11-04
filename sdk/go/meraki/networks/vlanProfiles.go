@@ -147,6 +147,12 @@ func (VlanProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*vlanProfilesState)(nil)).Elem()
 }
 
+// VlanProfilesExists checks whether an existing VlanProfiles resource with the given ID exists.
+func VlanProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *VlanProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/vlanProfiles:VlanProfiles", id, state, "", opts...)
+}
+
 type vlanProfilesArgs struct {
 	// IName of the VLAN profile
 	Iname string `pulumi:"iname"`

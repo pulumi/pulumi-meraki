@@ -386,6 +386,26 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
         __props__.__dict__["updated_at"] = updated_at
         return AppliancePrefixesDelegatedStatics(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            origin: pulumi.Input[Optional[Union['AppliancePrefixesDelegatedStaticsOriginArgs', 'AppliancePrefixesDelegatedStaticsOriginArgsDict', 'outputs.AppliancePrefixesDelegatedStaticsOrigin']]] = None,
+            prefix: pulumi.Input[Optional[_builtins.str]] = None,
+            static_delegated_prefix_id: pulumi.Input[Optional[_builtins.str]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["createdAt"] = created_at
+        __props__["description"] = description
+        __props__["networkId"] = network_id
+        __props__["origin"] = origin
+        __props__["prefix"] = prefix
+        __props__["staticDelegatedPrefixId"] = static_delegated_prefix_id
+        __props__["updatedAt"] = updated_at
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="createdAt")
     def created_at(self) -> pulumi.Output[_builtins.str]:

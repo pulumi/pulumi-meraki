@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetActionBatchesItem {
     /**
-     * @return A set of changes made as part of this action (\n\nmore details\n\n)
+     * @return A set of changes made as part of this action (&#92;n&#92;nmore details&#92;n&#92;n)
      * 
      */
     private List<GetActionBatchesItemAction> actions;
@@ -47,7 +47,7 @@ public final class GetActionBatchesItem {
 
     private GetActionBatchesItem() {}
     /**
-     * @return A set of changes made as part of this action (\n\nmore details\n\n)
+     * @return A set of changes made as part of this action (&#92;n&#92;nmore details&#92;n&#92;n)
      * 
      */
     public List<GetActionBatchesItemAction> actions() {

@@ -543,6 +543,36 @@ class Snmp(pulumi.CustomResource):
         __props__.__dict__["v3_user"] = v3_user
         return Snmp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            hostname: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            peer_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            port: pulumi.Input[Optional[_builtins.int]] = None,
+            v2_community_string: pulumi.Input[Optional[_builtins.str]] = None,
+            v2c_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            v3_auth_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_auth_pass: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            v3_priv_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_priv_pass: pulumi.Input[Optional[_builtins.str]] = None,
+            v3_user: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["hostname"] = hostname
+        __props__["organizationId"] = organization_id
+        __props__["peerIps"] = peer_ips
+        __props__["port"] = port
+        __props__["v2CommunityString"] = v2_community_string
+        __props__["v2cEnabled"] = v2c_enabled
+        __props__["v3AuthMode"] = v3_auth_mode
+        __props__["v3AuthPass"] = v3_auth_pass
+        __props__["v3Enabled"] = v3_enabled
+        __props__["v3PrivMode"] = v3_priv_mode
+        __props__["v3PrivPass"] = v3_priv_pass
+        __props__["v3User"] = v3_user
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/snmp:Snmp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def hostname(self) -> pulumi.Output[_builtins.str]:

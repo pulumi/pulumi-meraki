@@ -148,6 +148,12 @@ func (SwitchStacksRoutingStaticRoutesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchStacksRoutingStaticRoutesState)(nil)).Elem()
 }
 
+// SwitchStacksRoutingStaticRoutesExists checks whether an existing SwitchStacksRoutingStaticRoutes resource with the given ID exists.
+func SwitchStacksRoutingStaticRoutesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchStacksRoutingStaticRoutesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchStacksRoutingStaticRoutes:SwitchStacksRoutingStaticRoutes", id, state, "", opts...)
+}
+
 type switchStacksRoutingStaticRoutesArgs struct {
 	// Option to advertise static routes via OSPF
 	AdvertiseViaOspfEnabled *bool `pulumi:"advertiseViaOspfEnabled"`

@@ -159,6 +159,12 @@ func (SwitchPortSchedulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchPortSchedulesState)(nil)).Elem()
 }
 
+// SwitchPortSchedulesExists checks whether an existing SwitchPortSchedules resource with the given ID exists.
+func SwitchPortSchedulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchPortSchedulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchPortSchedules:SwitchPortSchedules", id, state, "", opts...)
+}
+
 type switchPortSchedulesArgs struct {
 	// The name for your port schedule. Required
 	Name *string `pulumi:"name"`

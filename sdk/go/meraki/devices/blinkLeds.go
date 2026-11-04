@@ -108,6 +108,12 @@ func (BlinkLedsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*blinkLedsState)(nil)).Elem()
 }
 
+// BlinkLedsExists checks whether an existing BlinkLeds resource with the given ID exists.
+func BlinkLedsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BlinkLedsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/blinkLeds:BlinkLeds", id, state, "", opts...)
+}
+
 type blinkLedsArgs struct {
 	Parameters BlinkLedsParameters `pulumi:"parameters"`
 	// serial path parameter.

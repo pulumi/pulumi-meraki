@@ -442,6 +442,28 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
         __props__.__dict__["uuid"] = uuid
         return WirelessBluetoothSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            advertising_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            esl_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            major: pulumi.Input[Optional[_builtins.int]] = None,
+            major_minor_assignment_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            minor: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            scanning_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            uuid: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["advertisingEnabled"] = advertising_enabled
+        __props__["eslEnabled"] = esl_enabled
+        __props__["major"] = major
+        __props__["majorMinorAssignmentMode"] = major_minor_assignment_mode
+        __props__["minor"] = minor
+        __props__["networkId"] = network_id
+        __props__["scanningEnabled"] = scanning_enabled
+        __props__["uuid"] = uuid
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="advertisingEnabled")
     def advertising_enabled(self) -> pulumi.Output[_builtins.bool]:

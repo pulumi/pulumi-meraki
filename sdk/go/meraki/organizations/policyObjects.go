@@ -170,6 +170,12 @@ func (PolicyObjectsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectsState)(nil)).Elem()
 }
 
+// PolicyObjectsExists checks whether an existing PolicyObjects resource with the given ID exists.
+func PolicyObjectsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/policyObjects:PolicyObjects", id, state, "", opts...)
+}
+
 type policyObjectsArgs struct {
 	// Category of a policy object (one of: adaptivePolicy, network)
 	Category *string `pulumi:"category"`

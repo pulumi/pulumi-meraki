@@ -119,6 +119,12 @@ func (MqttBrokersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*mqttBrokersState)(nil)).Elem()
 }
 
+// MqttBrokersExists checks whether an existing MqttBrokers resource with the given ID exists.
+func MqttBrokersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *MqttBrokersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/mqttBrokers:MqttBrokers", id, state, "", opts...)
+}
+
 type mqttBrokersArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                `pulumi:"networkId"`

@@ -109,6 +109,12 @@ func (ApplianceSecurityIntrusionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceSecurityIntrusionState)(nil)).Elem()
 }
 
+// ApplianceSecurityIntrusionExists checks whether an existing ApplianceSecurityIntrusion resource with the given ID exists.
+func ApplianceSecurityIntrusionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceSecurityIntrusionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/applianceSecurityIntrusion:ApplianceSecurityIntrusion", id, state, "", opts...)
+}
+
 type applianceSecurityIntrusionArgs struct {
 	// Sets a list of specific SNORT signatures to allow
 	AllowedRules []ApplianceSecurityIntrusionAllowedRule `pulumi:"allowedRules"`

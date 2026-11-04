@@ -147,6 +147,12 @@ func (CameraRolesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraRolesState)(nil)).Elem()
 }
 
+// CameraRolesExists checks whether an existing CameraRoles resource with the given ID exists.
+func CameraRolesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraRolesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/cameraRoles:CameraRoles", id, state, "", opts...)
+}
+
 type cameraRolesArgs struct {
 	// Device tag on which this specified permission is applied.
 	AppliedOnDevices []CameraRolesAppliedOnDevice `pulumi:"appliedOnDevices"`

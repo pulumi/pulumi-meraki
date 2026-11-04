@@ -399,6 +399,24 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return FirmwareUpgradesStagedGroups(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            assigned_devices: pulumi.Input[Optional[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict', 'outputs.FirmwareUpgradesStagedGroupsAssignedDevices']]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            group_id: pulumi.Input[Optional[_builtins.str]] = None,
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["assignedDevices"] = assigned_devices
+        __props__["description"] = description
+        __props__["groupId"] = group_id
+        __props__["isDefault"] = is_default
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="assignedDevices")
     def assigned_devices(self) -> pulumi.Output['outputs.FirmwareUpgradesStagedGroupsAssignedDevices']:

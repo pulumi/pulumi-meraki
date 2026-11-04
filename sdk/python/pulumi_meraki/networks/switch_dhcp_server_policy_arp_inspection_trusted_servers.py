@@ -344,6 +344,22 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         __props__.__dict__["vlan"] = vlan
         return SwitchDhcpServerPolicyArpInspectionTrustedServers(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ipv4: pulumi.Input[Optional[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict', 'outputs.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4']]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_server_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ipv4"] = ipv4
+        __props__["mac"] = mac
+        __props__["networkId"] = network_id
+        __props__["trustedServerId"] = trusted_server_id
+        __props__["vlan"] = vlan
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def ipv4(self) -> pulumi.Output['outputs.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4']:

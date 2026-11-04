@@ -141,6 +141,12 @@ func (WirelessSsidsEapOverrideState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsEapOverrideState)(nil)).Elem()
 }
 
+// WirelessSsidsEapOverrideExists checks whether an existing WirelessSsidsEapOverride resource with the given ID exists.
+func WirelessSsidsEapOverrideExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsEapOverrideState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride", id, state, "", opts...)
+}
+
 type wirelessSsidsEapOverrideArgs struct {
 	// EAPOL Key settings.
 	EapolKey *WirelessSsidsEapOverrideEapolKey `pulumi:"eapolKey"`

@@ -212,6 +212,16 @@ class SmUserAccessDevicesDelete(pulumi.CustomResource):
         __props__.__dict__["user_access_device_id"] = user_access_device_id
         return SmUserAccessDevicesDelete(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            user_access_device_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["networkId"] = network_id
+        __props__["userAccessDeviceId"] = user_access_device_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="networkId")
     def network_id(self) -> pulumi.Output[_builtins.str]:

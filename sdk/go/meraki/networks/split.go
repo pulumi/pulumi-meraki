@@ -94,6 +94,12 @@ func (SplitState) ElementType() reflect.Type {
 	return reflect.TypeOf((*splitState)(nil)).Elem()
 }
 
+// SplitExists checks whether an existing Split resource with the given ID exists.
+func SplitExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SplitState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/split:Split", id, state, "", opts...)
+}
+
 type splitArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

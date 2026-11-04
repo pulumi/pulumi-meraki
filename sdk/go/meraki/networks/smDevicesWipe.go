@@ -109,6 +109,12 @@ func (SmDevicesWipeState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesWipeState)(nil)).Elem()
 }
 
+// SmDevicesWipeExists checks whether an existing SmDevicesWipe resource with the given ID exists.
+func SmDevicesWipeExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesWipeState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesWipe:SmDevicesWipe", id, state, "", opts...)
+}
+
 type smDevicesWipeArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                  `pulumi:"networkId"`

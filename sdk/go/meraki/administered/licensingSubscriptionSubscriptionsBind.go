@@ -116,6 +116,12 @@ func (LicensingSubscriptionSubscriptionsBindState) ElementType() reflect.Type {
 	return reflect.TypeOf((*licensingSubscriptionSubscriptionsBindState)(nil)).Elem()
 }
 
+// LicensingSubscriptionSubscriptionsBindExists checks whether an existing LicensingSubscriptionSubscriptionsBind resource with the given ID exists.
+func LicensingSubscriptionSubscriptionsBindExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicensingSubscriptionSubscriptionsBindState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind", id, state, "", opts...)
+}
+
 type licensingSubscriptionSubscriptionsBindArgs struct {
 	Parameters LicensingSubscriptionSubscriptionsBindParameters `pulumi:"parameters"`
 	// subscriptionId path parameter. Subscription ID

@@ -106,6 +106,12 @@ func (InventoryOnboardingCloudMonitoringExportEventsState) ElementType() reflect
 	return reflect.TypeOf((*inventoryOnboardingCloudMonitoringExportEventsState)(nil)).Elem()
 }
 
+// InventoryOnboardingCloudMonitoringExportEventsExists checks whether an existing InventoryOnboardingCloudMonitoringExportEvents resource with the given ID exists.
+func InventoryOnboardingCloudMonitoringExportEventsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InventoryOnboardingCloudMonitoringExportEventsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", id, state, "", opts...)
+}
+
 type inventoryOnboardingCloudMonitoringExportEventsArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                                                   `pulumi:"organizationId"`

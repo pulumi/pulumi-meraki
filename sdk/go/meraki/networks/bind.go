@@ -107,6 +107,12 @@ func (BindState) ElementType() reflect.Type {
 	return reflect.TypeOf((*bindState)(nil)).Elem()
 }
 
+// BindExists checks whether an existing Bind resource with the given ID exists.
+func BindExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *BindState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/bind:Bind", id, state, "", opts...)
+}
+
 type bindArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string         `pulumi:"networkId"`

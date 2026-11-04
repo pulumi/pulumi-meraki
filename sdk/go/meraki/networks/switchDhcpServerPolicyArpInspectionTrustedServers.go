@@ -126,6 +126,12 @@ func (SwitchDhcpServerPolicyArpInspectionTrustedServersState) ElementType() refl
 	return reflect.TypeOf((*switchDhcpServerPolicyArpInspectionTrustedServersState)(nil)).Elem()
 }
 
+// SwitchDhcpServerPolicyArpInspectionTrustedServersExists checks whether an existing SwitchDhcpServerPolicyArpInspectionTrustedServers resource with the given ID exists.
+func SwitchDhcpServerPolicyArpInspectionTrustedServersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchDhcpServerPolicyArpInspectionTrustedServersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", id, state, "", opts...)
+}
+
 type switchDhcpServerPolicyArpInspectionTrustedServersArgs struct {
 	// IPv4 attributes of the trusted server.
 	Ipv4 *SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4 `pulumi:"ipv4"`

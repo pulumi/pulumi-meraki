@@ -1010,6 +1010,56 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         __props__.__dict__["voice_vlan_clients"] = voice_vlan_clients
         return SwitchAccessPolicies(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_policy_number: pulumi.Input[Optional[_builtins.str]] = None,
+            access_policy_type: pulumi.Input[Optional[_builtins.str]] = None,
+            counts: pulumi.Input[Optional[Union['SwitchAccessPoliciesCountsArgs', 'SwitchAccessPoliciesCountsArgsDict', 'outputs.SwitchAccessPoliciesCounts']]] = None,
+            dot1x: pulumi.Input[Optional[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict', 'outputs.SwitchAccessPoliciesDot1x']]] = None,
+            guest_port_bouncing: pulumi.Input[Optional[_builtins.bool]] = None,
+            guest_vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            host_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            increase_access_speed: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            radius: pulumi.Input[Optional[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict', 'outputs.SwitchAccessPoliciesRadius']]] = None,
+            radius_accounting_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            radius_accounting_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict', 'outputs.SwitchAccessPoliciesRadiusAccountingServer']]]]] = None,
+            radius_accounting_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServersResponseArgs', 'SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict', 'outputs.SwitchAccessPoliciesRadiusAccountingServersResponse']]]]] = None,
+            radius_coa_support_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            radius_group_attribute: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict', 'outputs.SwitchAccessPoliciesRadiusServer']]]]] = None,
+            radius_servers_responses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServersResponseArgs', 'SwitchAccessPoliciesRadiusServersResponseArgsDict', 'outputs.SwitchAccessPoliciesRadiusServersResponse']]]]] = None,
+            radius_testing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            url_redirect_walled_garden_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            url_redirect_walled_garden_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            voice_vlan_clients: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPolicyNumber"] = access_policy_number
+        __props__["accessPolicyType"] = access_policy_type
+        __props__["counts"] = counts
+        __props__["dot1x"] = dot1x
+        __props__["guestPortBouncing"] = guest_port_bouncing
+        __props__["guestVlanId"] = guest_vlan_id
+        __props__["hostMode"] = host_mode
+        __props__["increaseAccessSpeed"] = increase_access_speed
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["radius"] = radius
+        __props__["radiusAccountingEnabled"] = radius_accounting_enabled
+        __props__["radiusAccountingServers"] = radius_accounting_servers
+        __props__["radiusAccountingServersResponses"] = radius_accounting_servers_responses
+        __props__["radiusCoaSupportEnabled"] = radius_coa_support_enabled
+        __props__["radiusGroupAttribute"] = radius_group_attribute
+        __props__["radiusServers"] = radius_servers
+        __props__["radiusServersResponses"] = radius_servers_responses
+        __props__["radiusTestingEnabled"] = radius_testing_enabled
+        __props__["urlRedirectWalledGardenEnabled"] = url_redirect_walled_garden_enabled
+        __props__["urlRedirectWalledGardenRanges"] = url_redirect_walled_garden_ranges
+        __props__["voiceVlanClients"] = voice_vlan_clients
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchAccessPolicies:SwitchAccessPolicies', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPolicyNumber")
     def access_policy_number(self) -> pulumi.Output[_builtins.str]:

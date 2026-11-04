@@ -141,6 +141,12 @@ func (AppliancePrefixesDelegatedStaticsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*appliancePrefixesDelegatedStaticsState)(nil)).Elem()
 }
 
+// AppliancePrefixesDelegatedStaticsExists checks whether an existing AppliancePrefixesDelegatedStatics resource with the given ID exists.
+func AppliancePrefixesDelegatedStaticsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AppliancePrefixesDelegatedStaticsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics", id, state, "", opts...)
+}
+
 type appliancePrefixesDelegatedStaticsArgs struct {
 	// Identifying description for the prefix.
 	Description *string `pulumi:"description"`

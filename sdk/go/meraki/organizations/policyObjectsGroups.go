@@ -135,6 +135,12 @@ func (PolicyObjectsGroupsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*policyObjectsGroupsState)(nil)).Elem()
 }
 
+// PolicyObjectsGroupsExists checks whether an existing PolicyObjectsGroups resource with the given ID exists.
+func PolicyObjectsGroupsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *PolicyObjectsGroupsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/policyObjectsGroups:PolicyObjectsGroups", id, state, "", opts...)
+}
+
 type policyObjectsGroupsArgs struct {
 	// Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
 	Category *string `pulumi:"category"`

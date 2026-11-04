@@ -233,6 +233,18 @@ class SwitchPortsCycle(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return SwitchPortsCycle(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            item: pulumi.Input[Optional[Union['SwitchPortsCycleItemArgs', 'SwitchPortsCycleItemArgsDict', 'outputs.SwitchPortsCycleItem']]] = None,
+            parameters: pulumi.Input[Optional[Union['SwitchPortsCycleParametersArgs', 'SwitchPortsCycleParametersArgsDict', 'outputs.SwitchPortsCycleParameters']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["item"] = item
+        __props__["parameters"] = parameters
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/switchPortsCycle:SwitchPortsCycle', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def item(self) -> pulumi.Output['outputs.SwitchPortsCycleItem']:

@@ -152,6 +152,12 @@ func (SwitchQosRulesOrderState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchQosRulesOrderState)(nil)).Elem()
 }
 
+// SwitchQosRulesOrderExists checks whether an existing SwitchQosRulesOrder resource with the given ID exists.
+func SwitchQosRulesOrderExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchQosRulesOrderState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder", id, state, "", opts...)
+}
+
 type switchQosRulesOrderArgs struct {
 	// DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
 	Dscp *int `pulumi:"dscp"`

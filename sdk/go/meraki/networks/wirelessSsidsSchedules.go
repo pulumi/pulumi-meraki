@@ -134,6 +134,12 @@ func (WirelessSsidsSchedulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsSchedulesState)(nil)).Elem()
 }
 
+// WirelessSsidsSchedulesExists checks whether an existing WirelessSsidsSchedules resource with the given ID exists.
+func WirelessSsidsSchedulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsSchedulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules", id, state, "", opts...)
+}
+
 type wirelessSsidsSchedulesArgs struct {
 	// If true, the SSID outage schedule is enabled.
 	Enabled *bool `pulumi:"enabled"`

@@ -375,6 +375,22 @@ class WirelessSsidsVpn(pulumi.CustomResource):
         __props__.__dict__["split_tunnel"] = split_tunnel
         return WirelessSsidsVpn(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            concentrator: pulumi.Input[Optional[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict', 'outputs.WirelessSsidsVpnConcentrator']]] = None,
+            failover: pulumi.Input[Optional[Union['WirelessSsidsVpnFailoverArgs', 'WirelessSsidsVpnFailoverArgsDict', 'outputs.WirelessSsidsVpnFailover']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            split_tunnel: pulumi.Input[Optional[Union['WirelessSsidsVpnSplitTunnelArgs', 'WirelessSsidsVpnSplitTunnelArgsDict', 'outputs.WirelessSsidsVpnSplitTunnel']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["concentrator"] = concentrator
+        __props__["failover"] = failover
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["splitTunnel"] = split_tunnel
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def concentrator(self) -> pulumi.Output['outputs.WirelessSsidsVpnConcentrator']:

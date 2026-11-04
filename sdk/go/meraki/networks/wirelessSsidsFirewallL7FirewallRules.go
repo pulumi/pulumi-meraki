@@ -120,6 +120,12 @@ func (WirelessSsidsFirewallL7FirewallRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsFirewallL7FirewallRulesState)(nil)).Elem()
 }
 
+// WirelessSsidsFirewallL7FirewallRulesExists checks whether an existing WirelessSsidsFirewallL7FirewallRules resource with the given ID exists.
+func WirelessSsidsFirewallL7FirewallRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsFirewallL7FirewallRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules", id, state, "", opts...)
+}
+
 type wirelessSsidsFirewallL7FirewallRulesArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

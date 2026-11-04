@@ -117,6 +117,12 @@ func (ApplianceTrafficShapingUplinkBandwidthState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceTrafficShapingUplinkBandwidthState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingUplinkBandwidthExists checks whether an existing ApplianceTrafficShapingUplinkBandwidth resource with the given ID exists.
+func ApplianceTrafficShapingUplinkBandwidthExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingUplinkBandwidthState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth", id, state, "", opts...)
+}
+
 type applianceTrafficShapingUplinkBandwidthArgs struct {
 	// A hash uplink keys and their configured settings for the Appliance
 	BandwidthLimits *ApplianceTrafficShapingUplinkBandwidthBandwidthLimits `pulumi:"bandwidthLimits"`

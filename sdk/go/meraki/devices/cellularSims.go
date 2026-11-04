@@ -109,6 +109,12 @@ func (CellularSimsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cellularSimsState)(nil)).Elem()
 }
 
+// CellularSimsExists checks whether an existing CellularSims resource with the given ID exists.
+func CellularSimsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CellularSimsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cellularSims:CellularSims", id, state, "", opts...)
+}
+
 type cellularSimsArgs struct {
 	// serial path parameter.
 	Serial string `pulumi:"serial"`

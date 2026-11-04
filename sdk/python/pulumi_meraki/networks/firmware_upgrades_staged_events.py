@@ -324,6 +324,20 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         __props__.__dict__["stages"] = stages
         return FirmwareUpgradesStagedEvents(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesStagedEventsProductsArgs', 'FirmwareUpgradesStagedEventsProductsArgsDict', 'outputs.FirmwareUpgradesStagedEventsProducts']]] = None,
+            reasons: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsReasonArgs', 'FirmwareUpgradesStagedEventsReasonArgsDict', 'outputs.FirmwareUpgradesStagedEventsReason']]]]] = None,
+            stages: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedEventsStageArgs', 'FirmwareUpgradesStagedEventsStageArgsDict', 'outputs.FirmwareUpgradesStagedEventsStage']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["networkId"] = network_id
+        __props__["products"] = products
+        __props__["reasons"] = reasons
+        __props__["stages"] = stages
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="networkId")
     def network_id(self) -> pulumi.Output[_builtins.str]:

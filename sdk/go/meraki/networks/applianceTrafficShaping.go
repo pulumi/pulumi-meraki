@@ -107,6 +107,12 @@ func (ApplianceTrafficShapingState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceTrafficShapingState)(nil)).Elem()
 }
 
+// ApplianceTrafficShapingExists checks whether an existing ApplianceTrafficShaping resource with the given ID exists.
+func ApplianceTrafficShapingExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceTrafficShapingState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceTrafficShaping:ApplianceTrafficShaping", id, state, "", opts...)
+}
+
 type applianceTrafficShapingArgs struct {
 	// Global per-client bandwidth limit
 	GlobalBandwidthLimits *ApplianceTrafficShapingGlobalBandwidthLimits `pulumi:"globalBandwidthLimits"`

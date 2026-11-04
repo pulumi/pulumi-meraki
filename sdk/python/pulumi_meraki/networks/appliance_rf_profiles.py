@@ -427,6 +427,24 @@ class ApplianceRfProfiles(pulumi.CustomResource):
         __props__.__dict__["two_four_ghz_settings"] = two_four_ghz_settings
         return ApplianceRfProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            five_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict', 'outputs.ApplianceRfProfilesFiveGhzSettings']]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            per_ssid_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesPerSsidSettingsArgs', 'ApplianceRfProfilesPerSsidSettingsArgsDict', 'outputs.ApplianceRfProfilesPerSsidSettings']]] = None,
+            rf_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            two_four_ghz_settings: pulumi.Input[Optional[Union['ApplianceRfProfilesTwoFourGhzSettingsArgs', 'ApplianceRfProfilesTwoFourGhzSettingsArgsDict', 'outputs.ApplianceRfProfilesTwoFourGhzSettings']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["fiveGhzSettings"] = five_ghz_settings
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["perSsidSettings"] = per_ssid_settings
+        __props__["rfProfileId"] = rf_profile_id
+        __props__["twoFourGhzSettings"] = two_four_ghz_settings
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceRfProfiles:ApplianceRfProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="fiveGhzSettings")
     def five_ghz_settings(self) -> pulumi.Output['outputs.ApplianceRfProfilesFiveGhzSettings']:

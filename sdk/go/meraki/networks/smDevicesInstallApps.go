@@ -117,6 +117,12 @@ func (SmDevicesInstallAppsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesInstallAppsState)(nil)).Elem()
 }
 
+// SmDevicesInstallAppsExists checks whether an existing SmDevicesInstallApps resource with the given ID exists.
+func SmDevicesInstallAppsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesInstallAppsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesInstallApps:SmDevicesInstallApps", id, state, "", opts...)
+}
+
 type smDevicesInstallAppsArgs struct {
 	// deviceId path parameter. Device ID
 	DeviceId string `pulumi:"deviceId"`

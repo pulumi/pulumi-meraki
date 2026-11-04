@@ -77,12 +77,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new WirelessSsids("example", WirelessSsidsArgs.builder()
  *             .activeDirectory(WirelessSsidsActiveDirectoryArgs.builder()
  *                 .credentials(WirelessSsidsActiveDirectoryCredentialsArgs.builder()
@@ -143,7 +143,7 @@ import javax.annotation.Nullable;
  *                     .build())
  *                 .serverCaCertificate(WirelessSsidsLdapServerCaCertificateArgs.builder()
  *                     .contents("""
- *           \"-----BEGIN CERTIFICATE-----
+ *           }&#92;{@code "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -166,7 +166,7 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         \"
+ *         }&#92;{@code "
  *                     """)
  *                     .build())
  *                 .servers(WirelessSsidsLdapServerArgs.builder()
@@ -179,7 +179,7 @@ import javax.annotation.Nullable;
  *                 .certificateAuthentication(WirelessSsidsLocalRadiusCertificateAuthenticationArgs.builder()
  *                     .clientRootCaCertificate(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs.builder()
  *                         .contents("""
- *           \"-----BEGIN CERTIFICATE-----
+ *           }&#92;{@code "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -202,7 +202,7 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         \"
+ *         }&#92;{@code "
  *                         """)
  *                         .build())
  *                     .enabled(true)
@@ -249,7 +249,7 @@ import javax.annotation.Nullable;
  *             .radiusAccountingInterimInterval(5)
  *             .radiusAccountingServers(WirelessSsidsRadiusAccountingServerArgs.builder()
  *                 .caCertificate("""
- *           \"-----BEGIN CERTIFICATE-----
+ *           }&#92;{@code "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -272,7 +272,7 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         \"
+ *         }&#92;{@code "
  *                 """)
  *                 .host("0.0.0.0")
  *                 .port(3000)
@@ -294,7 +294,7 @@ import javax.annotation.Nullable;
  *             .radiusServerTimeout(5)
  *             .radiusServers(WirelessSsidsRadiusServerArgs.builder()
  *                 .caCertificate("""
- *           \"-----BEGIN CERTIFICATE-----
+ *           }&#92;{@code "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -317,7 +317,7 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         \"
+ *         }&#92;{@code "
  *                 """)
  *                 .host("0.0.0.0")
  *                 .openRoamingCertificateId(2)
@@ -343,8 +343,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiNetworksWirelessSsidsExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * 

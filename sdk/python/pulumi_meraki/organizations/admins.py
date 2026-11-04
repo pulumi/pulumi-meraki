@@ -555,6 +555,36 @@ class Admins(pulumi.CustomResource):
         __props__.__dict__["two_factor_auth_enabled"] = two_factor_auth_enabled
         return Admins(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            account_status: pulumi.Input[Optional[_builtins.str]] = None,
+            admin_id: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_method: pulumi.Input[Optional[_builtins.str]] = None,
+            email: pulumi.Input[Optional[_builtins.str]] = None,
+            has_api_key: pulumi.Input[Optional[_builtins.bool]] = None,
+            last_active: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsNetworkArgs', 'AdminsNetworkArgsDict', 'outputs.AdminsNetwork']]]]] = None,
+            org_access: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdminsTagArgs', 'AdminsTagArgsDict', 'outputs.AdminsTag']]]]] = None,
+            two_factor_auth_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accountStatus"] = account_status
+        __props__["adminId"] = admin_id
+        __props__["authenticationMethod"] = authentication_method
+        __props__["email"] = email
+        __props__["hasApiKey"] = has_api_key
+        __props__["lastActive"] = last_active
+        __props__["name"] = name
+        __props__["networks"] = networks
+        __props__["orgAccess"] = org_access
+        __props__["organizationId"] = organization_id
+        __props__["tags"] = tags
+        __props__["twoFactorAuthEnabled"] = two_factor_auth_enabled
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/admins:Admins', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accountStatus")
     def account_status(self) -> pulumi.Output[_builtins.str]:

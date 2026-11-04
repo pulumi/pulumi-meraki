@@ -119,6 +119,12 @@ func (LiveToolsCableState) ElementType() reflect.Type {
 	return reflect.TypeOf((*liveToolsCableState)(nil)).Elem()
 }
 
+// LiveToolsCableExists checks whether an existing LiveToolsCable resource with the given ID exists.
+func LiveToolsCableExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LiveToolsCableState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/liveToolsCable:LiveToolsCable", id, state, "", opts...)
+}
+
 type liveToolsCableArgs struct {
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback *LiveToolsCableCallback `pulumi:"callback"`

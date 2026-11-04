@@ -438,6 +438,30 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
         __props__.__dict__["wake_on_lan_id"] = wake_on_lan_id
         return LiveToolsWakeOnLan(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            callback: pulumi.Input[Optional[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict', 'outputs.LiveToolsWakeOnLanCallback']]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            mac: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsWakeOnLanRequestArgs', 'LiveToolsWakeOnLanRequestArgsDict', 'outputs.LiveToolsWakeOnLanRequest']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            wake_on_lan_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["callback"] = callback
+        __props__["error"] = error
+        __props__["mac"] = mac
+        __props__["request"] = request
+        __props__["serial"] = serial
+        __props__["status"] = status
+        __props__["url"] = url
+        __props__["vlanId"] = vlan_id
+        __props__["wakeOnLanId"] = wake_on_lan_id
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def callback(self) -> pulumi.Output['outputs.LiveToolsWakeOnLanCallback']:

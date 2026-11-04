@@ -155,6 +155,12 @@ func (WebhooksPayloadTemplatesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*webhooksPayloadTemplatesState)(nil)).Elem()
 }
 
+// WebhooksPayloadTemplatesExists checks whether an existing WebhooksPayloadTemplates resource with the given ID exists.
+func WebhooksPayloadTemplatesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WebhooksPayloadTemplatesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates", id, state, "", opts...)
+}
+
 type webhooksPayloadTemplatesArgs struct {
 	// The body of the payload template, in liquid template
 	Body *string `pulumi:"body"`

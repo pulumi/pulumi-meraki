@@ -237,6 +237,18 @@ class CameraVideoSettings(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return CameraVideoSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            external_rtsp_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            rtsp_url: pulumi.Input[Optional[_builtins.str]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["externalRtspEnabled"] = external_rtsp_enabled
+        __props__["rtspUrl"] = rtsp_url
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/cameraVideoSettings:CameraVideoSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="externalRtspEnabled")
     def external_rtsp_enabled(self) -> pulumi.Output[_builtins.bool]:

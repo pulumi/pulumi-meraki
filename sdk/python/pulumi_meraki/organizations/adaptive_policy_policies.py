@@ -448,6 +448,30 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         __props__.__dict__["updated_at"] = updated_at
         return AdaptivePolicyPolicies(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            acls: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict', 'outputs.AdaptivePolicyPoliciesAcl']]]]] = None,
+            adaptive_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            created_at: pulumi.Input[Optional[_builtins.str]] = None,
+            destination_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict', 'outputs.AdaptivePolicyPoliciesDestinationGroup']]] = None,
+            last_entry_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            organizations_adaptive_policy_policies_id: pulumi.Input[Optional[_builtins.str]] = None,
+            source_group: pulumi.Input[Optional[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict', 'outputs.AdaptivePolicyPoliciesSourceGroup']]] = None,
+            updated_at: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["acls"] = acls
+        __props__["adaptivePolicyId"] = adaptive_policy_id
+        __props__["createdAt"] = created_at
+        __props__["destinationGroup"] = destination_group
+        __props__["lastEntryRule"] = last_entry_rule
+        __props__["organizationId"] = organization_id
+        __props__["organizationsAdaptivePolicyPoliciesId"] = organizations_adaptive_policy_policies_id
+        __props__["sourceGroup"] = source_group
+        __props__["updatedAt"] = updated_at
+        return pulumi.runtime.exists_resource(None, 'meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def acls(self) -> pulumi.Output[Sequence['outputs.AdaptivePolicyPoliciesAcl']]:

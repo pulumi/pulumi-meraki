@@ -123,6 +123,12 @@ func (SnmpState) ElementType() reflect.Type {
 	return reflect.TypeOf((*snmpState)(nil)).Elem()
 }
 
+// SnmpExists checks whether an existing Snmp resource with the given ID exists.
+func SnmpExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SnmpState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/snmp:Snmp", id, state, "", opts...)
+}
+
 type snmpArgs struct {
 	// The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
 	Access *string `pulumi:"access"`

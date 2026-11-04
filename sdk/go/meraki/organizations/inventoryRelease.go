@@ -108,6 +108,12 @@ func (InventoryReleaseState) ElementType() reflect.Type {
 	return reflect.TypeOf((*inventoryReleaseState)(nil)).Elem()
 }
 
+// InventoryReleaseExists checks whether an existing InventoryRelease resource with the given ID exists.
+func InventoryReleaseExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *InventoryReleaseState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/inventoryRelease:InventoryRelease", id, state, "", opts...)
+}
+
 type inventoryReleaseArgs struct {
 	// organizationId path parameter. Organization ID
 	OrganizationId string                     `pulumi:"organizationId"`

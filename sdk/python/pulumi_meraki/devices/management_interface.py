@@ -324,6 +324,20 @@ class ManagementInterface(pulumi.CustomResource):
         __props__.__dict__["wan2"] = wan2
         return ManagementInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            ddns_hostnames: pulumi.Input[Optional[Union['ManagementInterfaceDdnsHostnamesArgs', 'ManagementInterfaceDdnsHostnamesArgsDict', 'outputs.ManagementInterfaceDdnsHostnames']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            wan1: pulumi.Input[Optional[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict', 'outputs.ManagementInterfaceWan1']]] = None,
+            wan2: pulumi.Input[Optional[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict', 'outputs.ManagementInterfaceWan2']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["ddnsHostnames"] = ddns_hostnames
+        __props__["serial"] = serial
+        __props__["wan1"] = wan1
+        __props__["wan2"] = wan2
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/managementInterface:ManagementInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="ddnsHostnames")
     def ddns_hostnames(self) -> pulumi.Output['outputs.ManagementInterfaceDdnsHostnames']:

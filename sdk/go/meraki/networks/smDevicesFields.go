@@ -115,6 +115,12 @@ func (SmDevicesFieldsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesFieldsState)(nil)).Elem()
 }
 
+// SmDevicesFieldsExists checks whether an existing SmDevicesFields resource with the given ID exists.
+func SmDevicesFieldsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesFieldsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesFields:SmDevicesFields", id, state, "", opts...)
+}
+
 type smDevicesFieldsArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                    `pulumi:"networkId"`

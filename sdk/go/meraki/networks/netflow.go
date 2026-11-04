@@ -132,6 +132,12 @@ func (NetflowState) ElementType() reflect.Type {
 	return reflect.TypeOf((*netflowState)(nil)).Elem()
 }
 
+// NetflowExists checks whether an existing Netflow resource with the given ID exists.
+func NetflowExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *NetflowState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/netflow:Netflow", id, state, "", opts...)
+}
+
 type netflowArgs struct {
 	// The IPv4 address of the NetFlow collector.
 	CollectorIp *string `pulumi:"collectorIp"`

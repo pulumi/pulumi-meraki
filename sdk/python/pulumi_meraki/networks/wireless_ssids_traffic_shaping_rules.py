@@ -383,6 +383,22 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         __props__.__dict__["traffic_shaping_enabled"] = traffic_shaping_enabled
         return WirelessSsidsTrafficShapingRules(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_rules_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsTrafficShapingRulesRuleArgs', 'WirelessSsidsTrafficShapingRulesRuleArgsDict', 'outputs.WirelessSsidsTrafficShapingRulesRule']]]]] = None,
+            traffic_shaping_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultRulesEnabled"] = default_rules_enabled
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["rules"] = rules
+        __props__["trafficShapingEnabled"] = traffic_shaping_enabled
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultRulesEnabled")
     def default_rules_enabled(self) -> pulumi.Output[_builtins.bool]:

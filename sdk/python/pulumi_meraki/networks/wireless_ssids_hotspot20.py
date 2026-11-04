@@ -594,6 +594,32 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
         __props__.__dict__["venue"] = venue
         return WirelessSsidsHotspot20(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            domains: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            mcc_mncs: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict', 'outputs.WirelessSsidsHotspot20MccMnc']]]]] = None,
+            nai_realms: pulumi.Input[Optional[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict', 'outputs.WirelessSsidsHotspot20NaiRealm']]]]] = None,
+            network_access_type: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            operator: pulumi.Input[Optional[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict', 'outputs.WirelessSsidsHotspot20Operator']]] = None,
+            roam_consort_ois: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            venue: pulumi.Input[Optional[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict', 'outputs.WirelessSsidsHotspot20Venue']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["domains"] = domains
+        __props__["enabled"] = enabled
+        __props__["mccMncs"] = mcc_mncs
+        __props__["naiRealms"] = nai_realms
+        __props__["networkAccessType"] = network_access_type
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["operator"] = operator
+        __props__["roamConsortOis"] = roam_consort_ois
+        __props__["venue"] = venue
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def domains(self) -> pulumi.Output[Sequence[_builtins.str]]:

@@ -513,6 +513,32 @@ class Base(pulumi.CustomResource):
         __props__.__dict__["url"] = url
         return Base(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enrollment_string: pulumi.Input[Optional[_builtins.str]] = None,
+            is_bound_to_config_template: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            notes: pulumi.Input[Optional[_builtins.str]] = None,
+            organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            product_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tags: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            time_zone: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enrollmentString"] = enrollment_string
+        __props__["isBoundToConfigTemplate"] = is_bound_to_config_template
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["notes"] = notes
+        __props__["organizationId"] = organization_id
+        __props__["productTypes"] = product_types
+        __props__["tags"] = tags
+        __props__["timeZone"] = time_zone
+        __props__["url"] = url
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/base:base', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="enrollmentString")
     def enrollment_string(self) -> pulumi.Output[_builtins.str]:

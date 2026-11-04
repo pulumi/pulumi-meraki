@@ -110,6 +110,12 @@ func (ApplianceConnectivityMonitoringDestinationsState) ElementType() reflect.Ty
 	return reflect.TypeOf((*applianceConnectivityMonitoringDestinationsState)(nil)).Elem()
 }
 
+// ApplianceConnectivityMonitoringDestinationsExists checks whether an existing ApplianceConnectivityMonitoringDestinations resource with the given ID exists.
+func ApplianceConnectivityMonitoringDestinationsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceConnectivityMonitoringDestinationsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations", id, state, "", opts...)
+}
+
 type applianceConnectivityMonitoringDestinationsArgs struct {
 	// The list of connectivity monitoring destinations
 	Destinations []ApplianceConnectivityMonitoringDestinationsDestination `pulumi:"destinations"`

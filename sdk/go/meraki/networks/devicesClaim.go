@@ -110,6 +110,12 @@ func (DevicesClaimState) ElementType() reflect.Type {
 	return reflect.TypeOf((*devicesClaimState)(nil)).Elem()
 }
 
+// DevicesClaimExists checks whether an existing DevicesClaim resource with the given ID exists.
+func DevicesClaimExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DevicesClaimState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/devicesClaim:DevicesClaim", id, state, "", opts...)
+}
+
 type devicesClaimArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                 `pulumi:"networkId"`

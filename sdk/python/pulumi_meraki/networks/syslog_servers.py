@@ -233,6 +233,16 @@ class SyslogServers(pulumi.CustomResource):
         __props__.__dict__["servers"] = servers
         return SyslogServers(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict', 'outputs.SyslogServersServer']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["networkId"] = network_id
+        __props__["servers"] = servers
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/syslogServers:SyslogServers', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="networkId")
     def network_id(self) -> pulumi.Output[_builtins.str]:

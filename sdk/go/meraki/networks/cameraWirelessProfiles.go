@@ -130,6 +130,12 @@ func (CameraWirelessProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraWirelessProfilesState)(nil)).Elem()
 }
 
+// CameraWirelessProfilesExists checks whether an existing CameraWirelessProfiles resource with the given ID exists.
+func CameraWirelessProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraWirelessProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles", id, state, "", opts...)
+}
+
 type cameraWirelessProfilesArgs struct {
 	// The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
 	Identity *CameraWirelessProfilesIdentity `pulumi:"identity"`

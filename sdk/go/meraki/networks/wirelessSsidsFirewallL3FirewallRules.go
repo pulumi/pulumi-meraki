@@ -135,6 +135,12 @@ func (WirelessSsidsFirewallL3FirewallRulesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsFirewallL3FirewallRulesState)(nil)).Elem()
 }
 
+// WirelessSsidsFirewallL3FirewallRulesExists checks whether an existing WirelessSsidsFirewallL3FirewallRules resource with the given ID exists.
+func WirelessSsidsFirewallL3FirewallRulesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsFirewallL3FirewallRulesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules", id, state, "", opts...)
+}
+
 type wirelessSsidsFirewallL3FirewallRulesArgs struct {
 	// Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
 	AllowLanAccess *bool `pulumi:"allowLanAccess"`

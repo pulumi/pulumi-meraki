@@ -435,6 +435,20 @@ class FirmwareUpgrades(pulumi.CustomResource):
         __props__.__dict__["upgrade_window"] = upgrade_window
         return FirmwareUpgrades(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            products: pulumi.Input[Optional[Union['FirmwareUpgradesProductsArgs', 'FirmwareUpgradesProductsArgsDict', 'outputs.FirmwareUpgradesProducts']]] = None,
+            timezone: pulumi.Input[Optional[_builtins.str]] = None,
+            upgrade_window: pulumi.Input[Optional[Union['FirmwareUpgradesUpgradeWindowArgs', 'FirmwareUpgradesUpgradeWindowArgsDict', 'outputs.FirmwareUpgradesUpgradeWindow']]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["networkId"] = network_id
+        __props__["products"] = products
+        __props__["timezone"] = timezone
+        __props__["upgradeWindow"] = upgrade_window
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/firmwareUpgrades:FirmwareUpgrades', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="networkId")
     def network_id(self) -> pulumi.Output[_builtins.str]:

@@ -376,6 +376,28 @@ class LiveToolsArpTable(pulumi.CustomResource):
         __props__.__dict__["url"] = url
         return LiveToolsArpTable(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            arp_table_id: pulumi.Input[Optional[_builtins.str]] = None,
+            callback: pulumi.Input[Optional[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict', 'outputs.LiveToolsArpTableCallback']]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LiveToolsArpTableEntryArgs', 'LiveToolsArpTableEntryArgsDict', 'outputs.LiveToolsArpTableEntry']]]]] = None,
+            error: pulumi.Input[Optional[_builtins.str]] = None,
+            request: pulumi.Input[Optional[Union['LiveToolsArpTableRequestArgs', 'LiveToolsArpTableRequestArgsDict', 'outputs.LiveToolsArpTableRequest']]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None,
+            status: pulumi.Input[Optional[_builtins.str]] = None,
+            url: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["arpTableId"] = arp_table_id
+        __props__["callback"] = callback
+        __props__["entries"] = entries
+        __props__["error"] = error
+        __props__["request"] = request
+        __props__["serial"] = serial
+        __props__["status"] = status
+        __props__["url"] = url
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/liveToolsArpTable:LiveToolsArpTable', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="arpTableId")
     def arp_table_id(self) -> pulumi.Output[_builtins.str]:

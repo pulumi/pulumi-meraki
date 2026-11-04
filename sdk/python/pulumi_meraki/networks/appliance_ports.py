@@ -484,6 +484,30 @@ class AppliancePorts(pulumi.CustomResource):
         __props__.__dict__["vlan"] = vlan
         return AppliancePorts(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            access_policy: pulumi.Input[Optional[_builtins.str]] = None,
+            allowed_vlans: pulumi.Input[Optional[_builtins.str]] = None,
+            drop_untagged_traffic: pulumi.Input[Optional[_builtins.bool]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.int]] = None,
+            port_id: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["accessPolicy"] = access_policy
+        __props__["allowedVlans"] = allowed_vlans
+        __props__["dropUntaggedTraffic"] = drop_untagged_traffic
+        __props__["enabled"] = enabled
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["portId"] = port_id
+        __props__["type"] = type
+        __props__["vlan"] = vlan
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/appliancePorts:AppliancePorts', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="accessPolicy")
     def access_policy(self) -> pulumi.Output[_builtins.str]:

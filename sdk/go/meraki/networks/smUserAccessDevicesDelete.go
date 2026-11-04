@@ -104,6 +104,12 @@ func (SmUserAccessDevicesDeleteState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smUserAccessDevicesDeleteState)(nil)).Elem()
 }
 
+// SmUserAccessDevicesDeleteExists checks whether an existing SmUserAccessDevicesDelete resource with the given ID exists.
+func SmUserAccessDevicesDeleteExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmUserAccessDevicesDeleteState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete", id, state, "", opts...)
+}
+
 type smUserAccessDevicesDeleteArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

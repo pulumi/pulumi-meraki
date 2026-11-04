@@ -94,6 +94,12 @@ func (ApplianceWarmSpareSwapState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceWarmSpareSwapState)(nil)).Elem()
 }
 
+// ApplianceWarmSpareSwapExists checks whether an existing ApplianceWarmSpareSwap resource with the given ID exists.
+func ApplianceWarmSpareSwapExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceWarmSpareSwapState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap", id, state, "", opts...)
+}
+
 type applianceWarmSpareSwapArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

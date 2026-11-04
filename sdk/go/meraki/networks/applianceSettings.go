@@ -121,6 +121,12 @@ func (ApplianceSettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceSettingsState)(nil)).Elem()
 }
 
+// ApplianceSettingsExists checks whether an existing ApplianceSettings resource with the given ID exists.
+func ApplianceSettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceSettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceSettings:ApplianceSettings", id, state, "", opts...)
+}
+
 type applianceSettingsArgs struct {
 	// Client tracking method of a network
 	ClientTrackingMethod *string `pulumi:"clientTrackingMethod"`

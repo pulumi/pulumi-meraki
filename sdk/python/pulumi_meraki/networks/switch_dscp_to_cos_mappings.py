@@ -227,6 +227,16 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return SwitchDscpToCosMappings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict', 'outputs.SwitchDscpToCosMappingsMapping']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["mappings"] = mappings
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def mappings(self) -> pulumi.Output[Sequence['outputs.SwitchDscpToCosMappingsMapping']]:

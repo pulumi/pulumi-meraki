@@ -123,6 +123,12 @@ func (SmDevicesLockState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesLockState)(nil)).Elem()
 }
 
+// SmDevicesLockExists checks whether an existing SmDevicesLock resource with the given ID exists.
+func SmDevicesLockExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesLockState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesLock:SmDevicesLock", id, state, "", opts...)
+}
+
 type smDevicesLockArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                  `pulumi:"networkId"`

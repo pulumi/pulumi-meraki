@@ -103,6 +103,12 @@ func (DevicesRemoveState) ElementType() reflect.Type {
 	return reflect.TypeOf((*devicesRemoveState)(nil)).Elem()
 }
 
+// DevicesRemoveExists checks whether an existing DevicesRemove resource with the given ID exists.
+func DevicesRemoveExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DevicesRemoveState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/devicesRemove:DevicesRemove", id, state, "", opts...)
+}
+
 type devicesRemoveArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                  `pulumi:"networkId"`

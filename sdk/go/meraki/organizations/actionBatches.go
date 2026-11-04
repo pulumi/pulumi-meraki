@@ -151,6 +151,12 @@ func (ActionBatchesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*actionBatchesState)(nil)).Elem()
 }
 
+// ActionBatchesExists checks whether an existing ActionBatches resource with the given ID exists.
+func ActionBatchesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ActionBatchesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/actionBatches:ActionBatches", id, state, "", opts...)
+}
+
 type actionBatchesArgs struct {
 	// actionBatchId path parameter. Action batch ID
 	ActionBatchId *string `pulumi:"actionBatchId"`

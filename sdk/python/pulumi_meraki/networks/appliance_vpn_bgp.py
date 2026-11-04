@@ -356,6 +356,22 @@ class ApplianceVpnBgp(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return ApplianceVpnBgp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            ibgp_hold_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict', 'outputs.ApplianceVpnBgpNeighbor']]]]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["asNumber"] = as_number
+        __props__["enabled"] = enabled
+        __props__["ibgpHoldTimer"] = ibgp_hold_timer
+        __props__["neighbors"] = neighbors
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceVpnBgp:ApplianceVpnBgp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="asNumber")
     def as_number(self) -> pulumi.Output[_builtins.int]:

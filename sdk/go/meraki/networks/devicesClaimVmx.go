@@ -106,6 +106,12 @@ func (DevicesClaimVmxState) ElementType() reflect.Type {
 	return reflect.TypeOf((*devicesClaimVmxState)(nil)).Elem()
 }
 
+// DevicesClaimVmxExists checks whether an existing DevicesClaimVmx resource with the given ID exists.
+func DevicesClaimVmxExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *DevicesClaimVmxState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/devicesClaimVmx:DevicesClaimVmx", id, state, "", opts...)
+}
+
 type devicesClaimVmxArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                    `pulumi:"networkId"`

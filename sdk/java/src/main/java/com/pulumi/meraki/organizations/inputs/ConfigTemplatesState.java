@@ -77,14 +77,14 @@ public final class ConfigTemplatesState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+     * The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
      * 
      */
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
     /**
-     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+     * @return The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
      * 
      */
     public Optional<Output<String>> timeZone() {
@@ -214,7 +214,7 @@ public final class ConfigTemplatesState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param timeZone The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+         * @param timeZone The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class ConfigTemplatesState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param timeZone The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in \n\nthis article\n\n. Not applicable if copying from existing network or template
+         * @param timeZone The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &#92;n&#92;nthis article&#92;n&#92;n. Not applicable if copying from existing network or template
          * 
          * @return builder
          * 

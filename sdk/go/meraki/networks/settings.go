@@ -147,6 +147,12 @@ func (SettingsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*settingsState)(nil)).Elem()
 }
 
+// SettingsExists checks whether an existing Settings resource with the given ID exists.
+func SettingsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SettingsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/settings:Settings", id, state, "", opts...)
+}
+
 type settingsArgs struct {
 	// A hash of Local Status page(s)' authentication options applied to the Network.
 	LocalStatusPage *SettingsLocalStatusPage `pulumi:"localStatusPage"`

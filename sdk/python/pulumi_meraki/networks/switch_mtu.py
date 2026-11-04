@@ -280,6 +280,18 @@ class SwitchMtu(pulumi.CustomResource):
         __props__.__dict__["overrides"] = overrides
         return SwitchMtu(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            default_mtu_size: pulumi.Input[Optional[_builtins.int]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            overrides: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict', 'outputs.SwitchMtuOverride']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["defaultMtuSize"] = default_mtu_size
+        __props__["networkId"] = network_id
+        __props__["overrides"] = overrides
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchMtu:SwitchMtu', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="defaultMtuSize")
     def default_mtu_size(self) -> pulumi.Output[_builtins.int]:

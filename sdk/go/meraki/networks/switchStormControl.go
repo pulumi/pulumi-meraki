@@ -118,6 +118,12 @@ func (SwitchStormControlState) ElementType() reflect.Type {
 	return reflect.TypeOf((*switchStormControlState)(nil)).Elem()
 }
 
+// SwitchStormControlExists checks whether an existing SwitchStormControl resource with the given ID exists.
+func SwitchStormControlExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SwitchStormControlState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/switchStormControl:SwitchStormControl", id, state, "", opts...)
+}
+
 type switchStormControlArgs struct {
 	// Broadcast threshold.
 	BroadcastThreshold *int `pulumi:"broadcastThreshold"`

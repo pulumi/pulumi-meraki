@@ -113,6 +113,12 @@ func (SyslogServersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*syslogServersState)(nil)).Elem()
 }
 
+// SyslogServersExists checks whether an existing SyslogServers resource with the given ID exists.
+func SyslogServersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SyslogServersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/syslogServers:SyslogServers", id, state, "", opts...)
+}
+
 type syslogServersArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`

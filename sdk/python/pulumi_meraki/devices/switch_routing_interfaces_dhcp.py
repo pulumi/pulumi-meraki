@@ -695,6 +695,38 @@ class SwitchRoutingInterfacesDhcp(pulumi.CustomResource):
         __props__.__dict__["serial"] = serial
         return SwitchRoutingInterfacesDhcp(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            boot_file_name: pulumi.Input[Optional[_builtins.str]] = None,
+            boot_next_server: pulumi.Input[Optional[_builtins.str]] = None,
+            boot_options_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_lease_time: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpDhcpOptionArgs', 'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict', 'outputs.SwitchRoutingInterfacesDhcpDhcpOption']]]]] = None,
+            dhcp_relay_server_ips: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_custom_nameservers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_nameservers_option: pulumi.Input[Optional[_builtins.str]] = None,
+            fixed_ip_assignments: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs', 'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict', 'outputs.SwitchRoutingInterfacesDhcpFixedIpAssignment']]]]] = None,
+            interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reserved_ip_ranges: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchRoutingInterfacesDhcpReservedIpRangeArgs', 'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict', 'outputs.SwitchRoutingInterfacesDhcpReservedIpRange']]]]] = None,
+            serial: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bootFileName"] = boot_file_name
+        __props__["bootNextServer"] = boot_next_server
+        __props__["bootOptionsEnabled"] = boot_options_enabled
+        __props__["dhcpLeaseTime"] = dhcp_lease_time
+        __props__["dhcpMode"] = dhcp_mode
+        __props__["dhcpOptions"] = dhcp_options
+        __props__["dhcpRelayServerIps"] = dhcp_relay_server_ips
+        __props__["dnsCustomNameservers"] = dns_custom_nameservers
+        __props__["dnsNameserversOption"] = dns_nameservers_option
+        __props__["fixedIpAssignments"] = fixed_ip_assignments
+        __props__["interfaceId"] = interface_id
+        __props__["reservedIpRanges"] = reserved_ip_ranges
+        __props__["serial"] = serial
+        return pulumi.runtime.exists_resource(None, 'meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="bootFileName")
     def boot_file_name(self) -> pulumi.Output[_builtins.str]:

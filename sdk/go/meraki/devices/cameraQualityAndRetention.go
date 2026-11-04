@@ -146,6 +146,12 @@ func (CameraQualityAndRetentionState) ElementType() reflect.Type {
 	return reflect.TypeOf((*cameraQualityAndRetentionState)(nil)).Elem()
 }
 
+// CameraQualityAndRetentionExists checks whether an existing CameraQualityAndRetention resource with the given ID exists.
+func CameraQualityAndRetentionExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *CameraQualityAndRetentionState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", id, state, "", opts...)
+}
+
 type cameraQualityAndRetentionArgs struct {
 	// Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
 	AudioRecordingEnabled *bool `pulumi:"audioRecordingEnabled"`

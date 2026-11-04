@@ -360,6 +360,22 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         __props__.__dict__["vlan_id"] = vlan_id
         return SwitchAlternateManagementInterface(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocols: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            switches: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchAlternateManagementInterfaceSwitchArgs', 'SwitchAlternateManagementInterfaceSwitchArgsDict', 'outputs.SwitchAlternateManagementInterfaceSwitch']]]]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["enabled"] = enabled
+        __props__["networkId"] = network_id
+        __props__["protocols"] = protocols
+        __props__["switches"] = switches
+        __props__["vlanId"] = vlan_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> pulumi.Output[_builtins.bool]:

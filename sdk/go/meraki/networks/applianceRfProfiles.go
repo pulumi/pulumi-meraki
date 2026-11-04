@@ -154,6 +154,12 @@ func (ApplianceRfProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceRfProfilesState)(nil)).Elem()
 }
 
+// ApplianceRfProfilesExists checks whether an existing ApplianceRfProfiles resource with the given ID exists.
+func ApplianceRfProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceRfProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceRfProfiles:ApplianceRfProfiles", id, state, "", opts...)
+}
+
 type applianceRfProfilesArgs struct {
 	// Settings related to 5Ghz band.
 	FiveGhzSettings *ApplianceRfProfilesFiveGhzSettings `pulumi:"fiveGhzSettings"`

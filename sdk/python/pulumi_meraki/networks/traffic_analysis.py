@@ -274,6 +274,18 @@ class TrafficAnalysis(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         return TrafficAnalysis(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            custom_pie_chart_items: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict', 'outputs.TrafficAnalysisCustomPieChartItem']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["customPieChartItems"] = custom_pie_chart_items
+        __props__["mode"] = mode
+        __props__["networkId"] = network_id
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/trafficAnalysis:TrafficAnalysis', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="customPieChartItems")
     def custom_pie_chart_items(self) -> pulumi.Output[Sequence['outputs.TrafficAnalysisCustomPieChartItem']]:

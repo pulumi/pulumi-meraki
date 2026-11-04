@@ -502,6 +502,30 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
         __props__.__dict__["vlan"] = vlan
         return SwitchQosRulesOrder(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            dscp: pulumi.Input[Optional[_builtins.int]] = None,
+            dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+            dst_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            qos_rule_id: pulumi.Input[Optional[_builtins.str]] = None,
+            src_port: pulumi.Input[Optional[_builtins.int]] = None,
+            src_port_range: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan: pulumi.Input[Optional[_builtins.int]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["dscp"] = dscp
+        __props__["dstPort"] = dst_port
+        __props__["dstPortRange"] = dst_port_range
+        __props__["networkId"] = network_id
+        __props__["protocol"] = protocol
+        __props__["qosRuleId"] = qos_rule_id
+        __props__["srcPort"] = src_port
+        __props__["srcPortRange"] = src_port_range
+        __props__["vlan"] = vlan
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def dscp(self) -> pulumi.Output[_builtins.int]:

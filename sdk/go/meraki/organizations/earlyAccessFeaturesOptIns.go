@@ -131,6 +131,12 @@ func (EarlyAccessFeaturesOptInsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*earlyAccessFeaturesOptInsState)(nil)).Elem()
 }
 
+// EarlyAccessFeaturesOptInsExists checks whether an existing EarlyAccessFeaturesOptIns resource with the given ID exists.
+func EarlyAccessFeaturesOptInsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *EarlyAccessFeaturesOptInsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", id, state, "", opts...)
+}
+
 type earlyAccessFeaturesOptInsArgs struct {
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks []string `pulumi:"limitScopeToNetworks"`

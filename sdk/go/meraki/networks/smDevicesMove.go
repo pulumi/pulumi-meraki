@@ -123,6 +123,12 @@ func (SmDevicesMoveState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smDevicesMoveState)(nil)).Elem()
 }
 
+// SmDevicesMoveExists checks whether an existing SmDevicesMove resource with the given ID exists.
+func SmDevicesMoveExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmDevicesMoveState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/smDevicesMove:SmDevicesMove", id, state, "", opts...)
+}
+
 type smDevicesMoveArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId  string                  `pulumi:"networkId"`

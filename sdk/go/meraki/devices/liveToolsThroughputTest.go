@@ -149,6 +149,12 @@ func (LiveToolsThroughputTestState) ElementType() reflect.Type {
 	return reflect.TypeOf((*liveToolsThroughputTestState)(nil)).Elem()
 }
 
+// LiveToolsThroughputTestExists checks whether an existing LiveToolsThroughputTest resource with the given ID exists.
+func LiveToolsThroughputTestExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LiveToolsThroughputTestState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", id, state, "", opts...)
+}
+
 type liveToolsThroughputTestArgs struct {
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback *LiveToolsThroughputTestCallback `pulumi:"callback"`

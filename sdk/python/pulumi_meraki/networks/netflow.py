@@ -381,6 +381,24 @@ class Netflow(pulumi.CustomResource):
         __props__.__dict__["reporting_enabled"] = reporting_enabled
         return Netflow(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            collector_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            collector_port: pulumi.Input[Optional[_builtins.int]] = None,
+            eta_dst_port: pulumi.Input[Optional[_builtins.int]] = None,
+            eta_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            reporting_enabled: pulumi.Input[Optional[_builtins.bool]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["collectorIp"] = collector_ip
+        __props__["collectorPort"] = collector_port
+        __props__["etaDstPort"] = eta_dst_port
+        __props__["etaEnabled"] = eta_enabled
+        __props__["networkId"] = network_id
+        __props__["reportingEnabled"] = reporting_enabled
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/netflow:Netflow', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="collectorIp")
     def collector_ip(self) -> pulumi.Output[_builtins.str]:

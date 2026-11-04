@@ -674,6 +674,44 @@ class FloorPlans(pulumi.CustomResource):
         __props__.__dict__["width"] = width
         return FloorPlans(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            bottom_left_corner: pulumi.Input[Optional[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict', 'outputs.FloorPlansBottomLeftCorner']]] = None,
+            bottom_right_corner: pulumi.Input[Optional[Union['FloorPlansBottomRightCornerArgs', 'FloorPlansBottomRightCornerArgsDict', 'outputs.FloorPlansBottomRightCorner']]] = None,
+            center: pulumi.Input[Optional[Union['FloorPlansCenterArgs', 'FloorPlansCenterArgsDict', 'outputs.FloorPlansCenter']]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FloorPlansDeviceArgs', 'FloorPlansDeviceArgsDict', 'outputs.FloorPlansDevice']]]]] = None,
+            floor_plan_id: pulumi.Input[Optional[_builtins.str]] = None,
+            height: pulumi.Input[Optional[_builtins.float]] = None,
+            image_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            image_extension: pulumi.Input[Optional[_builtins.str]] = None,
+            image_md5: pulumi.Input[Optional[_builtins.str]] = None,
+            image_url: pulumi.Input[Optional[_builtins.str]] = None,
+            image_url_expires_at: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            top_left_corner: pulumi.Input[Optional[Union['FloorPlansTopLeftCornerArgs', 'FloorPlansTopLeftCornerArgsDict', 'outputs.FloorPlansTopLeftCorner']]] = None,
+            top_right_corner: pulumi.Input[Optional[Union['FloorPlansTopRightCornerArgs', 'FloorPlansTopRightCornerArgsDict', 'outputs.FloorPlansTopRightCorner']]] = None,
+            width: pulumi.Input[Optional[_builtins.float]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["bottomLeftCorner"] = bottom_left_corner
+        __props__["bottomRightCorner"] = bottom_right_corner
+        __props__["center"] = center
+        __props__["devices"] = devices
+        __props__["floorPlanId"] = floor_plan_id
+        __props__["height"] = height
+        __props__["imageContents"] = image_contents
+        __props__["imageExtension"] = image_extension
+        __props__["imageMd5"] = image_md5
+        __props__["imageUrl"] = image_url
+        __props__["imageUrlExpiresAt"] = image_url_expires_at
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["topLeftCorner"] = top_left_corner
+        __props__["topRightCorner"] = top_right_corner
+        __props__["width"] = width
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/floorPlans:FloorPlans', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="bottomLeftCorner")
     def bottom_left_corner(self) -> pulumi.Output['outputs.FloorPlansBottomLeftCorner']:

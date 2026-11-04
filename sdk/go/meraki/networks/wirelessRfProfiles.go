@@ -477,6 +477,12 @@ func (WirelessRfProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessRfProfilesState)(nil)).Elem()
 }
 
+// WirelessRfProfilesExists checks whether an existing WirelessRfProfiles resource with the given ID exists.
+func WirelessRfProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessRfProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessRfProfiles:WirelessRfProfiles", id, state, "", opts...)
+}
+
 type wirelessRfProfilesArgs struct {
 	// Settings that will be enabled if selectionType is set to 'ap'.
 	ApBandSettings *WirelessRfProfilesApBandSettings `pulumi:"apBandSettings"`

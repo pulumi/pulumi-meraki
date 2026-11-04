@@ -126,6 +126,12 @@ func (SmAdminsRolesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*smAdminsRolesState)(nil)).Elem()
 }
 
+// SmAdminsRolesExists checks whether an existing SmAdminsRoles resource with the given ID exists.
+func SmAdminsRolesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *SmAdminsRolesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/smAdminsRoles:SmAdminsRoles", id, state, "", opts...)
+}
+
 type smAdminsRolesArgs struct {
 	// The name of the limited access role
 	Name *string `pulumi:"name"`

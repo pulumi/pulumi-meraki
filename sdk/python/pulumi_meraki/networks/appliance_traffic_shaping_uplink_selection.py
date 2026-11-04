@@ -528,6 +528,26 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
         __props__.__dict__["wan_traffic_uplink_preferences"] = wan_traffic_uplink_preferences
         return ApplianceTrafficShapingUplinkSelection(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            active_active_auto_vpn_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_uplink: pulumi.Input[Optional[_builtins.str]] = None,
+            failover_and_failback: pulumi.Input[Optional[Union['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs', 'ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict', 'outputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback']]] = None,
+            load_balancing_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict', 'outputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference']]]]] = None,
+            wan_traffic_uplink_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs', 'ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict', 'outputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["activeActiveAutoVpnEnabled"] = active_active_auto_vpn_enabled
+        __props__["defaultUplink"] = default_uplink
+        __props__["failoverAndFailback"] = failover_and_failback
+        __props__["loadBalancingEnabled"] = load_balancing_enabled
+        __props__["networkId"] = network_id
+        __props__["vpnTrafficUplinkPreferences"] = vpn_traffic_uplink_preferences
+        __props__["wanTrafficUplinkPreferences"] = wan_traffic_uplink_preferences
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="activeActiveAutoVpnEnabled")
     def active_active_auto_vpn_enabled(self) -> pulumi.Output[_builtins.bool]:

@@ -96,6 +96,12 @@ func (LicensingSubscriptionSubscriptionsClaimKeyValidateState) ElementType() ref
 	return reflect.TypeOf((*licensingSubscriptionSubscriptionsClaimKeyValidateState)(nil)).Elem()
 }
 
+// LicensingSubscriptionSubscriptionsClaimKeyValidateExists checks whether an existing LicensingSubscriptionSubscriptionsClaimKeyValidate resource with the given ID exists.
+func LicensingSubscriptionSubscriptionsClaimKeyValidateExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *LicensingSubscriptionSubscriptionsClaimKeyValidateState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate", id, state, "", opts...)
+}
+
 type licensingSubscriptionSubscriptionsClaimKeyValidateArgs struct {
 	Parameters LicensingSubscriptionSubscriptionsClaimKeyValidateParameters `pulumi:"parameters"`
 }

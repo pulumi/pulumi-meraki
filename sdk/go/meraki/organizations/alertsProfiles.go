@@ -163,6 +163,12 @@ func (AlertsProfilesState) ElementType() reflect.Type {
 	return reflect.TypeOf((*alertsProfilesState)(nil)).Elem()
 }
 
+// AlertsProfilesExists checks whether an existing AlertsProfiles resource with the given ID exists.
+func AlertsProfilesExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AlertsProfilesState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/alertsProfiles:AlertsProfiles", id, state, "", opts...)
+}
+
 type alertsProfilesArgs struct {
 	// The conditions that determine if the alert triggers
 	AlertCondition *AlertsProfilesAlertCondition `pulumi:"alertCondition"`

@@ -303,6 +303,20 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         __props__.__dict__["switch_profile_ports"] = switch_profile_ports
         return SwitchLinkAggregations(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            link_aggregation_id: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            switch_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict', 'outputs.SwitchLinkAggregationsSwitchPort']]]]] = None,
+            switch_profile_ports: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict', 'outputs.SwitchLinkAggregationsSwitchProfilePort']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["linkAggregationId"] = link_aggregation_id
+        __props__["networkId"] = network_id
+        __props__["switchPorts"] = switch_ports
+        __props__["switchProfilePorts"] = switch_profile_ports
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/switchLinkAggregations:SwitchLinkAggregations', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="linkAggregationId")
     def link_aggregation_id(self) -> pulumi.Output[_builtins.str]:

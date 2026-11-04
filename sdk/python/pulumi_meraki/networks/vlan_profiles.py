@@ -381,6 +381,24 @@ class VlanProfiles(pulumi.CustomResource):
         __props__.__dict__["vlan_names"] = vlan_names
         return VlanProfiles(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            iname: pulumi.Input[Optional[_builtins.str]] = None,
+            is_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vlan_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanGroupArgs', 'VlanProfilesVlanGroupArgsDict', 'outputs.VlanProfilesVlanGroup']]]]] = None,
+            vlan_names: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VlanProfilesVlanNameArgs', 'VlanProfilesVlanNameArgsDict', 'outputs.VlanProfilesVlanName']]]]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["iname"] = iname
+        __props__["isDefault"] = is_default
+        __props__["name"] = name
+        __props__["networkId"] = network_id
+        __props__["vlanGroups"] = vlan_groups
+        __props__["vlanNames"] = vlan_names
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/vlanProfiles:VlanProfiles', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter
     def iname(self) -> pulumi.Output[_builtins.str]:

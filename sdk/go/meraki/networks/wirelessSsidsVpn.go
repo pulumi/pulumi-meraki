@@ -146,6 +146,12 @@ func (WirelessSsidsVpnState) ElementType() reflect.Type {
 	return reflect.TypeOf((*wirelessSsidsVpnState)(nil)).Elem()
 }
 
+// WirelessSsidsVpnExists checks whether an existing WirelessSsidsVpn resource with the given ID exists.
+func WirelessSsidsVpnExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessSsidsVpnState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn", id, state, "", opts...)
+}
+
 type wirelessSsidsVpnArgs struct {
 	// The VPN concentrator settings for this SSID.
 	Concentrator *WirelessSsidsVpnConcentrator `pulumi:"concentrator"`

@@ -1010,6 +1010,54 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
         __props__.__dict__["welcome_message"] = welcome_message
         return WirelessSsidsSplashSettings(resource_name, opts=opts, __props__=__props__)
 
+    @staticmethod
+    def exists(id: pulumi.Input[str],
+            opts: Optional[pulumi.ResourceOptions] = None,
+            allow_simultaneous_logins: pulumi.Input[Optional[_builtins.bool]] = None,
+            billing: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict', 'outputs.WirelessSsidsSplashSettingsBilling']]] = None,
+            block_all_traffic_before_sign_on: pulumi.Input[Optional[_builtins.bool]] = None,
+            controller_disconnection_behavior: pulumi.Input[Optional[_builtins.str]] = None,
+            guest_sponsorship: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict', 'outputs.WirelessSsidsSplashSettingsGuestSponsorship']]] = None,
+            network_id: pulumi.Input[Optional[_builtins.str]] = None,
+            number: pulumi.Input[Optional[_builtins.str]] = None,
+            redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+            self_registration: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSelfRegistrationArgs', 'WirelessSsidsSplashSettingsSelfRegistrationArgsDict', 'outputs.WirelessSsidsSplashSettingsSelfRegistration']]] = None,
+            sentry_enrollment: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict', 'outputs.WirelessSsidsSplashSettingsSentryEnrollment']]] = None,
+            splash_image: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict', 'outputs.WirelessSsidsSplashSettingsSplashImage']]] = None,
+            splash_logo: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict', 'outputs.WirelessSsidsSplashSettingsSplashLogo']]] = None,
+            splash_page: pulumi.Input[Optional[_builtins.str]] = None,
+            splash_prepaid_front: pulumi.Input[Optional[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict', 'outputs.WirelessSsidsSplashSettingsSplashPrepaidFront']]] = None,
+            splash_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            splash_url: pulumi.Input[Optional[_builtins.str]] = None,
+            ssid_number: pulumi.Input[Optional[_builtins.int]] = None,
+            theme_id: pulumi.Input[Optional[_builtins.str]] = None,
+            use_redirect_url: pulumi.Input[Optional[_builtins.bool]] = None,
+            use_splash_url: pulumi.Input[Optional[_builtins.bool]] = None,
+            welcome_message: pulumi.Input[Optional[_builtins.str]] = None) -> pulumi.Output[bool]:
+        __props__: dict = {}
+        __props__["allowSimultaneousLogins"] = allow_simultaneous_logins
+        __props__["billing"] = billing
+        __props__["blockAllTrafficBeforeSignOn"] = block_all_traffic_before_sign_on
+        __props__["controllerDisconnectionBehavior"] = controller_disconnection_behavior
+        __props__["guestSponsorship"] = guest_sponsorship
+        __props__["networkId"] = network_id
+        __props__["number"] = number
+        __props__["redirectUrl"] = redirect_url
+        __props__["selfRegistration"] = self_registration
+        __props__["sentryEnrollment"] = sentry_enrollment
+        __props__["splashImage"] = splash_image
+        __props__["splashLogo"] = splash_logo
+        __props__["splashPage"] = splash_page
+        __props__["splashPrepaidFront"] = splash_prepaid_front
+        __props__["splashTimeout"] = splash_timeout
+        __props__["splashUrl"] = splash_url
+        __props__["ssidNumber"] = ssid_number
+        __props__["themeId"] = theme_id
+        __props__["useRedirectUrl"] = use_redirect_url
+        __props__["useSplashUrl"] = use_splash_url
+        __props__["welcomeMessage"] = welcome_message
+        return pulumi.runtime.exists_resource(None, 'meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings', id, __props__, opts or pulumi.ResourceOptions())
+
     @_builtins.property
     @pulumi.getter(name="allowSimultaneousLogins")
     def allow_simultaneous_logins(self) -> pulumi.Output[_builtins.bool]:

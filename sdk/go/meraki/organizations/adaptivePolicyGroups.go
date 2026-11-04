@@ -151,6 +151,12 @@ func (AdaptivePolicyGroupsState) ElementType() reflect.Type {
 	return reflect.TypeOf((*adaptivePolicyGroupsState)(nil)).Elem()
 }
 
+// AdaptivePolicyGroupsExists checks whether an existing AdaptivePolicyGroups resource with the given ID exists.
+func AdaptivePolicyGroupsExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *AdaptivePolicyGroupsState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:organizations/adaptivePolicyGroups:AdaptivePolicyGroups", id, state, "", opts...)
+}
+
 type adaptivePolicyGroupsArgs struct {
 	// Description of the group (default: "")
 	Description *string `pulumi:"description"`

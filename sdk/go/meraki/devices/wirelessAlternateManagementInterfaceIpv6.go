@@ -120,6 +120,12 @@ func (WirelessAlternateManagementInterfaceIpv6State) ElementType() reflect.Type 
 	return reflect.TypeOf((*wirelessAlternateManagementInterfaceIpv6State)(nil)).Elem()
 }
 
+// WirelessAlternateManagementInterfaceIpv6Exists checks whether an existing WirelessAlternateManagementInterfaceIpv6 resource with the given ID exists.
+func WirelessAlternateManagementInterfaceIpv6Exists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WirelessAlternateManagementInterfaceIpv6State, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6", id, state, "", opts...)
+}
+
 type wirelessAlternateManagementInterfaceIpv6Args struct {
 	Parameters WirelessAlternateManagementInterfaceIpv6Parameters `pulumi:"parameters"`
 	// serial path parameter.

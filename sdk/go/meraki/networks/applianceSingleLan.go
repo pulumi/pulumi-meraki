@@ -142,6 +142,12 @@ func (ApplianceSingleLanState) ElementType() reflect.Type {
 	return reflect.TypeOf((*applianceSingleLanState)(nil)).Elem()
 }
 
+// ApplianceSingleLanExists checks whether an existing ApplianceSingleLan resource with the given ID exists.
+func ApplianceSingleLanExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *ApplianceSingleLanState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/applianceSingleLan:ApplianceSingleLan", id, state, "", opts...)
+}
+
 type applianceSingleLanArgs struct {
 	// The local IP of the appliance on the single LAN
 	ApplianceIp *string `pulumi:"applianceIp"`

@@ -134,6 +134,12 @@ func (WebhooksHttpServersState) ElementType() reflect.Type {
 	return reflect.TypeOf((*webhooksHttpServersState)(nil)).Elem()
 }
 
+// WebhooksHttpServersExists checks whether an existing WebhooksHttpServers resource with the given ID exists.
+func WebhooksHttpServersExists(ctx *pulumi.Context,
+	id pulumi.StringInput, state *WebhooksHttpServersState, opts ...pulumi.ResourceOption) pulumi.BoolOutput {
+	return ctx.ExistsResource("meraki:networks/webhooksHttpServers:WebhooksHttpServers", id, state, "", opts...)
+}
+
 type webhooksHttpServersArgs struct {
 	// httpServerId path parameter. Http server ID
 	HttpServerId *string `pulumi:"httpServerId"`
