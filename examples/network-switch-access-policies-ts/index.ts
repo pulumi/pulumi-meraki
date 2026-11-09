@@ -16,31 +16,37 @@ export = async () => {
     tags: ["US-Env01-0001", "US-Env01-0002"],
   });
 
-  // broken until https://github.com/pulumi/pulumi-meraki/issues/28 is resolved
-  new meraki.networks.AlertsSettings("alertsSettingsResource", {
+  new meraki.networks.SwitchAccessPolicies("switch-access-policy", {
+    name: "Access policy Test",
     networkId: network.id,
-    alerts: [
+    accessPolicyType: "MAC authentication bypass",
+    dot1x: {
+      controlDirection: "both",
+    },
+    hostMode: "Single-Host",
+    radius: {
+      criticalAuth: {
+        suspendPortBounce: false,
+      },
+    },
+    radiusAccountingEnabled: true,
+    radiusAccountingServers: [
       {
-        alertDestinations: {
-          allAdmins: false,
-          emails: ["test@email.com"],
-          httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M"],
-          snmp: false,
-        },
-        enabled: false,
-        filters: {
-          period: 0,
-          threshold: 0,
-          timeout: 0,
-        },
-        type: "gatewayDown",
+        host: "1.2.3.4",
+        port: 1812,
+        secret: "secret",
       },
     ],
-    defaultDestinations: {
-      allAdmins: false,
-      emails: ["test@email.com"],
-      httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M"],
-      snmp: false,
-    },
+    radiusCoaSupportEnabled: false,
+    radiusServers: [
+      {
+        host: "1.2.3.4",
+        port: 1812,
+        secret: "secret",
+      },
+    ],
+    radiusTestingEnabled: true,
+    urlRedirectWalledGardenEnabled: false,
+    voiceVlanClients: true,
   });
 };
