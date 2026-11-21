@@ -1,5 +1,5 @@
 {
-  "name": "meraki-network-webhooks-payload-templates",
+  "name": "meraki-network-switch-routing-multicast-ts",
   "main": "index.ts",
   "devDependencies": {
     "@types/node": "^18",

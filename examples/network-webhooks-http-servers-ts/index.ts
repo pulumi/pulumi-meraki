@@ -16,31 +16,25 @@ export = async () => {
     tags: ["US-Env01-0001", "US-Env01-0002"],
   });
 
-  // broken until https://github.com/pulumi/pulumi-meraki/issues/28 is resolved
-  new meraki.networks.AlertsSettings("alertsSettingsResource", {
-    networkId: network.id,
-    alerts: [
-      {
-        alertDestinations: {
-          allAdmins: false,
-          emails: ["test@email.com"],
-          httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M"],
-          snmp: false,
-        },
-        enabled: false,
-        filters: {
-          period: 0,
-          threshold: 0,
-          timeout: 0,
-        },
-        type: "gatewayDown",
+  const webhookPayloadTemplate = new meraki.networks.WebhooksPayloadTemplates(
+    "webhook-template",
+    {
+      networkId: network.id,
+      name: "Test Template",
+      body: '{"some_variable":"{{alertType}}}',
+    }
+  );
+
+  const webhookServers = new meraki.networks.WebhooksHttpServers(
+    "webhook-http-servers",
+    {
+      networkId: network.id,
+      name: "Test Server",
+      url: "https://pulumi.com/meraki_webhook",
+      sharedSecret: "supersecret",
+      payloadTemplate: {
+        payloadTemplateId: webhookPayloadTemplate.payloadTemplateId,
       },
-    ],
-    defaultDestinations: {
-      allAdmins: false,
-      emails: ["test@email.com"],
-      httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M"],
-      snmp: false,
-    },
-  });
+    }
+  );
 };
